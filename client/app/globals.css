@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html:not(.aos-ready) [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.lazy-section {
+  /* Keep real section heights available to AOS while it calculates triggers. */
+  content-visibility: visible;
+}
+
+[data-aos="fade-up"] {
+  transform: translate3d(0, 18px, 0);
+}
+
+[data-aos="fade-left"] {
+  transform: translate3d(20px, 0, 0);
+}
+
+[data-aos="fade-right"] {
+  transform: translate3d(-20px, 0, 0);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.98);
+}
+
+[data-aos="card-reveal"] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.98);
+  filter: blur(2px);
+  transition-property: opacity, transform, filter;
+  will-change: opacity, transform, filter;
+}
+
+[data-aos="card-reveal"].aos-animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+html.aos-ready [data-aos] {
+  transition-duration: 460ms;
+}
+
+html.aos-ready [data-aos][data-aos-duration] {
+  transition-duration: 520ms !important;
+}
+
+/* Home sections from Stats onward should reveal quickly and almost in place. */
+.minimal-scroll-reveal [data-aos="fade-up"] {
+  transform: translate3d(0, 6px, 0);
+}
+
+.minimal-scroll-reveal [data-aos="fade-left"] {
+  transform: translate3d(8px, 0, 0);
+}
+
+.minimal-scroll-reveal [data-aos="fade-right"] {
+  transform: translate3d(-8px, 0, 0);
+}
+
+.minimal-scroll-reveal [data-aos="zoom-in"] {
+  transform: scale(0.995);
+}
+
+.minimal-scroll-reveal [data-aos="card-reveal"] {
+  transform: translate3d(0, 8px, 0);
+  filter: none;
+  will-change: opacity, transform;
+}
+
+.minimal-scroll-reveal [data-aos="card-reveal"].aos-animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+html.aos-ready .minimal-scroll-reveal [data-aos] {
+  transition-duration: 260ms !important;
+}
+
+html.aos-ready .minimal-scroll-reveal [data-aos][data-aos-delay].aos-animate {
+  transition-delay: 20ms !important;
+}
+
+@media (hover: hover) {
+  :where(a, button, [role="button"], .group):hover,
+  :where(a, button, [role="button"], .group):hover *,
+  [data-aos].aos-animate:hover,
+  [data-aos].aos-animate:hover * {
+    transition-delay: 0ms !important;
+  }
+
+  :where(a, button, [role="button"], .group):hover,
+  :where(a, button, [role="button"], .group):hover *,
+  [data-aos].aos-animate:hover {
+    transition-duration: 180ms !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
