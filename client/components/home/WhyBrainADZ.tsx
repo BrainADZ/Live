@@ -1,50 +1,41 @@
 "use client";
 
-import {
-  BadgeCheck,
-  Cpu,
-  ShieldCheck,
-  Headphones,
-  Workflow,
-  MonitorSmartphone,
-} from "lucide-react";
-
 const reasons = [
   {
     title: "Hardware + Software Expertise",
     description:
       "We combine smart display products with reliable software systems for complete digital solutions.",
-    icon: MonitorSmartphone,
+    icon: "/service-icons/hardware-software.svg",
   },
   {
     title: "AI-driven Approach",
     description:
       "Our solutions are designed with automation, analytics, and AI capabilities for smarter operations.",
-    icon: Cpu,
+    icon: "/service-icons/ai.svg",
   },
   {
     title: "Secure Architecture",
     description:
       "We focus on scalable, secure, and maintainable technology architecture for business growth.",
-    icon: ShieldCheck,
+    icon: "/service-icons/architecture.svg",
   },
   {
     title: "Custom Workflows",
     description:
       "Every business is different, so we design workflows and systems around your actual needs.",
-    icon: Workflow,
+    icon: "/service-icons/workflow.svg",
   },
   {
     title: "Reliable Support",
     description:
       "From setup to maintenance, our team supports your digital systems with a practical approach.",
-    icon: Headphones,
+    icon: "/service-icons/support.svg",
   },
   {
     title: "Business-first Delivery",
     description:
       "We build technology that helps improve communication, engagement, automation, and performance.",
-    icon: BadgeCheck,
+    icon: "/service-icons/business.svg",
   },
 ];
 
@@ -54,7 +45,7 @@ export default function WhyChooseSection() {
       <div className="mx-auto max-w-450">
         {/* TOP HEADING LEFT */}
         <div className="mb-14 max-w-205" data-aos="fade-up">
-          <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+          <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
             Why Choose BrainADZLive
           </p>
 
@@ -68,44 +59,43 @@ export default function WhyChooseSection() {
           </p>
         </div>
 
-        {/* CONTENT GRID 3 COLUMNS / 2 ROWS */}
+        {/* CONTENT GRID */}
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
+          {reasons.map((reason, index) => (
+            <div
+              key={reason.title}
+              data-aos="card-reveal"
+              data-aos-delay={(index % 3) * 100}
+              data-aos-duration="520"
+              className="group relative min-h-66.25 overflow-hidden rounded-2xl border border-[#dfe6f1] bg-[#f8faff] p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_60px_rgba(22,22,22,0.07)] md:p-8"
+            >
+              {/* SOFT BG GLOW */}
+              <div className="absolute -right-13.75 -top-13.75 h-36.25 w-36.25 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
 
-            return (
-              <div
-                key={reason.title}
-                data-aos="card-reveal"
-                data-aos-delay={(index % 3) * 100}
-                data-aos-duration="520"
-                className="group relative min-h-66.25 overflow-hidden rounded-2xl border border-[#dfe6f1] bg-[#f8faff] p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_60px_rgba(22,22,22,0.07)] md:p-8"
-              >
-                {/* SOFT BG GLOW */}
-                <div className="absolute -right-13.75 -top-13.75 h-36.25 w-36.25 rounded-full bg-[#3c5b9b]/[0.07] transition duration-300 group-hover:scale-125" />
-
-                {/* ICON */}
-                <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-[#dbe3f0] bg-white text-[#3c5b9b] transition-all duration-300 group-hover:bg-[#3c5b9b] group-hover:text-white">
-                  <Icon size={27} strokeWidth={1.45} />
-                </div>
-
-                {/* TEXT */}
-                <h3 className="relative z-10 mt-7 text-[21px] font-light leading-[1.35] tracking-[-0.4px] text-[#262626] md:text-[22px]">
-                  {reason.title}
-                </h3>
-
-                <p className="relative z-10 mt-4 max-w-105 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
-                  {reason.description}
-                </p>
-
-                {/* HOVER LINE */}
-                <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
+              {/* CUSTOM DOWNLOADED ICON */}
+              <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-[#dbe3f0] bg-white transition-all duration-300 group-hover:border-[#193175]/30">
+                <img
+                  src={reason.icon}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110 md:h-10 md:w-10"
+                />
               </div>
-            );
-          })}
-        </div>
 
-        
+              {/* TEXT */}
+              <h3 className="relative z-10 mt-7 text-[21px] font-light leading-[1.35] tracking-[-0.4px] text-[#262626] md:text-[22px]">
+                {reason.title}
+              </h3>
+
+              <p className="relative z-10 mt-4 max-w-105 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
+                {reason.description}
+              </p>
+
+              {/* HOVER LINE */}
+              <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BarChart3,
@@ -25,7 +26,6 @@ import {
   ShieldCheck,
   ShoppingCart,
   Store,
-  Tag,
   Truck,
   Users,
   Workflow,
@@ -40,66 +40,66 @@ type StackItem = {
 
 const workflow = [
   {
-    title: "Requirement Analysis",
-    text: "We understand your retail business model, store operations, customers, product catalog, sales channels and digital goals.",
+    title: "Retail Business Discovery",
+    text: "We understand the sales model, stores, products, customers, inventory, order journeys and project goals.",
     icon: Search,
   },
   {
-    title: "Retail Workflow Mapping",
-    text: "We map product catalog, inventory, orders, customers, payments, delivery, returns, loyalty and admin operations.",
+    title: "Sales & Store Workflow Mapping",
+    text: "We map product, POS, order, inventory, customer, billing, fulfilment and internal operational workflows.",
     icon: Workflow,
   },
   {
-    title: "UI/UX Design",
-    text: "We design clean storefronts, POS screens, customer journeys, checkout flows, dashboards and mobile-first retail experiences.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Secure Development",
-    text: "We build secure modules for products, carts, orders, payments, inventory, users, offers and reports.",
-    icon: Code2,
-  },
-  {
-    title: "System Integration",
-    text: "We integrate payment gateways, POS tools, ERP, CRM, delivery partners, notifications, analytics and third-party APIs.",
+    title: "Access, Data & Integration Planning",
+    text: "We plan user roles, product data, system relationships and required connections with existing or third-party systems.",
     icon: Layers3,
   },
   {
-    title: "Testing & Quality Review",
-    text: "We test checkout, inventory updates, order flow, user roles, payments, performance, security and complete retail workflows.",
+    title: "Customer & Staff Experience Design",
+    text: "We design the required storefronts, mobile journeys, POS screens, staff dashboards and administration workflows.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Platform Development",
+    text: "We configure or develop the required commerce, POS, CRM, ERP, order, inventory and reporting modules.",
+    icon: Code2,
+  },
+  {
+    title: "Integration & Workflow Testing",
+    text: "We test customer journeys, store workflows, user roles and compatible integrations before deployment.",
     icon: ShieldCheck,
   },
   {
-    title: "Deployment",
-    text: "We deploy the retail platform on reliable cloud infrastructure with monitoring and production-ready setup.",
+    title: "Deployment & Rollout",
+    text: "The platform is deployed according to the agreed environment, store structure, users and implementation plan.",
     icon: Rocket,
   },
   {
-    title: "Support & Maintenance",
-    text: "We provide updates, bug fixing, catalog improvements, feature upgrades, performance tuning and long-term support.",
+    title: "Handover & Support Scope",
+    text: "Users are guided through the delivered workflows, with post-launch support provided according to the agreed project scope.",
     icon: LifeBuoy,
   },
 ];
 
 const retailBenefits = [
   {
-    title: "Better Shopping Experience",
-    text: "Create smooth product discovery, faster checkout, personalized offers and mobile-friendly customer journeys.",
+    title: "Structured Shopping Journey",
+    text: "Create clearer product discovery, cart, order and customer journeys across the selected digital channels.",
     icon: ShoppingCart,
   },
   {
-    title: "Faster Store Operations",
-    text: "Manage orders, inventory, returns, staff workflows, billing and daily retail operations from one system.",
-    icon: Rocket,
-  },
-  {
-    title: "Connected Sales Channels",
-    text: "Connect online store, POS, marketplace, inventory and delivery workflows for better business control.",
+    title: "Connected Store Operations",
+    text: "Bring selected billing, staff, order and store activities into a more coordinated digital workflow.",
     icon: Store,
   },
   {
-    title: "Smarter Retail Insights",
-    text: "Track sales, customers, products, inventory, promotions, revenue and store performance with clear dashboards.",
+    title: "Inventory & Order Coordination",
+    text: "Organize product, stock, order and fulfilment information according to the required retail process.",
+    icon: Boxes,
+  },
+  {
+    title: "Operational Visibility",
+    text: "Create dashboards and reports using the sales, inventory, customer and operational data included in the platform.",
     icon: BarChart3,
   },
 ];
@@ -107,201 +107,201 @@ const retailBenefits = [
 const challenges = [
   {
     title: "Disconnected Sales Channels",
-    text: "Bring online sales, POS, marketplace orders, inventory and customer data into one organized system.",
+    text: "Online stores, physical outlets, marketplaces and internal systems can create separate product, order and customer workflows.",
   },
   {
-    title: "Inventory Mismatch",
-    text: "Improve stock tracking, product availability, low-stock alerts, transfers and warehouse visibility.",
+    title: "Inconsistent Product & Stock Information",
+    text: "Product details, variants, stock records and availability can become difficult to coordinate across different systems.",
   },
   {
-    title: "Slow Checkout & Orders",
-    text: "Optimize cart, billing, order management, returns, delivery updates and customer notifications.",
+    title: "Manual Order & Store Operations",
+    text: "Billing, order processing, fulfilment, returns and internal store activities may depend on disconnected tools and manual steps.",
   },
   {
-    title: "Limited Customer Visibility",
-    text: "Track customer behavior, repeat purchases, loyalty activity, offer performance and sales trends clearly.",
+    title: "Limited Customer & Business Visibility",
+    text: "Teams may struggle to review customers, products, sales, inventory and store activity from one place.",
   },
 ];
 
 const solutions = [
   {
-    title: "E-commerce Platform",
-    text: "Product catalog, cart, checkout, payment, offers, customer accounts, order tracking and admin management.",
+    title: "E-commerce & Retail Platform",
+    text: "Create web or mobile commerce experiences for products, customer accounts, carts, orders and administration workflows.",
     icon: ShoppingCart,
   },
   {
-    title: "Retail POS System",
-    text: "Billing, product scanning, discounts, returns, staff access, inventory sync and store-wise reporting.",
+    title: "POS & Store Billing Workflow",
+    text: "Plan billing, product selection, staff access, transaction records, returns and selected store reporting workflows.",
     icon: CreditCard,
   },
   {
-    title: "Inventory Management",
-    text: "Stock tracking, purchase orders, low-stock alerts, warehouse flow, product variants and supplier records.",
+    title: "Inventory & Retail ERP",
+    text: "Organize product records, stock movement, purchases, suppliers, warehouses and related operational workflows.",
     icon: Boxes,
   },
   {
-    title: "Order Management System",
-    text: "Manage online orders, store pickup, delivery status, returns, refunds and customer communication.",
+    title: "Retail CRM",
+    text: "Manage customer records, enquiries, follow-ups, campaigns and selected relationship activities through a CRM workflow.",
+    icon: Users,
+  },
+  {
+    title: "Order & Fulfilment System",
+    text: "Create workflows for orders, assignments, packing, pickup, delivery status, returns and customer communication.",
     icon: Package,
   },
   {
-    title: "Customer Loyalty Platform",
-    text: "Reward points, coupons, memberships, personalized offers, customer segments and campaign tracking.",
-    icon: Tag,
-  },
-  {
-    title: "Retail Analytics Dashboard",
-    text: "Track sales, product performance, customer behavior, inventory movement and store KPIs from one dashboard.",
-    icon: BarChart3,
+    title: "In-Store Digital Experience",
+    text: "Plan digital signage, interactive displays or Virtual Trial Room experiences according to the retail environment and project scope.",
+    icon: MonitorSmartphone,
   },
 ];
 
 const architectureItems = [
-  "Product catalog engine",
-  "Customer & staff access",
-  "Cart, POS & order flow",
-  "Inventory & warehouse sync",
-  "Payment and delivery integrations",
-  "Analytics & reporting",
+  "Customer, staff & admin access",
+  "Products & catalogue workflows",
+  "POS, orders & billing",
+  "Inventory & fulfilment",
+  "CRM, ERP & integrations",
+  "Dashboards & reporting",
 ];
 
 const retailTypes = [
   {
-    title: "E-commerce Storefronts",
-    text: "We build online retail stores with product catalogs, search, filters, carts, checkout, payment integration, offers and admin control.",
+    title: "E-commerce & Retail Applications",
+    text: "Plan web and mobile commerce experiences with product catalogues, customer journeys, carts, orders and administration workflows.",
     icon: ShoppingCart,
   },
   {
-    title: "Point of Sale Systems",
-    text: "Our POS systems help retail stores manage billing, discounts, returns, staff access, inventory sync and daily store reporting.",
+    title: "POS & Store Billing Systems",
+    text: "Create workflows for product selection, billing, staff access, transaction records, returns and selected store reporting.",
     icon: CreditCard,
   },
   {
-    title: "Inventory & Warehouse Platforms",
-    text: "We develop inventory systems for stock tracking, product variants, purchase orders, warehouse movement, low-stock alerts and supplier records.",
+    title: "Inventory & Retail ERP Systems",
+    text: "Organize products, stock movement, purchases, suppliers, warehouses and related operational processes.",
     icon: Boxes,
   },
   {
-    title: "Omnichannel Retail Platforms",
-    text: "We create platforms that connect online stores, physical stores, marketplaces, POS systems, inventory and delivery workflows.",
-    icon: Store,
+    title: "Retail CRM Platforms",
+    text: "Manage customer records, enquiries, follow-ups, campaigns and selected relationship activities through CRM.",
+    icon: Users,
   },
   {
-    title: "Delivery & Fulfillment Systems",
-    text: "We build fulfillment workflows for order assignment, pickup, packing, shipping, delivery tracking, returns and customer notifications.",
+    title: "Order & Fulfilment Systems",
+    text: "Plan workflows for orders, assignments, packing, pickup, delivery status, returns and customer communication.",
     icon: Truck,
   },
   {
-    title: "Retail Analytics Dashboards",
-    text: "We build dashboards that help retail businesses track sales, customer behavior, inventory, promotions, revenue and product performance.",
-    icon: BarChart3,
+    title: "In-Store Digital Experience",
+    text: "Plan digital signage, interactive display content and Virtual Trial Room experiences according to the selected retail setup.",
+    icon: MonitorSmartphone,
   },
 ];
 
 const coreFeatures = [
-  "Product catalog",
-  "Cart & checkout",
-  "POS billing",
-  "Inventory sync",
-  "Order management",
-  "Customer loyalty",
-  "Payment gateway",
-  "Reports & analytics",
+  "Product catalogue management",
+  "Customer and staff access",
+  "Cart and order workflows",
+  "POS and billing activities",
+  "Inventory and stock records",
+  "CRM and customer activities",
+  "Payment integration",
+  "Dashboards and reports",
 ];
 
 const useCases = [
-  "E-commerce brands",
-  "Retail chains",
-  "Fashion stores",
-  "Grocery stores",
-  "Electronics stores",
-  "Multi-brand outlets",
-  "D2C businesses",
-  "Omnichannel retailers",
+  "E-commerce Brands",
+  "Retail Chains",
+  "Fashion & Lifestyle Stores",
+  "Grocery & Convenience Retail",
+  "Electronics Retailers",
+  "Multi-Brand Outlets",
+  "D2C Businesses",
+  "Omnichannel Retail Operations",
 ];
 
-const caseStudies = [
+const solutionScenarios = [
   {
     title: "E-commerce Retail Platform",
-    text: "A digital storefront with product catalog, checkout, payments, order tracking and admin management.",
+    text: "A platform concept for products, customer accounts, carts, orders and administration workflows.",
     image: "/industries/retail/ecommerce-platform.jpg",
   },
   {
-    title: "Retail POS System",
-    text: "A store billing system with inventory sync, discounts, returns, staff access and sales reports.",
+    title: "POS & Store Workflow",
+    text: "A system concept for billing, staff access, transaction records, returns and selected store reporting.",
     image: "/industries/retail/retail-pos.jpg",
   },
   {
-    title: "Inventory Management Platform",
-    text: "A stock management system for warehouses, product variants, purchase orders and low-stock alerts.",
+    title: "Inventory Operations Platform",
+    text: "A workflow concept for products, stock movement, purchases, suppliers and warehouse activities.",
     image: "/industries/retail/inventory-management.jpg",
   },
   {
-    title: "Retail Analytics Dashboard",
-    text: "A dashboard for sales trends, customer behavior, product performance and store-level KPIs.",
+    title: "Retail Operations Dashboard",
+    text: "A dashboard concept for sales, products, inventory, customers and configured management reporting.",
     image: "/industries/retail/retail-dashboard.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Retail Workflow Understanding",
-    text: "We design solutions around real store, inventory, order, customer, billing and fulfillment workflows.",
+    title: "Retail Workflow Mapping",
+    text: "We start with how products, customers, staff, orders, inventory and stores actually move through the business.",
   },
   {
-    title: "Scalable Commerce Architecture",
-    text: "Your platform is planned for products, customers, stores, orders, payments, inventory and future growth.",
+    title: "Relevant Solution Planning",
+    text: "We combine custom software, mobile apps, CRM, ERP, digital signage and Virtual Trial Room only where they fit the project requirement.",
   },
   {
-    title: "Custom Development",
-    text: "We build retail platforms according to your sales channels, store operations, features and business goals.",
+    title: "Customer & Staff Experience Design",
+    text: "Customer, store staff, operations and administration journeys are planned according to their actual responsibilities.",
   },
   {
-    title: "Long-Term Support",
-    text: "We support your platform with updates, catalog improvements, integrations, optimization and feature expansion.",
+    title: "Scope-Based Implementation Support",
+    text: "Deployment guidance, handover and post-launch support are provided according to the agreed project scope.",
   },
 ];
 
 const supportItems = [
-  "Platform monitoring and bug fixing",
-  "New retail modules and features",
-  "Catalog and checkout improvements",
-  "Performance and speed optimization",
-  "POS, reports and workflow upgrades",
+  "User onboarding and workflow handover",
+  "Agreed post-launch issue support",
+  "Catalogue and order workflow review",
+  "Dashboard and report adjustments",
+  "Future modules as separate scope",
 ];
 
 const securityItems = [
-  "Role-based permissions",
-  "Secure customer records",
-  "Cloud backup and recovery",
-  "Protected APIs",
-  "Audit logs",
-  "Payment security",
+  "Role-based user access",
+  "Product and customer records",
+  "API and integration controls",
+  "Order and activity history",
+  "Backup and recovery planning",
+  "Payment integration scope",
 ];
 
 const tabs: { label: string; value: TabType }[] = [
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Databases", value: "databases" },
-  { label: "Cloud & DevOps", value: "cloud" },
+  { label: "Customer Experience", value: "frontend" },
+  { label: "Application Backend", value: "backend" },
+  { label: "Data Layer", value: "databases" },
+  { label: "Cloud & Delivery", value: "cloud" },
 ];
 
 const techStack: Record<TabType, StackItem[]> = {
   frontend: [
     { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
-    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+    { name: "Flutter", icon: "/icons/Flutter.svg" },
+    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "Tailwind CSS", icon: "/icons/Tailwind CSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
-    { name: "Express.js", icon: "/icons/Express.svg" },
-    { name: "Python", icon: "/icons/Python.svg" },
-    { name: "Django", icon: "/icons/Django.svg" },
     { name: ".NET", icon: "/icons/NET.svg" },
     { name: "Java", icon: "/icons/Java.svg" },
+    { name: "Python", icon: "/icons/Python.svg" },
+    { name: "Django", icon: "/icons/Django.svg" },
+    { name: "Express.js", icon: "/icons/Express.svg" },
   ],
   databases: [
     { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg" },
@@ -314,67 +314,68 @@ const techStack: Record<TabType, StackItem[]> = {
   cloud: [
     { name: "AWS", icon: "/icons/AWS.svg" },
     { name: "Azure", icon: "/icons/Azure.svg" },
-    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
     { name: "GitHub Actions", icon: "/icons/GitHub Actions.svg" },
+    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
   ],
 };
 
 const faqs = [
   {
-    q: "Do you build custom retail software?",
-    a: "Yes, we build custom retail software for e-commerce brands, retail chains, stores, D2C businesses and omnichannel commerce companies.",
+    q: "What Retail solutions can BrainADZ Live build?",
+    a: "We can plan and build e-commerce platforms, retail applications, POS workflows, inventory systems, Retail CRM solutions, ERP modules, order systems, digital signage and Virtual Trial Room experiences according to the project requirement.",
   },
   {
-    q: "Can you create an e-commerce website or app?",
-    a: "Yes, we can build e-commerce platforms with product catalogs, search, filters, carts, checkout, payments, offers and admin management.",
+    q: "Can you build an e-commerce website or mobile application?",
+    a: "Yes. The platform can include product catalogues, customer accounts, carts, orders and administration workflows according to the required scope.",
   },
   {
-    q: "Do you develop POS systems?",
-    a: "Yes, we build POS systems with billing, discounts, returns, staff access, inventory sync, payment integration and sales reporting.",
+    q: "Can you build POS and store billing software?",
+    a: "Yes. POS workflows can be planned for product selection, billing, staff access, transaction records, returns and selected store reporting.",
   },
   {
-    q: "Can you build inventory management software?",
-    a: "Yes, we can build inventory platforms for stock tracking, product variants, purchase orders, warehouse flow, low-stock alerts and supplier records.",
+    q: "Can ERP Software support retail inventory and operations?",
+    a: "Yes. Relevant ERP modules can be planned for products, inventory, purchases, suppliers, warehouses, billing and other required operational workflows.",
   },
   {
-    q: "Can the platform support multiple stores?",
-    a: "Yes, we can build multi-store retail systems with separate access, store-wise inventory, sales reports and centralized admin control.",
+    q: "Can CRM Software be used for retail customers?",
+    a: "Yes. CRM workflows can be configured for customer records, enquiries, follow-ups, campaigns and selected relationship activities.",
   },
   {
-    q: "Do you integrate payment gateways?",
-    a: "Yes, we can integrate payment gateways, invoices, refunds, wallets, COD workflows and secure transaction handling.",
+    q: "Can multiple stores or locations be managed?",
+    a: "Yes. Store, user, inventory and reporting structures can be planned according to the required multi-location operating model.",
   },
   {
-    q: "Can you connect delivery and shipping partners?",
-    a: "Yes, we can integrate delivery partners, shipping APIs, tracking updates, fulfillment workflows and customer notifications.",
+    q: "Can payment and delivery providers be integrated?",
+    a: "Yes. Integration can be planned with compatible payment and delivery providers where suitable APIs or technical interfaces are available.",
   },
   {
-    q: "Can you create loyalty and coupon features?",
-    a: "Yes, we build loyalty points, coupon codes, memberships, customer segments, offers and campaign tracking features.",
+    q: "Can digital signage be included in a retail project?",
+    a: "Yes. Digital displays, signage applications and cloud signage workflows can be planned for promotions, product information and in-store communication.",
   },
   {
-    q: "Do you offer maintenance after launch?",
-    a: "Yes, we provide maintenance, updates, bug fixing, performance optimization, checkout improvements, security updates and new feature development.",
+    q: "Can BrainADZ Live build a Virtual Trial Room for retail?",
+    a: "Yes. A Virtual Trial Room experience can be planned for suitable product categories and selected customer journeys according to the project setup.",
   },
   {
-    q: "How long does retail software development take?",
-    a: "Timeline depends on features, integrations, user roles and platform complexity. A basic retail platform can take a few weeks, while advanced systems need more time.",
+    q: "How long does Retail software development take?",
+    a: "The timeline depends on the number of modules, stores, user roles, products, workflows, integrations, data migration requirements and deployment scope. It should be estimated after the required processes are defined.",
   },
 ];
 
 export default function RetailIndustryPage() {
   const [activeTab, setActiveTab] = useState<TabType>("frontend");
   const [openFaq, setOpenFaq] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <main className="bg-white text-[#111827]">
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/industries/retail/retail-hero.jpg"
-          alt="Retail Software Solutions"
+          src="/hero/retail.jpg"
+          alt="Retail technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -382,34 +383,43 @@ export default function RetailIndustryPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link href="/" className="text-[#6da0ff] hover:underline">
+            <Link
+              href="/"
+              className="text-[#6da0ff] hover:underline"
+            >
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Industries</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Retail</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Retail Software Solutions
+              Technology Solutions for Retail, Commerce and Store Operations
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Secure, scalable and user-focused retail platforms for retail stores, e-commerce brands, D2C businesses, retail chains and omnichannel commerce companies.
+              Custom software, commerce applications, CRM, ERP, POS workflows
+              and in-store digital experiences for modern retail businesses.
             </p>
 
             <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -419,27 +429,37 @@ export default function RetailIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
+
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital retail platforms built for smoother discovery, sales and retail operations.
+              Connect customer journeys with store and retail operations.
             </h2>
+
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps retail and retail businesses build custom platforms for listings, CRM, rentals, tenant portals, payments, documents, analytics and secure digital workflows.
+              BrainADZ Live helps retail businesses plan digital systems for
+              commerce, POS, customers, inventory, orders, ERP, CRM and in-store
+              experiences. The final solution is shaped around the products,
+              stores, users and workflows included in the project.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {retailBenefits.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="border-l-2 border-[#3C5B9B] pl-5"
+                  className="border-l-2 border-[#193175] pl-5"
                 >
-                  <Icon size={28} className="mb-4 text-[#3C5B9B]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                  <Icon size={28} className="mb-4 text-[#193175]" />
+
+                  <h3 className="text-[20px] font-light">
+                    {item.title}
+                  </h3>
+
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -454,23 +474,29 @@ export default function RetailIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Challenges We Solve
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Retail Challenges
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Solving real operational problems in retail technology.
+              Common workflow problems across retail businesses.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -480,28 +506,40 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* EDUCATION TECH SOLUTIONS */}
+      {/* RETAIL SOLUTIONS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Retail Solutions We Build
             </p>
+
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Custom platforms for finances, businesss, service platforms and
-              retail businesses.
+              Digital systems for commerce, stores, customers and retail
+              operations.
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <Icon size={29} className="mb-5 text-[#3C5B9B]" />
+                <div
+                  key={item.title}
+                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
+                >
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon
+                      size={27}
+                      className="text-[#193175] transition group-hover:text-white"
+                    />
+                  </div>
+
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -512,18 +550,22 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* EDUCATION TECH ARCHITECTURE */}
+      {/* RETAIL ARCHITECTURE */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Retail Digital Architecture
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Solution Architecture
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A connected architecture for digital retail operations.
+              Plan connected customer, store and retail workflows.
             </h2>
+
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              We plan retail platforms with connected modules for buyers, tenants, owners, agents, admins, listings, payments, documents, analytics and cloud security.
+              The platform structure can connect customers, products, stores,
+              orders, inventory, billing, integrations and reporting according
+              to the required retail workflow.
             </p>
           </div>
 
@@ -533,9 +575,10 @@ export default function RetailIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -548,7 +591,7 @@ export default function RetailIndustryPage() {
       {/* RETAIL DEVELOPMENT PROCESS */}
       <section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-20">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -556,43 +599,55 @@ export default function RetailIndustryPage() {
           }}
         />
 
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Our Process
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our retail technology development roadmap
+              Our Retail technology implementation roadmap
             </h2>
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              From retail workflow discovery to secure deployment, we follow a clear zig-zag process to build retail platforms with strong usability and reliable architecture.
+
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              A practical process for understanding retail workflows, planning
+              the right solution and deploying the required platform.
             </p>
           </div>
 
+          {/* MOBILE ROADMAP */}
           <div className="lg:hidden">
             <div className="space-y-5">
               {workflow.map((item, index) => {
                 const Icon = item.icon;
+
                 return (
                   <div
                     key={item.title}
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
+
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
                         <Icon
                           size={23}
                           strokeWidth={2.4}
-                          className="text-[#3C5B9B]"
+                          className="text-[#193175]"
                         />
                       </div>
+
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <span className="text-[13px] font-semibold text-[#193175]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <h3 className="mt-2 text-[22px] font-light leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
+
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
                           {item.text}
                         </p>
@@ -604,7 +659,8 @@ export default function RetailIndustryPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[1060px] lg:block">
+          {/* DESKTOP ZIG-ZAG ROADMAP */}
+          <div className="relative hidden h-265 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 1060"
@@ -622,17 +678,73 @@ export default function RetailIndustryPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path
+                    d="M 0 0 L 18 7 L 0 14 z"
+                    fill="#193175"
+                  />
                 </marker>
               </defs>
 
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#retail-zigzag-arrow)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#retail-zigzag-arrow)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#retail-zigzag-arrow)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#retail-zigzag-arrow)" />
-              <path d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 913 L 392 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#retail-zigzag-arrow)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#retail-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 343 L 392 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#retail-zigzag-arrow)"
+              />
+
+              <path
+                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#retail-zigzag-arrow)"
+              />
+
+              <path
+                d="M 392 613 L 1208 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#retail-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 913 L 392 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#retail-zigzag-arrow)"
+              />
             </svg>
 
             {[
@@ -646,17 +758,25 @@ export default function RetailIndustryPage() {
               { ...workflow[7], left: "21.75%", top: "870px" },
             ].map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                  style={{
+                    left: item.left,
+                    top: item.top,
+                  }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon
+                      size={36}
+                      strokeWidth={2.25}
+                      className="text-[#193175]"
+                    />
                   </div>
 
-                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#3C5B9B]">
+                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#193175]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -664,38 +784,44 @@ export default function RetailIndustryPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
               );
             })}
-          </div>        </div>
+          </div>
+        </div>
       </section>
 
-      {/* RETAIL USE CASES */}
+      {/* RETAIL PLATFORM TYPES */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Use Cases
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Retail Platforms
             </p>
+
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Retail solutions for different commerce businesses
+              Types of Retail solutions we plan and build
             </h2>
+
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
-              We create retail platforms for retail stores, e-commerce brands, D2C businesses, marketplaces and omnichannel businesses with practical features and secure architecture.
+              We combine relevant BrainADZ Live software services, CRM, ERP,
+              applications, digital signage and Virtual Trial Room according to
+              the retail workflow that needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
               <h3 className="max-w-110 text-[30px] font-semibold leading-[1.15] tracking-[-0.8px] text-[#0f5f95] md:text-[34px]">
-                Build Smarter Retail Systems
+                Plan Your Retail Platform
               </h3>
+
               <a
                 href="/contact"
-                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#3C5B9B] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
+                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#193175] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
               >
-                Get Expert Guidance
+                Discuss Your Requirement
               </a>
             </div>
           </div>
@@ -703,18 +829,21 @@ export default function RetailIndustryPage() {
           <div>
             {retailTypes.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
                   className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
                 >
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={29} className="text-[#3C5B9B]" />
+                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
+
                   <div>
                     <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
+
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
                       {item.text}
                     </p>
@@ -731,26 +860,32 @@ export default function RetailIndustryPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Key Features
               </p>
+
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Features that make retail platforms easier to manage.
+                Practical features for customer, store and retail workflows.
               </h2>
             </div>
+
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build retail platforms with practical features for customers,
-              store staff, customers, admins, inventory teams and management teams.
+              Final features are selected according to the products, stores,
+              user roles and business processes included in the project.
             </p>
           </div>
 
-          <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
             {coreFeatures.map((item) => (
               <div
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <CheckCircle2 size={24} className="shrink-0 text-[#3C5B9B]" />
+                <CheckCircle2
+                  size={24}
+                  className="shrink-0 text-[#193175]"
+                />
+
                 <span className="text-[17px] font-light text-black/75">
                   {item}
                 </span>
@@ -764,22 +899,25 @@ export default function RetailIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Retail Use Cases
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Platforms for every retail business model.
+              Technology solutions for different retail business models.
             </h2>
           </div>
+
           <div className="grid gap-4 md:grid-cols-2">
             {useCases.map((item, index) => (
               <div
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -789,20 +927,22 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* SECURITY */}
+      {/* ACCESS & DATA CONTROLS */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Security & Access Control
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Access, Data & Platform Controls
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Security-first development for customer and retail data.
+              Plan access and data handling around the retail workflow.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              retail platforms handle customer records, payments and retail
-              data, so we focus on secure access, user permissions, cloud backup
-              and reliable system architecture.
+              Authentication, permissions, product records, integrations and
+              recovery requirements should be planned according to the users,
+              information and processes included in the platform.
             </p>
           </div>
 
@@ -812,14 +952,15 @@ export default function RetailIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[#193175]">
                   {index === 0 && <LockKeyhole size={20} />}
                   {index === 1 && <ShieldCheck size={20} />}
-                  {index === 2 && <Users size={20} />}
+                  {index === 2 && <Workflow size={20} />}
                   {index === 3 && <FileText size={20} />}
                   {index === 4 && <Cloud size={20} />}
-                  {index === 5 && <Database size={20} />}
+                  {index === 5 && <CreditCard size={20} />}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -829,29 +970,31 @@ export default function RetailIndustryPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* SOLUTION SCENARIOS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Case Studies
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Solution Scenarios
               </p>
+
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Finance platforms built for real retail and operational
-                improvement.
+                Examples of retail workflows we can plan and build.
               </h2>
             </div>
+
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
             >
-              View Case Studies <ArrowRight size={18} />
+              View Case Studies
+              <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
-            {caseStudies.map((item) => (
+            {solutionScenarios.map((item) => (
               <article
                 key={item.title}
                 className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
@@ -863,15 +1006,21 @@ export default function RetailIndustryPage() {
                     className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">
                       {item.title}
                     </h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight
+                        size={18}
+                        className="text-[#193175]"
+                      />
                     </span>
                   </div>
+
                   <p className="text-[14px] font-light leading-[1.65] text-black/60">
                     {item.text}
                   </p>
@@ -886,22 +1035,24 @@ export default function RetailIndustryPage() {
       <section className="lazy-section bg-[#f6f8fc] px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
+
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering scalable retail development
+              Technologies selected around the Retail platform requirement
             </h2>
+
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use modern frontend, backend, database and cloud technologies
-              to build retail platforms with strong performance, security and
-              scalability.
+              Technology choices depend on the customer experience, store
+              workflows, data model, integrations and deployment requirements.
             </p>
           </div>
 
           <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
+
               return (
                 <button
                   key={tab.value}
@@ -910,12 +1061,17 @@ export default function RetailIndustryPage() {
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
                     isActive
                       ? "text-[#161616]"
-                      : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
+
                   <span
-                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`}
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
+                      isActive
+                        ? "w-full opacity-100"
+                        : "w-0 opacity-0"
+                    }`}
                   />
                 </button>
               );
@@ -953,7 +1109,8 @@ export default function RetailIndustryPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -969,23 +1126,30 @@ export default function RetailIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build retail solutions around retail experience, security
-              and growth.
+              Retail technology planning based on real customer and operational
+              workflows.
             </h2>
           </div>
+
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -1001,28 +1165,37 @@ export default function RetailIndustryPage() {
           <div className="relative overflow-hidden bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
               src="/industries/retail/retail-support.jpg"
-              alt="Retail Support and Maintenance"
+              alt="Retail technology platform implementation and support"
               className="h-full w-full object-cover"
             />
           </div>
+
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Retail Support & Growth
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Implementation & Support Scope
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Support that keeps your retail platform reliable.
+              Handover and support aligned with the delivered retail platform.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              retail software needs regular updates, listing improvements, workflow changes and performance monitoring. We support your
-              platform after launch so it keeps improving.
+              The final implementation can include user guidance, agreed
+              post-launch support and future enhancement planning according to
+              the delivered system and commercial scope.
             </p>
+
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-4 border-b border-black/10 pb-4"
                 >
-                  <CheckCircle2 size={23} className="shrink-0 text-[#3C5B9B]" />
+                  <CheckCircle2
+                    size={23}
+                    className="shrink-0 text-[#193175]"
+                  />
+
                   <span className="text-[16px] font-light text-black/70">
                     {item}
                   </span>
@@ -1037,33 +1210,38 @@ export default function RetailIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Retail development.
+              Common questions about Retail technology solutions.
             </h2>
           </div>
+
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
               <div
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
+
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
                     {openFaq === index ? (
                       <Minus size={18} />
                     ) : (
@@ -1071,8 +1249,9 @@ export default function RetailIndustryPage() {
                     )}
                   </span>
                 </button>
+
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1087,39 +1266,52 @@ export default function RetailIndustryPage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live Retail Software"
+                src="/industries/retail/retail-support.jpg"
+                alt="Retail technology solutions by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
               />
             </div>
+
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to build your retail platform?
+                  Planning a Retail technology platform?
                 </h3>
+
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you create a secure, scalable and
-                  user-focused retail technology solution.
+                  Tell us about your products, stores, customers, orders and
+                  operational workflows so the right solution can be planned.
                 </p>
               </div>
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

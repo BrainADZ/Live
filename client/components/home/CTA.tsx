@@ -8,7 +8,7 @@ export default function CtaSection() {
     <section className="lazy-section bg-white py-12">
       <div className="mx-auto max-w-450 px-8 lg:px-10">
         <div
-          className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75"
+          className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
           data-aos="zoom-in"
         >
           {/* LEFT IMAGE */}
@@ -27,12 +27,13 @@ export default function CtaSection() {
             {/* TEXT */}
             <div className="max-w-140">
               <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                Build smarter digital systems with BrainADZ Live
+                Build connected digital solutions with BrainADZ Live
               </h3>
 
               <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                Discover how our team can help you transform hardware,
-                software, automation, and AI into reliable business solutions.
+                Bring software, intelligent platforms, cloud capabilities, and digital
+    signage together to create secure, scalable systems built for modern
+    business.
               </p>
             </div>
 
@@ -40,7 +41,7 @@ export default function CtaSection() {
             <button
               type="button"
               onClick={() => setIsPopupOpen(true)}
-             className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5 cursor-pointer"
+             className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5 cursor-pointer"
             >
               Enquire Now
               <span className="text-[20px] leading-none">↗</span>

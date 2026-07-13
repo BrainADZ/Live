@@ -1,7 +1,9 @@
 import AboutSection from "@/components/home/About";
 import BlogSection from "@/components/home/Blog";
+import BrandCarousel from "@/components/home/BrandCarousel";
 import CtaSection from "@/components/home/CTA";
-import Hero from "@/components/home/Hero";
+// import Hero from "@/components/home/Hero";
+import HeroSlider from "@/components/home/Hero-Slider";
 import IndustriesSection from "@/components/home/Industries";
 import InsideBadzSection from "@/components/home/InsideBadz";
 import NewsSection from "@/components/home/News";
@@ -16,11 +18,13 @@ import WhyChooseSection from "@/components/home/WhyBrainADZ";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <HeroSlider />
+      {/* <Hero /> */}
       <AboutSection />
       <CtaSection />
       <ServiceSection />
       <ProductSection />
+      <BrandCarousel />
       <IndustriesSection />
       <InsideBadzSection />
       <div className="minimal-scroll-reveal">
@@ -28,9 +32,9 @@ export default function Home() {
         <TechStackSection />
         <WhyChooseSection />
         <CtaSection />
+        <TeamSection />
         <TestimonialSection />
         <BlogSection />
-        <TeamSection />
 
         {/* DIVIDER */}
         <div

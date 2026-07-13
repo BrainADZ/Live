@@ -44,32 +44,32 @@ type StackItem = {
 const workflow = [
   {
     title: "Product Discovery",
-    text: "We understand your SaaS idea, users, business model, feature priorities and launch goals.",
+    text: "We understand the product idea, target users, core problem, business model, feature priorities and launch goals.",
     icon: Search,
   },
   {
-    title: "SaaS Architecture Planning",
-    text: "We plan multi-tenant architecture, user roles, billing flow, APIs, cloud setup and scalability.",
+    title: "Product & Architecture Planning",
+    text: "We define user roles, account structure, modules, billing needs, APIs, data flow, integrations and cloud architecture.",
     icon: Layers3,
   },
   {
     title: "UI/UX & Prototype",
-    text: "We design clean dashboards, onboarding flows, admin panels and clickable product prototypes.",
+    text: "We design onboarding, dashboards, product workflows and admin experiences before development begins.",
     icon: MonitorSmartphone,
   },
   {
-    title: "MVP Development",
-    text: "We build the core SaaS product with secure login, dashboards, subscriptions and essential features.",
+    title: "MVP & Core Product Development",
+    text: "We build the priority features, user accounts, admin controls, subscriptions and integrations required for launch.",
     icon: Code2,
   },
   {
-    title: "Testing & Cloud Deployment",
-    text: "We test performance, security, usability and deploy your SaaS platform on reliable cloud infrastructure.",
+    title: "Testing & Deployment",
+    text: "We test workflows, permissions, billing, performance and security before deploying the platform to the selected environment.",
     icon: ShieldCheck,
   },
   {
-    title: "Scale & Improve",
-    text: "We continue improving features, performance, analytics, integrations and product scalability.",
+    title: "Measure, Improve & Scale",
+    text: "We improve features, performance, reporting, integrations and infrastructure as product usage and requirements grow.",
     icon: Rocket,
   },
 ];
@@ -85,87 +85,87 @@ const workflowLayout = [
 
 const saasBenefits = [
   {
-    title: "Recurring Revenue Model",
-    text: "Build subscription-based products that create predictable revenue and long-term customer value.",
+    title: "Subscription & Account Management",
+    text: "Support plans, user accounts, renewals and billing workflows based on the product model you choose.",
     icon: CreditCard,
   },
   {
-    title: "Easy Scalability",
-    text: "Scale users, features, data and infrastructure as your product grows.",
+    title: "Scalable Product Foundation",
+    text: "Add users, modules, integrations and infrastructure capacity as product usage grows.",
     icon: Gauge,
   },
   {
-    title: "Lower Operational Cost",
-    text: "Cloud-based SaaS platforms reduce infrastructure burden and simplify product operations.",
+    title: "Centralized Product Operations",
+    text: "Manage users, permissions, plans, reports and product activity from one controlled platform.",
     icon: Settings2,
   },
   {
-    title: "Faster Customer Access",
-    text: "Users can access your platform from anywhere through secure web-based experiences.",
+    title: "Accessible Digital Product",
+    text: "Deliver a web-based product that authorized users can access across devices through secure accounts.",
     icon: Rocket,
   },
 ];
 
 const solutions = [
-  { title: "CRM SaaS", text: "Lead tracking, sales automation, customer history and pipeline management.", icon: Users },
-  { title: "ERP SaaS", text: "Business operations, finance, inventory, HR and reporting in one connected platform.", icon: BriefcaseBusiness },
-  { title: "Marketplace SaaS", text: "Vendor management, listings, orders, payments and customer workflows.", icon: Store },
-  { title: "Project Management SaaS", text: "Tasks, timelines, teams, approvals, collaboration and progress tracking.", icon: Workflow },
-  { title: "LMS SaaS", text: "Courses, learners, progress tracking, assessments and learning analytics.", icon: GraduationCap },
-  { title: "Analytics SaaS", text: "Dashboards, reports, KPIs and data visualization for business decisions.", icon: BarChart3 },
+  { title: "CRM SaaS Platforms", text: "Lead management, sales workflows, customer history, team access and reporting.", icon: Users },
+  { title: "ERP SaaS Platforms", text: "Connected modules for operations, finance, inventory, HR, approvals and reporting.", icon: BriefcaseBusiness },
+  { title: "Marketplace Platforms", text: "Vendor onboarding, listings, orders, payments, commissions and admin control.", icon: Store },
+  { title: "Project & Workflow SaaS", text: "Tasks, approvals, timelines, collaboration, status tracking and team visibility.", icon: Workflow },
+  { title: "Learning SaaS Platforms", text: "Courses, users, progress, assessments, content management and reporting.", icon: GraduationCap },
+  { title: "Analytics & Reporting SaaS", text: "Dashboards, KPIs, custom reports, data views and controlled user access.", icon: BarChart3 },
 ];
 
 const architectureItems = [
-  "Multi-tenant architecture",
+  "Account & tenant structure",
   "User roles & permissions",
-  "Subscription billing",
-  "Secure APIs",
-  "Cloud infrastructure",
-  "Analytics & reporting",
+  "Plans, subscriptions & billing",
+  "APIs & third-party integrations",
+  "Cloud deployment & scaling",
+  "Product analytics & reporting",
 ];
 
 const saasTypes = [
   {
-    title: "Content Management System (CMS)",
-    text: "Our CMS SaaS solution streamlines content creation, management, and distribution. It offers a user-friendly interface, customizable templates, and powerful collaboration tools, enabling businesses to manage their digital content across various platforms efficiently, enhancing brand consistency and audience engagement.",
+    title: "Business Management SaaS",
+    text: "Custom platforms that bring users, records, approvals, tasks, dashboards and reporting into one online product.",
     icon: Layers3,
   },
   {
-    title: "Enterprise Resource Planning (ERP) SaaS",
-    text: "We offer ERP SaaS solutions that integrate core business processes, including finance, HR, and supply chain. Our solutions provide real-time data and analytics, enhancing operational efficiency, reducing costs, and supporting strategic decision-making to drive business growth and agility.",
+    title: "ERP & Operations SaaS",
+    text: "Modular platforms for operations, inventory, finance, HR, purchasing, approvals and management reporting.",
     icon: BriefcaseBusiness,
   },
   {
-    title: "Project Management SaaS",
-    text: "Our project management SaaS applications provide comprehensive tools for managing projects from initiation to closure. With features like Gantt charts, Kanban boards, and time tracking, these applications help teams optimize project planning, resource allocation, and progress monitoring, ensuring successful project outcomes.",
+    title: "Project & Workflow SaaS",
+    text: "Products for tasks, projects, approvals, timelines, collaboration and progress visibility across teams.",
     icon: Workflow,
   },
   {
-    title: "Communication Platforms",
-    text: "Our communication SaaS solutions enable seamless real-time communication and collaboration. With features like messaging, video conferencing, and VoIP, our platforms improve productivity and enable effective remote work, ensuring teams stay connected and engaged regardless of location.",
+    title: "Communication & Service Platforms",
+    text: "Account-based platforms for messages, notifications, service requests, conversations and team coordination.",
     icon: Bell,
   },
   {
-    title: "HR Management Systems",
-    text: "Our HR SaaS applications streamline key human resource management functions, including employee onboarding, performance tracking, and payroll management. These applications automate repetitive tasks, ensure compliance with regulations, and provide valuable insights into workforce trends, empowering HR teams to focus on strategic initiatives.",
+    title: "HR & Workforce SaaS",
+    text: "Systems for employee records, onboarding, attendance, workflows, documents, permissions and reports.",
     icon: Users,
   },
   {
-    title: "Customer Relationship Management (CRM)",
-    text: "Our CRM SaaS solution enables businesses to manage customer interactions and data effectively. With features like contact management, lead tracking, and sales automation, it helps teams nurture customer relationships, optimize sales processes, and drive customer satisfaction and loyalty.",
+    title: "CRM & Customer Operations SaaS",
+    text: "Platforms for enquiries, leads, follow-ups, pipelines, customer history, tasks and customer-facing workflows.",
     icon: ShoppingCart,
   },
 ];
 
 const coreFeatures = [
   "Admin dashboard",
-  "User management",
-  "Subscription plans",
-  "Payment gateway",
-  "Notifications",
-  "Reports & analytics",
-  "API integrations",
-  "Security controls",
+  "User & role management",
+  "Plans & subscriptions",
+  "Payment & billing flow",
+  "Notifications & alerts",
+  "Reports & product analytics",
+  "API & third-party integrations",
+  "Security & access controls",
 ];
 
 const caseStudies = [
@@ -193,29 +193,29 @@ const caseStudies = [
 
 const whyChoose = [
   {
-    title: "SaaS Product Strategy",
-    text: "We help shape your SaaS idea into a practical product roadmap with clear MVP and scaling phases.",
+    title: "Product-First Planning",
+    text: "We define users, workflows, feature priorities and MVP scope before development so the product starts with a clear purpose.",
   },
   {
-    title: "Scalable Architecture",
-    text: "Your platform is planned for users, subscriptions, data growth, integrations and long-term expansion.",
+    title: "Architecture for Future Growth",
+    text: "We plan accounts, permissions, billing, data, integrations and deployment with room for future modules and usage growth.",
   },
   {
-    title: "Secure Development",
-    text: "We build with secure authentication, protected APIs, permission controls and reliable data handling.",
+    title: "Security & Access by Design",
+    text: "Authentication, permissions, protected APIs and controlled data access are planned as core parts of the product.",
   },
   {
-    title: "Long-Term Product Support",
-    text: "We continue improving your SaaS with feature updates, monitoring, optimization and technical support.",
+    title: "Continuous Product Improvement",
+    text: "We support the SaaS after launch with fixes, feature development, performance work, integration updates and technical guidance.",
   },
 ];
 
 const supportItems = [
-  "Monitoring and uptime tracking",
-  "Feature upgrades and new modules",
-  "Performance optimization",
-  "Security updates and patches",
-  "Subscription and billing improvements",
+  "Issue monitoring and production support",
+  "New features, modules and workflow improvements",
+  "Performance and database optimization",
+  "Security, dependency and access updates",
+  "Subscription, billing and integration improvements",
 ];
 
 const tabs: { label: string; value: TabType }[] = [
@@ -262,24 +262,28 @@ const techStack: Record<TabType, StackItem[]> = {
 
 const faqs = [
   {
-    q: "What is SaaS development?",
-    a: "SaaS development means building cloud-based software that users can access online through subscriptions, user accounts and secure web dashboards.",
+    q: "What is custom SaaS development?",
+    a: "Custom SaaS development means building an online software product around your own users, workflows, modules, account structure, billing model, integrations and business requirements.",
   },
   {
-    q: "Can you build an MVP first?",
-    a: "Yes. We can start with an MVP that includes the most important features, then improve and scale it based on real users and business needs.",
+    q: "Can you build an MVP before developing the full SaaS product?",
+    a: "Yes. We can prioritize the core user journey and must-have features for an MVP, then expand the product based on feedback, usage and business priorities.",
   },
   {
-    q: "Do you build subscription and billing features?",
-    a: "Yes. We can integrate subscription plans, payment gateways, invoices, renewals and billing management into your SaaS platform.",
+    q: "Can you add subscription plans and online billing?",
+    a: "Yes. Depending on the product model and payment provider, we can build plans, subscriptions, payment flows, invoices, renewals and related admin controls.",
   },
   {
-    q: "Can SaaS platforms support multiple user roles?",
-    a: "Yes. We build role-based access for admins, teams, customers, vendors, managers and other user types based on your product needs.",
+    q: "Can a SaaS platform support different user roles or organizations?",
+    a: "Yes. We can build role-based access and account structures for admins, teams, customers, vendors, managers or multiple organizations based on the product requirements.",
   },
   {
-    q: "Do you provide SaaS maintenance after launch?",
-    a: "Yes. We provide monitoring, bug fixing, performance optimization, security updates, feature upgrades and long-term product support.",
+    q: "Can you integrate a SaaS product with other software and APIs?",
+    a: "Yes. Depending on available APIs and access, we can connect the product with payment systems, CRM, ERP, communication tools, analytics services and other third-party platforms.",
+  },
+  {
+    q: "Do you support SaaS products after launch?",
+    a: "Yes. We provide issue resolution, performance improvements, security and dependency updates, integration maintenance and ongoing feature development.",
   },
 ];
 
@@ -293,7 +297,7 @@ export default function SaaSDevelopmentPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/services/hero/saas-development.jpg"
+          src="/hero/saas-development.jpg"
           alt="SaaS Development Services"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -319,15 +323,16 @@ export default function SaaSDevelopmentPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Cloud-based, scalable SaaS platforms for startups, enterprises and
-              product-led businesses built with secure architecture and growth-ready features.
+              We design and develop custom SaaS products with secure user accounts,
+              admin controls, subscriptions, integrations and cloud-ready architecture
+              built around your product goals.
             </p>
 
             <div className="mt-8">
               <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -341,17 +346,17 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Build SaaS products that are secure, scalable and easy to grow.
+              Turn your software idea into a SaaS product people can use and manage.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live designs and develops SaaS platforms with cloud hosting,
-              subscriptions, user management, admin dashboards, reporting, automation
-              and secure integrations. We help you move from idea to MVP and from MVP
-              to a complete product.
+              BrainADZ Live designs and develops custom SaaS platforms around your
+              users, workflows and business model. From user accounts and admin
+              dashboards to subscriptions, integrations and reporting, we help you
+              move from product idea to MVP and continue improving the platform after launch.
             </p>
           </div>
 
@@ -359,8 +364,8 @@ export default function SaaSDevelopmentPage() {
             {saasBenefits.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="border-l-2 border-[#3C5B9B] pl-5">
-                  <Icon size={28} className="mb-4 text-[#3C5B9B]" />
+                <div key={item.title} className="border-l-2 border-[#193175] pl-5">
+                  <Icon size={28} className="mb-4 text-[#193175]" />
                   <h3 className="text-[20px] font-light">{item.title}</h3>
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
@@ -376,18 +381,18 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Build SaaS
             </p>
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A better model for modern digital products.
+              Build one online product that can serve users, teams and customers at scale.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {saasBenefits.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
@@ -406,11 +411,11 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Solutions We Build
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              SaaS platforms for different business models.
+              SaaS products built around different workflows and product models.
             </h2>
           </div>
 
@@ -420,10 +425,10 @@ export default function SaaSDevelopmentPage() {
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
-                    <Icon size={27} className="text-[#3C5B9B] transition group-hover:text-white" />
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
                   </div>
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">{item.title}</h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -440,23 +445,23 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Architecture
             </p>
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Architecture planned for subscriptions, users and scale.
+              Plan the product foundation before adding more users and features.
             </h2>
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              A SaaS product needs more than screens. We plan the complete system
-              structure, from user roles and billing to cloud infrastructure,
-              analytics and integrations.
+              A SaaS product needs more than screens. We plan how accounts,
+              permissions, billing, data, integrations, reporting and deployment
+              should work together before the product grows.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {architectureItems.map((item, index) => (
               <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">{item}</p>
@@ -479,15 +484,15 @@ export default function SaaSDevelopmentPage() {
 
         <div className="mx-auto max-w-[1500px]">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Development Process
             </p>
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our SaaS product development roadmap
+              From product idea to launch and continuous improvement
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              From product discovery to MVP launch and continuous scaling, we follow
-              a connected process to build SaaS platforms with clarity and confidence.
+              We move from product discovery and architecture to MVP development,
+              testing, deployment and ongoing improvement through one connected process.
             </p>
           </div>
 
@@ -498,11 +503,11 @@ export default function SaaSDevelopmentPage() {
                 return (
                   <div key={item.title} className="group relative rounded-[26px] border border-black/10 bg-white p-6">
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#3C5B9B]" />
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
                       </div>
                       <div>
                         <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">{item.title}</h3>
@@ -519,22 +524,22 @@ export default function SaaSDevelopmentPage() {
             <svg className="pointer-events-none absolute inset-0 z-0 h-full w-full" viewBox="0 0 1600 790" fill="none" aria-hidden="true" preserveAspectRatio="none">
               <defs>
                 <marker id="saas-arrowhead" markerHeight="14" markerUnits="userSpaceOnUse" markerWidth="18" orient="auto" refX="16" refY="7">
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
+              <path d="M 392 43 L 1208 43" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
+              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
+              <path d="M 1208 343 L 392 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
+              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
+              <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
             </svg>
 
             {workflowLayout.map((item) => {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="group absolute z-10 w-[390px] -translate-x-1/2 text-center" style={{ left: item.left, top: item.top }}>
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
                   </div>
                   <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
                   <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">{item.text}</p>
@@ -549,29 +554,28 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              SaaS App Types
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              SaaS Platforms We Build
             </p>
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Types of Apps by Our SaaS Software Development Company
+              Flexible SaaS products for different business and operational needs
             </h2>
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
-              At BrainADZ, we develop a wide range of SaaS solutions
-              tailored to meet the diverse needs of businesses across industries.
-              Our expertise includes building CRM platforms, ERP systems, HR
-              management tools, e-commerce solutions, project management applications,
-              and more, integrating cutting-edge technologies.
+              BrainADZ Live builds custom SaaS products around the workflow,
+              users and operating model of each product. The structure can include
+              customer-facing accounts, internal teams, admin controls, subscriptions,
+              integrations and reporting based on what the platform actually needs.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
               <h3 className="max-w-110 text-[30px] font-semibold leading-[1.15] tracking-[-0.8px] text-[#0f5f95] md:text-[34px]">
-                Scale Your Business with SaaS
+                Build the Right SaaS Product Foundation
               </h3>
               <a
                 href="/contact"
-                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#3C5B9B] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
+                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#193175] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
               >
-                Get Expert Guidance
+                Discuss Your SaaS Product
               </a>
             </div>
           </div>
@@ -581,8 +585,8 @@ export default function SaaSDevelopmentPage() {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]">
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={29} className="text-[#3C5B9B]" />
+                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">{item.title}</h3>
@@ -600,19 +604,19 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">Core SaaS Features</p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Essential features for a complete SaaS product.</h2>
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Core SaaS Features</p>
+              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Core capabilities that support users, operations and product management.</h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We create SaaS platforms with the operational features your team needs
-              to manage users, subscriptions, reports, integrations and security.
+              We build the features required to manage users, permissions, billing,
+              notifications, integrations, reporting and day-to-day product operations.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
             {coreFeatures.map((item, index) => (
               <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <CheckCircle2 size={24} className="shrink-0 text-[#3C5B9B]" />
+                <CheckCircle2 size={24} className="shrink-0 text-[#193175]" />
                 <span className="text-[17px] font-light text-black/75">{item}</span>
               </div>
             ))}
@@ -624,19 +628,21 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-8 lg:grid-cols-2">
           <div className="border-t border-black/10 pt-8">
-            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">MVP Launch</span>
-            <h2 className="mt-4 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">Start lean with the right core features.</h2>
+            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">MVP Launch</span>
+            <h2 className="mt-4 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">Launch the core product before adding everything.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              We help you build a focused SaaS MVP with the must-have features that
-              validate the product idea, attract early users and reduce launch risk.
+              We define the first usable version around the core user journey,
+              essential admin controls and priority features so the product can be
+              tested without building every future module at once.
             </p>
           </div>
           <div className="border-t border-black/10 pt-8">
-            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">Full Product Scaling</span>
-            <h2 className="mt-4 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">Scale into a complete SaaS platform.</h2>
+            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Full Product Scaling</span>
+            <h2 className="mt-4 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">Expand the product as real needs become clearer.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              After MVP validation, we expand the platform with advanced modules,
-              automation, billing improvements, integrations, analytics and performance optimization.
+              After launch, we can add modules, automation, billing improvements,
+              integrations, reporting and performance work based on usage, feedback
+              and product priorities.
             </p>
           </div>
         </div>
@@ -647,10 +653,10 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">Case Studies</p>
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS products built for real business growth.</h2>
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Case Studies</p>
+              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS platforms built around real product and operational workflows.</h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
+            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
@@ -664,8 +670,8 @@ export default function SaaSDevelopmentPage() {
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">{item.title}</h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight size={18} className="text-[#193175]" />
                     </span>
                   </div>
                   <p className="text-[14px] font-light leading-[1.65] text-black/60">{item.text}</p>
@@ -682,13 +688,14 @@ export default function SaaSDevelopmentPage() {
       <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">Tech Stack</p>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">Tech Stack</p>
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering scalable SaaS development
+              Technologies we use to build custom SaaS products
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
               We use modern frontend, backend, database and cloud technologies to
-              build secure SaaS platforms with strong performance and long-term scalability.
+              build maintainable SaaS products with secure access, integrations and
+              room for future features.
             </p>
           </div>
 
@@ -701,11 +708,11 @@ export default function SaaSDevelopmentPage() {
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
                 </button>
               );
             })}
@@ -734,7 +741,7 @@ export default function SaaSDevelopmentPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -750,13 +757,13 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">Why Choose BrainADZ Live</p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">We build SaaS products around product strategy, users and growth.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Why Choose BrainADZ Live</p>
+            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">We build SaaS products around users, workflows and a clear product roadmap.</h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">0{index + 1}</span>
+                <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">{item.title}</h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
               </div>
@@ -772,16 +779,17 @@ export default function SaaSDevelopmentPage() {
             <img src="/services/hero/saas-support.jpg" alt="SaaS Support and Growth" className="h-full w-full object-cover" />
           </div>
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">SaaS Support & Growth</p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Support that helps your SaaS product keep growing.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">SaaS Support & Growth</p>
+            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Keep improving the product after launch.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              SaaS products need continuous improvements after launch. We support your
-              platform with monitoring, updates, performance upgrades and product enhancements.
+              After launch, we help resolve issues, improve performance and continue
+              developing features, integrations, billing flows and product operations
+              as requirements change.
             </p>
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
                 <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-4">
-                  <CheckCircle2 size={23} className="shrink-0 text-[#3C5B9B]" />
+                  <CheckCircle2 size={23} className="shrink-0 text-[#193175]" />
                   <span className="text-[16px] font-light text-black/70">{item}</span>
                 </div>
               ))}
@@ -794,20 +802,20 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">FAQ</p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions about SaaS development.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">FAQ</p>
+            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions about custom SaaS development.</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
-              <div key={faq.q} className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}>
+              <div key={faq.q} className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}>
                 <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">{faq.q}</span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
                     {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
                 </button>
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">{faq.a}</p>
                   </div>
                 )}
@@ -817,33 +825,47 @@ export default function SaaSDevelopmentPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
-            <div className="hidden w-[32%] shrink-0 md:block">
-              <img src="/about.avif" alt="BrainADZ Live SaaS Development" loading="lazy" decoding="async" className="h-full w-full object-cover" />
-            </div>
-            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-              <div className="max-w-145">
-                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">Ready to build your SaaS product?</h3>
-                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you turn your SaaS idea into a secure,
-                  scalable and growth-ready product.
-                </p>
-              </div>
-              <a href="/contact" className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5">
-                <span>Enquire Now</span>
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <PopupForm
-  isOpen={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-/>
+      {/* Final CTA */}
+                  <section className="lazy-section bg-white py-12">
+                                <div className="mx-auto max-w-450 px-8 lg:px-10">
+                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+                                    <div className="hidden w-[32%] shrink-0 md:block">
+                                      <img
+                                        src="/CTA/Saas-CTA.jpg"
+                                        alt="BrainADZ Live SaaS Development Services"
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="h-full w-full object-cover"
+                                      />
+                                    </div>
+                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+                                      <div className="max-w-145">
+                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                                          Ready to turn your software idea into a SaaS product?
+                                        </h3>
+                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                                          Let BrainADZ Live design and build your SaaS platform around the users, workflows, subscriptions, integrations and product roadmap you actually need.
+                                        </p>
+                                      </div>
+                                      <button
+                          type="button"
+                          onClick={() => setIsPopupOpen(true)}
+                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+                        >
+                                        <span>Enquire Now</span>
+                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                                          →
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </section>
+                        
+                              <PopupForm
+                                isOpen={isPopupOpen}
+                                onClose={() => setIsPopupOpen(false)}
+                              />
     </main>
   );
 }

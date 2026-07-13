@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BookOpen,
@@ -38,369 +39,370 @@ type StackItem = {
 
 const workflow = [
   {
-    title: "Requirement Analysis",
-    text: "We understand your EdTech idea, learner groups, institute workflow, admin needs and digital learning goals.",
+    title: "Education Workflow Discovery",
+    text: "We understand the learner journey, teaching process, admissions, institute operations, user groups and project goals.",
     icon: Search,
   },
   {
-    title: "Learning Workflow Mapping",
-    text: "We map student journeys, teacher workflows, course delivery, assessments, payments and reporting structure.",
+    title: "Learning & Operations Mapping",
+    text: "We map student, teacher, parent and admin workflows along with courses, assessments, communication and operational requirements.",
     icon: Workflow,
   },
   {
-    title: "UI/UX Design",
-    text: "We design clean learner portals, teacher dashboards, admin panels and mobile-friendly education experiences.",
+    title: "Experience & Interface Design",
+    text: "We design the required learner portals, teacher dashboards, admin panels and mobile or classroom interfaces.",
     icon: MonitorSmartphone,
   },
   {
     title: "Platform Development",
-    text: "We build secure modules for courses, classes, users, assessments, dashboards, payments and reports.",
+    text: "We configure or develop the required learning, assessment, CRM, ERP, mobile and web modules for the project.",
     icon: Code2,
   },
   {
-    title: "System Integration",
-    text: "We integrate video tools, payments, notifications, CRM, ERP, analytics, APIs and third-party learning tools.",
+    title: "System & Content Integration",
+    text: "We plan connections with compatible video tools, payment providers, existing systems, APIs and digital learning workflows.",
     icon: Layers3,
   },
   {
-    title: "Testing & Quality Review",
-    text: "We test usability, performance, user roles, content flow, accessibility, security and platform stability.",
+    title: "Workflow Testing",
+    text: "We test the configured user journeys, course flows, assessments, access rules and integrations before deployment.",
     icon: ShieldCheck,
   },
   {
-    title: "Deployment",
-    text: "We deploy the education platform on reliable cloud infrastructure with proper setup and monitoring.",
+    title: "Deployment & Rollout",
+    text: "The platform is deployed according to the agreed user structure, institution setup and implementation plan.",
     icon: Rocket,
   },
   {
-    title: "Support & Maintenance",
-    text: "We provide updates, monitoring, bug fixing, learning module improvements and feature enhancements.",
+    title: "Handover & Support Scope",
+    text: "Users are guided through the delivered workflow, with post-launch support provided according to the agreed project scope.",
     icon: LifeBuoy,
   },
 ];
 
 const edtechBenefits = [
   {
-    title: "Better Learning Experience",
-    text: "Create smooth digital learning journeys for students, teachers, parents and admins.",
+    title: "Connected Learning Experience",
+    text: "Bring learners, educators, course content and selected academic activities into one structured digital journey.",
     icon: GraduationCap,
   },
   {
-    title: "Faster Academic Operations",
-    text: "Reduce manual work across admissions, classes, attendance, assessments and communication.",
-    icon: Rocket,
+    title: "Organized Academic Operations",
+    text: "Create clearer workflows for admissions, student records, attendance, assessments and communication.",
+    icon: School,
   },
   {
-    title: "Secure User Management",
-    text: "Manage learners, teachers, institutes and admins with role-based access and safe data handling.",
-    icon: ShieldCheck,
+    title: "Role-Based User Journeys",
+    text: "Plan different interfaces and access levels for students, teachers, parents, administrators and management teams.",
+    icon: Users,
   },
   {
-    title: "Smarter Learning Insights",
-    text: "Track student progress, course performance, engagement, revenue and operational reports.",
+    title: "Operational Visibility",
+    text: "Create dashboards and reports using the academic and operational data included in the platform.",
     icon: BarChart3,
   },
 ];
 
 const challenges = [
   {
-    title: "Manual Academic Operations",
-    text: "Digitize admissions, student records, attendance, class schedules and academic workflows.",
+    title: "Scattered Student & Academic Records",
+    text: "Admissions, student information, attendance and academic activities are often managed across disconnected files and systems.",
   },
   {
-    title: "Low Learner Engagement",
-    text: "Improve learning with interactive content, progress tracking, quizzes, reminders and communication tools.",
+    title: "Disconnected Learning Delivery",
+    text: "Courses, lessons, assignments, assessments and communication may operate through separate tools without one structured workflow.",
   },
   {
-    title: "Disconnected Learning Systems",
-    text: "Connect students, teachers, parents, admins, payments, content and reports in one platform.",
+    title: "Manual Admission & Enquiry Follow-Ups",
+    text: "Education businesses can lose visibility when enquiries, counselling activities and enrollment stages are tracked manually.",
   },
   {
-    title: "Limited Progress Visibility",
-    text: "Track course completion, assessment scores, attendance, teacher activity and student performance.",
+    title: "Limited Learner Progress Visibility",
+    text: "Teachers and administrators may struggle to review course activity, assessments and student progress in one place.",
   },
   {
-    title: "Payment & Enrollment Delays",
-    text: "Simplify course enrollment, fee collection, invoices, subscriptions and payment reminders.",
+    title: "Complex Multi-Location Operations",
+    text: "Institutes with multiple branches can face inconsistent processes, user access and reporting structures.",
   },
   {
-    title: "Data Security Concerns",
-    text: "Protect student information, institute records and learning data with secure access controls.",
+    title: "Separate Classroom & Digital Systems",
+    text: "Learning platforms, classroom displays and communication systems may not follow one coordinated technology plan.",
   },
 ];
 
 const solutions = [
   {
-    title: "Learning Management System",
-    text: "Courses, lessons, quizzes, certificates, learner progress and admin controls in one platform.",
+    title: "Learning Management Platform",
+    text: "Create structured workflows for courses, lessons, assignments, assessments, learner access and progress information.",
     icon: BookOpen,
   },
   {
-    title: "Student Information System",
-    text: "Manage student profiles, admissions, attendance, grades, documents and academic history.",
-    icon: Users,
-  },
-  {
-    title: "Virtual Classroom Platform",
-    text: "Live classes, video sessions, class schedules, recordings, chat and teacher-student interaction.",
-    icon: Video,
-  },
-  {
-    title: "School / Institute ERP",
-    text: "Admissions, fees, attendance, staff, timetable, communication and administration workflows.",
-    icon: School,
-  },
-  {
-    title: "Assessment & Exam Portal",
-    text: "Online tests, question banks, grading, proctoring support, results and performance reports.",
-    icon: FileText,
-  },
-  {
-    title: "EdTech Analytics Dashboard",
-    text: "Track learner engagement, course performance, revenue, completion rates and academic KPIs.",
-    icon: BarChart3,
-  },
-  {
-    title: "Course Marketplace",
-    text: "Instructor profiles, course listings, enrollments, payments, reviews and learner dashboards.",
+    title: "Student & Parent Applications",
+    text: "Build web or mobile experiences for schedules, learning content, assignments, communication and selected account activities.",
     icon: GraduationCap,
   },
   {
-    title: "Fee & Subscription System",
-    text: "Online fees, recurring subscriptions, invoices, receipts, payment reminders and finance reports.",
-    icon: CreditCard,
+    title: "School & Institute ERP",
+    text: "Organize admissions, student records, attendance, fees, staff, timetables and administrative workflows.",
+    icon: School,
+  },
+  {
+    title: "Admissions & Enquiry CRM",
+    text: "Manage enquiries, counselling activities, follow-ups, application stages and enrollment workflows through CRM.",
+    icon: Users,
+  },
+  {
+    title: "Assessment & Exam Portal",
+    text: "Create workflows for question management, assessments, submissions, grading and result information.",
+    icon: FileText,
+  },
+  {
+    title: "Interactive Teaching Display",
+    text: "Plan interactive classroom and training experiences for digital content, annotation and collaborative teaching sessions.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Virtual Learning Platform",
+    text: "Build digital learning environments for scheduled sessions, course access, communication and selected video workflows.",
+    icon: Video,
+  },
+  {
+    title: "Education Communication & Signage",
+    text: "Use digital displays and signage software for announcements, schedules, campus information and visual communication.",
+    icon: BarChart3,
   },
 ];
 
 const architectureItems = [
-  "Student & teacher access",
-  "Role-based admin panel",
-  "Courses & assessments",
-  "Fees & subscriptions",
-  "Secure cloud database",
-  "Analytics & reporting",
+  "Student, teacher & admin access",
+  "Courses, content & assessments",
+  "Admissions & enquiry workflow",
+  "Academic & operational records",
+  "Communication & integrations",
+  "Dashboards & reporting",
 ];
 
 const edtechTypes = [
   {
     title: "Learning Management Platforms",
-    text: "We build LMS platforms that connect courses, lessons, quizzes, assignments, certificates, learner progress and admin controls into one smooth learning workflow.",
+    text: "Plan platforms for courses, lessons, assignments, assessments, learner access and progress-related workflows.",
     icon: BookOpen,
   },
   {
-    title: "School & Institute ERP Systems",
-    text: "Our education ERP systems help schools, coaching centers and institutes manage admissions, attendance, timetables, fees, staff, communication and daily operations.",
+    title: "School & Institute Operations Systems",
+    text: "Organize student records, admissions, attendance, fees, staff, timetables and administration through an ERP structure.",
     icon: School,
   },
   {
-    title: "Virtual Classroom Applications",
-    text: "We develop virtual classroom platforms with live classes, video sessions, schedules, recordings, chat, notifications and teacher-student communication features.",
-    icon: Video,
+    title: "Admissions CRM Solutions",
+    text: "Manage education enquiries, counselling activities, follow-ups, application stages and enrollment pipelines.",
+    icon: Users,
   },
   {
-    title: "Assessment & Exam Systems",
-    text: "Our assessment platforms simplify online tests, question banks, auto-grading, results, student performance tracking and exam workflow management.",
+    title: "Assessment & Examination Portals",
+    text: "Create systems for question management, assessments, submissions, evaluation workflows and result information.",
     icon: FileText,
   },
   {
-    title: "Course Marketplace Platforms",
-    text: "We create course marketplaces with instructor onboarding, course listings, enrollments, payments, reviews, learner dashboards and content management.",
+    title: "Student & Learning Applications",
+    text: "Build mobile and web experiences for course access, schedules, assignments, communication and selected learning activities.",
     icon: GraduationCap,
   },
   {
-    title: "EdTech Analytics Dashboards",
-    text: "We build dashboards that help education businesses track learner activity, course completion, revenue, student progress and academic KPIs.",
-    icon: BarChart3,
+    title: "Smart Classroom & Display Solutions",
+    text: "Plan Interactive Teaching Displays and digital signage workflows for teaching, information and campus communication.",
+    icon: MonitorSmartphone,
   },
 ];
 
 const coreFeatures = [
-  "Learner management",
-  "Teacher dashboard",
-  "Course management",
-  "Attendance tracking",
-  "Assessments & quizzes",
-  "Reports & analytics",
-  "Payment gateway",
-  "Role-based access",
-  "Certificate generation",
-  "Notifications & reminders",
+  "Student and learner records",
+  "Teacher and staff access",
+  "Course and content management",
+  "Attendance workflows",
+  "Assessments and assignments",
+  "Admissions and enquiry tracking",
+  "Fee and payment workflows",
+  "Role-based user access",
+  "Dashboards and reports",
+  "Notifications and communication",
 ];
 
 const useCases = [
   "Schools",
-  "Colleges",
-  "Coaching institutes",
-  "Online course platforms",
-  "EdTech startups",
-  "Training companies",
-  "Corporate learning teams",
-  "Course marketplaces",
+  "Colleges & Universities",
+  "Coaching Institutes",
+  "Online Learning Platforms",
+  "Education Tech Businesses",
+  "Training Organizations",
+  "Corporate Learning Teams",
+  "Multi-Branch Institutes",
 ];
 
-const caseStudies = [
+const solutionScenarios = [
   {
     title: "Learning Management Platform",
-    text: "A complete LMS for courses, lessons, quizzes, learner progress, certificates and admin reporting.",
+    text: "A platform concept for courses, lessons, assessments, learner access and progress-related workflows.",
     image: "/industries/education-tech/lms-platform.jpg",
   },
   {
-    title: "Virtual Classroom App",
-    text: "A live learning platform with class scheduling, video sessions, recordings, chat and notifications.",
+    title: "Virtual Learning Experience",
+    text: "A digital learning concept for scheduled sessions, course access, communication and content workflows.",
     image: "/industries/education-tech/virtual-classroom.jpg",
   },
   {
-    title: "School ERP System",
-    text: "An academic operations platform for admissions, attendance, fees, timetable and communication.",
+    title: "Institute Operations ERP",
+    text: "An operations concept for admissions, student records, attendance, fees, staff and administration.",
     image: "/industries/education-tech/school-erp.jpg",
   },
   {
-    title: "EdTech Analytics Dashboard",
-    text: "A reporting dashboard for learner engagement, course performance, revenue and academic insights.",
+    title: "Education Management Dashboard",
+    text: "A dashboard concept for academic records, operational information and configured reporting requirements.",
     image: "/industries/education-tech/edtech-dashboard.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Education Workflow Understanding",
-    text: "We design solutions around real student, teacher, institute, course and admin workflows.",
+    title: "Education Workflow Mapping",
+    text: "We start with how learners, educators, administrators and operations teams actually need to use the system.",
   },
   {
-    title: "Scalable Learning Architecture",
-    text: "We build platforms that can support more learners, courses, instructors, content and integrations.",
+    title: "Relevant Solution Planning",
+    text: "We combine custom software, mobile apps, CRM, ERP and classroom technology only where they fit the project requirement.",
   },
   {
-    title: "Custom EdTech Development",
-    text: "Your education platform is built according to your learning model, users, features and business goals.",
+    title: "User-Specific Experience Design",
+    text: "Student, teacher, parent and administration journeys are planned according to their actual responsibilities.",
   },
   {
-    title: "Easy-to-Use Interfaces",
-    text: "We create simple interfaces for students, teachers, parents, admins and operations teams.",
+    title: "Integration-Aware Development",
+    text: "Existing systems and third-party connections are reviewed according to available APIs and technical interfaces.",
   },
   {
-    title: "Integration-Ready Systems",
-    text: "Your platform can connect with payments, video tools, CRM, ERP, notifications and third-party APIs.",
+    title: "Software & Classroom Technology Alignment",
+    text: "Digital platforms and Interactive Teaching Display requirements can be planned as part of one education technology approach.",
   },
   {
-    title: "Long-Term Support",
-    text: "We support your platform with updates, improvements, monitoring and feature expansion.",
+    title: "Scope-Based Implementation Support",
+    text: "Deployment guidance, handover and support are provided according to the agreed project scope.",
   },
 ];
 
 const supportItems = [
-  "Platform monitoring and issue fixing",
-  "New learning modules and features",
-  "Performance and speed optimization",
-  "Security updates and access improvements",
-  "Dashboard, reports and workflow upgrades",
+  "User onboarding and workflow handover",
+  "Agreed post-launch issue support",
+  "Learning and operational workflow review",
+  "Dashboard and report adjustments",
+  "Future modules as separate scope",
 ];
 
 const securityItems = [
-  "Role-based permissions",
-  "Secure student records",
-  "Cloud backup and recovery",
-  "Protected APIs",
-  "Activity logs",
-  "Payment security",
+  "Role-based access planning",
+  "Student and staff records",
+  "Authentication and session controls",
+  "API and integration controls",
+  "Backup and recovery planning",
+  "Payment and data handling scope",
 ];
 
 const tabs: { label: string; value: TabType }[] = [
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Databases", value: "databases" },
-  { label: "Cloud & DevOps", value: "cloud" },
+  { label: "Learning Experience", value: "frontend" },
+  { label: "Application Backend", value: "backend" },
+  { label: "Data Layer", value: "databases" },
+  { label: "Cloud & Delivery", value: "cloud" },
 ];
 
 const techStack: Record<TabType, StackItem[]> = {
   frontend: [
-    { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
-    { name: "Angular", icon: "/icons/Angular.svg" },
+    { name: "React", icon: "/icons/React.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+    { name: "Flutter", icon: "/icons/Flutter.svg" },
+    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "Tailwind CSS", icon: "/icons/Tailwind CSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
-    { name: "Express.js", icon: "/icons/Express.svg" },
     { name: "Python", icon: "/icons/Python.svg" },
     { name: "Django", icon: "/icons/Django.svg" },
-    { name: ".NET", icon: "/icons/NET.svg" },
     { name: "Java", icon: "/icons/Java.svg" },
+    { name: ".NET", icon: "/icons/NET.svg" },
+    { name: "Express.js", icon: "/icons/Express.svg" },
   ],
   databases: [
     { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg" },
     { name: "MySQL", icon: "/icons/MySQL.svg" },
     { name: "MongoDB", icon: "/icons/MongoDB.svg" },
+    { name: "Firebase", icon: "/icons/Firebase.svg" },
     { name: "Redis", icon: "/icons/Redis.svg" },
     { name: "SQL Server", icon: "/icons/SQLServer.svg" },
-    { name: "Firebase", icon: "/icons/Firebase.svg" },
   ],
   cloud: [
     { name: "AWS", icon: "/icons/AWS.svg" },
     { name: "Azure", icon: "/icons/Azure.svg" },
     { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
-    { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
     { name: "GitHub Actions", icon: "/icons/GitHub Actions.svg" },
+    { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
   ],
 };
 
 const faqs = [
   {
-    q: "Do you build learning management systems?",
-    a: "Yes, we build custom LMS platforms for schools, institutes, online course businesses, training companies and EdTech startups.",
+    q: "What Education Tech solutions can BrainADZ Live build?",
+    a: "We can plan and build learning platforms, student applications, institute ERP systems, admissions CRM solutions, assessment portals and digital classroom experiences according to the project requirement.",
   },
   {
-    q: "Can you create virtual classroom apps?",
-    a: "Yes, we develop virtual classroom platforms with live classes, scheduling, video sessions, recordings, chat, assignments and notifications.",
+    q: "Can you build a Learning Management Platform?",
+    a: "Yes. A learning platform can include courses, lessons, assignments, assessments, learner access and other required workflows depending on the project scope.",
   },
   {
-    q: "Do you develop student portals?",
-    a: "Yes, we create student portals where learners can access courses, classes, assignments, certificates, payments and progress reports.",
+    q: "Can CRM Software be used for education admissions?",
+    a: "Yes. CRM workflows can be configured for enquiries, counselling activities, follow-ups, application stages and enrollment processes.",
   },
   {
-    q: "Can you integrate payment systems?",
-    a: "Yes, we can integrate fee payments, subscriptions, invoices, receipts, payment reminders and online checkout workflows.",
+    q: "Can ERP Software manage school or institute operations?",
+    a: "Yes. ERP modules can be planned for admissions, student records, attendance, fees, staff, timetables and other required operational workflows.",
   },
   {
-    q: "Is the EdTech platform secure?",
-    a: "Yes, we build EdTech platforms with secure authentication, role-based access, protected APIs, cloud backup and safe data handling.",
+    q: "Do you provide Interactive Teaching Display solutions?",
+    a: "Yes. Interactive Teaching Displays can be planned for classrooms, coaching spaces, training rooms and other learning environments according to the project requirement.",
   },
   {
-    q: "Do you provide mobile apps?",
-    a: "Yes, we can build mobile apps for students, teachers, parents, institutes, online course platforms and training businesses.",
+    q: "Can you build student or teacher mobile apps?",
+    a: "Yes. Mobile or web applications can be planned for students, teachers, parents or administrators according to the required user journey.",
   },
   {
-    q: "Can it support multiple institutes or branches?",
-    a: "Yes, we can build multi-branch or multi-institute EdTech systems with centralized admin access, branch-wise data and reporting.",
+    q: "Can the system support multiple institutes or branches?",
+    a: "Yes. Multi-location user, data and reporting structures can be planned according to the required access and operational model.",
   },
   {
-    q: "Do you offer maintenance?",
-    a: "Yes, we provide maintenance, updates, bug fixing, performance optimization, security improvements and feature upgrades.",
+    q: "Can existing education systems or data be integrated?",
+    a: "Integration and data migration can be planned according to the existing system, available APIs, source format and quality of the data.",
   },
   {
-    q: "Can you migrate old student data?",
-    a: "Yes, we can help migrate old student records, course data, attendance sheets and academic reports from spreadsheets or existing systems.",
+    q: "How do you approach security for education platforms?",
+    a: "Security planning can include authentication, role-based access, data controls, integration protection and backup requirements according to the platform scope.",
   },
   {
-    q: "How long does development take?",
-    a: "Timeline depends on features, integrations, user roles and platform complexity. A basic EdTech platform can take a few weeks, while advanced systems need more time.",
+    q: "How long does Education Tech development take?",
+    a: "The timeline depends on the number of modules, user roles, integrations, data migration requirements and deployment scope. It should be estimated after the required workflows are defined.",
   },
 ];
 
 export default function EducationTechIndustryPage() {
   const [activeTab, setActiveTab] = useState<TabType>("frontend");
   const [openFaq, setOpenFaq] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <main className="bg-white text-[#111827]">
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/industries/education-tech/education-tech-hero.jpg"
-          alt="Education Tech Software Solutions"
+          src="/hero/edutech.jpg"
+          alt="Education technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -408,34 +410,44 @@ export default function EducationTechIndustryPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link href="/" className="text-[#6da0ff] hover:underline">
+            <Link
+              href="/"
+              className="text-[#6da0ff] hover:underline"
+            >
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Industries</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Education Tech</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Education Tech Software Solutions
+              Technology Solutions for Education and Learning Businesses
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Secure, scalable and learner-focused education platforms for schools, institutes, online course businesses and EdTech startups.
+              Custom learning platforms, student applications, CRM, ERP,
+              assessment systems and interactive classroom solutions for
+              education organizations.
             </p>
 
             <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -445,24 +457,39 @@ export default function EducationTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
+
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital education platforms built for better learning and smoother academic operations.
+              Connect learning experiences with academic and operational
+              workflows.
             </h2>
+
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps education businesses build custom platforms for learning management, student portals, virtual classrooms, assessments, payments, reports and secure digital workflows.
+              BrainADZ Live helps education organizations plan and build
+              digital systems for learning delivery, admissions, student
+              records, assessments, communication, reporting and classroom
+              experiences. The final solution is shaped around the institution,
+              users and project requirements.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {edtechBenefits.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="border-l-2 border-[#3C5B9B] pl-5">
-                  <Icon size={28} className="mb-4 text-[#3C5B9B]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                <div
+                  key={item.title}
+                  className="border-l-2 border-[#193175] pl-5"
+                >
+                  <Icon size={28} className="mb-4 text-[#193175]" />
+
+                  <h3 className="text-[20px] font-light">
+                    {item.title}
+                  </h3>
+
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -477,23 +504,29 @@ export default function EducationTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Challenges We Solve
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Education Tech Challenges
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Solving real operational problems in education technology.
+              Common workflow problems across education organizations.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -507,23 +540,31 @@ export default function EducationTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Education Tech Solutions We Build
             </p>
+
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Custom platforms for schools, institutes, course platforms and EdTech businesses.
+              Digital systems for learning, admissions, operations and
+              classroom experiences.
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {solutions.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <Icon size={29} className="mb-5 text-[#3C5B9B]" />
+                <div
+                  key={item.title}
+                  className="border-t border-black/10 pt-7"
+                >
+                  <Icon size={29} className="mb-5 text-[#193175]" />
+
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -538,23 +579,31 @@ export default function EducationTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Education Tech Digital Architecture
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Solution Architecture
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A connected architecture for digital learning operations.
+              Plan connected learning and operational workflows.
             </h2>
+
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              We plan EdTech platforms with connected modules for students, teachers, admins, courses, assessments, payments, analytics and cloud security.
+              The platform structure can connect users, learning content,
+              assessments, admissions, operations and reporting according to
+              the required education workflow.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {architectureItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -565,223 +614,240 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* EDUCATION TECH DEVELOPMENT PROCESS */}
-<section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-14">
-  <div
-    className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-    style={{
-      backgroundImage:
-        "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-      transform: "rotate(5deg) scaleX(0.72)",
-    }}
-  />
+      <section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-14">
+        <div
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          style={{
+            backgroundImage:
+              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
+            transform: "rotate(5deg) scaleX(0.72)",
+          }}
+        />
 
-  <div className="mx-auto max-w-[1500px]">
-    <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-        Our Process
-      </p>
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Our Process
+            </p>
 
-      <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-        Our education technology development roadmap
-      </h2>
+            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+              Our education technology implementation roadmap
+            </h2>
 
-      <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-        From learning workflow discovery to secure deployment, we follow a
-        clear zig-zag process to build education platforms with better usability,
-        engagement and long-term scalability.
-      </p>
-    </div>
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              A practical process for understanding learning workflows,
+              planning the right system and deploying the required education
+              platform.
+            </p>
+          </div>
 
-    {/* MOBILE ROADMAP */}
-    <div className="lg:hidden">
-      <div className="space-y-5">
-        {workflow.map((item, index) => {
-          const Icon = item.icon;
+          {/* MOBILE ROADMAP */}
+          <div className="lg:hidden">
+            <div className="space-y-5">
+              {workflow.map((item, index) => {
+                const Icon = item.icon;
 
-          return (
-            <div
-              key={item.title}
-              className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                return (
+                  <div
+                    key={item.title}
+                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                  >
+                    {index !== workflow.length - 1 && (
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                    )}
+
+                    <div className="relative z-10 flex gap-5">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <Icon
+                          size={23}
+                          strokeWidth={2.4}
+                          className="text-[#193175]"
+                        />
+                      </div>
+
+                      <div>
+                        <span className="text-[13px] font-semibold text-[#193175]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <h3 className="mt-2 text-[22px] font-light leading-tight tracking-[-0.5px]">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                          {item.text}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* DESKTOP ZIG-ZAG ROADMAP */}
+          <div className="relative hidden h-265 lg:block">
+            <svg
+              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+              viewBox="0 0 1600 1060"
+              fill="none"
+              aria-hidden="true"
+              preserveAspectRatio="none"
             >
-              {index !== workflow.length - 1 && (
-                <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
-              )}
-
-              <div className="relative z-10 flex gap-5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                  <Icon
-                    size={23}
-                    strokeWidth={2.4}
-                    className="text-[#3C5B9B]"
+              <defs>
+                <marker
+                  id="edutech-zigzag-arrow"
+                  markerHeight="14"
+                  markerUnits="userSpaceOnUse"
+                  markerWidth="18"
+                  orient="auto"
+                  refX="16"
+                  refY="7"
+                >
+                  <path
+                    d="M 0 0 L 18 7 L 0 14 z"
+                    fill="#193175"
                   />
-                </div>
+                </marker>
+              </defs>
 
-                <div>
-                  <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#edutech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 343 L 392 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#edutech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#edutech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 392 613 L 1208 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#edutech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 913 L 392 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#edutech-zigzag-arrow)"
+              />
+            </svg>
+
+            {[
+              { ...workflow[0], left: "21.75%", top: "0px" },
+              { ...workflow[1], left: "78.25%", top: "0px" },
+              { ...workflow[2], left: "78.25%", top: "300px" },
+              { ...workflow[3], left: "21.75%", top: "300px" },
+              { ...workflow[4], left: "21.75%", top: "570px" },
+              { ...workflow[5], left: "78.25%", top: "570px" },
+              { ...workflow[6], left: "78.25%", top: "870px" },
+              { ...workflow[7], left: "21.75%", top: "870px" },
+            ].map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                  style={{
+                    left: item.left,
+                    top: item.top,
+                  }}
+                >
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon
+                      size={36}
+                      strokeWidth={2.25}
+                      className="text-[#193175]"
+                    />
+                  </div>
+
+                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#193175]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="mt-2 text-[22px] font-light leading-tight tracking-[-0.5px]">
+                  <h3 className="mt-3 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-
-    {/* DESKTOP ZIG-ZAG ROADMAP */}
-    <div className="relative hidden h-[1060px] lg:block">
-      <svg
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-        viewBox="0 0 1600 1060"
-        fill="none"
-        aria-hidden="true"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <marker
-            id="edutech-zigzag-arrow"
-            markerHeight="14"
-            markerUnits="userSpaceOnUse"
-            markerWidth="18"
-            orient="auto"
-            refX="16"
-            refY="7"
-          >
-            <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
-          </marker>
-        </defs>
-
-        <path
-          d="M 392 43 L 1208 43"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#edutech-zigzag-arrow)"
-        />
-        <path
-          d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-        />
-        <path
-          d="M 1208 343 L 392 343"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#edutech-zigzag-arrow)"
-        />
-        <path
-          d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#edutech-zigzag-arrow)"
-        />
-        <path
-          d="M 392 613 L 1208 613"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#edutech-zigzag-arrow)"
-        />
-        <path
-          d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-        />
-        <path
-          d="M 1208 913 L 392 913"
-          stroke="#3C5B9B"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#edutech-zigzag-arrow)"
-        />
-      </svg>
-
-      {[
-        { ...workflow[0], left: "21.75%", top: "0px" },
-        { ...workflow[1], left: "78.25%", top: "0px" },
-        { ...workflow[2], left: "78.25%", top: "300px" },
-        { ...workflow[3], left: "21.75%", top: "300px" },
-        { ...workflow[4], left: "21.75%", top: "570px" },
-        { ...workflow[5], left: "78.25%", top: "570px" },
-        { ...workflow[6], left: "78.25%", top: "870px" },
-        { ...workflow[7], left: "21.75%", top: "870px" },
-      ].map((item, index) => {
-        const Icon = item.icon;
-
-        return (
-          <div
-            key={item.title}
-            className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-            style={{ left: item.left, top: item.top }}
-          >
-            <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-              <Icon
-                size={36}
-                strokeWidth={2.25}
-                className="text-[#3C5B9B]"
-              />
-            </div>
-
-            <span className="mt-5 inline-block text-[13px] font-semibold text-[#3C5B9B]">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-
-            <h3 className="mt-3 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-              {item.title}
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-              {item.text}
-            </p>
+              );
+            })}
           </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
-      {/* EDUCATION TECH APP TYPES */}
+      {/* EDUCATION TECH PLATFORM TYPES */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Use Cases
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Education Platforms
             </p>
+
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Education Tech solutions for different learning businesses
+              Types of Education Tech solutions we plan and build
             </h2>
+
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
-              We create education platforms for schools, institutes, coaching centers, training companies, course marketplaces and EdTech startups with practical features and secure architecture.
+              We combine relevant BrainADZ Live software services, platforms
+              and digital display solutions according to the education workflow
+              that needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
               <h3 className="max-w-110 text-[30px] font-semibold leading-[1.15] tracking-[-0.8px] text-[#0f5f95] md:text-[34px]">
-                Build Smarter Education Systems
+                Plan Your Education Platform
               </h3>
+
               <a
                 href="/contact"
-                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#3C5B9B] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
+                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#193175] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
               >
-                Get Expert Guidance
+                Discuss Your Requirement
               </a>
             </div>
           </div>
@@ -789,15 +855,21 @@ export default function EducationTechIndustryPage() {
           <div>
             {edtechTypes.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]">
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={29} className="text-[#3C5B9B]" />
+                <div
+                  key={item.title}
+                  className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
+                >
+                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
+
                   <div>
                     <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
+
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
                       {item.text}
                     </p>
@@ -814,23 +886,35 @@ export default function EducationTechIndustryPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Key Features
               </p>
+
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Features that make education-tech platforms easier to manage.
+                Practical features for learning and education operations.
               </h2>
             </div>
+
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build education platforms with practical features for students, teachers, parents, admins, finance teams and management teams.
+              Final features are selected according to the learning, admissions,
+              academic and operational workflows included in the project.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-5">
             {coreFeatures.map((item) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <CheckCircle2 size={24} className="shrink-0 text-[#3C5B9B]" />
-                <span className="text-[17px] font-light text-black/75">{item}</span>
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <CheckCircle2
+                  size={24}
+                  className="shrink-0 text-[#193175]"
+                />
+
+                <span className="text-[17px] font-light text-black/75">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
@@ -841,19 +925,25 @@ export default function EducationTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Education Tech Use Cases
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Platforms for every education-tech business model.
+              Technology solutions for different education environments.
             </h2>
           </div>
+
           <div className="grid gap-4 md:grid-cols-2">
             {useCases.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -867,28 +957,36 @@ export default function EducationTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Security & Access Control
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Access, Data & Platform Controls
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Security-first development for student and learning data.
+              Plan user access and data handling around the platform.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              EdTech platforms handle student records, payments and learning data, so we focus on secure access, user permissions, cloud backup and reliable system architecture.
+              Authentication, permissions, records, integrations and recovery
+              requirements should be planned according to the users, data and
+              workflows included in the education system.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {securityItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[#3C5B9B]">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[#193175]">
                   {index === 0 && <LockKeyhole size={20} />}
                   {index === 1 && <ShieldCheck size={20} />}
                   {index === 2 && <Users size={20} />}
                   {index === 3 && <FileText size={20} />}
                   {index === 4 && <Cloud size={20} />}
-                  {index === 5 && <Database size={20} />}
+                  {index === 5 && <CreditCard size={20} />}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -898,38 +996,57 @@ export default function EducationTechIndustryPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* SOLUTION SCENARIOS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Case Studies
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Solution Scenarios
               </p>
+
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Education platforms built for real learning and operational improvement.
+                Examples of education workflows we can plan and build.
               </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
-              View Case Studies <ArrowRight size={18} />
+
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
+              View Case Studies
+              <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
-            {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+            {solutionScenarios.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">
                       {item.title}
                     </h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight
+                        size={18}
+                        className="text-[#193175]"
+                      />
                     </span>
                   </div>
+
                   <p className="text-[14px] font-light leading-[1.65] text-black/60">
                     {item.text}
                   </p>
@@ -944,31 +1061,44 @@ export default function EducationTechIndustryPage() {
       <section className="lazy-section bg-[#f6f8fc] px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
+
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering scalable EdTech development
+              Technologies selected around the education platform requirement
             </h2>
+
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use modern frontend, backend, database and cloud technologies to build EdTech platforms with strong performance, security and scalability.
+              Technology choices depend on the learning experience, application
+              workflows, data model, integrations and deployment requirements.
             </p>
           </div>
 
           <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
+
               return (
                 <button
                   key={tab.value}
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                    isActive
+                      ? "text-[#161616]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
+                      isActive
+                        ? "w-full opacity-100"
+                        : "w-0 opacity-0"
+                    }`}
+                  />
                 </button>
               );
             })}
@@ -976,13 +1106,21 @@ export default function EducationTechIndustryPage() {
 
           <div className="mx-auto max-w-315">
             <div className="space-y-5 md:space-y-6">
-              {[techStack[activeTab].slice(0, 4), techStack[activeTab].slice(4, 6)].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
                     <div
                       key={item.name}
                       className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
-                        index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""
+                        index !== row.length - 1
+                          ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
+                          : ""
                       }`}
                     >
                       <div className="flex h-11.5 w-full items-center justify-center">
@@ -997,7 +1135,8 @@ export default function EducationTechIndustryPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -1013,22 +1152,30 @@ export default function EducationTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build EdTech solutions around learning experience, security and growth.
+              Education technology planning based on real learning and
+              operational workflows.
             </h2>
           </div>
+
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -1044,24 +1191,37 @@ export default function EducationTechIndustryPage() {
           <div className="relative overflow-hidden bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
               src="/industries/education-tech/education-tech-support.jpg"
-              alt="Education Tech Support and Maintenance"
+              alt="Education technology platform implementation and support"
               className="h-full w-full object-cover"
             />
           </div>
+
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Education Tech Support & Growth
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Implementation & Support Scope
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Support that keeps your education platform reliable.
+              Handover and support aligned with the delivered platform.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              EdTech software needs regular updates, content improvements, workflow changes and performance monitoring. We support your platform after launch so it keeps improving.
+              The final implementation can include user guidance, agreed
+              post-launch support and future enhancement planning according to
+              the delivered system and commercial scope.
             </p>
+
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
-                <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-4">
-                  <CheckCircle2 size={23} className="shrink-0 text-[#3C5B9B]" />
+                <div
+                  key={item}
+                  className="flex items-center gap-4 border-b border-black/10 pb-4"
+                >
+                  <CheckCircle2
+                    size={23}
+                    className="shrink-0 text-[#193175]"
+                  />
+
                   <span className="text-[16px] font-light text-black/70">
                     {item}
                   </span>
@@ -1076,38 +1236,48 @@ export default function EducationTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Education Tech development.
+              Common questions about Education Tech solutions.
             </h2>
           </div>
+
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
               <div
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
+
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1122,38 +1292,53 @@ export default function EducationTechIndustryPage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live Education Tech Software"
+                src="/industries/education-tech/education-tech-support.jpg"
+                alt="Education technology solutions by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
               />
             </div>
+
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to build your Education Tech platform?
+                  Planning an Education Tech platform?
                 </h3>
+
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you create a secure, scalable and learner-focused education technology solution.
+                  Tell us about your learners, educators, academic operations
+                  or classroom requirements so the right solution can be
+                  planned.
                 </p>
               </div>
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

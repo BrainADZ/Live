@@ -33,7 +33,7 @@ export default function BlogSection() {
         {/* HEADING */}
         <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div data-aos="fade-right">
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Blogs
             </p>
 
@@ -46,7 +46,7 @@ export default function BlogSection() {
             href="/blog"
             data-aos="fade-left"
             data-aos-delay="100"
-            className="inline-flex w-fit items-center gap-4 text-[17px] font-light text-[#3c5b9b] transition hover:underline"
+            className="inline-flex w-fit items-center gap-4 text-[17px] font-light text-[#193175] transition hover:underline"
           >
             View all blogs
             <span className="text-[28px] leading-none">→</span>
@@ -81,13 +81,13 @@ export default function BlogSection() {
                   className="relative z-10 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 z-20 bg-[#3c5b9b]/0 transition duration-300 group-hover:bg-[#3c5b9b]/10" />
+                <div className="absolute inset-0 z-20 bg-[#193175]/0 transition duration-300 group-hover:bg-[#193175]/10" />
               </div>
 
               {/* CONTENT */}
               <div className="p-7">
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-[13px] font-light uppercase tracking-[1.4px] text-[#3c5b9b]">
+                  <span className="text-[13px] font-light uppercase tracking-[1.4px] text-[#193175]">
                     {blog.category}
                   </span>
 
@@ -96,22 +96,22 @@ export default function BlogSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-6 min-h-23 text-[24px] font-light leading-[1.32] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#3c5b9b]">
+                <h3 className="mt-6 min-h-23 text-[24px] font-light leading-[1.32] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175]">
                   {blog.title}
                 </h3>
 
                 <div className="mt-8 flex items-center justify-between">
-                  <span className="text-[15px] font-light text-[#3c5b9b]">
+                  <span className="text-[15px] font-light text-[#193175]">
                     Read article
                   </span>
 
-                  <span className="text-[32px] font-light leading-none text-[#3c5b9b] transition-transform duration-300 group-hover:translate-x-1">
+                  <span className="text-[32px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
                 </div>
               </div>
 
-              <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
             </a>
           ))}
         </div>

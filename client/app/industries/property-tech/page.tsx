@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BarChart3,
@@ -38,268 +39,268 @@ type StackItem = {
 
 const workflow = [
   {
-    title: "Requirement Analysis",
-    text: "We understand your real estate business, property users, listing flow, sales process, tenant needs and platform goals.",
+    title: "Property Business Discovery",
+    text: "We understand the property business model, listings, locations, buyers, tenants, agents, internal teams and project goals.",
     icon: Search,
   },
   {
-    title: "Property Workflow Mapping",
-    text: "We map property listings, leads, visits, agents, owners, tenants, payments, approvals and admin operations.",
+    title: "Listing, Lead & Operations Mapping",
+    text: "We map property listings, enquiries, lead stages, site visits, rentals, documents, billing and operational workflows.",
     icon: Workflow,
   },
   {
-    title: "UI/UX Design",
-    text: "We design clean property search screens, listing pages, dashboards, booking flows and mobile-first user journeys.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Secure Development",
-    text: "We build secure modules for listings, inquiries, visits, documents, payments, users and property management.",
-    icon: Code2,
-  },
-  {
-    title: "System Integration",
-    text: "We integrate maps, payment gateways, CRM tools, notifications, document systems, analytics and third-party APIs.",
+    title: "Access, Data & Integration Planning",
+    text: "We plan user roles, property records, data relationships and required connections with existing or third-party systems.",
     icon: Layers3,
   },
   {
-    title: "Testing & Quality Review",
-    text: "We test search, listing accuracy, user roles, payments, performance, security and complete property workflows.",
+    title: "Customer & Team Experience Design",
+    text: "We design the required property websites, mobile experiences, CRM dashboards, tenant portals and administration workflows.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Platform Development",
+    text: "We configure or develop the required listing, CRM, ERP, rental, portal, billing and reporting modules.",
+    icon: Code2,
+  },
+  {
+    title: "Integration & Workflow Testing",
+    text: "We test property journeys, lead flows, user roles and compatible integrations before deployment.",
     icon: ShieldCheck,
   },
   {
-    title: "Deployment",
-    text: "We deploy the property platform on reliable cloud infrastructure with monitoring and production-ready setup.",
+    title: "Deployment & Rollout",
+    text: "The platform is deployed according to the agreed environment, user structure, locations and implementation plan.",
     icon: Rocket,
   },
   {
-    title: "Support & Maintenance",
-    text: "We provide updates, bug fixing, listing improvements, feature upgrades, performance tuning and long-term support.",
+    title: "Handover & Support Scope",
+    text: "Users are guided through the delivered workflows, with post-launch support provided according to the agreed project scope.",
     icon: LifeBuoy,
   },
 ];
 
 const propertyTechBenefits = [
   {
-    title: "Better Property Discovery",
-    text: "Help buyers, tenants and investors find the right properties through search, filters, maps and smart listings.",
+    title: "Organized Property Discovery",
+    text: "Present listings, locations, property details and enquiry journeys through a structured digital experience.",
     icon: Home,
   },
   {
-    title: "Faster Lead Management",
-    text: "Manage inquiries, visits, follow-ups, agents and owner communication from one connected platform.",
-    icon: Rocket,
+    title: "Connected Lead Management",
+    text: "Bring enquiries, assignments, follow-ups, site visits and customer activity into a more coordinated workflow.",
+    icon: Users,
   },
   {
-    title: "Secure Document Handling",
-    text: "Handle agreements, verification documents, invoices and property records with secure access and storage.",
-    icon: ShieldCheck,
+    title: "Structured Property Operations",
+    text: "Organize relevant rental, unit, tenant, document and operational activities through the required platform.",
+    icon: Building2,
   },
   {
-    title: "Smarter Property Insights",
-    text: "Track listings, leads, conversions, occupancy, revenue, agent performance and market activity.",
+    title: "Operational Visibility",
+    text: "Create dashboards and reports using the listing, lead, rental and operational data included in the system.",
     icon: BarChart3,
   },
 ];
 
 const challenges = [
   {
-    title: "Scattered Property Listings",
-    text: "Bring listings, details, photos, availability, prices and property status into one organized system.",
+    title: "Scattered Property Information",
+    text: "Listings, images, prices, availability and property status can become difficult to manage across separate files and tools.",
   },
   {
-    title: "Slow Lead Follow-Ups",
-    text: "Improve inquiry tracking, agent assignment, visit scheduling, reminders and lead conversion workflows.",
+    title: "Disconnected Lead Follow-Ups",
+    text: "Enquiries, agent assignments, site visits and next actions can be difficult to track without a structured CRM workflow.",
   },
   {
-    title: "Manual Rental Operations",
-    text: "Digitize tenant onboarding, rent collection, maintenance requests, documents and property management tasks.",
+    title: "Manual Rental & Property Operations",
+    text: "Tenant, unit, billing, document and service activities may depend on spreadsheets, messages and disconnected processes.",
   },
   {
     title: "Limited Business Visibility",
-    text: "Track property demand, lead sources, sales activity, rentals, revenue and operational performance clearly.",
+    text: "Management teams may struggle to review listings, leads, site visits, rentals and operational information from one place.",
   },
 ];
 
 const solutions = [
   {
-    title: "Property Listing Platform",
-    text: "Property search, filters, images, map view, inquiries, lead capture and admin listing management.",
+    title: "Property Website & Listing Platform",
+    text: "Create property websites or applications with listings, categories, details, enquiry journeys and admin management.",
     icon: Home,
   },
   {
     title: "Real Estate CRM",
-    text: "Lead tracking, agent assignment, follow-ups, site visits, customer history and sales pipeline management.",
+    text: "Organize enquiries, customer records, agent assignments, follow-ups, site visits and sales pipeline activities.",
     icon: Users,
   },
   {
-    title: "Rental Management System",
-    text: "Tenant onboarding, rent tracking, invoices, agreements, maintenance requests and owner reporting.",
+    title: "Rental & Tenant Portal",
+    text: "Plan workflows for tenants, units, rent-related records, documents, service requests and selected communication.",
     icon: KeyRound,
   },
   {
-    title: "Property Management Software",
-    text: "Manage buildings, units, occupancy, service requests, documents, billing and operational workflows.",
+    title: "Property Operations ERP",
+    text: "Manage relevant units, billing, expenses, vendors, approvals, documents and operational reporting.",
     icon: Building2,
   },
   {
-    title: "Broker & Agent Portal",
-    text: "Agent dashboards, assigned leads, visit schedules, commission tracking and property inventory access.",
+    title: "Broker & Agent Workspace",
+    text: "Create dashboards for assigned leads, customer activities, property inventory, visit schedules and selected reporting.",
     icon: Users,
   },
   {
-    title: "Property Analytics Dashboard",
-    text: "Track leads, conversions, listing performance, revenue, occupancy and market insights from one dashboard.",
-    icon: BarChart3,
+    title: "Property Experience & Digital Signage",
+    text: "Plan digital displays and signage software for sales galleries, project information, promotions and visitor communication.",
+    icon: MonitorSmartphone,
   },
 ];
 
 const architectureItems = [
-  "Property listing engine",
-  "User & agent access",
-  "Lead and visit workflow",
-  "Documents & payments",
-  "Map and CRM integrations",
-  "Analytics & reporting",
+  "Customer, agent & staff access",
+  "Listings & property records",
+  "Lead & site visit workflows",
+  "Rental, billing & documents",
+  "CRM, ERP & integrations",
+  "Dashboards & reporting",
 ];
 
 const propertyTechTypes = [
   {
-    title: "Real Estate Marketplace Platforms",
-    text: "We build property marketplace platforms with search, filters, map view, property details, inquiries, saved listings, agent communication and admin control.",
+    title: "Property Websites & Marketplace Platforms",
+    text: "Plan property discovery experiences with listings, details, filters, enquiries and admin workflows according to the business requirement.",
     icon: Home,
   },
   {
-    title: "Property Management Systems",
-    text: "Our property management systems help manage buildings, units, tenants, owners, maintenance requests, documents, payments and reports in one place.",
-    icon: Building2,
-  },
-  {
-    title: "Real Estate CRM Solutions",
-    text: "We develop CRM systems for brokers, builders and property teams to manage leads, site visits, follow-ups, customers, agents and sales pipelines.",
+    title: "Real Estate CRM Platforms",
+    text: "Organize enquiries, customer records, agent assignments, follow-ups, site visits and sales pipeline activities.",
     icon: Users,
   },
   {
-    title: "Rental & Tenant Portals",
-    text: "We create rental platforms for tenant onboarding, rent collection, lease documents, maintenance tickets, notices and owner-tenant communication.",
+    title: "Rental & Tenant Management Systems",
+    text: "Plan workflows for units, tenants, rent-related records, documents, service requests and selected communication activities.",
     icon: KeyRound,
   },
   {
-    title: "Location-Based Property Apps",
-    text: "We build map-driven property apps with nearby search, locality data, availability, property comparison and location-based user experiences.",
+    title: "Property Operations ERP Systems",
+    text: "Create relevant ERP workflows for billing, expenses, vendors, approvals, documents and property operations.",
+    icon: Building2,
+  },
+  {
+    title: "Location & Map-Based Experiences",
+    text: "Plan map views, location information and property discovery features where suitable provider APIs and project requirements support them.",
     icon: MapPin,
   },
   {
-    title: "Property Analytics Dashboards",
-    text: "We build dashboards that help real estate businesses track leads, listings, occupancy, revenue, agent performance and property demand.",
-    icon: BarChart3,
+    title: "Property Sales Gallery & Signage Systems",
+    text: "Plan digital displays, signage applications and content workflows for property information, promotions and visitor communication.",
+    icon: MonitorSmartphone,
   },
 ];
 
 const coreFeatures = [
-  "Property listings",
-  "Advanced search",
-  "Map integration",
-  "Lead management",
-  "Visit scheduling",
-  "Document upload",
-  "Payment gateway",
-  "Reports & analytics",
+  "Property listing management",
+  "Search and filter workflows",
+  "Lead and enquiry management",
+  "Site visit activities",
+  "Customer and agent access",
+  "Rental and document workflows",
+  "Billing and payment integration",
+  "Dashboards and reports",
 ];
 
 const useCases = [
-  "Real estate marketplaces",
-  "Brokerage firms",
-  "Builders and developers",
-  "Rental platforms",
-  "Co-living businesses",
-  "Property management companies",
-  "Commercial real estate teams",
-  "Facility and building operators",
+  "Property Marketplaces",
+  "Real Estate Developers",
+  "Brokerage Firms",
+  "Rental & Co-Living Businesses",
+  "Commercial Property Teams",
+  "Property Management Companies",
+  "Multi-Location Sales Networks",
+  "Property Sales Galleries",
 ];
 
-const caseStudies = [
+const solutionScenarios = [
   {
-    title: "Property Listing Marketplace",
-    text: "A property discovery platform with search, filters, maps, inquiries and admin listing management.",
+    title: "Property Listing Platform",
+    text: "A platform concept for listings, property details, enquiries, categories and administration workflows.",
     image: "/industries/property-tech/property-marketplace.jpg",
   },
   {
     title: "Real Estate CRM",
-    text: "A CRM platform for leads, visits, agents, customer follow-ups and sales pipeline visibility.",
+    text: "A CRM concept for enquiries, agents, customer follow-ups, site visits and sales pipeline activities.",
     image: "/industries/property-tech/real-estate-crm.jpg",
   },
   {
-    title: "Rental Management System",
-    text: "A rental workflow system for tenants, rent tracking, documents, maintenance requests and owner reports.",
+    title: "Rental Operations System",
+    text: "A workflow concept for units, tenants, rent-related records, documents and service requests.",
     image: "/industries/property-tech/rental-management.jpg",
   },
   {
-    title: "Property Analytics Dashboard",
-    text: "A dashboard for listing performance, lead sources, occupancy, revenue and agent productivity.",
+    title: "Property Operations Dashboard",
+    text: "A dashboard concept for listings, leads, site visits, rentals and configured management reporting.",
     image: "/industries/property-tech/property-dashboard.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Property Workflow Understanding",
-    text: "We design solutions around real buyer, tenant, broker, builder and property management workflows.",
+    title: "Property Workflow Mapping",
+    text: "We start with how listings, customers, agents, site visits, rentals and operational teams actually move through the business.",
   },
   {
-    title: "Scalable Platform Architecture",
-    text: "Your platform is planned for listings, users, locations, agents, documents, payments and future growth.",
+    title: "Relevant Solution Planning",
+    text: "We combine custom software, mobile apps, CRM, ERP and digital signage only where they fit the project requirement.",
   },
   {
-    title: "Custom Development",
-    text: "We build property platforms according to your business model, user roles, features and operational goals.",
+    title: "Customer & Team Experience Design",
+    text: "Buyer, tenant, agent, staff and administration journeys are planned according to their actual responsibilities.",
   },
   {
-    title: "Long-Term Support",
-    text: "We support your platform with updates, listing improvements, integrations, optimization and feature expansion.",
+    title: "Scope-Based Implementation Support",
+    text: "Deployment guidance, handover and post-launch support are provided according to the agreed project scope.",
   },
 ];
 
 const supportItems = [
-  "Platform monitoring and bug fixing",
-  "New property modules and features",
-  "Search and listing improvements",
-  "Performance and speed optimization",
-  "CRM, reports and workflow upgrades",
+  "User onboarding and workflow handover",
+  "Agreed post-launch issue support",
+  "Listing and CRM workflow review",
+  "Dashboard and report adjustments",
+  "Future modules as separate scope",
 ];
 
 const securityItems = [
-  "Role-based permissions",
-  "Secure property records",
-  "Cloud backup and recovery",
-  "Protected APIs",
-  "Audit logs",
-  "Payment security",
+  "Role-based user access",
+  "Property and customer records",
+  "API and integration controls",
+  "Activity and status history",
+  "Backup and recovery planning",
+  "Payment integration scope",
 ];
 
 const tabs: { label: string; value: TabType }[] = [
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Databases", value: "databases" },
-  { label: "Cloud & DevOps", value: "cloud" },
+  { label: "Customer Experience", value: "frontend" },
+  { label: "Application Backend", value: "backend" },
+  { label: "Data Layer", value: "databases" },
+  { label: "Cloud & Delivery", value: "cloud" },
 ];
 
 const techStack: Record<TabType, StackItem[]> = {
   frontend: [
     { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
-    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+    { name: "Flutter", icon: "/icons/Flutter.svg" },
+    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "Tailwind CSS", icon: "/icons/Tailwind CSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
-    { name: "Express.js", icon: "/icons/Express.svg" },
-    { name: "Python", icon: "/icons/Python.svg" },
-    { name: "Django", icon: "/icons/Django.svg" },
     { name: ".NET", icon: "/icons/NET.svg" },
     { name: "Java", icon: "/icons/Java.svg" },
+    { name: "Python", icon: "/icons/Python.svg" },
+    { name: "Django", icon: "/icons/Django.svg" },
+    { name: "Express.js", icon: "/icons/Express.svg" },
   ],
   databases: [
     { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg" },
@@ -312,67 +313,68 @@ const techStack: Record<TabType, StackItem[]> = {
   cloud: [
     { name: "AWS", icon: "/icons/AWS.svg" },
     { name: "Azure", icon: "/icons/Azure.svg" },
-    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
     { name: "GitHub Actions", icon: "/icons/GitHub Actions.svg" },
+    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
   ],
 };
 
 const faqs = [
   {
-    q: "Do you build custom property technology platforms?",
-    a: "Yes, we build custom PropTech platforms for property listings, real estate CRM, rental management, tenant portals, broker tools and property analytics.",
+    q: "What Property Tech solutions can BrainADZ Live build?",
+    a: "We can plan and build property websites, listing platforms, real estate CRM systems, rental workflows, property operations ERP modules, agent portals and digital signage solutions according to the project requirement.",
   },
   {
-    q: "Can you create a property listing website or app?",
-    a: "Yes, we can build property listing platforms with search, filters, maps, property details, image galleries, inquiry forms and admin management.",
+    q: "Can you build a property listing website or application?",
+    a: "Yes. The platform can include property listings, details, categories, search, filters, enquiries and administration workflows according to the required scope.",
   },
   {
-    q: "Do you develop real estate CRM software?",
-    a: "Yes, we build real estate CRM systems for lead tracking, agent assignment, site visits, follow-ups, customer records and sales pipeline management.",
+    q: "Can you build Real Estate CRM Software?",
+    a: "Yes. CRM workflows can be configured for enquiries, customer records, agent assignments, follow-ups, site visits and sales pipeline activities.",
   },
   {
-    q: "Can you integrate maps and location search?",
-    a: "Yes, we can integrate map views, nearby search, locality filters, property pins, route data and location-based discovery features.",
+    q: "Can rental and tenant workflows be included?",
+    a: "Yes. The system can include units, tenant records, rent-related information, documents, service requests and selected communication workflows.",
   },
   {
-    q: "Can the platform manage rentals and tenants?",
-    a: "Yes, we can build rental management features for tenant onboarding, rent tracking, lease documents, maintenance requests, notices and owner reporting.",
+    q: "Can ERP Software support property operations?",
+    a: "Relevant ERP modules can be planned for billing, expenses, vendors, approvals, documents and other required operational workflows.",
   },
   {
-    q: "Do you provide mobile apps for property businesses?",
-    a: "Yes, we can build mobile apps for buyers, tenants, brokers, agents, property managers, builders and real estate teams.",
+    q: "Can maps and location services be integrated?",
+    a: "Yes. Map and location features can be planned where suitable provider APIs, licensing and technical interfaces are available.",
   },
   {
-    q: "Can you integrate payments and documents?",
-    a: "Yes, we can integrate payment gateways, invoices, document uploads, digital agreements, verification documents and secure storage workflows.",
+    q: "Can payment providers and document systems be connected?",
+    a: "Yes. Integration can be planned with compatible payment providers and document systems where suitable APIs or technical interfaces are available.",
   },
   {
-    q: "Can it support multiple agents or branches?",
-    a: "Yes, we can build multi-agent and multi-branch property platforms with separate access, assignments, reports and centralized admin control.",
+    q: "Can the platform support multiple projects, branches or agent teams?",
+    a: "Yes. Project, location, user and reporting structures can be planned according to the required operating model.",
   },
   {
-    q: "Do you offer maintenance after launch?",
-    a: "Yes, we provide maintenance, updates, bug fixing, performance optimization, listing improvements, security updates and new feature development.",
+    q: "Can digital signage be included in a property project?",
+    a: "Yes. Digital displays, signage applications or cloud signage workflows can be planned for sales galleries, promotions, property information and visitor communication.",
   },
   {
     q: "How long does Property Tech development take?",
-    a: "Timeline depends on features, integrations, user roles and platform complexity. A basic property platform can take a few weeks, while advanced systems need more time.",
+    a: "The timeline depends on the number of modules, user roles, listings, workflows, integrations, data migration requirements and deployment scope. It should be estimated after the required processes are defined.",
   },
 ];
 
 export default function PropertyTechIndustryPage() {
   const [activeTab, setActiveTab] = useState<TabType>("frontend");
   const [openFaq, setOpenFaq] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <main className="bg-white text-[#111827]">
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/industries/property-tech/property-tech-hero.jpg"
-          alt="Property Tech Software Solutions"
+          src="/hero/proptech.jpg"
+          alt="Property technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -380,36 +382,44 @@ export default function PropertyTechIndustryPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link href="/" className="text-[#6da0ff] hover:underline">
+            <Link
+              href="/"
+              className="text-[#6da0ff] hover:underline"
+            >
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Industries</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Property Tech</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Property Tech Software Solutions
+              Technology Solutions for Property Sales, Rentals and Operations
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Secure, scalable and user-focused property platforms for banks,
-              NBFCs, payment companies, subscription businesses and PropTech
-              startups.
+              Custom software, property platforms, CRM, ERP, rental workflows
+              and digital signage solutions for real estate and property
+              businesses.
             </p>
 
             <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -419,27 +429,38 @@ export default function PropertyTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
+
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital property platforms built for smoother discovery, sales and property operations.
+              Connect property discovery with sales, rental and operational
+              workflows.
             </h2>
+
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps real estate and property businesses build custom platforms for listings, CRM, rentals, tenant portals, payments, documents, analytics and secure digital workflows.
+              BrainADZ Live helps property businesses plan digital systems for
+              listings, enquiries, CRM, rentals, property operations, ERP and
+              reporting. The final solution is shaped around the properties,
+              users and workflows included in the project.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {propertyTechBenefits.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="border-l-2 border-[#3C5B9B] pl-5"
+                  className="border-l-2 border-[#193175] pl-5"
                 >
-                  <Icon size={28} className="mb-4 text-[#3C5B9B]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                  <Icon size={28} className="mb-4 text-[#193175]" />
+
+                  <h3 className="text-[20px] font-light">
+                    {item.title}
+                  </h3>
+
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -450,27 +471,33 @@ export default function PropertyTechIndustryPage() {
         </div>
       </section>
 
-      {/* EDUCATION TECH CHALLENGES */}
+      {/* PROPERTY TECH CHALLENGES */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Challenges We Solve
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Property Tech Challenges
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Solving real operational problems in property technology.
+              Common workflow problems across property businesses.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -480,28 +507,40 @@ export default function PropertyTechIndustryPage() {
         </div>
       </section>
 
-      {/* EDUCATION TECH SOLUTIONS */}
+      {/* PROPERTY TECH SOLUTIONS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Property Tech Solutions We Build
             </p>
+
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Custom platforms for finances, businesss, service platforms and
-              PropTech businesses.
+              Digital systems for listings, leads, rentals and property
+              operations.
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <Icon size={29} className="mb-5 text-[#3C5B9B]" />
+                <div
+                  key={item.title}
+                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
+                >
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon
+                      size={27}
+                      className="text-[#193175] transition group-hover:text-white"
+                    />
+                  </div>
+
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -512,18 +551,22 @@ export default function PropertyTechIndustryPage() {
         </div>
       </section>
 
-      {/* EDUCATION TECH ARCHITECTURE */}
+      {/* PROPERTY TECH ARCHITECTURE */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Property Tech Digital Architecture
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Solution Architecture
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A connected architecture for digital property operations.
+              Plan connected property and operational workflows.
             </h2>
+
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              We plan PropTech platforms with connected modules for buyers, tenants, owners, agents, admins, listings, payments, documents, analytics and cloud security.
+              The platform structure can connect customers, agents, listings,
+              site visits, rentals, billing, integrations and reporting
+              according to the required property workflow.
             </p>
           </div>
 
@@ -533,9 +576,10 @@ export default function PropertyTechIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -548,7 +592,7 @@ export default function PropertyTechIndustryPage() {
       {/* PROPERTY TECH DEVELOPMENT PROCESS */}
       <section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-20">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -556,43 +600,55 @@ export default function PropertyTechIndustryPage() {
           }}
         />
 
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Our Process
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our property technology development roadmap
+              Our Property Tech implementation roadmap
             </h2>
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              From property workflow discovery to secure deployment, we follow a clear zig-zag process to build property platforms with strong usability and reliable architecture.
+
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              A practical process for understanding property workflows,
+              planning the right solution and deploying the required platform.
             </p>
           </div>
 
+          {/* MOBILE ROADMAP */}
           <div className="lg:hidden">
             <div className="space-y-5">
               {workflow.map((item, index) => {
                 const Icon = item.icon;
+
                 return (
                   <div
                     key={item.title}
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
+
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
                         <Icon
                           size={23}
                           strokeWidth={2.4}
-                          className="text-[#3C5B9B]"
+                          className="text-[#193175]"
                         />
                       </div>
+
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <span className="text-[13px] font-semibold text-[#193175]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <h3 className="mt-2 text-[22px] font-light leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
+
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
                           {item.text}
                         </p>
@@ -604,7 +660,8 @@ export default function PropertyTechIndustryPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[1060px] lg:block">
+          {/* DESKTOP ZIG-ZAG ROADMAP */}
+          <div className="relative hidden h-265 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 1060"
@@ -622,17 +679,73 @@ export default function PropertyTechIndustryPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path
+                    d="M 0 0 L 18 7 L 0 14 z"
+                    fill="#193175"
+                  />
                 </marker>
               </defs>
 
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#proptech-zigzag-arrow)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#proptech-zigzag-arrow)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#proptech-zigzag-arrow)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#proptech-zigzag-arrow)" />
-              <path d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 913 L 392 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#proptech-zigzag-arrow)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#proptech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 343 L 392 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#proptech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#proptech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 392 613 L 1208 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#proptech-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 913 L 392 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#proptech-zigzag-arrow)"
+              />
             </svg>
 
             {[
@@ -646,17 +759,25 @@ export default function PropertyTechIndustryPage() {
               { ...workflow[7], left: "21.75%", top: "870px" },
             ].map((item, index) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                  style={{
+                    left: item.left,
+                    top: item.top,
+                  }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon
+                      size={36}
+                      strokeWidth={2.25}
+                      className="text-[#193175]"
+                    />
                   </div>
 
-                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#3C5B9B]">
+                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#193175]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -664,39 +785,44 @@ export default function PropertyTechIndustryPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
               );
             })}
-          </div>        </div>
+          </div>
+        </div>
       </section>
 
-      {/* PROPERTY TECH USE CASES */}
+      {/* PROPERTY TECH PLATFORM TYPES */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Use Cases
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Property Platforms
             </p>
+
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Property Tech solutions for different real estate businesses
+              Types of Property Tech solutions we plan and build
             </h2>
+
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
-              We create property platforms for banks, NBFCs, lenders, payment businesses, investment platforms and PropTech
-              startups with practical features and secure architecture.
+              We combine relevant BrainADZ Live software services, CRM, ERP,
+              applications and digital signage solutions according to the
+              property workflow that needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
               <h3 className="max-w-110 text-[30px] font-semibold leading-[1.15] tracking-[-0.8px] text-[#0f5f95] md:text-[34px]">
-                Build Smarter Property Systems
+                Plan Your Property Platform
               </h3>
+
               <a
                 href="/contact"
-                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#3C5B9B] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
+                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#193175] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
               >
-                Get Expert Guidance
+                Discuss Your Requirement
               </a>
             </div>
           </div>
@@ -704,18 +830,21 @@ export default function PropertyTechIndustryPage() {
           <div>
             {propertyTechTypes.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
                   className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
                 >
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={29} className="text-[#3C5B9B]" />
+                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
+
                   <div>
                     <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
+
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
                       {item.text}
                     </p>
@@ -732,26 +861,33 @@ export default function PropertyTechIndustryPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Key Features
               </p>
+
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Features that make property-tech platforms easier to manage.
+                Practical features for property, customer and operational
+                workflows.
               </h2>
             </div>
+
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build property platforms with practical features for customers,
-              advisors, parents, admins, finance teams and management teams.
+              Final features are selected according to the properties, user
+              roles, locations and business processes included in the project.
             </p>
           </div>
 
-          <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
             {coreFeatures.map((item) => (
               <div
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <CheckCircle2 size={24} className="shrink-0 text-[#3C5B9B]" />
+                <CheckCircle2
+                  size={24}
+                  className="shrink-0 text-[#193175]"
+                />
+
                 <span className="text-[17px] font-light text-black/75">
                   {item}
                 </span>
@@ -765,22 +901,25 @@ export default function PropertyTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Property Tech Use Cases
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Platforms for every property-tech business model.
+              Technology solutions for different property business models.
             </h2>
           </div>
+
           <div className="grid gap-4 md:grid-cols-2">
             {useCases.map((item, index) => (
               <div
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -790,20 +929,22 @@ export default function PropertyTechIndustryPage() {
         </div>
       </section>
 
-      {/* SECURITY */}
+      {/* ACCESS & DATA CONTROLS */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Security & Access Control
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Access, Data & Platform Controls
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Security-first development for customer and property data.
+              Plan access and data handling around the property workflow.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              PropTech platforms handle customer records, payments and property
-              data, so we focus on secure access, user permissions, cloud backup
-              and reliable system architecture.
+              Authentication, permissions, property records, integrations and
+              recovery requirements should be planned according to the users,
+              information and processes included in the platform.
             </p>
           </div>
 
@@ -813,14 +954,15 @@ export default function PropertyTechIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[#3C5B9B]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[#193175]">
                   {index === 0 && <LockKeyhole size={20} />}
                   {index === 1 && <ShieldCheck size={20} />}
-                  {index === 2 && <Users size={20} />}
+                  {index === 2 && <Workflow size={20} />}
                   {index === 3 && <FileText size={20} />}
                   {index === 4 && <Cloud size={20} />}
-                  {index === 5 && <Database size={20} />}
+                  {index === 5 && <CreditCard size={20} />}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -830,29 +972,31 @@ export default function PropertyTechIndustryPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* SOLUTION SCENARIOS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Case Studies
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Solution Scenarios
               </p>
+
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Finance platforms built for real property and operational
-                improvement.
+                Examples of property workflows we can plan and build.
               </h2>
             </div>
+
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
             >
-              View Case Studies <ArrowRight size={18} />
+              View Case Studies
+              <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
-            {caseStudies.map((item) => (
+            {solutionScenarios.map((item) => (
               <article
                 key={item.title}
                 className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
@@ -864,15 +1008,21 @@ export default function PropertyTechIndustryPage() {
                     className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">
                       {item.title}
                     </h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight
+                        size={18}
+                        className="text-[#193175]"
+                      />
                     </span>
                   </div>
+
                   <p className="text-[14px] font-light leading-[1.65] text-black/60">
                     {item.text}
                   </p>
@@ -887,22 +1037,24 @@ export default function PropertyTechIndustryPage() {
       <section className="lazy-section bg-[#f6f8fc] px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
+
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering scalable PropTech development
+              Technologies selected around the Property Tech requirement
             </h2>
+
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use modern frontend, backend, database and cloud technologies
-              to build PropTech platforms with strong performance, security and
-              scalability.
+              Technology choices depend on the customer experience, listing
+              workflows, data model, integrations and deployment requirements.
             </p>
           </div>
 
           <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
+
               return (
                 <button
                   key={tab.value}
@@ -911,12 +1063,17 @@ export default function PropertyTechIndustryPage() {
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
                     isActive
                       ? "text-[#161616]"
-                      : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
+
                   <span
-                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`}
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
+                      isActive
+                        ? "w-full opacity-100"
+                        : "w-0 opacity-0"
+                    }`}
                   />
                 </button>
               );
@@ -954,7 +1111,8 @@ export default function PropertyTechIndustryPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -970,23 +1128,30 @@ export default function PropertyTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build PropTech solutions around property experience, security
-              and growth.
+              Property technology planning based on real customer and
+              operational workflows.
             </h2>
           </div>
+
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -1002,28 +1167,38 @@ export default function PropertyTechIndustryPage() {
           <div className="relative overflow-hidden bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
               src="/industries/property-tech/property-tech-support.jpg"
-              alt="Property Tech Support and Maintenance"
+              alt="Property technology platform implementation and support"
               className="h-full w-full object-cover"
             />
           </div>
+
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Property Tech Support & Growth
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Implementation & Support Scope
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Support that keeps your property platform reliable.
+              Handover and support aligned with the delivered property
+              platform.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              PropTech software needs regular updates, listing improvements, workflow changes and performance monitoring. We support your
-              platform after launch so it keeps improving.
+              The final implementation can include user guidance, agreed
+              post-launch support and future enhancement planning according to
+              the delivered system and commercial scope.
             </p>
+
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-4 border-b border-black/10 pb-4"
                 >
-                  <CheckCircle2 size={23} className="shrink-0 text-[#3C5B9B]" />
+                  <CheckCircle2
+                    size={23}
+                    className="shrink-0 text-[#193175]"
+                  />
+
                   <span className="text-[16px] font-light text-black/70">
                     {item}
                   </span>
@@ -1038,33 +1213,38 @@ export default function PropertyTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Property Tech development.
+              Common questions about Property Tech solutions.
             </h2>
           </div>
+
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
               <div
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
+
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
                     {openFaq === index ? (
                       <Minus size={18} />
                     ) : (
@@ -1072,8 +1252,9 @@ export default function PropertyTechIndustryPage() {
                     )}
                   </span>
                 </button>
+
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1088,39 +1269,52 @@ export default function PropertyTechIndustryPage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live Property Tech Software"
+                src="/industries/property-tech/property-tech-support.jpg"
+                alt="Property technology solutions by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
               />
             </div>
+
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to build your Property Tech platform?
+                  Planning a Property Tech platform?
                 </h3>
+
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you create a secure, scalable and
-                  user-focused property technology solution.
+                  Tell us about your properties, customers, agents, rentals and
+                  operational workflows so the right solution can be planned.
                 </p>
               </div>
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

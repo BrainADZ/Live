@@ -39,33 +39,33 @@ type StackItem = {
 };
 const workflow = [
   {
-    title: "Discovery Phase",
-    text: "We analyze goals and challenges to craft tailored, business-aligned software solutions.",
+    title: "Business & System Discovery",
+    text: "We understand your users, workflows, existing tools, data and the operational problems the software needs to solve.",
     icon: Search,
   },
   {
-    title: "Architecture Planning",
-    text: "We design scalable, secure, and efficient blueprints for long-term adaptability.",
+    title: "Solution Architecture",
+    text: "We plan modules, permissions, data structure, integrations and the technical foundation required for the product.",
     icon: Box,
   },
   {
-    title: "Agile Development",
-    text: "We develop in sprints, ensuring rapid delivery and continuous client collaboration.",
-    icon: Code2,
-  },
-  {
-    title: "Design Prototyping",
-    text: "We create intuitive prototypes to visualize seamless user experiences early.",
+    title: "UX & Workflow Design",
+    text: "We design screens, forms, dashboards and user flows around the tasks people need to complete every day.",
     icon: Star,
   },
   {
+    title: "Software Development",
+    text: "We build the required frontend, backend, business logic, APIs and integrations in planned development stages.",
+    icon: Code2,
+  },
+  {
     title: "Testing & Deployment",
-    text: "We ensure flawless performance through testing and secure deployment.",
+    text: "We test workflows, permissions, data handling, integrations and performance before a controlled release.",
     icon: ShieldCheck,
   },
   {
-    title: "Performance Scaling",
-    text: "We optimize speed, security, and scalability for growing business needs.",
+    title: "Support & Evolution",
+    text: "We monitor the software, resolve issues and improve features as users, processes and business needs change.",
     icon: Gauge,
   },
 ];
@@ -80,35 +80,35 @@ const workflowLayout = [
 ];
 
 const useCases = [
-  "CRM Solutions",
-  "ERP Systems",
-  "Admin Panels",
-  "Inventory Systems",
-  "Booking Systems",
-  "Billing Software",
-  "Internal Portals",
-  "Reporting Dashboards",
+  "Operations Management Systems",
+  "Workflow Automation Tools",
+  "Admin & Management Portals",
+  "Inventory & Order Systems",
+  "Booking & Scheduling Platforms",
+  "Billing & Invoicing Software",
+  "Internal Team Portals",
+  "Reporting & Analytics Dashboards",
 ];
 
 const caseStudies = [
   {
-    title: "Retail CRM Platform",
-    text: "A centralized CRM system for lead management, follow-ups, sales tracking and customer communication.",
+    title: "Retail Operations Platform",
+    text: "A connected platform for customer activity, sales workflows, team follow-ups and operational reporting.",
     image: "/services/hero/Retail-CRM-and-Campaign-Management-System.png",
   },
   {
-    title: "Manufacturing ERP System",
-    text: "A custom ERP solution for inventory, production workflow, team activity and operational visibility.",
+    title: "Manufacturing Operations System",
+    text: "A custom system for inventory movement, production workflows, team activity and operational visibility.",
     image: "/services/hero/download.jpeg",
   },
   {
-    title: "Service Admin Dashboard",
-    text: "A role-based dashboard to manage users, reports, tasks, approvals and real-time business activity.",
+    title: "Service Management Dashboard",
+    text: "A role-based dashboard for users, tasks, approvals, service activity and management reporting.",
     image: "/services/hero/serviceadmin.jpeg",
   },
   {
-    title: "Hospitality Booking System",
-    text: "A booking platform for reservations, payments, customer data and staff coordination.",
+    title: "Booking & Reservation Platform",
+    text: "A booking system for availability, reservations, payments, customer records and staff coordination.",
     image: "/services/hero/hopitality.png",
   },
 ];
@@ -125,42 +125,42 @@ const industries = [
 
 const whyChoose = [
   {
-    title: "Business-First Development",
-    text: "We create software around real business operations instead of forcing ready-made templates.",
+    title: "Workflow-First Planning",
+    text: "We start with your users, data and day-to-day process before deciding what the software should contain.",
   },
   {
-    title: "Scalable Architecture",
-    text: "Your software is planned for future users, data growth, new features and integrations.",
+    title: "Architecture That Can Evolve",
+    text: "We plan software so new users, modules, data and integrations can be added as requirements change.",
   },
   {
-    title: "Clean User Experience",
-    text: "Every dashboard, form and screen is designed to be simple, fast and easy for teams.",
+    title: "Usable Interfaces",
+    text: "Dashboards, forms and screens are designed around the actions each user needs to complete efficiently.",
   },
   {
-    title: "Secure Delivery Process",
-    text: "We follow secure coding, testing, deployment and access-control practices.",
+    title: "Secure, Tested Delivery",
+    text: "Authentication, permissions, data handling, testing and deployment are planned as part of the development process.",
   },
 ];
 
 const supportItems = [
   {
-    title: "Performance Monitoring",
-    text: "We monitor uptime, loading speed, server health and critical software performance.",
+    title: "Application Monitoring",
+    text: "We track important application, server and performance signals so issues can be identified and addressed.",
     icon: Gauge,
   },
   {
-    title: "Bug Fixing",
-    text: "We identify issues, fix bugs and keep your software stable after launch.",
+    title: "Issue Resolution",
+    text: "We investigate bugs, errors and workflow issues that appear after the software is in real use.",
     icon: Bug,
   },
   {
-    title: "Feature Improvements",
-    text: "We improve your software with new features, modules and business process upgrades.",
+    title: "Feature & Workflow Enhancements",
+    text: "We add modules and improve existing workflows as business requirements and user needs change.",
     icon: RefreshCcw,
   },
   {
-    title: "Ongoing Support",
-    text: "We provide technical support for updates, changes, improvements and maintenance.",
+    title: "Ongoing Technical Support",
+    text: "We support updates, integrations, releases and maintenance required to keep the software useful over time.",
     icon: LifeBuoy,
   },
 ];
@@ -330,44 +330,44 @@ function createRows(items: StackItem[], pattern: number[]) {
 
 const faqs = [
   {
-    q: "What type of software development services do you provide?",
-    a: "We build custom business software, CRM systems, ERP platforms, admin panels, dashboards, booking systems, billing software and internal portals.",
+    q: "What types of custom software do you build?",
+    a: "We build operations platforms, workflow tools, admin portals, dashboards, inventory and order systems, booking platforms, billing software and other custom business applications.",
   },
   {
     q: "Can BrainADZ Live build software from scratch?",
-    a: "Yes. We handle the complete process including discovery, planning, UI/UX design, development, testing, deployment and support.",
+    a: "Yes. We can handle discovery, workflow planning, UI/UX design, architecture, development, testing, deployment and post-launch support.",
   },
   {
-    q: "Can you modernize our existing software?",
-    a: "Yes. We can improve UI, add features, optimize performance, fix bugs, upgrade technology and improve the system architecture.",
+    q: "Can you improve or extend our existing software?",
+    a: "Yes. We can add modules, improve user flows, fix issues, update integrations, optimize performance and modernize selected parts of an existing system.",
   },
   {
-    q: "Do you build custom dashboards?",
-    a: "Yes. We build dashboards for operations, sales, users, reports, inventory, finance, analytics and team management.",
+    q: "Can you replace spreadsheets and disconnected tools with one system?",
+    a: "Yes. We can map the current workflow and build a connected system for records, approvals, tasks, reporting and other processes that are currently handled across separate tools.",
   },
   {
-    q: "Can you integrate third-party APIs?",
-    a: "Yes. We integrate payment gateways, CRM tools, ERP systems, WhatsApp, SMS, email, analytics, maps and other APIs.",
+    q: "Can the software integrate with third-party systems and APIs?",
+    a: "Yes. Depending on available APIs and access, we can connect payment systems, CRM and ERP platforms, WhatsApp, SMS, email, maps, analytics and other services.",
   },
   {
-    q: "Will the software be mobile responsive?",
-    a: "Yes. We design responsive interfaces that work smoothly on desktop, tablet and mobile screens.",
+    q: "Will the software work on desktop, tablet and mobile?",
+    a: "For web-based software, we design responsive interfaces for desktop, tablet and mobile use according to the project requirements.",
   },
   {
-    q: "Do you provide post-launch support?",
-    a: "Yes. We provide support, maintenance, bug fixing, monitoring, updates and feature improvements after launch.",
+    q: "Do you provide support after launch?",
+    a: "Yes. We can support issue resolution, monitoring, updates, integration maintenance and ongoing feature or workflow improvements.",
   },
   {
-    q: "How do you manage software security?",
-    a: "We use role-based access, secure authentication, protected APIs, data validation and secure deployment practices.",
+    q: "How do you approach software security?",
+    a: "Security depends on the system, but we can plan authentication, role-based permissions, protected APIs, input validation and controlled deployment practices as part of the project.",
   },
   {
     q: "How long does custom software development take?",
-    a: "The timeline depends on the project scope. Small systems may take a few weeks, while larger enterprise systems need a longer planned timeline.",
+    a: "The timeline depends on scope, integrations, workflows and technical complexity. After discovery, we define a practical delivery plan and can phase larger systems into manageable releases.",
   },
   {
-    q: "Can the software scale as our business grows?",
-    a: "Yes. We plan scalable architecture so your software can handle more users, more data, new modules and future integrations.",
+    q: "Can the software expand as our requirements change?",
+    a: "Yes. We can plan the architecture so new users, modules, reports and integrations can be added as the product and business requirements evolve.",
   },
 ];
 
@@ -384,7 +384,7 @@ export default function SoftwareDevelopmentPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/services/hero/how-to-be-a-software-developer.jpg"
+          src="/hero/software-development.jpg"
           alt="Software Development Services"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -410,15 +410,16 @@ export default function SoftwareDevelopmentPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Custom software, enterprise applications, automation dashboards
-              and scalable digital systems built around your business workflow.
+              We design and build custom software, internal platforms,
+              dashboards and workflow systems around the way your teams, data
+              and business processes actually work.
             </p>
 
             <div className="mt-8">
 <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -432,40 +433,41 @@ export default function SoftwareDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
 
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Software built for real business operations, not just screens.
+              Turn manual processes and disconnected tools into one working system.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live designs and develops custom software for business
-              operations, automation, internal teams and customer platforms. We
-              focus on practical workflows, clean dashboards, secure systems and
-              scalable architecture.
+              BrainADZ Live develops custom software for businesses that need
+              more control than spreadsheets, disconnected tools or fixed
+              off-the-shelf products can provide. We turn workflows, data,
+              permissions and reporting needs into software built around real
+              day-to-day operations.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
-              <div className="border-l-2 border-[#3C5B9B] pl-5">
-                <h3 className="text-[20px] font-light">Business Automation</h3>
+              <div className="border-l-2 border-[#193175] pl-5">
+                <h3 className="text-[20px] font-light">Workflow Automation</h3>
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Reduce manual work with connected software workflows.
+                  Replace repeated handoffs, approvals and updates with structured digital workflows.
                 </p>
               </div>
 
-              <div className="border-l-2 border-[#3C5B9B] pl-5">
-                <h3 className="text-[20px] font-light">Enterprise Systems</h3>
+              <div className="border-l-2 border-[#193175] pl-5">
+                <h3 className="text-[20px] font-light">Custom Business Platforms</h3>
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Build reliable systems for teams, data and daily operations.
+                  Bring users, records, tasks and reporting into software designed for your operations.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#3C5B9B]/10 blur-3xl" />
+            <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#193175]/10 blur-3xl" />
             <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
                 src="/services/Software-Development-Models.avif"
@@ -490,15 +492,15 @@ export default function SoftwareDevelopmentPage() {
 
         <div className="mx-auto max-w-[1500px]">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Work Flow
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Software Development Process
             </p>
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our Proven Software Development Process Roadmap
+              How we turn business requirements into working software
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              We ensure every solution combines innovation, reliability, and
-              scalability for sustainable growth.
+              We move from workflow discovery and architecture to design,
+              development, testing and ongoing improvement through one connected process.
             </p>
           </div>
 
@@ -513,15 +515,15 @@ export default function SoftwareDevelopmentPage() {
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
                         <Icon
                           size={23}
                           strokeWidth={2.4}
-                          className="text-[#3C5B9B]"
+                          className="text-[#193175]"
                         />
                       </div>
 
@@ -558,13 +560,13 @@ export default function SoftwareDevelopmentPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
               <path
                 d="M 392 43 L 1208 43"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -572,14 +574,14 @@ export default function SoftwareDevelopmentPage() {
               />
               <path
                 d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
               />
               <path
                 d="M 1208 343 L 392 343"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -587,7 +589,7 @@ export default function SoftwareDevelopmentPage() {
               />
               <path
                 d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -595,7 +597,7 @@ export default function SoftwareDevelopmentPage() {
               />
               <path
                 d="M 392 613 L 1208 613"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -612,11 +614,11 @@ export default function SoftwareDevelopmentPage() {
                   className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
                   style={{ left: item.left, top: item.top }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
                     <Icon
                       size={36}
                       strokeWidth={2.25}
-                      className="text-[#3C5B9B]"
+                      className="text-[#193175]"
                     />
                   </div>
 
@@ -639,17 +641,18 @@ export default function SoftwareDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Business Use Cases
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Software systems for daily business needs.
+                Custom software for the processes your teams manage every day.
               </h2>
 
               <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
                 From internal operations to customer-facing platforms, we build
-                software that keeps teams, data and workflows connected.
+                software around the users, rules, data and actions that need to
+                work together.
               </p>
             </div>
 
@@ -659,7 +662,7 @@ export default function SoftwareDevelopmentPage() {
                   key={item}
                   className="group flex items-center gap-5 border-b border-black/10 pb-6"
                 >
-                  <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B] transition group-hover:bg-[#3C5B9B] group-hover:text-white">
+                  <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175] transition group-hover:bg-[#193175] group-hover:text-white">
                     0{index + 1}
                   </div>
 
@@ -668,7 +671,7 @@ export default function SoftwareDevelopmentPage() {
                       {item}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
-                      Custom modules designed around your business process.
+                      Built around your users, data, rules and day-to-day process.
                     </p>
                   </div>
                 </div>
@@ -683,18 +686,18 @@ export default function SoftwareDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Case Studies
               </p>
 
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Practical software solutions built for real operations.
+                Custom software shaped around real business workflows.
               </h2>
             </div>
 
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
             >
               View Case Studies <ArrowRight size={18} />
             </Link>
@@ -720,8 +723,8 @@ export default function SoftwareDevelopmentPage() {
                       {item.title}
                     </h3>
 
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight size={18} className="text-[#193175]" />
                     </span>
                   </div>
 
@@ -742,14 +745,14 @@ export default function SoftwareDevelopmentPage() {
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
           <div
-            className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75"
+            className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
             data-aos="zoom-in"
           >
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live AI Technology"
+                src="/CTA/SoftwareDev-CTA.jpg"
+                alt="BrainADZ Live Custom Software Development"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -761,12 +764,11 @@ export default function SoftwareDevelopmentPage() {
               {/* TEXT */}
               <div className="max-w-140">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Build smarter digital systems with BrainADZ Live
+                  Have a process that still depends on spreadsheets and disconnected tools?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Discover how our team can help you transform hardware,
-                  software, automation, and AI into reliable business solutions.
+                  Let BrainADZ Live turn that workflow into custom software with the right users, permissions, integrations and reporting.
                 </p>
               </div>
 
@@ -774,7 +776,7 @@ export default function SoftwareDevelopmentPage() {
               <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
 >
                 <span>Enquire Now</span>
 
@@ -793,18 +795,18 @@ export default function SoftwareDevelopmentPage() {
         <div className="mx-auto max-w-450">
           {/* HEADING */}
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
 
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Modern technologies powering custom software development
+              Technologies we use to build custom software systems
             </h2>
 
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use the right programming languages, databases and frameworks
-              to build scalable business applications, dashboards, enterprise
-              platforms and custom software solutions.
+              We use programming languages, databases and frameworks selected
+              around the product requirements, integrations, users and long-term
+              maintenance needs.
             </p>
           </div>
 
@@ -821,13 +823,13 @@ export default function SoftwareDevelopmentPage() {
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
                     isActive
                       ? "text-[#161616]"
-                      : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
 
                   <span
-                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
                       isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
@@ -866,7 +868,7 @@ export default function SoftwareDevelopmentPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -882,17 +884,17 @@ export default function SoftwareDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We design software around your workflow, users and growth.
+              We build software around how your teams actually work.
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              Our focus is simple: create software that is useful, scalable,
-              secure and easy for your team to use every day.
+              Our focus is to understand the workflow first, then build the
+              right modules, permissions, interfaces and integrations around it.
             </p>
           </div>
 
@@ -902,7 +904,7 @@ export default function SoftwareDevelopmentPage() {
                 key={item.title}
                 className="border-t border-black/10 pt-7"
               >
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
 
@@ -924,19 +926,18 @@ export default function SoftwareDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Support & Maintenance
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Software support that continues after launch.
+                Keep your software useful as workflows and requirements change.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We do not stop at deployment. BrainADZ Live supports your software
-              with monitoring, improvements, bug fixing, updates and technical
-              guidance.
+              After launch, we help resolve issues, maintain integrations and
+              improve the software as users, workflows and operational needs change.
             </p>
           </div>
 
@@ -949,8 +950,8 @@ export default function SoftwareDevelopmentPage() {
                   key={item.title}
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#3C5B9B]/10">
-                    <Icon size={28} className="text-[#3C5B9B]" />
+                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
+                    <Icon size={28} className="text-[#193175]" />
                   </div>
 
                   <div>
@@ -971,13 +972,12 @@ export default function SoftwareDevelopmentPage() {
             <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
                 <h3 className="text-[28px] font-light tracking-[-0.6px] md:text-[34px]">
-                  Maintenance includes performance, security and feature
-                  improvements.
+                  Maintenance can include monitoring, updates and product improvements.
                 </h3>
 
                 <p className="mt-4 text-[15px] font-light leading-[1.7] text-black/65">
-                  Your software keeps improving with changing business needs,
-                  user feedback and new operational requirements.
+                  Support is planned around the system in use, including issues,
+                  performance, security updates and new workflow requirements.
                 </p>
               </div>
 
@@ -989,7 +989,7 @@ export default function SoftwareDevelopmentPage() {
                   >
                     <CheckCircle2
                       size={28}
-                      className="mx-auto mb-3 text-[#3C5B9B]"
+                      className="mx-auto mb-3 text-[#193175]"
                     />
                     <p className="text-[15px] font-light text-black/70">
                       {item}
@@ -1005,17 +1005,17 @@ export default function SoftwareDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about software development.
+              Common questions about custom software development.
             </h2>
 
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
-              Clear answers about our process, custom software capabilities,
-              integrations, security, scalability and post-launch support.
+              Clear answers about project scope, existing systems, integrations,
+              security, delivery planning and post-launch support.
             </p>
           </div>
 
@@ -1025,8 +1025,8 @@ export default function SoftwareDevelopmentPage() {
                 key={faq.q}
                 className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
-                    : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#3C5B9B]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"
                 }`}
               >
                 <button
@@ -1039,8 +1039,8 @@ export default function SoftwareDevelopmentPage() {
                     <span
                       className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${
                         openFaq === index
-                          ? "bg-[#3C5B9B] text-white"
-                          : "bg-[#3C5B9B]/10 text-[#3C5B9B] group-hover:bg-[#3C5B9B] group-hover:text-white"
+                          ? "bg-[#193175] text-white"
+                          : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"
                       }`}
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -1054,8 +1054,8 @@ export default function SoftwareDevelopmentPage() {
                   <span
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${
                       openFaq === index
-                        ? "bg-[#3C5B9B] text-white"
-                        : "bg-[#f6f8fc] text-[#3C5B9B] group-hover:bg-[#3C5B9B]/10"
+                        ? "bg-[#193175] text-white"
+                        : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"
                     }`}
                   >
                     {openFaq === index ? (
@@ -1067,7 +1067,7 @@ export default function SoftwareDevelopmentPage() {
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 px-15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 px-15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1083,14 +1083,14 @@ export default function SoftwareDevelopmentPage() {
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
           <div
-            className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75"
+            className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
             data-aos="zoom-in"
           >
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live AI Technology"
+                src="/CTA/SoftwareDev-CTA.jpg"
+                alt="BrainADZ Live Custom Software Development"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -1102,12 +1102,11 @@ export default function SoftwareDevelopmentPage() {
               {/* TEXT */}
               <div className="max-w-140">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Build smarter digital systems with BrainADZ Live
+                  Ready to build software around the way your business actually works?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Discover how our team can help you transform hardware,
-                  software, automation, and AI into reliable business solutions.
+                  Let BrainADZ Live design and develop a custom software system around your users, workflows, data and connected tools.
                 </p>
               </div>
 
@@ -1115,7 +1114,7 @@ export default function SoftwareDevelopmentPage() {
 <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
 >
   <span>Enquire Now</span>
 

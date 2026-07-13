@@ -3,18 +3,15 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
-  ArrowRight,
   BadgeCheck,
   Building2,
   CalendarDays,
   CheckCircle2,
-  ChevronRight,
   CloudSun,
   Download,
-  Gauge,
   Image as ImageIcon,
-  MapPin,
   Minus,
   PackageCheck,
   Paintbrush,
@@ -29,83 +26,103 @@ import {
 
 const whyChoose = [
   {
-    title: "Durable Build",
-    text: "Strong frame quality designed for long-term indoor and outdoor promotional use.",
+    title: "Professional Digital Display",
+    text: "A freestanding D-type digital signage format designed for customer-facing business communication.",
     icon: ShieldCheck,
   },
   {
-    title: "Lightweight Design",
-    text: "Easy to carry, move and place wherever your promotion needs better visibility.",
-    icon: PackageCheck,
-  },
-  {
-    title: "High Visibility",
-    text: "Large branding area helps your message stand out in shops, events and walkways.",
+    title: "Dynamic Content Display",
+    text: "Present promotional videos, images, campaign creatives and business information on screen.",
     icon: ImageIcon,
   },
   {
-    title: "Weather Friendly",
-    text: "Suitable for daily business promotions, indoor displays and covered outdoor spaces.",
+    title: "Flexible Media Playback",
+    text: "Use local media playback for planned content without depending on printed promotional material.",
+    icon: PackageCheck,
+  },
+  {
+    title: "Optional Cloud Management",
+    text: "Add cloud signage management when remote content control is required for the deployment.",
     icon: CloudSun,
   },
   {
-    title: "Easy Setup",
-    text: "Foldable D-style standee design makes installation, movement and storage simple.",
+    title: "Requirement-Based Setup",
+    text: "Plan the display, content setup and deployment approach around the actual business requirement.",
     icon: Wrench,
   },
   {
-    title: "Custom Branding",
-    text: "Print your own design, offer, menu, direction board or promotional campaign.",
+    title: "Enclosure Branding",
+    text: "Coordinate the enclosure finish and branding treatment with the surrounding business environment.",
     icon: Paintbrush,
   },
 ];
 
 const useCases = [
-  { title: "Retail Stores", text: "Promote offers, launches and walk-in deals.", icon: Store },
-  { title: "Events & Exhibitions", text: "Guide visitors and increase brand presence.", icon: CalendarDays },
-  { title: "Restaurants & Cafes", text: "Display menus, deals and daily specials.", icon: Utensils },
-  { title: "Offices & Institutions", text: "Share directions, notices and information.", icon: Building2 },
-  { title: "Promotions & Offers", text: "Highlight discounts and seasonal campaigns.", icon: ShoppingBag },
+  {
+    title: "Retail Stores",
+    text: "Display offers, launches, collections and promotional campaigns.",
+    icon: Store,
+  },
+  {
+    title: "Events & Exhibitions",
+    text: "Present event content, sponsor visuals and campaign communication.",
+    icon: CalendarDays,
+  },
+  {
+    title: "Hospitality",
+    text: "Show promotions, guest information and customer-facing content.",
+    icon: Utensils,
+  },
+  {
+    title: "Corporate & Reception",
+    text: "Present welcome content, company information and visitor communication.",
+    icon: Building2,
+  },
+  {
+    title: "Campaigns & Launches",
+    text: "Support product launches, announcements and changing campaign content.",
+    icon: ShoppingBag,
+  },
 ];
 
 const productDetails = [
-  "Frame Material: Aluminium / metal frame options",
-  "Frame Color: Silver or custom finish based on availability",
-  "Graphic Material: Flex, vinyl or foam board printing",
-  "Printing: High-resolution branding print",
-  "Usage: Indoor, storefront and promotional placement",
-  "Customization: Size, artwork and campaign design",
+  "Display Type: Freestanding D-type digital signage unit",
+  "Content Support: Video and image playback",
+  "Playback Setup: Local media playback based on configured setup",
+  "Software Options: Signage application available when required",
+  "Cloud Management: Optional cloud signage management",
+  "Customization: Enclosure finish, branding and deployment planning based on requirement",
 ];
 
 const process = [
   {
-    title: "Requirement",
-    text: "Share your standee size, usage location and branding requirement.",
+    title: "Requirement Discovery",
+    text: "Share the intended placement, audience, content requirement and business use case.",
     icon: BadgeCheck,
   },
   {
-    title: "Design Approval",
-    text: "We prepare or adjust artwork and confirm the final print-ready design.",
-    icon: Paintbrush,
-  },
-  {
-    title: "Printing",
-    text: "Your creative is printed with clean colors and sharp promotional visibility.",
-    icon: ImageIcon,
-  },
-  {
-    title: "Frame Setup",
-    text: "The print is fitted neatly into the D-type frame for a clean promotional display.",
+    title: "Configuration Planning",
+    text: "We plan the standee setup, content approach and management requirements for the project.",
     icon: Wrench,
   },
   {
+    title: "Content Setup",
+    text: "Images, videos and promotional content are prepared for the selected playback setup.",
+    icon: ImageIcon,
+  },
+  {
+    title: "Standee Preparation",
+    text: "The digital standee, enclosure finish and branding requirements are prepared for deployment.",
+    icon: Paintbrush,
+  },
+  {
     title: "Quality Check",
-    text: "We check print quality, fitting, finishing and overall product presentation.",
+    text: "The display presentation, content playback and configured setup are checked before deployment.",
     icon: CheckCircle2,
   },
   {
-    title: "Delivery",
-    text: "Your standee is packed and delivered for business use.",
+    title: "Deployment",
+    text: "The standee is prepared for placement according to the agreed deployment plan.",
     icon: Truck,
   },
 ];
@@ -121,54 +138,76 @@ const processLayout = [
 
 const businessBenefits = [
   {
-    title: "Better Walk-In Attention",
-    text: "Place your message near entrances, storefronts, counters or event spaces to attract more attention.",
+    title: "Update Campaign Content",
+    text: "Change promotional videos, images and campaign communication without creating a new printed display for every update.",
   },
   {
-    title: "Clear Promotional Messaging",
-    text: "Show offers, product launches, menus, service details and directions in a simple visual format.",
+    title: "Support Rich Media",
+    text: "Use motion, visuals and rotating content to present more information through one customer-facing display point.",
   },
   {
-    title: "Reusable Branding Asset",
-    text: "Use it for different campaigns by changing printed graphics or updating your promotional design.",
+    title: "Professional Digital Presentation",
+    text: "Create a clean screen-based communication experience for retail, events, hospitality and corporate spaces.",
   },
   {
-    title: "Easy Indoor & Outdoor Placement",
-    text: "The foldable structure makes it simple to shift, store and reuse across multiple business locations.",
+    title: "Choose the Right Management Setup",
+    text: "Use local media playback or add signage software and cloud management according to the deployment requirement.",
   },
 ];
 
 const faqs = [
   {
-    q: "What is an D Type Standee?",
-    a: "An D Type Standee is a premium D-type display stand used for promotions, directions, menus, announcements and brand visibility in shops, events and business spaces.",
+    q: "What is a D Type Digital Standee?",
+    a: "A D Type Digital Standee is a freestanding digital signage unit used to display videos, images, promotional campaigns and business information in customer-facing spaces.",
   },
   {
-    q: "Can I customize the design?",
-    a: "Yes. You can provide your artwork, or our team can help create a print-ready design based on your brand and message.",
+    q: "What type of content can the standee display?",
+    a: "The standee can be configured for video and image playback, including promotional creatives, product campaigns, announcements, launch content and business information.",
   },
   {
-    q: "Is it suitable for outdoor use?",
-    a: "It can be used indoors and in covered outdoor spaces. For harsh outdoor conditions, material and finishing can be selected accordingly.",
+    q: "Can the standee work with local media playback?",
+    a: "Yes. Local media playback can be included as part of the configured setup when the business does not require remote content management.",
   },
   {
-    q: "Which businesses can use D Type Standees?",
-    a: "Retail stores, restaurants, cafes, clinics, real estate businesses, exhibitions, offices and event organizers commonly use D Type Standees.",
+    q: "Can I manage content through signage software or the cloud?",
+    a: "Yes. A signage application or cloud signage management can be added when the project requires managed or remote content control.",
   },
   {
-    q: "Do you provide delivery?",
-    a: "Yes. Delivery availability depends on location and order quantity. Our team can confirm this during enquiry.",
+    q: "Can the D Type Digital Standee be customized?",
+    a: "The enclosure finish, branding treatment, content-management setup and deployment approach can be planned according to the project requirement.",
   },
 ];
 
-const sizes = [
-  ["24 x 36", "24 x 36 in", "Approx. 25 x 37 x 20 in"],
-  ["24 x 48", "24 x 48 in", "Approx. 25 x 49 x 20 in"],
-  ["30 x 48", "30 x 48 in", "Approx. 31 x 49 x 24 in"],
-  ["36 x 60", "36 x 60 in", "Approx. 37 x 61 x 24 in"],
+const configurations = [
+  [
+    "Display Format",
+    "Freestanding digital standee",
+    "Requirement-based setup",
+  ],
+  [
+    "Content Playback",
+    "Images and videos",
+    "Local media playback",
+  ],
+  [
+    "Content Management",
+    "Signage application",
+    "Optional when required",
+  ],
+  [
+    "Remote Management",
+    "Cloud signage management",
+    "Optional when required",
+  ],
+  [
+    "Branding & Finish",
+    "Enclosure branding",
+    "Project-based customization",
+  ],
 ];
 
-export default function ATypeStandeePage() {
+export default function DTypeStandeePage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
@@ -176,8 +215,8 @@ export default function ATypeStandeePage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/products/D.png"
-          alt="D Type Standee"
+          src="/hero/d-type.jpg"
+          alt="D Type Digital Standee by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -188,37 +227,42 @@ export default function ATypeStandeePage() {
             <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Products</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">D Type Standee</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              D Type Standee Printing & Branding Solutions
+              D Type Digital Standee for Dynamic Business Communication
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Strong, premium and high-impact D Type Standees designed for
-              retail stores, exhibitions, restaurants, offices and promotional
-              branding.
+              A freestanding digital signage unit for displaying videos, images,
+              promotions, launches and business information across
+              customer-facing spaces.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
 
               <a
                 href="/brochure/BrainADZLive.pdf"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-3 rounded-full border border-white/35 px-8 text-[13px] font-bold text-white transition duration-300 hover:border-white hover:bg-white hover:text-[#3C5B9B]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-3 rounded-full border border-white/35 px-8 text-[13px] font-bold text-white transition duration-300 hover:border-white hover:bg-white hover:text-[#193175]"
               >
                 Download Brochure
                 <Download size={17} />
@@ -232,15 +276,16 @@ export default function ATypeStandeePage() {
       <section className="bg-white px-5 py-10 md:px-8 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-6 border-b border-black/10 pb-10 md:grid-cols-4">
           {[
-            "Premium Quality",
-            "Lightweight & Portable",
-            "Custom Branding",
-            "Easy Setup",
+            "Digital Content Display",
+            "Video & Image Playback",
+            "Custom Enclosure Branding",
+            "Software Options",
           ].map((item) => (
             <div key={item} className="flex items-center gap-4">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                <CheckCircle2 size={23} className="text-[#3C5B9B]" />
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#193175]/10">
+                <CheckCircle2 size={23} className="text-[#193175]" />
               </span>
+
               <p className="text-[16px] font-light text-black/75">{item}</p>
             </div>
           ))}
@@ -251,34 +296,37 @@ export default function ATypeStandeePage() {
       <section className="bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-22">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Product Overview
             </p>
 
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A professional display solution for everyday business promotions.
+              A freestanding digital display for visible customer-facing
+              communication.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              D Type Standee, also known as a display standee for indoor branding, promotional signage and business visibility,
-              is a foldable advertising display used to promote offers, guide
-              customers, display menus and increase brand visibility in high
-              traffic areas.
+              The BrainADZ Live D Type Digital Standee is a screen-based
+              signage solution designed for promotional content, brand
+              communication and customer-facing information. It can present
+              changing videos and images based on the selected content and
+              management setup.
             </p>
 
             <div className="mt-8 space-y-4">
               {[
-                "Sturdy aluminium or metal frame",
-                "High-quality printed graphics",
-                "Foldable and portable structure",
-                "Useful for indoor and covered outdoor branding",
-                "Available in multiple practical sizes",
+                "Freestanding D-type digital signage format",
+                "Video and image content playback",
+                "Local media playback based on configured setup",
+                "Optional signage application",
+                "Optional cloud signage management",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle2
                     size={20}
-                    className="mt-1 shrink-0 text-[#3C5B9B]"
+                    className="mt-1 shrink-0 text-[#193175]"
                   />
+
                   <p className="text-[15px] font-light leading-[1.65] text-black/65">
                     {item}
                   </p>
@@ -289,22 +337,23 @@ export default function ATypeStandeePage() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              ["/products/d-type-standee/front.jpg", "Front View"],
-              ["/products/d-type-standee/side.jpg", "Side View"],
-              ["/products/d-type-standee/back.jpg", "Back View"],
+              ["/products/d-type-standee/front.jpg", "Digital Front View"],
+              ["/products/d-type-standee/side.jpg", "Digital Side View"],
+              ["/products/d-type-standee/back.jpg", "Digital Back View"],
             ].map(([src, label]) => (
               <div key={label} className="text-center">
                 <div className="overflow-hidden rounded-[20px] bg-[#f6f8fc] shadow-[0_22px_65px_rgba(0,0,0,0.06)]">
                   <img
                     src={src}
-                    alt={label}
+                    alt={`D Type Standee ${label}`}
                     className="h-80 w-full object-cover transition duration-500 hover:scale-105"
                     onError={(e) => {
                       e.currentTarget.src = "/about.avif";
                     }}
                   />
                 </div>
-                <p className="mt-4 text-[15px] font-light text-[#3C5B9B]">
+
+                <p className="mt-4 text-[15px] font-light text-[#193175]">
                   {label}
                 </p>
               </div>
@@ -317,11 +366,13 @@ export default function ATypeStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose This Product
             </p>
+
             <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for visibility, portability and practical brand promotion.
+              Built for changing content and professional customer-facing
+              communication.
             </h2>
           </div>
 
@@ -331,12 +382,14 @@ export default function ATypeStandeePage() {
 
               return (
                 <div key={item.title} className="border-t border-black/10 pt-7">
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                    <Icon size={26} className="text-[#3C5B9B]" />
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#193175]/10">
+                    <Icon size={26} className="text-[#193175]" />
                   </div>
+
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -351,12 +404,12 @@ export default function ATypeStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Available Sizes
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Configuration Options
             </p>
 
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Practical sizes for different promotional spaces.
+              Configuration options for different deployment needs.
             </h2>
 
             <div className="mt-8 overflow-hidden border border-black/10">
@@ -364,21 +417,27 @@ export default function ATypeStandeePage() {
                 <thead className="bg-[#f6f8fc] text-black">
                   <tr>
                     <th className="border-b border-black/10 p-4 font-medium">
-                      Size
+                      Area
                     </th>
+
                     <th className="border-b border-black/10 p-4 font-medium">
-                      Graphic Size
+                      Standard Scope
                     </th>
+
                     <th className="border-b border-black/10 p-4 font-medium">
-                      Display Size
+                      Available Setup
                     </th>
                   </tr>
                 </thead>
+
                 <tbody>
-                  {sizes.map((row) => (
+                  {configurations.map((row) => (
                     <tr key={row[0]}>
                       {row.map((cell) => (
-                        <td key={cell} className="border-b border-black/10 p-4">
+                        <td
+                          key={cell}
+                          className="border-b border-black/10 p-4"
+                        >
                           {cell}
                         </td>
                       ))}
@@ -387,27 +446,34 @@ export default function ATypeStandeePage() {
                 </tbody>
               </table>
             </div>
+
             <p className="mt-4 text-[13px] font-light text-black/50">
-              Custom sizes may be available based on order requirement.
+              Final configuration is planned according to placement, content
+              and project requirements.
             </p>
           </div>
 
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Product Details
             </p>
 
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Designed with the right material, finish and branding quality.
+              Planned around display content, management and deployment
+              requirements.
             </h2>
 
             <div className="mt-8 space-y-4">
               {productDetails.map((item) => (
-                <div key={item} className="flex items-start gap-3 border-b border-black/10 pb-4">
+                <div
+                  key={item}
+                  className="flex items-start gap-3 border-b border-black/10 pb-4"
+                >
                   <CheckCircle2
                     size={20}
-                    className="mt-1 shrink-0 text-[#3C5B9B]"
+                    className="mt-1 shrink-0 text-[#193175]"
                   />
+
                   <p className="text-[15px] font-light leading-[1.65] text-black/65">
                     {item}
                   </p>
@@ -422,11 +488,13 @@ export default function ATypeStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Ideal Use Cases
             </p>
+
             <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Perfect for businesses that need visible, flexible promotions.
+              Built for customer-facing spaces where content needs to stay
+              current.
             </h2>
           </div>
 
@@ -439,12 +507,14 @@ export default function ATypeStandeePage() {
                   key={item.title}
                   className="rounded-[26px] border border-black/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
                 >
-                  <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                    <Icon size={25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#193175]/10">
+                    <Icon size={25} className="text-[#193175]" />
                   </div>
+
                   <h3 className="text-[19px] font-light tracking-[-0.3px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -459,34 +529,38 @@ export default function ATypeStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Customization Options
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Make your standee match your campaign and brand identity.
+              Configure the standee around your content, placement and brand.
             </h2>
 
             <p className="mt-5 max-w-160 text-[16px] font-light leading-[1.7] text-black/65">
-              From design to print finish, BrainADZ helps you create A Type
-              Standees that look professional and communicate your message
-              clearly.
+              BrainADZ Live plans the D Type Digital Standee based on its
+              intended use, content requirements, enclosure presentation and
+              preferred content-management approach.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-7 md:grid-cols-2">
             {[
-              "Size customization",
-              "Print design support",
-              "Double-side branding",
-              "Lamination options",
-              "Brand color matching",
-              "Campaign-specific artwork",
+              "Enclosure finish",
+              "Branding treatment",
+              "Content playback setup",
+              "Signage application setup",
+              "Cloud management option",
+              "Deployment planning",
             ].map((item, index) => (
-              <div key={item} className="flex gap-5 border-b border-black/10 pb-6">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item}
+                className="flex gap-5 border-b border-black/10 pb-6"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="text-[20px] font-light tracking-[-0.3px]">
                   {item}
                 </h3>
@@ -496,143 +570,30 @@ export default function ATypeStandeePage() {
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-8 lg:px-12 lg:py-14">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Design & Print Process
-            </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              From artwork approval to ready-to-use display.
-            </h2>
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              Our process keeps your standee production simple, clear and
-              quality-focused from requirement to delivery.
-            </p>
-          </div>
-
-          <div className="lg:hidden">
-            <div className="space-y-5">
-              {process.map((item, index) => {
-                const Icon = item.icon;
-
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== process.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
-                    )}
-
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#3C5B9B]" />
-                      </div>
-
-                      <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="relative hidden h-[790px] lg:block">
-            <svg
-              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
-              fill="none"
-              aria-hidden="true"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <marker
-                  id="standee-process-arrowhead"
-                  markerHeight="14"
-                  markerUnits="userSpaceOnUse"
-                  markerWidth="18"
-                  orient="auto"
-                  refX="16"
-                  refY="7"
-                >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
-                </marker>
-              </defs>
-
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#standee-process-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#standee-process-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#standee-process-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#standee-process-arrowhead)" />
-            </svg>
-
-            {processLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
-                >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* BUSINESS BENEFITS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Business Benefits
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A simple promotional product that supports everyday visibility.
+              Digital communication that can change with the campaign.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {businessBenefits.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -642,14 +603,14 @@ export default function ATypeStandeePage() {
         </div>
       </section>
 
-      {/* SHOWCASE CTA */}
+      {/* CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
                 src="/products/d-type-standee/cta.jpg"
-                alt="D Type Standee Showcase"
+                alt="D Type Digital Standee deployment showcase"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -662,24 +623,26 @@ export default function ATypeStandeePage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to boost your brand visibility?
+                  Planning a D Type Digital Standee deployment?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Get a high-quality D Type Standee with custom branding,
-                  professional printing and a clean business-ready finish.
+                  Tell us where the standee will be placed, what content you
+                  want to display and how you want to manage it.
                 </p>
               </div>
 
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Request a Quote</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -689,25 +652,33 @@ export default function ATypeStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-14 md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-10 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why BrainADZ
             </p>
+
             <h2 className="mx-auto max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Product quality with reliable branding support.
+              Digital signage planning with practical deployment support.
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
             {[
-              "Premium Products",
-              "Competitive Pricing",
-              "Fast Turnaround",
-              "Customization Available",
-              "Delivery Support",
-              "Dedicated Guidance",
+              "Requirement Planning",
+              "Digital Signage Experience",
+              "Content Setup Guidance",
+              "Branding Coordination",
+              "Software Options",
+              "Deployment Support",
             ].map((item) => (
-              <div key={item} className="flex items-center gap-3 border-t border-black/10 pt-5">
-                <BadgeCheck size={22} className="shrink-0 text-[#3C5B9B]" />
+              <div
+                key={item}
+                className="flex items-center gap-3 border-t border-black/10 pt-5"
+              >
+                <BadgeCheck
+                  size={22}
+                  className="shrink-0 text-[#193175]"
+                />
+
                 <p className="text-[15px] font-light leading-[1.4] text-black/70">
                   {item}
                 </p>
@@ -721,11 +692,12 @@ export default function ATypeStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about D Type Standee.
+              Common questions about D Type Digital Standee.
             </h2>
           </div>
 
@@ -735,27 +707,33 @@ export default function ATypeStandeePage() {
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)]"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
 
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -770,32 +748,52 @@ export default function ATypeStandeePage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/products/d-type-standee/cta.jpg"
+                alt="D Type Digital Standee deployment showcase"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
+              />
+            </div>
+
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Need a custom D Type Standee for your brand?
+                  Bring your business content to a digital display format.
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Share your requirement with BrainADZ and get a professional
-                  standee solution for your business promotion.
+                  Plan a D Type Digital Standee with the right content setup,
+                  branding treatment and management approach for your space.
                 </p>
               </div>
 
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
-                <span>Enquire Now</span>
+                <span>Request a Quote</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

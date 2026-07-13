@@ -3,10 +3,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BarChart3,
-  Bell,
   CheckCircle2,
   Cloud,
   Code2,
@@ -14,8 +14,9 @@ import {
   Database,
   FileCheck2,
   FileText,
-  LifeBuoy,
   Layers3,
+  LifeBuoy,
+  LockKeyhole,
   Minus,
   MonitorSmartphone,
   Plus,
@@ -38,330 +39,331 @@ type StackItem = {
 
 const workflow = [
   {
-    title: "Insurance Workflow Discovery",
-    text: "We understand your insurance products, policy lifecycle, claim flow, agents, customers, underwriting and business goals.",
+    title: "Insurance Process Discovery",
+    text: "We understand the insurance products, customer journeys, policy processes, claim workflows, teams, agents and project goals.",
     icon: Search,
   },
   {
-    title: "InsurTech Architecture Planning",
-    text: "We plan policy management, claim modules, customer portals, agent dashboards, billing flows, integrations and cloud infrastructure.",
-    icon: Layers3,
-  },
-  {
-    title: "UI/UX & Prototype",
-    text: "We design clean customer portals, agent panels, claim screens, policy dashboards and admin workflows.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Secure Platform Development",
-    text: "We build core insurance modules including policies, claims, quotes, customers, agents, payments, documents and reporting.",
-    icon: Code2,
-  },
-  {
-    title: "System Integration",
-    text: "We integrate payment gateways, CRMs, KYC tools, document systems, notifications, APIs and third-party insurance platforms.",
+    title: "Policy & Claims Workflow Mapping",
+    text: "We map customer onboarding, policy stages, documents, claims, renewals, billing, approvals and service activities.",
     icon: Workflow,
   },
   {
-    title: "Testing & Security Review",
-    text: "We test policy flows, claim workflows, user roles, document handling, payments, performance and data security.",
+    title: "Access, Data & Integration Planning",
+    text: "We plan user roles, information flow, data relationships and required connections with existing or third-party systems.",
+    icon: Layers3,
+  },
+  {
+    title: "Customer & Team Experience Design",
+    text: "We design the required customer portals, agent interfaces, staff dashboards and administration workflows.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Platform Development",
+    text: "We configure or develop the required policy, claim, CRM, ERP, billing, document and reporting modules.",
+    icon: Code2,
+  },
+  {
+    title: "Integration & Workflow Testing",
+    text: "We test user journeys, policy stages, claim processes, access rules and compatible integrations before deployment.",
     icon: ShieldCheck,
   },
   {
-    title: "Cloud Deployment",
-    text: "We deploy your insurance platform on reliable cloud infrastructure with monitoring, backup and scalability setup.",
+    title: "Deployment & Rollout",
+    text: "The platform is deployed according to the agreed environment, user structure, branches and implementation plan.",
     icon: Rocket,
   },
   {
-    title: "Support & Maintenance",
-    text: "We provide updates, monitoring, issue fixing, security improvements, workflow changes and new feature enhancements.",
+    title: "Handover & Support Scope",
+    text: "Users are guided through the delivered workflows, with post-launch support provided according to the agreed project scope.",
     icon: LifeBuoy,
   },
 ];
 
 const insuranceBenefits = [
   {
-    title: "Faster Claims",
-    text: "Simplify claim submission, verification, tracking, approvals and settlement workflows.",
-    icon: FileCheck2,
-  },
-  {
-    title: "Better Policy Management",
-    text: "Manage policies, renewals, documents, customers and agents from one secure platform.",
+    title: "Structured Policy Operations",
+    text: "Organize customer, policy, document, renewal and status workflows through one defined process.",
     icon: ShieldPlus,
   },
   {
-    title: "Improved Customer Experience",
-    text: "Give customers self-service access to policies, claims, payments and support.",
+    title: "Clearer Claims Coordination",
+    text: "Create a structured workflow for claim intake, documents, review stages, responsibilities and status updates.",
+    icon: FileCheck2,
+  },
+  {
+    title: "Connected Customer & Agent Experience",
+    text: "Bring customer-facing portals, agent activities and internal service workflows closer together.",
     icon: Users,
   },
   {
-    title: "Smarter Insurance Decisions",
-    text: "Use reports and analytics to track claims, renewals, revenue, agents and customer behavior.",
+    title: "Operational Visibility",
+    text: "Create dashboards and reports using the policy, claim, billing and operational data included in the platform.",
     icon: BarChart3,
   },
 ];
 
 const challenges = [
   {
-    title: "Manual Claim Processing",
-    text: "Digitize claim submission, review, document upload, approval and settlement tracking.",
+    title: "Scattered Policy & Customer Records",
+    text: "Customer details, policy information, documents and renewal records can become difficult to manage across disconnected tools.",
   },
   {
-    title: "Disconnected Policy Data",
-    text: "Bring customer, policy, premium, renewal and document data into one connected system.",
+    title: "Manual Claims Coordination",
+    text: "Claim intake, document collection, review stages and status communication can become difficult to follow without a structured workflow.",
   },
   {
-    title: "Slow Customer Support",
-    text: "Improve ticket handling, policy queries, reminders and customer communication.",
+    title: "Disconnected Agent & Service Activities",
+    text: "Agent follow-ups, customer enquiries and internal service actions may remain spread across separate channels.",
   },
   {
-    title: "Limited Business Visibility",
-    text: "Track claims, renewals, agents, revenue, policies and operational KPIs through dashboards.",
+    title: "Limited Renewal & Billing Visibility",
+    text: "Teams may struggle to review upcoming renewals, invoices, payment status and related operational information from one place.",
   },
 ];
 
 const solutions = [
   {
-    title: "Policy Management System",
-    text: "Manage policies, customers, documents, premiums, renewals, approvals and plan details from one dashboard.",
+    title: "Policy & Customer Management",
+    text: "Organize customers, policies, documents, plan information, status changes and renewal-related workflows.",
     icon: ShieldPlus,
   },
   {
-    title: "Claims Management Platform",
-    text: "Digitize claim submission, document uploads, verification, status tracking, approvals and settlement workflows.",
+    title: "Claims Workflow Platform",
+    text: "Create structured workflows for claim intake, document submission, review stages, assignments and status information.",
     icon: FileCheck2,
   },
   {
     title: "Customer Self-Service Portal",
-    text: "Let policyholders view policies, make payments, upload documents, raise claims and track status.",
+    text: "Build web or mobile experiences for policy information, documents, service requests, claim updates and selected account activities.",
     icon: Users,
   },
   {
-    title: "Agent & Broker Portal",
-    text: "Give agents tools for lead tracking, quotes, policy updates, customer follow-ups and commission visibility.",
+    title: "Agent & Broker CRM",
+    text: "Manage leads, customer relationships, follow-ups, policy opportunities and agent activities through a CRM workflow.",
     icon: UserCheck,
   },
   {
-    title: "Insurance Billing System",
-    text: "Manage premiums, invoices, renewals, payment reminders, receipts and secure payment workflows.",
+    title: "Billing & Renewal Workflow",
+    text: "Organize invoices, premium-related records, payment status, reminders, receipts and renewal activities.",
     icon: WalletCards,
   },
   {
-    title: "Insurance Analytics Dashboard",
-    text: "Analyze claims, policies, renewals, agent performance, revenue, risk patterns and business performance.",
-    icon: BarChart3,
+    title: "Insurance Operations ERP & Reporting",
+    text: "Plan relevant ERP workflows for accounts, expenses, approvals, branches, vendors and management reporting.",
+    icon: Database,
   },
 ];
 
 const architectureItems = [
-  "Customer portal",
-  "Agent dashboard",
-  "Policy management",
-  "Claims workflow",
-  "Billing & payments",
-  "Reports & analytics",
+  "Customer, agent & staff access",
+  "Policy & document workflows",
+  "Claims & review stages",
+  "Billing & renewal activities",
+  "CRM, ERP & integrations",
+  "Dashboards & reporting",
 ];
 
 const insuranceTypes = [
   {
     title: "Policy Administration Platforms",
-    text: "We build policy administration systems for policy creation, customer records, premium details, renewals, documents, approvals and plan management.",
+    text: "Plan systems for customer records, policy information, documents, status changes, approvals and renewal-related workflows.",
     icon: ShieldPlus,
   },
   {
     title: "Claims Management Systems",
-    text: "Our claims platforms simplify claim intake, document verification, approval workflows, claim tracking, settlement status and internal review processes.",
+    text: "Create structured workflows for claim intake, supporting documents, review stages, assignments and configured status updates.",
     icon: FileCheck2,
   },
   {
     title: "Customer Insurance Portals",
-    text: "We create customer portals where policyholders can view policy details, download documents, make payments, raise claims and contact support.",
+    text: "Build digital experiences for policy information, documents, service requests, claim updates and selected account activities.",
     icon: Users,
   },
   {
-    title: "Agent & Broker Platforms",
-    text: "We build agent and broker systems for quotes, leads, customer follow-ups, policy updates, commission tracking and sales performance.",
+    title: "Agent & Broker CRM Platforms",
+    text: "Organize leads, customer relationships, follow-up activities, opportunities and agent workflows through CRM.",
     icon: UserCheck,
   },
   {
-    title: "Insurance Billing Solutions",
-    text: "We develop billing systems for premiums, invoices, renewals, reminders, payment collection, receipts and customer payment history.",
+    title: "Billing & Renewal Systems",
+    text: "Plan workflows for invoices, premium records, payment status, reminders, receipts and renewal activities.",
     icon: CreditCard,
   },
   {
-    title: "Insurance Analytics Dashboards",
-    text: "We build dashboards for claims trends, renewal rates, revenue, policy performance, agent productivity and operational insights.",
+    title: "Insurance Operations & Reporting",
+    text: "Create ERP workflows and management views using the policy, claims, billing and operational data included in the system.",
     icon: BarChart3,
   },
 ];
 
 const coreFeatures = [
-  "Policy dashboard",
-  "Claims tracking",
-  "Customer portal",
-  "Agent management",
-  "Document upload",
-  "Premium billing",
-  "Payment gateway",
-  "Reports & analytics",
+  "Customer and policy records",
+  "Policy status workflows",
+  "Claims intake and tracking",
+  "Customer portal or app",
+  "Agent and broker activities",
+  "Document management",
+  "Billing and renewal workflows",
+  "Role-based user access",
 ];
 
 const securityItems = [
-  "Role-based access",
-  "Secure policy data",
-  "Cloud backup",
-  "Protected APIs",
-  "Claim activity logs",
-  "Payment security",
+  "Role-based user access",
+  "Customer and policy records",
+  "API and integration controls",
+  "Claim activity history",
+  "Backup and recovery planning",
+  "Payment integration scope",
 ];
 
-const caseStudies = [
+const solutionScenarios = [
   {
-    title: "Policy Management Platform",
-    text: "An insurance platform for policies, customers, renewals, documents, approvals and premium management.",
+    title: "Policy Operations Platform",
+    text: "A platform concept for customers, policies, documents, status workflows and renewal-related activities.",
     image: "/industries/insurance-tech/policy-management.jpg",
   },
   {
-    title: "Claims Processing System",
-    text: "A claims workflow platform with document upload, verification, approvals, claim status and settlement tracking.",
+    title: "Claims Workflow System",
+    text: "A workflow concept for claim intake, supporting documents, review stages, assignments and status information.",
     image: "/industries/insurance-tech/claims-system.jpg",
   },
   {
-    title: "Agent Portal",
-    text: "An agent platform with leads, quotes, customer follow-ups, policy updates and commission visibility.",
+    title: "Agent & Broker CRM",
+    text: "A CRM concept for leads, customer relationships, follow-ups, policy opportunities and agent activities.",
     image: "/industries/insurance-tech/agent-portal.jpg",
   },
   {
-    title: "Insurance Analytics Dashboard",
-    text: "A reporting dashboard for claims, renewals, agent productivity, revenue and operational insights.",
+    title: "Insurance Operations Dashboard",
+    text: "A dashboard concept for policies, claims, renewals, billing and configured operational reporting.",
     image: "/industries/insurance-tech/insurance-analytics.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Insurance Workflow Understanding",
-    text: "We design platforms around real insurance workflows including policies, claims, agents, billing and customer service.",
+    title: "Insurance Workflow Mapping",
+    text: "We start with how customers, policies, claims, agents, billing and internal teams actually move through the business.",
   },
   {
-    title: "Secure Architecture",
-    text: "We build systems that support sensitive customer data, role access, documents, payments and audit visibility.",
+    title: "Relevant Solution Planning",
+    text: "We combine custom software, mobile apps, CRM, ERP and integrations only where they fit the project requirement.",
   },
   {
-    title: "Custom Development",
-    text: "Your insurance platform is built according to your products, user roles, approval flows and business model.",
+    title: "Access & Data Planning",
+    text: "User roles, information access and data relationships are planned around the actual insurance workflow.",
   },
   {
-    title: "Long-Term Support",
-    text: "We support your platform with updates, monitoring, performance improvements, security updates and new features.",
+    title: "Scope-Based Implementation Support",
+    text: "Deployment guidance, handover and post-launch support are provided according to the agreed project scope.",
   },
 ];
 
 const supportItems = [
-  "Insurance platform monitoring",
-  "New policy and claim modules",
-  "Performance and speed optimization",
-  "Security updates and access improvements",
-  "Dashboard, billing and reporting upgrades",
+  "User onboarding and workflow handover",
+  "Agreed post-launch issue support",
+  "Policy and claim workflow review",
+  "Dashboard and report adjustments",
+  "Future modules as separate scope",
 ];
 
 const tabs: { label: string; value: TabType }[] = [
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Databases", value: "databases" },
-  { label: "Cloud & DevOps", value: "cloud" },
+  { label: "Customer & Agent Experience", value: "frontend" },
+  { label: "Application Backend", value: "backend" },
+  { label: "Data Layer", value: "databases" },
+  { label: "Cloud & Delivery", value: "cloud" },
 ];
 
 const techStack: Record<TabType, StackItem[]> = {
   frontend: [
     { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
-    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+    { name: "Flutter", icon: "/icons/Flutter.svg" },
+    { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "Tailwind CSS", icon: "/icons/Tailwind CSS.svg" },
   ],
   backend: [
-    { name: "Node.js", icon: "/icons/Node.js.svg" },
-    { name: "Express.js", icon: "/icons/Express.svg" },
-    { name: "Python", icon: "/icons/Python.svg" },
-    { name: "Django", icon: "/icons/Django.svg" },
     { name: ".NET", icon: "/icons/NET.svg" },
     { name: "Java", icon: "/icons/Java.svg" },
+    { name: "Node.js", icon: "/icons/Node.js.svg" },
+    { name: "Python", icon: "/icons/Python.svg" },
+    { name: "Django", icon: "/icons/Django.svg" },
+    { name: "Express.js", icon: "/icons/Express.svg" },
   ],
   databases: [
     { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg" },
-    { name: "MySQL", icon: "/icons/MySQL.svg" },
-    { name: "MongoDB", icon: "/icons/MongoDB.svg" },
-    { name: "Redis", icon: "/icons/Redis.svg" },
     { name: "SQL Server", icon: "/icons/SQLServer.svg" },
+    { name: "MySQL", icon: "/icons/MySQL.svg" },
+    { name: "Redis", icon: "/icons/Redis.svg" },
+    { name: "MongoDB", icon: "/icons/MongoDB.svg" },
     { name: "Firebase", icon: "/icons/Firebase.svg" },
   ],
   cloud: [
     { name: "AWS", icon: "/icons/AWS.svg" },
     { name: "Azure", icon: "/icons/Azure.svg" },
-    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
     { name: "GitHub Actions", icon: "/icons/GitHub Actions.svg" },
+    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
   ],
 };
 
 const faqs = [
   {
-    q: "Do you build custom insurance software?",
-    a: "Yes, we build custom insurance platforms for policy management, claims, customer portals, agent portals, billing and analytics.",
+    q: "What Insurance Tech solutions can BrainADZ Live build?",
+    a: "We can plan and build policy platforms, claims workflows, customer portals, agent CRM systems, billing and renewal workflows, ERP modules and reporting dashboards according to the project requirement.",
+  },
+  {
+    q: "Can you build a policy management platform?",
+    a: "Yes. The platform can include customer records, policy information, documents, status workflows, approvals and renewal-related activities according to the project scope.",
   },
   {
     q: "Can you build claims management software?",
-    a: "Yes, we develop claims platforms with claim submission, document uploads, verification, approvals, status tracking and settlement workflows.",
+    a: "Yes. Claim intake, document submission, review stages, assignments and status workflows can be planned according to the required process.",
   },
   {
-    q: "Can you create customer self-service portals?",
-    a: "Yes, we can build portals where policyholders can view policies, pay premiums, upload documents, raise claims and track claim status.",
+    q: "Can customers access policies and claims through a portal?",
+    a: "Yes. A web or mobile experience can be planned for policy information, documents, service requests, claim updates and selected account activities.",
   },
   {
-    q: "Can you build agent or broker portals?",
-    a: "Yes, we create agent and broker platforms for leads, quotes, follow-ups, policy updates, customer management and commission visibility.",
+    q: "Can CRM Software support agents and brokers?",
+    a: "Yes. CRM workflows can be configured for leads, customer relationships, follow-up activities, policy opportunities and selected agent processes.",
   },
   {
-    q: "Can payment systems be integrated?",
-    a: "Yes, we can integrate payment gateways, premium billing, invoices, renewal reminders, receipts and payment history.",
+    q: "Can ERP Software support insurance operations?",
+    a: "Relevant ERP modules can be planned for accounts, expenses, approvals, branches, vendors and other required operational workflows.",
   },
   {
-    q: "Is the platform secure?",
-    a: "Yes, we use secure authentication, role-based access, protected APIs, cloud backup, audit logs and safe handling of customer data.",
+    q: "Can payment providers or external systems be integrated?",
+    a: "Yes. Integration can be planned with compatible payment providers and external systems where suitable APIs or technical interfaces are available.",
   },
   {
-    q: "Can the software support multiple branches or agents?",
-    a: "Yes, we can build multi-branch and multi-agent insurance platforms with centralized admin access and role-based reporting.",
+    q: "Can the platform support multiple branches or agent teams?",
+    a: "Yes. Branch, user, data and reporting structures can be planned according to the required operating and access model.",
   },
   {
-    q: "Can you integrate third-party insurance tools?",
-    a: "Yes, we can integrate CRMs, ERPs, KYC tools, document systems, payment providers, notification tools and custom APIs.",
+    q: "Can existing insurance data be migrated?",
+    a: "Data migration can be planned according to the source system, data format, information quality and mapping requirements.",
   },
   {
-    q: "Do you provide support after launch?",
-    a: "Yes, we provide maintenance, updates, bug fixing, monitoring, performance optimization, security updates and new feature development.",
-  },
-  {
-    q: "How long does insurance software development take?",
-    a: "Timeline depends on features, integrations, user roles, claim workflows and platform complexity. A basic platform can take a few weeks, while advanced systems need more time.",
+    q: "How long does Insurance Tech software development take?",
+    a: "The timeline depends on the number of modules, user roles, policy and claim workflows, integrations, data migration requirements and deployment scope. It should be estimated after the required processes are defined.",
   },
 ];
 
 export default function InsuranceTechIndustryPage() {
   const [activeTab, setActiveTab] = useState<TabType>("frontend");
   const [openFaq, setOpenFaq] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <main className="bg-white text-[#111827]">
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/industries/insurance-tech/insurance-tech-hero.jpg"
-          alt="Insurance Tech Software Solutions"
+          src="/hero/insurance.jpg"
+          alt="Insurance technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -369,35 +371,45 @@ export default function InsuranceTechIndustryPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link href="/" className="text-[#6da0ff] hover:underline">
+            <Link
+              href="/"
+              className="text-[#6da0ff] hover:underline"
+            >
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Industries</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Insurance Tech</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Insurance Tech Software Solutions
+              Technology Solutions for Insurance Operations and Customer
+              Workflows
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Secure, scalable and workflow-driven insurance platforms for policy
-              management, claims, customer portals, agent systems and analytics.
+              Custom software, customer portals, CRM, ERP, claims workflows and
+              integration solutions for insurance businesses, agents and
+              operational teams.
             </p>
 
             <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -407,26 +419,37 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
+
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital insurance systems built for speed, trust and control.
+              Connect customer, policy, claims and operational workflows.
             </h2>
+
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps insurance businesses build platforms for policy
-              administration, claims processing, customer self-service, agent
-              management, premium billing, documents and analytics.
+              BrainADZ Live helps insurance businesses plan digital systems for
+              customer management, policy operations, claims, agents, billing,
+              CRM, ERP and reporting. The final solution is shaped around the
+              insurance products, users and workflows included in the project.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {insuranceBenefits.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="border-l-2 border-[#3C5B9B] pl-5">
-                  <Icon size={28} className="mb-4 text-[#3C5B9B]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                <div
+                  key={item.title}
+                  className="border-l-2 border-[#193175] pl-5"
+                >
+                  <Icon size={28} className="mb-4 text-[#193175]" />
+
+                  <h3 className="text-[20px] font-light">
+                    {item.title}
+                  </h3>
+
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -441,23 +464,29 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Insurance Challenges
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Insurance Tech Challenges
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Solving real operational problems in insurance.
+              Common workflow problems across insurance operations.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -471,28 +500,36 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Insurance Solutions We Build
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Insurance Tech Solutions We Build
             </p>
+
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Custom platforms for policies, claims, agents and customer service.
+              Digital systems for policies, claims, customers, agents and
+              insurance operations.
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
-                    <Icon size={27} className="text-[#3C5B9B] transition group-hover:text-white" />
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon
+                      size={27}
+                      className="text-[#193175] transition group-hover:text-white"
+                    />
                   </div>
+
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -507,24 +544,31 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Insurance Architecture
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Solution Architecture
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A connected architecture for insurance operations.
+              Plan connected policy and insurance operational workflows.
             </h2>
+
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              We plan insurance systems with connected modules for customers,
-              agents, policies, claims, billing, documents, support and analytics.
+              The platform structure can connect customers, agents, policies,
+              claims, billing, integrations and reporting according to the
+              required insurance workflow.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {architectureItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -537,7 +581,7 @@ export default function InsuranceTechIndustryPage() {
       {/* INSURANCE TECH DEVELOPMENT PROCESS */}
       <section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-14">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -545,20 +589,19 @@ export default function InsuranceTechIndustryPage() {
           }}
         />
 
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Our Process
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our insurance software development roadmap
+              Our Insurance Tech implementation roadmap
             </h2>
 
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              From insurance workflow discovery to secure deployment, we follow
-              a clear zig-zag process to build platforms with better claims,
-              policy management and scalability.
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              A practical process for understanding insurance workflows,
+              planning the right solution and deploying the required platform.
             </p>
           </div>
 
@@ -573,16 +616,20 @@ export default function InsuranceTechIndustryPage() {
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#3C5B9B]" />
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <Icon
+                          size={23}
+                          strokeWidth={2.4}
+                          className="text-[#193175]"
+                        />
                       </div>
 
                       <div>
-                        <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                        <span className="text-[13px] font-semibold text-[#193175]">
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
@@ -601,7 +648,7 @@ export default function InsuranceTechIndustryPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[1060px] lg:block">
+          <div className="relative hidden h-265 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 1060"
@@ -619,17 +666,73 @@ export default function InsuranceTechIndustryPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path
+                    d="M 0 0 L 18 7 L 0 14 z"
+                    fill="#193175"
+                  />
                 </marker>
               </defs>
 
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#insurance-zigzag-arrow)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#insurance-zigzag-arrow)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#insurance-zigzag-arrow)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#insurance-zigzag-arrow)" />
-              <path d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 913 L 392 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#insurance-zigzag-arrow)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#insurance-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 343 L 392 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#insurance-zigzag-arrow)"
+              />
+
+              <path
+                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#insurance-zigzag-arrow)"
+              />
+
+              <path
+                d="M 392 613 L 1208 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#insurance-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 913 L 392 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#insurance-zigzag-arrow)"
+              />
             </svg>
 
             {[
@@ -647,14 +750,21 @@ export default function InsuranceTechIndustryPage() {
               return (
                 <div
                   key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                  style={{
+                    left: item.left,
+                    top: item.top,
+                  }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon
+                      size={36}
+                      strokeWidth={2.25}
+                      className="text-[#193175]"
+                    />
                   </div>
 
-                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#3C5B9B]">
+                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#193175]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -662,7 +772,7 @@ export default function InsuranceTechIndustryPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
@@ -676,26 +786,30 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Insurance Platforms
             </p>
+
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Types of insurance solutions we develop
+              Types of Insurance Tech solutions we plan and build
             </h2>
+
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
-              We create insurance systems for agencies, brokers, insurers,
-              claim teams, customer service teams and InsurTech startups.
+              We combine relevant BrainADZ Live software services, CRM, ERP and
+              integration capabilities according to the insurance workflow that
+              needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
               <h3 className="max-w-110 text-[30px] font-semibold leading-[1.15] tracking-[-0.8px] text-[#0f5f95] md:text-[34px]">
-                Build Smarter Insurance Platforms
+                Plan Your Insurance Platform
               </h3>
+
               <a
                 href="/contact"
-                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#3C5B9B] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
+                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#193175] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
               >
-                Get Expert Guidance
+                Discuss Your Requirement
               </a>
             </div>
           </div>
@@ -703,15 +817,21 @@ export default function InsuranceTechIndustryPage() {
           <div>
             {insuranceTypes.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]">
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={29} className="text-[#3C5B9B]" />
+                <div
+                  key={item.title}
+                  className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
+                >
+                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
+
                   <div>
                     <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
+
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
                       {item.text}
                     </p>
@@ -728,58 +848,75 @@ export default function InsuranceTechIndustryPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Core Insurance Features
               </p>
+
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Essential features for a complete insurance platform.
+                Practical features for policy, claims and customer workflows.
               </h2>
             </div>
+
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build insurance platforms with practical features for customers,
-              agents, policy teams, claim teams, billing teams and admins.
+              Final features are selected according to the insurance products,
+              users, branches and operational processes included in the project.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
             {coreFeatures.map((item) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <CheckCircle2 size={24} className="shrink-0 text-[#3C5B9B]" />
-                <span className="text-[17px] font-light text-black/75">{item}</span>
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <CheckCircle2
+                  size={24}
+                  className="shrink-0 text-[#193175]"
+                />
+
+                <span className="text-[17px] font-light text-black/75">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECURITY */}
+      {/* ACCESS & DATA CONTROLS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Security & Reliability
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Access, Data & Platform Controls
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Reliable insurance software for sensitive operations.
+              Plan access and data handling around the insurance workflow.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              Insurance platforms manage sensitive customer, policy and claim
-              data. We focus on secure access, protected APIs, cloud backup,
-              audit visibility and payment security.
+              Authentication, permissions, records, integrations and recovery
+              requirements should be planned according to the users,
+              information and processes included in the platform.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {securityItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[#3C5B9B]">
-                  {index === 0 && <Users size={20} />}
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[#193175]">
+                  {index === 0 && <LockKeyhole size={20} />}
                   {index === 1 && <ShieldCheck size={20} />}
-                  {index === 2 && <Cloud size={20} />}
-                  {index === 3 && <Database size={20} />}
-                  {index === 4 && <Bell size={20} />}
+                  {index === 2 && <Workflow size={20} />}
+                  {index === 3 && <FileText size={20} />}
+                  {index === 4 && <Cloud size={20} />}
                   {index === 5 && <CreditCard size={20} />}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -789,38 +926,57 @@ export default function InsuranceTechIndustryPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* SOLUTION SCENARIOS */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Case Studies
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Solution Scenarios
               </p>
+
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Insurance platforms built for real operational improvement.
+                Examples of insurance workflows we can plan and build.
               </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
-              View Case Studies <ArrowRight size={18} />
+
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
+              View Case Studies
+              <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
-            {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+            {solutionScenarios.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">
                       {item.title}
                     </h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight
+                        size={18}
+                        className="text-[#193175]"
+                      />
                     </span>
                   </div>
+
                   <p className="text-[14px] font-light leading-[1.65] text-black/60">
                     {item.text}
                   </p>
@@ -835,32 +991,44 @@ export default function InsuranceTechIndustryPage() {
       <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
+
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering secure insurance platforms
+              Technologies selected around the insurance platform requirement
             </h2>
+
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use modern frontend, backend, database and cloud technologies
-              to build insurance platforms with security, performance and scalability.
+              Technology choices depend on the customer experience, application
+              workflows, data model, integrations and deployment requirements.
             </p>
           </div>
 
           <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
+
               return (
                 <button
                   key={tab.value}
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                    isActive
+                      ? "text-[#161616]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
+                      isActive
+                        ? "w-full opacity-100"
+                        : "w-0 opacity-0"
+                    }`}
+                  />
                 </button>
               );
             })}
@@ -868,13 +1036,21 @@ export default function InsuranceTechIndustryPage() {
 
           <div className="mx-auto max-w-315">
             <div className="space-y-5 md:space-y-6">
-              {[techStack[activeTab].slice(0, 4), techStack[activeTab].slice(4, 6)].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
                     <div
                       key={item.name}
                       className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
-                        index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""
+                        index !== row.length - 1
+                          ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
+                          : ""
                       }`}
                     >
                       <div className="flex h-11.5 w-full items-center justify-center">
@@ -889,7 +1065,8 @@ export default function InsuranceTechIndustryPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -905,22 +1082,30 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build insurance platforms around trust, automation and growth.
+              Insurance technology planning based on real customer and
+              operational workflows.
             </h2>
           </div>
+
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -936,25 +1121,38 @@ export default function InsuranceTechIndustryPage() {
           <div className="relative overflow-hidden bg-[#f6f8fc] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
               src="/industries/insurance-tech/insurance-support.jpg"
-              alt="Insurance Tech Support and Maintenance"
+              alt="Insurance technology platform implementation and support"
               className="h-full w-full object-cover"
             />
           </div>
+
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Insurance Support & Growth
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Implementation & Support Scope
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Support that keeps your insurance platform reliable.
+              Handover and support aligned with the delivered insurance
+              platform.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              Insurance software needs continuous updates, security improvements,
-              workflow changes, monitoring and performance optimization. We support your platform after launch.
+              The final implementation can include user guidance, agreed
+              post-launch support and future enhancement planning according to
+              the delivered system and commercial scope.
             </p>
+
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
-                <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-4">
-                  <CheckCircle2 size={23} className="shrink-0 text-[#3C5B9B]" />
+                <div
+                  key={item}
+                  className="flex items-center gap-4 border-b border-black/10 pb-4"
+                >
+                  <CheckCircle2
+                    size={23}
+                    className="shrink-0 text-[#193175]"
+                  />
+
                   <span className="text-[16px] font-light text-black/70">
                     {item}
                   </span>
@@ -969,36 +1167,48 @@ export default function InsuranceTechIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about insurance software development.
+              Common questions about Insurance Tech solutions.
             </h2>
           </div>
+
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
               <div
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
-                  openFaq === index ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"
+                  openFaq === index
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    : "border-black/10"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
+
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1013,39 +1223,52 @@ export default function InsuranceTechIndustryPage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live Insurance Tech Software"
+                src="/industries/insurance-tech/insurance-support.jpg"
+                alt="Insurance technology solutions by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
               />
             </div>
+
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to build your insurance platform?
+                  Planning an Insurance Tech platform?
                 </h3>
+
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you create a secure, scalable and
-                  workflow-focused insurance technology solution.
+                  Tell us about your policy, claims, customer, agent and billing
+                  workflows so the right solution can be planned.
                 </p>
               </div>
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

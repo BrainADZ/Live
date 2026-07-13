@@ -2,55 +2,59 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { Mail, ArrowRight, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa6";
 
-const teamMembers = [
+type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  linkedin: string;
+};
+
+const teamMembers: TeamMember[] = [
   {
-    name: "Rishabh Pratap",
-    role: "Founder & Strategy Lead",
-    image: "/team/team-1.jpg",
-    description:
-      "Leading product strategy, digital transformation, and business growth for smarter technology solutions.",
-    profile: "#",
-    email: "mailto:info@brainadzlive.com",
+    name: "Sumit Jaiswal",
+    role: "CEO & Director",
+    image: "/team/core/sumit-jaiswal.jpg",
+    linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "",
-    role: "AI & Automation Lead",
-    image: "/team/team-2.jpg",
-    description:
-      "Building intelligent workflows, automation systems, and AI-powered business solutions.",
-    profile: "#",
-    email: "mailto:info@brainadzlive.com",
+    name: "Preeti Jaiswal",
+    role: "Director & Co-Founder",
+    image: "/team/core/preeti-jaiswal.jpg",
+    linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "",
-    role: "Hardware Solutions Lead",
-    image: "/team/team-3.jpg",
-    description:
-      "Managing smart kiosks, digital standees, LED walls, and interactive display deployments.",
-    profile: "#",
-    email: "mailto:info@brainadzlive.com",
+    name: "Mayur Sharma",
+    role: "Marketing Head",
+    image: "/team/core/mayur-sharma.jpg",
+    linkedin: "https://www.linkedin.com/in/mayur-sharma/",
   },
   {
-    name: "",
-    role: "Client Success Lead",
-    image: "/team/team-4.jpg",
-    description:
-      "Ensuring smooth communication, project delivery, support, and long-term client satisfaction.",
-    profile: "#",
-    email: "mailto:info@brainadzlive.com",
+    name: "Vinay Rathour",
+    role: "IT Head",
+    image: "/team/core/vinay-rathour.jpg",
+    linkedin: "https://www.linkedin.com/",
+  },
+  {
+    name: "Raushan Kumar",
+    role: "Graphics Head",
+    image: "/team/core/raushan-kumar.jpg",
+    linkedin: "https://www.linkedin.com/",
   },
 ];
 
 export default function TeamSection() {
   return (
-    <section className="bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
+    <section className="bg-white px-5 py-10 text-[#161616] md:px-8 lg:px-12 lg:py-18">
       <div className="mx-auto max-w-450">
-        {/* HEADING */}
-        <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+        {/* SECTION HEADING */}
+        <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+          {/* LEFT */}
           <div>
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Our Team
             </p>
 
@@ -59,87 +63,62 @@ export default function TeamSection() {
             </h2>
           </div>
 
-          <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-            Our team brings together software engineering, AI, hardware
-            integration, design, and client support to deliver reliable digital
-            systems for modern businesses.
-          </p>
+          {/* RIGHT - CORE TEAM LINK */}
+          <div className="flex lg:justify-end lg:pb-2">
+            <Link
+              href="/about-us/our-core-team"
+              className="group inline-flex items-center gap-3 text-[16px] font-medium text-[#193175] transition-all duration-300 hover:text-[#161616] md:text-[17px]"
+            >
+              <span>Our Core Team</span>
+
+              <ArrowRight
+                size={21}
+                strokeWidth={1.6}
+                className="transition-transform duration-300 group-hover:translate-x-1.5"
+              />
+            </Link>
+          </div>
         </div>
 
         {/* TEAM GRID */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {teamMembers.map((member, index) => (
-            <div
-              key={`${member.name}-${index}`}
-              className="group relative overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_60px_rgba(22,22,22,0.07)]"
-            >
+        <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+          {teamMembers.map((member) => (
+            <article key={member.name} className="group">
               {/* IMAGE */}
-              <div className="relative aspect-[1/1.05] overflow-hidden bg-[#eef2f8]">
-                <div className="absolute inset-0 flex items-center justify-center text-[42px] font-light text-[#3c5b9b]">
-                  {member.name.charAt(0)}
-                </div>
-
+              <div className="relative aspect-square overflow-hidden rounded-[20px] border border-[#e8e8e8] bg-[#f5f7fb] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_60px_rgba(22,22,22,0.1)]">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="relative z-10 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                  }}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 z-20 bg-[linear-gradient(180deg,rgba(0,0,0,0)_45%,rgba(0,0,0,0.34)_100%)] opacity-0 transition duration-300 group-hover:opacity-100" />
+                {/* DARK HOVER OVERLAY */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                {/* SOCIAL ICONS */}
-                <div className="absolute bottom-5 right-5 z-30 flex translate-y-4 gap-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <a
-                    href={member.profile}
-                    aria-label={`${member.name} Profile`}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#3c5b9b] transition hover:bg-[#3c5b9b] hover:text-white"
-                  >
-                    <ExternalLink size={18} strokeWidth={1.6} />
-                  </a>
-
-                  <a
-                    href={member.email}
-                    aria-label={`${member.name} Email`}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#3c5b9b] transition hover:bg-[#3c5b9b] hover:text-white"
-                  >
-                    <Mail size={18} strokeWidth={1.6} />
-                  </a>
-                </div>
+                {/* LINKEDIN - TOP RIGHT */}
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${member.name} LinkedIn profile`}
+                  onClick={(e) => e.stopPropagation()}
+                  className="absolute right-4 top-4 z-20 flex h-10 w-10 translate-y-2 items-center justify-center rounded-full bg-white text-[#161616] opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.15)] transition-all duration-300 hover:bg-[#193175] hover:text-white group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <FaLinkedinIn size={16} />
+                </a>
               </div>
 
-              {/* CONTENT */}
-              <div className="relative p-7">
-                <h3 className="text-[22px] font-light leading-[1.3] tracking-[-0.4px] text-[#262626] transition group-hover:text-[#3c5b9b]">
+              {/* MEMBER DETAILS */}
+              <div className="pt-5">
+                <h3 className="text-[19px] font-medium leading-[1.3] tracking-[-0.3px] text-[#161616]">
                   {member.name}
                 </h3>
 
-                <p className="mt-2 text-[14px] font-light uppercase tracking-[1.3px] text-[#3c5b9b]">
+                <p className="mt-1.5 text-[14px] font-light leading-[1.5] text-[#646464]">
                   {member.role}
                 </p>
-
-                <p className="mt-5 min-h-21 text-[15px] font-light leading-[1.7] text-[#616161]">
-                  {member.description}
-                </p>
-
-                <div className="mt-7 flex items-center justify-between border-t border-[#dfe6f1] pt-5">
-                  <span className="text-[15px] font-light text-[#3c5b9b]">
-                    View profile
-                  </span>
-
-                  <ArrowRight
-                    size={20}
-                    strokeWidth={1.5}
-                    className="text-[#3c5b9b] transition-transform duration-300 group-hover:translate-x-1"
-                  />
-                </div>
               </div>
-
-              {/* HOVER LINE */}
-              <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
-            </div>
+            </article>
           ))}
         </div>
       </div>

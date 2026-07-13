@@ -5,7 +5,8 @@ import CtaSection from "@/components/home/CTA";
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
-import type { ComponentType, SVGProps } from "react";
+import { useState, type ComponentType, type SVGProps } from "react";
+import PopupForm from "@/components/PopupForm";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
@@ -274,39 +275,39 @@ type Role = {
 
 const benefits: Benefit[] = [
   {
-    title: "Real projects",
+    title: "Practical project exposure",
     description:
-      "Work on live software, automation, smart display, kiosk, LED wall and AI-enabled business solutions.",
+      "Contribute to software, mobile and web applications, business platforms or digital signage projects depending on your role.",
     icon: RocketIcon,
   },
   {
-    title: "Learning culture",
+    title: "Guided learning",
     description:
-      "Improve your skills through project guidance, code reviews, product thinking and hands-on implementation.",
+      "Improve through project feedback, reviews, documentation and hands-on problem solving instead of learning only in theory.",
     icon: LearningIcon,
   },
   {
-    title: "Collaborative team",
+    title: "Cross-functional collaboration",
     description:
-      "Work with designers, developers, hardware teams and business teams in one connected workflow.",
+      "Work with design, development, deployment and business teams to understand how a complete solution moves from idea to delivery.",
     icon: UsersIcon,
   },
   {
-    title: "Growth mindset",
+    title: "Ownership and responsibility",
     description:
-      "Build confidence by solving practical problems and learning how real digital systems are delivered.",
+      "Take responsibility for your work, understand why it matters and improve it through review, feedback and real project use.",
     icon: GrowthIcon,
   },
   {
-    title: "Innovation first",
+    title: "Range of technology work",
     description:
-      "Explore AI, automation, cloud, dashboards, interactive displays and next-generation business technology.",
+      "Gain exposure to custom software, mobile and web apps, business platforms, integrations and digital signage technology.",
     icon: BrainIcon,
   },
   {
-    title: "Supportive environment",
+    title: "Clear working culture",
     description:
-      "Get a workplace that values clarity, discipline, ownership, communication and continuous improvement.",
+      "Work in an environment that values clear communication, documentation, ownership, review and continuous improvement.",
     icon: HeartIcon,
   },
 ];
@@ -318,7 +319,7 @@ const roles: Role[] = [
     location: "New Delhi / Hybrid",
     experience: "0–1 year",
     description:
-      "Build responsive user interfaces using React, Next.js and modern frontend workflows.",
+      "Implement responsive interfaces, reusable components and API-connected screens using React, Next.js and modern frontend workflows.",
     skills: ["React", "Next.js", "Tailwind CSS", "UI implementation"],
   },
   {
@@ -327,7 +328,7 @@ const roles: Role[] = [
     location: "New Delhi / Hybrid",
     experience: "1–3 years",
     description:
-      "Develop scalable web applications, APIs, dashboards and business platforms for client projects.",
+      "Build web applications, backend APIs, admin panels, database workflows and integrations for business software projects.",
     skills: ["Next.js", "Node.js", "APIs", "Databases"],
   },
   {
@@ -336,7 +337,7 @@ const roles: Role[] = [
     location: "Hybrid",
     experience: "1–3 years",
     description:
-      "Work on automation workflows, AI integrations, business tools and intelligent digital systems.",
+      "Build business automation workflows, API integrations, AI-assisted features and internal tools that solve practical operational problems.",
     skills: ["Python", "APIs", "Automation", "AI tools"],
   },
   {
@@ -345,7 +346,7 @@ const roles: Role[] = [
     location: "New Delhi / Remote",
     experience: "0–2 years",
     description:
-      "Design clean digital experiences for websites, dashboards, product screens and marketing interfaces.",
+      "Create user flows, wireframes, interface designs, prototypes and development-ready handoffs for websites and digital products.",
     skills: ["Figma", "Wireframes", "Visual Design", "User flows"],
   },
   {
@@ -354,7 +355,7 @@ const roles: Role[] = [
     location: "On-site",
     experience: "0–2 years",
     description:
-      "Support installation and coordination for kiosks, digital standees, LED walls and interactive displays.",
+      "Coordinate installation, testing and on-site support for digital standees, kiosks, LFD and LED displays and interactive systems.",
     skills: ["Installation", "Coordination", "Support", "Hardware basics"],
   },
   {
@@ -363,41 +364,41 @@ const roles: Role[] = [
     location: "New Delhi / Hybrid",
     experience: "0–2 years",
     description:
-      "Work on brand visibility, content planning, social media, campaigns and lead generation support.",
+      "Support content planning, social media, SEO, campaigns and lead-generation activities with clear reporting and execution.",
     skills: ["Social Media", "SEO basics", "Content", "Campaigns"],
   },
 ];
 
 const hiringSteps = [
   {
-    title: "Apply online",
+    title: "Submit your application",
     description:
-      "Submit your details, preferred role, portfolio, resume link and a short message about your interest.",
+      "Share your details, preferred role, resume and relevant work links so we can understand your background.",
   },
   {
-    title: "Profile review",
+    title: "Initial profile review",
     description:
-      "Our team reviews your skills, learning attitude, communication and alignment with current requirements.",
+      "We review your experience, relevant work, communication and fit with the requirements of the role.",
   },
   {
-    title: "Task or discussion",
+    title: "Practical round",
     description:
-      "Shortlisted candidates may receive a practical task or a discussion round based on the role.",
+      "Depending on the role, shortlisted candidates may have a focused discussion, portfolio review or practical task.",
   },
   {
-    title: "Final conversation",
+    title: "Final discussion",
     description:
-      "We discuss expectations, role fit, learning path, joining process and next steps.",
+      "We discuss the role, responsibilities, working expectations, availability and the next steps in the hiring process.",
   },
 ];
 
 const values = [
-  "Ownership over excuses",
-  "Learning through real work",
-  "Clear communication",
-  "Quality in every delivery",
-  "Respect for time and process",
-  "Technology with business value",
+  "Take ownership of your work",
+  "Learn by solving real problems",
+  "Communicate early and clearly",
+  "Pay attention to quality and detail",
+  "Respect time, process and commitments",
+  "Understand the business need behind the task",
 ];
 
 const serviceOptions = [
@@ -411,6 +412,7 @@ const serviceOptions = [
 ];
 
 export default function CareerPage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <main className="bg-white text-[#161616]">
       {/* HERO */}
@@ -418,7 +420,7 @@ export default function CareerPage() {
         <div className="mx-auto max-w-450">
           <div className="relative min-h-150 overflow-hidden md:min-h-120">
             <img
-              src="/hero/careerhero.jpg"
+              src="/hero/career.jpg"
               alt="Career at BrainADZ Live"
               className="absolute inset-0 h-full w-full object-cover"
               onError={(event) => {
@@ -452,7 +454,7 @@ export default function CareerPage() {
               >
 
                 <h1 className="text-[38px] font-semibold leading-[1.05] tracking-[-2px] text-white md:text-[48px] lg:text-[56px]">
-                  Build your career with smarter digital systems
+                  Build your career by working on real digital products
                 </h1>
               </div>
 
@@ -462,17 +464,17 @@ export default function CareerPage() {
                 data-aos-delay="200"
               >
                 <p className="text-[14px] font-light leading-[1.45] tracking-[-0.5px] text-white/90 md:text-[16px] lg:text-[18px]">
-                  Join a team working across software, AI, automation, kiosks,
-                  smart displays, LED walls and business technology solutions.
+                  Join a team working across software, mobile and web applications,
+                  business platforms, digital signage products and technology deployments.
                 </p>
 
                 <a
-              href="#open-roles"
-              className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
-            >
-              View Open Roles
-              <span className="text-[20px] leading-none">↗</span>
-            </a>
+                  href="#open-roles"
+                  className="mt-10 inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                >
+                  View Open Roles
+                  <span className="text-[20px] leading-none">↗</span>
+                </a>
               </div>
             </div>
           </div>
@@ -481,31 +483,32 @@ export default function CareerPage() {
 
       {/* CAREER INTRO */}
       <section className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28">
-        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#3c5b9b]/[0.07] blur-[90px]" />
+        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
             <div data-aos="fade-right">
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
-                Work With Purpose
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+                Work On Real Projects
               </p>
 
               <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                A place to learn, build and grow with real technology work
+                Learn by building products and systems businesses actually use
               </h2>
 
               <p className="mt-7 max-w-180 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-                BrainADZ Live brings together software development, AI,
-                automation, smart display products and hardware deployment.
-                Our career environment is designed for people who want to work
-                on practical solutions, learn fast and take ownership.
+                BrainADZ Live works across custom software, mobile and web
+                applications, business platforms, digital signage products and
+                technology deployment. That gives team members exposure to
+                design, engineering, product thinking, implementation and the
+                practical work required to deliver a complete solution.
               </p>
 
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {[
-                  { value: "360°", label: "Digital solution exposure" },
-                  { value: "AI", label: "Automation-first projects" },
-                  { value: "Live", label: "Real business delivery" },
+                  { value: "11", label: "Software service areas" },
+                  { value: "5", label: "Software platforms" },
+                  { value: "8", label: "Digital signage product categories" },
                 ].map((item, index) => (
                   <div
                     key={item.label}
@@ -514,7 +517,7 @@ export default function CareerPage() {
                     data-aos-duration="520"
                     className="rounded-2xl border border-[#dfe6f1] bg-[#f8faff] p-6"
                   >
-                    <p className="text-[36px] font-light leading-none tracking-[-1.3px] text-[#3c5b9b]">
+                    <p className="text-[36px] font-light leading-none tracking-[-1.3px] text-[#193175]">
                       {item.value}
                     </p>
 
@@ -555,12 +558,12 @@ export default function CareerPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
             <div data-aos="fade-right">
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
                 Why Join Us
               </p>
 
               <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Grow your skills while building useful digital products
+                Build skills through practical work, feedback and responsibility
               </h2>
             </div>
 
@@ -569,9 +572,9 @@ export default function CareerPage() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              We value people who are curious, disciplined and ready to build.
-              You will work with a team that focuses on practical outcomes,
-              clean delivery and continuous improvement.
+              We value people who are curious, dependable and willing to
+              learn. The work involves real deadlines, feedback, collaboration
+              and responsibility for the quality of what you deliver.
             </p>
           </div>
 
@@ -587,13 +590,13 @@ export default function CareerPage() {
                   data-aos-duration="520"
                   className="group relative min-h-65 overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] md:p-8"
                 >
-                  <div className="absolute -right-13.75 -top-13.75 h-37.5 w-37.5 rounded-full bg-[#3c5b9b]/[0.07] transition duration-300 group-hover:scale-125" />
+                  <div className="absolute -right-13.75 -top-13.75 h-37.5 w-37.5 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
 
-                  <div className="relative z-10 flex h-14.5 w-14.5 items-center justify-center rounded-[14px] border border-[#dbe3f0] bg-[#f8faff] text-[#3c5b9b] transition-all duration-300 group-hover:bg-[#3c5b9b] group-hover:text-white">
+                  <div className="relative z-10 flex h-14.5 w-14.5 items-center justify-center rounded-[14px] border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
                     <Icon className="h-7.5 w-7.5" />
                   </div>
 
-                  <h3 className="relative z-10 mt-8 text-[24px] font-light leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#3c5b9b] md:text-[26px]">
+                  <h3 className="relative z-10 mt-8 text-[24px] font-light leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
                     {item.title}
                   </h3>
 
@@ -601,7 +604,7 @@ export default function CareerPage() {
                     {item.description}
                   </p>
 
-                  <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
                 </div>
               );
             })}
@@ -617,12 +620,12 @@ export default function CareerPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
             <div data-aos="fade-right">
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
-                Open Opportunities
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+                Open Roles
               </p>
 
               <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore roles across software, AI, design and deployment
+                Explore roles across development, design, automation and deployment
               </h2>
             </div>
 
@@ -631,9 +634,9 @@ export default function CareerPage() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              We keep our career page open for active roles and future
-              applications. Select the role that best matches your skills and
-              apply through the form below.
+              Review the roles below and choose the one that best matches
+              your experience and interests. You can also submit a general
+              application for future requirements.
             </p>
           </div>
 
@@ -646,20 +649,20 @@ export default function CareerPage() {
                 data-aos-duration="520"
                 className="group relative flex min-h-90 flex-col overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_24px_75px_rgba(22,22,22,0.07)] md:p-8"
               >
-                <div className="absolute -right-11.25 -top-11.25 h-31.25 w-31.25 rounded-full bg-[#3c5b9b]/6 transition duration-300 group-hover:scale-125" />
+                <div className="absolute -right-11.25 -top-11.25 h-31.25 w-31.25 rounded-full bg-[#193175]/6 transition duration-300 group-hover:scale-125" />
 
                 <div className="relative z-10 flex items-start justify-between gap-5">
                   <div>
-                    <p className="text-[13px] font-normal uppercase tracking-[2px] text-[#3c5b9b]">
+                    <p className="text-[13px] font-normal uppercase tracking-[2px] text-[#193175]">
                       {role.type}
                     </p>
 
-                    <h3 className="mt-4 text-[26px] font-light leading-[1.18] tracking-[-0.8px] text-[#262626] transition group-hover:text-[#3c5b9b] md:text-[30px]">
+                    <h3 className="mt-4 text-[26px] font-light leading-[1.18] tracking-[-0.8px] text-[#262626] transition group-hover:text-[#193175] md:text-[30px]">
                       {role.title}
                     </h3>
                   </div>
 
-                  <div className="flex h-13.5 w-13.5 shrink-0 items-center justify-center rounded-full bg-white text-[#3c5b9b]">
+                  <div className="flex h-13.5 w-13.5 shrink-0 items-center justify-center rounded-full bg-white text-[#193175]">
                     <BriefcaseIcon className="h-7 w-7" />
                   </div>
                 </div>
@@ -670,12 +673,12 @@ export default function CareerPage() {
 
                 <div className="relative z-10 mt-6 grid grid-cols-2 gap-3 text-[14px] font-light text-[#525252]">
                   <div className="rounded-[10px] bg-white px-4 py-3">
-                    <span className="block text-[#3c5b9b]">Location</span>
+                    <span className="block text-[#193175]">Location</span>
                     {role.location}
                   </div>
 
                   <div className="rounded-[10px] bg-white px-4 py-3">
-                    <span className="block text-[#3c5b9b]">Experience</span>
+                    <span className="block text-[#193175]">Experience</span>
                     {role.experience}
                   </div>
                 </div>
@@ -684,7 +687,7 @@ export default function CareerPage() {
                   {role.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-[#dfe6f1] bg-white px-3 py-1.5 text-[13px] font-light text-[#3c5b9b]"
+                      className="rounded-full border border-[#dfe6f1] bg-white px-3 py-1.5 text-[13px] font-light text-[#193175]"
                     >
                       {skill}
                     </span>
@@ -693,13 +696,13 @@ export default function CareerPage() {
 
                 <a
                   href="#apply"
-                  className="relative z-10 mt-auto inline-flex items-center gap-3 pt-8 text-[16px] font-light text-[#3c5b9b] transition hover:underline"
+                  className="relative z-10 mt-auto inline-flex items-center gap-3 pt-8 text-[16px] font-light text-[#193175] transition hover:underline"
                 >
                   Apply for this role
                   <ArrowRightIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
 
-                <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
               </div>
             ))}
           </div>
@@ -715,12 +718,12 @@ export default function CareerPage() {
               data-aos="card-reveal"
               data-aos-duration="520"
             >
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
                 What We Value
               </p>
 
               <h2 className="max-w-155 text-[36px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
-                The mindset we look for
+                How we expect people to work
               </h2>
 
               <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -729,7 +732,7 @@ export default function CareerPage() {
                     key={value}
                     className="flex items-center gap-3 rounded-[14px] border border-[#dfe6f1] bg-[#f8faff] px-4 py-4"
                   >
-                    <span className="flex h-7.5 w-7.5 shrink-0 items-center justify-center rounded-full bg-[#3c5b9b]/10 text-[#3c5b9b]">
+                    <span className="flex h-7.5 w-7.5 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[#193175]">
                       <CheckIcon className="h-4 w-4" />
                     </span>
 
@@ -747,18 +750,18 @@ export default function CareerPage() {
               data-aos-delay="100"
               data-aos-duration="520"
             >
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
                 Hiring Process
               </p>
 
               <h2 className="max-w-155 text-[36px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
-                Simple, clear and practical
+                A straightforward hiring process
               </h2>
 
               <div className="mt-9 space-y-6">
                 {hiringSteps.map((step, index) => (
                   <div key={step.title} className="flex gap-5">
-                    <div className="flex h-11.5 w-11.5 shrink-0 items-center justify-center rounded-full bg-[#3c5b9b] text-[15px] font-light text-white">
+                    <div className="flex h-11.5 w-11.5 shrink-0 items-center justify-center rounded-full bg-[#193175] text-[15px] font-light text-white">
                       {String(index + 1).padStart(2, "0")}
                     </div>
 
@@ -784,22 +787,23 @@ export default function CareerPage() {
         id="apply"
         className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28"
       >
-        <div className="pointer-events-none absolute -left-40 -bottom-40 h-95 w-95 rounded-full bg-[#3c5b9b]/6 blur-[90px]" />
+        <div className="pointer-events-none absolute -left-40 -bottom-40 h-95 w-95 rounded-full bg-[#193175]/6 blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14">
             <div data-aos="fade-right">
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
                 Apply Now
               </p>
 
               <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Ready to become a BrainADZian?
+                Apply for a role at BrainADZ Live
               </h2>
 
               <p className="mt-6 max-w-180 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-                Share your profile with us. Even when a role is not immediately
-                open, we keep strong profiles for future opportunities.
+                Share your profile and relevant work with us. If your
+                background matches an active or upcoming requirement, our team
+                can contact you for the next step.
               </p>
 
               <div
@@ -809,7 +813,7 @@ export default function CareerPage() {
                 data-aos-duration="520"
               >
                 <div className="flex gap-5">
-                  <div className="flex h-15.5 w-15.5 shrink-0 items-center justify-center rounded-[18px] bg-[#3c5b9b]/10 text-[#3c5b9b]">
+                  <div className="flex h-15.5 w-15.5 shrink-0 items-center justify-center rounded-[18px] bg-[#193175]/10 text-[#193175]">
                     <ShieldIcon className="h-8.5 w-8.5" />
                   </div>
 
@@ -819,9 +823,9 @@ export default function CareerPage() {
                     </h3>
 
                     <p className="mt-3 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
-                      Keep your resume link, portfolio or GitHub profile ready.
-                      For design roles, add your Figma or portfolio link. For
-                      development roles, add project links if available.
+                      Use links that our team can open without requesting access.
+                      Add a portfolio or Figma link for design roles and project
+                      or GitHub links for development roles whenever available.
                     </p>
                   </div>
                 </div>
@@ -839,7 +843,7 @@ export default function CareerPage() {
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-170 text-[16px] font-light leading-[1.7] text-[#525252] md:text-[18px]">
-                  Fill the form and our team will review your application.
+                  Share accurate details and relevant work so we can review your profile properly.
                 </p>
               </div>
 
@@ -855,7 +859,7 @@ export default function CareerPage() {
                   <input
                     type="text"
                     placeholder="Enter your full name"
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
@@ -867,7 +871,7 @@ export default function CareerPage() {
                   <input
                     type="email"
                     placeholder="your@email.com"
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
@@ -879,7 +883,7 @@ export default function CareerPage() {
                   <input
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
@@ -891,7 +895,7 @@ export default function CareerPage() {
                   <input
                     type="text"
                     placeholder="City, State"
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
@@ -902,7 +906,7 @@ export default function CareerPage() {
 
                   <select
                     defaultValue=""
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition focus:border-[#193175] focus:bg-white"
                   >
                     <option value="" disabled>
                       Select role
@@ -923,7 +927,7 @@ export default function CareerPage() {
 
                   <select
                     defaultValue=""
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition focus:border-[#193175] focus:bg-white"
                   >
                     <option value="" disabled>
                       Select experience
@@ -943,7 +947,7 @@ export default function CareerPage() {
                   <input
                     type="url"
                     placeholder="Google Drive / LinkedIn resume link"
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
@@ -955,26 +959,26 @@ export default function CareerPage() {
                   <input
                     type="url"
                     placeholder="Portfolio, GitHub, Behance or LinkedIn"
-                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
                 <div className="md:col-span-2">
                   <label className="mb-2 block text-[14px] font-light text-[#525252]">
-                    Why do you want to join BrainADZ Live?
+                    Tell us about your interest in this role
                   </label>
 
                   <textarea
                     rows={6}
-                    placeholder="Write a short note about your skills, interest and what you want to build with us..."
-                    className="w-full resize-none rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 py-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#3c5b9b] focus:bg-white"
+                    placeholder="Tell us about your relevant skills, work and why this role interests you..."
+                    className="w-full resize-none rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 py-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
 
                 <div className="md:col-span-2">
                   <button
                     type="submit"
-                    className="group inline-flex h-14 w-full items-center justify-center gap-3 rounded-md bg-[#3c5b9b] px-6 text-[16px] font-normal text-white shadow-[0_18px_42px_rgba(60,91,155,0.22)] transition-all duration-300 hover:bg-[#2f4a82] md:w-auto md:min-w-65"
+                    className="group inline-flex h-14 w-full items-center justify-center gap-3 rounded-md bg-[#193175] px-6 text-[16px] font-normal text-white shadow-[0_18px_42px_rgba(60,91,155,0.22)] transition-all duration-300 hover:bg-[#2f4a82] md:w-auto md:min-w-65"
                   >
                     <SendIcon className="h-5.25 w-5.25 transition-transform duration-300 group-hover:translate-x-1" />
                     Submit Application
@@ -986,8 +990,59 @@ export default function CareerPage() {
         </div>
       </section>
 
+
       {/* FINAL CTA */}
-      <CtaSection />
+      <section className="lazy-section bg-white py-12">
+        <div className="mx-auto max-w-450 px-8 lg:px-10">
+          <div
+            className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
+            data-aos="zoom-in"
+          >
+            {/* LEFT IMAGE */}
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/about.avif"
+                alt="Careers at BrainADZ Live"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* RIGHT CONTENT */}
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              {/* TEXT */}
+              <div className="max-w-140">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Not sure which role fits your profile?
+                </h3>
+
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Share your background and interests with our team, and we can
+                  understand where your skills may fit across future opportunities.
+                </p>
+              </div>
+
+              {/* BUTTON */}
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Ask About Careers</span>
+
+                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+            <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

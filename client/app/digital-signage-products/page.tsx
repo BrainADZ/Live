@@ -3,7 +3,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
-import CtaSection from "@/components/home/CTA";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 
@@ -34,49 +33,49 @@ const products: Product[] = [
   {
     title: "A Type Standee",
     description:
-      "Premium A type digital standee for promotions, brand communication, product launches and indoor customer engagement.",
+      "Freestanding digital display for entrances, promotions, product launches and brand communication in customer-facing spaces.",
     image: "/products/A.png",
   },
   {
     title: "D Type Standee",
     description:
-      "Elegant D type standee display for retail stores, events, showrooms, offices and corporate communication.",
+      "Slim freestanding digital display for promotions, information and brand content across stores, showrooms and business spaces.",
     image: "/products/D.png",
   },
   {
     title: "Wall Mounted Standee",
     description:
-      "Space-saving wall mounted display solution for menus, notices, promotions and digital information boards.",
+      "Wall-mounted digital display for menus, schedules, notices, directories and promotional content where floor space is limited.",
     image: "/products/wall.png",
   },
   {
     title: "Floor Mounted Standee",
     description:
-      "Strong floor mounted display for high-visibility branding, offers, campaigns and customer interaction.",
+      "Floor-mounted digital display for prominent content placement in entrances, waiting areas, retail zones and public-facing spaces.",
     image: "/products/Floor.png",
   },
   {
     title: "Self Ordering Kiosk",
     description:
-      "Interactive self-ordering kiosk for restaurants, retail counters, food courts and service-based businesses.",
+      "Interactive kiosk that lets customers browse options, place orders and complete selected service steps through a guided on-screen flow.",
     image: "/products/Selforder.png",
   },
   {
     title: "LFD Display",
     description:
-      "Large format display for corporate spaces, retail branding, education, hospitality and public communication.",
+      "Large-format display for presentations, brand content, dashboards, information and digital communication across shared spaces.",
     image: "/products/lfd.png",
   },
   {
     title: "LED Display",
     description:
-      "Bright LED display solution for impactful visuals, advertisements, stage backdrops and outdoor visibility.",
+      "High-visibility LED display for large-scale visual communication, campaigns, stage environments and suitable indoor or outdoor installations.",
     image: "/products/Led.png",
   },
   {
     title: "Interactive Teaching Display",
     description:
-      "Smart interactive display for classrooms, training rooms, digital learning and collaborative education spaces.",
+      "Interactive display for lessons, presentations, annotations and collaborative sessions in classrooms and training spaces.",
     image: "/products/Teaching.png",
   },
 ];
@@ -88,7 +87,7 @@ export default function DigitalSignageProductsPage() {
   {/* HERO */}
   <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
     <img
-      src="/hero/Product.jpeg"
+      src="/hero/signage-product.jpg"
       alt="Digital Signage Products"
       className="absolute inset-0 h-full w-full object-cover"
       onError={(event) => {
@@ -109,21 +108,22 @@ export default function DigitalSignageProductsPage() {
 
       <div className="mt-12 max-w-205 md:mt-14">
         <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-          Digital signage products built for modern spaces
+          Digital signage products for display, interaction and visual communication
         </h1>
       </div>
 
       <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
         <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-          Showcase content, improve engagement and create smarter visual
-          experiences with BrainADZ Live signage products.
+          From freestanding standees and kiosks to LFD, LED and interactive
+          displays, choose hardware suited to how and where your content needs
+          to be seen.
         </p>
 
         <div className="mt-8">
           <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -135,32 +135,33 @@ export default function DigitalSignageProductsPage() {
 
       {/* ABOUT DIGITAL SIGNAGE PRODUCTS */}
       <section className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28">
-        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#3c5b9b]/[0.07] blur-[90px]" />
+        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <div>
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
                 About Digital Signage Products
               </p>
 
               <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Smart display products for modern customer engagement
+                Display hardware for customer-facing, operational and learning spaces
               </h2>
 
               <p className="mt-7 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-                BrainADZ Live provides digital signage products that help
-                businesses communicate better, promote offers, display content
-                and create premium customer experiences. From digital standees
-                and kiosks to LFD displays, LED displays and interactive
-                teaching displays, our product range is designed for visibility,
-                engagement and performance.
+                BrainADZ Live provides a focused range of digital signage
+                hardware for presenting information, promotions, visual content
+                and interactive experiences. The range includes freestanding
+                and mounted standees, self-ordering kiosks, LFD screens, LED
+                displays and interactive teaching displays.
               </p>
 
               <p className="mt-5 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-                These products are ideal for retail stores, restaurants,
-                corporate spaces, educational institutions, events, hospitals
-                and public-facing business environments.
+                The right product depends on placement, viewing distance,
+                content type and whether people only need to view information or
+                interact with the screen. Our range supports entrances, counters,
+                walls, shared spaces, classrooms, training rooms and other
+                public-facing environments.
               </p>
             </div>
 
@@ -189,16 +190,16 @@ export default function DigitalSignageProductsPage() {
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             {[
-              { value: "8+", label: "Digital signage product categories" },
-              { value: "24/7", label: "Display communication readiness" },
-              { value: "360°", label: "Installation and support approach" },
-              { value: "Live", label: "Real-time brand visibility" },
+              { value: "8", label: "Digital signage product categories" },
+              { value: "4", label: "Freestanding and mounted standee formats" },
+              { value: "2", label: "Interactive product types" },
+              { value: "2", label: "Large-format display options" },
             ].map((item) => (
               <div
                 key={item.label}
                 className="rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)]"
               >
-                <p className="text-[42px] font-light leading-none tracking-[-1.5px] text-[#3c5b9b] md:text-[52px]">
+                <p className="text-[42px] font-light leading-none tracking-[-1.5px] text-[#193175] md:text-[52px]">
                   {item.value}
                 </p>
 
@@ -213,24 +214,24 @@ export default function DigitalSignageProductsPage() {
 
       {/* PRODUCTS */}
       <section className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28">
-        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#3c5b9b]/[0.07] blur-[90px]" />
+        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
                 Product Range
               </p>
 
               <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Smart display products for branding, communication and
-                engagement
+                Choose the display format that fits the space and use case
               </h2>
             </div>
 
             <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              Explore digital standees, kiosks, LFD screens, LED displays and
-              interactive teaching displays designed for modern business spaces.
+              Compare standees, self-service kiosks, large-format screens, LED
+              displays and interactive teaching displays based on placement,
+              visibility and interaction needs.
             </p>
           </div>
 
@@ -258,7 +259,7 @@ export default function DigitalSignageProductsPage() {
                 </div>
 
                 <div className="p-7 md:p-8">
-                  <h3 className="text-[25px] font-light leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#3c5b9b] md:text-[28px]">
+                  <h3 className="text-[25px] font-light leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
                     {item.title}
                   </h3>
 
@@ -268,7 +269,7 @@ export default function DigitalSignageProductsPage() {
 
                   <Link
                     href="/contact-us"
-                    className="mt-8 inline-flex items-center gap-3 text-[15px] font-light text-[#3c5b9b] hover:underline"
+                    className="mt-8 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] hover:underline"
                   >
                     Explore Product
                     <ArrowRightIcon className="h-4.5 w-4.5" />
@@ -280,7 +281,50 @@ export default function DigitalSignageProductsPage() {
         </div>
       </section>
 
-      <CtaSection />
+      <section className="lazy-section bg-white py-12">
+              <div className="mx-auto max-w-450 px-8 lg:px-10">
+                <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+                  <div className="hidden w-[32%] shrink-0 md:block">
+                    <img
+                      src="/products/a-type-standee/cta.jpg"
+                      alt="BrainADZ Live Digital Signage Products"
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = "/about.avif";
+                      }}
+                    />
+                  </div>
+      
+                  <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+                    <div className="max-w-150">
+                      <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                        Need the right display format for your space?
+                      </h3>
+      
+                      <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                        Tell us where the display will be installed, what
+                        content it needs to show and whether users need to
+                        interact with it. We&apos;ll help you identify the right
+                        product from our digital signage range.
+                      </p>
+                    </div>
+      
+                    <button
+        type="button"
+        onClick={() => setIsPopupOpen(true)}
+        className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+      >
+                      <span>Request a Quote</span>
+                      <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
 
       <PopupForm
   isOpen={isPopupOpen}

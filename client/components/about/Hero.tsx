@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[420px] overflow-hidden bg-black text-white md:min-h-[480px] lg:min-h-[540px]">
       <img
-        src="/hero/abouthero.jpg"
+        src="/hero/our-team.jpg"
         alt="About BrainADZ Live"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -30,12 +30,16 @@ export default function Hero() {
         </div>
 
         <div
-          className="mt-12 max-w-[820px] md:mt-14"
+          className="mt-12 max-w-[900px] md:mt-14"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
+          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#8fb1ff]">
             About BrainADZ Live
+          </p>
+
+          <h1 className="text-[38px] font-semibold leading-[1.1] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
+            Building practical technology for connected business experiences
           </h1>
         </div>
 
@@ -44,19 +48,21 @@ export default function Hero() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <p className="max-w-[780px] text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-            Creators, partners and clients putting technology to work in the
-            real world
+          <p className="max-w-[850px] text-[14px] font-light leading-[1.5] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
+            We bring software services, business platforms, digital signage
+            products and technology consulting together around real business
+            requirements.
           </p>
 
           <div className="mt-8">
-            <a
+            <Link
               href="/contact-us"
-              className="inline-flex h-[58px] min-w-[225px] items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              className="inline-flex h-[58px] min-w-[225px] items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
             >
-              Enquire Now
+              Discuss Your Requirement
+
               <span className="text-[20px] leading-none">↗</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ export default function SocialMediaSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-[#161616] transition-colors duration-300 hover:text-[#3c5b9b]"
+              className="text-[#161616] transition-colors duration-300 hover:text-[#193175]"
             >
               <FaFacebookF className="h-4.5 w-4.5" />
             </a>
@@ -41,7 +41,7 @@ export default function SocialMediaSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-[#161616] transition-colors duration-300 hover:text-[#3c5b9b]"
+              className="text-[#161616] transition-colors duration-300 hover:text-[#193175]"
             >
               <FaInstagram className="h-4.5 w-4.5" />
             </a>
@@ -52,7 +52,7 @@ export default function SocialMediaSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="text-[#161616] transition-colors duration-300 hover:text-[#3c5b9b]"
+              className="text-[#161616] transition-colors duration-300 hover:text-[#193175]"
             >
               <FaLinkedin className="h-4.5 w-4.5" />
             </a>
@@ -62,7 +62,7 @@ export default function SocialMediaSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
-              className="text-[#161616] transition-colors duration-300 hover:text-[#3c5b9b]"
+              className="text-[#161616] transition-colors duration-300 hover:text-[#193175]"
             >
               <FaYoutube className="h-4.5 w-4.5" />
             </a>

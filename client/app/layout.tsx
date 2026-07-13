@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import SocialMediaSection from "@/components/Footer/SocialMedia";
+import LocationsSection from "@/components/Footer/Location";
 import Footer from "@/components/Footer/Footer";
 import AosProvider from "@/components/AosProvider";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <SocialMediaSection />
+        <LocationsSection />
         <Footer />
       </body>
     </html>

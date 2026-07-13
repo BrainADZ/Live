@@ -67,7 +67,7 @@ export default function NewsSection() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-3 h-17 w-full border-0 border-b border-[#8d8d8d] bg-[#f4f4f4] px-5 text-[20px] font-light text-[#161616] outline-none transition focus:border-[#3c5b9b]"
+                className="mt-3 h-17 w-full border-0 border-b border-[#8d8d8d] bg-[#f4f4f4] px-5 text-[20px] font-light text-[#161616] outline-none transition focus:border-[#193175]"
               />
 
               <p className="mt-6 max-w-237.5 text-[14px] font-light leading-[1.75] tracking-[-0.2px] text-[#262626]">
@@ -76,14 +76,14 @@ export default function NewsSection() {
                 subscriptions or unsubscribe{" "}
                 <a
                   href="/unsubscribe"
-                  className="text-[#3c5b9b] hover:underline"
+                  className="text-[#193175] hover:underline"
                 >
                   here
                 </a>
                 . Refer to our{" "}
                 <a
                   href="/privacy-policy"
-                  className="text-[#3c5b9b] hover:underline"
+                  className="text-[#193175] hover:underline"
                 >
                   BrainADZ Privacy Statement
                 </a>{" "}
@@ -92,7 +92,7 @@ export default function NewsSection() {
 
               <button
                 type="submit"
-                className="mt-6 inline-flex h-14 items-center justify-center bg-[#3c5b9b] px-8 text-[20px] font-light text-white transition duration-300 hover:bg-[#2f4a82] cursor-pointer"
+                className="mt-6 inline-flex h-14 items-center justify-center bg-[#193175] px-8 text-[20px] font-light text-white transition duration-300 hover:bg-[#2f4a82] cursor-pointer"
               >
                 Subscribe
               </button>

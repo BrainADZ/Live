@@ -35,7 +35,7 @@ export default function TestimonialSection() {
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
           <div data-aos="fade-right">
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Testimonials
             </p>
 
@@ -67,16 +67,16 @@ export default function TestimonialSection() {
               }`}
             >
               {/* SOFT GLOW */}
-              <div className="absolute -right-15 -top-15 h-37.5 w-37.5 rounded-full bg-[#3c5b9b]/[0.07] transition duration-300 group-hover:scale-125" />
+              <div className="absolute -right-15 -top-15 h-37.5 w-37.5 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
 
               {/* TOP */}
               <div className="relative z-10">
                 <div className="flex items-center justify-between">
-                  <div className="flex h-13.5 w-13.5 items-center justify-center rounded-full border border-[#dbe3f0] bg-[#f8faff] text-[#3c5b9b] transition-all duration-300 group-hover:bg-[#3c5b9b] group-hover:text-white">
+                  <div className="flex h-13.5 w-13.5 items-center justify-center rounded-full border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
                     <Quote size={25} strokeWidth={1.4} />
                   </div>
 
-                  <div className="flex items-center gap-1 text-[#3c5b9b]">
+                  <div className="flex items-center gap-1 text-[#193175]">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star
                         key={star}
@@ -96,7 +96,7 @@ export default function TestimonialSection() {
               {/* CLIENT INFO WITH IMAGE */}
               <div className="relative z-10 mt-10 border-t border-[#dfe6f1] pt-6">
                 <div className="flex items-center gap-4">
-                  <div className="relative flex h-14.5 w-14.5 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#dbe3f0] bg-[#f8faff] text-[18px] font-light text-[#3c5b9b]">
+                  <div className="relative flex h-14.5 w-14.5 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#dbe3f0] bg-[#f8faff] text-[18px] font-light text-[#193175]">
                     <span>{item.name.charAt(0)}</span>
 
                     <img
@@ -122,7 +122,7 @@ export default function TestimonialSection() {
               </div>
 
               {/* HOVER LINE */}
-              <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
             </div>
           ))}
         </div>
@@ -131,7 +131,7 @@ export default function TestimonialSection() {
         <div className="mt-14 flex justify-center" data-aos="fade-up">
           <a
             href="/case-studies"
-            className="group inline-flex h-13.5 items-center justify-center gap-4 rounded-full border border-[#3c5b9b] px-8 text-[15px] font-normal text-[#3c5b9b] transition-all duration-300 hover:bg-[#3c5b9b] hover:text-white"
+            className="group inline-flex h-13.5 items-center justify-center gap-4 rounded-full border border-[#193175] px-8 text-[15px] font-normal text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
           >
             View client stories
             <ArrowRight

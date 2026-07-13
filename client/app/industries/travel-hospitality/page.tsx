@@ -3,10 +3,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BarChart3,
-  Bell,
   CheckCircle2,
   Cloud,
   Code2,
@@ -14,8 +14,8 @@ import {
   Database,
   FileCheck2,
   FileText,
-  LifeBuoy,
   Layers3,
+  LifeBuoy,
   Minus,
   MonitorSmartphone,
   Plus,
@@ -38,330 +38,331 @@ type StackItem = {
 
 const workflow = [
   {
-    title: "Travel Workflow Discovery",
-    text: "We understand your hotel, travel, booking, guest, vendor, operations and customer experience workflows.",
+    title: "Guest & Business Discovery",
+    text: "We understand the hospitality model, guest journeys, booking channels, service workflows, teams and project goals.",
     icon: Search,
   },
   {
-    title: "Travel Architecture Planning",
-    text: "We plan booking engines, guest portals, vendor dashboards, payment flows, inventory, CRM, integrations and cloud infrastructure.",
-    icon: Layers3,
-  },
-  {
-    title: "UI/UX & Prototype",
-    text: "We design clean booking journeys, guest portals, hotel dashboards, vendor panels and admin workflows.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Secure Platform Development",
-    text: "We build core travel modules including bookings, rooms, packages, guests, vendors, payments, notifications and reporting.",
-    icon: Code2,
-  },
-  {
-    title: "System Integration",
-    text: "We integrate payment gateways, CRMs, channel managers, booking APIs, maps, notifications and third-party travel platforms.",
+    title: "Booking & Operations Mapping",
+    text: "We map enquiries, reservations, guest services, internal operations, billing and communication workflows.",
     icon: Workflow,
   },
   {
-    title: "Testing & Security Review",
-    text: "We test booking flows, inventory, user roles, payment journeys, notifications, performance and data security.",
+    title: "Data & Integration Planning",
+    text: "We plan user roles, booking records, operational data and required connections with existing or third-party systems.",
+    icon: Layers3,
+  },
+  {
+    title: "Guest & Team Experience Design",
+    text: "We design the required booking journeys, guest portals, staff dashboards, service screens and administration workflows.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Platform Development",
+    text: "We configure or develop the required booking, CRM, ERP, guest service, mobile and reporting modules.",
+    icon: Code2,
+  },
+  {
+    title: "Integration & Workflow Testing",
+    text: "We test booking journeys, staff workflows, user roles and compatible integrations before deployment.",
     icon: ShieldCheck,
   },
   {
-    title: "Cloud Deployment",
-    text: "We deploy your travel platform on reliable cloud infrastructure with monitoring, backup and scalability setup.",
+    title: "Deployment & Rollout",
+    text: "The platform is deployed according to the agreed environment, properties, teams and implementation plan.",
     icon: Rocket,
   },
   {
-    title: "Support & Maintenance",
-    text: "We provide updates, monitoring, issue fixing, booking improvements, performance optimization and new feature enhancements.",
+    title: "Handover & Support Scope",
+    text: "Users are guided through the delivered workflows, with post-launch support provided according to the agreed project scope.",
     icon: LifeBuoy,
   },
 ];
 
 const travelBenefits = [
   {
-    title: "Faster Bookings",
-    text: "Simplify room booking, tour booking, package selection, payment and confirmation workflows.",
+    title: "Structured Booking Journey",
+    text: "Create clearer enquiry, reservation, confirmation and guest communication workflows.",
     icon: FileCheck2,
   },
   {
-    title: "Better Guest Management",
-    text: "Manage guests, bookings, rooms, packages, vendors, payments and communication from one platform.",
-    icon: ShieldPlus,
-  },
-  {
-    title: "Improved Guest Experience",
-    text: "Give guests self-service access to bookings, invoices, travel details, support and updates.",
+    title: "Connected Guest Operations",
+    text: "Bring selected booking, guest, service and internal operational activities into a coordinated system.",
     icon: Users,
   },
   {
-    title: "Smarter Travel Decisions",
-    text: "Use reports and analytics to track bookings, occupancy, revenue, guests, vendors and demand.",
+    title: "Better Team Coordination",
+    text: "Create structured workflows for front desk, service teams, operations and management.",
+    icon: UserCheck,
+  },
+  {
+    title: "Operational Visibility",
+    text: "Create dashboards and reports using the booking, guest and operational data included in the platform.",
     icon: BarChart3,
   },
 ];
 
 const challenges = [
   {
-    title: "Manual Booking Management",
-    text: "Digitize booking requests, confirmations, payments, cancellations and customer communication.",
+    title: "Disconnected Booking & Enquiry Flow",
+    text: "Booking requests, enquiries, confirmations and customer communication can remain spread across separate tools.",
   },
   {
-    title: "Disconnected Guest Data",
-    text: "Bring guest, booking, room, package, payment and vendor data into one connected system.",
+    title: "Fragmented Guest Information",
+    text: "Guest details, reservations, services, invoices and communication history can become difficult to review from one place.",
   },
   {
-    title: "Slow Guest Support",
-    text: "Improve guest queries, booking updates, travel support, reminders and communication.",
+    title: "Manual Service Coordination",
+    text: "Guest requests, internal tasks and operational updates may depend on calls, messages and spreadsheets.",
   },
   {
-    title: "Limited Occupancy Visibility",
-    text: "Track bookings, occupancy, revenue, guest activity, vendors and operational KPIs through dashboards.",
+    title: "Limited Business Visibility",
+    text: "Teams may struggle to review bookings, guest activity, services and operational information through a connected reporting structure.",
   },
 ];
 
 const solutions = [
   {
-    title: "Hotel Booking System",
-    text: "Manage rooms, availability, guests, bookings, payments, invoices, cancellations and hotel operations from one dashboard.",
-    icon: ShieldPlus,
-  },
-  {
-    title: "Travel Booking Platform",
-    text: "Create travel package booking, itinerary management, customer inquiries, payments and confirmation workflows.",
+    title: "Booking & Guest Portal",
+    text: "Create web or mobile journeys for enquiries, booking requests, reservation details, guest information and selected service activities.",
     icon: FileCheck2,
   },
   {
-    title: "Guest Self-Service Portal",
-    text: "Let guests view bookings, invoices, travel details, check-in information, support requests and updates.",
+    title: "Hotel Operations Platform",
+    text: "Plan workflows for reservations, guest records, internal service activities, staff coordination and administration.",
+    icon: ShieldPlus,
+  },
+  {
+    title: "Travel & Hospitality CRM",
+    text: "Manage enquiries, guest records, follow-ups, corporate accounts, sales activities and selected communication workflows.",
     icon: Users,
   },
   {
-    title: "Vendor & Partner Portal",
-    text: "Give hotels, vendors and partners tools for inventory, pricing, bookings, availability and communication.",
-    icon: UserCheck,
+    title: "Hospitality ERP",
+    text: "Plan relevant ERP modules for billing, purchases, vendors, inventory, finance, staff and operational workflows.",
+    icon: Database,
   },
   {
-    title: "Hospitality Billing System",
-    text: "Manage invoices, payments, refunds, taxes, receipts, room charges and secure billing workflows.",
+    title: "Guest Service Application",
+    text: "Create digital workflows for requests, service updates, information, communication and selected guest activities.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "In-Property Digital Experience",
+    text: "Plan self-ordering kiosks and digital signage for menus, information, promotions and guest communication where relevant.",
     icon: WalletCards,
-  },
-  {
-    title: "Travel Analytics Dashboard",
-    text: "Analyze bookings, occupancy, revenue, guest behavior, package performance and operational insights.",
-    icon: BarChart3,
   },
 ];
 
 const architectureItems = [
-  "Guest portal",
-  "Vendor dashboard",
-  "Booking management",
-  "Room & package workflow",
-  "Billing & payments",
-  "Reports & analytics",
+  "Guest, staff & admin access",
+  "Enquiry & booking workflows",
+  "Guest service operations",
+  "CRM & ERP processes",
+  "Payments & integrations",
+  "Dashboards & reporting",
 ];
 
 const travelTypes = [
   {
-    title: "Hotel Management Platforms",
-    text: "We build hotel management platforms for rooms, availability, reservations, guests, housekeeping, payments, invoices and daily operations.",
-    icon: ShieldPlus,
-  },
-  {
-    title: "Travel Agency Platforms",
-    text: "Our travel agency platforms simplify inquiries, packages, itineraries, customer follow-ups, booking confirmations and payment workflows.",
+    title: "Booking & Guest Portals",
+    text: "Create digital journeys for enquiries, booking requests, reservation information, guest details and selected service activities.",
     icon: FileCheck2,
   },
   {
-    title: "Guest Experience Portals",
-    text: "We create guest portals where travelers can view bookings, itineraries, invoices, check-in details, support updates and travel documents.",
+    title: "Hotel Operations Platforms",
+    text: "Plan workflows for reservations, guest records, staff activities, internal services and administration according to the property requirement.",
+    icon: ShieldPlus,
+  },
+  {
+    title: "Travel & Hospitality CRM",
+    text: "Organize enquiries, guest relationships, corporate accounts, follow-ups, sales activities and selected communication workflows.",
     icon: Users,
   },
   {
-    title: "Vendor & Partner Platforms",
-    text: "We build vendor and partner platforms for hotel inventory, travel packages, pricing, availability, booking updates and communication.",
-    icon: UserCheck,
+    title: "Hospitality ERP Systems",
+    text: "Plan relevant ERP modules for billing, purchases, vendors, inventory, finance, staff and operational processes.",
+    icon: Database,
   },
   {
-    title: "Travel Billing Solutions",
-    text: "We develop billing systems for bookings, invoices, refunds, taxes, receipts, payment collection and customer payment history.",
-    icon: CreditCard,
+    title: "Guest Service Applications",
+    text: "Create web or mobile workflows for guest requests, service information, updates and selected communication activities.",
+    icon: MonitorSmartphone,
   },
   {
-    title: "Travel Analytics Dashboards",
-    text: "We build dashboards for booking trends, occupancy, revenue, customer behavior, package performance and operational insights.",
-    icon: BarChart3,
+    title: "In-Property Digital Experiences",
+    text: "Plan self-ordering kiosks and digital signage for menus, promotions, information and guest communication where they fit the environment.",
+    icon: WalletCards,
   },
 ];
 
 const coreFeatures = [
-  "Booking dashboard",
-  "Room availability",
-  "Guest portal",
-  "Vendor management",
-  "Itinerary management",
-  "Online billing",
-  "Payment gateway",
-  "Reports & analytics",
+  "Enquiry and booking workflows",
+  "Guest and customer records",
+  "Service request management",
+  "Staff and admin access",
+  "CRM and follow-up activities",
+  "ERP and operational workflows",
+  "Payment integration",
+  "Dashboards and reports",
 ];
 
 const securityItems = [
-  "Role-based access",
-  "Secure guest data",
-  "Cloud backup",
-  "Protected APIs",
-  "Booking activity logs",
-  "Payment security",
+  "Role-based user access",
+  "Guest and booking records",
+  "API and integration controls",
+  "Service and activity history",
+  "Backup and recovery planning",
+  "Payment integration scope",
 ];
 
-const caseStudies = [
+const solutionScenarios = [
   {
     title: "Hotel Booking Platform",
-    text: "A hotel booking platform for rooms, guests, availability, payments, invoices and reservation management.",
+    text: "A platform concept for enquiries, reservations, guest information, invoices and administration workflows.",
     image: "/industries/travel-hospitality/hotel-booking.jpg",
   },
   {
     title: "Travel Package Platform",
-    text: "A package booking platform for itineraries, inquiries, payments, confirmations and customer communication.",
+    text: "A workflow concept for enquiries, packages, itinerary information, confirmations and customer communication.",
     image: "/industries/travel-hospitality/travel-package.jpg",
   },
   {
-    title: "Vendor Portal",
-    text: "A vendor portal for availability, pricing, booking updates, inventory and communication.",
+    title: "Partner Operations Portal",
+    text: "A portal concept for partner records, booking information, service updates and selected operational activities.",
     image: "/industries/travel-hospitality/vendor-portal.jpg",
   },
   {
-    title: "Travel Analytics Dashboard",
-    text: "A dashboard for occupancy, bookings, revenue, guest trends and package performance.",
+    title: "Hospitality Operations Dashboard",
+    text: "A dashboard concept for bookings, guest activity, services and configured management reporting.",
     image: "/industries/travel-hospitality/travel-analytics.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Travel Workflow Understanding",
-    text: "We design platforms around real travel workflows including bookings, guests, hotels, vendors, billing and support.",
+    title: "Guest Journey & Workflow Mapping",
+    text: "We start with how guests, customers, staff, operations and management actually move through the business.",
   },
   {
-    title: "Booking-Ready Architecture",
-    text: "We build systems that support live inventory, bookings, payments, guest data and integrations.",
+    title: "Relevant Solution Planning",
+    text: "We combine custom software, mobile apps, CRM, ERP, integrations, kiosks and digital signage only where they fit the project requirement.",
   },
   {
-    title: "Custom Development",
-    text: "Your travel platform is built according to your booking model, users, vendors, packages and business goals.",
+    title: "Guest & Team Experience Design",
+    text: "Guest, front desk, service, operations and administration journeys are planned according to their actual responsibilities.",
   },
   {
-    title: "Long-Term Support",
-    text: "We support your platform with updates, monitoring, performance improvements, security updates and new features.",
+    title: "Scope-Based Implementation Support",
+    text: "Deployment guidance, handover and post-launch support are provided according to the agreed project scope.",
   },
 ];
 
 const supportItems = [
-  "Travel platform monitoring",
-  "New booking and guest modules",
-  "Performance and speed optimization",
-  "Security updates and access improvements",
-  "Dashboard, booking and reporting upgrades",
+  "User onboarding and workflow handover",
+  "Agreed post-launch issue support",
+  "Booking and guest workflow review",
+  "Dashboard and report adjustments",
+  "Future modules as separate scope",
 ];
 
 const tabs: { label: string; value: TabType }[] = [
-  { label: "Frontend", value: "frontend" },
-  { label: "Backend", value: "backend" },
-  { label: "Databases", value: "databases" },
-  { label: "Cloud & DevOps", value: "cloud" },
+  { label: "Guest Experience", value: "frontend" },
+  { label: "Operations Backend", value: "backend" },
+  { label: "Business Data", value: "databases" },
+  { label: "Cloud & Delivery", value: "cloud" },
 ];
 
 const techStack: Record<TabType, StackItem[]> = {
   frontend: [
     { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
-    { name: "Angular", icon: "/icons/Angular.svg" },
+    { name: "Flutter", icon: "/icons/Flutter.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
     { name: "Tailwind CSS", icon: "/icons/Tailwind CSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
-    { name: "Express.js", icon: "/icons/Express.svg" },
-    { name: "Python", icon: "/icons/Python.svg" },
-    { name: "Django", icon: "/icons/Django.svg" },
     { name: ".NET", icon: "/icons/NET.svg" },
+    { name: "Python", icon: "/icons/Python.svg" },
     { name: "Java", icon: "/icons/Java.svg" },
+    { name: "Django", icon: "/icons/Django.svg" },
+    { name: "Express.js", icon: "/icons/Express.svg" },
   ],
   databases: [
     { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg" },
+    { name: "SQL Server", icon: "/icons/SQLServer.svg" },
     { name: "MySQL", icon: "/icons/MySQL.svg" },
     { name: "MongoDB", icon: "/icons/MongoDB.svg" },
     { name: "Redis", icon: "/icons/Redis.svg" },
-    { name: "SQL Server", icon: "/icons/SQLServer.svg" },
     { name: "Firebase", icon: "/icons/Firebase.svg" },
   ],
   cloud: [
     { name: "AWS", icon: "/icons/AWS.svg" },
     { name: "Azure", icon: "/icons/Azure.svg" },
-    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
     { name: "GitHub Actions", icon: "/icons/GitHub Actions.svg" },
+    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
   ],
 };
 
 const faqs = [
   {
-    q: "Do you build custom travel and hospitality software?",
-    a: "Yes, we build custom travel platforms for hotels, travel agencies, resorts, tour operators, booking businesses and hospitality startups.",
+    q: "What Travel & Hospitality solutions can BrainADZ Live build?",
+    a: "We can plan and build booking platforms, guest portals, hotel operations systems, CRM workflows, ERP modules, service applications, integrations, self-ordering kiosks and digital signage solutions according to the project requirement.",
   },
   {
     q: "Can you build hotel booking software?",
-    a: "Yes, we develop hotel booking systems with room availability, reservations, guest management, payments, invoices and reporting.",
+    a: "Yes. A booking platform can include enquiries, reservation workflows, guest information, invoices and administration features according to the required scope.",
   },
   {
-    q: "Can you create guest self-service portals?",
-    a: "Yes, we can build portals where guests can view bookings, invoices, itineraries, check-in details, support requests and updates.",
+    q: "Can you build a guest self-service portal?",
+    a: "Yes. Web or mobile portals can be planned for booking information, invoices, service requests, guest updates and other selected activities.",
   },
   {
-    q: "Can you build vendor or partner portals?",
-    a: "Yes, we create vendor and partner portals for availability, pricing, bookings, inventory, package updates and communication.",
+    q: "Can CRM Software support hotels and travel businesses?",
+    a: "Yes. CRM workflows can be configured for enquiries, guest records, corporate accounts, follow-ups, sales activities and selected communication processes.",
+  },
+  {
+    q: "Can ERP Software support hospitality operations?",
+    a: "Yes. Relevant ERP modules can be planned for billing, purchases, vendors, inventory, finance, staff and other required operational workflows.",
+  },
+  {
+    q: "Can third-party booking or hospitality systems be integrated?",
+    a: "Yes. Integration can be planned with compatible platforms where suitable APIs, data feeds or technical interfaces are available.",
   },
   {
     q: "Can payment systems be integrated?",
-    a: "Yes, we can integrate payment gateways, invoices, refunds, taxes, receipts and payment history.",
+    a: "Yes. Integration can be planned with compatible payment providers where suitable APIs and technical interfaces are available.",
   },
   {
-    q: "Is the platform secure?",
-    a: "Yes, we use secure authentication, role-based access, protected APIs, cloud backup, audit logs and safe handling of customer data.",
+    q: "Can the platform support multiple properties or locations?",
+    a: "Yes. Property, user, guest and reporting structures can be planned according to the required multi-location operating model.",
   },
   {
-    q: "Can the software support multiple hotels or branches?",
-    a: "Yes, we can build multi-hotel and multi-branch travel platforms with centralized admin access and location-wise reporting.",
+    q: "Can kiosks and digital signage be included in hospitality projects?",
+    a: "Yes. Self-ordering kiosks, digital displays and signage software can be planned for menus, promotions, information and guest communication where relevant.",
   },
   {
-    q: "Can you integrate third-party travel tools?",
-    a: "Yes, we can integrate CRMs, channel managers, booking APIs, maps, payment providers, notification tools and custom APIs.",
-  },
-  {
-    q: "Do you provide support after launch?",
-    a: "Yes, we provide maintenance, updates, bug fixing, monitoring, performance optimization, security updates and new feature development.",
-  },
-  {
-    q: "How long does travel software development take?",
-    a: "Timeline depends on features, integrations, booking flows, user roles and platform complexity. A basic platform can take a few weeks, while advanced systems need more time.",
+    q: "How long does Travel & Hospitality software development take?",
+    a: "The timeline depends on the number of modules, properties, user roles, booking workflows, integrations, data migration requirements and deployment scope. It should be estimated after the required processes are defined.",
   },
 ];
 
 export default function TravelHospitalityIndustryPage() {
   const [activeTab, setActiveTab] = useState<TabType>("frontend");
   const [openFaq, setOpenFaq] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <main className="bg-white text-[#111827]">
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/industries/travel-hospitality/travel-hospitality-hero.jpg"
-          alt="Travel & Hospitality Software Solutions"
+          src="/hero/travel-hospitality.jpg"
+          alt="Travel and Hospitality technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -372,32 +373,38 @@ export default function TravelHospitalityIndustryPage() {
             <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Industries</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Travel & Hospitality</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Travel & Hospitality Software Solutions
+              Technology Solutions for Travel and Hospitality Operations
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Secure, scalable and workflow-driven travel platforms for policy
-              management, claims, customer portals, agent systems and analytics.
+              Custom software, booking experiences, CRM, ERP, guest service
+              applications and in-property digital solutions for travel and
+              hospitality businesses.
             </p>
 
             <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -407,26 +414,37 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
+
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital travel systems built for speed, trust and control.
+              Connect booking journeys with guest and hospitality operations.
             </h2>
+
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps travel businesses build platforms for policy
-              administration, claims processing, customer self-service, agent
-              management, premium billing, documents and analytics.
+              BrainADZ Live helps travel and hospitality businesses plan digital
+              systems for bookings, guests, services, CRM, ERP, integrations
+              and reporting. The final solution is shaped around the properties,
+              services, users and workflows included in the project.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {travelBenefits.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="border-l-2 border-[#3C5B9B] pl-5">
-                  <Icon size={28} className="mb-4 text-[#3C5B9B]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                <div
+                  key={item.title}
+                  className="border-l-2 border-[#193175] pl-5"
+                >
+                  <Icon size={28} className="mb-4 text-[#193175]" />
+
+                  <h3 className="text-[20px] font-light">
+                    {item.title}
+                  </h3>
+
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -441,23 +459,29 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Travel & Hospitality Challenges
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Solving real operational problems in travel and hospitality.
+              Common workflow problems across guest and hospitality operations.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -471,28 +495,36 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Travel & Hospitality Solutions We Build
             </p>
+
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Custom platforms for hotels, travel agencies, tour operators and hospitality businesses.
+              Digital systems for bookings, guests, teams and hospitality
+              operations.
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
-                    <Icon size={27} className="text-[#3C5B9B] transition group-hover:text-white" />
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon
+                      size={27}
+                      className="text-[#193175] transition group-hover:text-white"
+                    />
                   </div>
+
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -507,23 +539,31 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Travel Architecture
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Solution Architecture
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A connected architecture for travel and hospitality operations.
+              Plan connected guest and hospitality operational workflows.
             </h2>
+
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              We plan travel systems with connected modules for guests, bookings, rooms, packages, vendors, payments, support and analytics.
+              The platform structure can connect guests, bookings, service
+              activities, CRM, ERP, integrations and reporting according to the
+              required hospitality workflow.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {architectureItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -533,10 +573,10 @@ export default function TravelHospitalityIndustryPage() {
         </div>
       </section>
 
-      {/* TRAVEL & HOSPITALITY DEVELOPMENT PROCESS */}
+      {/* DEVELOPMENT PROCESS */}
       <section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-14">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -544,21 +584,24 @@ export default function TravelHospitalityIndustryPage() {
           }}
         />
 
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Our Process
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our travel and hospitality software development roadmap
+              Our Travel & Hospitality technology implementation roadmap
             </h2>
 
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              From travel workflow discovery to secure deployment, we follow a clear zig-zag process to build platforms with better booking, guest experience and scalability.
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              A practical process for understanding guest and operational
+              workflows, planning the right solution and deploying the required
+              platform.
             </p>
           </div>
 
+          {/* MOBILE ROADMAP */}
           <div className="lg:hidden">
             <div className="space-y-5">
               {workflow.map((item, index) => {
@@ -570,16 +613,20 @@ export default function TravelHospitalityIndustryPage() {
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#3C5B9B]" />
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <Icon
+                          size={23}
+                          strokeWidth={2.4}
+                          className="text-[#193175]"
+                        />
                       </div>
 
                       <div>
-                        <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                        <span className="text-[13px] font-semibold text-[#193175]">
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
@@ -598,7 +645,8 @@ export default function TravelHospitalityIndustryPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[1060px] lg:block">
+          {/* DESKTOP ZIG-ZAG ROADMAP */}
+          <div className="relative hidden h-265 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 1060"
@@ -616,17 +664,73 @@ export default function TravelHospitalityIndustryPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path
+                    d="M 0 0 L 18 7 L 0 14 z"
+                    fill="#193175"
+                  />
                 </marker>
               </defs>
 
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#travel-zigzag-arrow)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#travel-zigzag-arrow)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#travel-zigzag-arrow)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#travel-zigzag-arrow)" />
-              <path d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 913 L 392 913" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#travel-zigzag-arrow)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#travel-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 343 L 392 343"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#travel-zigzag-arrow)"
+              />
+
+              <path
+                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#travel-zigzag-arrow)"
+              />
+
+              <path
+                d="M 392 613 L 1208 613"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#travel-zigzag-arrow)"
+              />
+
+              <path
+                d="M 1294 613 C 1480 613 1515 720 1515 800 C 1515 888 1440 913 1294 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+
+              <path
+                d="M 1208 913 L 392 913"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#travel-zigzag-arrow)"
+              />
             </svg>
 
             {[
@@ -644,14 +748,21 @@ export default function TravelHospitalityIndustryPage() {
               return (
                 <div
                   key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                  style={{
+                    left: item.left,
+                    top: item.top,
+                  }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon
+                      size={36}
+                      strokeWidth={2.25}
+                      className="text-[#193175]"
+                    />
                   </div>
 
-                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#3C5B9B]">
+                  <span className="mt-5 inline-block text-[13px] font-semibold text-[#193175]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -659,7 +770,7 @@ export default function TravelHospitalityIndustryPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
@@ -673,25 +784,30 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Travel & Hospitality Platforms
             </p>
+
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Types of travel and hospitality solutions we develop
+              Types of Travel & Hospitality solutions we plan and build
             </h2>
+
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
-              We create travel and hospitality systems for hotels, resorts, travel agencies, tour operators, booking companies and hospitality startups.
+              We combine relevant BrainADZ Live software services, CRM, ERP,
+              applications, integrations, kiosks and digital signage according
+              to the hospitality workflow that needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
               <h3 className="max-w-110 text-[30px] font-semibold leading-[1.15] tracking-[-0.8px] text-[#0f5f95] md:text-[34px]">
-                Build Smarter Travel Platforms
+                Plan Your Hospitality Platform
               </h3>
+
               <a
                 href="/contact"
-                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#3C5B9B] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
+                className="mt-8 inline-flex h-13 min-w-52 items-center justify-center rounded-lg bg-[#193175] px-6 text-[15px] font-semibold text-white transition hover:bg-[#2f4a82]"
               >
-                Get Expert Guidance
+                Discuss Your Requirement
               </a>
             </div>
           </div>
@@ -699,15 +815,21 @@ export default function TravelHospitalityIndustryPage() {
           <div>
             {travelTypes.map((item) => {
               const Icon = item.icon;
+
               return (
-                <div key={item.title} className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]">
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={29} className="text-[#3C5B9B]" />
+                <div
+                  key={item.title}
+                  className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
+                >
+                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
+
                   <div>
                     <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
+
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
                       {item.text}
                     </p>
@@ -724,55 +846,76 @@ export default function TravelHospitalityIndustryPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Core Travel Features
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Core Platform Features
               </p>
+
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Essential features for a complete travel and hospitality platform.
+                Practical features for guest and hospitality workflows.
               </h2>
             </div>
+
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build travel platforms with practical features for guests, hotels, agents, vendors, billing teams and admins.
+              Final features are selected according to the hospitality model,
+              properties, user roles and operational processes included in the
+              project.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
             {coreFeatures.map((item) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <CheckCircle2 size={24} className="shrink-0 text-[#3C5B9B]" />
-                <span className="text-[17px] font-light text-black/75">{item}</span>
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <CheckCircle2
+                  size={24}
+                  className="shrink-0 text-[#193175]"
+                />
+
+                <span className="text-[17px] font-light text-black/75">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECURITY */}
+      {/* ACCESS & DATA CONTROLS */}
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Security & Reliability
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Access, Data & Platform Controls
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Reliable travel software for live booking operations.
+              Plan access and data handling around the guest workflow.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              Travel platforms manage sensitive guest, booking and payment data. We focus on secure access, protected APIs, cloud backup, activity logs and payment security.
+              Authentication, permissions, guest records, integrations and
+              recovery requirements should be planned according to the users,
+              information and processes included in the platform.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {securityItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[#3C5B9B]">
-                  {index === 0 && <Users size={20} />}
-                  {index === 1 && <ShieldCheck size={20} />}
-                  {index === 2 && <Cloud size={20} />}
-                  {index === 3 && <Database size={20} />}
-                  {index === 4 && <Bell size={20} />}
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[#193175]">
+                  {index === 0 && <ShieldCheck size={20} />}
+                  {index === 1 && <Users size={20} />}
+                  {index === 2 && <Workflow size={20} />}
+                  {index === 3 && <FileText size={20} />}
+                  {index === 4 && <Cloud size={20} />}
                   {index === 5 && <CreditCard size={20} />}
                 </span>
+
                 <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
                   {item}
                 </p>
@@ -782,38 +925,58 @@ export default function TravelHospitalityIndustryPage() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
+      {/* SOLUTION SCENARIOS */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Case Studies
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Solution Scenarios
               </p>
+
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Travel platforms built for real operational improvement.
+                Examples of Travel & Hospitality workflows we can plan and
+                build.
               </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
-              View Case Studies <ArrowRight size={18} />
+
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
+              View Case Studies
+              <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
-            {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+            {solutionScenarios.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
+
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">
                       {item.title}
                     </h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight
+                        size={18}
+                        className="text-[#193175]"
+                      />
                     </span>
                   </div>
+
                   <p className="text-[14px] font-light leading-[1.65] text-black/60">
                     {item.text}
                   </p>
@@ -828,32 +991,44 @@ export default function TravelHospitalityIndustryPage() {
       <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
+
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering modern travel platforms
+              Technologies selected around the hospitality platform requirement
             </h2>
+
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use modern frontend, backend, database and cloud technologies
-              to build travel platforms with performance, booking reliability and scalability.
+              Technology choices depend on the guest experience, operational
+              workflows, data model, integrations and deployment requirements.
             </p>
           </div>
 
           <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
+
               return (
                 <button
                   key={tab.value}
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                    isActive
+                      ? "text-[#161616]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
+                      isActive
+                        ? "w-full opacity-100"
+                        : "w-0 opacity-0"
+                    }`}
+                  />
                 </button>
               );
             })}
@@ -861,13 +1036,21 @@ export default function TravelHospitalityIndustryPage() {
 
           <div className="mx-auto max-w-315">
             <div className="space-y-5 md:space-y-6">
-              {[techStack[activeTab].slice(0, 4), techStack[activeTab].slice(4, 6)].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
                     <div
                       key={item.name}
                       className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
-                        index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""
+                        index !== row.length - 1
+                          ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
+                          : ""
                       }`}
                     >
                       <div className="flex h-11.5 w-full items-center justify-center">
@@ -882,7 +1065,8 @@ export default function TravelHospitalityIndustryPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -898,22 +1082,30 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build travel platforms around guest experience, automation and growth.
+              Hospitality technology planning based on real guest and
+              operational workflows.
             </h2>
           </div>
+
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -929,24 +1121,38 @@ export default function TravelHospitalityIndustryPage() {
           <div className="relative overflow-hidden bg-[#f6f8fc] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
               src="/industries/travel-hospitality/travel-support.jpg"
-              alt="Travel & Hospitality Support and Maintenance"
+              alt="Travel and Hospitality platform implementation and support"
               className="h-full w-full object-cover"
             />
           </div>
+
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Travel Support & Growth
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Implementation & Support Scope
             </p>
+
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Support that keeps your travel platform reliable.
+              Handover and support aligned with the delivered hospitality
+              platform.
             </h2>
+
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              Travel software needs continuous updates, booking improvements, monitoring and performance optimization. We support your platform after launch.
+              The final implementation can include user guidance, agreed
+              post-launch support and future enhancement planning according to
+              the delivered system and commercial scope.
             </p>
+
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
-                <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-4">
-                  <CheckCircle2 size={23} className="shrink-0 text-[#3C5B9B]" />
+                <div
+                  key={item}
+                  className="flex items-center gap-4 border-b border-black/10 pb-4"
+                >
+                  <CheckCircle2
+                    size={23}
+                    className="shrink-0 text-[#193175]"
+                  />
+
                   <span className="text-[16px] font-light text-black/70">
                     {item}
                   </span>
@@ -961,36 +1167,48 @@ export default function TravelHospitalityIndustryPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about travel and hospitality software development.
+              Common questions about Travel & Hospitality technology solutions.
             </h2>
           </div>
+
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
               <div
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
-                  openFaq === index ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"
+                  openFaq === index
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    : "border-black/10"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
+
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1005,38 +1223,52 @@ export default function TravelHospitalityIndustryPage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Live Travel & Hospitality Software"
+                src="/industries/travel-hospitality/travel-support.jpg"
+                alt="Travel and Hospitality technology solutions by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
               />
             </div>
+
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to build your travel platform?
+                  Planning a Travel or Hospitality technology platform?
                 </h3>
+
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you create a scalable, booking-ready and guest-focused travel technology solution.
+                  Tell us about your guests, bookings, properties, services and
+                  operational workflows so the right solution can be planned.
                 </p>
               </div>
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
+
                 <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

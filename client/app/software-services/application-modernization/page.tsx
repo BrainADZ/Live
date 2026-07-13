@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -49,32 +50,32 @@ type StackItem = {
 const challenges = [
   {
     title: "Slow Performance",
-    text: "Legacy applications often load slowly, respond late and affect user experience.",
+    text: "Older applications can become slower over time as usage, data and business requirements grow.",
     icon: Gauge,
   },
   {
     title: "High Maintenance Cost",
-    text: "Old systems usually need more time, effort and specialized support to maintain.",
+    text: "Outdated code, dependencies and infrastructure can make routine fixes and updates harder to manage.",
     icon: Settings2,
   },
   {
     title: "Security Risks",
-    text: "Outdated systems can expose business data because of old dependencies and weak controls.",
+    text: "Unsupported technologies, outdated dependencies and weak access controls can increase security exposure.",
     icon: LockKeyhole,
   },
   {
     title: "Integration Issues",
-    text: "Legacy apps often struggle to connect with modern APIs, cloud tools and third-party systems.",
+    text: "Older applications may not connect cleanly with modern APIs, cloud services and the tools your teams now use.",
     icon: Network,
   },
   {
     title: "Poor User Experience",
-    text: "Old interfaces slow down teams and make daily workflows harder than they should be.",
+    text: "Outdated interfaces and complicated user flows make everyday tasks slower for employees and customers.",
     icon: MonitorCog,
   },
   {
     title: "Limited Scalability",
-    text: "Traditional systems are difficult to scale when users, data and business needs grow.",
+    text: "Legacy architecture can make it difficult to support more users, larger workloads and new capabilities.",
     icon: SplitSquareVertical,
   },
 ];
@@ -82,32 +83,32 @@ const challenges = [
 const modernizationServices = [
   {
     title: "Replatforming",
-    text: "Move applications to a better platform or cloud environment without changing the full core logic.",
+    text: "Move the application to a more suitable platform or managed environment while keeping most of its core functionality intact.",
     icon: Cloud,
   },
   {
     title: "Refactoring",
-    text: "Improve existing code structure, performance and maintainability without changing business behavior.",
+    text: "Restructure and improve existing code to make the application easier to maintain, optimize and extend.",
     icon: Code2,
   },
   {
     title: "Rehosting",
-    text: "Shift existing applications to cloud infrastructure for better flexibility and easier management.",
+    text: "Move an existing application to modern cloud infrastructure with minimal changes to the application itself.",
     icon: Rocket,
   },
   {
     title: "Rebuilding",
-    text: "Rebuild outdated applications using modern architecture, UI and technology stack.",
+    text: "Rebuild applications or critical modules when the existing technology can no longer support business needs effectively.",
     icon: Layers3,
   },
   {
     title: "API Modernization",
-    text: "Create secure and scalable APIs to connect systems, services, dashboards and third-party tools.",
+    text: "Replace rigid connections with secure APIs that help applications, databases and third-party services work together.",
     icon: Network,
   },
   {
     title: "UI/UX Modernization",
-    text: "Redesign old interfaces into cleaner, faster and more user-friendly digital experiences.",
+    text: "Improve outdated interfaces and user flows so employees and customers can complete tasks more easily.",
     icon: MonitorCog,
   },
 ];
@@ -115,32 +116,32 @@ const modernizationServices = [
 const modernizationProcess = [
   {
     title: "Assess & Analyze",
-    text: "We evaluate your existing app, codebase, infrastructure, risks and modernization opportunities.",
+    text: "We review your current application, codebase, integrations, infrastructure, dependencies and business-critical workflows.",
     icon: Search,
   },
   {
     title: "Modernization Strategy",
-    text: "We define the right approach, migration path, technology stack and delivery roadmap.",
+    text: "We decide what should be retained, refactored, replatformed, migrated or rebuilt and define a practical delivery roadmap.",
     icon: Workflow,
   },
   {
     title: "Architecture Upgrade",
-    text: "We redesign the system architecture for better scalability, security and long-term flexibility.",
+    text: "We improve the application architecture, data flow and integration model where the existing structure limits future changes.",
     icon: Layers3,
   },
   {
     title: "Migration & Refactoring",
-    text: "We migrate data, improve code, modernize modules and reduce disruption during transformation.",
+    text: "We modernize code and modules, move data where required and use phased changes to reduce disruption to live operations.",
     icon: Code2,
   },
   {
     title: "Testing & Optimization",
-    text: "We test performance, security, integrations, user flows and system reliability before release.",
+    text: "We validate business workflows, data accuracy, integrations, performance, security and compatibility before release.",
     icon: ShieldCheck,
   },
   {
     title: "Deploy & Evolve",
-    text: "We deploy the modernized app and continuously improve it with monitoring, updates and support.",
+    text: "We release the modernized application with monitoring, documentation and ongoing support for future improvements.",
     icon: Rocket,
   },
 ];
@@ -198,52 +199,52 @@ const industries = [
 
 const whyChoose = [
   {
-    title: "Zero Downtime Planning",
-    text: "We plan modernization carefully so business operations continue with minimum disruption.",
+    title: "Business Continuity Planning",
+    text: "We plan phased migrations, release steps and fallback options to reduce disruption to ongoing business operations.",
   },
   {
-    title: "Future-Ready Architecture",
-    text: "Your application is redesigned to support future users, features, integrations and scaling needs.",
+    title: "Modernization Around Real Needs",
+    text: "We modernize the parts that genuinely need change instead of forcing a complete rebuild when it is not required.",
   },
   {
-    title: "Cloud-Native Approach",
-    text: "We modernize systems with cloud-ready patterns, automation, monitoring and flexible deployment.",
+    title: "Scalable Architecture",
+    text: "We improve architecture and deployment so the application can support future users, integrations and business growth.",
   },
   {
-    title: "Security-First Delivery",
-    text: "We improve authentication, access control, API protection, data security and deployment practices.",
+    title: "Security Built Into Modernization",
+    text: "We review authentication, permissions, APIs, dependencies and deployment practices as part of the modernization work.",
   },
 ];
 
 const supportItems = [
   {
     title: "Monitoring",
-    text: "Track uptime, performance, errors, infrastructure health and important business systems.",
+    text: "Track uptime, errors, performance and application health so issues can be identified early.",
     icon: Gauge,
   },
   {
     title: "Security Updates",
-    text: "Keep applications protected with dependency updates, access improvements and security patches.",
+    text: "Keep dependencies, access controls and application components updated as technologies and risks change.",
     icon: ShieldCheck,
   },
   {
     title: "Performance Tuning",
-    text: "Improve loading speed, database queries, APIs and overall system efficiency.",
+    text: "Review slow workflows, database queries, APIs and application performance as usage grows.",
     icon: Settings2,
   },
   {
     title: "Feature Enhancements",
-    text: "Add new capabilities, improve workflows and upgrade existing modules as business needs change.",
+    text: "Extend the modernized application with new features, integrations and workflow improvements over time.",
     icon: PackageCheck,
   },
   {
     title: "Infrastructure Scaling",
-    text: "Scale servers, cloud resources and deployment workflows as your users and data grow.",
+    text: "Adjust infrastructure, deployment and application capacity as users, data and workloads increase.",
     icon: RefreshCcw,
   },
   {
     title: "Ongoing Support",
-    text: "Get technical support for improvements, fixes, releases and long-term product stability.",
+    text: "Get ongoing technical support for fixes, releases, compatibility changes and future improvements.",
     icon: LifeBuoy,
   },
 ];
@@ -293,27 +294,27 @@ const techStack: Record<TabType, StackItem[]> = {
 const faqs = [
   {
     q: "What is application modernization?",
-    a: "Application modernization means upgrading legacy applications with better architecture, cloud infrastructure, modern UI, APIs, security and performance improvements.",
+    a: "Application modernization is the process of improving an existing application so it is easier to maintain, integrate, secure, scale and use. Depending on the system, this may involve refactoring, replatforming, cloud migration, API work, UI improvements or rebuilding selected modules.",
   },
   {
     q: "Do you rebuild the whole application or improve the existing one?",
-    a: "It depends on the condition of your current system. We can refactor, replatform, rehost, rebuild or modernize selected modules based on business needs.",
+    a: "It depends on the current application and the problems you need to solve. We may refactor existing code, move the application to a better platform, modernize selected modules or rebuild only the parts that no longer make sense to retain.",
   },
   {
     q: "Will there be downtime during migration?",
-    a: "We plan migration carefully to reduce downtime as much as possible. For critical systems, we can use phased migration and controlled releases.",
+    a: "We plan releases and migrations to reduce disruption. Where the system allows it, phased migration, parallel environments and controlled deployment can help keep critical workflows available during the transition.",
   },
   {
     q: "Can you modernize old ERP or CRM systems?",
-    a: "Yes. We can modernize ERP, CRM, internal portals, dashboards, ecommerce platforms, customer apps and enterprise systems.",
+    a: "Yes. We can modernize existing ERP and CRM platforms, internal tools, business portals, dashboards and connected applications when the current system needs better performance, usability, integration or maintainability.",
   },
   {
     q: "Can you move our application to cloud?",
-    a: "Yes. We help move applications to cloud platforms with improved deployment, monitoring, security and scalability.",
+    a: "Yes. We can assess whether rehosting, replatforming or a deeper architecture change is the right approach before moving the application to a cloud environment.",
   },
   {
     q: "Do you provide support after modernization?",
-    a: "Yes. We provide ongoing monitoring, maintenance, security updates, performance tuning, feature enhancements and technical support.",
+    a: "Yes. We provide ongoing technical support, monitoring, compatibility updates, performance improvements, fixes and future enhancements after the modernized application goes live.",
   },
 ];
 
@@ -327,7 +328,7 @@ export default function AppModernizationPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/services/hero/app-modernization.jpg"
+          src="/hero/app-modernization.jpg"
           alt="App Modernization Services"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -347,22 +348,22 @@ export default function AppModernizationPage() {
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              App Modernization Services
+              Modernize Legacy Applications Without Starting From Scratch
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              We modernize legacy applications with cloud, automation,
-              microservices and secure architecture to improve performance,
-              scalability and long-term business agility.
+              We upgrade existing applications, architecture, integrations and
+              user experience so your systems become easier to maintain, secure,
+              scale and extend as your business evolves.
             </p>
 
             <div className="mt-8">
               <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -376,43 +377,43 @@ export default function AppModernizationPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
 
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Build better. Run smarter. Scale faster.
+              Keep what works. Modernize what holds you back.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              App modernization helps you move from outdated systems to modern,
-              cloud-ready applications that improve speed, security, user
-              experience and business flexibility. We help businesses upgrade
-              existing applications without losing the value of what already
-              works.
+              Application modernization helps you improve existing software
+              without replacing everything unnecessarily. We assess what should
+              stay, what needs to change and which modernization approach will
+              improve maintainability, performance, integration, security and
+              user experience.
             </p>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
             {[
               {
-                title: "Improve Performance",
-                text: "Faster applications, better response time and smoother user experience.",
+                title: "Improve Maintainability",
+                text: "Make the application easier to update, support and extend as requirements change.",
                 icon: Gauge,
               },
               {
-                title: "Enhance Security",
-                text: "Stronger authentication, protected APIs and improved access control.",
+                title: "Strengthen Security",
+                text: "Address outdated dependencies, access controls and other risks in the existing application.",
                 icon: ShieldCheck,
               },
               {
-                title: "Increase Scalability",
-                text: "Cloud-ready architecture that can handle growth and larger workloads.",
+                title: "Improve Performance & Scale",
+                text: "Optimize architecture, data flow and infrastructure for growing users and workloads.",
                 icon: Cloud,
               },
               {
-                title: "Drive Business Agility",
-                text: "Modern systems that adapt faster to new features, markets and integrations.",
+                title: "Support Future Change",
+                text: "Make new features, integrations and business workflow changes easier to introduce.",
                 icon: Rocket,
               },
             ].map((item) => {
@@ -421,12 +422,12 @@ export default function AppModernizationPage() {
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:bg-white hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
                     <Icon
                       size={26}
-                      className="text-[#3C5B9B] transition group-hover:text-white"
+                      className="text-[#193175] transition group-hover:text-white"
                     />
                   </div>
                   <h3 className="text-[21px] font-light tracking-[-0.4px]">
@@ -447,17 +448,18 @@ export default function AppModernizationPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Challenges With Legacy Systems
               </p>
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Outdated applications quietly slow down growth.
+                Legacy applications become harder to change as business needs grow.
               </h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Legacy systems often become expensive to maintain, difficult to
-              integrate and risky to scale. Modernization helps you remove these
-              limits without losing business continuity.
+              The longer an outdated system stays unchanged, the harder it can
+              become to maintain, secure and connect with newer tools. Modernization
+              helps reduce these limitations while protecting important workflows
+              and existing business logic.
             </p>
           </div>
 
@@ -468,12 +470,12 @@ export default function AppModernizationPage() {
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
+                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
                     <Icon
                       size={24}
-                      className="text-[#3C5B9B] transition group-hover:text-white"
+                      className="text-[#193175] transition group-hover:text-white"
                     />
                   </div>
                   <h3 className="text-[22px] font-light tracking-[-0.4px]">
@@ -493,16 +495,16 @@ export default function AppModernizationPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Modernization Services
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Modernize your applications with the right approach.
+              Choose the right modernization path for your existing application.
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
-              Every legacy system is different. We choose the modernization path
-              that fits your current architecture, business priority, budget and
-              long-term roadmap.
+              Not every application needs a full rebuild. We assess the current
+              system and choose a practical approach based on technical condition,
+              business priorities, integration needs and future plans.
             </p>
           </div>
 
@@ -513,10 +515,10 @@ export default function AppModernizationPage() {
               return (
                 <div
                   key={item.title}
-                  className="rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:bg-white hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
+                  className="rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={27} className="text-[#3C5B9B]" />
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={27} className="text-[#193175]" />
                   </div>
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
                     {item.title}
@@ -534,7 +536,7 @@ export default function AppModernizationPage() {
       {/* APP MODERNIZATION PROCESS */}
       <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-8 lg:px-12 lg:py-14">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -542,17 +544,18 @@ export default function AppModernizationPage() {
           }}
         />
 
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Modernization Roadmap
             </p>
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our App Modernization Approach
+              Our Application Modernization Roadmap
             </h2>
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              A proven step-by-step roadmap to transform legacy applications
-              into secure, scalable and future-ready systems.
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              A structured process to understand the current system, choose the
+              right modernization approach and improve it without unnecessary
+              disruption.
             </p>
           </div>
 
@@ -567,15 +570,15 @@ export default function AppModernizationPage() {
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== modernizationProcess.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
                         <Icon
                           size={23}
                           strokeWidth={2.4}
-                          className="text-[#3C5B9B]"
+                          className="text-[#193175]"
                         />
                       </div>
 
@@ -594,7 +597,7 @@ export default function AppModernizationPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
+          <div className="relative hidden h-197.5 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 790"
@@ -612,13 +615,13 @@ export default function AppModernizationPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
               <path
                 d="M 392 43 L 1208 43"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -626,14 +629,14 @@ export default function AppModernizationPage() {
               />
               <path
                 d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
               />
               <path
                 d="M 1208 343 L 392 343"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -641,7 +644,7 @@ export default function AppModernizationPage() {
               />
               <path
                 d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -649,7 +652,7 @@ export default function AppModernizationPage() {
               />
               <path
                 d="M 392 613 L 1208 613"
-                stroke="#3C5B9B"
+                stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
@@ -663,14 +666,14 @@ export default function AppModernizationPage() {
               return (
                 <div
                   key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
                   style={{ left: item.left, top: item.top }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
                     <Icon
                       size={36}
                       strokeWidth={2.25}
-                      className="text-[#3C5B9B]"
+                      className="text-[#193175]"
                     />
                   </div>
 
@@ -678,7 +681,7 @@ export default function AppModernizationPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
@@ -689,10 +692,10 @@ export default function AppModernizationPage() {
       </section>
 
       {/* BEFORE AFTER */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      {/* <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Before vs After Modernization
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
@@ -722,7 +725,7 @@ export default function AppModernizationPage() {
               </div>
             </div>
 
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#3C5B9B] text-[16px] font-semibold text-white shadow-[0_16px_42px_rgba(60,91,155,0.3)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#193175] text-[16px] font-semibold text-white shadow-[0_16px_42px_rgba(60,91,155,0.3)]">
               VS
             </div>
 
@@ -748,30 +751,30 @@ export default function AppModernizationPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* USE CASES */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Modernization Use Cases
               </p>
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                We modernize systems that run daily operations.
+                Modernize the applications your business already depends on.
               </h2>
               <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-                From internal platforms to customer-facing applications, we
-                modernize systems to improve speed, usability, integration and
-                scalability.
+                From ERP and CRM platforms to internal tools and customer-facing
+                applications, we improve the systems that support everyday work and
+                long-term growth.
               </p>
             </div>
 
             <div className="grid gap-x-10 gap-y-7 md:grid-cols-2">
               {useCases.map((item, index) => (
                 <div key={item} className="group flex items-center gap-5 border-b border-black/10 pb-6">
-                  <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10 text-[13px] font-semibold text-[#3C5B9B] transition group-hover:bg-[#3C5B9B] group-hover:text-white">
+                  <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175] transition group-hover:bg-[#193175] group-hover:text-white">
                     0{index + 1}
                   </div>
                   <div>
@@ -779,8 +782,8 @@ export default function AppModernizationPage() {
                       {item}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
-                      Upgrade existing systems into faster and more scalable
-                      digital platforms.
+                      Improve performance, usability, integration and maintainability
+                      without replacing useful business logic unnecessarily.
                     </p>
                   </div>
                 </div>
@@ -795,14 +798,14 @@ export default function AppModernizationPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Case Studies
               </p>
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Practical modernization outcomes for real business systems.
+                Modernization projects built around existing business systems.
               </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
+            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
@@ -818,8 +821,8 @@ export default function AppModernizationPage() {
                     <h3 className="text-[23px] font-light tracking-[-0.5px]">
                       {item.title}
                     </h3>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight size={18} className="text-[#193175]" />
                     </span>
                   </div>
                 </div>
@@ -833,44 +836,56 @@ export default function AppModernizationPage() {
       <IndustriesSection />
 
       {/* CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
-            <div className="hidden w-[32%] shrink-0 md:block">
-              <img src="/about.avif" alt="BrainADZ Live App Modernization" loading="lazy" decoding="async" className="h-full w-full object-cover" />
-            </div>
-            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-              <div className="max-w-145">
-                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to modernize your legacy application?
-                </h3>
-                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live help you upgrade old systems into secure,
-                  scalable and future-ready digital platforms.
-                </p>
-              </div>
-              <a href="/contact" className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5">
-                <span>Enquire Now</span>
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+                  <section className="lazy-section bg-white py-12">
+                                <div className="mx-auto max-w-450 px-8 lg:px-10">
+                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+                                    <div className="hidden w-[32%] shrink-0 md:block">
+                                      <img
+                                        src="/CTA/AppModernization-CTA.jpg"
+                                        alt="BrainADZ Live Application Modernization Services"
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="h-full w-full object-cover"
+                                      />
+                                    </div>
+                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+                                      <div className="max-w-145">
+                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                                          Is your existing application becoming difficult to maintain or scale?
+                                        </h3>
+                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                                          We can assess your current system and define the right path to refactor, replatform, migrate or rebuild only what is necessary.
+                                        </p>
+                                      </div>
+                                      <button
+                          type="button"
+                          onClick={() => setIsPopupOpen(true)}
+                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+                        >
+                                        <span>Enquire Now</span>
+                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                                          →
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </section>
 
       {/* TECH STACK */}
       <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering application modernization
+              Technologies used to modernize existing applications
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use cloud platforms, DevOps tools, databases and modern
-              frameworks to re-architect, migrate and optimize legacy systems.
+              We use modern cloud platforms, deployment tools, databases and
+              frameworks according to the current application and the modernization
+              approach it requires.
             </p>
           </div>
 
@@ -883,11 +898,11 @@ export default function AppModernizationPage() {
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
                 </button>
               );
             })}
@@ -919,7 +934,7 @@ export default function AppModernizationPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -935,22 +950,23 @@ export default function AppModernizationPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We modernize applications with business continuity in mind.
+              Modernization decisions based on your current system—not a one-size-fits-all approach.
             </h2>
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              Our modernization approach focuses on stable migration, better
-              performance, secure architecture and future-ready digital systems.
+              We assess the application first, protect important business workflows
+              and modernize the areas that create the most technical or operational
+              limitations.
             </p>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
@@ -970,17 +986,17 @@ export default function AppModernizationPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Support & Continuous Optimization
               </p>
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Modernization continues after deployment.
+                Keep the modernized application reliable after launch.
               </h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We help your modernized applications stay stable, secure and
-              optimized with monitoring, upgrades, scaling and long-term
-              technical support.
+              After release, we help maintain application stability, resolve
+              compatibility issues and support performance, security and future
+              improvements as your system continues to evolve.
             </p>
           </div>
 
@@ -989,8 +1005,8 @@ export default function AppModernizationPage() {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#3C5B9B]/10">
-                    <Icon size={28} className="text-[#3C5B9B]" />
+                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
+                    <Icon size={28} className="text-[#193175]" />
                   </div>
                   <div>
                     <h3 className="text-[23px] font-light tracking-[-0.4px]">
@@ -1011,15 +1027,15 @@ export default function AppModernizationPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about app modernization.
+              Common questions about application modernization.
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
-              Clear answers about modernization approach, migration, cloud,
-              downtime, security and post-launch support.
+              Understand how we assess existing systems, choose a modernization
+              approach, manage migration and support the application after release.
             </p>
           </div>
 
@@ -1029,8 +1045,8 @@ export default function AppModernizationPage() {
                 key={faq.q}
                 className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
-                    : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#3C5B9B]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"
                 }`}
               >
                 <button
@@ -1040,20 +1056,20 @@ export default function AppModernizationPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="flex items-center gap-4">
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#3C5B9B] text-white" : "bg-[#3C5B9B]/10 text-[#3C5B9B] group-hover:bg-[#3C5B9B] group-hover:text-white"}`}>
+                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"}`}>
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                       {faq.q}
                     </span>
                   </span>
-                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#3C5B9B] text-white" : "bg-[#f6f8fc] text-[#3C5B9B] group-hover:bg-[#3C5B9B]/10"}`}>
+                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}>
                     {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 px-15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 px-15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1065,35 +1081,47 @@ export default function AppModernizationPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75">
-            <div className="hidden w-[32%] shrink-0 md:block">
-              <img src="/about.avif" alt="BrainADZ Live App Modernization" loading="lazy" decoding="async" className="h-full w-full object-cover" />
-            </div>
-            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-              <div className="max-w-145">
-                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Build future-ready applications with BrainADZ Live
-                </h3>
-                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Discover how our team can modernize your applications with
-                  cloud, automation, secure architecture and scalable technology.
-                </p>
-              </div>
-              <a href="/contact" className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5">
-                <span>Enquire Now</span>
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <PopupForm
-  isOpen={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-/>
+      {/* Final CTA */}
+                  <section className="lazy-section bg-white py-12">
+                                <div className="mx-auto max-w-450 px-8 lg:px-10">
+                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+                                    <div className="hidden w-[32%] shrink-0 md:block">
+                                      <img
+                                        src="/CTA/AppModernization-CTA.jpg"
+                                        alt="BrainADZ Live Application Modernization Services"
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="h-full w-full object-cover"
+                                      />
+                                    </div>
+                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+                                      <div className="max-w-145">
+                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                                          Ready to modernize the application your business already relies on?
+                                        </h3>
+                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                                          Let BrainADZ Live help you improve your existing application with the right mix of refactoring, migration, integration and rebuilding.
+                                        </p>
+                                      </div>
+                                      <button
+                          type="button"
+                          onClick={() => setIsPopupOpen(true)}
+                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+                        >
+                                        <span>Enquire Now</span>
+                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                                          →
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </section>
+                        
+                              <PopupForm
+                                isOpen={isPopupOpen}
+                                onClose={() => setIsPopupOpen(false)}
+                              />
     </main>
   );
 }

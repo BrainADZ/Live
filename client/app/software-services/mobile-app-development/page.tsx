@@ -42,33 +42,33 @@ type StackItem = {
 
 const processSteps = [
   {
-    title: "App Discovery",
-    text: "We understand your idea, target users, features, business goals and app flow before planning the build.",
+    title: "Product & User Discovery",
+    text: "We understand your app idea, target users, business workflow, required features, integrations and success goals before planning the build.",
     icon: Search,
   },
   {
-    title: "UI/UX Wireframing",
-    text: "We create clean mobile-first screens, user journeys and clickable layouts for a smooth app experience.",
+    title: "App Flow & UI/UX Planning",
+    text: "We map user journeys, screens, navigation, forms and key actions so the app feels simple and practical on mobile.",
     icon: Smartphone,
   },
   {
-    title: "App Architecture",
-    text: "We plan the right structure for frontend, backend, database, APIs, security and future scalability.",
+    title: "Backend & App Architecture",
+    text: "We plan the app structure, APIs, database, admin panel, security, notifications and future scalability.",
     icon: Workflow,
   },
   {
-    title: "App Development",
-    text: "We build Android, iOS or cross-platform apps with clean code, reusable components and stable features.",
+    title: "Mobile App Development",
+    text: "We build Android, iOS or cross-platform apps with clean code, stable features and connected backend functionality.",
     icon: Code2,
   },
   {
-    title: "Testing & QA",
-    text: "We test performance, crashes, usability, security, devices and real user scenarios before launch.",
+    title: "Testing & Quality Check",
+    text: "We test devices, performance, crashes, APIs, security, usability and real user scenarios before release.",
     icon: ShieldCheck,
   },
   {
-    title: "Launch & Support",
-    text: "We help with deployment, store submission, updates, bug fixing and continuous app improvements.",
+    title: "Launch, Updates & Support",
+    text: "We support store submission, deployment, bug fixes, updates and feature improvements after launch.",
     icon: Rocket,
   },
 ];
@@ -83,56 +83,56 @@ const processLayout = [
 ];
 
 const appSolutions = [
-  { title: "Ecommerce Apps", icon: ShoppingCart },
-  { title: "Booking Apps", icon: Bell },
-  { title: "Delivery Apps", icon: Truck },
-  { title: "Learning Apps", icon: GraduationCap },
-  { title: "Healthcare Apps", icon: HeartPulse },
-  { title: "Fintech Apps", icon: WalletCards },
-  { title: "Logistics Apps", icon: MapPinned },
-  { title: "Enterprise Apps", icon: Users },
+  { title: "Ecommerce & Shopping Apps", icon: ShoppingCart },
+  { title: "Booking & Appointment Apps", icon: Bell },
+  { title: "Delivery & Tracking Apps", icon: Truck },
+  { title: "Learning & Training Apps", icon: GraduationCap },
+  { title: "Healthcare Service Apps", icon: HeartPulse },
+  { title: "Finance & Payment Apps", icon: WalletCards },
+  { title: "Logistics & Field Apps", icon: MapPinned },
+  { title: "Internal Business Apps", icon: Users },
 ];
 
 const appTypes = [
   {
     title: "Android App Development",
-    text: "Native and scalable Android apps for smartphones, tablets and business users.",
+    text: "Native Android apps planned for smooth performance, practical user flows and Play Store readiness.",
     icon: "/icons/Android.svg",
   },
   {
     title: "iOS App Development",
-    text: "Smooth iPhone and iPad apps designed for Apple users and App Store launch.",
+    text: "iPhone and iPad apps with clean interfaces, secure app logic and App Store preparation.",
     icon: "/icons/Swift.svg",
   },
   {
     title: "Flutter App Development",
-    text: "Cross-platform apps with one codebase for Android and iOS.",
+    text: "Cross-platform mobile apps for Android and iOS using one maintainable codebase.",
     icon: "/icons/Flutter.svg",
   },
   {
     title: "React Native Apps",
-    text: "Fast mobile apps using reusable components and modern app architecture.",
+    text: "Flexible mobile apps with reusable components, faster development and connected backend features.",
     icon: "/icons/React.svg",
   },
   {
     title: "Progressive Web Apps",
-    text: "App-like web experiences that work smoothly across devices and browsers.",
+    text: "App-like web experiences that work across devices and can support faster access for users.",
     icon: "/icons/Next.js.svg",
   },
   {
     title: "Enterprise Mobile Apps",
-    text: "Secure mobile apps for teams, workflows, reporting and internal operations.",
+    text: "Secure mobile apps for teams, approvals, reporting, field activity and internal business workflows.",
     icon: "/icons/NET.svg",
   },
 ];
 
 const caseStudies = [
   {
-    title: "Ecommerce Shopping App",
+    title: "Ecommerce Mobile App",
     image: "/services/hero/ecommerce-app.jpg",
   },
   {
-    title: "Healthcare Appointment App",
+    title: "Healthcare Booking App",
     image: "/services/hero/healthcare-app.jpg",
   },
   {
@@ -140,54 +140,54 @@ const caseStudies = [
     image: "/services/hero/delivery-app.jpg",
   },
   {
-    title: "Learning Management App",
+    title: "Learning Platform App",
     image: "/services/hero/learning-app.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Mobile-First UX",
-    text: "Every screen is planned for simple navigation, fast actions and better user engagement.",
+    title: "User-Focused Mobile UX",
+    text: "We plan app screens around simple navigation, quick actions and practical user journeys.",
   },
   {
-    title: "Scalable Backend",
-    text: "Your app is backed by secure APIs, clean database planning and growth-ready architecture.",
+    title: "Backend + API Capability",
+    text: "Your app can be connected with secure APIs, databases, admin panels and third-party tools.",
   },
   {
-    title: "Secure App Flow",
-    text: "We focus on secure login, protected data, payments, permissions and API communication.",
+    title: "Security in App Workflows",
+    text: "We plan secure login, user roles, data protection, payment flow and API communication from the start.",
   },
   {
-    title: "Store-Ready Delivery",
-    text: "We prepare your app for smooth deployment, testing and app store submission.",
+    title: "Launch & Improvement Support",
+    text: "We support testing, deployment, store submission and future updates after the first release.",
   },
 ];
 
 const supportItems = [
   {
-    title: "Crash Fixing",
-    text: "Quick resolution of app crashes, bugs and device-specific issues.",
+    title: "Bug & Crash Fixing",
+    text: "Resolve app crashes, bugs, broken flows and device-specific issues after release.",
     icon: Bug,
   },
   {
-    title: "OS Updates",
-    text: "Keep your app compatible with latest Android and iOS versions.",
+    title: "OS Compatibility Updates",
+    text: "Keep the app aligned with Android, iOS and device-level changes over time.",
     icon: MonitorSmartphone,
   },
   {
     title: "Performance Monitoring",
-    text: "Monitor speed, loading, uptime and user experience.",
+    text: "Review loading speed, API response, app stability and user experience issues.",
     icon: Gauge,
   },
   {
     title: "Feature Enhancements",
-    text: "Add new features, improve existing flows and grow your app.",
+    text: "Add new features, improve user flows and extend app functionality as your business grows.",
     icon: PackageCheck,
   },
   {
-    title: "Ongoing Support",
-    text: "Technical support for updates, improvements and maintenance.",
+    title: "Ongoing Technical Support",
+    text: "Support updates, maintenance, backend changes and continuous product improvements.",
     icon: LifeBuoy,
   },
 ];
@@ -228,27 +228,27 @@ const techStack: Record<TabType, StackItem[]> = {
 const faqs = [
   {
     q: "Do you develop both Android and iOS apps?",
-    a: "Yes. We build Android apps, iOS apps and cross-platform mobile apps depending on your business goals and budget.",
+    a: "Yes. We build Android apps, iOS apps and cross-platform mobile apps depending on your users, features, budget and long-term product plan.",
   },
   {
-    q: "Which technology is best for my mobile app?",
-    a: "It depends on the app features, timeline, performance needs and future scaling plan. We suggest the right technology after understanding your project.",
+    q: "Which technology should I choose for my mobile app?",
+    a: "The right technology depends on performance needs, timeline, budget, integrations and future scaling. We suggest the best approach after understanding your app requirements.",
   },
   {
-    q: "Can you build the backend and APIs also?",
-    a: "Yes. We build secure backend systems, databases, admin panels and APIs required to run the mobile app smoothly.",
+    q: "Can you build the backend, APIs and admin panel also?",
+    a: "Yes. We can build the backend, database, APIs, admin dashboard, user management and integrations required to run the mobile app.",
   },
   {
-    q: "Do you help with app store publishing?",
-    a: "Yes. We help prepare the app for Play Store and App Store submission with testing, build setup and required assets.",
+    q: "Do you help with Play Store and App Store publishing?",
+    a: "Yes. We help prepare builds, testing, store assets and submission steps for Play Store and App Store launch.",
   },
   {
-    q: "Can you improve or rebuild my existing app?",
-    a: "Yes. We can redesign UI, fix bugs, improve performance, add features and upgrade your existing mobile app.",
+    q: "Can you improve or rebuild my existing mobile app?",
+    a: "Yes. We can improve UI/UX, fix bugs, optimize performance, add features, upgrade technology and rebuild app flows where needed.",
   },
   {
     q: "Do you provide maintenance after launch?",
-    a: "Yes. We provide app maintenance, crash fixing, OS updates, performance improvements and feature upgrades.",
+    a: "Yes. We provide app maintenance, bug fixing, OS compatibility updates, backend support, performance improvements and feature enhancements.",
   },
 ];
 
@@ -262,7 +262,7 @@ export default function MobileAppDevelopmentPage() {
       {/* HERO SECTION */}
 <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
   <img
-    src="/services/hero/mobile.jpeg"
+    src="/hero/app-development.jpg"
     alt="Mobile App Development Services"
     className="absolute inset-0 h-full w-full object-cover"
   />
@@ -282,21 +282,22 @@ export default function MobileAppDevelopmentPage() {
 
     <div className="mt-12 max-w-205 md:mt-14">
       <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-        Mobile App Development Services
+        Custom Mobile App Development Services
       </h1>
     </div>
 
     <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
       <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-        Powerful, secure and user-friendly mobile apps for iOS, Android and
-        cross-platform experiences built around your business goals.
+        We design and develop Android, iOS and cross-platform mobile apps
+        with clean UI, secure backend systems and workflows built around your
+        business goals.
       </p>
 
       <div className="mt-8">
         <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -310,32 +311,33 @@ export default function MobileAppDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
 
             <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Build apps that deliver real impact, not just downloads.
+              Build mobile apps that solve real user and business problems.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              From idea to app store, we design and develop mobile applications
-              that are fast, secure and built for growth. Whether it is a
-              customer-facing app or an internal business app, we create
-              solutions that solve real problems.
+              BrainADZ Live builds mobile applications for customer engagement,
+              internal operations, bookings, payments, delivery, reporting and
+              connected business workflows. We focus on the full product flow:
+              mobile UI, backend, APIs, admin panels, security and post-launch
+              improvements.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {[
               {
-                title: "Native & Cross-Platform Apps",
-                text: "High-performance apps for iOS, Android and cross-platform users.",
+                title: "Android, iOS & Cross-Platform Apps",
+                text: "Build mobile apps using the technology that fits your users, budget and product roadmap.",
                 icon: Smartphone,
               },
               {
-                title: "Backend + API Connected Apps",
-                text: "Secure apps connected with dashboards, databases and powerful APIs.",
+                title: "Backend, APIs & Admin Panels",
+                text: "Connect your app with secure databases, dashboards, notifications and third-party systems.",
                 icon: Code2,
               },
             ].map((item) => {
@@ -346,8 +348,8 @@ export default function MobileAppDevelopmentPage() {
                   key={item.title}
                   className="rounded-[28px] border border-black/10 bg-[#f8faff] p-8 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={28} className="text-[#3C5B9B]" />
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={28} className="text-[#193175]" />
                   </div>
 
                   <h3 className="text-[22px] font-light tracking-[-0.4px]">
@@ -377,17 +379,18 @@ export default function MobileAppDevelopmentPage() {
 
   <div className="mx-auto max-w-[1500px]">
     <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-        Development Process
+      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+        Mobile App Development Process
       </p>
 
       <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-        Our Mobile App Development Process Roadmap
+        From idea to launch, our mobile app development roadmap
       </h2>
 
       <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-        From idea validation to app launch, we follow a clear connected process
-        to build secure, scalable and user-friendly mobile applications.
+        We move from product discovery and user-flow planning to development,
+        testing, store launch and continuous improvement so your app is built
+        with clarity from the start.
       </p>
     </div>
 
@@ -402,12 +405,12 @@ export default function MobileAppDevelopmentPage() {
               className="group relative rounded-[26px] border border-black/10 bg-white p-6"
             >
               {index !== processSteps.length - 1 && (
-                <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
               )}
 
               <div className="relative z-10 flex gap-5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                  <Icon size={23} strokeWidth={2.4} className="text-[#3C5B9B]" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                  <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
                 </div>
 
                 <div>
@@ -444,13 +447,13 @@ export default function MobileAppDevelopmentPage() {
             refX="16"
             refY="7"
           >
-            <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+            <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
           </marker>
         </defs>
 
         <path
           d="M 392 43 L 1208 43"
-          stroke="#3C5B9B"
+          stroke="#193175"
           strokeDasharray="10 12"
           strokeLinecap="round"
           strokeWidth="2.5"
@@ -458,14 +461,14 @@ export default function MobileAppDevelopmentPage() {
         />
         <path
           d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
-          stroke="#3C5B9B"
+          stroke="#193175"
           strokeDasharray="10 12"
           strokeLinecap="round"
           strokeWidth="2.5"
         />
         <path
           d="M 1208 343 L 392 343"
-          stroke="#3C5B9B"
+          stroke="#193175"
           strokeDasharray="10 12"
           strokeLinecap="round"
           strokeWidth="2.5"
@@ -473,7 +476,7 @@ export default function MobileAppDevelopmentPage() {
         />
         <path
           d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
-          stroke="#3C5B9B"
+          stroke="#193175"
           strokeDasharray="10 12"
           strokeLinecap="round"
           strokeWidth="2.5"
@@ -481,7 +484,7 @@ export default function MobileAppDevelopmentPage() {
         />
         <path
           d="M 392 613 L 1208 613"
-          stroke="#3C5B9B"
+          stroke="#193175"
           strokeDasharray="10 12"
           strokeLinecap="round"
           strokeWidth="2.5"
@@ -498,8 +501,8 @@ export default function MobileAppDevelopmentPage() {
             className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
             style={{ left: item.left, top: item.top }}
           >
-            <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-              <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+            <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+              <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
             </div>
 
             <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
@@ -521,19 +524,19 @@ export default function MobileAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Mobile App Solutions
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Apps for different business needs.
+                Mobile apps for customer-facing and internal business use.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build apps for customer engagement, digital sales, internal
-              workflows, bookings, payments, learning, delivery and operational
-              visibility.
+              We build mobile apps that support digital sales, bookings,
+              service requests, field teams, payments, delivery tracking,
+              learning experiences and internal business workflows.
             </p>
           </div>
 
@@ -544,12 +547,12 @@ export default function MobileAppDevelopmentPage() {
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[26px] border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[26px] border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
+                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
                     <Icon
                       size={24}
-                      className="text-[#3C5B9B] transition group-hover:text-white"
+                      className="text-[#193175] transition group-hover:text-white"
                     />
                   </div>
 
@@ -567,12 +570,12 @@ export default function MobileAppDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               App Types We Build
             </p>
 
             <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Mobile applications built with the right technology.
+              Choose the right app approach for your users and product goals.
             </h2>
           </div>
 
@@ -582,7 +585,7 @@ export default function MobileAppDevelopmentPage() {
                 key={item.title}
                 className="rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#193175]/10">
                   <img
                     src={item.icon}
                     alt={item.title}
@@ -611,18 +614,18 @@ export default function MobileAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Case Studies
               </p>
 
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                App ideas designed for real business use.
+                Mobile app solutions designed around real business workflows.
               </h2>
             </div>
 
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
             >
               View Case Studies <ArrowRight size={18} />
             </Link>
@@ -648,8 +651,8 @@ export default function MobileAppDevelopmentPage() {
                       {item.title}
                     </h3>
 
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight size={18} className="text-[#193175]" />
                     </span>
                   </div>
                 </div>
@@ -664,10 +667,10 @@ export default function MobileAppDevelopmentPage() {
       {/* CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
+                src="/CTA/App-CTA.jpg"
                 alt="BrainADZ Live Mobile App Development"
                 className="h-full w-full object-cover"
               />
@@ -676,25 +679,26 @@ export default function MobileAppDevelopmentPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Have an app idea for your business?
+                  Have a mobile app idea for your business?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live turn your idea into a powerful mobile
-                  application with clean design, secure backend and smooth user
-                  experience.
+                  Let BrainADZ Live turn your idea into a mobile application
+                  with clean design, secure backend, practical features and
+                  smooth user experience.
                 </p>
               </div>
 
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition hover:bg-white hover:text-[#3C5B9B]"
-              >
+              <button
+  type="button"
+  onClick={() => setIsPopupOpen(true)}
+  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+>
                 <span>Enquire Now</span>
                 <span className="text-[26px] transition-transform group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -704,18 +708,18 @@ export default function MobileAppDevelopmentPage() {
 <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
   <div className="mx-auto max-w-450">
     <div className="mb-14 text-center">
-      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
         Tech Stack
       </p>
 
       <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-        Technologies powering modern mobile app development
+        Technologies we use for mobile app development
       </h2>
 
       <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
         We use the right mobile technologies, frameworks and backend tools to
-        build secure, scalable and high-performing apps for Android, iOS and
-        cross-platform experiences.
+        build Android, iOS and cross-platform apps with secure APIs, databases
+        and admin systems.
       </p>
     </div>
 
@@ -731,13 +735,13 @@ export default function MobileAppDevelopmentPage() {
             className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
               isActive
                 ? "text-[#161616]"
-                : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                : "text-[#8d8d8d] hover:text-[#193175]"
             }`}
           >
             {tab.label}
 
             <span
-              className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${
+              className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
                 isActive ? "w-full opacity-100" : "w-0 opacity-0"
               }`}
             />
@@ -778,7 +782,7 @@ export default function MobileAppDevelopmentPage() {
                   />
                 </div>
 
-                <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                   {item.name}
                 </h3>
               </div>
@@ -794,19 +798,19 @@ export default function MobileAppDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build apps around users, performance and business growth.
+              We build mobile apps around users, business workflows and long-term product growth.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
 
@@ -828,19 +832,19 @@ export default function MobileAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 App Maintenance & Growth
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Support that keeps your app stable after launch.
+                Support that keeps your mobile app stable after launch.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Mobile apps need regular care. We support your app with updates,
-              monitoring, issue fixing, performance improvements and new feature
-              development.
+              Mobile apps need regular updates after release. We support your
+              app with issue fixing, OS compatibility, performance improvements,
+              backend changes and new feature development.
             </p>
           </div>
 
@@ -853,8 +857,8 @@ export default function MobileAppDevelopmentPage() {
                   key={item.title}
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#3C5B9B]/10">
-                    <Icon size={28} className="text-[#3C5B9B]" />
+                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
+                    <Icon size={28} className="text-[#193175]" />
                   </div>
 
                   <div>
@@ -877,12 +881,12 @@ export default function MobileAppDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about mobile app development.
+              Common questions about custom mobile app development.
             </h2>
           </div>
 
@@ -892,7 +896,7 @@ export default function MobileAppDevelopmentPage() {
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10"
                 }`}
               >
@@ -905,7 +909,7 @@ export default function MobileAppDevelopmentPage() {
                     {faq.q}
                   </span>
 
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
                     {openFaq === index ? (
                       <Minus size={18} />
                     ) : (
@@ -915,7 +919,7 @@ export default function MobileAppDevelopmentPage() {
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -927,39 +931,47 @@ export default function MobileAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden bg-[#3C5B9B] md:min-h-75">
-            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-              <div className="max-w-150">
-                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to launch your mobile app?
-                </h3>
-
-                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Partner with BrainADZ Live and bring your mobile app idea to
-                  life with a reliable development team.
-                </p>
-              </div>
-
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition hover:bg-white hover:text-[#3C5B9B]"
-              >
-                <span>Let’s Get Started</span>
-                <span className="text-[26px] transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <PopupForm
-  isOpen={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-/>
+      {/* Final CTA */}
+                  <section className="lazy-section bg-white py-12">
+                                <div className="mx-auto max-w-450 px-8 lg:px-10">
+                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+                                    <div className="hidden w-[32%] shrink-0 md:block">
+                                      <img
+                                        src="/CTA/App-CTA.jpg"
+                                        alt="BrainADZ Live Mobile App Development Services"
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="h-full w-full object-cover"
+                                      />
+                                    </div>
+                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+                                      <div className="max-w-145">
+                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                                          Ready to build a mobile app your users can rely on?
+                                        </h3>
+                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                                          Let BrainADZ Live design and develop a mobile app with the right user flow, secure backend, integrations and long-term support.
+                                        </p>
+                                      </div>
+                                      <button
+                          type="button"
+                          onClick={() => setIsPopupOpen(true)}
+                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+                        >
+                                        <span>Enquire Now</span>
+                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                                          →
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </section>
+                        
+                              <PopupForm
+                                isOpen={isPopupOpen}
+                                onClose={() => setIsPopupOpen(false)}
+                              />
     </main>
   );
 }

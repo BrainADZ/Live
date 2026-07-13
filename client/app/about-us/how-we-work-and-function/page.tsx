@@ -21,68 +21,68 @@ import { useState } from "react";
 const processSteps = [
   {
     number: "01",
-    title: "Understanding Your Business",
-    desc: "We begin by understanding your goals, audience, current systems, operational gaps, and the outcomes your business wants to achieve.",
+    title: "Discovery & Requirement Mapping",
+    desc: "We understand the business problem, users, current process, existing systems, constraints and the outcome the project needs to support.",
     icon: ClipboardCheck,
   },
   {
     number: "02",
-    title: "Strategy & Planning",
-    desc: "Our team creates a clear execution plan with scope, timeline, technology direction, user flow, and measurable delivery milestones.",
+    title: "Scope & Delivery Planning",
+    desc: "We define the project scope, priorities, responsibilities, technical direction, delivery stages and the information needed before development begins.",
     icon: Layers3,
   },
   {
     number: "03",
-    title: "Design & Experience Mapping",
-    desc: "We design user journeys, wireframes, interfaces, and experience flows that are simple, practical, and aligned with real users.",
+    title: "UX & Workflow Design",
+    desc: "We map user journeys, screens, permissions and operational flows so the product is clear for users and practical for the team that will manage it.",
     icon: Users,
   },
   {
     number: "04",
     title: "Development & Integration",
-    desc: "Our engineering team builds secure, scalable, and performance-focused systems using modern development practices.",
+    desc: "We build the agreed modules, interfaces, APIs and integrations in controlled development cycles with regular internal review.",
     icon: Code2,
   },
   {
     number: "05",
-    title: "Testing & Quality Checks",
-    desc: "Every feature goes through functionality, performance, security, device, and user experience testing before launch.",
+    title: "Validation & Quality Checks",
+    desc: "We test core workflows, permissions, integrations, responsive behaviour and agreed business scenarios before release.",
     icon: ShieldCheck,
   },
   {
     number: "06",
-    title: "Launch & Continuous Support",
-    desc: "After launch, we help with monitoring, maintenance, improvements, upgrades, and long-term technical support.",
+    title: "Deployment & Improvement",
+    desc: "We prepare the release, support handover and continue with fixes, updates or new requirements based on the agreed support scope.",
     icon: Rocket,
   },
 ];
 
 const functionCards = [
   {
-    title: "Business & Consulting Team",
-    desc: "Converts your business requirement into a clear digital roadmap.",
+    title: "Business & Discovery Team",
+    desc: "Clarifies the business problem, users, priorities, process gaps and the expected project outcome.",
   },
   {
-    title: "UI/UX & Product Team",
-    desc: "Creates simple, modern, and user-friendly product experiences.",
+    title: "Product & Design Team",
+    desc: "Maps user flows, screens, interactions and design decisions before and during development.",
   },
   {
-    title: "Development Team",
-    desc: "Builds reliable software, apps, platforms, integrations, and digital products.",
+    title: "Engineering & Integration Team",
+    desc: "Builds the application, APIs, data flows and system connections defined in the project scope.",
   },
   {
-    title: "QA & Support Team",
-    desc: "Tests, improves, maintains, and supports your solution after delivery.",
+    title: "QA, Deployment & Support Team",
+    desc: "Validates agreed workflows, supports release and handles post-launch work within the support plan.",
   },
 ];
 
 const principles = [
-  "Clear communication at every stage",
-  "Transparent planning and timelines",
-  "Scalable and future-ready architecture",
-  "Security-first development approach",
-  "Practical design focused on real users",
-  "Long-term support after project launch",
+  "Understand the problem before defining the solution",
+  "Agree scope, priorities and responsibilities before build",
+  "Review work at clear project checkpoints",
+  "Design permissions and data access around real roles",
+  "Test the workflows the product is expected to support",
+  "Document handover, release and agreed support responsibilities",
 ];
 
 export default function HowWeWorkPage() {
@@ -92,7 +92,7 @@ export default function HowWeWorkPage() {
   {/* HERO SECTION */}
   <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
     <img
-      src="/about/HwwF.jpeg"
+      src="/hero/work-function.jpg"
       alt="Page Hero"
       className="absolute inset-0 h-full w-full object-cover"
     />
@@ -117,7 +117,7 @@ export default function HowWeWorkPage() {
         data-aos-delay="100"
       >
         <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-          How We Work And Function
+          How We Plan, Build and Deliver Projects
         </h1>
       </div>
 
@@ -127,16 +127,15 @@ export default function HowWeWorkPage() {
         data-aos-delay="200"
       >
         <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-          We combine strategy, design, engineering, testing, and support to
-            deliver software, platforms, and digital signage solutions with
-            clarity and control.
+          Our teams move from discovery and scope planning to design,
+            development, validation, deployment and agreed post-launch support.
         </p>
 
         <div className="mt-8">
           <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -150,42 +149,42 @@ export default function HowWeWorkPage() {
       <section className="px-5 py-22 md:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-450 grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
-              Our Working System
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+              Our Working Approach
             </p>
 
             <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              We work with clarity, process, and responsibility
+              Every project starts with the problem, not the technology
             </h2>
           </div>
 
           <div>
             <p className="text-[18px] font-light leading-[1.8] text-[#525252] md:text-[20px]">
-              At BrainADZLive, every project starts with understanding the
-              client’s business problem, not just the technical requirement. Our
-              team works across research, planning, design, development, testing,
-              deployment, and support so the final solution is useful,
-              scalable, and easy to manage.
+              At BrainADZ Live, we first understand what needs to change,
+              who will use the solution and how the current process works. From
+              there, we define the scope and move through design, development,
+              validation, deployment and agreed post-launch work with clear
+              responsibilities at each stage.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-5">
               <div className="border border-[#e5e5e5] p-6">
-                <LineChart className="mb-5 text-[#3c5b9b]" size={30} />
+                <LineChart className="mb-5 text-[#193175]" size={30} />
                 <h3 className="text-[32px] font-light text-[#161616]">
-                  360°
+                  6
                 </h3>
                 <p className="mt-2 text-[15px] font-light leading-[1.6] text-[#525252]">
-                  End-to-end project approach
+                  Defined project delivery stages
                 </p>
               </div>
 
               <div className="border border-[#e5e5e5] p-6">
-                <Headphones className="mb-5 text-[#3c5b9b]" size={30} />
+                <Headphones className="mb-5 text-[#193175]" size={30} />
                 <h3 className="text-[32px] font-light text-[#161616]">
-                  24/7
+                  4
                 </h3>
                 <p className="mt-2 text-[15px] font-light leading-[1.6] text-[#525252]">
-                  Support-focused delivery mindset
+                  Cross-functional team functions
                 </p>
               </div>
             </div>
@@ -197,12 +196,12 @@ export default function HowWeWorkPage() {
       <section className="bg-[#f7f8fb] px-5 py-22 md:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-450">
           <div className="mb-16 max-w-220">
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Our Process
             </p>
 
             <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              From first discussion to final launch, every stage has a purpose
+              A six-stage process from requirement mapping to release
             </h2>
           </div>
 
@@ -213,14 +212,14 @@ export default function HowWeWorkPage() {
               return (
                 <div
                   key={step.number}
-                  className="group border border-[#e3e6ec] bg-white p-8 transition hover:-translate-y-1 hover:border-[#3c5b9b] hover:shadow-[0_22px_60px_rgba(0,0,0,0.08)]"
+                  className="group border border-[#e3e6ec] bg-white p-8 transition hover:-translate-y-1 hover:border-[#193175] hover:shadow-[0_22px_60px_rgba(0,0,0,0.08)]"
                 >
                   <div className="mb-10 flex items-center justify-between">
-                    <span className="text-[42px] font-light tracking-[-1.5px] text-[#d7dce8] transition group-hover:text-[#3c5b9b]">
+                    <span className="text-[42px] font-light tracking-[-1.5px] text-[#d7dce8] transition group-hover:text-[#193175]">
                       {step.number}
                     </span>
 
-                    <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[#eef3ff] text-[#3c5b9b]">
+                    <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[#eef3ff] text-[#193175]">
                       <Icon size={24} strokeWidth={1.5} />
                     </div>
                   </div>
@@ -251,26 +250,26 @@ export default function HowWeWorkPage() {
 
             <div className="absolute bottom-6 left-6 right-6 bg-white/85 p-6 backdrop-blur-xl">
               <p className="text-[15px] font-light leading-[1.7] text-[#525252]">
-                Different teams work together with one shared goal: building
-                reliable digital solutions that support your business growth.
+                Discovery, design, engineering and QA stay connected so project
+                decisions do not get lost between separate teams.
               </p>
             </div>
           </div>
 
           <div>
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Team Function
             </p>
 
             <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              Our teams work together, not separately
+              Different functions stay connected through the project
             </h2>
 
             <div className="mt-10 space-y-5">
               {functionCards.map((item) => (
                 <div
                   key={item.title}
-                  className="border-l-2 border-[#3c5b9b] bg-[#f7f8fb] px-6 py-5"
+                  className="border-l-2 border-[#193175] bg-[#f7f8fb] px-6 py-5"
                 >
                   <h3 className="text-[21px] font-normal tracking-[-0.4px] text-[#161616]">
                     {item.title}
@@ -295,12 +294,12 @@ export default function HowWeWorkPage() {
             </p>
 
             <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] md:text-[52px]">
-              The standards we follow in every project
+              The working principles behind our delivery process
             </h2>
 
             <p className="mt-7 text-[18px] font-light leading-[1.8] text-white/65">
-              Our process is built to reduce confusion, improve quality, and
-              keep every stakeholder aligned from start to finish.
+              These principles help us keep decisions visible, responsibilities
+              clear and project work connected to the agreed business need.
             </p>
           </div>
 
@@ -329,47 +328,46 @@ export default function HowWeWorkPage() {
       <section className="px-5 py-22 md:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-450">
           <div className="mb-14 max-w-230">
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Operating Model
             </p>
 
             <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              A balanced system between business clarity, technology, and
-              support
+              A simple operating model: understand, build and improve
             </h2>
           </div>
 
           <div className="grid grid-cols-1 border border-[#e5e5e5] lg:grid-cols-3">
             <div className="border-b border-[#e5e5e5] p-8 lg:border-b-0 lg:border-r">
-              <Database className="mb-8 text-[#3c5b9b]" size={34} />
+              <Database className="mb-8 text-[#193175]" size={34} />
               <h3 className="mb-4 text-[25px] font-normal tracking-[-0.5px]">
-                Plan
+                Understand
               </h3>
               <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
-                We define the business goal, project scope, technical
-                requirements, timeline, and success metrics.
+                We clarify the problem, users, current workflow, priorities,
+                constraints and the scope the project needs to cover.
               </p>
             </div>
 
             <div className="border-b border-[#e5e5e5] p-8 lg:border-b-0 lg:border-r">
-              <Code2 className="mb-8 text-[#3c5b9b]" size={34} />
+              <Code2 className="mb-8 text-[#193175]" size={34} />
               <h3 className="mb-4 text-[25px] font-normal tracking-[-0.5px]">
                 Build
               </h3>
               <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
-                We design, develop, integrate, test, and improve the product
-                through controlled development cycles.
+                We design, develop, integrate and review the agreed product
+                through controlled project stages and clear checkpoints.
               </p>
             </div>
 
             <div className="p-8">
-              <Headphones className="mb-8 text-[#3c5b9b]" size={34} />
+              <Headphones className="mb-8 text-[#193175]" size={34} />
               <h3 className="mb-4 text-[25px] font-normal tracking-[-0.5px]">
-                Support
+                Improve
               </h3>
               <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
-                We continue with maintenance, optimization, updates, monitoring,
-                and long-term technical assistance.
+                After release, we handle agreed fixes, enhancements, updates
+                and support requirements based on how the product is being used.
               </p>
             </div>
           </div>
@@ -380,14 +378,14 @@ export default function HowWeWorkPage() {
       <section className="lazy-section bg-white py-12">
       <div className="mx-auto max-w-450 px-8 lg:px-10">
         <div
-          className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75"
+          className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
           data-aos="zoom-in"
         >
           {/* LEFT IMAGE */}
           <div className="hidden w-[32%] shrink-0 md:block">
             <img
               src="/about.avif"
-              alt="BrainADZ Live AI Technology"
+              alt="How BrainADZ Live works with clients"
               loading="lazy"
               decoding="async"
               className="h-full w-full object-cover"
@@ -399,12 +397,13 @@ export default function HowWeWorkPage() {
             {/* TEXT */}
             <div className="max-w-140">
               <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                Build smarter digital systems with BrainADZ Live
+                Have a project that needs a clearer delivery plan?
               </h3>
 
               <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                Discover how our team can help you transform hardware,
-                software, automation, and AI into reliable business solutions.
+                Tell us what you are trying to build, improve or connect.
+                We can start by understanding the requirement and defining the
+                right next steps for the project.
               </p>
             </div>
 
@@ -412,7 +411,7 @@ export default function HowWeWorkPage() {
             <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5"
+  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
 >
               <span>Enquire Now</span>
 

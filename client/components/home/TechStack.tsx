@@ -139,7 +139,7 @@ export default function TechStackSection() {
         {/* HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
           <div data-aos="fade-right">
-            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
 
@@ -175,13 +175,13 @@ export default function TechStackSection() {
                 className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
                   isActive
                     ? "text-[#161616]"
-                    : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                    : "text-[#8d8d8d] hover:text-[#193175]"
                 }`}
               >
                 {tab.label}
 
                 <span
-                  className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${
+                  className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
                     isActive ? "w-full opacity-100" : "w-0 opacity-0"
                   }`}
                 />
@@ -225,7 +225,7 @@ export default function TechStackSection() {
                     </div>
 
                     {/* NAME */}
-                    <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                    <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                       {item.name}
                     </h3>
                   </div>

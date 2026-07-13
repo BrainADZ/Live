@@ -3,24 +3,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   CheckCircle2,
   ChevronRight,
-  Hammer,
-  Image as ImageIcon,
+  Download,
   Layers,
   MapPin,
   Minus,
-  Download,
-  PackageCheck,
-  Paintbrush,
   Plus,
-  Ruler,
-  ShieldCheck,
   Store,
   Tag,
-  Wrench,
 } from "lucide-react";
 
 type SpecItem = {
@@ -34,70 +28,98 @@ type FaqItem = {
 };
 
 const highlights = [
-  "Space-saving branding solution",
-  "Clean wall-mounted presentation",
-  "Custom printable graphics",
-  "Ideal for indoor business spaces",
-  "Durable frame and neat finish",
+  "Wall-mounted digital signage format",
+  "Video and image content playback",
+  "Space-efficient display placement",
+  "Optional signage application",
+  "Optional cloud content management",
 ];
 
 const specs: SpecItem[] = [
-  { label: "Product Type", value: "Wall Mounted Standee" },
-  { label: "Usage", value: "Indoor branding, information display and promotional messaging" },
-  { label: "Print Option", value: "Custom brand artwork, product visuals, offers and directional graphics" },
-  { label: "Mounting Style", value: "Fixed wall-mounted installation with clean front visibility" },
-  { label: "Material", value: "Durable print media with sturdy support structure" },
-  { label: "Best For", value: "Retail stores, offices, reception areas, hospitals, showrooms and events" },
+  {
+    label: "Product Type",
+    value: "Wall Mounted Digital Display",
+  },
+  {
+    label: "Content Support",
+    value:
+      "Videos, images, promotional campaigns, announcements and business information",
+  },
+  {
+    label: "Playback Setup",
+    value: "Local media playback based on the configured setup",
+  },
+  {
+    label: "Content Management",
+    value: "Optional signage application when required",
+  },
+  {
+    label: "Remote Management",
+    value: "Optional cloud signage management",
+  },
+  {
+    label: "Deployment Planning",
+    value:
+      "Wall placement, content workflow, branding and setup based on project requirement",
+  },
 ];
 
 const applications = [
-  { title: "Retail Stores", text: "Display offers, brand messages, product highlights and campaign visuals.", icon: Store },
-  { title: "Reception Areas", text: "Share brand information, directions, notices and visitor communication.", icon: MapPin },
-  { title: "Showrooms", text: "Present product details, pricing support and promotional graphics neatly.", icon: Tag },
-  { title: "Corporate Spaces", text: "Use for internal communication, event branding and professional signage.", icon: Layers },
+  {
+    title: "Retail Stores",
+    text: "Display promotions, product campaigns, offers and customer-facing digital content.",
+    icon: Store,
+  },
+  {
+    title: "Reception Areas",
+    text: "Present welcome content, visitor information, announcements and business communication.",
+    icon: MapPin,
+  },
+  {
+    title: "Showrooms",
+    text: "Showcase product content, launches, brand films and promotional visuals.",
+    icon: Tag,
+  },
+  {
+    title: "Corporate Spaces",
+    text: "Use for announcements, company information and internal visual communication.",
+    icon: Layers,
+  },
 ];
 
 const customization = [
-  "Custom size and artwork layout",
-  "Brand color matching",
-  "Product or offer-based graphics",
-  "Directional and informational signage",
-  "Premium print finishing options",
-];
-
-const process = [
-  { title: "Requirement Sharing", text: "We understand the display purpose, wall space, content and branding requirements.", icon: Ruler },
-  { title: "Design Preparation", text: "Our team prepares clean artwork based on your brand, message and placement needs.", icon: Paintbrush },
-  { title: "Print Production", text: "We print the final approved design with a neat finish and suitable display quality.", icon: ImageIcon },
-  { title: "Mounting Setup", text: "The standee is prepared for wall-mounted installation with proper alignment and support.", icon: Hammer },
-  { title: "Quality Check", text: "We check print clarity, finishing, edges and overall presentation before dispatch.", icon: ShieldCheck },
-  { title: "Delivery Support", text: "The product is packed and delivered safely for installation and use.", icon: PackageCheck },
+  "Wall placement and display planning",
+  "Content playback setup",
+  "Signage application setup",
+  "Cloud management option",
+  "Branding and deployment coordination",
 ];
 
 const faqs: FaqItem[] = [
   {
-    q: "What is a wall mounted standee used for?",
-    a: "A wall mounted standee is used for indoor branding, promotional messages, directions, product highlights, notices and information display in commercial spaces.",
+    q: "What is a Wall Mounted Digital Display?",
+    a: "A Wall Mounted Digital Display is a screen-based signage solution installed on a wall to present videos, images, promotions, announcements and business information.",
   },
   {
-    q: "Can I customize the design?",
-    a: "Yes. We can customize the artwork, size, brand colors, message, product visuals and overall layout according to your requirement.",
+    q: "What type of content can be displayed?",
+    a: "The display can be used for videos, images, promotional campaigns, product content, announcements and other business communication.",
   },
   {
-    q: "Is it suitable for retail stores and offices?",
-    a: "Yes. It works well for retail stores, offices, reception areas, showrooms, hospitals, clinics and corporate spaces.",
+    q: "Can the display work with local media playback?",
+    a: "Yes. Local media playback can be included as part of the configured setup when remote content management is not required.",
   },
   {
-    q: "Do you provide design support?",
-    a: "Yes. BrainADZ can support you with clean and professional design preparation based on your brand and display purpose.",
+    q: "Can signage software or cloud management be included?",
+    a: "Yes. A signage application or cloud signage management can be added when the project requires managed or remote content control.",
   },
   {
-    q: "Is it reusable?",
-    a: "Yes, depending on the installation and print type, it can be used for long-term branding and informational display.",
+    q: "Can the deployment be customized for the wall space?",
+    a: "The wall placement, content workflow, branding approach and management setup can be planned according to the project requirement.",
   },
 ];
 
-export default function WallMountedStandeePage() {
+export default function WallMountedDisplayPage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
@@ -105,48 +127,59 @@ export default function WallMountedStandeePage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/products/wall.png"
-          alt="Wall Mounted Standee"
+          src="/hero/wall-mounted.jpg"
+          alt="Wall Mounted Digital Display by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
+
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.76)_30%,rgba(0,0,0,0.44)_58%,rgba(0,0,0,0.10)_100%)]" />
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link href="/" className="text-[#6da0ff] hover:underline">
+            <Link
+              href="/"
+              className="text-[#6da0ff] hover:underline"
+            >
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Products</span>
+
             <span className="text-white/80">/</span>
-            <span className="text-white/90">Wall Mounted Standee</span>
+
+            <span className="text-white/90">
+              Wall Mounted Display
+            </span>
           </div>
 
           <div className="mt-12 max-w-210 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Wall Mounted Standee Printing & Branding Solutions
+              Wall Mounted Digital Display for Space-Efficient Signage
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-200 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Clean, professional and space-saving wall mounted standees for
-              indoor branding, product promotions, information display and
-              business communication.
+              A wall-mounted digital signage solution for displaying videos,
+              images, promotions, announcements and business information
+              without occupying floor space.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
-                Get Quote
+                Request a Quote
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
 
               <a
                 href="/brochure/BrainADZLive.pdf"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-3 rounded-full border border-white/35 px-8 text-[13px] font-bold text-white transition duration-300 hover:border-white hover:bg-white hover:text-[#3C5B9B]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-3 rounded-full border border-white/35 px-8 text-[13px] font-bold text-white transition duration-300 hover:border-white hover:bg-white hover:text-[#193175]"
               >
                 Download Brochure
                 <Download size={17} />
@@ -160,37 +193,45 @@ export default function WallMountedStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Product Overview
             </p>
 
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Wall-mounted branding that saves space and improves visibility.
+              Digital content on the wall, without using valuable floor space.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ wall mounted standees are designed for businesses that
-              need clean and permanent visual communication without occupying
-              floor space. They are ideal for shops, offices, reception areas,
-              showrooms, hospitals and commercial interiors.
+              The BrainADZ Live Wall Mounted Digital Display is a screen-based
+              signage solution for businesses that need visible digital
+              communication in a fixed wall location. It can present videos,
+              images, promotional campaigns, announcements and information
+              through a content setup planned around the space and intended use.
             </p>
 
             <div className="mt-8 space-y-4">
               {highlights.map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2 size={20} className="text-[#3C5B9B]" />
-                  <span className="text-[15px] font-light text-black/70">{item}</span>
+                  <CheckCircle2
+                    size={20}
+                    className="text-[#193175]"
+                  />
+
+                  <span className="text-[15px] font-light text-black/70">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -left-8 -top-8 h-44 w-44 rounded-full bg-[#3C5B9B]/10 blur-3xl" />
+            <div className="absolute -left-8 -top-8 h-44 w-44 rounded-full bg-[#193175]/10 blur-3xl" />
+
             <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
                 src="/products/wall.png"
-                alt="Wall Mounted Standee Display"
+                alt="Wall Mounted Digital Display"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -202,29 +243,46 @@ export default function WallMountedStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose This Product
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A neat display solution for professional indoor spaces.
+              A fixed digital display for visible and changing communication.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {[
-              { title: "Space Saving", text: "Mounted directly on walls, it keeps your floor area clean and open." },
-              { title: "Professional Finish", text: "Creates a polished display for offices, retail spaces and reception areas." },
-              { title: "Clear Communication", text: "Perfect for offers, directions, service information and brand messages." },
-              { title: "Custom Branding", text: "Designed with your brand colors, graphics, product visuals and message." },
+              {
+                title: "Space-Efficient Display",
+                text: "Use available wall space for digital communication without adding a freestanding display to the floor.",
+              },
+              {
+                title: "Dynamic Content",
+                text: "Present changing videos, images, campaigns and information instead of relying on static printed material.",
+              },
+              {
+                title: "Professional Presentation",
+                text: "Create a dedicated screen-based communication point for customer-facing and business spaces.",
+              },
+              {
+                title: "Flexible Content Management",
+                text: "Use local playback or add signage software and cloud management according to the deployment requirement.",
+              },
             ].map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
+
                 <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
                   {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
                 </p>
@@ -239,17 +297,19 @@ export default function WallMountedStandeePage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Specifications
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Configuration Details
               </p>
+
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Product details at a glance.
+                Plan the display around the wall, content and management needs.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Every wall mounted standee can be customized according to your
-              display area, message, artwork and business branding needs.
+              The final setup can be planned according to the display location,
+              content requirement, management approach and overall deployment
+              environment.
             </p>
           </div>
 
@@ -259,7 +319,10 @@ export default function WallMountedStandeePage() {
                 key={item.label}
                 className="grid gap-3 border-b border-black/10 py-5 last:border-b-0 md:grid-cols-[0.35fr_0.65fr] md:gap-8"
               >
-                <h3 className="text-[17px] font-light text-black">{item.label}</h3>
+                <h3 className="text-[17px] font-light text-black">
+                  {item.label}
+                </h3>
+
                 <p className="text-[15px] font-light leading-[1.7] text-black/65">
                   {item.value}
                 </p>
@@ -273,28 +336,35 @@ export default function WallMountedStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Ideal Applications
             </p>
+
             <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Useful for branding, direction and business communication.
+              Suitable for customer-facing and professional business spaces.
             </h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {applications.map((item) => {
               const Icon = item.icon;
+
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
-                    <Icon size={24} className="text-[#3C5B9B] transition group-hover:text-white" />
+                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon
+                      size={24}
+                      className="text-[#193175] transition group-hover:text-white"
+                    />
                   </div>
+
                   <h3 className="text-[20px] font-light tracking-[-0.3px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[14px] font-light leading-[1.65] text-black/65">
                     {item.text}
                   </p>
@@ -311,66 +381,38 @@ export default function WallMountedStandeePage() {
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
               src="/products/custom-standee-design.jpg"
-              alt="Custom Wall Mounted Standee Design"
+              alt="Wall Mounted Digital Display configuration planning"
               className="h-full w-full object-cover"
             />
           </div>
 
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Customization Options
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Configuration Options
             </p>
 
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Designed around your brand, message and space.
+              Configure the display around your content, wall space and
+              management workflow.
             </h2>
 
             <div className="mt-8 border-y border-black/10">
               {customization.map((item) => (
-                <div key={item} className="flex items-center justify-between gap-6 border-b border-black/10 py-5 last:border-b-0">
-                  <span className="text-[16px] font-light text-black/75">{item}</span>
-                  <ChevronRight size={20} className="shrink-0 text-[#3C5B9B]" />
+                <div
+                  key={item}
+                  className="flex items-center justify-between gap-6 border-b border-black/10 py-5 last:border-b-0"
+                >
+                  <span className="text-[16px] font-light text-black/75">
+                    {item}
+                  </span>
+
+                  <ChevronRight
+                    size={20}
+                    className="shrink-0 text-[#193175]"
+                  />
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-8 lg:px-12 lg:py-14">
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Design & Production Process
-            </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              From requirement to ready-to-install display.
-            </h2>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {process.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <div className="mb-5 flex items-center gap-4">
-                    <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <Icon size={24} className="text-[#3C5B9B]" />
-                    </div>
-                    <span className="text-[13px] font-semibold text-[#3C5B9B]">
-                      0{index + 1}
-                    </span>
-                  </div>
-                  <h3 className="text-[24px] font-light tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -380,24 +422,33 @@ export default function WallMountedStandeePage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Product Showcase
               </p>
+
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Wall mounted display solutions for modern spaces.
+                Wall Mounted Digital Display views and deployment examples.
               </h2>
             </div>
-            <a href="/contact" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
-              Request Custom Design <ArrowRight size={18} />
+
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
+              Discuss Your Requirement
+              <ArrowRight size={18} />
             </a>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
             {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="h-72 overflow-hidden bg-[#dde6f6]">
+              <div
+                key={item}
+                className="h-72 overflow-hidden bg-[#dde6f6]"
+              >
                 <img
                   src={`/products/wall-mounted-standee-${item}.jpg`}
-                  alt={`Wall Mounted Standee ${item}`}
+                  alt={`Wall Mounted Digital Display ${item}`}
                   className="h-full w-full object-cover transition duration-500 hover:scale-105"
                 />
               </div>
@@ -410,11 +461,12 @@ export default function WallMountedStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
+
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about wall mounted standees.
+              Common questions about Wall Mounted Digital Display.
             </h2>
           </div>
 
@@ -424,26 +476,33 @@ export default function WallMountedStandeePage() {
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)]"
                 }`}
               >
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -458,37 +517,53 @@ export default function WallMountedStandeePage() {
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden bg-[#3C5B9B] md:min-h-75">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
-                alt="BrainADZ Branding Solutions"
+                src="/products/wall.png"
+                alt="Wall Mounted Digital Display showcase"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
               />
             </div>
 
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-              <div className="max-w-145">
+              <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Need a custom wall mounted standee for your brand?
+                  Planning a Wall Mounted Digital Display setup?
                 </h3>
+
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Share your requirement with BrainADZ and get a clean,
-                  professional wall-mounted branding solution for your space.
+                  Tell us about the wall location, intended content and
+                  management requirements so the right display setup can be
+                  planned.
                 </p>
               </div>
 
-              <a
-                href="/contact"
-                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition hover:bg-white hover:text-[#3C5B9B]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
-                <span>Enquire Now</span>
-                <span className="text-[26px] transition-transform group-hover:translate-x-1">→</span>
-              </a>
+                <span>Request a Quote</span>
+
+                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

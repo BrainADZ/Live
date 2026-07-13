@@ -48,33 +48,33 @@ type StackItem = {
 
 const workflow = [
   {
-    title: "Discovery & Planning",
-    text: "We understand your business goals, users, workflows and technical requirements before planning the web app.",
+    title: "Discovery & Workflow Mapping",
+    text: "We understand your users, business processes, data needs, existing systems and the actions the web app needs to support.",
     icon: Search,
   },
   {
-    title: "UX & Interface Design",
-    text: "We create clean wireframes, user journeys and responsive layouts that make the application easy to use.",
+    title: "UX & Interface Planning",
+    text: "We map user journeys, screen structure and responsive layouts before development begins.",
     icon: TabletSmartphone,
   },
   {
-    title: "Architecture Setup",
-    text: "We define frontend, backend, database, API, security and deployment structure for long-term scalability.",
+    title: "Architecture & Integration Planning",
+    text: "We define frontend, backend, database, APIs, access control and deployment requirements around the project scope.",
     icon: Workflow,
   },
   {
     title: "Web App Development",
-    text: "We build fast, secure and scalable web applications using modern frameworks and clean coding practices.",
+    text: "We build the frontend, backend, business logic, dashboards and integrations required for the application.",
     icon: Code2,
   },
   {
-    title: "Testing & Optimization",
-    text: "We test performance, responsiveness, usability, security and browser compatibility before release.",
+    title: "Testing & Release Validation",
+    text: "We test workflows, permissions, responsiveness, browser behavior, integrations and performance before release.",
     icon: ShieldCheck,
   },
   {
-    title: "Deployment & Support",
-    text: "We deploy your web app with reliable cloud setup and provide ongoing improvements after launch.",
+    title: "Deployment & Ongoing Improvement",
+    text: "We deploy the web app and continue with issue resolution, updates and improvements as requirements evolve.",
     icon: Rocket,
   },
 ];
@@ -90,66 +90,66 @@ const workflowLayout = [
 
 const challenges = [
   {
-    title: "Poor Performance",
-    text: "Slow loading, heavy interfaces and outdated code can reduce conversions and user trust.",
+    title: "Slow or Unstable Performance",
+    text: "Heavy pages, inefficient queries and weak backend logic can make everyday tasks frustrating for users.",
     icon: Gauge,
   },
   {
-    title: "Limited Scalability",
-    text: "Weak architecture can fail when traffic, users, data or business operations start growing.",
+    title: "Rigid Architecture",
+    text: "Poorly planned systems become difficult to extend when users, data, workflows or integrations increase.",
     icon: Layers3,
   },
   {
-    title: "Security Risks",
-    text: "Unprotected forms, APIs and access flows can expose business data and customer information.",
+    title: "Weak Access Control",
+    text: "Unclear permissions and unprotected endpoints can expose business data or allow the wrong actions.",
     icon: LockKeyhole,
   },
   {
-    title: "Integration Issues",
-    text: "Disconnected systems make it difficult to connect payments, CRM, ERP, analytics and APIs.",
+    title: "Disconnected Business Tools",
+    text: "Manual movement of data between web apps, payment systems, CRM, ERP and other tools creates repeated work.",
     icon: Network,
   },
   {
-    title: "Poor User Experience",
-    text: "Confusing navigation, weak design and non-responsive screens create friction for users.",
+    title: "Confusing User Flows",
+    text: "Complex navigation and inconsistent screens make it harder for users to complete tasks accurately.",
     icon: MonitorSmartphone,
   },
   {
-    title: "High Maintenance",
-    text: "Unstructured code and outdated systems become harder and more costly to maintain over time.",
+    title: "Difficult Maintenance",
+    text: "Unstructured code and outdated dependencies make fixes, releases and future development harder to manage.",
     icon: MonitorCog,
   },
 ];
 
 const services = [
   {
-    title: "Custom Web Applications",
-    text: "Tailored web solutions built around your business workflow and user requirements.",
+    title: "Custom Business Web Apps",
+    text: "Browser-based applications built around your workflows, users, data and operational requirements.",
     icon: Code2,
   },
   {
-    title: "Enterprise Web Apps",
-    text: "Secure and scalable applications for teams, operations, data and internal business systems.",
+    title: "Customer & Partner Portals",
+    text: "Secure self-service portals for accounts, requests, documents, orders, status updates and communication.",
     icon: BriefcaseBusiness,
   },
   {
-    title: "Progressive Web Apps",
-    text: "Fast, reliable and responsive app-like web experiences that work across devices.",
+    title: "Progressive Web Applications",
+    text: "Responsive web experiences with app-like behavior for users who need access across devices.",
     icon: TabletSmartphone,
   },
   {
-    title: "API Development",
-    text: "Backend APIs and integrations for payments, CRMs, ERPs, maps, analytics and third-party tools.",
+    title: "Backend & API Integration",
+    text: "Connect the web app with databases, payment systems and approved third-party or internal APIs.",
     icon: Network,
   },
   {
-    title: "Web App Maintenance",
-    text: "Bug fixing, upgrades, monitoring, improvements and ongoing support after deployment.",
+    title: "Web App Modernization",
+    text: "Improve outdated interfaces, workflows, performance and application structure without rebuilding more than needed.",
     icon: LifeBuoy,
   },
   {
-    title: "UI/UX for Web Apps",
-    text: "Clean, responsive and conversion-focused interfaces for better user engagement.",
+    title: "Web App Support & Enhancement",
+    text: "Resolve issues, improve existing workflows and add features as the application continues to evolve.",
     icon: MonitorSmartphone,
   },
 ];
@@ -157,116 +157,116 @@ const services = [
 const architectureLayers = [
   {
     title: "Users",
-    items: ["Web Browser", "Mobile", "API Clients"],
+    items: ["Web Browser", "Mobile Browser", "API Clients"],
     icon: Users,
   },
   {
     title: "Frontend",
-    items: ["React / Next.js", "HTML / CSS", "JavaScript / TS"],
+    items: ["Responsive UI", "Forms & Dashboards", "Client-Side Logic"],
     icon: MonitorSmartphone,
   },
   {
-    title: "API Gateway",
-    items: ["Routing", "Authentication", "Rate Limiting"],
+    title: "Access & APIs",
+    items: ["Authentication", "Authorization", "Request Handling"],
     icon: Network,
   },
   {
     title: "Backend Services",
-    items: ["Business Logic", "Microservices", "Background Jobs"],
+    items: ["Business Logic", "API Services", "Background Jobs"],
     icon: ServerCog,
   },
   {
     title: "Data Layer",
-    items: ["Relational DB", "NoSQL DB", "Cache"],
+    items: ["Relational Data", "Document Data", "Caching"],
     icon: Database,
   },
   {
-    title: "Cloud & DevOps",
-    items: ["AWS / Azure", "Docker / K8s", "CI/CD Pipeline"],
+    title: "Deployment",
+    items: ["Cloud Hosting", "Containers", "CI/CD"],
     icon: Boxes,
   },
 ];
 
 const useCases = [
-  { title: "SaaS Platforms", icon: Layers3 },
-  { title: "Admin Dashboards", icon: MonitorCog },
-  { title: "Customer Portals", icon: Users },
-  { title: "E-commerce Platforms", icon: ShoppingCart },
-  { title: "Booking Systems", icon: Bell },
-  { title: "ERP / CRM Tools", icon: BriefcaseBusiness },
-  { title: "Analytics Dashboards", icon: Gauge },
-  { title: "Internal Business Apps", icon: Workflow },
+  { title: "Operations Management Systems", icon: Workflow },
+  { title: "Admin & Management Dashboards", icon: MonitorCog },
+  { title: "Customer & Partner Portals", icon: Users },
+  { title: "Order & Commerce Platforms", icon: ShoppingCart },
+  { title: "Booking & Scheduling Systems", icon: Bell },
+  { title: "Multi-Role Internal Applications", icon: BriefcaseBusiness },
+  { title: "Reporting & Analytics Platforms", icon: Gauge },
+  { title: "Workflow & Approval Applications", icon: Layers3 },
 ];
 
 const caseStudies = [
   {
-    title: "E-commerce Platform",
-    text: "A scalable online selling platform with payments, product management and analytics.",
+    title: "Commerce Operations Platform",
+    text: "A web platform for product management, orders, payments and operational reporting.",
     image: "/services/hero/ecommerce-app.jpg",
   },
   {
-    title: "SaaS Dashboard",
-    text: "A multi-tenant dashboard with role-based access, reporting and subscription flow.",
+    title: "Multi-Role Operations Dashboard",
+    text: "A role-based web application for teams, tasks, reports and business activity.",
     image: "/services/hero/saas-dashboard.jpg",
   },
   {
-    title: "Healthcare Portal",
-    text: "A secure patient portal with appointment booking, reports and reminders.",
+    title: "Healthcare Service Portal",
+    text: "A secure web portal for appointments, records, status updates and user access.",
     image: "/services/hero/healthcare-app.jpg",
   },
   {
-    title: "Real Estate Platform",
-    text: "A property listing system with advanced search, filters and map-based browsing.",
+    title: "Property Search Platform",
+    text: "A responsive web application with listings, filters, enquiry flows and map-based browsing.",
     image: "/services/hero/real-estate-platform.jpg",
   },
 ];
 
 const whyChoose = [
   {
-    title: "Experienced Team",
-    text: "Skilled developers with strong experience in modern web technologies and scalable architecture.",
+    title: "Workflow-First Planning",
+    text: "We start with users, actions, data and business rules before deciding how the web app should be structured.",
   },
   {
-    title: "Agile Approach",
-    text: "Flexible sprint-based development with regular updates, feedback and transparent progress.",
+    title: "Frontend & Backend Ownership",
+    text: "We plan the interface, APIs, database and application logic as one connected product.",
   },
   {
-    title: "Quality Assurance",
-    text: "Focused testing to ensure stable, secure and reliable web applications before launch.",
+    title: "Practical Architecture",
+    text: "The technical structure is matched to the actual scale, integrations and future changes the application needs.",
   },
   {
-    title: "On-Time Delivery",
-    text: "Clear milestones and planned delivery approach to keep your project on track.",
+    title: "Testing Across Real Scenarios",
+    text: "We test workflows, permissions, browser behavior, responsive layouts and connected systems before release.",
   },
   {
-    title: "Scalable Architecture",
-    text: "Web apps planned for more users, more data, new features and future integrations.",
+    title: "Integration-Ready Development",
+    text: "We plan clean data flows between the web app and approved business systems or third-party platforms.",
   },
   {
-    title: "Long-Term Support",
-    text: "Ongoing maintenance, improvements and technical support for continuous growth.",
+    title: "Ongoing Product Improvement",
+    text: "After launch, we support fixes, workflow changes, performance work and new feature development.",
   },
 ];
 
 const supportItems = [
   {
-    title: "Bug Fixing",
-    text: "Identify issues, fix errors and keep your application stable for users.",
+    title: "Issue Resolution",
+    text: "Investigate application errors, failed workflows and browser-specific problems that affect users.",
     icon: Bug,
   },
   {
-    title: "Performance Tuning",
-    text: "Improve page speed, API performance, database queries and overall responsiveness.",
+    title: "Performance Improvement",
+    text: "Review page loading, API response times, database queries and other application bottlenecks.",
     icon: Gauge,
   },
   {
-    title: "Security Updates",
-    text: "Keep authentication, permissions, APIs and deployment environments secure.",
+    title: "Security & Access Updates",
+    text: "Maintain authentication, permissions, dependencies and protected application endpoints.",
     icon: ShieldCheck,
   },
   {
-    title: "Feature Enhancements",
-    text: "Add new modules, improve workflows and expand your application over time.",
+    title: "Workflow & Feature Enhancements",
+    text: "Improve existing flows and add new modules as users and business requirements change.",
     icon: PackageCheck,
   },
 ];
@@ -316,27 +316,31 @@ const techStack: Record<TabType, StackItem[]> = {
 const faqs = [
   {
     q: "What types of web applications do you develop?",
-    a: "We build custom web apps, SaaS platforms, admin dashboards, customer portals, ecommerce platforms, booking systems, ERP/CRM tools and internal business applications.",
+    a: "We build custom business web apps, customer and partner portals, admin dashboards, booking systems, order platforms, reporting tools and internal workflow applications.",
   },
   {
-    q: "Can you build both frontend and backend?",
-    a: "Yes. We handle frontend, backend, databases, APIs, integrations, deployment and post-launch support.",
+    q: "Can you build the frontend, backend and database together?",
+    a: "Yes. We can handle the interface, backend logic, database, APIs, integrations and deployment required for the web application.",
   },
   {
-    q: "Will my web app be mobile responsive?",
-    a: "Yes. We design responsive interfaces that work smoothly on desktop, tablet and mobile screens.",
+    q: "Can the web app have different user roles and permissions?",
+    a: "Yes. We can define role-based access so different users see and manage only the features, records and actions relevant to them.",
   },
   {
-    q: "Can you integrate third-party APIs?",
-    a: "Yes. We integrate payment gateways, CRM systems, ERP tools, maps, analytics, notifications, email, SMS and other APIs.",
+    q: "Can you connect the web app with our existing systems?",
+    a: "Yes. Depending on available access and APIs, we can connect payment systems, CRM, ERP, maps, email, SMS, analytics and other business tools.",
+  },
+  {
+    q: "Can you improve an existing web application?",
+    a: "Yes. We can review existing code and improve selected areas such as UI, workflows, performance, integrations, security or application structure.",
   },
   {
     q: "Do you provide support after deployment?",
-    a: "Yes. We provide maintenance, bug fixing, security updates, performance optimization and feature enhancements after launch.",
+    a: "Yes. We provide issue resolution, performance work, security and dependency updates, workflow changes and new feature development after launch.",
   },
   {
-    q: "How long does web app development take?",
-    a: "The timeline depends on the project size and features. A small web app may take a few weeks, while larger enterprise systems require a planned development timeline.",
+    q: "How do you estimate the timeline for a web app project?",
+    a: "The timeline depends on the number of workflows, user roles, screens, integrations, data requirements and testing scope. We estimate it after reviewing the actual project requirements.",
   },
 ];
 
@@ -355,7 +359,7 @@ export default function WebAppDevelopmentPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/services/hero/web-app-development.jpg"
+          src="/hero/web-app-development.jpg"
           alt="Web App Development Services"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -381,16 +385,16 @@ export default function WebAppDevelopmentPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Secure, scalable and high-performance web applications built for
-              business workflows, customer platforms, dashboards and digital
-              products.
+              Custom web applications for business workflows, customer portals,
+              dashboards and browser-based digital products—built with the
+              frontend, backend and integrations they actually need.
             </p>
 
             <div className="mt-8">
               <button
   type="button"
   onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
   <span className="text-[20px] leading-none">↗</span>
@@ -404,42 +408,42 @@ export default function WebAppDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
 
             <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Powerful web solutions for modern businesses.
+              Web applications built around real users, workflows and business data.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              We design and develop custom web applications that are fast,
-              secure, user-friendly and ready to scale. From internal tools to
-              customer portals and SaaS platforms, every solution is built
-              around real business needs.
+              BrainADZ Live builds browser-based applications for internal teams,
+              customers and partners. We plan the interface, backend logic,
+              database, user roles and integrations around the tasks the
+              application needs to support.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {[
               {
-                title: "Better User Experience",
-                text: "Clean responsive interfaces that help users complete actions faster.",
+                title: "Clear User Workflows",
+                text: "Responsive interfaces that help users complete important tasks with less friction.",
                 icon: MonitorSmartphone,
               },
               {
-                title: "Scalable Architecture",
-                text: "Web apps planned for more traffic, data, users and future features.",
+                title: "Maintainable Structure",
+                text: "Application architecture planned for future users, data, features and integrations.",
                 icon: Layers3,
               },
               {
-                title: "Secure & Reliable",
-                text: "Authentication, role access, secure APIs and stable deployment practices.",
+                title: "Controlled Access",
+                text: "Authentication, role permissions and protected data flows built around user responsibilities.",
                 icon: ShieldCheck,
               },
               {
-                title: "Business Growth",
-                text: "Digital systems that improve operations, sales and customer engagement.",
+                title: "Connected Systems",
+                text: "Integrations that reduce repeated work between the web app and the tools your business already uses.",
                 icon: Rocket,
               },
             ].map((item) => {
@@ -450,8 +454,8 @@ export default function WebAppDevelopmentPage() {
                   key={item.title}
                   className="rounded-[28px] border border-black/10 bg-[#f8faff] p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
                 >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3C5B9B]/10">
-                    <Icon size={26} className="text-[#3C5B9B]" />
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#193175]/10">
+                    <Icon size={26} className="text-[#193175]" />
                   </div>
 
                   <h3 className="text-[21px] font-light tracking-[-0.4px]">
@@ -473,19 +477,19 @@ export default function WebAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Web App Challenges
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Common problems that hold web applications back.
+                Problems that make web applications difficult to use and maintain.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Poor performance, weak architecture and confusing user experience
-              can directly affect growth. We build web apps with speed,
-              usability, security and scalability in mind.
+              Web applications become harder to rely on when workflows are slow,
+              permissions are unclear or systems do not exchange data properly.
+              We address these issues through better structure, testing and integration planning.
             </p>
           </div>
 
@@ -496,10 +500,10 @@ export default function WebAppDevelopmentPage() {
               return (
                 <div
                   key={item.title}
-                  className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
+                  className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                    <Icon size={24} className="text-[#3C5B9B]" />
+                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10">
+                    <Icon size={24} className="text-[#193175]" />
                   </div>
 
                   <h3 className="text-[21px] font-light tracking-[-0.3px]">
@@ -520,12 +524,12 @@ export default function WebAppDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Web App Development Services
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Web applications designed for performance, usability and growth.
+              Web app development for connected workflows, users and data.
             </h2>
           </div>
 
@@ -536,10 +540,10 @@ export default function WebAppDevelopmentPage() {
               return (
                 <div
                   key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:bg-white hover:shadow-[0_22px_70px_rgba(60,91,155,0.1)]"
+                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
-                    <Icon size={27} className="text-[#3C5B9B] transition group-hover:text-white" />
+                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
                   </div>
 
                   <h3 className="text-[23px] font-light tracking-[-0.4px]">
@@ -559,7 +563,7 @@ export default function WebAppDevelopmentPage() {
       {/* WORKFLOW SECTION */}
       <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-8 lg:px-12 lg:py-14">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -567,19 +571,20 @@ export default function WebAppDevelopmentPage() {
           }}
         />
 
-        <div className="mx-auto max-w-[1500px]">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+        <div className="mx-auto max-w-375">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Web App Development Process
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our proven web app development process roadmap
+              From workflow discovery to a stable web application
             </h2>
 
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              We follow a clear development path from discovery and design to
-              deployment, optimization and long-term support.
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              We move from user and workflow discovery to architecture,
+              development, testing and release so each part of the application
+              is planned around real use.
             </p>
           </div>
 
@@ -594,12 +599,12 @@ export default function WebAppDevelopmentPage() {
                     className="group relative rounded-[26px] border border-black/10 bg-white p-6"
                   >
                     {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#3C5B9B]/45" />
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#3C5B9B] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#3C5B9B]" />
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
                       </div>
 
                       <div>
@@ -617,7 +622,7 @@ export default function WebAppDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
+          <div className="relative hidden h-197.5 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 790"
@@ -635,15 +640,15 @@ export default function WebAppDevelopmentPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#3C5B9B" />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
-              <path d="M 392 43 L 1208 43" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#3C5B9B" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
+              <path d="M 392 43 L 1208 43" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
+              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
+              <path d="M 1208 343 L 392 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
+              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
+              <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
             </svg>
 
             {workflowLayout.map((item) => {
@@ -652,18 +657,18 @@ export default function WebAppDevelopmentPage() {
               return (
                 <div
                   key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
                   style={{ left: item.left, top: item.top }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#3C5B9B] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#3C5B9B]" />
+                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
                   </div>
 
                   <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
@@ -678,19 +683,19 @@ export default function WebAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Web App Architecture
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Modern and scalable web application architecture.
+                A connected architecture for the complete web application.
               </h2>
             </div>
 
             <p className="max-w-190 text-[16px] font-light leading-[1.7] text-black/65">
-              We plan architecture that connects users, frontend, APIs, backend
-              services, databases and cloud infrastructure into one reliable
-              digital system.
+              We plan how users, interfaces, access controls, APIs, backend
+              logic, data and deployment fit together before the application
+              grows more complex.
             </p>
           </div>
 
@@ -699,17 +704,17 @@ export default function WebAppDevelopmentPage() {
               const Icon = layer.icon;
 
               return (
-                <div key={layer.title} className="rounded-[24px] border border-black/10 bg-[#f8faff] p-5">
+                <div key={layer.title} className="rounded-3xl border border-black/10 bg-[#f8faff] p-5">
                   <div className="mb-5 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <Icon size={20} className="text-[#3C5B9B]" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#193175]/10">
+                      <Icon size={20} className="text-[#193175]" />
                     </div>
                     <h3 className="text-[18px] font-light tracking-[-0.3px]">{layer.title}</h3>
                   </div>
 
                   <div className="space-y-3">
                     {layer.items.map((subItem) => (
-                      <div key={subItem} className="rounded-[16px] border border-black/10 bg-white px-4 py-3 text-[14px] font-light text-black/65">
+                      <div key={subItem} className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-[14px] font-light text-black/65">
                         {subItem}
                       </div>
                     ))}
@@ -719,10 +724,10 @@ export default function WebAppDevelopmentPage() {
             })}
           </div>
 
-          <div className="mt-8 grid gap-4 rounded-[24px] border border-black/10 bg-[#f8faff] p-6 md:grid-cols-4">
+          <div className="mt-8 grid gap-4 rounded-3xl border border-black/10 bg-[#f8faff] p-6 md:grid-cols-4">
             {["Monitoring", "Logging", "Alerts", "Performance Tracking"].map((item) => (
               <div key={item} className="flex items-center justify-center gap-3 text-[15px] font-light text-black/65">
-                <CheckCircle2 size={20} className="text-[#3C5B9B]" />
+                <CheckCircle2 size={20} className="text-[#193175]" />
                 {item}
               </div>
             ))}
@@ -735,18 +740,19 @@ export default function WebAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Web App Use Cases
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Web applications for practical business operations.
+                Web applications for everyday business and customer workflows.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              From SaaS platforms to internal tools, we create web applications
-              that simplify processes, connect teams and support digital growth.
+              We build browser-based systems that help teams manage work,
+              customers access services and information move through connected
+              processes.
             </p>
           </div>
 
@@ -755,9 +761,9 @@ export default function WebAppDevelopmentPage() {
               const Icon = item.icon;
 
               return (
-                <div key={item.title} className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]">
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#3C5B9B]/10 transition group-hover:bg-[#3C5B9B]">
-                    <Icon size={24} className="text-[#3C5B9B] transition group-hover:text-white" />
+                <div key={item.title} className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]">
+                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                    <Icon size={24} className="text-[#193175] transition group-hover:text-white" />
                   </div>
 
                   <h3 className="text-[20px] font-light tracking-[-0.3px]">{item.title}</h3>
@@ -772,18 +778,18 @@ export default function WebAppDevelopmentPage() {
       <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#3c5b9b]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
 
             <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering modern web app development
+              Technologies we use for custom web app development
             </h2>
 
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use the right frontend, backend, database and cloud
-              technologies to build secure, scalable and high-performing web
-              applications.
+              We use frontend, backend, database and cloud technologies
+              according to the application&apos;s workflows, data, integration
+              needs and deployment requirements.
             </p>
           </div>
 
@@ -799,13 +805,13 @@ export default function WebAppDevelopmentPage() {
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
                     isActive
                       ? "text-[#161616]"
-                      : "text-[#8d8d8d] hover:text-[#3c5b9b]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
 
                   <span
-                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#3c5b9b] transition-all duration-300 ${
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
                       isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
@@ -843,7 +849,7 @@ export default function WebAppDevelopmentPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#3c5b9b] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -861,24 +867,25 @@ export default function WebAppDevelopmentPage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We build web apps around users, performance and business growth.
+              We build web apps around workflows, users and connected systems.
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              Our approach keeps your web application practical, scalable,
-              secure and easy to use across business operations.
+              Our approach combines workflow planning, product design,
+              application engineering and integration thinking so the web app
+              remains useful as requirements change.
             </p>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
 
@@ -900,16 +907,16 @@ export default function WebAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Case Studies
               </p>
 
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Practical web applications built for real businesses.
+                Web applications shaped around real workflows and users.
               </h2>
             </div>
 
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]">
+            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
@@ -927,8 +934,8 @@ export default function WebAppDevelopmentPage() {
                       {item.title}
                     </h3>
 
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#3C5B9B]/10">
-                      <ArrowRight size={18} className="text-[#3C5B9B]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
+                      <ArrowRight size={18} className="text-[#193175]" />
                     </span>
                   </div>
 
@@ -947,19 +954,19 @@ export default function WebAppDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Support & Optimization
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Web app support that continues after launch.
+                Keep your web app stable as requirements continue to change.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We keep your web application stable, secure and continuously
-              improving with monitoring, updates, optimization and new feature
-              development.
+              After launch, we help resolve issues, maintain access and
+              integrations, improve performance and extend workflows as the
+              application evolves.
             </p>
           </div>
 
@@ -969,8 +976,8 @@ export default function WebAppDevelopmentPage() {
 
               return (
                 <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#3C5B9B]/10">
-                    <Icon size={28} className="text-[#3C5B9B]" />
+                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
+                    <Icon size={28} className="text-[#193175]" />
                   </div>
 
                   <div>
@@ -993,21 +1000,21 @@ export default function WebAppDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about web app development.
+              Common questions about custom web app development.
             </h2>
           </div>
 
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
-              <div key={faq.q} className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#3C5B9B]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"}`}>
+              <div key={faq.q} className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"}`}>
                 <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
                   <span className="flex items-center gap-4">
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#3C5B9B] text-white" : "bg-[#3C5B9B]/10 text-[#3C5B9B] group-hover:bg-[#3C5B9B] group-hover:text-white"}`}>
+                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"}`}>
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
@@ -1016,13 +1023,13 @@ export default function WebAppDevelopmentPage() {
                     </span>
                   </span>
 
-                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#3C5B9B] text-white" : "bg-[#f6f8fc] text-[#3C5B9B] group-hover:bg-[#3C5B9B]/10"}`}>
+                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}>
                     {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 px-15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 px-15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -1034,38 +1041,47 @@ export default function WebAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#3C5B9B] md:min-h-75" data-aos="zoom-in">
-            <div className="hidden w-[32%] shrink-0 md:block">
-              <img src="/about.avif" alt="BrainADZ Live Web App Development" loading="lazy" decoding="async" className="h-full w-full object-cover" />
-            </div>
-
-            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-              <div className="max-w-145">
-                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to build your next web application?
-                </h3>
-
-                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live create a secure, scalable and high-performing
-                  web application for your business.
-                </p>
-              </div>
-
-              <a href="/contact" className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3C5B9B] md:min-w-57.5">
-                <span>Enquire Now</span>
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <PopupForm
-  isOpen={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-/>
+      {/* Final CTA */}
+                  <section className="lazy-section bg-white py-12">
+                                <div className="mx-auto max-w-450 px-8 lg:px-10">
+                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+                                    <div className="hidden w-[32%] shrink-0 md:block">
+                                      <img
+                                        src="/CTA/WebApp-CTA.jpg"
+                                        alt="BrainADZ Live Web App Development Services"
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="h-full w-full object-cover"
+                                      />
+                                    </div>
+                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+                                      <div className="max-w-145">
+                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                                          Ready to build a web application around your business workflow?
+                                        </h3>
+                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                                          Let BrainADZ Live design and develop the frontend, backend, data flows and integrations your web application needs.
+                                        </p>
+                                      </div>
+                                      <button
+                          type="button"
+                          onClick={() => setIsPopupOpen(true)}
+                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+                        >
+                                        <span>Enquire Now</span>
+                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                                          →
+                                        </span>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </section>
+                        
+                              <PopupForm
+                                isOpen={isPopupOpen}
+                                onClose={() => setIsPopupOpen(false)}
+                              />
     </main>
   );
 }

@@ -16,134 +16,136 @@ const timelineData: TimelineItem[] = [
   {
     year: "2014",
     bigYear: "2014",
-    title: "Foundation of digital thinking",
+    title: "The beginning of our technology journey",
     description:
-      "BrainADZ Live began with a clear vision to help businesses use technology in a practical, reliable, and meaningful way.",
+      "BrainADZ Live began with a focus on helping businesses use digital technology in a more practical and accessible way.",
     image: "/about/timeline/2014.jpg",
   },
   {
     year: "2015",
     bigYear: "2015",
-    title: "Early business solutions",
+    title: "Expanding digital delivery",
     description:
-      "We started building business websites, digital platforms, and customer-focused systems for growing brands.",
+      "Our work grew across websites, digital interfaces and business-facing technology requirements.",
     image: "/about/timeline/2015.jpg",
   },
   {
     year: "2016",
     bigYear: "2016",
-    title: "Software-first growth",
+    title: "Moving deeper into software",
     description:
-      "Our work expanded into custom software, dashboards, and business tools designed to simplify daily operations.",
+      "We expanded beyond basic digital delivery into custom software, dashboards and systems built around internal workflows.",
     image: "/about/timeline/2016.jpg",
   },
   {
     year: "2017",
     bigYear: "2017",
-    title: "Digital transformation services",
+    title: "A stronger focus on business workflows",
     description:
-      "We started helping businesses modernize workflows with better design, technology consulting, and digital execution.",
+      "Projects increasingly started with understanding users, processes and operational requirements before technology decisions were made.",
     image: "/about/timeline/2017.jpg",
   },
   {
     year: "2018",
     bigYear: "2018",
-    title: "Automation-focused approach",
+    title: "Connecting repetitive processes",
     description:
-      "Automation became a stronger part of our delivery, helping teams reduce repetitive work and improve efficiency.",
+      "Automation and connected workflows became a larger part of our work as businesses looked to reduce manual handoffs.",
     image: "/about/timeline/2018.jpg",
   },
   {
     year: "2019",
     bigYear: "2019",
-    title: "Smart display solutions",
+    title: "Expanding into digital signage",
     description:
-      "BrainADZ Live moved deeper into digital standees, kiosks, LED walls, and smart display communication systems.",
+      "Our capabilities grew into digital standees, kiosks, displays and technology designed for customer-facing physical environments.",
     image: "/about/timeline/2019.jpg",
   },
   {
     year: "2020",
     bigYear: "2020",
-    title: "Remote-ready digital systems",
+    title: "Supporting more connected operations",
     description:
-      "We focused on reliable software, online platforms, and connected systems that supported remote and hybrid work.",
+      "Web-based platforms and remotely accessible systems became increasingly important for teams operating across different locations.",
     image: "/about/timeline/2020.jpg",
   },
   {
     year: "2021",
     bigYear: "2021",
-    title: "Cloud and scalable systems",
+    title: "Building for connected systems",
     description:
-      "We strengthened our technology stack with cloud-ready architecture, secure systems, and scalable digital platforms.",
+      "Our project approach expanded further into scalable applications, integrations and systems designed to exchange information more effectively.",
     image: "/about/01.webp",
   },
   {
     year: "2022",
     bigYear: "2022",
-    title: "AI-enabled innovation",
+    title: "Growing business platform capabilities",
     description:
-      "AI and intelligent automation became part of our solution strategy to improve analytics, engagement, and operations.",
+      "CRM, ERP and connected operational platforms became a stronger part of our work across sales, inventory, reporting and internal coordination.",
     image: "/about/4.webp",
   },
   {
     year: "2023",
     bigYear: "2023",
-    title: "Hardware and software integration",
+    title: "Bringing hardware and software together",
     description:
-      "We connected software platforms with kiosks, smart displays, and interactive hardware to create complete solutions.",
+      "Our work increasingly connected software platforms with kiosks, displays and other customer-facing digital technology.",
     image: "/about/5.webp",
   },
   {
     year: "2024",
     bigYear: "2024",
-    title: "Enterprise-ready delivery",
+    title: "A more structured delivery approach",
     description:
-      "Our process became more structured with planning, design, development, deployment, and long-term support.",
+      "Discovery, planning, UX, development, integration, validation and deployment became clearer stages within our project process.",
     image: "/about/256.png",
   },
   {
     year: "2025",
     bigYear: "2025",
-    title: "A decade of digital excellence",
+    title: "A broader technology portfolio",
     description:
-      "BrainADZ Live continued building smarter digital systems across software, automation, AI, kiosks, standees, LED walls, and interactive displays.",
+      "BrainADZ Live continued expanding across software services, software platforms, digital signage products and technology consulting.",
     image: "/about/2025.jpeg",
   },
   {
     year: "Present",
     bigYear: "NOW",
-    title: "Building the future with intelligence",
+    title: "Building connected technology experiences",
     description:
-      "Today, BrainADZ Live is focused on future-ready digital ecosystems where hardware, software, automation, and AI work together to deliver measurable business impact.",
+      "Today, our focus is on helping businesses connect software, platforms, integrations and digital customer environments around practical requirements.",
     image: "/about/2026.jpeg",
   },
 ];
 
 export default function DigitalExcellenceTimeline() {
   const [activeIndex, setActiveIndex] = useState(timelineData.length - 1);
+
   const activeItem = timelineData[activeIndex];
 
   return (
     <section className="relative overflow-hidden bg-white px-5 py-24 text-[#161616] md:px-8 lg:px-12 lg:py-32">
       {/* LIGHT BRAND BACKGROUND */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_48%,rgba(60,91,155,0.08)_0%,rgba(60,91,155,0.03)_30%,transparent_60%)]" />
-      <div className="pointer-events-none absolute right-[-120px] top-[100px] h-[340px] w-[340px] rounded-full bg-[#3c5b9b]/[0.06] blur-[90px]" />
+
+      <div className="pointer-events-none absolute right-[-120px] top-[100px] h-[340px] w-[340px] rounded-full bg-[#193175]/[0.06] blur-[90px]" />
 
       <div className="relative z-10 mx-auto max-w-[1800px]">
         {/* HEADING */}
-        <div className="mb-16 max-w-[920px]" data-aos="fade-up">
-          <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#3c5b9b]">
+        <div className="mb-16 max-w-[940px]" data-aos="fade-up">
+          <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
             Our Journey
           </p>
 
           <h2 className="text-[38px] font-light leading-[1.08] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-            A decade of digital excellence
+            How our technology capabilities have expanded
           </h2>
 
-          <p className="mt-6 max-w-[760px] text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-            From early digital solutions to AI-enabled systems, our journey
-            reflects continuous growth in software, automation, smart displays,
-            and business-focused technology.
+          <p className="mt-6 max-w-[800px] text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+            Our journey reflects a gradual expansion from digital delivery into
+            software, business platforms, integrations and technology for
+            customer-facing physical environments.
           </p>
         </div>
 
@@ -168,8 +170,8 @@ export default function DigitalExcellenceTimeline() {
                     src={activeItem.image}
                     alt={activeItem.title}
                     className="timeline-image relative z-10 h-[430px] w-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
                     }}
                   />
 
@@ -182,13 +184,13 @@ export default function DigitalExcellenceTimeline() {
             <div className="pointer-events-none absolute left-[32%] top-[42%] z-30 -translate-y-1/2">
               <span
                 key={activeItem.bigYear}
-                className="timeline-year block select-none text-[190px] font-semibold leading-none tracking-[-8px] text-[#3c5b9b] drop-shadow-[0_14px_40px_rgba(60,91,155,0.16)] xl:text-[230px]"
+                className="timeline-year block select-none text-[190px] font-semibold leading-none tracking-[-8px] text-[#193175] drop-shadow-[0_14px_40px_rgba(60,91,155,0.16)] xl:text-[230px]"
               >
                 {activeItem.bigYear}
               </span>
             </div>
 
-            {/* RIGHT CONTENT - STARTS AFTER YEAR BOTTOM */}
+            {/* RIGHT CONTENT */}
             <div className="absolute left-[68%] top-[60%] z-40 w-[29%]">
               <div
                 key={`${activeItem.year}-${activeItem.title}`}
@@ -220,8 +222,8 @@ export default function DigitalExcellenceTimeline() {
                       src={activeItem.image}
                       alt={activeItem.title}
                       className="timeline-image relative z-10 h-[300px] w-full object-cover md:h-[380px]"
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
+                      onError={(event) => {
+                        event.currentTarget.style.display = "none";
                       }}
                     />
                   </div>
@@ -230,7 +232,7 @@ export default function DigitalExcellenceTimeline() {
                 <div className="pointer-events-none absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2">
                   <span
                     key={`mobile-year-${activeItem.bigYear}`}
-                    className="timeline-year block select-none text-[104px] font-semibold leading-none tracking-[-5px] text-[#3c5b9b] sm:text-[135px] md:text-[170px]"
+                    className="timeline-year block select-none text-[104px] font-semibold leading-none tracking-[-5px] text-[#193175] sm:text-[135px] md:text-[170px]"
                   >
                     {activeItem.bigYear}
                   </span>
@@ -252,10 +254,10 @@ export default function DigitalExcellenceTimeline() {
             </div>
           </div>
 
-          {/* TIMELINE */}
+          {/* TIMELINE NAVIGATION */}
           <div className="mt-16 overflow-x-auto pb-4 lg:mt-4">
             <div className="relative min-w-[1180px] px-2">
-              <div className="absolute left-6 right-6 top-[15px] h-[2px] bg-[#3c5b9b]/70" />
+              <div className="absolute left-6 right-6 top-[15px] h-[2px] bg-[#193175]/70" />
 
               <div className="relative z-10 flex items-start justify-between">
                 {timelineData.map((item, index) => {
@@ -271,8 +273,8 @@ export default function DigitalExcellenceTimeline() {
                       <span
                         className={`h-[28px] w-[42px] rounded-full border transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                           isActive
-                            ? "scale-110 border-[#3c5b9b] bg-[#3c5b9b] shadow-[0_0_24px_rgba(60,91,155,0.35)]"
-                            : "scale-100 border-[#3c5b9b] bg-[#f8faff] group-hover:bg-[#3c5b9b]/20"
+                            ? "scale-110 border-[#193175] bg-[#193175] shadow-[0_0_24px_rgba(60,91,155,0.35)]"
+                            : "scale-100 border-[#193175] bg-[#f8faff] group-hover:bg-[#193175]/20"
                         }`}
                       />
 

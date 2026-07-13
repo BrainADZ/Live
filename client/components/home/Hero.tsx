@@ -33,7 +33,6 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster="/hero/hero-poster.jpg"
       >
         <source src="/hero/hero_video.mp4" type="video/mp4" />
       </video>
@@ -56,21 +55,19 @@ export default function Hero() {
           data-aos-duration="520"
         >
           <h1 className="text-[38px] font-semibold leading-[1.16] tracking-[-1.2px] text-white sm:text-[40px] md:text-[48px] lg:text-[56px]">
-            Engineering the Next Generation of Digital Systems with AI
+            Building Smarter Digital Systems for Modern Businesses
           </h1>
 
           <p className="mt-7 max-w-190 text-[14px] font-normal leading-[1.65] tracking-[-0.1px] text-white/90 md:text-[16px]">
-            BrainADZ Live engineers secure, scalable digital systems by
-            combining strong architecture, data engineering, and AI
-            capabilities, helping organizations move from strategy to reliable
-            systems in production.
+            BrainADZ Live builds secure, scalable digital ecosystems by combining software engineering, intelligent platforms, cloud capabilities, and advanced digital signage solutions to help businesses modernize operations and create connected experiences.
+
           </p>
 
           <div className="mt-8.5">
             <button
               type="button"
               onClick={() => setIsPopupOpen(true)}
-              className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
             >
               Consult Our Strategy Team
               <span className="text-[20px] leading-none">↗</span>

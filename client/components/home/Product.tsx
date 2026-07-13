@@ -41,7 +41,7 @@ const products = [
   {
     title: "Interactive Teaching & Conf.",
     href: "/digital-signage-products/interactive-teaching-display",
-    image: "/products/Teaching.png",
+    image: "/products/Teaching.jpeg",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function ProductSection() {
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
           <div data-aos="fade-right">
-            <p className="mb-4 text-[14px] font-normal uppercase tracking-[2px] text-[#3c5b9b]">
+            <p className="mb-4 text-[14px] font-normal uppercase tracking-[2px] text-[#193175]">
               Our Products
             </p>
 
@@ -102,21 +102,21 @@ export default function ProductSection() {
                   />
 
                   {/* IMAGE HOVER OVERLAY */}
-                  <div className="absolute inset-0 z-20 bg-[#3c5b9b]/0 transition-all duration-500 group-hover:bg-[#3c5b9b]/10" />
+                  <div className="absolute inset-0 z-20 bg-[#193175]/0 transition-all duration-500 group-hover:bg-[#193175]/10" />
                 </div>
 
                 {/* CONTENT AREA */}
                 <div className="relative flex min-h-37.5 flex-1 flex-col justify-between p-6">
-                  <h3 className="max-w-72.5 text-[24px] font-light leading-[1.2] tracking-[-0.6px] text-[#161616] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-[#3c5b9b] md:text-[26px]">
+                  <h3 className="max-w-72.5 text-[24px] font-light leading-[1.2] tracking-[-0.6px] text-[#161616] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-[#193175] md:text-[26px]">
                     {product.title}
                   </h3>
 
                   <div className="mt-9 flex items-center justify-between">
-                    <span className="text-[15px] font-normal text-[#3c5b9b] transition-all duration-500 group-hover:translate-x-1">
+                    <span className="text-[15px] font-normal text-[#193175] transition-all duration-500 group-hover:translate-x-1">
                       Explore product
                     </span>
 
-                    <span className="flex h-10.5 w-10.5 items-center justify-center rounded-full border border-[#3c5b9b]/30 text-[30px] font-light leading-none text-[#3c5b9b] transition-all duration-500 group-hover:translate-x-1 group-hover:border-[#3c5b9b] group-hover:bg-[#3c5b9b] group-hover:text-white">
+                    <span className="flex h-10.5 w-10.5 items-center justify-center rounded-full border border-[#193175]/30 text-[30px] font-light leading-none text-[#193175] transition-all duration-500 group-hover:translate-x-1 group-hover:border-[#193175] group-hover:bg-[#193175] group-hover:text-white">
                       →
                     </span>
                   </div>
@@ -130,7 +130,7 @@ export default function ProductSection() {
               <span className="product-border product-border-left" />
 
               {/* BOTTOM LINE */}
-              <span className="absolute bottom-0 left-0 z-30 h-0.75 w-0 bg-[#3c5b9b] transition-all duration-500 group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 z-30 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
             </a>
           ))}
         </div>
@@ -140,7 +140,7 @@ export default function ProductSection() {
         .product-border {
           position: absolute;
           z-index: 30;
-          background: #3c5b9b;
+          background: #193175;
           pointer-events: none;
         }
 

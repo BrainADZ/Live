@@ -57,7 +57,7 @@ export default function DemosPage() {
     <main className="bg-white text-[#111827]">
       <section className="relative min-h-120 overflow-hidden bg-black text-white md:min-h-135">
         <img
-          src="/services/hero/how-to-be-a-software-developer.jpg"
+          src="/hero/software-development.jpg"
           alt="BrainADZ software demos"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -83,7 +83,7 @@ export default function DemosPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-7 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Demo Library
               </p>
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
@@ -105,7 +105,7 @@ export default function DemosPage() {
               return (
                 <article
                   key={demo.title}
-                  className="group overflow-hidden border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#3C5B9B]/35 hover:shadow-[0_28px_90px_rgba(60,91,155,0.13)]"
+                  className="group overflow-hidden border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#193175]/35 hover:shadow-[0_28px_90px_rgba(60,91,155,0.13)]"
                 >
                   <div className="relative h-58 overflow-hidden bg-[#f6f8fc]">
                     <img
@@ -113,13 +113,13 @@ export default function DemosPage() {
                       alt={demo.title}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#3C5B9B] shadow-[0_12px_35px_rgba(0,0,0,0.16)]">
+                    <div className="absolute left-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#193175] shadow-[0_12px_35px_rgba(0,0,0,0.16)]">
                       <Icon size={23} />
                     </div>
                   </div>
 
                   <div className="p-6">
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                       {demo.category}
                     </p>
                     <h3 className="mt-3 text-[25px] font-light leading-tight tracking-[-0.5px]">
@@ -129,7 +129,7 @@ export default function DemosPage() {
                     <div className="mt-5 grid gap-3">
                       {demo.points.map((point) => (
                         <div key={point} className="flex items-center gap-3">
-                          <CheckCircle2 size={18} className="text-[#3C5B9B]" />
+                          <CheckCircle2 size={18} className="text-[#193175]" />
                           <span className="text-[14px] font-light text-black/65">
                             {point}
                           </span>
@@ -139,7 +139,7 @@ export default function DemosPage() {
 
                     <Link
                       href={demo.href}
-                      className="mt-7 inline-flex h-12 items-center justify-center gap-3 bg-[#3C5B9B] px-5 text-[13px] font-bold text-white transition hover:bg-[#2f4a82]"
+                      className="mt-7 inline-flex h-12 items-center justify-center gap-3 bg-[#193175] px-5 text-[13px] font-bold text-white transition hover:bg-[#2f4a82]"
                     >
                       Open Demo <ArrowRight size={16} />
                     </Link>

@@ -3,126 +3,99 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   CheckCircle2,
   Minus,
   Plus,
   Download,
-  ShieldCheck,
-  Settings2,
-  PackageCheck,
-  Truck,
-  Wrench,
 } from "lucide-react";
 
 const benefits = [
   {
-    title: "Strong Floor Presence",
-    text: "A stable free-standing structure that keeps your promotional message visible in stores, lobbies, malls and event spaces.",
+    title: "Strong Digital Presence",
+    text: "A freestanding screen-based display that keeps promotional and informational content visible across customer-facing spaces.",
   },
   {
-    title: "Premium Branding Look",
-    text: "Clean display format that improves brand presentation without needing wall space or permanent fixtures.",
+    title: "Dynamic Content Display",
+    text: "Present videos, images, campaigns, announcements and business information through one digital display point.",
   },
   {
-    title: "Easy Placement",
-    text: "Place it near entrances, counters, product zones or walkways to guide customers and highlight offers.",
+    title: "Flexible Content Setup",
+    text: "Use local media playback or add signage software when the project requires managed content control.",
   },
   {
-    title: "Reusable Campaign Asset",
-    text: "Update graphics and messaging for new promotions, events or seasonal campaigns whenever needed.",
+    title: "Requirement-Based Deployment",
+    text: "Plan the enclosure finish, branding, content setup and placement according to the actual business requirement.",
   },
 ];
 
 const specifications = [
-  ["Product Type", "Floor mounted standee display solution"],
-  ["Usage", "Indoor branding, retail promotion, wayfinding and customer information"],
-  ["Frame", "Durable standing structure with stable floor base"],
-  ["Print", "Custom brand graphics, promotional artwork and information display"],
-  ["Placement", "Retail stores, showrooms, malls, offices, exhibitions and events"],
-  ["Customization", "Size, artwork, branding, finish and installation style can be customized"],
+  ["Product Type", "Floor mounted digital signage display"],
+  ["Content Support", "Video and image playback"],
+  ["Playback Setup", "Local media playback based on configured setup"],
+  ["Content Management", "Optional signage application when required"],
+  ["Remote Management", "Optional cloud signage management"],
+  [
+    "Customization",
+    "Enclosure finish, branding, content setup and deployment planning based on requirement",
+  ],
 ];
 
 const applications = [
   "Retail Stores",
   "Shopping Malls",
-  "Corporate Offices",
-  "Hospitals & Clinics",
+  "Corporate & Reception",
+  "Healthcare Facilities",
   "Events & Exhibitions",
-  "Hotels & Restaurants",
+  "Hotels & Hospitality",
 ];
 
 const features = [
   {
-    title: "Stable Standing Base",
-    text: "Designed to stay balanced in high-traffic indoor environments while keeping your message clearly visible.",
+    title: "Floor Mounted Display Format",
+    text: "A freestanding digital signage format designed for visible placement in customer-facing business environments.",
   },
   {
-    title: "Custom Graphic Display",
-    text: "Showcase offers, product launches, directions, service information or brand campaigns with customized print design.",
+    title: "Video & Image Playback",
+    text: "Display promotional videos, campaign creatives, product information, announcements and other visual content.",
   },
   {
-    title: "Professional Finish",
-    text: "A clean and premium display appearance suitable for both commercial and corporate environments.",
+    title: "Optional Signage Software",
+    text: "Add a signage application when the deployment requires structured content scheduling and management.",
   },
   {
-    title: "Flexible Campaign Usage",
-    text: "Use it for product promotions, customer guidance, event branding, seasonal campaigns and business announcements.",
-  },
-];
-
-const processSteps = [
-  {
-    title: "Requirement Discussion",
-    text: "We understand your placement area, branding goal, size requirement and display purpose.",
-  },
-  {
-    title: "Design Planning",
-    text: "Our team prepares the artwork direction and display layout according to your brand communication.",
-  },
-  {
-    title: "Material Selection",
-    text: "We suggest suitable frame, base and print material based on usage and environment.",
-  },
-  {
-    title: "Production",
-    text: "The standee is produced with custom graphics, proper finishing and durable structure.",
-  },
-  {
-    title: "Quality Check",
-    text: "We check print clarity, finishing, balance and display quality before final delivery.",
-  },
-  {
-    title: "Delivery & Setup",
-    text: "We provide delivery guidance and installation support for smooth on-site placement.",
+    title: "Optional Cloud Management",
+    text: "Use cloud signage management when remote content control is required for the project.",
   },
 ];
 
 const faqs = [
   {
-    q: "Can the Floor Mounted Standee size be customized?",
-    a: "Yes. Size, branding, artwork and display format can be customized according to your space and campaign requirement.",
+    q: "What is a Floor Mounted Digital Standee?",
+    a: "A Floor Mounted Digital Standee is a freestanding screen-based signage unit used to display videos, images, promotions, announcements and business information in customer-facing spaces.",
   },
   {
-    q: "Where can this standee be used?",
-    a: "It can be used in retail stores, malls, offices, hospitals, restaurants, exhibitions, hotels and customer-facing business areas.",
+    q: "What type of content can be displayed?",
+    a: "The standee can be configured for video and image playback, including promotional campaigns, product information, launches, announcements and business communication.",
   },
   {
-    q: "Can we change the print later?",
-    a: "Yes. Depending on the selected structure, the graphic can be updated for new campaigns and offers.",
+    q: "Can it work with local media playback?",
+    a: "Yes. Local media playback can be included as part of the configured setup when remote content management is not required.",
   },
   {
-    q: "Is it suitable for indoor branding?",
-    a: "Yes. Floor mounted standees are ideal for indoor branding, customer information, offers and promotional communication.",
+    q: "Can content be managed through signage software or the cloud?",
+    a: "Yes. A signage application or cloud signage management can be added when the project requires managed or remote content control.",
   },
   {
-    q: "Do you help with design also?",
-    a: "Yes. BrainADZ can help with artwork planning, design direction and branding layout for your standee.",
+    q: "Can the Floor Mounted Digital Standee be customized?",
+    a: "The enclosure finish, branding treatment, content-management setup and deployment approach can be planned according to the project requirement.",
   },
 ];
 
 export default function FloorMountedStandeePage() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
@@ -130,8 +103,8 @@ export default function FloorMountedStandeePage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/products/Floor.png"
-          alt="Floor Mounted Standee"
+          src="/hero/floor-mounted.jpg"
+          alt="Floor Mounted Digital Standee by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -142,36 +115,42 @@ export default function FloorMountedStandeePage() {
             <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Products</span>
+
             <span className="text-white/80">/</span>
+
             <span className="text-white/90">Floor Mounted Standee</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Floor Mounted Standee
+              Floor Mounted Digital Standee for Customer-Facing Communication
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Premium floor mounted standee solutions for retail promotions,
-              customer guidance, events and professional indoor branding.
+              A freestanding digital signage display for presenting videos,
+              images, promotions, announcements and business information across
+              retail, corporate, event and hospitality spaces.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="/contact"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#3C5B9B] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
-                Enquire Now
+                Request a Quote
                 <span className="text-[20px] leading-none">↗</span>
-              </a>
+              </button>
 
               <a
                 href="/brochure/BrainADZLive.pdf"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-3 rounded-full border border-white/35 px-8 text-[13px] font-bold text-white transition duration-300 hover:border-white hover:bg-white hover:text-[#3C5B9B]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-3 rounded-full border border-white/35 px-8 text-[13px] font-bold text-white transition duration-300 hover:border-white hover:bg-white hover:text-[#193175]"
               >
                 Download Brochure
                 <Download size={17} />
@@ -185,45 +164,56 @@ export default function FloorMountedStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Product Overview
             </p>
 
             <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A clean and stable branding display for high-visibility spaces.
+              A freestanding digital display for visible business
+              communication.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              Floor mounted standees are ideal for businesses that need a
-              professional free-standing display without wall installation. They
-              help promote offers, guide customers, display product information
-              and improve brand visibility in busy indoor environments.
+              The BrainADZ Live Floor Mounted Digital Standee is a screen-based
+              signage solution designed for promotional content, customer
+              information and business communication. It can display changing
+              videos and images through local playback or an optional signage
+              management setup based on the project requirement.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
-              <div className="border-l-2 border-[#3C5B9B] pl-5">
-                <h3 className="text-[20px] font-light">Indoor Branding</h3>
+              <div className="border-l-2 border-[#193175] pl-5">
+                <h3 className="text-[20px] font-light">
+                  Digital Content Display
+                </h3>
+
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Perfect for stores, offices, exhibitions and customer areas.
+                  Present promotional videos, images and business information
+                  through one screen-based display.
                 </p>
               </div>
 
-              <div className="border-l-2 border-[#3C5B9B] pl-5">
-                <h3 className="text-[20px] font-light">Custom Display</h3>
+              <div className="border-l-2 border-[#193175] pl-5">
+                <h3 className="text-[20px] font-light">
+                  Flexible Content Setup
+                </h3>
+
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Designed according to your brand, campaign and placement needs.
+                  Choose local playback or add signage management according to
+                  the deployment requirement.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#3C5B9B]/10 blur-3xl" />
+            <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#193175]/10 blur-3xl" />
+
             <div className="relative overflow-hidden rounded-[30px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
                 src="/products/Floor.png"
-                alt="Floor Mounted Standee Overview"
-                className="h-[520px] w-full object-cover"
+                alt="Floor Mounted Digital Standee Overview"
+                className="h-130 w-full object-cover"
               />
             </div>
           </div>
@@ -234,19 +224,19 @@ export default function FloorMountedStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose Floor Mounted Standee
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for better visibility, durability and flexible placement.
+              Built for visible digital content in customer-facing spaces.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {benefits.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
+                <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
 
@@ -268,18 +258,19 @@ export default function FloorMountedStandeePage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-                Product Specifications
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Configuration Details
               </p>
 
               <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Clear details for planning the right display.
+                Plan the right display and content-management setup.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Specifications can be customized based on brand requirement,
-              placement area, artwork size and installation environment.
+              The final setup can be planned according to content requirements,
+              placement, branding, management needs and the deployment
+              environment.
             </p>
           </div>
 
@@ -289,9 +280,10 @@ export default function FloorMountedStandeePage() {
                 key={label}
                 className="grid gap-3 border-b border-black/10 py-5 md:grid-cols-[0.35fr_0.65fr]"
               >
-                <p className="text-[15px] font-semibold text-[#3C5B9B]">
+                <p className="text-[15px] font-semibold text-[#193175]">
                   {label}
                 </p>
+
                 <p className="text-[16px] font-light leading-[1.65] text-black/70">
                   {value}
                 </p>
@@ -307,48 +299,51 @@ export default function FloorMountedStandeePage() {
           <div className="overflow-hidden rounded-[28px] shadow-[0_24px_75px_rgba(0,0,0,0.08)]">
             <img
               src="/products/Floor.png"
-              alt="Floor Mounted Standee Features"
-              className="h-[560px] w-full object-cover"
+              alt="Floor Mounted Digital Standee Features"
+              className="h-140 w-full object-cover"
             />
           </div>
 
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Product Features
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for stability, visibility and long-term business branding.
+              Digital signage designed around content and placement
+              requirements.
             </h2>
 
             <p className="mt-6 text-[16px] font-light leading-[1.75] text-black/65">
-              Floor mounted standees create a strong brand presence while
-              remaining practical for everyday commercial use. They work well in
-              retail, events, reception areas and customer guidance zones.
+              Floor Mounted Digital Standees provide a dedicated screen-based
+              communication point for promotional content, information and
+              customer-facing campaigns across business spaces.
             </p>
 
             <div className="mt-8 space-y-5">
               {[
                 {
-                  title: "Heavy-duty construction",
-                  text: "Engineered for daily commercial use with excellent balance and durability.",
+                  title: "Video and image playback",
+                  text: "Present promotional videos, campaign creatives, announcements and other visual content.",
                 },
                 {
-                  title: "Easy graphic replacement",
-                  text: "Update promotional graphics whenever your campaign, offer or message changes.",
+                  title: "Local media playback",
+                  text: "Use a configured local content setup when remote content management is not required.",
                 },
                 {
-                  title: "Premium branding appearance",
-                  text: "Creates a clean, professional and organized look for indoor business spaces.",
+                  title: "Optional signage management",
+                  text: "Add signage software or cloud management when the deployment requires managed content control.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <CheckCircle2
-                    className="mt-1 shrink-0 text-[#3C5B9B]"
+                    className="mt-1 shrink-0 text-[#193175]"
                     size={22}
                   />
+
                   <div>
                     <h3 className="text-[20px] font-light">{item.title}</h3>
+
                     <p className="mt-2 text-[15px] font-light leading-[1.7] text-black/65">
                       {item.text}
                     </p>
@@ -364,12 +359,13 @@ export default function FloorMountedStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Ideal Applications
             </p>
 
             <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Suitable for different business environments.
+              Suitable for spaces that need visible and changing digital
+              content.
             </h2>
           </div>
 
@@ -377,9 +373,10 @@ export default function FloorMountedStandeePage() {
             {applications.map((item) => (
               <div
                 key={item}
-                className="group rounded-[24px] border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#3C5B9B]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+                className="group rounded-3xl border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
               >
-                <CheckCircle2 size={26} className="mb-5 text-[#3C5B9B]" />
+                <CheckCircle2 size={26} className="mb-5 text-[#193175]" />
+
                 <h3 className="text-[21px] font-light tracking-[-0.4px]">
                   {item}
                 </h3>
@@ -393,19 +390,19 @@ export default function FloorMountedStandeePage() {
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Key Features
             </p>
 
             <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Product features designed for real business use.
+              Practical digital signage options for real business use.
             </h2>
 
             <div className="mt-8 overflow-hidden rounded-[26px] bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
               <img
                 src="/products/Floor.png"
-                alt="Floor Mounted Standee Benefits"
-                className="h-[360px] w-full object-cover"
+                alt="Floor Mounted Digital Standee Benefits"
+                className="h-90 w-full object-cover"
               />
             </div>
           </div>
@@ -416,7 +413,7 @@ export default function FloorMountedStandeePage() {
                 key={item.title}
                 className="grid gap-5 border-b border-black/10 py-7 md:grid-cols-[70px_1fr]"
               >
-                <span className="text-[14px] font-semibold text-[#3C5B9B]">
+                <span className="text-[14px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
 
@@ -424,43 +421,11 @@ export default function FloorMountedStandeePage() {
                   <h3 className="text-[25px] font-light tracking-[-0.5px]">
                     {item.title}
                   </h3>
+
                   <p className="mt-3 text-[15px] font-light leading-[1.75] text-black/65">
                     {item.text}
                   </p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
-        <div className="mx-auto max-w-450">
-          <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
-              Process
-            </p>
-
-            <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              From requirement to final standee setup.
-            </h2>
-          </div>
-
-          <div className="grid gap-x-10 gap-y-7 md:grid-cols-2 lg:grid-cols-3">
-            {processSteps.map((item, index) => (
-              <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#3C5B9B]">
-                  Step {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
-                  {item.title}
-                </h3>
-
-                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                  {item.text}
-                </p>
               </div>
             ))}
           </div>
@@ -472,20 +437,20 @@ export default function FloorMountedStandeePage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Product Gallery
               </p>
 
               <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Visual examples for floor mounted standee usage.
+                Floor Mounted Digital Standee views and deployment examples.
               </h2>
             </div>
 
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#3C5B9B]"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
             >
-              Request Custom Design <ArrowRight size={18} />
+              Discuss Your Requirement <ArrowRight size={18} />
             </a>
           </div>
 
@@ -502,7 +467,7 @@ export default function FloorMountedStandeePage() {
               >
                 <img
                   src={image}
-                  alt={`Floor Mounted Standee Gallery ${index + 1}`}
+                  alt={`Floor Mounted Digital Standee Gallery ${index + 1}`}
                   className="h-72 w-full object-cover transition duration-500 hover:scale-105"
                 />
               </div>
@@ -515,12 +480,12 @@ export default function FloorMountedStandeePage() {
       <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#3C5B9B]">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Floor Mounted Standee.
+              Common questions about Floor Mounted Digital Standee.
             </h2>
           </div>
 
@@ -530,20 +495,22 @@ export default function FloorMountedStandeePage() {
                 key={faq.q}
                 className={`overflow-hidden rounded-[26px] border bg-white transition ${
                   openFaq === index
-                    ? "border-[#3C5B9B]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
+                    ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]"
                     : "border-black/10"
                 }`}
               >
                 <button
                   type="button"
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                     {faq.q}
                   </span>
 
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#3C5B9B]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
                     {openFaq === index ? (
                       <Minus size={18} />
                     ) : (
@@ -553,7 +520,7 @@ export default function FloorMountedStandeePage() {
                 </button>
 
                 {openFaq === index && (
-                  <div className="mx-5 border-t border-[#3C5B9B]/15 pb-6 pt-4 md:mx-6">
+                  <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
                     <p className="text-[15px] font-light leading-[1.75] text-black/65">
                       {faq.a}
                     </p>
@@ -565,41 +532,55 @@ export default function FloorMountedStandeePage() {
         </div>
       </section>
 
-      {/* FINAL CTA WITH IMAGE */}
-      <section className="bg-white py-12">
+      {/* FINAL CTA */}
+      <section className="lazy-section bg-white py-12">
         <div className="mx-auto max-w-450 px-8 lg:px-10">
-          <div className="grid min-h-75 overflow-hidden bg-[#3C5B9B] md:grid-cols-[1.25fr_0.75fr]">
-            <div className="flex flex-col justify-center px-7 py-10 md:px-10 lg:px-14">
-              <h3 className="max-w-150 text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                Need a custom Floor Mounted Standee for your business?
-              </h3>
-
-              <p className="mt-4 max-w-150 text-[16px] font-light leading-[1.55] text-white">
-                Connect with BrainADZ and get a professional display solution
-                customized for your space, campaign and brand communication.
-              </p>
-
-              <a
-                href="/contact"
-                className="group mt-8 inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition hover:bg-white hover:text-[#3C5B9B]"
-              >
-                <span>Get Quote</span>
-                <span className="text-[26px] transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/products/Floor.png"
+                alt="Floor Mounted Digital Standee showcase"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "/about.avif";
+                }}
+              />
             </div>
 
-            <div className="hidden md:block">
-              <img
-                src="/products/floor-mounted-cta.webp"
-                alt="Custom Floor Mounted Standee"
-                className="h-full w-full object-cover"
-              />
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-150">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Planning a Floor Mounted Digital Standee deployment?
+                </h3>
+
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Tell us where the display will be placed, what content you
+                  want to show and how you want to manage it.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Request a Quote</span>
+
+                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <PopupForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </main>
   );
 }

@@ -89,9 +89,9 @@ export default function DemoForm({
   if (!isOpen) return null;
 
   const fieldClass =
-    "h-12.5 w-full rounded-[10px] border border-[#d4deeb] bg-white pl-11 pr-4 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#3C5B9B] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]";
+    "h-12.5 w-full rounded-[10px] border border-[#d4deeb] bg-white pl-11 pr-4 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]";
   const selectClass =
-    "h-12.5 w-full appearance-none rounded-[10px] border border-[#d4deeb] bg-white px-4 pr-10 text-[14px] font-light text-[#607089] outline-none transition focus:border-[#3C5B9B] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]";
+    "h-12.5 w-full appearance-none rounded-[10px] border border-[#d4deeb] bg-white px-4 pr-10 text-[14px] font-light text-[#607089] outline-none transition focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]";
   const iconClass =
     "pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#7b8492]";
 
@@ -109,19 +109,19 @@ export default function DemoForm({
           type="button"
           aria-label="Close demo form"
           onClick={onClose}
-          className="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-[#6d6d6d] shadow-[0_12px_30px_rgba(0,0,0,0.12)] transition hover:bg-[#3C5B9B] hover:text-white"
+          className="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-[#6d6d6d] shadow-[0_12px_30px_rgba(0,0,0,0.12)] transition hover:bg-[#193175] hover:text-white"
         >
           <X size={24} strokeWidth={2.2} />
         </button>
 
         <div className="relative hidden min-h-[720px] overflow-hidden bg-black lg:block">
           <img
-            src="/hero/crm.avif"
+            src="/hero/crm-software.jpg"
             alt="BrainADZ demo preview"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12)_0%,rgba(0,0,0,0.58)_48%,rgba(0,0,0,0.94)_100%)]" />
-          <div className="absolute inset-0 bg-[#3C5B9B]/20" />
+          <div className="absolute inset-0 bg-[#193175]/20" />
 
           <div className="relative z-10 flex h-full flex-col justify-end p-9 text-white">
             <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-[#a9c5ff]">
@@ -152,7 +152,7 @@ export default function DemoForm({
 
         <div className="max-h-[94vh] overflow-y-auto px-5 py-7 md:px-8 md:py-8 lg:px-9">
           <div className="pr-12">
-            <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#3C5B9B]">
+            <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
               View Demo
             </p>
             <h2 className="text-[34px] font-light leading-tight tracking-[-0.9px] text-black md:text-[42px]">
@@ -274,7 +274,7 @@ export default function DemoForm({
                 rows={4}
                 required
                 placeholder="Describe your requirements"
-                className="w-full resize-none rounded-[10px] border border-[#d4deeb] bg-white px-4 py-3.5 pl-11 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#3C5B9B] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
+                className="w-full resize-none rounded-[10px] border border-[#d4deeb] bg-white px-4 py-3.5 pl-11 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
               />
             </div>
 
@@ -325,7 +325,7 @@ export default function DemoForm({
                     type="button"
                     aria-label="Refresh captcha"
                     onClick={refreshCaptcha}
-                    className="flex h-8 w-8 items-center justify-center rounded-full text-[#3C5B9B] transition hover:bg-[#e6efff]"
+                    className="flex h-8 w-8 items-center justify-center rounded-full text-[#193175] transition hover:bg-[#e6efff]"
                   >
                     <RotateCw size={18} />
                   </button>
@@ -345,7 +345,7 @@ export default function DemoForm({
                       setCaptchaError("");
                     }}
                     placeholder="Enter the captcha"
-                    className="h-12.5 w-full rounded-[10px] border border-[#d4deeb] bg-white px-4 text-[14px] font-light uppercase text-[#243247] outline-none transition placeholder:normal-case placeholder:text-[#607089] focus:border-[#3C5B9B] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
+                    className="h-12.5 w-full rounded-[10px] border border-[#d4deeb] bg-white px-4 text-[14px] font-light uppercase text-[#243247] outline-none transition placeholder:normal-case placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
                   />
                 </div>
               </div>
@@ -359,7 +359,7 @@ export default function DemoForm({
 
             <button
               type="submit"
-              className="inline-flex h-12.5 w-full items-center justify-center gap-3 rounded-[10px] bg-[#3C5B9B] px-6 text-[14px] font-semibold text-white shadow-[0_16px_34px_rgba(60,91,155,0.25)] transition hover:-translate-y-0.5 hover:bg-[#2f4a82] md:col-span-2"
+              className="inline-flex h-12.5 w-full items-center justify-center gap-3 rounded-[10px] bg-[#193175] px-6 text-[14px] font-semibold text-white shadow-[0_16px_34px_rgba(60,91,155,0.25)] transition hover:-translate-y-0.5 hover:bg-[#2f4a82] md:col-span-2"
             >
               <Send size={18} />
               Submit Request
