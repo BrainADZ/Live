@@ -14,49 +14,48 @@ const { sendMail } = require("../service/mailerService");
    Hamesha public absolute HTTPS URLs use karo.
 
    Example:
-   https://brainadzlive.com/email-assets/logo.png
+   https://brainadzlive.in/email-assets/logo.png
 ========================================================= */
+
+const EMAIL_ASSET_BASE_URL = (
+  process.env.EMAIL_ASSET_BASE_URL ||
+  "https://brainadzlive.in/enquire-form"
+).replace(/\/$/, "");
+
+// Version query Gmail ke failed-image proxy cache ko invalidate karti hai.
+const EMAIL_ASSET_VERSION = "20260714";
+
+const emailAssetUrl = (fileName) =>
+  `${EMAIL_ASSET_BASE_URL}/${fileName}?v=${EMAIL_ASSET_VERSION}`;
 
 const EMAIL_ASSETS = {
   // Top main BrainADZ Live logo
-  mainLogo:
-    "https://brainadzlive.in/enquire-form/BrainADZ-Icon.png",
+  mainLogo: emailAssetUrl("BrainADZLive.png"),
 
   // Main enquiry heading ke left wala circular icon
-  enquiryIcon:
-    "https://brainadzlive.com/enquire-form/BrainADZ-Icon.png",
+  enquiryIcon: emailAssetUrl("BrainADZ-Icon.png"),
 
   // Bottom Thank You section wala small logo/icon
-  footerIcon:
-    "https://brainadzlive.com/enquire-form/BrainADZ-Icon.png",
+  footerIcon: emailAssetUrl("BrainADZ-Icon.png"),
 
   // Table row icons
-  nameIcon:
-    "https://brainadzlive.com/enquire-form/name.svg",
+  nameIcon: emailAssetUrl("name.svg"),
 
-  emailIcon:
-    "https://brainadzlive.com/enquire-form/email.svg",
+  emailIcon: emailAssetUrl("email.svg"),
 
-  phoneIcon:
-    "https://brainadzlive.com/enquire-form/phn.svg",
+  phoneIcon: emailAssetUrl("phn.svg"),
 
-  companyIcon:
-    "https://brainadzlive.com/enquire-form/company.svg",
+  companyIcon: emailAssetUrl("company.svg"),
 
-  solutionIcon:
-    "https://brainadzlive.com/enquire-form/solutions.svg",
+  solutionIcon: emailAssetUrl("solutions.svg"),
 
-  serviceIcon:
-    "https://brainadzlive.com/enquire-form/services.svg",
+  serviceIcon: emailAssetUrl("services.svg"),
 
-  messageIcon:
-    "https://brainadzlive.com/enquire-form/message.svg",
+  messageIcon: emailAssetUrl("message.svg"),
 
-  pageUrlIcon:
-    "https://brainadzlive.com/enquire-form/url.svg",
+  pageUrlIcon: emailAssetUrl("url.svg"),
 
-  submittedIcon:
-    "https://brainadzlive.com/enquire-form/submitted.svg",
+  submittedIcon: emailAssetUrl("submitted.svg"),
 };
 
 
