@@ -417,12 +417,12 @@ export default function Navbar() {
 
         {/* DESKTOP RIGHT ICONS */}
         <div className="hidden items-center gap-6 sm:flex">
-          <Link
+          {/* <Link
             href="/community"
             className="hidden text-[15px] font-normal text-[#161616] transition hover:text-[#193175] xl:inline-flex"
           >
             Community
-          </Link>
+          </Link> */}
 
           <button
             type="button"
