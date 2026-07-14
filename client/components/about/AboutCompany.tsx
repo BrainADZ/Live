@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
@@ -42,7 +43,7 @@ export default function AboutCompany() {
               Explore our work
 
               <span className="text-[22px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                →
+                <ArrowRight size={22} strokeWidth={1.6} />
               </span>
             </Link>
           </div>
