@@ -50,7 +50,7 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12 lg:py-20">
+    <section className="relative overflow-hidden bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-20">
       <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/6 blur-[80px]" />
 
       <div className="pointer-events-none absolute -bottom-45 -left-37.5 h-90 w-90 rounded-full bg-[#193175]/4.5 blur-[80px]" />

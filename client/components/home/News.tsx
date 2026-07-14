@@ -92,7 +92,7 @@ export default function NewsSection() {
 
               <button
                 type="submit"
-                className="mt-6 inline-flex h-14 items-center justify-center bg-[#193175] px-8 text-[20px] font-light text-white transition duration-300 hover:bg-[#2f4a82] cursor-pointer"
+                className="mt-6 inline-flex h-14 items-center justify-center bg-[#193175] px-4 text-[20px] font-light text-white transition duration-300 hover:bg-[#2f4a82] cursor-pointer"
               >
                 Subscribe
               </button>

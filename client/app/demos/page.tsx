@@ -63,7 +63,7 @@ export default function DemosPage() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.72)_38%,rgba(0,0,0,0.24)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-120 max-w-450 flex-col justify-end px-5 py-10 md:min-h-135 md:px-8 lg:px-12">
+        <div className="relative z-10 mx-auto flex min-h-120 max-w-450 flex-col justify-end px-5 py-10 md:min-h-135 md:px-4 lg:px-12">
           <div className="max-w-210 pb-6">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#9bbcff]">
               BrainADZ Demos
@@ -79,7 +79,7 @@ export default function DemosPage() {
         </div>
       </section>
 
-      <section className="px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-7 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>

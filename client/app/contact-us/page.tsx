@@ -269,7 +269,7 @@ export default function ContactPage() {
 
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div
             className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
             data-aos="fade-up"
@@ -310,7 +310,7 @@ export default function ContactPage() {
               <button
                 type="button"
                 onClick={() => setIsPopupOpen(true)}
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
 
@@ -328,7 +328,7 @@ export default function ContactPage() {
 
       <section
         id="enquire"
-        className="relative overflow-hidden bg-[#f8faff] px-5 py-20 text-[#161616] md:px-8 lg:px-12 lg:py-28"
+        className="relative overflow-hidden bg-[#f8faff] px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-28"
       >
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
@@ -650,7 +650,7 @@ export default function ContactPage() {
 
       <section
         id="find-us"
-        className="bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28"
+        className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">

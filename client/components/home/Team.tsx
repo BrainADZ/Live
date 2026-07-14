@@ -48,7 +48,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-white px-5 py-10 text-[#161616] md:px-8 lg:px-12 lg:py-18">
+    <section className="bg-white px-5 py-10 text-[#161616] md:px-4 lg:px-12 lg:py-18">
       <div className="mx-auto max-w-450">
         {/* SECTION HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">

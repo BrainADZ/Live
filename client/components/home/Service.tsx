@@ -63,7 +63,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="lazy-section mx-auto max-w-450 bg-white px-5 py-16 text-[#161616] md:px-8 lg:px-10">
+    <section className="lazy-section mx-auto max-w-450 bg-white px-5 py-16 text-[#161616] md:px-4 lg:px-10">
       {/* TOP HEADING + DESCRIPTION */}
       <div className="mb-27.5 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
         <h2

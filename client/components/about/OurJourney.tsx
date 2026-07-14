@@ -125,7 +125,7 @@ export default function DigitalExcellenceTimeline() {
   const activeItem = timelineData[activeIndex];
 
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-24 text-[#161616] md:px-8 lg:px-12 lg:py-32">
+    <section className="relative overflow-hidden bg-white px-5 py-24 text-[#161616] md:px-4 lg:px-12 lg:py-32">
       {/* LIGHT BRAND BACKGROUND */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_48%,rgba(60,91,155,0.08)_0%,rgba(60,91,155,0.03)_30%,transparent_60%)]" />
 

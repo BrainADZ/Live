@@ -57,7 +57,7 @@ export default function FastFacts() {
         </div>
 
         {/* TECHNOLOGY AND SERVICES */}
-        <div className="mt-10 grid grid-cols-1 gap-12 px-5 text-[#161616] md:px-8 lg:grid-cols-[0.62fr_1.38fr] lg:gap-16 lg:px-12">
+        <div className="mt-10 grid grid-cols-1 gap-12 px-5 text-[#161616] md:px-4 lg:grid-cols-[0.62fr_1.38fr] lg:gap-16 lg:px-12">
           {/* LEFT TITLE */}
           <div data-aos="fade-right">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">

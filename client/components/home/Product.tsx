@@ -47,7 +47,7 @@ const products = [
 
 export default function ProductSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
+    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">

@@ -317,7 +317,7 @@ export default function PopupForm({
 
         {/* Right Form Section */}
 
-        <div className="max-h-[92vh] overflow-y-auto bg-white px-5 py-8 md:px-8 lg:px-10 lg:py-10">
+        <div className="max-h-[92vh] overflow-y-auto bg-white px-5 py-8 md:px-4 lg:px-10 lg:py-10">
           <div className="mb-8 pr-12 lg:pr-8">
             <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
               Enquire Now

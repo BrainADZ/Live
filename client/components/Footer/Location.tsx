@@ -37,7 +37,7 @@ const locations = [
 
 export default function LocationsSection() {
   return (
-    <section className="lazy-section bg-[#f2f2f2] px-6 py-12 text-[#161616] md:px-10 md:py-14 lg:px-12">
+    <section className="lazy-section bg-[#f2f2f2] px-6 py-8 text-[#161616] md:px-10 md:py-14 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* HEADING */}
         <div className="mb-8 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">

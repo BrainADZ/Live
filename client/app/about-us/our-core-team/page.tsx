@@ -185,7 +185,7 @@ export default function OurCoreTeamPage() {
 
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-[540px] max-w-[1800px] flex-col px-5 py-10 md:min-h-[600px] md:px-8 lg:min-h-[540px] lg:px-12">
+        <div className="relative z-10 mx-auto flex min-h-[540px] max-w-[1800px] flex-col px-5 py-10 md:min-h-[600px] md:px-4 lg:min-h-[540px] lg:px-12">
           <div
             className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
             data-aos="fade-up"
@@ -230,7 +230,7 @@ export default function OurCoreTeamPage() {
               <button
                 type="button"
                 onClick={() => setIsPopupOpen(true)}
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none"><ArrowRight /></span>
@@ -241,7 +241,7 @@ export default function OurCoreTeamPage() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="bg-white px-5 py-22 md:px-8 lg:px-12 lg:py-28">
+      <section className="bg-white px-5 py-22 md:px-4 lg:px-12 lg:py-28">
         <div className="mx-auto grid max-w-450 grid-cols-1 gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="mb-5 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -300,7 +300,7 @@ export default function OurCoreTeamPage() {
       </section>
 
       {/* CORE TEAM */}
-      <section className="bg-[#fafafa] px-5 py-22 md:px-8 lg:px-12 lg:py-28">
+      <section className="bg-[#fafafa] px-5 py-22 md:px-4 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-450">
           <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
             Our Core Team
@@ -320,7 +320,7 @@ export default function OurCoreTeamPage() {
 
       {/* PROJECT TEAM - hidden until final member images are available */}
       {SHOW_PROJECT_TEAM && (
-        <section className="bg-white px-5 py-24 md:px-8 lg:px-12 lg:py-32">
+        <section className="bg-white px-5 py-24 md:px-4 lg:px-12 lg:py-32">
           <div className="mx-auto max-w-450">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Our Project Team
@@ -349,8 +349,8 @@ export default function OurCoreTeamPage() {
       )}
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
+      <section className="lazy-section bg-white py-8">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div
             className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
             data-aos="zoom-in"

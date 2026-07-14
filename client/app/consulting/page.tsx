@@ -242,7 +242,7 @@ export default function ConsultingPage() {
 
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
+      <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
         <div
           className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
           data-aos="fade-up"
@@ -280,7 +280,7 @@ export default function ConsultingPage() {
             <button
                 type="button"
                 onClick={() => setIsPopupOpen(true)}
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
               Discuss Your Requirement
               <span className="text-[20px] leading-none">↗</span>
@@ -291,7 +291,7 @@ export default function ConsultingPage() {
     </section>
 
       {/* ORCHESTRATE AI */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28">
+      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
@@ -346,7 +346,7 @@ export default function ConsultingPage() {
       </section>
 
       {/* QUICK STORY CARDS */}
-      <section className="bg-white px-5 pb-20 md:px-8 lg:px-12 lg:pb-28">
+      <section className="bg-white px-5 pb-20 md:px-4 lg:px-12 lg:pb-28">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             {quickStories.map((story, index) => (
@@ -390,7 +390,7 @@ export default function ConsultingPage() {
       {/* SERVICES */}
       <section
         id="services"
-        className="relative overflow-hidden bg-[#f8faff] px-5 py-20 md:px-8 lg:px-12 lg:py-28"
+        className="relative overflow-hidden bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28"
       >
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
@@ -454,7 +454,7 @@ export default function ConsultingPage() {
       </section>
 
       {/* APPROACH */}
-      <section className="bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28">
+      <section className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div data-aos="fade-right">
@@ -502,7 +502,7 @@ export default function ConsultingPage() {
       {/* LATEST NEWS AND INSIGHTS */}
       <section
         id="insights"
-        className="bg-white px-5 pb-20 md:px-8 lg:px-12 lg:pb-28"
+        className="bg-white px-5 pb-20 md:px-4 lg:px-12 lg:pb-28"
       >
         <div className="mx-auto max-w-450">
           <h2
@@ -671,8 +671,8 @@ export default function ConsultingPage() {
      <TestimonialSection/>
 
       {/* FINAL CTA */}
-            <section className="lazy-section bg-white py-12">
-              <div className="mx-auto max-w-450 px-8 lg:px-10">
+            <section className="lazy-section bg-white py-8">
+              <div className="mx-auto max-w-450 px-4 lg:px-10">
                 <div
                   className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
                   data-aos="zoom-in"

@@ -118,7 +118,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="lazy-section bg-white px-5 pb-8 pt-14 text-[#161616] md:px-8 md:pb-10 md:pt-16 lg:px-12"
+      className="lazy-section bg-white px-5 pb-8 pt-14 text-[#161616] md:px-4 md:pb-10 md:pt-16 lg:px-12"
     >
       <div className="mx-auto max-w-[1800px]">
         {/* HEADING SECTION */}

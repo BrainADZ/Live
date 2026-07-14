@@ -412,7 +412,7 @@ export default function BlogPage() {
 
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.78)_30%,rgba(0,0,0,0.42)_58%,rgba(0,0,0,0.08)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div
             className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
             data-aos="fade-up"
@@ -454,7 +454,7 @@ export default function BlogPage() {
             <div className="mt-8">
               <a
                 href="#latest-insights"
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Explore Insights
 
@@ -468,7 +468,7 @@ export default function BlogPage() {
       {/* FEATURED INSIGHTS */}
 <section
   id="featured-insights"
-  className="bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28"
+  className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
 >
   <div className="mx-auto max-w-450">
     <h2
@@ -618,7 +618,7 @@ export default function BlogPage() {
       {/* LATEST INSIGHTS */}
       <section
         id="latest-insights"
-        className="scroll-mt-24 bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
@@ -809,8 +809,8 @@ export default function BlogPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
+      <section className="bg-white py-8">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img

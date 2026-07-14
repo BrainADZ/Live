@@ -408,7 +408,7 @@ export default function EducationTechIndustryPage() {
 
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-8 lg:min-h-135 lg:px-12">
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
             <Link
               href="/"
@@ -443,7 +443,7 @@ export default function EducationTechIndustryPage() {
               <button
                 type="button"
                 onClick={() => setIsPopupOpen(true)}
-                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
                 <span className="text-[20px] leading-none">↗</span>
@@ -454,7 +454,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -501,7 +501,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* EDUCATION TECH CHALLENGES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -537,7 +537,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* EDUCATION TECH SOLUTIONS */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -576,7 +576,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* EDUCATION TECH ARCHITECTURE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -614,7 +614,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* EDUCATION TECH DEVELOPMENT PROCESS */}
-      <section className="relative overflow-hidden bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-14">
+      <section className="relative overflow-hidden bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-14">
         <div
           className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
@@ -821,7 +821,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* EDUCATION TECH PLATFORM TYPES */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -882,7 +882,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* CORE FEATURES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
@@ -922,7 +922,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* USE CASE LIST */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -954,7 +954,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* SECURITY */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -997,7 +997,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* SOLUTION SCENARIOS */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
@@ -1058,7 +1058,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* TECH STACK */}
-      <section className="lazy-section bg-[#f6f8fc] px-5 py-20 text-[#161616] md:px-8 lg:px-12">
+      <section className="lazy-section bg-[#f6f8fc] px-5 py-20 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
@@ -1149,7 +1149,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -1186,7 +1186,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* SUPPORT */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-white p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
@@ -1233,7 +1233,7 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-8 lg:px-12 lg:py-24">
+      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -1290,8 +1290,8 @@ export default function EducationTechIndustryPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
+      <section className="lazy-section bg-white py-8">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img

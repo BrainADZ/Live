@@ -28,7 +28,7 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-    <section className="lazy-section bg-[#f8faff] px-5 py-20 text-[#161616] md:px-8 lg:px-12">
+    <section className="lazy-section bg-[#f8faff] px-5 py-20 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* HEADING */}
         <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">

@@ -16,7 +16,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[540px] max-w-[1800px] flex-col px-5 py-10 md:min-h-[600px] md:px-8 lg:min-h-[540px] lg:px-12">
+      <div className="relative z-10 mx-auto flex min-h-[540px] max-w-[1800px] flex-col px-5 py-10 md:min-h-[600px] md:px-4 lg:min-h-[540px] lg:px-12">
         <div
           className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
           data-aos="fade-up"
@@ -58,7 +58,7 @@ export default function Hero() {
           <div className="mt-8">
             <Link
               href="/contact-us"
-              className="inline-flex h-[58px] min-w-[225px] items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-normal text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              className="inline-flex h-[58px] min-w-[225px] items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-normal text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
             >
               Discuss Your Requirement
 

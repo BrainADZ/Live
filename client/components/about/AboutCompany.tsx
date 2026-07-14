@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function AboutCompany() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12 lg:py-28">
+    <section className="relative overflow-hidden bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-28">
       <div className="relative z-10 mx-auto max-w-450">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.72fr_1fr] lg:gap-20">
           {/* LEFT CONTENT */}

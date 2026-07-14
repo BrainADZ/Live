@@ -150,7 +150,7 @@ export default function DemoForm({
           </div>
         </div>
 
-        <div className="max-h-[94vh] overflow-y-auto px-5 py-7 md:px-8 md:py-8 lg:px-9">
+        <div className="max-h-[94vh] overflow-y-auto px-5 py-7 md:px-4 md:py-8 lg:px-9">
           <div className="pr-12">
             <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
               View Demo

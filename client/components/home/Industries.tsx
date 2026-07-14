@@ -74,7 +74,7 @@ const industries: Industry[] = [
 
 export default function IndustriesSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
+    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* TOP CONTENT */}
         <div className="mb-16" data-aos="fade-up">

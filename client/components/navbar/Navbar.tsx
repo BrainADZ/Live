@@ -235,7 +235,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#e5e5e5] bg-white">
-      <nav className="mx-auto flex h-21 max-w-450 items-center justify-between px-5 md:px-8 lg:px-12">
+      <nav className="mx-auto flex h-21 max-w-450 items-center justify-between px-5 md:px-4 lg:px-12">
         {/* LEFT SIDE */}
         <div className="flex items-center">
           {/* LOGO */}
@@ -526,7 +526,7 @@ export default function Navbar() {
             : "invisible -translate-y-3 opacity-0"
         }`}
       >
-        <div className="mx-auto max-w-450 px-5 py-7 md:px-8 lg:px-12">
+        <div className="mx-auto max-w-450 px-5 py-7 md:px-4 lg:px-12">
           <div className="flex items-center justify-between gap-5">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-[#193175]">
@@ -699,7 +699,7 @@ export default function Navbar() {
                     <span>→</span>
                   </Link>
 
-                  <div className="px-8 pb-4">
+                  <div className="px-4 pb-4">
                     <div className="space-y-4">
                       {menuContent[category].map((item) => (
                         <Link
@@ -746,7 +746,7 @@ export default function Navbar() {
                   key={item.title}
                   href={item.href}
                   onClick={closeMobileMenu}
-                  className="block px-8 py-4 text-[16px] font-normal text-[#161616] transition hover:text-[#193175]"
+                  className="block px-4 py-4 text-[16px] font-normal text-[#161616] transition hover:text-[#193175]"
                 >
                   {item.title}
                 </Link>

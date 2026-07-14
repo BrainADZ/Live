@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12 overflow-hidden">
+    <section className="bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 overflow-hidden">
       <div className="mx-auto max-w-450">
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -131,7 +131,7 @@ export default function TestimonialSection() {
         <div className="mt-14 flex justify-center" data-aos="fade-up">
           <a
             href="/case-studies"
-            className="group inline-flex h-13.5 items-center justify-center gap-4 rounded-full border border-[#193175] px-8 text-[15px] font-normal text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
+            className="group inline-flex h-13.5 items-center justify-center gap-4 rounded-full border border-[#193175] px-4 text-[15px] font-normal text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
           >
             View client stories
             <ArrowRight

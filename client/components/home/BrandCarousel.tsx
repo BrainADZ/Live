@@ -39,7 +39,7 @@ export default function BrandCarousel() {
           <div className="absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-[#193175]/5 blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-[1800px] px-5 md:px-8 lg:px-12">
+        <div className="relative mx-auto max-w-[1800px] px-5 md:px-4 lg:px-12">
           {/* SECTION HEADER */}
           <div className="mb-14 grid gap-8 border-b border-[#161616]/10 pb-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>

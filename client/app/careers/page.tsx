@@ -470,7 +470,7 @@ export default function CareerPage() {
 
                 <a
                   href="#open-roles"
-                  className="mt-10 inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+                  className="mt-10 inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
                 >
                   View Open Roles
                   <span className="text-[20px] leading-none">↗</span>
@@ -482,7 +482,7 @@ export default function CareerPage() {
       </section>
 
       {/* CAREER INTRO */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28">
+      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
@@ -554,7 +554,7 @@ export default function CareerPage() {
       </section>
 
       {/* WHY JOIN */}
-      <section className="relative overflow-hidden bg-[#f8faff] px-5 py-20 md:px-8 lg:px-12 lg:py-28">
+      <section className="relative overflow-hidden bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
             <div data-aos="fade-right">
@@ -615,7 +615,7 @@ export default function CareerPage() {
       {/* OPEN ROLES */}
       <section
         id="open-roles"
-        className="scroll-mt-24 bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28"
+        className="scroll-mt-24 bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -710,7 +710,7 @@ export default function CareerPage() {
       </section>
 
       {/* VALUES + PROCESS */}
-      <section className="bg-[#f8faff] px-5 py-20 md:px-8 lg:px-12 lg:py-28">
+      <section className="bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div
@@ -785,7 +785,7 @@ export default function CareerPage() {
       {/* APPLY FORM */}
       <section
         id="apply"
-        className="relative overflow-hidden bg-white px-5 py-20 md:px-8 lg:px-12 lg:py-28"
+        className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
       >
         <div className="pointer-events-none absolute -left-40 -bottom-40 h-95 w-95 rounded-full bg-[#193175]/6 blur-[90px]" />
 
@@ -992,8 +992,8 @@ export default function CareerPage() {
 
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-12">
-        <div className="mx-auto max-w-450 px-8 lg:px-10">
+      <section className="lazy-section bg-white py-8">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div
             className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
             data-aos="zoom-in"

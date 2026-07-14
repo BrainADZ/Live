@@ -41,7 +41,7 @@ const reasons = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-8 lg:px-12">
+    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* TOP HEADING LEFT */}
         <div className="mb-14 max-w-205" data-aos="fade-up">
