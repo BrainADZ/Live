@@ -7,6 +7,7 @@ import Link from "next/link";
 import { type FormEvent, useState } from "react";
 import type { SVGProps } from "react";
 import PopupForm from "@/components/PopupForm";
+import { getApiUrl } from "@/lib/api";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
@@ -215,7 +216,7 @@ export default function ContactPage() {
       setIsFormSuccess(false);
 
       const response = await fetch(
-        "http://localhost:5000/api/enquire-now",
+        getApiUrl("/api/enquire-now"),
         {
           method: "POST",
           headers: {

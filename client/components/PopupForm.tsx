@@ -9,6 +9,7 @@ import {
   solutionCategories,
   type Category,
 } from "@/data/solutionMenu";
+import { getApiUrl } from "@/lib/api";
 
 type PopupFormProps = {
   isOpen: boolean;
@@ -115,7 +116,7 @@ export default function PopupForm({
       setErrorMessage("");
 
       const response = await fetch(
-        "http://localhost:5000/api/enquire-now",
+        getApiUrl("/api/enquire-now"),
         {
           method: "POST",
           headers: {
