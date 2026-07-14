@@ -19,7 +19,7 @@ const timelineData: TimelineItem[] = [
     title: "The beginning of our technology journey",
     description:
       "BrainADZ Live began with a focus on helping businesses use digital technology in a more practical and accessible way.",
-    image: "/about/timeline/2014.jpg",
+    image: "/about/2014.jpg",
   },
   {
     year: "2015",
@@ -27,7 +27,7 @@ const timelineData: TimelineItem[] = [
     title: "Expanding digital delivery",
     description:
       "Our work grew across websites, digital interfaces and business-facing technology requirements.",
-    image: "/about/timeline/2015.jpg",
+    image: "/about/2015.jpg",
   },
   {
     year: "2016",
@@ -35,7 +35,7 @@ const timelineData: TimelineItem[] = [
     title: "Moving deeper into software",
     description:
       "We expanded beyond basic digital delivery into custom software, dashboards and systems built around internal workflows.",
-    image: "/about/timeline/2016.jpg",
+    image: "/about/2016.jpg",
   },
   {
     year: "2017",
@@ -43,7 +43,7 @@ const timelineData: TimelineItem[] = [
     title: "A stronger focus on business workflows",
     description:
       "Projects increasingly started with understanding users, processes and operational requirements before technology decisions were made.",
-    image: "/about/timeline/2017.jpg",
+    image: "/about/2017.jpg",
   },
   {
     year: "2018",
@@ -51,7 +51,7 @@ const timelineData: TimelineItem[] = [
     title: "Connecting repetitive processes",
     description:
       "Automation and connected workflows became a larger part of our work as businesses looked to reduce manual handoffs.",
-    image: "/about/timeline/2018.jpg",
+    image: "/about/2018.jpg",
   },
   {
     year: "2019",
@@ -59,7 +59,7 @@ const timelineData: TimelineItem[] = [
     title: "Expanding into digital signage",
     description:
       "Our capabilities grew into digital standees, kiosks, displays and technology designed for customer-facing physical environments.",
-    image: "/about/timeline/2019.jpg",
+    image: "/about/2019.jpg",
   },
   {
     year: "2020",
@@ -67,7 +67,7 @@ const timelineData: TimelineItem[] = [
     title: "Supporting more connected operations",
     description:
       "Web-based platforms and remotely accessible systems became increasingly important for teams operating across different locations.",
-    image: "/about/timeline/2020.jpg",
+    image: "/about/2020.jpg",
   },
   {
     year: "2021",
@@ -75,7 +75,7 @@ const timelineData: TimelineItem[] = [
     title: "Building for connected systems",
     description:
       "Our project approach expanded further into scalable applications, integrations and systems designed to exchange information more effectively.",
-    image: "/about/01.webp",
+    image: "/about/2021.jpg",
   },
   {
     year: "2022",
@@ -83,7 +83,7 @@ const timelineData: TimelineItem[] = [
     title: "Growing business platform capabilities",
     description:
       "CRM, ERP and connected operational platforms became a stronger part of our work across sales, inventory, reporting and internal coordination.",
-    image: "/about/4.webp",
+    image: "/about/2022.jpg",
   },
   {
     year: "2023",
@@ -91,7 +91,7 @@ const timelineData: TimelineItem[] = [
     title: "Bringing hardware and software together",
     description:
       "Our work increasingly connected software platforms with kiosks, displays and other customer-facing digital technology.",
-    image: "/about/5.webp",
+    image: "/about/2023.JPG",
   },
   {
     year: "2024",
@@ -99,7 +99,7 @@ const timelineData: TimelineItem[] = [
     title: "A more structured delivery approach",
     description:
       "Discovery, planning, UX, development, integration, validation and deployment became clearer stages within our project process.",
-    image: "/about/256.png",
+    image: "/about/2024.JPG",
   },
   {
     year: "2025",
@@ -107,15 +107,15 @@ const timelineData: TimelineItem[] = [
     title: "A broader technology portfolio",
     description:
       "BrainADZ Live continued expanding across software services, software platforms, digital signage products and technology consulting.",
-    image: "/about/2025.jpeg",
+    image: "/about/2025.JPG",
   },
   {
     year: "Present",
-    bigYear: "NOW",
+    bigYear: "2026",
     title: "Building connected technology experiences",
     description:
       "Today, our focus is on helping businesses connect software, platforms, integrations and digital customer environments around practical requirements.",
-    image: "/about/2026.jpeg",
+    image: "/about/2026.jpg",
   },
 ];
 
