@@ -22,159 +22,71 @@ type TeamMember = {
 
 const coreTeam: TeamMember[] = [
   {
-    name: "Saurabh Singh",
+    name: "Sumit Jaiswal",
     role: "CEO & Director",
-    image: "/team/core/saurabh-singh.jpg",
+    image: "/team/sumit.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Sudeep Srivastava",
-    role: "Director & Co-Founder",
-    image: "/team/core/sudeep-srivastava.jpg",
+    name: "Rakesh Kumar",
+    role: "Sales Manager",
+    image: "/team/head.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Prateek Saxena",
-    role: "Director & Co-Founder",
-    image: "/team/core/prateek-saxena.jpg",
+    name: "Sarthak Raina",
+    role: "Corporate Sale & Project Manager",
+    image: "/team/cops.png",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    name: "Pooja Paswan",
+    role: "Sales Executive",
+    image: "/team/sale.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Peeyush Singh",
-    role: "Director & Co-Founder",
-    image: "/team/core/peeyush-singh.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Dileep Gupta",
-    role: "Director & Co-Founder",
-    image: "/team/core/dileep-gupta.jpg",
+    name: "Anand Upadhyay",
+    role: "Technical Manager",
+    image: "/team/tech.png",
     linkedin: "https://www.linkedin.com/",
   },
 ];
 
 const projectTeam: TeamMember[] = [
   {
-    name: "Nitin Soni",
-    role: "SVP - Sales",
-    image: "/team/project/nitin-soni.jpg",
+    name: "Project Team Member 1",
+    role: "Project Team",
+    image: "/team/aa1.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Lee Ranchod",
-    role: "Non Executive Director",
-    image: "/team/project/lee-ranchod.jpg",
+    name: "Project Team Member 2",
+    role: "Project Team",
+    image: "/team/koma.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Amardeep Rawat",
-    role: "VP - Technology",
-    image: "/team/project/amardeep-rawat.jpg",
+    name: "Project Team Member 3",
+    role: "Project Team",
+    image: "/team/muy.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Suyash Saxena",
-    role: "VP - Delivery",
-    image: "/team/project/suyash-saxena.jpg",
+    name: "Project Team Member 4",
+    role: "Project Team",
+    image: "/team/ros.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Avinash Sharma",
-    role: "VP - Delivery",
-    image: "/team/project/avinash-sharma.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Rajat Singh",
-    role: "VP - Delivery",
-    image: "/team/project/rajat-singh.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Apeksha Mehta",
-    role: "VP - Technology",
-    image: "/team/project/apeksha-mehta.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Chirag Bharadwaj",
-    role: "VP - Technology",
-    image: "/team/project/chirag-bharadwaj.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Neha Verma",
-    role: "Project Manager",
-    image: "/team/project/neha-verma.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Rahul Mehta",
-    role: "Project Manager",
-    image: "/team/project/rahul-mehta.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Pooja Sharma",
-    role: "Project Manager",
-    image: "/team/project/pooja-sharma.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Ankit Verma",
-    role: "Tech Lead",
-    image: "/team/project/ankit-verma.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Rohit Jain",
-    role: "Tech Lead",
-    image: "/team/project/rohit-jain.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Vikas Singh",
-    role: "Tech Lead",
-    image: "/team/project/vikas-singh.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Sneha Rathi",
-    role: "UI/UX Lead",
-    image: "/team/project/sneha-rathi.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Karan Patel",
-    role: "UI/UX Lead",
-    image: "/team/project/karan-patel.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Manish Yadav",
-    role: "Sr. Developer",
-    image: "/team/project/manish-yadav.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Deepak Kumar",
-    role: "Sr. Developer",
-    image: "/team/project/deepak-kumar.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Sakshi Gupta",
-    role: "Sr. Developer",
-    image: "/team/project/sakshi-gupta.jpg",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Harsh Vardhan",
-    role: "Sr. Developer",
-    image: "/team/project/harsh-vardhan.jpg",
+    name: "Rishabh",
+    role: "SDE",
+    image: "/team/sde.png",
     linkedin: "https://www.linkedin.com/",
   },
 ];
+
+const SHOW_PROJECT_TEAM = true;
 
 const values = [
   {
@@ -312,7 +224,7 @@ export default function OurCoreTeamPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <span className="text-[20px] leading-none"><ArrowRight /></span>
               </button>
             </div>
           </div>
@@ -370,7 +282,7 @@ export default function OurCoreTeamPage() {
 
           <div className="overflow-hidden rounded-[24px] border border-[#e6e6e6] bg-white p-3 shadow-[0_16px_60px_rgba(0,0,0,0.08)]">
             <img
-              src="/about/OurTeam.jpeg"
+              src="/team/team.webp"
               alt="BrainADZ Live team workspace"
               className="h-[520px] w-full rounded-[18px] object-cover"
             />
@@ -397,8 +309,9 @@ export default function OurCoreTeamPage() {
         </div>
       </section>
 
-      {/* PROJECT TEAM */}
-      <section className="bg-white px-5 py-24 md:px-8 lg:px-12 lg:py-32">
+      {/* PROJECT TEAM - hidden until final member images are available */}
+      {SHOW_PROJECT_TEAM && (
+        <section className="bg-white px-5 py-24 md:px-8 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-450">
           <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
             Our Project Team
@@ -423,7 +336,8 @@ export default function OurCoreTeamPage() {
             ))}
           </div>
         </div>
-      </section>
+        </section>
+      )}
 
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-12">
@@ -435,7 +349,7 @@ export default function OurCoreTeamPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
+                src="/CTA/home-cta.png"
                 alt="BrainADZ Live Team"
                 loading="lazy"
                 decoding="async"

@@ -14,7 +14,7 @@ export default function CtaSection() {
           {/* LEFT IMAGE */}
           <div className="hidden w-[32%] shrink-0 md:block">
             <img
-              src="/about.avif"
+              src="/CTA/home-cta.png"
               alt="BrainADZ Live AI Technology"
               loading="lazy"
               decoding="async"

@@ -18,35 +18,35 @@ const platforms: Platform[] = [
     title: "CRM Software",
     description:
       "Manage leads, follow-ups, customer records, sales pipelines, team activity and reporting from one connected CRM platform.",
-    icon: "/service-icons/crm.svg",
+    icon: "/icons/crm-software.svg",
     href: "/software-platforms/crm-software",
   },
   {
     title: "ERP Software",
     description:
       "Connect sales, purchase, inventory, finance, users and reporting through one structured ERP platform for daily operations.",
-    icon: "/service-icons/erp.svg",
+    icon: "/icons/erp.svg",
     href: "/software-platforms/erp-software",
   },
   {
     title: "Signage Application",
     description:
       "Manage content, playlists and playback for digital standees, kiosks and connected displays from one signage application.",
-    icon: "/service-icons/signage.svg",
+    icon: "/icons/digital-signage (1).svg",
     href: "/software-platforms/signage-application",
   },
   {
     title: "Cloud Signage Software",
     description:
       "Publish, schedule and update content across connected screens remotely through a cloud-based signage management platform.",
-    icon: "/service-icons/cloud-signage.svg",
+    icon: "/icons/store-sign.svg",
     href: "/software-platforms/cloud-signage-software",
   },
   {
     title: "Virtual Trial Room",
     description:
       "Create interactive virtual try-on experiences that help fashion and retail customers explore products in a more engaging way.",
-    icon: "/service-icons/virtual-trial-room.svg",
+    icon: "/icons/icons8-fitting-room-50.svg",
     href: "/software-platforms/virtual-trial-room",
   },
 ];
@@ -274,7 +274,7 @@ export default function SoftwarePlatformsPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
+                src="/CTA/home-cta.png"
                 alt="BrainADZ Live Software Platforms"
                 loading="lazy"
                 decoding="async"

@@ -1235,14 +1235,11 @@ export default function FacilityManagementIndustryPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/industries/facility-management/facility-support.jpg"
+                src="/CTA/home-cta.png"
                 alt="Facility management solutions by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "/about.avif";
-                }}
               />
             </div>
 

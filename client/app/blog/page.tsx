@@ -814,7 +814,7 @@ export default function BlogPage() {
           <div className="flex min-h-65 overflow-hidden bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
+                src="/CTA/home-cta.png"
                 alt="Discuss a technology requirement with BrainADZ Live"
                 loading="lazy"
                 decoding="async"

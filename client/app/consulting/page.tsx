@@ -680,7 +680,7 @@ export default function ConsultingPage() {
                   {/* LEFT IMAGE */}
                   <div className="hidden w-[32%] shrink-0 md:block">
                     <img
-                      src="/about.avif"
+                      src="/CTA/home-cta.png"
                       alt="BrainADZ Live technology consulting"
                       loading="lazy"
                       decoding="async"

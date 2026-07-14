@@ -1001,7 +1001,7 @@ export default function CareerPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/about.avif"
+                src="/CTA/home-cta.png"
                 alt="Careers at BrainADZ Live"
                 loading="lazy"
                 decoding="async"

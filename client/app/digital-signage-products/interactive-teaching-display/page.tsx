@@ -446,14 +446,11 @@ export default function InteractiveTeachingDisplayPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/products/interactive-teaching-display.jpg"
+                src="/CTA/home-cta.png"
                 alt="Interactive Teaching Display for learning and training spaces"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "/about.avif";
-                }}
               />
             </div>
 

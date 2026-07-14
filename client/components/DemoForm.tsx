@@ -96,7 +96,7 @@ export default function DemoForm({
     "pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#7b8492]";
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 px-4 py-5 backdrop-blur-md">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/60 px-4 py-5 backdrop-blur-md">
       <button
         type="button"
         aria-label="Close demo form"
@@ -104,7 +104,7 @@ export default function DemoForm({
         className="absolute inset-0 cursor-default"
       />
 
-      <div className="relative z-10 grid max-h-[94vh] w-full max-w-[1180px] overflow-hidden rounded-[24px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)] lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="relative z-10 grid max-h-[94vh] w-full max-w-295 overflow-hidden rounded-3xl bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)] lg:grid-cols-[0.9fr_1.1fr]">
         <button
           type="button"
           aria-label="Close demo form"
@@ -114,7 +114,7 @@ export default function DemoForm({
           <X size={24} strokeWidth={2.2} />
         </button>
 
-        <div className="relative hidden min-h-[720px] overflow-hidden bg-black lg:block">
+        <div className="relative hidden min-h-180 overflow-hidden bg-black lg:block">
           <img
             src="/hero/crm-software.jpg"
             alt="BrainADZ demo preview"
