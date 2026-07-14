@@ -28,6 +28,12 @@ const coreTeam: TeamMember[] = [
     linkedin: "https://www.linkedin.com/",
   },
   {
+    name: "Mayur Sharma",
+    role: "Marketing Head",
+    image: "/team/muy.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+  {
     name: "Rakesh Kumar",
     role: "Sales Manager",
     image: "/team/head.png",
@@ -45,43 +51,48 @@ const coreTeam: TeamMember[] = [
     image: "/team/sale.png",
     linkedin: "https://www.linkedin.com/",
   },
+
+
+];
+
+const projectTeam: TeamMember[] = [
+  {
+    name: "Roshan Kumar",
+    role: "Creative Head",
+    image: "/team/ros.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+
   {
     name: "Anand Upadhyay",
     role: "Technical Manager",
     image: "/team/tech.png",
     linkedin: "https://www.linkedin.com/",
   },
-];
 
-const projectTeam: TeamMember[] = [
   {
-    name: "Project Team Member 1",
-    role: "Project Team",
-    image: "/team/aa1.png",
+    name: "Rishabh Pratap",
+    role: "Sr. Software Developer",
+    image: "/team/sde.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Project Team Member 2",
-    role: "Project Team",
+    name: "Ayushman Singh",
+    role: "Software Developer",
+    image: "/team/aa1.png",
+    linkedin: "https://www.linkedin.com/",
+  },
+
+  {
+    name: "Komal Kushwaha",
+    role: "Designer",
     image: "/team/koma.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Project Team Member 3",
-    role: "Project Team",
-    image: "/team/muy.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Project Team Member 4",
-    role: "Project Team",
-    image: "/team/ros.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-  {
-    name: "Rishabh",
-    role: "SDE",
-    image: "/team/sde.png",
+    name: "Komal Kushwaha",
+    role: "Digital Marketing Manage",
+    image: "/team/sa.png",
     linkedin: "https://www.linkedin.com/",
   },
 ];
@@ -142,17 +153,15 @@ function MemberCard({
 
       <div className="pt-5">
         <h3
-          className={`font-medium tracking-[-0.3px] text-[#161616] ${
-            compact ? "text-[16px]" : "text-[20px]"
-          }`}
+          className={`font-medium tracking-[-0.3px] text-[#161616] ${compact ? "text-[16px]" : "text-[20px]"
+            }`}
         >
           {member.name}
         </h3>
 
         <p
-          className={`mt-1 font-light text-[#646464] ${
-            compact ? "text-[13px]" : "text-[16px]"
-          }`}
+          className={`mt-1 font-light text-[#646464] ${compact ? "text-[13px]" : "text-[16px]"
+            }`}
         >
           {member.role}
         </p>
@@ -312,30 +321,30 @@ export default function OurCoreTeamPage() {
       {/* PROJECT TEAM - hidden until final member images are available */}
       {SHOW_PROJECT_TEAM && (
         <section className="bg-white px-5 py-24 md:px-8 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-450">
-          <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-            Our Project Team
-          </p>
-
-          <div className="mb-14 max-w-260">
-            <h2 className="text-[36px] font-light leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
-              The people turning plans into working products and deployments
-            </h2>
-
-            <p className="mt-6 max-w-190 text-[17px] font-light leading-[1.8] text-[#5a5a5a]">
-              Our project team brings together sales, delivery, technology,
-              project management, design and development roles. Each function
-              contributes at a different stage, helping teams coordinate
-              requirements, decisions, implementation, review and delivery.
+          <div className="mx-auto max-w-450">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+              Our Project Team
             </p>
-          </div>
 
-          <div className="grid grid-cols-1 gap-x-7 gap-y-11 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
-            {projectTeam.map((member) => (
-              <MemberCard key={member.name} member={member} compact />
-            ))}
+            <div className="mb-14 max-w-260">
+              <h2 className="text-[36px] font-light leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
+                The people turning plans into working products and deployments
+              </h2>
+
+              <p className="mt-6 max-w-190 text-[17px] font-light leading-[1.8] text-[#5a5a5a]">
+                Our project team brings together sales, delivery, technology,
+                project management, design and development roles. Each function
+                contributes at a different stage, helping teams coordinate
+                requirements, decisions, implementation, review and delivery.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-x-7 gap-y-11 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
+              {projectTeam.map((member) => (
+                <MemberCard key={member.name} member={member} compact />
+              ))}
+            </div>
           </div>
-        </div>
         </section>
       )}
 
