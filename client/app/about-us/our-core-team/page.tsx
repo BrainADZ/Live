@@ -90,7 +90,7 @@ const projectTeam: TeamMember[] = [
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Komal Kushwaha",
+    name: "Shivangi Thankur",
     role: "Digital Marketing Manage",
     image: "/team/sa.png",
     linkedin: "https://www.linkedin.com/",
