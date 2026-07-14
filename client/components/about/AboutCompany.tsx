@@ -52,7 +52,7 @@ export default function AboutCompany() {
           <div className="relative" data-aos="fade-left" data-aos-delay="100">
             <div className="relative overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] shadow-[0_24px_80px_rgba(22,22,22,0.08)]">
               <img
-                src="/about/About.jpeg"
+                src="/home-about.jpg"
                 alt="BrainADZ Live technology and project delivery"
                 className="h-90 w-full object-cover md:h-130 lg:h-142.5"
               />
