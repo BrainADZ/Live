@@ -20,7 +20,7 @@ const { sendMail } = require("../service/mailerService");
 const EMAIL_ASSETS = {
   // Top main BrainADZ Live logo
   mainLogo:
-    "http://localhost:3000/enquire-form/BrainADZ-Icon.png",
+    "https://brainadzlive.in/enquire-form/BrainADZ-Icon.png",
 
   // Main enquiry heading ke left wala circular icon
   enquiryIcon:
