@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 overflow-hidden">
+    <section className="bg-white px-5 py-14 text-[#161616] md:px-4 lg:px-12 overflow-hidden">
       <div className="mx-auto max-w-450">
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">

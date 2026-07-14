@@ -328,7 +328,7 @@ export default function ContactPage() {
 
       <section
         id="enquire"
-        className="relative overflow-hidden bg-[#f8faff] px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-28"
+        className="relative overflow-hidden bg-[#f8faff] px-5 py-14 text-[#161616] md:px-4 lg:px-12 lg:py-28"
       >
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
@@ -650,7 +650,7 @@ export default function ContactPage() {
 
       <section
         id="find-us"
-        className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+        className="bg-white px-5 py-14 md:px-4 lg:px-12 lg:py-28"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
