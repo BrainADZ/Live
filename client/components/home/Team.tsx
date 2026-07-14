@@ -21,7 +21,7 @@ const teamMembers: TeamMember[] = [
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Rakesh ",
+    name: "Rakesh Kumar",
     role: "Sales Manager",
   image: "/team/head.png",
     linkedin: "https://www.linkedin.com/",
@@ -35,11 +35,11 @@ const teamMembers: TeamMember[] = [
   {
     name: "Pooja Paswan",
     role: "Sales Executive",
-    image: "/team/sales.png",
+    image: "/team/sale.png",
     linkedin: "https://www.linkedin.com/",
   },
   {
-    name: "Raushan Kumar",
+    name: "Anand Upadhyay",
     role: "Technical Manager",
     image: "/team/tech.png",
     linkedin: "https://www.linkedin.com/",
