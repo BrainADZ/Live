@@ -33,9 +33,9 @@ const teamMembers: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/mayur-sharma/",
   },
   {
-    name: "Vinay Rathour",
-    role: "IT Head",
-    image: "/team/core/vinay-rathour.jpg",
+    name: "Rishabh",
+    role: "SDE",
+    image: "/team/sde.jpeg",
     linkedin: "https://www.linkedin.com/",
   },
   {
