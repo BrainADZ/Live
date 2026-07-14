@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
@@ -34,9 +35,9 @@ export default function Hero() {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <p className="mb-5 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#8fb1ff]">
+          {/* <p className="mb-5 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#8fb1ff]">
             About BrainADZ Live
-          </p>
+          </p> */}
 
           <h1 className="text-[38px] font-semibold leading-[1.1] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
             Building practical technology for connected business experiences
@@ -57,11 +58,11 @@ export default function Hero() {
           <div className="mt-8">
             <Link
               href="/contact-us"
-              className="inline-flex h-[58px] min-w-[225px] items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              className="inline-flex h-[58px] min-w-[225px] items-center justify-center gap-4 rounded-full bg-[#193175] px-8 text-[13px] font-normal text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
             >
               Discuss Your Requirement
 
-              <span className="text-[20px] leading-none">↗</span>
+              <span className="text-[20px] leading-none"> <ArrowRight size={20} strokeWidth={1.6} /> </span>
             </Link>
           </div>
         </div>

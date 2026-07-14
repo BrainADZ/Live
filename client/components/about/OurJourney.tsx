@@ -181,7 +181,7 @@ export default function DigitalExcellenceTimeline() {
             </div>
 
             {/* BIG YEAR */}
-            <div className="pointer-events-none absolute left-[32%] top-[42%] z-30 -translate-y-1/2">
+            <div className="pointer-events-none absolute left-[40%] top-[42%] z-30 -translate-y-1/2">
               <span
                 key={activeItem.bigYear}
                 className="timeline-year block select-none text-[190px] font-semibold leading-none tracking-[-8px] text-[#193175] drop-shadow-[0_14px_40px_rgba(60,91,155,0.16)] xl:text-[230px]"
