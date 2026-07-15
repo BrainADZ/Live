@@ -44,7 +44,7 @@ export default function MissionVision() {
               Mission & Vision
             </p>
 
-            <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               A clear purpose behind the technology we deliver
             </h2>
           </div>
@@ -85,7 +85,7 @@ export default function MissionVision() {
                         {card.type}
                       </p>
 
-                      <h3 className="mt-5 max-w-155 text-[32px] font-light leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px] lg:min-h-38 lg:text-[44px]">
+                      <h3 className="mt-5 max-w-155 text-[32px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px] lg:min-h-38 lg:text-[44px]">
                         {card.title}
                       </h3>
                     </div>

@@ -300,7 +300,7 @@ export default function MobileAppDevelopmentPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
       </div>
     </div>
@@ -315,7 +315,7 @@ export default function MobileAppDevelopmentPage() {
               Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Build mobile apps that solve real user and business problems.
             </h2>
 
@@ -352,7 +352,7 @@ export default function MobileAppDevelopmentPage() {
                     <Icon size={28} className="text-[#193175]" />
                   </div>
 
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -383,7 +383,7 @@ export default function MobileAppDevelopmentPage() {
         Mobile App Development Process
       </p>
 
-      <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+      <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
         From idea to launch, our mobile app development roadmap
       </h2>
 
@@ -414,7 +414,7 @@ export default function MobileAppDevelopmentPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                  <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                     {item.title}
                   </h3>
 
@@ -505,7 +505,7 @@ export default function MobileAppDevelopmentPage() {
               <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
             </div>
 
-            <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+            <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
               {item.title}
             </h3>
 
@@ -528,7 +528,7 @@ export default function MobileAppDevelopmentPage() {
                 Mobile App Solutions
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Mobile apps for customer-facing and internal business use.
               </h2>
             </div>
@@ -556,7 +556,7 @@ export default function MobileAppDevelopmentPage() {
                     />
                   </div>
 
-                  <h3 className="text-[20px] font-light tracking-[-0.3px]">
+                  <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                     {item.title}
                   </h3>
                 </div>
@@ -574,7 +574,7 @@ export default function MobileAppDevelopmentPage() {
               App Types We Build
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Choose the right app approach for your users and product goals.
             </h2>
           </div>
@@ -596,7 +596,7 @@ export default function MobileAppDevelopmentPage() {
                   />
                 </div>
 
-                <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -618,7 +618,7 @@ export default function MobileAppDevelopmentPage() {
                 Case Studies
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Mobile app solutions designed around real business workflows.
               </h2>
             </div>
@@ -647,7 +647,7 @@ export default function MobileAppDevelopmentPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="flex items-center justify-between gap-5">
-                    <h3 className="text-[24px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[24px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -695,9 +695,7 @@ export default function MobileAppDevelopmentPage() {
   className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
 >
                 <span>Enquire Now</span>
-                <span className="text-[26px] transition-transform group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           </div>
@@ -712,7 +710,7 @@ export default function MobileAppDevelopmentPage() {
         Tech Stack
       </p>
 
-      <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+      <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
         Technologies we use for mobile app development
       </h2>
 
@@ -782,7 +780,7 @@ export default function MobileAppDevelopmentPage() {
                   />
                 </div>
 
-                <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                   {item.name}
                 </h3>
               </div>
@@ -802,7 +800,7 @@ export default function MobileAppDevelopmentPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               We build mobile apps around users, business workflows and long-term product growth.
             </h2>
           </div>
@@ -814,7 +812,7 @@ export default function MobileAppDevelopmentPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -836,7 +834,7 @@ export default function MobileAppDevelopmentPage() {
                 App Maintenance & Growth
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Support that keeps your mobile app stable after launch.
               </h2>
             </div>
@@ -862,7 +860,7 @@ export default function MobileAppDevelopmentPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                       {item.title}
                     </h3>
 
@@ -885,7 +883,7 @@ export default function MobileAppDevelopmentPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about custom mobile app development.
             </h2>
           </div>
@@ -959,9 +957,7 @@ export default function MobileAppDevelopmentPage() {
                           className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
                         >
                                         <span>Enquire Now</span>
-                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                                          →
-                                        </span>
+                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                                       </button>
                                     </div>
                                   </div>

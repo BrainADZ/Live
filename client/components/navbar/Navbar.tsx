@@ -9,6 +9,7 @@ import {
   CircleUserRound,
   Menu,
   X,
+  ArrowRight,
 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -296,9 +297,7 @@ export default function Navbar() {
                         >
                           <span>{item}</span>
 
-                          <span className="text-lg text-[#193175]">
-                            →
-                          </span>
+                          <ArrowRight size={18} strokeWidth={1.8} className="text-lg text-[#193175]" />
                         </Link>
                       ))}
                     </div>
@@ -311,7 +310,7 @@ export default function Navbar() {
                     >
                       <span>Explore {activeCategory}</span>
 
-                      <span>→</span>
+                      <ArrowRight size={20} strokeWidth={1.8} />
                     </Link>
                   </div>
 
@@ -325,12 +324,10 @@ export default function Navbar() {
                     >
                       {activeCategory}
 
-                      <span className="transition-transform duration-300 group-hover:translate-x-1">
-                        →
-                      </span>
+                      <ArrowRight size={20} strokeWidth={1.8} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
 
-                    {/* 
+                    {/*
                       ALL SOFTWARE SERVICES / PRODUCTS / INDUSTRIES
                       ARROW ADDED ON THE RIGHT SIDE OF EVERY OPTION
                     */}
@@ -348,9 +345,7 @@ export default function Navbar() {
                           </h3>
 
                           {/* RIGHT SIDE ARROW */}
-                          <span className="shrink-0 text-[24px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1">
-                            →
-                          </span>
+                          <ArrowRight size={24} strokeWidth={1.8} className="shrink-0 text-[24px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                       ))}
                     </div>
@@ -456,7 +451,7 @@ export default function Navbar() {
                     BrainADZ Live
                   </p>
 
-                  <h3 className="mt-2 text-[20px] font-light tracking-[-0.4px] text-[#161616]">
+                  <h3 className="mt-2 text-[20px] font-normal tracking-[-0.4px] text-[#161616]">
                     Account & quick actions
                   </h3>
 
@@ -476,9 +471,7 @@ export default function Navbar() {
                     >
                       <span className="flex items-center justify-between gap-4 text-[15px] font-normal text-[#161616] group-hover:text-[#193175]">
                         {item.label}
-                        <span className="text-[#193175] transition-transform group-hover:translate-x-1">
-                          →
-                        </span>
+                        <ArrowRight size={20} strokeWidth={1.8} className="text-[#193175] transition-transform group-hover:translate-x-1" />
                       </span>
 
                       <span className="mt-1 block text-[13px] font-light leading-[1.45] text-black/55">
@@ -533,7 +526,7 @@ export default function Navbar() {
                 Search BrainADZ Live
               </p>
 
-              <h3 className="mt-2 text-[28px] font-light tracking-[-0.8px] text-[#161616] md:text-[36px]">
+              <h3 className="mt-2 text-[28px] font-normal tracking-[-0.8px] text-[#161616] md:text-[36px]">
                 Find services, platforms, industries and insights
               </h3>
             </div>
@@ -577,9 +570,7 @@ export default function Navbar() {
                   <span className="flex items-center justify-between gap-4 text-[17px] font-normal text-[#161616] group-hover:text-[#193175]">
                     {item.label}
 
-                    <span className="text-[#193175] transition-transform group-hover:translate-x-1">
-                      →
-                    </span>
+                    <ArrowRight size={20} strokeWidth={1.8} className="text-[#193175] transition-transform group-hover:translate-x-1" />
                   </span>
 
                   <span className="mt-3 block text-[14px] font-light leading-[1.6] text-black/60">
@@ -656,7 +647,7 @@ export default function Navbar() {
                   >
                     <span className="flex items-center justify-between text-[16px] font-normal text-[#161616]">
                       {item.label}
-                      <span className="text-[#193175]">→</span>
+                      <ArrowRight size={20} strokeWidth={1.8} className="text-[#193175]" />
                     </span>
 
                     <span className="mt-1 block text-[13px] font-light leading-[1.45] text-black/55">
@@ -696,7 +687,7 @@ export default function Navbar() {
                   >
                     <span>{category}</span>
 
-                    <span>→</span>
+                    <ArrowRight size={20} strokeWidth={1.8} />
                   </Link>
 
                   <div className="px-4 pb-4">
@@ -710,9 +701,7 @@ export default function Navbar() {
                         >
                           <span>{item.title}</span>
 
-                          <span className="shrink-0 text-[#193175] transition-transform duration-300 group-hover:translate-x-1">
-                            →
-                          </span>
+                          <ArrowRight size={20} strokeWidth={1.8} className="shrink-0 text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                       ))}
                     </div>

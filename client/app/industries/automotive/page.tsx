@@ -400,7 +400,7 @@ export default function AutomotiveIndustryPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -415,7 +415,7 @@ export default function AutomotiveIndustryPage() {
               Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Connect automotive sales, service and operational workflows.
             </h2>
 
@@ -439,7 +439,7 @@ export default function AutomotiveIndustryPage() {
                 >
                   <Icon size={28} className="mb-4 text-[#193175]" />
 
-                  <h3 className="text-[20px] font-light">
+                  <h3 className="text-[20px] font-normal">
                     {item.title}
                   </h3>
 
@@ -461,7 +461,7 @@ export default function AutomotiveIndustryPage() {
               Automotive Challenges
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common workflow problems across automotive businesses.
             </h2>
           </div>
@@ -476,7 +476,7 @@ export default function AutomotiveIndustryPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -497,7 +497,7 @@ export default function AutomotiveIndustryPage() {
               Automotive Solutions We Build
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Digital systems for sales, service, inventory and customer
               experience.
             </h2>
@@ -519,7 +519,7 @@ export default function AutomotiveIndustryPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -541,7 +541,7 @@ export default function AutomotiveIndustryPage() {
               Solution Architecture
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan connected workflows around the actual automotive business.
             </h2>
 
@@ -588,7 +588,7 @@ export default function AutomotiveIndustryPage() {
               Our Process
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our automotive solution implementation roadmap
             </h2>
 
@@ -626,7 +626,7 @@ export default function AutomotiveIndustryPage() {
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
-                        <h3 className="mt-2 text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="mt-2 text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -761,7 +761,7 @@ export default function AutomotiveIndustryPage() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="mt-3 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-3 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -783,7 +783,7 @@ export default function AutomotiveIndustryPage() {
               Automotive Platforms
             </p>
 
-            <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Types of automotive solutions we plan and build
             </h2>
 
@@ -820,7 +820,7 @@ export default function AutomotiveIndustryPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
+                    <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
 
@@ -844,7 +844,7 @@ export default function AutomotiveIndustryPage() {
                 Core Automotive Features
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Practical features for automotive sales and operations.
               </h2>
             </div>
@@ -883,7 +883,7 @@ export default function AutomotiveIndustryPage() {
               Platform Controls & Reliability
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan access, data and operational controls around the platform.
             </h2>
 
@@ -927,7 +927,7 @@ export default function AutomotiveIndustryPage() {
                 Solution Scenarios
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Examples of automotive workflows we can plan and build.
               </h2>
             </div>
@@ -957,7 +957,7 @@ export default function AutomotiveIndustryPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -987,7 +987,7 @@ export default function AutomotiveIndustryPage() {
               Tech Stack
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies selected around the automotive platform requirement
             </h2>
 
@@ -1058,7 +1058,7 @@ export default function AutomotiveIndustryPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -1078,7 +1078,7 @@ export default function AutomotiveIndustryPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Automotive technology planning based on real business workflows.
             </h2>
           </div>
@@ -1093,7 +1093,7 @@ export default function AutomotiveIndustryPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -1122,7 +1122,7 @@ export default function AutomotiveIndustryPage() {
               Implementation & Support Scope
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Handover and support aligned with the project scope.
             </h2>
 
@@ -1161,7 +1161,7 @@ export default function AutomotiveIndustryPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about automotive technology solutions.
             </h2>
           </div>
@@ -1243,9 +1243,7 @@ export default function AutomotiveIndustryPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

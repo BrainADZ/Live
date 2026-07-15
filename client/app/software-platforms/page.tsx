@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import PopupForm from "@/components/PopupForm";
 import { useState } from "react";
@@ -100,7 +101,7 @@ export default function SoftwarePlatformsPage() {
               >
                 Enquire Now
 
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -118,7 +119,7 @@ export default function SoftwarePlatformsPage() {
                 About Software Platforms
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Purpose-built platforms for customers, operations and digital displays
               </h2>
 
@@ -210,7 +211,7 @@ export default function SoftwarePlatformsPage() {
                 Explore Platforms
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Five platforms built for distinct business and customer experiences
               </h2>
             </div>
@@ -241,7 +242,7 @@ export default function SoftwarePlatformsPage() {
 
                 {/* CARD CONTENT */}
                 <div>
-                  <h3 className="text-[25px] font-light leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
+                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
                     {item.title}
                   </h3>
 
@@ -257,9 +258,7 @@ export default function SoftwarePlatformsPage() {
                   >
                     <span>Explore platform</span>
 
-                    <span className="text-[20px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
+                    <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
@@ -302,9 +301,7 @@ export default function SoftwarePlatformsPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

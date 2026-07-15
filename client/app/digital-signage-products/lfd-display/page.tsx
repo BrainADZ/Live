@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 import {
+  ArrowRight,
   CheckCircle2,
   Minus,
   Plus,
@@ -186,7 +187,7 @@ export default function LFDDisplayPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -209,7 +210,7 @@ export default function LFDDisplayPage() {
               Overview
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A large-screen display for digital content and professional
               communication.
             </h2>
@@ -242,7 +243,7 @@ export default function LFDDisplayPage() {
               Why Choose This Product
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Designed for visible content and professional screen-based
               communication.
             </h2>
@@ -258,7 +259,7 @@ export default function LFDDisplayPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -280,7 +281,7 @@ export default function LFDDisplayPage() {
                 Configuration Details
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Plan the display around the space and communication requirement.
               </h2>
             </div>
@@ -319,7 +320,7 @@ export default function LFDDisplayPage() {
               Ideal Applications
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Suitable for spaces that need professional digital content and
               presentation.
             </h2>
@@ -336,7 +337,7 @@ export default function LFDDisplayPage() {
                   className="mb-5 text-[#193175]"
                 />
 
-                <h3 className="text-[21px] font-light tracking-[-0.4px]">
+                <h3 className="text-[21px] font-normal tracking-[-0.4px]">
                   {item}
                 </h3>
               </div>
@@ -353,7 +354,7 @@ export default function LFDDisplayPage() {
               Key Features
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Practical display capabilities for business communication.
             </h2>
           </div>
@@ -369,7 +370,7 @@ export default function LFDDisplayPage() {
                 </span>
 
                 <div>
-                  <h3 className="text-[25px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[25px] font-normal tracking-[-0.5px]">
                     {item.title}
                   </h3>
 
@@ -391,7 +392,7 @@ export default function LFDDisplayPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about LFD Display.
             </h2>
           </div>
@@ -473,9 +474,7 @@ export default function LFDDisplayPage() {
               >
                 <span>Request a Quote</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import PopupForm from "@/components/PopupForm";
 import { useState } from "react";
@@ -164,7 +165,7 @@ export default function IndustriesPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -182,7 +183,7 @@ export default function IndustriesPage() {
                 About Industries
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Technology should fit the way each industry actually works
               </h2>
 
@@ -258,7 +259,7 @@ export default function IndustriesPage() {
                 Industries We Build For
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Different industries need different workflows, interfaces and systems
               </h2>
             </div>
@@ -287,7 +288,7 @@ export default function IndustriesPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-[25px] font-light leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
+                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
                     {item.title}
                   </h3>
 
@@ -343,9 +344,7 @@ export default function IndustriesPage() {
                 className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

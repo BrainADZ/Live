@@ -49,7 +49,7 @@ export default function WhyChooseSection() {
             Why Choose BrainADZLive
           </p>
 
-          <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+          <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
             Technology solutions built with clarity, reliability, and scale
           </h2>
 
@@ -83,7 +83,7 @@ export default function WhyChooseSection() {
               </div>
 
               {/* TEXT */}
-              <h3 className="relative z-10 mt-7 text-[21px] font-light leading-[1.35] tracking-[-0.4px] text-[#262626] md:text-[22px]">
+              <h3 className="relative z-10 mt-7 text-[21px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626] md:text-[22px]">
                 {reason.title}
               </h3>
 

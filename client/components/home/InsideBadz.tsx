@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 export default function InsideBadzSection() {
   return (
     <section className="lazy-section mx-auto max-w-450 bg-white px-6 py-22.5 text-[#161616] md:px-10 lg:px-12">
@@ -5,7 +6,7 @@ export default function InsideBadzSection() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.05fr_1fr_1fr_1fr] lg:gap-20">
           {/* LEFT HEADING */}
           <div data-aos="fade-right">
-            <h2 className="text-[50px] font-light leading-[1.05] tracking-[-2.5px] text-[#161616] md:text-[60px] lg:text-[64px]">
+            <h2 className="text-[50px] font-normal leading-[1.05] tracking-[-2.5px] text-[#161616] md:text-[60px] lg:text-[64px]">
               Inside BrainADZ
             </h2>
 
@@ -42,7 +43,7 @@ export default function InsideBadzSection() {
               >
                 Explore BrainADZ Marketing
 
-                <span className="text-[14px] leading-none">↗</span>
+                <ArrowRight size={14} strokeWidth={1.8} className="text-[14px] leading-none" />
               </a>
             </div>
           </div>
@@ -74,7 +75,7 @@ export default function InsideBadzSection() {
               >
                 Explore BrainADZ Exhibits
 
-                <span className="text-[14px] leading-none">↗</span>
+                <ArrowRight size={14} strokeWidth={1.8} className="text-[14px] leading-none" />
               </a>
             </div>
           </div>
@@ -104,7 +105,7 @@ export default function InsideBadzSection() {
               >
                 Explore BrainADZ Live
 
-                <span className="text-[14px] leading-none">→</span>
+                <ArrowRight size={14} strokeWidth={1.8} className="text-[14px] leading-none" />
               </a>
             </div>
           </div>

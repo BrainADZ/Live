@@ -235,7 +235,7 @@ export default function SignageApplicationPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -258,7 +258,7 @@ export default function SignageApplicationPage() {
               Software Overview
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Bring signage media, playlists and screen playback into one
               application workflow.
             </h2>
@@ -273,7 +273,7 @@ export default function SignageApplicationPage() {
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Content Workflow
                 </h3>
 
@@ -284,7 +284,7 @@ export default function SignageApplicationPage() {
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Playback Planning
                 </h3>
 
@@ -318,7 +318,7 @@ export default function SignageApplicationPage() {
               Why Signage Application
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Create a structured workflow for digital signage content and
               playback.
             </h2>
@@ -351,7 +351,7 @@ export default function SignageApplicationPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -373,7 +373,7 @@ export default function SignageApplicationPage() {
                 Core Features
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Core tools for preparing and managing signage playback.
               </h2>
             </div>
@@ -401,7 +401,7 @@ export default function SignageApplicationPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -423,7 +423,7 @@ export default function SignageApplicationPage() {
               Display Deployment Types
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan the application around compatible digital display formats.
             </h2>
 
@@ -448,7 +448,7 @@ export default function SignageApplicationPage() {
                     className="mb-5 text-[#193175]"
                   />
 
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                 </div>
@@ -466,7 +466,7 @@ export default function SignageApplicationPage() {
               Platform Capabilities
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Practical tools for managing signage content and playback.
             </h2>
 
@@ -499,7 +499,7 @@ export default function SignageApplicationPage() {
                 </span>
 
                 <div>
-                  <h3 className="text-[26px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[26px] font-normal tracking-[-0.5px]">
                     {item.title}
                   </h3>
 
@@ -530,7 +530,7 @@ export default function SignageApplicationPage() {
               Workflow
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our Signage Application Implementation Roadmap
             </h2>
 
@@ -564,7 +564,7 @@ export default function SignageApplicationPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -669,7 +669,7 @@ export default function SignageApplicationPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -692,7 +692,7 @@ export default function SignageApplicationPage() {
                 Integration Planning
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Align the application with displays and connected systems.
               </h2>
             </div>
@@ -733,7 +733,7 @@ export default function SignageApplicationPage() {
               Dashboard Preview
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               One application view for media, playlists and configured
               displays.
             </h2>
@@ -757,7 +757,7 @@ export default function SignageApplicationPage() {
               Why BrainADZ
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Signage application planning based on real content and display
               workflows.
             </h2>
@@ -790,7 +790,7 @@ export default function SignageApplicationPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -811,7 +811,7 @@ export default function SignageApplicationPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about Signage Application.
             </h2>
           </div>
@@ -892,9 +892,7 @@ export default function SignageApplicationPage() {
               >
                 <span>Request a Demo</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

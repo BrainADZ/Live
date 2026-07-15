@@ -210,7 +210,7 @@ export default function VirtualTrialRoomPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -233,7 +233,7 @@ export default function VirtualTrialRoomPage() {
               Software Overview
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Bring product exploration into a digital preview experience.
             </h2>
 
@@ -247,7 +247,7 @@ export default function VirtualTrialRoomPage() {
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Interactive Product Exploration
                 </h3>
 
@@ -257,7 +257,7 @@ export default function VirtualTrialRoomPage() {
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Configurable Preview Journey
                 </h3>
 
@@ -291,7 +291,7 @@ export default function VirtualTrialRoomPage() {
               Benefits
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Add a more visual layer to the customer product journey.
             </h2>
           </div>
@@ -323,7 +323,7 @@ export default function VirtualTrialRoomPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -345,7 +345,7 @@ export default function VirtualTrialRoomPage() {
                 Key Features
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Core capabilities for a virtual product preview experience.
               </h2>
             </div>
@@ -373,7 +373,7 @@ export default function VirtualTrialRoomPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -395,7 +395,7 @@ export default function VirtualTrialRoomPage() {
               Virtual Try-On Experience
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan the product preview journey around the actual customer
               experience.
             </h2>
@@ -407,7 +407,7 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <div className="mt-8 rounded-[26px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-              <h3 className="text-[22px] font-light tracking-[-0.4px]">
+              <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                 Plan the right preview experience
               </h3>
 
@@ -438,7 +438,7 @@ export default function VirtualTrialRoomPage() {
                 </span>
 
                 <div>
-                  <h3 className="text-[26px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[26px] font-normal tracking-[-0.5px]">
                     {item.title}
                   </h3>
 
@@ -469,7 +469,7 @@ export default function VirtualTrialRoomPage() {
               Workflow
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our Virtual Trial Room Implementation Roadmap
             </h2>
 
@@ -503,7 +503,7 @@ export default function VirtualTrialRoomPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -608,7 +608,7 @@ export default function VirtualTrialRoomPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -631,7 +631,7 @@ export default function VirtualTrialRoomPage() {
                 Integration Planning
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Connect the preview experience with selected commerce systems.
               </h2>
             </div>
@@ -672,7 +672,7 @@ export default function VirtualTrialRoomPage() {
               Platform Preview
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A central view for products, trial experiences and configured
               activity data.
             </h2>
@@ -696,7 +696,7 @@ export default function VirtualTrialRoomPage() {
               Why BrainADZ
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Virtual Trial Room planning based on products, users and the
               required shopping journey.
             </h2>
@@ -729,7 +729,7 @@ export default function VirtualTrialRoomPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -750,7 +750,7 @@ export default function VirtualTrialRoomPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about Virtual Trial Room.
             </h2>
           </div>
@@ -831,9 +831,7 @@ export default function VirtualTrialRoomPage() {
               >
                 <span>Request a Demo</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

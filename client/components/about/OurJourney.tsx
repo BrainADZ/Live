@@ -138,7 +138,7 @@ export default function DigitalExcellenceTimeline() {
             Our Journey
           </p>
 
-          <h2 className="text-[38px] font-light leading-[1.08] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+          <h2 className="text-[38px] font-normal leading-[1.08] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
             How our technology capabilities have expanded
           </h2>
 
@@ -196,7 +196,7 @@ export default function DigitalExcellenceTimeline() {
                 key={`${activeItem.year}-${activeItem.title}`}
                 className="timeline-content"
               >
-                <h3 className="max-w-[560px] text-[30px] font-light leading-[1.12] tracking-[-1px] text-[#262626] xl:text-[34px]">
+                <h3 className="max-w-[560px] text-[30px] font-normal leading-[1.12] tracking-[-1px] text-[#262626] xl:text-[34px]">
                   {activeItem.title}
                 </h3>
 
@@ -243,7 +243,7 @@ export default function DigitalExcellenceTimeline() {
                 key={`mobile-content-${activeItem.year}`}
                 className="timeline-content py-2"
               >
-                <h3 className="text-[28px] font-light leading-[1.14] tracking-[-0.8px] text-[#262626] md:text-[34px]">
+                <h3 className="text-[28px] font-normal leading-[1.14] tracking-[-0.8px] text-[#262626] md:text-[34px]">
                   {activeItem.title}
                 </h3>
 

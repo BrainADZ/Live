@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import PopupForm from "../PopupForm";
 export default function CtaSection() {
@@ -44,7 +45,7 @@ export default function CtaSection() {
              className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5 cursor-pointer"
             >
               Enquire Now
-              <span className="text-[20px] leading-none">↗</span>
+              <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
             </button>
           </div>
         </div>

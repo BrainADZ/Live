@@ -1,5 +1,7 @@
 "use client";
 
+
+import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
 const products = [
@@ -56,7 +58,7 @@ export default function ProductSection() {
               Our Products
             </p>
 
-            <h2 className="max-w-180 text-[42px] font-light leading-[1.08] tracking-[-2px] text-[#161616] md:text-[54px] lg:text-[62px]">
+            <h2 className="max-w-180 text-[42px] font-normal leading-[1.08] tracking-[-2px] text-[#161616] md:text-[54px] lg:text-[62px]">
               Smart display products built for modern businesses
             </h2>
           </div>
@@ -107,7 +109,7 @@ export default function ProductSection() {
 
                 {/* CONTENT AREA */}
                 <div className="relative flex min-h-37.5 flex-1 flex-col justify-between p-6">
-                  <h3 className="max-w-72.5 text-[24px] font-light leading-[1.2] tracking-[-0.6px] text-[#161616] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-[#193175] md:text-[26px]">
+                  <h3 className="max-w-72.5 text-[24px] font-normal leading-[1.2] tracking-[-0.6px] text-[#161616] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-[#193175] md:text-[26px]">
                     {product.title}
                   </h3>
 
@@ -116,9 +118,7 @@ export default function ProductSection() {
                       Explore product
                     </span>
 
-                    <span className="flex h-10.5 w-10.5 items-center justify-center rounded-full border border-[#193175]/30 text-[30px] font-light leading-none text-[#193175] transition-all duration-500 group-hover:translate-x-1 group-hover:border-[#193175] group-hover:bg-[#193175] group-hover:text-white">
-                      →
-                    </span>
+                    <ArrowRight size={30} strokeWidth={1.8} className="flex h-10.5 w-10.5 items-center justify-center rounded-full border border-[#193175]/30 text-[30px] font-light leading-none text-[#193175] transition-all duration-500 group-hover:translate-x-1 group-hover:border-[#193175] group-hover:bg-[#193175] group-hover:text-white" />
                   </div>
                 </div>
               </div>

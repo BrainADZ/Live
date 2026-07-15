@@ -458,7 +458,7 @@ export default function BlogPage() {
               >
                 Explore Insights
 
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </a>
             </div>
           </div>
@@ -472,7 +472,7 @@ export default function BlogPage() {
 >
   <div className="mx-auto max-w-450">
     <h2
-      className="mb-12 text-[42px] font-light leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
+      className="mb-12 text-[42px] font-normal leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
       data-aos="fade-up"
     >
       Featured insights and technology perspectives
@@ -503,7 +503,7 @@ export default function BlogPage() {
             {mainFeaturedArticle.category}
           </p>
 
-          <h3 className="mt-3 text-[22px] font-light leading-[1.35] tracking-[-0.4px] text-[#262626]">
+          <h3 className="mt-3 text-[22px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626]">
             {mainFeaturedArticle.title}
           </h3>
 
@@ -588,7 +588,7 @@ export default function BlogPage() {
               </div>
 
               <h3
-                className={`mt-3 font-light leading-[1.4] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] ${
+                className={`mt-3 font-normal leading-[1.4] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] ${
                   index === 0
                     ? "max-w-162.5 text-[24px] tracking-[-0.5px]"
                     : "text-[20px]"
@@ -627,7 +627,7 @@ export default function BlogPage() {
                 Latest Insights
               </p>
 
-              <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Explore practical technology topics
               </h2>
             </div>
@@ -720,7 +720,7 @@ export default function BlogPage() {
                       </span>
                     </div>
 
-                    <h3 className="mt-5 text-[24px] font-light leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
+                    <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
                       {article.title}
                     </h3>
 
@@ -751,7 +751,7 @@ export default function BlogPage() {
                 fallbackClassName="mx-auto h-9 w-9 text-[#193175]"
               />
 
-              <h3 className="mt-5 text-[24px] font-light text-[#262626]">
+              <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
                 No articles found
               </h3>
 
@@ -842,9 +842,7 @@ export default function BlogPage() {
               >
                 <span>Discuss Your Requirement</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

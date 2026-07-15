@@ -143,7 +143,7 @@ export default function TechStackSection() {
               Tech Stack
             </p>
 
-            <h2 className="max-w-170 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="max-w-170 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Modern technologies behind smarter digital systems
             </h2>
           </div>
@@ -225,7 +225,7 @@ export default function TechStackSection() {
                     </div>
 
                     {/* NAME */}
-                    <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                    <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                       {item.name}
                     </h3>
                   </div>

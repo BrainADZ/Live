@@ -311,7 +311,7 @@ export default function CRMDevelopmentPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -325,7 +325,7 @@ export default function CRMDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Bring leads, customers and team activity into one connected CRM.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -340,7 +340,7 @@ export default function CRMDevelopmentPage() {
               return (
                 <div key={item.title} className="border-t border-black/10 pt-7">
                   <Icon size={30} className="mb-5 text-[#193175]" />
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -362,7 +362,7 @@ export default function CRMDevelopmentPage() {
                 CRM Modules
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 The CRM modules your teams need to manage leads and customers every day.
               </h2>
             </div>
@@ -390,7 +390,7 @@ export default function CRMDevelopmentPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -421,7 +421,7 @@ export default function CRMDevelopmentPage() {
               CRM Development Process
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               From workflow discovery to a CRM your team can use every day.
             </h2>
 
@@ -456,7 +456,7 @@ export default function CRMDevelopmentPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -555,7 +555,7 @@ export default function CRMDevelopmentPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -577,7 +577,7 @@ export default function CRMDevelopmentPage() {
               Customer Lifecycle
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Manage every step from first enquiry to long-term customer relationship.
             </h2>
 
@@ -598,7 +598,7 @@ export default function CRMDevelopmentPage() {
                   0{index + 1}
                 </div>
 
-                <h3 className="text-[20px] font-light tracking-[-0.3px]">
+                <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                   {item}
                 </h3>
               </div>
@@ -615,7 +615,7 @@ export default function CRMDevelopmentPage() {
               CRM Integrations
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Connect your CRM with the channels and systems your teams already use.
             </h2>
           </div>
@@ -631,7 +631,7 @@ export default function CRMDevelopmentPage() {
                 >
                   <Icon size={30} className="mx-auto mb-4 text-[#193175]" />
 
-                  <h3 className="text-[16px] font-light tracking-[-0.2px]">
+                  <h3 className="text-[16px] font-normal tracking-[-0.2px]">
                     {item.title}
                   </h3>
                 </div>
@@ -650,7 +650,7 @@ export default function CRMDevelopmentPage() {
                 Case Studies
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 CRM platforms shaped around different sales and customer workflows.
               </h2>
             </div>
@@ -680,7 +680,7 @@ export default function CRMDevelopmentPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[24px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[24px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -709,7 +709,7 @@ export default function CRMDevelopmentPage() {
               Tech Stack
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies we use to build custom CRM platforms
             </h2>
 
@@ -781,7 +781,7 @@ export default function CRMDevelopmentPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -801,7 +801,7 @@ export default function CRMDevelopmentPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               We build CRM software around real workflows—not a fixed template.
             </h2>
           </div>
@@ -816,7 +816,7 @@ export default function CRMDevelopmentPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -845,7 +845,7 @@ export default function CRMDevelopmentPage() {
               CRM Support & Adoption
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Keep your CRM useful as teams and processes change.
             </h2>
 
@@ -884,7 +884,7 @@ export default function CRMDevelopmentPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about custom CRM development.
             </h2>
           </div>
@@ -973,9 +973,7 @@ export default function CRMDevelopmentPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

@@ -1,5 +1,7 @@
 "use client";
 
+
+import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
 const services = [
@@ -67,7 +69,7 @@ export default function ServiceSection() {
       {/* TOP HEADING + DESCRIPTION */}
       <div className="mb-27.5 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
         <h2
-          className="max-w-137.5 text-[46px] font-light leading-[1.08] tracking-[-2.4px] text-[#161616] md:text-[52px]"
+          className="max-w-137.5 text-[46px] font-normal leading-[1.08] tracking-[-2.4px] text-[#161616] md:text-[52px]"
           data-aos="fade-right"
         >
           Build smarter digital solutions with BrainADZ Live
@@ -104,7 +106,7 @@ export default function ServiceSection() {
 
             {/* TITLE / DESCRIPTION AREA */}
             <div className="relative z-10 min-h-24">
-              <h3 className="max-w-82.5 text-[21px] font-light leading-[1.35] tracking-[-0.2px] text-[#242424] transition-all duration-300 group-hover:opacity-0">
+              <h3 className="max-w-82.5 text-[21px] font-normal leading-[1.35] tracking-[-0.2px] text-[#242424] transition-all duration-300 group-hover:opacity-0">
                 {service.title}
               </h3>
 
@@ -125,9 +127,7 @@ export default function ServiceSection() {
                 />
               </div>
 
-              <span className="text-[38px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+              <ArrowRight size={38} strokeWidth={1.8} className="text-[38px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
             </div>
           </a>
         ))}

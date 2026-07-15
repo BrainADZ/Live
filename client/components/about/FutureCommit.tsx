@@ -72,7 +72,7 @@ export default function FutureCommitments() {
             Our Commitments
           </p>
 
-          <h2 className="max-w-262.5 text-[40px] font-light leading-[1.08] tracking-[-1.9px] text-[#262626] md:text-[54px] lg:text-[64px]">
+          <h2 className="max-w-262.5 text-[40px] font-normal leading-[1.08] tracking-[-1.9px] text-[#262626] md:text-[54px] lg:text-[64px]">
             What we want to keep improving
           </h2>
         </div>

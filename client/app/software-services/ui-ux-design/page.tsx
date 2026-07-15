@@ -345,7 +345,7 @@ export default function UIUXDesignPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Design digital products that are easier to understand and use.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -381,7 +381,7 @@ export default function UIUXDesignPage() {
               return (
                 <div key={item.title} className="border-l-2 border-[#193175] pl-5">
                   <Icon size={28} className="mb-4 text-[#193175]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                  <h3 className="text-[20px] font-normal">{item.title}</h3>
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -400,7 +400,7 @@ export default function UIUXDesignPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Our UI/UX Design Services
               </p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 UI/UX services from product understanding to developer handoff.
               </h2>
             </div>
@@ -417,7 +417,7 @@ export default function UIUXDesignPage() {
               return (
                 <div key={item.title} className="border-t border-black/10 pt-7">
                   <Icon size={31} className="text-[#193175]" />
-                  <h3 className="mt-5 text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="mt-5 text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -437,7 +437,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               What We Focus On
             </p>
-            <h2 className="max-w-185 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-185 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               What goes into a clear, usable product experience?
             </h2>
             <p className="mt-7 max-w-175 text-[16px] font-light leading-[1.85] text-black/65 md:text-[18px]">
@@ -506,7 +506,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Our Design Approach
             </p>
-            <h2 className="max-w-190 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-190 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               The perfect balance of user, business and technology.
             </h2>
             <p className="mt-5 max-w-180 text-[16px] font-light leading-[1.7] text-black/65">
@@ -521,7 +521,7 @@ export default function UIUXDesignPage() {
                   <div key={item.title} className="flex gap-5 border-t border-black/10 pt-6">
                     <Icon size={26} className="mt-1 shrink-0 text-[#193175]" />
                     <div>
-                      <h3 className="text-[20px] font-light">{item.title}</h3>
+                      <h3 className="text-[20px] font-normal">{item.title}</h3>
                       <p className="mt-2 text-[15px] font-light leading-[1.65] text-black/65">
                         {item.text}
                       </p>
@@ -550,7 +550,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Design Process
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               From product understanding to development-ready design
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
@@ -574,7 +574,7 @@ export default function UIUXDesignPage() {
                         <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
                       </div>
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -609,7 +609,7 @@ export default function UIUXDesignPage() {
                   <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
                     <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
                   </div>
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
                   <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
@@ -629,7 +629,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tools We Use
             </p>
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Tools we use to research, design and prototype digital products
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -663,7 +663,7 @@ export default function UIUXDesignPage() {
                       <div className="flex h-11.5 w-full items-center justify-center">
                         <img src={item.icon} alt={item.name} loading="lazy" decoding="async" className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105" onError={(e) => { e.currentTarget.style.display = "none"; }} />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -684,7 +684,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Design decisions grounded in real users, workflows and product needs.
             </h2>
           </div>
@@ -700,7 +700,7 @@ export default function UIUXDesignPage() {
                       0{index + 1}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-[24px] font-light tracking-[-0.4px]">
+                  <h3 className="mt-4 text-[24px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -721,7 +721,7 @@ export default function UIUXDesignPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Our Work
               </p>
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Product interfaces shaped around real user tasks and workflows.
               </h2>
             </div>
@@ -737,7 +737,7 @@ export default function UIUXDesignPage() {
                   <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
                 </div>
                 <div className="p-7 md:p-8">
-                  <h3 className="text-[24px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[24px] font-normal tracking-[-0.5px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -760,7 +760,7 @@ export default function UIUXDesignPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about our UI/UX design process.
             </h2>
           </div>
@@ -817,9 +817,7 @@ export default function UIUXDesignPage() {
                           className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
                         >
                                         <span>Enquire Now</span>
-                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                                          →
-                                        </span>
+                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                                       </button>
                                     </div>
                                   </div>

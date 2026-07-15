@@ -64,7 +64,7 @@ export default function FastFacts() {
               What We Work Across
             </p>
 
-            <h3 className="max-w-[470px] text-[38px] font-light leading-[1.12] tracking-[-1.6px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h3 className="max-w-[470px] text-[38px] font-normal leading-[1.12] tracking-[-1.6px] text-[#262626] md:text-[48px] lg:text-[54px]">
               One company, multiple connected technology capabilities
             </h3>
 
@@ -92,7 +92,7 @@ export default function FastFacts() {
                     <Icon size={25} strokeWidth={1.45} />
                   </div>
 
-                  <h4 className="text-[18px] font-light leading-[1.35] tracking-[-0.3px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[20px]">
+                  <h4 className="text-[18px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[20px]">
                     {service.title}
                   </h4>
 

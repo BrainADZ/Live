@@ -3,6 +3,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useState, type SVGProps } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -283,7 +284,7 @@ export default function ConsultingPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
               Discuss Your Requirement
-              <span className="text-[20px] leading-none">↗</span>
+              <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
             </button>
           </div>
         </div>
@@ -301,7 +302,7 @@ export default function ConsultingPage() {
                 Consulting Before Execution
               </p>
 
-              <h2 className="max-w-180 text-[46px] font-light leading-[1.08] tracking-[-2px] text-[#193175] md:text-[66px] lg:text-[82px]">
+              <h2 className="max-w-180 text-[46px] font-normal leading-[1.08] tracking-[-2px] text-[#193175] md:text-[66px] lg:text-[82px]">
                 Turn business requirements into a practical technology plan
               </h2>
             </div>
@@ -370,7 +371,7 @@ export default function ConsultingPage() {
 
                 <div className="flex flex-col justify-between">
                   <div>
-                    <h3 className="text-[15px] font-light leading-[1.45] text-[#262626] transition group-hover:text-[#193175]">
+                    <h3 className="text-[15px] font-normal leading-[1.45] text-[#262626] transition group-hover:text-[#193175]">
                       {story.title}
                     </h3>
 
@@ -401,7 +402,7 @@ export default function ConsultingPage() {
                 Consulting Services
               </p>
 
-              <h2 className="max-w-195 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-195 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Consulting focused on scope, systems and practical next steps
               </h2>
             </div>
@@ -437,7 +438,7 @@ export default function ConsultingPage() {
                     />
                   </div>
 
-                  <h3 className="relative z-10 mt-8 text-[25px] font-light leading-tight tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
+                  <h3 className="relative z-10 mt-8 text-[25px] font-normal leading-tight tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
                     {service.title}
                   </h3>
 
@@ -462,7 +463,7 @@ export default function ConsultingPage() {
                 Our Approach
               </p>
 
-              <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 From unclear requirements to an executable project direction
               </h2>
 
@@ -485,7 +486,7 @@ export default function ConsultingPage() {
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
-                  <h3 className="text-[26px] font-light leading-[1.2] tracking-[-0.6px] text-[#262626]">
+                  <h3 className="text-[26px] font-normal leading-[1.2] tracking-[-0.6px] text-[#262626]">
                     {step.title}
                   </h3>
 
@@ -506,7 +507,7 @@ export default function ConsultingPage() {
       >
         <div className="mx-auto max-w-450">
           <h2
-            className="mb-12 text-[42px] font-light leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
+            className="mb-12 text-[42px] font-normal leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
             data-aos="fade-up"
           >
             Consulting insights and technology perspectives
@@ -536,7 +537,7 @@ export default function ConsultingPage() {
                   Technology Planning Insight
                 </p>
 
-                <h3 className="mt-3 text-[22px] font-light leading-[1.35] tracking-[-0.4px] text-[#262626]">
+                <h3 className="mt-3 text-[22px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626]">
                   What to define before starting a custom software project
                 </h3>
 
@@ -565,7 +566,7 @@ export default function ConsultingPage() {
                   Solution Architecture
                 </p>
 
-                <h3 className="mt-3 max-w-162.5 text-[24px] font-light leading-[1.35] tracking-[-0.5px] text-[#262626]">
+                <h3 className="mt-3 max-w-162.5 text-[24px] font-normal leading-[1.35] tracking-[-0.5px] text-[#262626]">
                   Good technology decisions start with clear workflows,
                   system boundaries and ownership of data.
                 </h3>
@@ -592,7 +593,7 @@ export default function ConsultingPage() {
                   Automation & Integration
                 </p>
 
-                <h3 className="mt-3 text-[20px] font-light leading-[1.45] text-[#262626]">
+                <h3 className="mt-3 text-[20px] font-normal leading-[1.45] text-[#262626]">
                   Where automation can reduce repetitive work without adding
                   unnecessary system complexity.
                 </h3>
@@ -619,7 +620,7 @@ export default function ConsultingPage() {
                   Customer Experience
                 </p>
 
-                <h3 className="mt-3 text-[20px] font-light leading-[1.45] text-[#262626]">
+                <h3 className="mt-3 text-[20px] font-normal leading-[1.45] text-[#262626]">
                   Choosing the right mix of software, kiosks and displays for
                   a customer-facing environment.
                 </h3>
@@ -648,7 +649,7 @@ export default function ConsultingPage() {
                   {item.category}
                 </p>
 
-                <h3 className="mt-4 text-[22px] font-light leading-[1.35] tracking-[-0.5px]">
+                <h3 className="mt-4 text-[22px] font-normal leading-[1.35] tracking-[-0.5px]">
                   {item.title}
                 </h3>
 
@@ -711,9 +712,7 @@ export default function ConsultingPage() {
                     >
                       <span>Enquire Now</span>
       
-                      <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                        →
-                      </span>
+                      <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                     </button>
                   </div>
                 </div>

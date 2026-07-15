@@ -411,7 +411,7 @@ export default function MediaEntertainmentIndustryPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -426,7 +426,7 @@ export default function MediaEntertainmentIndustryPage() {
               Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Connect content operations with audience and business workflows.
             </h2>
 
@@ -450,7 +450,7 @@ export default function MediaEntertainmentIndustryPage() {
                 >
                   <Icon size={28} className="mb-4 text-[#193175]" />
 
-                  <h3 className="text-[20px] font-light">
+                  <h3 className="text-[20px] font-normal">
                     {item.title}
                   </h3>
 
@@ -472,7 +472,7 @@ export default function MediaEntertainmentIndustryPage() {
               Media & Entertainment Challenges
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common workflow problems across content and entertainment
               businesses.
             </h2>
@@ -488,7 +488,7 @@ export default function MediaEntertainmentIndustryPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -509,7 +509,7 @@ export default function MediaEntertainmentIndustryPage() {
               Media & Entertainment Solutions We Build
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Digital systems for content, audiences, creators, events and
               media operations.
             </h2>
@@ -531,7 +531,7 @@ export default function MediaEntertainmentIndustryPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -553,7 +553,7 @@ export default function MediaEntertainmentIndustryPage() {
               Solution Architecture
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan connected content and media operational workflows.
             </h2>
 
@@ -600,7 +600,7 @@ export default function MediaEntertainmentIndustryPage() {
               Our Process
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our Media & Entertainment implementation roadmap
             </h2>
 
@@ -639,7 +639,7 @@ export default function MediaEntertainmentIndustryPage() {
                           {String(index + 1).padStart(2, "0")}
                         </span>
 
-                        <h3 className="mt-2 text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="mt-2 text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -774,7 +774,7 @@ export default function MediaEntertainmentIndustryPage() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <h3 className="mt-3 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-3 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -796,7 +796,7 @@ export default function MediaEntertainmentIndustryPage() {
               Media Platforms
             </p>
 
-            <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Types of Media & Entertainment solutions we plan and build
             </h2>
 
@@ -834,7 +834,7 @@ export default function MediaEntertainmentIndustryPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">
+                    <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">
                       {item.title}
                     </h3>
 
@@ -858,7 +858,7 @@ export default function MediaEntertainmentIndustryPage() {
                 Core Media Features
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Practical features for content, audience and event workflows.
               </h2>
             </div>
@@ -898,7 +898,7 @@ export default function MediaEntertainmentIndustryPage() {
               Access, Content & Platform Controls
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan access and content handling around the media workflow.
             </h2>
 
@@ -942,7 +942,7 @@ export default function MediaEntertainmentIndustryPage() {
                 Solution Scenarios
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Examples of media workflows we can plan and build.
               </h2>
             </div>
@@ -972,7 +972,7 @@ export default function MediaEntertainmentIndustryPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -1002,7 +1002,7 @@ export default function MediaEntertainmentIndustryPage() {
               Tech Stack
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies selected around the media platform requirement
             </h2>
 
@@ -1073,7 +1073,7 @@ export default function MediaEntertainmentIndustryPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -1093,7 +1093,7 @@ export default function MediaEntertainmentIndustryPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Media technology planning based on real content and audience
               workflows.
             </h2>
@@ -1109,7 +1109,7 @@ export default function MediaEntertainmentIndustryPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -1138,7 +1138,7 @@ export default function MediaEntertainmentIndustryPage() {
               Implementation & Support Scope
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Handover and support aligned with the delivered media platform.
             </h2>
 
@@ -1177,7 +1177,7 @@ export default function MediaEntertainmentIndustryPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about Media & Entertainment technology
               solutions.
             </h2>
@@ -1260,9 +1260,7 @@ export default function MediaEntertainmentIndustryPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

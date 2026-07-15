@@ -22,7 +22,7 @@ export default function NewsSection() {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:gap-28">
           {/* LEFT SIDE */}
           <div data-aos="fade-right">
-            <h2 className="text-[52px] font-light leading-[1.05] tracking-[-2px] text-[#161616] md:text-[48px] lg:text-[52px]">
+            <h2 className="text-[52px] font-normal leading-[1.05] tracking-[-2px] text-[#161616] md:text-[48px] lg:text-[52px]">
               Stay connected
             </h2>
 

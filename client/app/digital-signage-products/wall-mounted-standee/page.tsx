@@ -174,7 +174,7 @@ export default function WallMountedDisplayPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -197,7 +197,7 @@ export default function WallMountedDisplayPage() {
               Product Overview
             </p>
 
-            <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Digital content on the wall, without using valuable floor space.
             </h2>
 
@@ -247,7 +247,7 @@ export default function WallMountedDisplayPage() {
               Why Choose This Product
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A fixed digital display for visible and changing communication.
             </h2>
           </div>
@@ -279,7 +279,7 @@ export default function WallMountedDisplayPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -301,7 +301,7 @@ export default function WallMountedDisplayPage() {
                 Configuration Details
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Plan the display around the wall, content and management needs.
               </h2>
             </div>
@@ -319,7 +319,7 @@ export default function WallMountedDisplayPage() {
                 key={item.label}
                 className="grid gap-3 border-b border-black/10 py-5 last:border-b-0 md:grid-cols-[0.35fr_0.65fr] md:gap-8"
               >
-                <h3 className="text-[17px] font-light text-black">
+                <h3 className="text-[17px] font-normal text-black">
                   {item.label}
                 </h3>
 
@@ -340,7 +340,7 @@ export default function WallMountedDisplayPage() {
               Ideal Applications
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Suitable for customer-facing and professional business spaces.
             </h2>
           </div>
@@ -361,7 +361,7 @@ export default function WallMountedDisplayPage() {
                     />
                   </div>
 
-                  <h3 className="text-[20px] font-light tracking-[-0.3px]">
+                  <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                     {item.title}
                   </h3>
 
@@ -391,7 +391,7 @@ export default function WallMountedDisplayPage() {
               Configuration Options
             </p>
 
-            <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Configure the display around your content, wall space and
               management workflow.
             </h2>
@@ -426,7 +426,7 @@ export default function WallMountedDisplayPage() {
                 Product Showcase
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Wall Mounted Digital Display views and deployment examples.
               </h2>
             </div>
@@ -465,7 +465,7 @@ export default function WallMountedDisplayPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about Wall Mounted Digital Display.
             </h2>
           </div>
@@ -548,9 +548,7 @@ export default function WallMountedDisplayPage() {
               >
                 <span>Request a Quote</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

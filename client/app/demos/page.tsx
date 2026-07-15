@@ -86,7 +86,7 @@ export default function DemosPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Demo Library
               </p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Choose the platform demo you want to review.
               </h2>
             </div>
@@ -122,7 +122,7 @@ export default function DemosPage() {
                     <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                       {demo.category}
                     </p>
-                    <h3 className="mt-3 text-[25px] font-light leading-tight tracking-[-0.5px]">
+                    <h3 className="mt-3 text-[25px] font-normal leading-tight tracking-[-0.5px]">
                       {demo.title}
                     </h3>
 

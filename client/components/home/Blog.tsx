@@ -1,5 +1,7 @@
 "use client";
 
+
+import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
 const blogs = [
@@ -37,7 +39,7 @@ export default function BlogSection() {
               Blogs
             </p>
 
-            <h2 className="max-w-175 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="max-w-175 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Insights on AI, software, and smart display solutions
             </h2>
           </div>
@@ -49,7 +51,7 @@ export default function BlogSection() {
             className="inline-flex w-fit items-center gap-4 text-[17px] font-light text-[#193175] transition hover:underline"
           >
             View all blogs
-            <span className="text-[28px] leading-none">→</span>
+            <ArrowRight size={28} strokeWidth={1.8} className="text-[28px] leading-none" />
           </a>
         </div>
 
@@ -96,7 +98,7 @@ export default function BlogSection() {
                   </span>
                 </div>
 
-                <h3 className="mt-6 min-h-23 text-[24px] font-light leading-[1.32] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175]">
+                <h3 className="mt-6 min-h-23 text-[24px] font-normal leading-[1.32] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175]">
                   {blog.title}
                 </h3>
 
@@ -105,9 +107,7 @@ export default function BlogSection() {
                     Read article
                   </span>
 
-                  <span className="text-[32px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
+                  <ArrowRight size={32} strokeWidth={1.8} className="text-[32px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </div>
 

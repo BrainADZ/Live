@@ -138,7 +138,7 @@ export default function HowWeWorkPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
         </div>
       </div>
@@ -153,7 +153,7 @@ export default function HowWeWorkPage() {
               Our Working Approach
             </p>
 
-            <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
+            <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
               Every project starts with the problem, not the technology
             </h2>
           </div>
@@ -170,7 +170,7 @@ export default function HowWeWorkPage() {
             <div className="mt-10 grid grid-cols-2 gap-5">
               <div className="border border-[#e5e5e5] p-6">
                 <LineChart className="mb-5 text-[#193175]" size={30} />
-                <h3 className="text-[32px] font-light text-[#161616]">
+                <h3 className="text-[32px] font-normal text-[#161616]">
                   6
                 </h3>
                 <p className="mt-2 text-[15px] font-light leading-[1.6] text-[#525252]">
@@ -180,7 +180,7 @@ export default function HowWeWorkPage() {
 
               <div className="border border-[#e5e5e5] p-6">
                 <Headphones className="mb-5 text-[#193175]" size={30} />
-                <h3 className="text-[32px] font-light text-[#161616]">
+                <h3 className="text-[32px] font-normal text-[#161616]">
                   4
                 </h3>
                 <p className="mt-2 text-[15px] font-light leading-[1.6] text-[#525252]">
@@ -200,7 +200,7 @@ export default function HowWeWorkPage() {
               Our Process
             </p>
 
-            <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
+            <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
               A six-stage process from requirement mapping to release
             </h2>
           </div>
@@ -261,7 +261,7 @@ export default function HowWeWorkPage() {
               Team Function
             </p>
 
-            <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
+            <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
               Different functions stay connected through the project
             </h2>
 
@@ -293,7 +293,7 @@ export default function HowWeWorkPage() {
               Delivery Principles
             </p>
 
-            <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] md:text-[52px]">
+            <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] md:text-[52px]">
               The working principles behind our delivery process
             </h2>
 
@@ -332,7 +332,7 @@ export default function HowWeWorkPage() {
               Operating Model
             </p>
 
-            <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
+            <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
               A simple operating model: understand, build and improve
             </h2>
           </div>
@@ -415,9 +415,7 @@ export default function HowWeWorkPage() {
 >
               <span>Enquire Now</span>
 
-              <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+              <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
         </div>

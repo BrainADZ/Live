@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import CtaSection from "@/components/home/CTA";
 /* eslint-disable @next/next/no-img-element */
 
@@ -473,7 +474,7 @@ export default function CareerPage() {
                   className="mt-10 inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
                 >
                   View Open Roles
-                  <span className="text-[20px] leading-none">↗</span>
+                  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
                 </a>
               </div>
             </div>
@@ -492,7 +493,7 @@ export default function CareerPage() {
                 Work On Real Projects
               </p>
 
-              <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Learn by building products and systems businesses actually use
               </h2>
 
@@ -562,7 +563,7 @@ export default function CareerPage() {
                 Why Join Us
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Build skills through practical work, feedback and responsibility
               </h2>
             </div>
@@ -596,7 +597,7 @@ export default function CareerPage() {
                     <Icon className="h-7.5 w-7.5" />
                   </div>
 
-                  <h3 className="relative z-10 mt-8 text-[24px] font-light leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
+                  <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
                     {item.title}
                   </h3>
 
@@ -624,7 +625,7 @@ export default function CareerPage() {
                 Open Roles
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Explore roles across development, design, automation and deployment
               </h2>
             </div>
@@ -657,7 +658,7 @@ export default function CareerPage() {
                       {role.type}
                     </p>
 
-                    <h3 className="mt-4 text-[26px] font-light leading-[1.18] tracking-[-0.8px] text-[#262626] transition group-hover:text-[#193175] md:text-[30px]">
+                    <h3 className="mt-4 text-[26px] font-normal leading-[1.18] tracking-[-0.8px] text-[#262626] transition group-hover:text-[#193175] md:text-[30px]">
                       {role.title}
                     </h3>
                   </div>
@@ -722,7 +723,7 @@ export default function CareerPage() {
                 What We Value
               </p>
 
-              <h2 className="max-w-155 text-[36px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
+              <h2 className="max-w-155 text-[36px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
                 How we expect people to work
               </h2>
 
@@ -754,7 +755,7 @@ export default function CareerPage() {
                 Hiring Process
               </p>
 
-              <h2 className="max-w-155 text-[36px] font-light leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
+              <h2 className="max-w-155 text-[36px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
                 A straightforward hiring process
               </h2>
 
@@ -766,7 +767,7 @@ export default function CareerPage() {
                     </div>
 
                     <div className="border-b border-[#dfe6f1] pb-6 last:border-b-0">
-                      <h3 className="text-[22px] font-light leading-[1.3] tracking-[-0.4px] text-[#262626]">
+                      <h3 className="text-[22px] font-normal leading-[1.3] tracking-[-0.4px] text-[#262626]">
                         {step.title}
                       </h3>
 
@@ -796,7 +797,7 @@ export default function CareerPage() {
                 Apply Now
               </p>
 
-              <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Apply for a role at BrainADZ Live
               </h2>
 
@@ -818,7 +819,7 @@ export default function CareerPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[24px] font-light leading-[1.3] tracking-[-0.5px] text-[#262626]">
+                    <h3 className="text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626]">
                       Before you apply
                     </h3>
 
@@ -838,7 +839,7 @@ export default function CareerPage() {
               data-aos-delay="100"
             >
               <div className="mb-9 text-center">
-                <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[42px]">
+                <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[42px]">
                   Career Application
                 </h2>
 
@@ -1031,9 +1032,7 @@ export default function CareerPage() {
               >
                 <span>Ask About Careers</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>
