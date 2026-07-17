@@ -133,7 +133,7 @@ export default function StatsSection() {
               </p>
             </div>
 
-            <h2 className="max-w-[760px] text-[38px] font-light leading-[1.08] tracking-[-1.7px] text-[#161616] md:text-[48px] lg:text-[54px]">
+            <h2 className="max-w-[760px] text-[38px] font-normal leading-[1.08] tracking-[-1.7px] text-[#161616] md:text-[48px] lg:text-[54px]">
               Creating measurable impact through{" "}
               <span className="text-[#193175]">
                 technology

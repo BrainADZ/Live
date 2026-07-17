@@ -39,7 +39,7 @@ export default function TestimonialSection() {
               Testimonials
             </p>
 
-            <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Trusted by businesses building smarter digital experiences
             </h2>
           </div>
@@ -110,7 +110,7 @@ export default function TestimonialSection() {
                   </div>
 
                   <div>
-                    <h3 className="text-[19px] font-light leading-[1.35] tracking-[-0.3px] text-[#262626] md:text-[20px]">
+                    <h3 className="text-[19px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] md:text-[20px]">
                       {item.name}
                     </h3>
 

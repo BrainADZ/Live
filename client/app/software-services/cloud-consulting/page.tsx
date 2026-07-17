@@ -330,7 +330,7 @@ export default function CloudConsultingPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
             </div>
           </div>
@@ -344,7 +344,7 @@ export default function CloudConsultingPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan the right cloud environment for the systems your business actually runs.
             </h2>
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
@@ -361,7 +361,7 @@ export default function CloudConsultingPage() {
             ].map(([title, text], index) => (
               <div key={title} className="border-t border-black/10 pt-6">
                 <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[22px] font-light tracking-[-0.4px]">{title}</h3>
+                <h3 className="mt-3 text-[22px] font-normal tracking-[-0.4px]">{title}</h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{text}</p>
               </div>
             ))}
@@ -377,7 +377,7 @@ export default function CloudConsultingPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Why Move to Cloud
               </p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Move beyond infrastructure that is difficult to change or scale.
               </h2>
             </div>
@@ -390,7 +390,7 @@ export default function CloudConsultingPage() {
             {["Flexible Scaling", "Cost Visibility", "Better Availability", "Stronger Access Control", "Faster Deployment"].map((item, index) => (
               <div key={item} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[22px] font-light tracking-[-0.4px]">{item}</h3>
+                <h3 className="mt-3 text-[22px] font-normal tracking-[-0.4px]">{item}</h3>
               </div>
             ))}
           </div>
@@ -404,7 +404,7 @@ export default function CloudConsultingPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Cloud Consulting Services
             </p>
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Cloud consulting for assessment, migration, architecture and ongoing optimization.
             </h2>
           </div>
@@ -417,7 +417,7 @@ export default function CloudConsultingPage() {
                   <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
                     <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
                   </div>
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">{item.title}</h3>
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">{item.title}</h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
                 </div>
               );
@@ -433,7 +433,7 @@ export default function CloudConsultingPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Cloud Benefits
             </p>
-            <h2 className="max-w-185 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-185 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               What a well-planned cloud approach can improve.
             </h2>
             <p className="mt-6 max-w-175 text-[16px] font-light leading-[1.75] text-black/70">
@@ -441,7 +441,7 @@ export default function CloudConsultingPage() {
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8">
-              <h3 className="text-[28px] font-light leading-[1.15] tracking-[-0.7px] text-[#193175]">
+              <h3 className="text-[28px] font-normal leading-[1.15] tracking-[-0.7px] text-[#193175]">
                 Plan Your Next Cloud Move
               </h3>
               <a href="/contact" className="mt-7 inline-flex h-12.5 items-center justify-center gap-3 rounded-sm bg-[#193175] px-6 text-[14px] font-semibold text-white transition hover:bg-[#2f4a82]">
@@ -457,7 +457,7 @@ export default function CloudConsultingPage() {
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-light tracking-[-0.5px] text-black">{item.title}</h3>
+                  <h3 className="text-[24px] font-normal tracking-[-0.5px] text-black">{item.title}</h3>
                   <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65">{item.text}</p>
                 </div>
               </div>
@@ -473,7 +473,7 @@ export default function CloudConsultingPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Cloud Adoption Journey
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A practical path from assessment to ongoing cloud operations.
             </h2>
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
@@ -485,7 +485,7 @@ export default function CloudConsultingPage() {
             {adoptionItems.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">{item.title}</h3>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{item.title}</h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
               </div>
             ))}
@@ -509,7 +509,7 @@ export default function CloudConsultingPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Cloud Consulting Process
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               How we plan and deliver cloud consulting
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
@@ -529,7 +529,7 @@ export default function CloudConsultingPage() {
                         <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
                       </div>
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">{item.title}</h3>
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">{item.title}</h3>
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">{item.text}</p>
                       </div>
                     </div>
@@ -560,7 +560,7 @@ export default function CloudConsultingPage() {
                   <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
                     <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
                   </div>
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
                   <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">{item.text}</p>
                 </div>
               );
@@ -573,7 +573,7 @@ export default function CloudConsultingPage() {
       <section className="bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-20">
         <div className="mx-auto max-w-450 text-center">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Cloud Platforms</p>
-          <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Cloud platforms selected around the project requirement.</h2>
+          <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Cloud platforms selected around the project requirement.</h2>
           <div className="mt-12 grid gap-8 md:grid-cols-3 lg:grid-cols-6">
             {["AWS", "Microsoft Azure", "Google Cloud", "Oracle Cloud", "DigitalOcean", "IBM Cloud"].map((item) => (
               <div key={item} className="border-t border-black/10 pt-7 text-[20px] font-light text-black/75">{item}</div>
@@ -589,7 +589,7 @@ export default function CloudConsultingPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">Tech Stack</p>
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Platforms and tools used across cloud projects
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -618,7 +618,7 @@ export default function CloudConsultingPage() {
                       <div className="flex h-11.5 w-full items-center justify-center">
                         <img src={item.icon} alt={item.name} loading="lazy" decoding="async" className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105" onError={(e) => { e.currentTarget.style.display = "none"; }} />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">{item.name}</h3>
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">{item.name}</h3>
                     </div>
                   ))}
                 </div>
@@ -633,13 +633,13 @@ export default function CloudConsultingPage() {
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Why Choose BrainADZ Live</p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Cloud decisions based on your systems—not a fixed template.</h2>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Cloud decisions based on your systems—not a fixed template.</h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">{item.title}</h3>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{item.title}</h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
               </div>
             ))}
@@ -655,7 +655,7 @@ export default function CloudConsultingPage() {
           </div>
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Support & Cloud Optimization</p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Keep your cloud environment visible, maintained and ready for change.</h2>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Keep your cloud environment visible, maintained and ready for change.</h2>
             <div className="mt-9 space-y-5">
               {supportItems.map((item) => (
                 <div key={item} className="flex gap-4 border-t border-black/10 pt-5">
@@ -673,7 +673,7 @@ export default function CloudConsultingPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">FAQ</p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions businesses ask before a cloud project.</h2>
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions businesses ask before a cloud project.</h2>
           </div>
 
           <div className="mx-auto max-w-300 space-y-4">
@@ -722,9 +722,7 @@ export default function CloudConsultingPage() {
                           className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
                         >
                                         <span>Enquire Now</span>
-                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                                          →
-                                        </span>
+                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                                       </button>
                                     </div>
                                   </div>

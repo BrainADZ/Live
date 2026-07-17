@@ -210,7 +210,7 @@ export default function CloudSignageSoftwarePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -233,7 +233,7 @@ export default function CloudSignageSoftwarePage() {
               Software Overview
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Manage signage content and configured screens from one platform.
             </h2>
 
@@ -247,7 +247,7 @@ export default function CloudSignageSoftwarePage() {
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Remote Content Management
                 </h3>
 
@@ -258,7 +258,7 @@ export default function CloudSignageSoftwarePage() {
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Multi-Location Planning
                 </h3>
 
@@ -292,7 +292,7 @@ export default function CloudSignageSoftwarePage() {
               Benefits
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Make signage content easier to organize, publish and update.
             </h2>
           </div>
@@ -324,7 +324,7 @@ export default function CloudSignageSoftwarePage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -346,7 +346,7 @@ export default function CloudSignageSoftwarePage() {
                 Cloud Features
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Core tools for managing signage content centrally.
               </h2>
             </div>
@@ -373,7 +373,7 @@ export default function CloudSignageSoftwarePage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -395,7 +395,7 @@ export default function CloudSignageSoftwarePage() {
               Remote Content Management
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Manage content across configured screens from one platform.
             </h2>
 
@@ -406,7 +406,7 @@ export default function CloudSignageSoftwarePage() {
             </p>
 
             <div className="mt-8 rounded-[26px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-              <h3 className="text-[22px] font-light tracking-[-0.4px]">
+              <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                 Plan the right signage workflow
               </h3>
 
@@ -437,7 +437,7 @@ export default function CloudSignageSoftwarePage() {
                 </span>
 
                 <div>
-                  <h3 className="text-[26px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[26px] font-normal tracking-[-0.5px]">
                     {item.title}
                   </h3>
 
@@ -468,7 +468,7 @@ export default function CloudSignageSoftwarePage() {
               Software Workflow
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our Cloud Signage Software Roadmap
             </h2>
 
@@ -502,7 +502,7 @@ export default function CloudSignageSoftwarePage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -607,7 +607,7 @@ export default function CloudSignageSoftwarePage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -630,7 +630,7 @@ export default function CloudSignageSoftwarePage() {
                 Integration Planning
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Plan the platform around screens and connected systems.
               </h2>
             </div>
@@ -671,7 +671,7 @@ export default function CloudSignageSoftwarePage() {
               Dashboard Preview
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               One dashboard for media, screens and content publishing.
             </h2>
           </div>
@@ -694,7 +694,7 @@ export default function CloudSignageSoftwarePage() {
               Why BrainADZ
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Cloud signage planning aligned with real screen and content
               workflows.
             </h2>
@@ -727,7 +727,7 @@ export default function CloudSignageSoftwarePage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -748,7 +748,7 @@ export default function CloudSignageSoftwarePage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about Cloud Signage Software.
             </h2>
           </div>
@@ -829,9 +829,7 @@ export default function CloudSignageSoftwarePage() {
               >
                 <span>Request a Demo</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

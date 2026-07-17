@@ -248,7 +248,7 @@ export default function OurCoreTeamPage() {
               How Our Team Works
             </p>
 
-            <h2 className="max-w-180 text-[38px] font-light leading-[1.12] tracking-[-1.5px] text-[#161616] md:text-[52px]">
+            <h2 className="max-w-180 text-[38px] font-normal leading-[1.12] tracking-[-1.5px] text-[#161616] md:text-[52px]">
               Leadership, delivery and technical teams working as one
             </h2>
 
@@ -306,7 +306,7 @@ export default function OurCoreTeamPage() {
             Our Core Team
           </p>
 
-          <h2 className="mb-14 max-w-220 text-[36px] font-light leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
+          <h2 className="mb-14 max-w-220 text-[36px] font-normal leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
             Leadership shaping direction, priorities and delivery
           </h2>
 
@@ -327,7 +327,7 @@ export default function OurCoreTeamPage() {
             </p>
 
             <div className="mb-14 max-w-260">
-              <h2 className="text-[36px] font-light leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
+              <h2 className="text-[36px] font-normal leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
                 The people turning plans into working products and deployments
               </h2>
 
@@ -389,9 +389,7 @@ export default function OurCoreTeamPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

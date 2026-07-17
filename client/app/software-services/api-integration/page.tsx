@@ -323,7 +323,7 @@ export default function ApiIntegrationPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -338,7 +338,7 @@ export default function ApiIntegrationPage() {
               Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Make your systems work together.
             </h2>
 
@@ -374,7 +374,7 @@ export default function ApiIntegrationPage() {
                   size={27}
                   className="mb-4 text-[#193175]"
                 />
-                <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                   {title}
                 </h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -395,7 +395,7 @@ export default function ApiIntegrationPage() {
                 Challenges Without API Integration
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Disconnected systems slow down everyday operations.
               </h2>
             </div>
@@ -418,7 +418,7 @@ export default function ApiIntegrationPage() {
                 >
                   <Icon size={30} className="mb-5 text-[#193175]" />
 
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -440,7 +440,7 @@ export default function ApiIntegrationPage() {
               Our API Integration Services
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               API integration services built around your systems.
             </h2>
           </div>
@@ -461,7 +461,7 @@ export default function ApiIntegrationPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -492,7 +492,7 @@ export default function ApiIntegrationPage() {
               API Integration Process
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               From disconnected systems to one reliable integration flow.
             </h2>
 
@@ -527,7 +527,7 @@ export default function ApiIntegrationPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -626,7 +626,7 @@ export default function ApiIntegrationPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -648,7 +648,7 @@ export default function ApiIntegrationPage() {
               Types of API Integrations
             </p>
 
-            <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Connect every part of your digital ecosystem.
             </h2>
 
@@ -671,7 +671,7 @@ export default function ApiIntegrationPage() {
                 >
                   <Icon size={30} className="mb-5 text-[#193175]" />
 
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -693,7 +693,7 @@ export default function ApiIntegrationPage() {
               Tech Stack
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies powering API integration
             </h2>
 
@@ -761,7 +761,7 @@ export default function ApiIntegrationPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -783,7 +783,7 @@ export default function ApiIntegrationPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               We connect technology around the way your business works.
             </h2>
           </div>
@@ -798,7 +798,7 @@ export default function ApiIntegrationPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -827,7 +827,7 @@ export default function ApiIntegrationPage() {
               Support & Maintenance
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Keep every integration stable after launch.
             </h2>
 
@@ -864,7 +864,7 @@ export default function ApiIntegrationPage() {
                 Case Studies
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Integration solutions built around real operational needs.
               </h2>
             </div>
@@ -894,7 +894,7 @@ export default function ApiIntegrationPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -921,7 +921,7 @@ export default function ApiIntegrationPage() {
               FAQ
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               What businesses usually ask before an API integration project.
             </h2>
           </div>
@@ -1003,9 +1003,7 @@ export default function ApiIntegrationPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

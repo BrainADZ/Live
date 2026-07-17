@@ -3,6 +3,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { type FormEvent, useState } from "react";
 import type { SVGProps } from "react";
@@ -314,9 +315,7 @@ export default function ContactPage() {
               >
                 Enquire Now
 
-                <span className="text-[20px] leading-none">
-                  ↗
-                </span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -341,7 +340,7 @@ export default function ContactPage() {
                 Contact Information
               </p>
 
-              <h2 className="max-w-190 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Tell us what you are planning, improving or looking for
               </h2>
             </div>
@@ -384,7 +383,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-[24px] font-light leading-tight tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
+                    <h3 className="text-[24px] font-normal leading-tight tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
                       {item.title}
                     </h3>
 
@@ -439,7 +438,7 @@ export default function ContactPage() {
               data-aos-delay="100"
             >
               <div className="mb-10 text-center">
-                <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[42px]">
+                <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[42px]">
                   Share Your Requirement
                 </h2>
 
@@ -659,7 +658,7 @@ export default function ContactPage() {
                 Find Us
               </p>
 
-              <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Visit our office or connect with the right team
               </h2>
             </div>
@@ -686,7 +685,7 @@ export default function ContactPage() {
                   Office Location
                 </p>
 
-                <h3 className="max-w-130 text-[32px] font-light leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px]">
+                <h3 className="max-w-130 text-[32px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px]">
                   BrainADZ Live
                 </h3>
 

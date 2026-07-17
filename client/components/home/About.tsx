@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
 const stats = [
@@ -17,7 +18,7 @@ export default function AboutSection() {
       <div className="mx-auto max-w-425">
         {/* MAIN HEADING */}
         <h2
-          className="max-w-262.5 text-[40px] font-light leading-[1.05] tracking-[-2px] md:text-[48px] lg:text-[55px]"
+          className="max-w-262.5 text-[40px] font-normal leading-[1.05] tracking-[-2px] md:text-[48px] lg:text-[55px]"
           data-aos="fade-up"
         >
           Smarter business. Real impact.
@@ -45,7 +46,7 @@ export default function AboutSection() {
                   data-aos-delay={index * 150}
                   data-aos-duration="520"
                 >
-                  <h4 className="text-[34px] font-light leading-none tracking-[-1px] text-[#193175] md:text-[42px]">
+                  <h4 className="text-[34px] font-normal leading-none tracking-[-1px] text-[#193175] md:text-[42px]">
                     {item.value}
                   </h4>
 
@@ -63,7 +64,7 @@ export default function AboutSection() {
             >
               Explore How BrainADZ Live Builds Smarter Digital Ecosystems
 
-              <span className="text-[14px] leading-none">→</span>
+              <ArrowRight size={14} strokeWidth={1.8} className="text-[14px] leading-none" />
             </a>
           </div>
 

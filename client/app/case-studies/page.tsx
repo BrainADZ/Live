@@ -308,7 +308,7 @@ export default function CaseStudiesPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Explore Case Studies
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </a>
             </div>
           </div>
@@ -324,7 +324,7 @@ export default function CaseStudiesPage() {
                 Featured Case Study
               </p>
 
-              <h2 className="text-[40px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[52px] lg:text-[60px]">
+              <h2 className="text-[40px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[52px] lg:text-[60px]">
                 One project, viewed from problem to working system
               </h2>
             </div>
@@ -367,7 +367,7 @@ export default function CaseStudiesPage() {
                 </span>
               </div>
 
-              <h3 className="mt-8 max-w-190 text-[32px] font-light leading-[1.12] tracking-[-1.1px] text-[#262626] transition group-hover:text-[#193175] md:text-[44px]">
+              <h3 className="mt-8 max-w-190 text-[32px] font-normal leading-[1.12] tracking-[-1.1px] text-[#262626] transition group-hover:text-[#193175] md:text-[44px]">
                 {featuredCaseStudy.title}
               </h3>
 
@@ -410,7 +410,7 @@ export default function CaseStudiesPage() {
                 Project Library
               </p>
 
-              <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Explore case studies by solution area
               </h2>
             </div>
@@ -494,7 +494,7 @@ export default function CaseStudiesPage() {
                       </span>
                     </div>
 
-                    <h3 className="mt-5 text-[24px] font-light leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
+                    <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
                       {caseStudy.title}
                     </h3>
 
@@ -532,7 +532,7 @@ export default function CaseStudiesPage() {
                 className="mx-auto text-[#193175]"
               />
 
-              <h3 className="mt-5 text-[24px] font-light text-[#262626]">
+              <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
                 No case studies found
               </h3>
 
@@ -587,7 +587,7 @@ export default function CaseStudiesPage() {
                 What These Stories Cover
               </p>
 
-              <h2 className="text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
                 Different project types, one focus on practical delivery
               </h2>
             </div>
@@ -614,7 +614,7 @@ export default function CaseStudiesPage() {
                     <Icon size={27} strokeWidth={1.5} />
                   </div>
 
-                  <h3 className="mt-8 text-[25px] font-light leading-tight tracking-[-0.5px] text-[#262626]">
+                  <h3 className="mt-8 text-[25px] font-normal leading-tight tracking-[-0.5px] text-[#262626]">
                     {item.title}
                   </h3>
 
@@ -663,9 +663,7 @@ export default function CaseStudiesPage() {
               >
                 <span>Discuss Your Project</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

@@ -422,7 +422,7 @@ export default function SoftwareDevelopmentPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
             </div>
           </div>
@@ -437,7 +437,7 @@ export default function SoftwareDevelopmentPage() {
               Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Turn manual processes and disconnected tools into one working system.
             </h2>
 
@@ -451,14 +451,14 @@ export default function SoftwareDevelopmentPage() {
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">Workflow Automation</h3>
+                <h3 className="text-[20px] font-normal">Workflow Automation</h3>
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   Replace repeated handoffs, approvals and updates with structured digital workflows.
                 </p>
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">Custom Business Platforms</h3>
+                <h3 className="text-[20px] font-normal">Custom Business Platforms</h3>
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   Bring users, records, tasks and reporting into software designed for your operations.
                 </p>
@@ -495,7 +495,7 @@ export default function SoftwareDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Software Development Process
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               How we turn business requirements into working software
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
@@ -528,7 +528,7 @@ export default function SoftwareDevelopmentPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -622,7 +622,7 @@ export default function SoftwareDevelopmentPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -645,7 +645,7 @@ export default function SoftwareDevelopmentPage() {
                 Business Use Cases
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Custom software for the processes your teams manage every day.
               </h2>
 
@@ -667,7 +667,7 @@ export default function SoftwareDevelopmentPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[20px] font-light tracking-[-0.3px]">
+                    <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                       {item}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
@@ -690,7 +690,7 @@ export default function SoftwareDevelopmentPage() {
                 Case Studies
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Custom software shaped around real business workflows.
               </h2>
             </div>
@@ -719,7 +719,7 @@ export default function SoftwareDevelopmentPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="mb-5 flex items-center justify-between gap-5">
-                    <h3 className="text-[24px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[24px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -780,9 +780,7 @@ export default function SoftwareDevelopmentPage() {
 >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>
@@ -799,7 +797,7 @@ export default function SoftwareDevelopmentPage() {
               Tech Stack
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies we use to build custom software systems
             </h2>
 
@@ -868,7 +866,7 @@ export default function SoftwareDevelopmentPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -888,7 +886,7 @@ export default function SoftwareDevelopmentPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               We build software around how your teams actually work.
             </h2>
 
@@ -908,7 +906,7 @@ export default function SoftwareDevelopmentPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -930,7 +928,7 @@ export default function SoftwareDevelopmentPage() {
                 Support & Maintenance
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Keep your software useful as workflows and requirements change.
               </h2>
             </div>
@@ -955,7 +953,7 @@ export default function SoftwareDevelopmentPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                       {item.title}
                     </h3>
 
@@ -971,7 +969,7 @@ export default function SoftwareDevelopmentPage() {
           <div className="mt-14 overflow-hidden rounded-[30px] border border-black/10 bg-[#f6f8fc] p-6 md:p-8">
             <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
-                <h3 className="text-[28px] font-light tracking-[-0.6px] md:text-[34px]">
+                <h3 className="text-[28px] font-normal tracking-[-0.6px] md:text-[34px]">
                   Maintenance can include monitoring, updates and product improvements.
                 </h3>
 
@@ -1009,7 +1007,7 @@ export default function SoftwareDevelopmentPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about custom software development.
             </h2>
 
@@ -1118,9 +1116,7 @@ export default function SoftwareDevelopmentPage() {
 >
   <span>Enquire Now</span>
 
-  <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-  →
-  </span>
+  <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
 </button>
             </div>
           </div>

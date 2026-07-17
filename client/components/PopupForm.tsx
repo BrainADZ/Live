@@ -214,7 +214,7 @@ export default function PopupForm({
               Enquiry Submitted
             </p>
 
-            <h2 className="relative mt-3 text-[40px] font-light tracking-[-1.4px] text-white md:text-[46px]">
+            <h2 className="relative mt-3 text-[40px] font-normal tracking-[-1.4px] text-white md:text-[46px]">
               Thank you!
             </h2>
 
@@ -284,7 +284,7 @@ export default function PopupForm({
               Enquire Now
             </p>
 
-            <h2 className="max-w-105 text-[42px] font-light leading-[1.05] tracking-[-1.6px] text-white">
+            <h2 className="max-w-105 text-[42px] font-normal leading-[1.05] tracking-[-1.6px] text-white">
               Turn your idea into a reliable digital solution.
             </h2>
 
@@ -323,7 +323,7 @@ export default function PopupForm({
               Enquire Now
             </p>
 
-            <h3 className="text-[32px] font-light leading-[1.12] tracking-[-1.1px] text-[#262626] md:text-[40px]">
+            <h3 className="text-[32px] font-normal leading-[1.12] tracking-[-1.1px] text-[#262626] md:text-[40px]">
               Tell us about your requirement.
             </h3>
 

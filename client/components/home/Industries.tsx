@@ -78,7 +78,7 @@ export default function IndustriesSection() {
       <div className="mx-auto max-w-450">
         {/* TOP CONTENT */}
         <div className="mb-16" data-aos="fade-up">
-          <h2 className="text-[40px] font-light leading-[1.08] tracking-[-1.6px] text-[#161616] md:text-[52px] lg:text-[58px]">
+          <h2 className="text-[40px] font-normal leading-[1.08] tracking-[-1.6px] text-[#161616] md:text-[52px] lg:text-[58px]">
             Industries We Serve
           </h2>
 
@@ -118,7 +118,7 @@ export default function IndustriesSection() {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="relative z-10 mt-5 max-w-46.25 text-[15px] font-light leading-[1.3] tracking-[-0.1px] text-[#525252] transition duration-300 group-hover:text-[#193175] md:text-[17px]">
+                <h3 className="relative z-10 mt-5 max-w-46.25 text-[15px] font-normal leading-[1.3] tracking-[-0.1px] text-[#525252] transition duration-300 group-hover:text-[#193175] md:text-[17px]">
                   {industry.title}
                 </h3>
               </a>

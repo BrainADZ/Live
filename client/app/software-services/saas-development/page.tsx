@@ -335,7 +335,7 @@ export default function SaaSDevelopmentPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
             </div>
           </div>
@@ -349,7 +349,7 @@ export default function SaaSDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Turn your software idea into a SaaS product people can use and manage.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -366,7 +366,7 @@ export default function SaaSDevelopmentPage() {
               return (
                 <div key={item.title} className="border-l-2 border-[#193175] pl-5">
                   <Icon size={28} className="mb-4 text-[#193175]" />
-                  <h3 className="text-[20px] font-light">{item.title}</h3>
+                  <h3 className="text-[20px] font-normal">{item.title}</h3>
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                     {item.text}
                   </p>
@@ -384,7 +384,7 @@ export default function SaaSDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Build SaaS
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Build one online product that can serve users, teams and customers at scale.
             </h2>
           </div>
@@ -395,7 +395,7 @@ export default function SaaSDevelopmentPage() {
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -414,7 +414,7 @@ export default function SaaSDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Solutions We Build
             </p>
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               SaaS products built around different workflows and product models.
             </h2>
           </div>
@@ -430,7 +430,7 @@ export default function SaaSDevelopmentPage() {
                   <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
                     <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
                   </div>
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">{item.title}</h3>
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">{item.title}</h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
                   </p>
@@ -448,7 +448,7 @@ export default function SaaSDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Architecture
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Plan the product foundation before adding more users and features.
             </h2>
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
@@ -487,7 +487,7 @@ export default function SaaSDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Development Process
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               From product idea to launch and continuous improvement
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
@@ -510,7 +510,7 @@ export default function SaaSDevelopmentPage() {
                         <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
                       </div>
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">{item.title}</h3>
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">{item.title}</h3>
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">{item.text}</p>
                       </div>
                     </div>
@@ -541,7 +541,7 @@ export default function SaaSDevelopmentPage() {
                   <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
                     <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
                   </div>
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
                   <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">{item.text}</p>
                 </div>
               );
@@ -557,7 +557,7 @@ export default function SaaSDevelopmentPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Platforms We Build
             </p>
-            <h2 className="max-w-175 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Flexible SaaS products for different business and operational needs
             </h2>
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
@@ -589,7 +589,7 @@ export default function SaaSDevelopmentPage() {
                     <Icon size={29} className="text-[#193175]" />
                   </div>
                   <div>
-                    <h3 className="text-[24px] font-light tracking-[-0.4px] text-black md:text-[26px]">{item.title}</h3>
+                    <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">{item.title}</h3>
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">{item.text}</p>
                   </div>
                 </div>
@@ -605,7 +605,7 @@ export default function SaaSDevelopmentPage() {
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Core SaaS Features</p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Core capabilities that support users, operations and product management.</h2>
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Core capabilities that support users, operations and product management.</h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
               We build the features required to manage users, permissions, billing,
@@ -629,7 +629,7 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto grid max-w-450 gap-8 lg:grid-cols-2">
           <div className="border-t border-black/10 pt-8">
             <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">MVP Launch</span>
-            <h2 className="mt-4 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">Launch the core product before adding everything.</h2>
+            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Launch the core product before adding everything.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
               We define the first usable version around the core user journey,
               essential admin controls and priority features so the product can be
@@ -638,7 +638,7 @@ export default function SaaSDevelopmentPage() {
           </div>
           <div className="border-t border-black/10 pt-8">
             <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Full Product Scaling</span>
-            <h2 className="mt-4 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">Expand the product as real needs become clearer.</h2>
+            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Expand the product as real needs become clearer.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
               After launch, we can add modules, automation, billing improvements,
               integrations, reporting and performance work based on usage, feedback
@@ -654,7 +654,7 @@ export default function SaaSDevelopmentPage() {
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Case Studies</p>
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS platforms built around real product and operational workflows.</h2>
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS platforms built around real product and operational workflows.</h2>
             </div>
             <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
               View Case Studies <ArrowRight size={18} />
@@ -669,7 +669,7 @@ export default function SaaSDevelopmentPage() {
                 </div>
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-light tracking-[-0.5px]">{item.title}</h3>
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">{item.title}</h3>
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
                       <ArrowRight size={18} className="text-[#193175]" />
                     </span>
@@ -689,7 +689,7 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">Tech Stack</p>
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies we use to build custom SaaS products
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -741,7 +741,7 @@ export default function SaaSDevelopmentPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -758,13 +758,13 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Why Choose BrainADZ Live</p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">We build SaaS products around users, workflows and a clear product roadmap.</h2>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">We build SaaS products around users, workflows and a clear product roadmap.</h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">{item.title}</h3>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{item.title}</h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
               </div>
             ))}
@@ -780,7 +780,7 @@ export default function SaaSDevelopmentPage() {
           </div>
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">SaaS Support & Growth</p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Keep improving the product after launch.</h2>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Keep improving the product after launch.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
               After launch, we help resolve issues, improve performance and continue
               developing features, integrations, billing flows and product operations
@@ -803,7 +803,7 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">FAQ</p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions about custom SaaS development.</h2>
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions about custom SaaS development.</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
@@ -853,9 +853,7 @@ export default function SaaSDevelopmentPage() {
                           className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
                         >
                                         <span>Enquire Now</span>
-                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                                          →
-                                        </span>
+                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                                       </button>
                                     </div>
                                   </div>

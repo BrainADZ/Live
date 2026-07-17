@@ -223,7 +223,7 @@ export default function CommunityPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Join Community
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -246,7 +246,7 @@ export default function CommunityPage() {
               Why Community
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A space to learn, discuss and grow with practical digital ideas.
             </h2>
           </div>
@@ -294,7 +294,7 @@ export default function CommunityPage() {
               Community Benefits
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               What you get by joining the BrainADZ Live Community
             </h2>
           </div>
@@ -312,7 +312,7 @@ export default function CommunityPage() {
                     <Icon size={28} className="text-[#193175]" />
                   </div>
 
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -335,7 +335,7 @@ export default function CommunityPage() {
                 Community Topics
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Discussions around the services and solutions BrainADZ Live
                 works with.
               </h2>
@@ -361,7 +361,7 @@ export default function CommunityPage() {
                     className="mb-5 text-[#193175] transition group-hover:scale-105"
                   />
 
-                  <h3 className="text-[24px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[24px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -383,7 +383,7 @@ export default function CommunityPage() {
               Who Can Join
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Built for people who want to understand and use digital better.
             </h2>
 
@@ -425,7 +425,7 @@ export default function CommunityPage() {
                 Forum Preview
               </p>
 
-              <h2 className="max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Community discussions that can later become a full forum.
               </h2>
             </div>
@@ -456,7 +456,7 @@ export default function CommunityPage() {
                   </span>
                 </div>
 
-                <h3 className="text-[24px] font-light leading-tight tracking-[-0.5px] text-black">
+                <h3 className="text-[24px] font-normal leading-tight tracking-[-0.5px] text-black">
                   {item.title}
                 </h3>
 
@@ -475,7 +475,7 @@ export default function CommunityPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-[24px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[24px] font-normal tracking-[-0.5px]">
                     Full forum can be added later
                   </h3>
 
@@ -504,7 +504,7 @@ export default function CommunityPage() {
               How It Works
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Simple community flow for learning and discussion
             </h2>
           </div>
@@ -519,7 +519,7 @@ export default function CommunityPage() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -540,7 +540,7 @@ export default function CommunityPage() {
               Stay Connected
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Get closer to technology ideas before starting your next project.
             </h2>
 
@@ -605,7 +605,7 @@ export default function CommunityPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about the BrainADZ Live Community
             </h2>
           </div>
@@ -687,9 +687,7 @@ export default function CommunityPage() {
               >
                 <span>Join Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

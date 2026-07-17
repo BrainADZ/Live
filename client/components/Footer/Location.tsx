@@ -50,7 +50,7 @@ export default function LocationsSection() {
               </p>
             </div>
 
-            <h2 className="max-w-[680px] text-[34px] font-light leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]">
+            <h2 className="max-w-[680px] text-[34px] font-normal leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]">
               Connected across{" "}
               <span className="text-[#193175]">
                 global markets.
@@ -105,7 +105,7 @@ export default function LocationsSection() {
                   {location.office}
                 </p>
 
-                <h3 className="mt-2 text-[24px] font-light leading-none tracking-[-0.6px] text-[#161616]">
+                <h3 className="mt-2 text-[24px] font-normal leading-none tracking-[-0.6px] text-[#161616]">
                   {location.country}
                 </h3>
               </div>

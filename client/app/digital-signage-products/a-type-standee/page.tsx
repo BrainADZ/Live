@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 import {
+  ArrowRight,
   BadgeCheck,
   Building2,
   CalendarDays,
@@ -253,7 +254,7 @@ export default function ATypeStandeePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -295,7 +296,7 @@ export default function ATypeStandeePage() {
               Product Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A digital A-frame display built for visible, screen-based
               communication.
             </h2>
@@ -363,7 +364,7 @@ export default function ATypeStandeePage() {
               Why Choose This Product
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Built for changing content and professional customer-facing
               communication.
             </h2>
@@ -379,7 +380,7 @@ export default function ATypeStandeePage() {
                     <Icon size={26} className="text-[#193175]" />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -401,7 +402,7 @@ export default function ATypeStandeePage() {
               Configuration Options
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
               Configuration options for different deployment needs.
             </h2>
 
@@ -449,7 +450,7 @@ export default function ATypeStandeePage() {
               Product Details
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
               Planned around display content, management and deployment
               requirements.
             </h2>
@@ -483,7 +484,7 @@ export default function ATypeStandeePage() {
               Ideal Use Cases
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Built for customer-facing spaces where content needs to stay
               current.
             </h2>
@@ -502,7 +503,7 @@ export default function ATypeStandeePage() {
                     <Icon size={25} className="text-[#193175]" />
                   </div>
 
-                  <h3 className="text-[19px] font-light tracking-[-0.3px]">
+                  <h3 className="text-[19px] font-normal tracking-[-0.3px]">
                     {item.title}
                   </h3>
 
@@ -524,7 +525,7 @@ export default function ATypeStandeePage() {
               Customization Options
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Configure the standee around your content, placement and brand.
             </h2>
 
@@ -552,7 +553,7 @@ export default function ATypeStandeePage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="text-[20px] font-light tracking-[-0.3px]">
+                <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                   {item}
                 </h3>
               </div>
@@ -569,7 +570,7 @@ export default function ATypeStandeePage() {
               Business Benefits
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Digital communication that can change with the campaign.
             </h2>
           </div>
@@ -581,7 +582,7 @@ export default function ATypeStandeePage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -627,9 +628,7 @@ export default function ATypeStandeePage() {
               >
                 <span>Request a Quote</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>
@@ -644,7 +643,7 @@ export default function ATypeStandeePage() {
               Why BrainADZ
             </p>
 
-            <h2 className="mx-auto max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[42px]">
+            <h2 className="mx-auto max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
               Digital signage planning with practical deployment support.
             </h2>
           </div>
@@ -684,7 +683,7 @@ export default function ATypeStandeePage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about A Type Digital Standee.
             </h2>
           </div>
@@ -766,9 +765,7 @@ export default function ATypeStandeePage() {
               >
                 <span>Request a Quote</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

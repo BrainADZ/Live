@@ -16,7 +16,7 @@ export default function AboutCompany() {
               About Company
             </p>
 
-            <h2 className="text-[46px] font-light leading-[1.05] tracking-[-2px] text-[#262626] sm:text-[56px] md:text-[66px] lg:text-[74px]">
+            <h2 className="text-[46px] font-normal leading-[1.05] tracking-[-2px] text-[#262626] sm:text-[56px] md:text-[66px] lg:text-[74px]">
               Technology
               <br />
               Built Around

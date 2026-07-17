@@ -213,7 +213,7 @@ export default function ERPSoftwarePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
 
               <a
@@ -236,7 +236,7 @@ export default function ERPSoftwarePage() {
               Software Overview
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Bring department workflows and business records into one ERP
               platform.
             </h2>
@@ -251,7 +251,7 @@ export default function ERPSoftwarePage() {
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Connected Department Workflows
                 </h3>
 
@@ -262,7 +262,7 @@ export default function ERPSoftwarePage() {
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-light">
+                <h3 className="text-[20px] font-normal">
                   Operational Visibility
                 </h3>
 
@@ -296,7 +296,7 @@ export default function ERPSoftwarePage() {
               Why ERP Software
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Replace disconnected operational records with a structured
               business system.
             </h2>
@@ -329,7 +329,7 @@ export default function ERPSoftwarePage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -351,7 +351,7 @@ export default function ERPSoftwarePage() {
                 ERP Modules
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Core modules for managing everyday business operations.
               </h2>
             </div>
@@ -379,7 +379,7 @@ export default function ERPSoftwarePage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -401,7 +401,7 @@ export default function ERPSoftwarePage() {
               Department Management
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Organize different departments through one ERP structure.
             </h2>
 
@@ -439,7 +439,7 @@ export default function ERPSoftwarePage() {
               Platform Features
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Practical ERP capabilities for structured business operations.
             </h2>
 
@@ -472,7 +472,7 @@ export default function ERPSoftwarePage() {
                 </span>
 
                 <div>
-                  <h3 className="text-[26px] font-light tracking-[-0.5px]">
+                  <h3 className="text-[26px] font-normal tracking-[-0.5px]">
                     {item.title}
                   </h3>
 
@@ -503,7 +503,7 @@ export default function ERPSoftwarePage() {
               Implementation Process
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our ERP Software Implementation Roadmap
             </h2>
 
@@ -537,7 +537,7 @@ export default function ERPSoftwarePage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -642,7 +642,7 @@ export default function ERPSoftwarePage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -665,7 +665,7 @@ export default function ERPSoftwarePage() {
                 Integration Planning
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Connect ERP with selected business systems.
               </h2>
             </div>
@@ -706,7 +706,7 @@ export default function ERPSoftwarePage() {
               Dashboard Preview
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               A central ERP view for departments, workflows and business
               records.
             </h2>
@@ -730,7 +730,7 @@ export default function ERPSoftwarePage() {
               Why BrainADZ
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               ERP planning based on real department and operational workflows.
             </h2>
           </div>
@@ -762,7 +762,7 @@ export default function ERPSoftwarePage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -783,7 +783,7 @@ export default function ERPSoftwarePage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about ERP Software.
             </h2>
           </div>
@@ -865,9 +865,7 @@ export default function ERPSoftwarePage() {
               >
                 <span>Request a Demo</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

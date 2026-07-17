@@ -58,7 +58,7 @@ export default function TeamSection() {
               Our Team
             </p>
 
-            <h2 className="max-w-180 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Meet the people building smarter digital experiences
             </h2>
           </div>

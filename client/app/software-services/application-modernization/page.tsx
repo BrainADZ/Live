@@ -366,7 +366,7 @@ export default function AppModernizationPage() {
   className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
 >
   Enquire Now
-  <span className="text-[20px] leading-none">↗</span>
+  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
 </button>
             </div>
           </div>
@@ -381,7 +381,7 @@ export default function AppModernizationPage() {
               Overview
             </p>
 
-            <h2 className="max-w-170 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Keep what works. Modernize what holds you back.
             </h2>
 
@@ -430,7 +430,7 @@ export default function AppModernizationPage() {
                       className="text-[#193175] transition group-hover:text-white"
                     />
                   </div>
-                  <h3 className="text-[21px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[21px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -451,7 +451,7 @@ export default function AppModernizationPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Challenges With Legacy Systems
               </p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Legacy applications become harder to change as business needs grow.
               </h2>
             </div>
@@ -478,7 +478,7 @@ export default function AppModernizationPage() {
                       className="text-[#193175] transition group-hover:text-white"
                     />
                   </div>
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -498,7 +498,7 @@ export default function AppModernizationPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Modernization Services
             </p>
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Choose the right modernization path for your existing application.
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
@@ -520,7 +520,7 @@ export default function AppModernizationPage() {
                   <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
                     <Icon size={27} className="text-[#193175]" />
                   </div>
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -549,7 +549,7 @@ export default function AppModernizationPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Modernization Roadmap
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               Our Application Modernization Roadmap
             </h2>
             <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
@@ -583,7 +583,7 @@ export default function AppModernizationPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -677,7 +677,7 @@ export default function AppModernizationPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -698,14 +698,14 @@ export default function AppModernizationPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Before vs After Modernization
             </p>
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Move from legacy limitations to modern capability.
             </h2>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
             <div className="rounded-[30px] border border-red-200 bg-red-50/70 p-7 md:p-9">
-              <h3 className="text-[26px] font-light tracking-[-0.5px] text-red-700">
+              <h3 className="text-[26px] font-normal tracking-[-0.5px] text-red-700">
                 Legacy Applications
               </h3>
               <div className="mt-7 grid gap-4 md:grid-cols-2">
@@ -730,7 +730,7 @@ export default function AppModernizationPage() {
             </div>
 
             <div className="rounded-[30px] border border-emerald-200 bg-emerald-50/70 p-7 md:p-9">
-              <h3 className="text-[26px] font-light tracking-[-0.5px] text-emerald-700">
+              <h3 className="text-[26px] font-normal tracking-[-0.5px] text-emerald-700">
                 Modern Applications
               </h3>
               <div className="mt-7 grid gap-4 md:grid-cols-2">
@@ -761,7 +761,7 @@ export default function AppModernizationPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Modernization Use Cases
               </p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Modernize the applications your business already depends on.
               </h2>
               <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
@@ -778,7 +778,7 @@ export default function AppModernizationPage() {
                     0{index + 1}
                   </div>
                   <div>
-                    <h3 className="text-[20px] font-light tracking-[-0.3px]">
+                    <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                       {item}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
@@ -801,7 +801,7 @@ export default function AppModernizationPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Case Studies
               </p>
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Modernization projects built around existing business systems.
               </h2>
             </div>
@@ -818,7 +818,7 @@ export default function AppModernizationPage() {
                 </div>
                 <div className="p-7 md:p-8">
                   <div className="mb-5 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
@@ -863,9 +863,7 @@ export default function AppModernizationPage() {
                           className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
                         >
                                         <span>Enquire Now</span>
-                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                                          →
-                                        </span>
+                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                                       </button>
                                     </div>
                                   </div>
@@ -879,7 +877,7 @@ export default function AppModernizationPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies used to modernize existing applications
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -934,7 +932,7 @@ export default function AppModernizationPage() {
                           }}
                         />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -953,7 +951,7 @@ export default function AppModernizationPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Modernization decisions based on your current system—not a one-size-fits-all approach.
             </h2>
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
@@ -969,7 +967,7 @@ export default function AppModernizationPage() {
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -989,7 +987,7 @@ export default function AppModernizationPage() {
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
                 Support & Continuous Optimization
               </p>
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Keep the modernized application reliable after launch.
               </h2>
             </div>
@@ -1009,7 +1007,7 @@ export default function AppModernizationPage() {
                     <Icon size={28} className="text-[#193175]" />
                   </div>
                   <div>
-                    <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                    <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -1030,7 +1028,7 @@ export default function AppModernizationPage() {
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about application modernization.
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
@@ -1109,9 +1107,7 @@ export default function AppModernizationPage() {
                           className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
                         >
                                         <span>Enquire Now</span>
-                                        <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                                          →
-                                        </span>
+                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
                                       </button>
                                     </div>
                                   </div>

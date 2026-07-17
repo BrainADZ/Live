@@ -337,7 +337,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none">↗</span>
+                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
               </button>
             </div>
           </div>
@@ -352,7 +352,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Overview
             </p>
 
-            <h2 className="max-w-165 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-165 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Connect complex operations through software built around your
               business.
             </h2>
@@ -374,7 +374,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                 <div key={item.title} className="border-t border-black/10 pt-7">
                   <Icon size={28} className="mb-5 text-[#193175]" />
 
-                  <h3 className="text-[22px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -397,7 +397,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                 Challenges Enterprises Face
               </p>
 
-              <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Complex operations become harder when systems and teams stay
                 disconnected.
               </h2>
@@ -421,7 +421,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[23px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[23px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -442,7 +442,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Enterprise Software Services
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Enterprise software built around the way your teams operate.
             </h2>
           </div>
@@ -463,7 +463,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                     />
                   </div>
 
-                  <h3 className="text-[23px] font-light tracking-[-0.4px]">
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
                   </h3>
 
@@ -494,7 +494,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Enterprise Software Development Process
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
               How we turn complex workflows into connected enterprise software
             </h2>
 
@@ -529,7 +529,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-[22px] font-light leading-tight tracking-[-0.5px]">
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
                           {item.title}
                         </h3>
 
@@ -628,7 +628,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                     />
                   </div>
 
-                  <h3 className="mt-6 text-[30px] font-light leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
                   </h3>
 
@@ -650,7 +650,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Enterprise Solutions We Build
             </p>
 
-            <h2 className="max-w-180 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               One connected software environment for teams, workflows and
               business data.
             </h2>
@@ -711,7 +711,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                 Case Studies
               </p>
 
-              <h2 className="max-w-195 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
                 Enterprise software shaped around real operational workflows.
               </h2>
             </div>
@@ -741,7 +741,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
                 <div className="p-7 md:p-8">
                   <div className="mb-5 flex items-center justify-between gap-5">
-                    <h3 className="text-[24px] font-light tracking-[-0.5px]">
+                    <h3 className="text-[24px] font-normal tracking-[-0.5px]">
                       {item.title}
                     </h3>
 
@@ -770,7 +770,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Tech Stack
             </p>
 
-            <h2 className="mx-auto max-w-210 text-[38px] font-light leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies we use to build custom enterprise software
             </h2>
 
@@ -839,7 +839,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                         />
                       </div>
 
-                      <h3 className="mt-4 text-[15px] font-light leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {item.name}
                       </h3>
                     </div>
@@ -859,7 +859,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Why Choose BrainADZ Live
             </p>
 
-            <h2 className="text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Enterprise software planned around real workflows, users and
               connected systems.
             </h2>
@@ -881,7 +881,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                   0{index + 1}
                 </span>
 
-                <h3 className="mt-3 text-[24px] font-light tracking-[-0.4px]">
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
                   {item.title}
                 </h3>
 
@@ -910,7 +910,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               Support & Maintenance
             </p>
 
-            <h2 className="max-w-185 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="max-w-185 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Keep your enterprise platform stable as operations continue to
               change.
             </h2>
@@ -951,7 +951,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               FAQ
             </p>
 
-            <h2 className="mx-auto max-w-220 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
+            <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
               Common questions about custom enterprise software.
             </h2>
           </div>
@@ -1039,9 +1039,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               >
                 <span>Enquire Now</span>
 
-                <span className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

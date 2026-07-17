@@ -50,7 +50,7 @@ export default function BrandCarousel() {
                 </span>
               </div>
 
-              <h2 className="max-w-xl text-[36px] font-light leading-[1.08] tracking-[-0.035em] text-[#161616] md:text-[48px] lg:text-[56px]">
+              <h2 className="max-w-xl text-[36px] font-normal leading-[1.08] tracking-[-0.035em] text-[#161616] md:text-[48px] lg:text-[56px]">
                 Brands that trust
                 <span className="text-[#193175]"> BrainADZ Live.</span>
               </h2>
