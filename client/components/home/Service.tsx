@@ -10,56 +10,56 @@ const services = [
     description:
       "Build secure, scalable, and high-performance software solutions tailored to your business needs",
     href: "/software-services/software-development",
-    icon: "/service-icons/software-development.png",
+    icon: "/service-icons/software-development.svg",
   },
   {
     title: "Mobile App Development",
     description:
       "Create modern, responsive, and high-performance mobile applications for Android and iOS",
     href: "/software-services/mobile-app-development",
-    icon: "/service-icons/app-development.png",
+    icon: "/service-icons/mobile-app-development.svg",
   },
   {
     title: "Application Modernization",
     description:
       "Transform legacy applications into modern, scalable, secure, and future-ready digital platforms",
     href: "/software-services/application-modernization",
-    icon: "/service-icons/credit.png",
+    icon: "/service-icons/app-modernization.svg",
   },
   {
     title: "Web App Development",
     description:
       "Develop fast, scalable, and interactive web applications designed for modern businesses",
     href: "/software-services/web-app-development",
-    icon: "/service-icons/web-app-development.png",
+    icon: "/service-icons/web-app-development.svg",
   },
   {
     title: "Enterprise Software Solutions",
     description:
       "Build powerful enterprise software systems that streamline operations and support business growth",
     href: "/software-services/enterprise-software-solutions",
-    icon: "/service-icons/erp-system.png",
+    icon: "/service-icons/enterprise.svg",
   },
   {
     title: "API Integration",
     description:
       "Connect applications, platforms, and third-party services through secure and reliable API integrations",
     href: "/software-services/api-integration",
-    icon: "/service-icons/integration.png",
+    icon: "/service-icons/api.svg",
   },
   {
     title: "CRM Development",
     description:
       "Create custom CRM solutions to manage customers, automate workflows, and improve business relationships",
     href: "/software-services/crm-development",
-    icon: "/service-icons/structure.png",
+    icon: "/service-icons/crm.svg",
   },
   {
     title: "ERP Development",
     description:
       "Build integrated ERP systems to manage business operations, resources, finance, and workflows efficiently",
     href: "/software-services/erp-development",
-    icon: "/service-icons/coding.png",
+    icon: "/service-icons/erp.svg",
   },
 ];
 
