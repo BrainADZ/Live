@@ -297,7 +297,7 @@ export default function SaaSDevelopmentPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/saas-development.jpg"
+          src="/hero/saas-development.webp"
           alt="SaaS Development Services"
           className="absolute inset-0 h-full w-full object-cover"
         />

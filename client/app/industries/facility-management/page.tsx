@@ -360,7 +360,7 @@ export default function FacilityManagementIndustryPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/facility-management.jpg"
+          src="/hero/facility-management.webp"
           alt="Facility management technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />

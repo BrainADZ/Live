@@ -307,7 +307,7 @@ export default function UIUXDesignPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/uiux-design.jpg"
+          src="/hero/ui-ux.webp"
           alt="UI UX Design Services"
           className="absolute inset-0 h-full w-full object-cover"
         />

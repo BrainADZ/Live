@@ -285,7 +285,7 @@ export default function ApiIntegrationPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/api-integration.jpg"
+          src="/hero/api-integration.webp"
           alt="API Integration Services"
           className="absolute inset-0 h-full w-full object-cover"
         />

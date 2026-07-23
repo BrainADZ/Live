@@ -60,7 +60,7 @@ export default function SoftwarePlatformsPage() {
       {/* HERO */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/software-platform.jpg"
+          src="/hero/software-platforms.webp"
           alt="Software Platforms"
           className="absolute inset-0 h-full w-full object-cover"
           onError={(event) => {

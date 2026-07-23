@@ -421,7 +421,7 @@ export default function CareerPage() {
         <div className="mx-auto max-w-450">
           <div className="relative min-h-150 overflow-hidden md:min-h-120">
             <img
-              src="/hero/career.jpg"
+              src="/hero/career.webp"
               alt="Career at BrainADZ Live"
               className="absolute inset-0 h-full w-full object-cover"
               onError={(event) => {

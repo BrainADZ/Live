@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[420px] overflow-hidden bg-black text-white md:min-h-[480px] lg:min-h-[540px]">
       <img
-        src="/hero/our-team.jpg"
+        src="/hero/about.webp"
         alt="About BrainADZ Live"
         className="absolute inset-0 h-full w-full object-cover"
       />

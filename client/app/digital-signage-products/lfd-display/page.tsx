@@ -141,7 +141,7 @@ export default function LFDDisplayPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/LFD.jpg"
+          src="/hero/LFD.webp"
           alt="LFD Display solution by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />

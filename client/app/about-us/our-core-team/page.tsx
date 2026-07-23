@@ -178,7 +178,7 @@ export default function OurCoreTeamPage() {
       {/* HERO */}
       <section className="relative min-h-[420px] overflow-hidden bg-black text-white md:min-h-[480px] lg:min-h-[540px]">
         <img
-          src="/hero/our-team.jpg"
+          src="/hero/our-team.webp"
           alt="Our Core Team"
           className="absolute inset-0 h-full w-full object-cover"
         />

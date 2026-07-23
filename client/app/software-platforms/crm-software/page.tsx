@@ -201,7 +201,7 @@ export default function CRMSoftwarePage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/crm-software.jpg"
+          src="/hero/crm-software.webp"
           alt="CRM Software by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />

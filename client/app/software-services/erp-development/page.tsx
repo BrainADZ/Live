@@ -241,7 +241,7 @@ export default function ERPDevelopmentPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/erp-development.jpg"
+          src="/hero/erp.webp"
           alt="ERP Development Services"
           className="absolute inset-0 h-full w-full object-cover"
         />

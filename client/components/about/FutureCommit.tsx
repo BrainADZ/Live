@@ -27,7 +27,7 @@ const tabs: {
       "We are committed to building software around clear workflows, usable interfaces, scalable architecture and the real responsibilities of the people using the system.",
     linkText: "Explore software services",
     href: "/software-services",
-    image: "/about/futuresustain.jpg",
+    image: "/about/futuresustain.webp",
   },
   {
     key: "platforms",
@@ -36,7 +36,7 @@ const tabs: {
       "CRM, ERP and business platforms should reduce disconnected work. Our focus is on creating clearer data flows, operational visibility and better coordination between teams.",
     linkText: "Explore software platforms",
     href: "/software-platforms",
-    image: "/about/futureAI.jpg",
+    image: "/about/futureAI.webp",
   },
   {
     key: "experiences",
@@ -45,7 +45,7 @@ const tabs: {
       "We see physical and digital experiences becoming more connected through kiosks, interactive displays, signage software and customer-facing technology.",
     linkText: "Explore digital signage products",
     href: "/digital-signage-products",
-    image: "/about/futuresustain.jpg",
+    image: "/about/futuresustain.webp",
   },
   {
     key: "delivery",
@@ -54,7 +54,7 @@ const tabs: {
       "Our long-term commitment is to make technology decisions clearer through better discovery, planning, integration thinking and delivery ownership.",
     linkText: "Explore technology consulting",
     href: "/consulting",
-    image: "/about/futurework.jpeg",
+    image: "/about/futurework.webp",
   },
 ];
 

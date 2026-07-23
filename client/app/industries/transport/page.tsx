@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -363,7 +364,7 @@ export default function TransportIndustryPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/transport.jpg"
+          src="/hero/transport.webp"
           alt="Transport technology solutions by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />

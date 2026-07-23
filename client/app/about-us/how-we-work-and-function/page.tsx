@@ -92,7 +92,7 @@ export default function HowWeWorkPage() {
   {/* HERO SECTION */}
   <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
     <img
-      src="/hero/work-function.jpg"
+      src="/hero/work-function.webp"
       alt="Page Hero"
       className="absolute inset-0 h-full w-full object-cover"
     />

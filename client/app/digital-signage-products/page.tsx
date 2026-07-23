@@ -88,7 +88,7 @@ export default function DigitalSignageProductsPage() {
   {/* HERO */}
   <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
     <img
-      src="/hero/signage-product.jpg"
+      src="/hero/digital-signage-product.webp"
       alt="Digital Signage Products"
       className="absolute inset-0 h-full w-full object-cover"
       onError={(event) => {

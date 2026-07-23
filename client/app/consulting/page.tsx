@@ -236,7 +236,7 @@ export default function ConsultingPage() {
       {/* HERO */}
     <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
       <img
-        src="/hero/consulting.jpg"
+        src="/hero/consulting.webp"
         alt="Consulting BrainADZ Live"
         className="absolute inset-0 h-full w-full object-cover"
       />
