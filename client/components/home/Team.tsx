@@ -18,31 +18,31 @@ const teamMembers: TeamMember[] = [
     name: "Sumit Jaiswal",
     role: "CEO & Director",
     image: "/team/sumit.png",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "http://linkedin.com/in/sumit-jaiswal-73707438/",
   },
   {
-    name: "Rakesh Kumar",
+    name: "Rakesh Singh Rajput",
     role: "Sales Manager",
   image: "/team/head.png",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/rakesh-singh-rajput-a4957419/",
   },
   {
     name: "Sarthak Raina",
     role: "Corporate Sale & Project Manager",
     image: "/team/cops.png",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/sarthak-raina-693427165/",
   },
   {
     name: "Pooja Paswan",
     role: "Sales Executive",
     image: "/team/sale.png",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/pooja-paswan-620693245/",
   },
   {
     name: "Anand Upadhyay",
     role: "Technical Manager",
     image: "/team/tech.png",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/anand-upadhyay-553875220/",
   },
 ];
 
