@@ -20,6 +20,42 @@ import {
   type MenuItem,
 } from "@/data/solutionMenu";
 
+const verticalMobileChargingKiosk: MenuItem = {
+  title: "Vertical Mobile Charging Digital Kiosk",
+  href: "/digital-signage-products/vertical-mobile-charging-digital-kiosk",
+};
+
+const normalizedDigitalSignageProducts = menuContent[
+  "Digital Signage Products"
+]
+  .filter((item) => item.title !== "Vertical Mobile Charging Digital Kiosk")
+  .map((item) =>
+    item.title === "Interactive Teaching Display"
+      ? {
+          ...item,
+          title: "Interactive Panel",
+        }
+      : item
+  );
+
+const interactivePanelIndex = normalizedDigitalSignageProducts.findIndex(
+  (item) => item.title === "Interactive Panel"
+);
+
+const updatedDigitalSignageProducts =
+  interactivePanelIndex >= 0
+    ? [
+        ...normalizedDigitalSignageProducts.slice(0, interactivePanelIndex + 1),
+        verticalMobileChargingKiosk,
+        ...normalizedDigitalSignageProducts.slice(interactivePanelIndex + 1),
+      ]
+    : [...normalizedDigitalSignageProducts, verticalMobileChargingKiosk];
+
+const updatedMenuContent: Record<Category, MenuItem[]> = {
+  ...menuContent,
+  "Digital Signage Products": updatedDigitalSignageProducts,
+};
+
 const aboutLinks: MenuItem[] = [
   {
     title: "Overview",
@@ -332,7 +368,7 @@ export default function Navbar() {
                       ARROW ADDED ON THE RIGHT SIDE OF EVERY OPTION
                     */}
                     <div className="grid grid-cols-3 gap-x-14 gap-y-12">
-                      {menuContent[activeCategory].map((item) => (
+                      {updatedMenuContent[activeCategory].map((item) => (
                         <Link
                           href={item.href}
                           key={item.title}
@@ -692,7 +728,7 @@ export default function Navbar() {
 
                   <div className="px-4 pb-4">
                     <div className="space-y-4">
-                      {menuContent[category].map((item) => (
+                      {updatedMenuContent[category].map((item) => (
                         <Link
                           key={item.title}
                           href={item.href}

@@ -32,13 +32,13 @@ function ArrowRightIcon({ className }: { className?: string }) {
 
 const products: Product[] = [
   {
-    title: "A Type Standee",
+    title: "A-Type Standee",
     description:
       "Freestanding digital display for entrances, promotions, product launches and brand communication in customer-facing spaces.",
     image: "/products/A.png",
   },
   {
-    title: "D Type Standee",
+    title: "D-Type Standee",
     description:
       "Slim freestanding digital display for promotions, information and brand content across stores, showrooms and business spaces.",
     image: "/products/D.png",
@@ -50,7 +50,7 @@ const products: Product[] = [
     image: "/products/wall.png",
   },
   {
-    title: "Floor Mounted Standee",
+    title: "I-Type Floor Mounted Standee",
     description:
       "Floor-mounted digital display for prominent content placement in entrances, waiting areas, retail zones and public-facing spaces.",
     image: "/products/Floor.png",
@@ -62,22 +62,28 @@ const products: Product[] = [
     image: "/products/Selforder.png",
   },
   {
-    title: "LFD Display",
+    title: "LFD Wall Display",
     description:
       "Large-format display for presentations, brand content, dashboards, information and digital communication across shared spaces.",
     image: "/products/lfd.png",
   },
   {
-    title: "LED Display",
+    title: "LED Wall Display",
     description:
       "High-visibility LED display for large-scale visual communication, campaigns, stage environments and suitable indoor or outdoor installations.",
     image: "/products/Led.png",
   },
   {
-    title: "Interactive Teaching Display",
+    title: "Interactive Panel",
     description:
       "Interactive display for lessons, presentations, annotations and collaborative sessions in classrooms and training spaces.",
     image: "/products/Teaching.png",
+  },
+  {
+    title: "Vertical Mobile Charging Kiosk",
+    description:
+      "Convenient charging station for mobile devices, ideal for public spaces, retail environments and customer waiting areas.",
+    image: "/products/Mobile-Charging.jpeg",
   },
 ];
 

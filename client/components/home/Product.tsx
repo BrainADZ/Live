@@ -6,22 +6,22 @@ import { ArrowRight } from "lucide-react";
 
 const products = [
   {
-    title: "A Type Standee",
+    title: "A-Type Standee",
     href: "/digital-signage-products/a-type-standee",
     image: "/products/A.png",
   },
   {
-    title: "D Type Standee",
+    title: "D-Type Standee",
     href: "/digital-signage-products/d-type-standee",
     image: "/products/D.png",
   },
   {
-    title: "Wall Mounted",
+    title: "Wall Mounted Standee",
     href: "/digital-signage-products/wall-mounted-standee",
     image: "/products/wall.png",
   },
   {
-    title: "Floor Mounted",
+    title: "I-Type Floor Mounted Standee",
     href: "/digital-signage-products/floor-mounted-standee",
     image: "/products/Floor.png",
   },
@@ -31,17 +31,17 @@ const products = [
     image: "/products/Selforder.png",
   },
   {
-    title: "LFD Wall",
+    title: "LFD Wall Display",
     href: "/digital-signage-products/lfd-display",
     image: "/products/lfd.png",
   },
   {
-    title: "LED Wall",
+    title: "LED Wall Display",
     href: "/digital-signage-products/led-display",
     image: "/products/Led.png",
   },
   {
-    title: "Interactive Teaching & Conf.",
+    title: "Interactive Panel",
     href: "/digital-signage-products/interactive-teaching-display",
     image: "/products/Teaching.jpeg",
   },
