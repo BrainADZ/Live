@@ -24,6 +24,7 @@ type Service = {
   title: string;
   description: string;
   icon: IconType;
+  href: string;
 };
 
 function ArrowRightIcon({ className }: { className?: string }) {
@@ -198,66 +199,77 @@ const services: Service[] = [
     description:
       "Custom software for operations, internal teams, workflow automation, dashboards and connected business processes.",
     icon: "code",
+    href: "/software-services/software-development",
   },
   {
     title: "Mobile App Development",
     description:
       "Android, iOS and cross-platform apps with user-focused interfaces, backend APIs, integrations and admin controls.",
     icon: "mobile",
+    href: "/software-services/mobile-app-development",
   },
   {
     title: "Application Modernization",
     description:
       "Improve existing applications through UI upgrades, code modernization, architecture changes, integrations and cloud readiness.",
     icon: "modern",
+    href: "/software-services/application-modernization",
   },
   {
     title: "Web App Development",
     description:
       "Browser-based applications, portals and dashboards built around workflows, responsive interfaces, APIs and business data.",
     icon: "web",
+    href: "/software-services/web-app-development",
   },
   {
     title: "Enterprise Software Solutions",
     description:
       "Custom platforms for multi-team operations, role-based workflows, internal processes, reporting and connected systems.",
     icon: "enterprise",
+    href: "/software-services/enterprise-software-solutions",
   },
   {
     title: "API Integration",
     description:
       "Connect applications, CRM, ERP, payments, logistics and third-party platforms through secure APIs and reliable data flows.",
     icon: "api",
+    href: "/software-services/api-integration",
   },
   {
     title: "CRM Development",
     description:
       "CRM platforms for leads, follow-ups, sales pipelines, customer history, tasks, reporting and business integrations.",
     icon: "crm",
+    href: "/software-services/crm-development",
   },
   {
     title: "ERP Development",
     description:
       "ERP systems that connect sales, purchase, inventory, finance, teams, approvals and reporting across daily operations.",
     icon: "erp",
+    href: "/software-services/erp-development",
   },
   {
     title: "UI/UX Design",
     description:
       "User research, flows, wireframes, interface design, prototypes and design systems prepared for product development.",
     icon: "design",
+    href: "/software-services/ui-ux-design",
   },
   {
     title: "SaaS Development",
     description:
       "SaaS platforms with accounts, roles, subscriptions, billing integration, admin tools and scalable product architecture.",
     icon: "saas",
+    href: "/software-services/saas-development",
   },
   {
     title: "Cloud Consulting",
     description:
       "Cloud assessment, strategy, migration, architecture, security, optimization and ongoing infrastructure support.",
     icon: "cloud",
+    href: "/software-services/cloud-consulting",
   },
 ];
 
@@ -398,58 +410,61 @@ export default function SoftwareServicesPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
-        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
+<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+  <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
-        <div className="relative z-10 mx-auto max-w-450">
-          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-            <div>
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-                Explore Services
-              </p>
+  <div className="relative z-10 mx-auto max-w-450">
+    <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+      <div>
+        <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+          Explore Services
+        </p>
 
-              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Software services for new products, existing systems and
-                business operations
-              </h2>
-            </div>
+        <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+          Software services for new products, existing systems and business
+          operations
+        </h2>
+      </div>
 
-            <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              Whether you are building from scratch, modernizing an existing
-              application, connecting systems or improving internal workflows,
-              choose the service that fits the problem you need to solve.
+      <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+        Whether you are building from scratch, modernizing an existing
+        application, connecting systems or improving internal workflows,
+        choose the service that fits the problem you need to solve.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+      {services.map((item) => (
+        <Link
+          key={item.title}
+          href={item.href}
+          aria-label={`Explore ${item.title}`}
+          className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
+        >
+          <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
+            <ServiceIcon type={item.icon} className="h-9 w-9" />
+          </div>
+
+          <div>
+            <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+              {item.description}
             </p>
+
+            <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]">
+              Explore service
+
+              <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
           </div>
-
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-            {services.map((item) => (
-              <div
-                key={item.title}
-                className="group grid min-h-57.5 grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] md:grid-cols-[88px_1fr] md:p-8"
-              >
-                <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
-                  <ServiceIcon type={item.icon} className="h-9 w-9" />
-                </div>
-
-                <div>
-                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-                    {item.description}
-                  </p>
-
-                  <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]">
-                    Explore service
-                    <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-8">

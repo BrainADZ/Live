@@ -11,6 +11,7 @@ type Product = {
   title: string;
   description: string;
   image: string;
+  href: string;
 };
 
 function ArrowRightIcon({ className }: { className?: string }) {
@@ -36,54 +37,63 @@ const products: Product[] = [
     description:
       "Freestanding digital display for entrances, promotions, product launches and brand communication in customer-facing spaces.",
     image: "/products/A.png",
+    href: "/digital-signage-products/a-type-standee",
   },
   {
     title: "D-Type Standee",
     description:
       "Slim freestanding digital display for promotions, information and brand content across stores, showrooms and business spaces.",
     image: "/products/D.png",
+    href: "/digital-signage-products/d-type-standee",
   },
   {
     title: "Wall Mounted Standee",
     description:
       "Wall-mounted digital display for menus, schedules, notices, directories and promotional content where floor space is limited.",
     image: "/products/wall.png",
+    href: "/digital-signage-products/wall-mounted-standee",
   },
   {
     title: "I-Type Floor Mounted Standee",
     description:
       "Floor-mounted digital display for prominent content placement in entrances, waiting areas, retail zones and public-facing spaces.",
     image: "/products/Floor.png",
+    href: "/digital-signage-products/i-type-floor-mounted-standee",
   },
   {
     title: "Self Ordering Kiosk",
     description:
       "Interactive kiosk that lets customers browse options, place orders and complete selected service steps through a guided on-screen flow.",
     image: "/products/Selforder.png",
+    href: "/digital-signage-products/self-ordering-kiosk",
   },
   {
     title: "LFD Wall Display",
     description:
       "Large-format display for presentations, brand content, dashboards, information and digital communication across shared spaces.",
     image: "/products/lfd.png",
+    href: "/digital-signage-products/lfd-wall-display",
   },
   {
     title: "LED Wall Display",
     description:
       "High-visibility LED display for large-scale visual communication, campaigns, stage environments and suitable indoor or outdoor installations.",
     image: "/products/Led.png",
+    href: "/digital-signage-products/led-wall-display",
   },
   {
     title: "Interactive Panel",
     description:
       "Interactive display for lessons, presentations, annotations and collaborative sessions in classrooms and training spaces.",
     image: "/products/Teaching.png",
+    href: "/digital-signage-products/interactive-panel",
   },
   {
     title: "Vertical Mobile Charging Kiosk",
     description:
       "Convenient charging station for mobile devices, ideal for public spaces, retail environments and customer waiting areas.",
     image: "/products/Mobile-Charging.jpeg",
+    href: "/digital-signage-products/vertical-mobile-charging-digital-kiosk",
   },
 ];
 
@@ -219,74 +229,73 @@ export default function DigitalSignageProductsPage() {
         </div>
       </section>
 
-      {/* PRODUCTS */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
-        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
+     {/* PRODUCTS */}
+<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+  <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
-        <div className="relative z-10 mx-auto max-w-450">
-          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-            <div>
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-                Product Range
-              </p>
+  <div className="relative z-10 mx-auto max-w-450">
+    <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+      <div>
+        <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+          Product Range
+        </p>
 
-              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Choose the display format that fits the space and use case
-              </h2>
+        <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+          Choose the display format that fits the space and use case
+        </h2>
+      </div>
+
+      <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+        Compare standees, self-service kiosks, large-format screens, LED
+        displays and interactive teaching displays based on placement,
+        visibility and interaction needs.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+      {products.map((item) => (
+        <Link
+          key={item.title}
+          href={item.href}
+          aria-label={`Explore ${item.title}`}
+          className="group overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3"
+        >
+          <div className="relative h-70 overflow-hidden bg-[#eef2f8]">
+            <div className="absolute inset-0 flex items-center justify-center text-[15px] font-light text-[#8d8d8d]">
+              Product image will appear here
             </div>
 
-            <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              Compare standees, self-service kiosks, large-format screens, LED
-              displays and interactive teaching displays based on placement,
-              visibility and interaction needs.
+            <img
+              src={item.image}
+              alt={item.title}
+              className="relative z-10 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              onError={(event) => {
+                event.currentTarget.style.display = "none";
+              }}
+            />
+
+            <div className="absolute inset-0 z-20 bg-[linear-gradient(180deg,rgba(255,255,255,0)_45%,rgba(60,91,155,0.12)_100%)]" />
+          </div>
+
+          <div className="p-7 md:p-8">
+            <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+              {item.description}
             </p>
+
+            <span className="mt-8 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]">
+              Explore Product
+              <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
           </div>
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {products.map((item) => (
-              <div
-                key={item.title}
-                className="group overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)]"
-              >
-                <div className="relative h-70 overflow-hidden bg-[#eef2f8]">
-                  <div className="absolute inset-0 flex items-center justify-center text-[15px] font-light text-[#8d8d8d]">
-                    Product image will appear here
-                  </div>
-
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="relative z-10 h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    onError={(event) => {
-                      event.currentTarget.style.display = "none";
-                    }}
-                  />
-
-                  <div className="absolute inset-0 z-20 bg-[linear-gradient(180deg,rgba(255,255,255,0)_45%,rgba(60,91,155,0.12)_100%)]" />
-                </div>
-
-                <div className="p-7 md:p-8">
-                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-                    {item.description}
-                  </p>
-
-                  <Link
-                    href="/contact-us"
-                    className="mt-8 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] hover:underline"
-                  >
-                    Explore Product
-                    <ArrowRightIcon className="h-4.5 w-4.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="lazy-section bg-white py-8">
               <div className="mx-auto max-w-450 px-4 lg:px-10">

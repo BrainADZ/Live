@@ -248,68 +248,66 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* INDUSTRIES */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
-        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
+     {/* INDUSTRIES */}
+<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+  <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
-        <div className="relative z-10 mx-auto max-w-450">
-          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-            <div>
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-                Industries We Build For
-              </p>
+  <div className="relative z-10 mx-auto max-w-450">
+    <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+      <div>
+        <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+          Industries We Build For
+        </p>
 
-              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Different industries need different workflows, interfaces and systems
-              </h2>
-            </div>
+        <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+          Different industries need different workflows, interfaces and systems
+        </h2>
+      </div>
 
-            <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              Explore examples of how our software services, software platforms
-              and digital signage products can be applied across 12 industry
-              sectors.
+      <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+        Explore examples of how our software services, software platforms and
+        digital signage products can be applied across 12 industry sectors.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+      {industries.map((item) => (
+        <Link
+          key={item.title}
+          href={item.href}
+          aria-label={`Explore ${item.title}`}
+          className="group grid min-h-55 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
+        >
+          <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
+            <img
+              src={item.icon}
+              alt={`${item.title} icon`}
+              loading="lazy"
+              decoding="async"
+              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+
+          <div>
+            <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
+              {item.title}
+            </h3>
+
+            <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+              {item.description}
             </p>
+
+            <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] transition-colors duration-300 group-hover:text-[#101f4d]">
+              Explore industry
+
+              <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
           </div>
-
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-            {industries.map((item) => (
-              <div
-                key={item.title}
-                className="group grid min-h-55 grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] md:grid-cols-[88px_1fr] md:p-8"
-              >
-                <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
-                  <img
-                    src={item.icon}
-                    alt={`${item.title} icon`}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-
-                <div>
-                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-                    {item.description}
-                  </p>
-
-                  <Link
-                    href={item.href}
-                    aria-label={`Explore ${item.title}`}
-                    className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]"
-                  >
-                    Explore industry
-                    <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-8">

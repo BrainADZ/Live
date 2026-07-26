@@ -42,7 +42,7 @@ const products = [
   },
   {
     title: "Interactive Panel",
-    href: "/digital-signage-products/interactive-teaching-display",
+    href: "/digital-signage-products/interactive-panel",
     image: "/products/Teaching.jpeg",
   },
 ];

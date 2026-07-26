@@ -71,7 +71,7 @@ export default function AboutSection() {
           {/* RIGHT IMAGE */}
           <div className="w-full" data-aos="fade-left" data-aos-delay="100">
             <img
-              src="/home-about.jpg"
+              src="/home-about.webp"
               alt="BrainADZ Live digital business impact"
               loading="lazy"
               decoding="async"
