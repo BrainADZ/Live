@@ -25,15 +25,27 @@ const verticalMobileChargingKiosk: MenuItem = {
   href: "/digital-signage-products/vertical-mobile-charging-digital-kiosk",
 };
 
+const interactivePanelTitles = [
+  "Interactive Teaching Display",
+  "Interactive Panel",
+];
+
+const interactivePanelUrls = [
+  "/digital-signage-products/interactive-teaching-display",
+  "/digital-signage-products/interactive-panel",
+];
+
 const normalizedDigitalSignageProducts = menuContent[
   "Digital Signage Products"
 ]
   .filter((item) => item.title !== "Vertical Mobile Charging Digital Kiosk")
   .map((item) =>
-    item.title === "Interactive Teaching Display"
+    interactivePanelTitles.includes(item.title) ||
+    interactivePanelUrls.includes(item.href)
       ? {
           ...item,
           title: "Interactive Panel",
+          href: "/digital-signage-products/interactive-panel",
         }
       : item
   );
@@ -51,8 +63,34 @@ const updatedDigitalSignageProducts =
       ]
     : [...normalizedDigitalSignageProducts, verticalMobileChargingKiosk];
 
+const posPlatform: MenuItem = {
+  title: "POS Software",
+  href: "/software-platforms/pos",
+};
+
+const virtualTrialRoomTitles = ["Virtual Trial Room", "Virtual Trail Room"];
+
+const hasVirtualTrialRoom = menuContent["Software Platforms"].some((item) =>
+  virtualTrialRoomTitles.includes(item.title)
+);
+
+const updatedSoftwarePlatforms = hasVirtualTrialRoom
+  ? menuContent["Software Platforms"].map((item) =>
+      virtualTrialRoomTitles.includes(item.title) ? posPlatform : item
+    )
+  : menuContent["Software Platforms"].some(
+        (item) => item.title === "POS" || item.title === "POS Software"
+      )
+    ? menuContent["Software Platforms"].map((item) =>
+        item.title === "POS" || item.title === "POS Software"
+          ? posPlatform
+          : item
+      )
+    : [...menuContent["Software Platforms"], posPlatform];
+
 const updatedMenuContent: Record<Category, MenuItem[]> = {
   ...menuContent,
+  "Software Platforms": updatedSoftwarePlatforms,
   "Digital Signage Products": updatedDigitalSignageProducts,
 };
 
@@ -144,10 +182,22 @@ const searchLinks = [
     keywords: "digital signage kiosk display standee led lfd",
   },
   {
+    label: "Interactive Panel",
+    href: "/digital-signage-products/interactive-panel",
+    description: "Interactive display solution for classrooms and collaborative spaces",
+    keywords: "interactive panel interactive teaching display smart classroom display",
+  },
+  {
     label: "Software Platforms",
     href: "/software-platforms",
     description: "CRM, ERP, signage application and cloud signage software",
-    keywords: "software platforms crm erp signage cloud virtual trial room",
+    keywords: "software platforms crm erp signage cloud pos point of sale",
+  },
+  {
+    label: "POS",
+    href: "/software-platforms/pos",
+    description: "Point of sale platform for billing, inventory and business operations",
+    keywords: "pos point of sale billing inventory retail software platform",
   },
   {
     label: "Industries",

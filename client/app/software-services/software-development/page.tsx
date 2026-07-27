@@ -751,7 +751,7 @@ export default function SoftwareDevelopmentPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/SoftwareDev-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Custom Software Development"
                 loading="lazy"
                 decoding="async"
@@ -1087,7 +1087,7 @@ export default function SoftwareDevelopmentPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/SoftwareDev-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Custom Software Development"
                 loading="lazy"
                 decoding="async"

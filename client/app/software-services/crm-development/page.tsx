@@ -945,7 +945,7 @@ export default function CRMDevelopmentPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/CRM-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live CRM Development Services"
                 loading="lazy"
                 decoding="async"

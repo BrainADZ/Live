@@ -45,7 +45,7 @@ const footerColumns = [
       { label: "ERP Software", href: "/software-platforms/erp-software" },
       { label: "Signage Application", href: "/software-platforms/signage-application" },
       { label: "Cloud Signage Software", href: "/software-platforms/cloud-signage-software" },
-      { label: "Virtual Trail Room", href: "/software-platforms/virtual-trail-room" },
+      { label: "POS Software", href: "/software-platforms/pos" },
     ],
   },
   {

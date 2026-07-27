@@ -9,106 +9,106 @@ import {
   Database,
   Download,
   Gauge,
-  ImagePlus,
   Layers3,
   Minus,
+  Package,
   Plus,
+  ReceiptText,
   Search,
   ShieldCheck,
-  Shirt,
-  Sparkles,
-  Users,
+  ShoppingCart,
+  Tags,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
 
 const modules = [
   {
-    title: "Virtual Product Preview",
-    text: "Create a digital preview workflow that lets users explore selected products before purchase.",
-    icon: Shirt,
+    title: "Fast Billing & Checkout",
+    text: "Create quick and accurate billing workflows with product search, barcode scanning, discounts, taxes and multiple payment options.",
+    icon: ReceiptText,
   },
   {
-    title: "Product Catalogue Mapping",
-    text: "Connect eligible product visuals, variants and relevant catalogue information with the trial experience.",
-    icon: ImagePlus,
+    title: "Inventory Management",
+    text: "Track stock availability, product movement, low-stock levels and inventory updates from one connected POS platform.",
+    icon: Package,
   },
   {
-    title: "Customer Experience Flow",
-    text: "Plan a guided interface for product selection, preview, comparison and the next shopping action.",
-    icon: Users,
+    title: "Product & Pricing Control",
+    text: "Manage products, categories, variants, pricing, tax rules and promotional offers through a centralized catalogue.",
+    icon: Tags,
   },
   {
-    title: "Activity Insights",
-    text: "Include trial activity and product interaction reporting when required by the project scope.",
+    title: "Sales & Business Reports",
+    text: "Review sales, payments, products, employees and store performance through practical dashboards and reports.",
     icon: BarChart3,
   },
 ];
 
 const experienceItems = [
   {
-    title: "Virtual Product Preview Flow",
-    text: "Create a digital journey where users can select eligible products and view them through the configured preview experience.",
+    title: "Billing & Checkout",
+    text: "Process sales through a simple billing interface with product search, barcode support, quantity updates, taxes, discounts and payment selection.",
   },
   {
-    title: "Product Catalogue Connection",
-    text: "Map selected products, variants and visual assets with the virtual trial workflow according to the available catalogue structure.",
+    title: "Product & Category Management",
+    text: "Create and manage products, categories, variants, units, prices, tax settings and catalogue details from one administrative system.",
   },
   {
-    title: "Camera or Image-Based Experience",
-    text: "Plan camera-based or image-based interaction when the selected use case, product type and technical setup require it.",
+    title: "Inventory & Stock Tracking",
+    text: "Monitor stock quantities, product movement, low-stock alerts, stock adjustments and inventory availability across configured locations.",
   },
   {
-    title: "Web, Mobile or Display Deployment",
-    text: "Plan the experience for selected web, mobile or in-store display environments according to the project requirement.",
+    title: "Customer Management",
+    text: "Maintain customer profiles, purchase history, contact details, loyalty information and selected customer-specific offers when required.",
   },
   {
-    title: "Brand-Aligned Interface",
-    text: "Configure the visual experience around the brand, product presentation and required customer journey.",
+    title: "Discount, Tax & Promotion Rules",
+    text: "Configure discounts, promotional pricing, coupon rules and applicable tax structures according to the business workflow.",
   },
   {
-    title: "Ecommerce Integration Planning",
-    text: "Connect product pages, catalogue data or shopping workflows where suitable APIs and technical interfaces are available.",
+    title: "Multi-Store Management",
+    text: "Manage products, users, stock and sales visibility across multiple outlets through a connected POS environment.",
   },
   {
-    title: "In-Store Assisted Experience",
-    text: "Use the platform as part of an assisted retail journey where digital product exploration is required.",
+    title: "Employee Roles & Access",
+    text: "Create role-based access for cashiers, store managers, administrators and other users according to operational responsibility.",
   },
   {
-    title: "Trial Activity Reporting",
-    text: "Add reporting for selected product interactions or trial activity when the project scope requires operational insight.",
+    title: "Reports & Analytics",
+    text: "Review daily sales, payment methods, products, inventory, employees and store performance through selected dashboards and reports.",
   },
 ];
 
 const workflowSteps = [
   {
-    title: "Experience Discovery",
-    text: "We understand the product type, customer journey, trial objective and intended deployment environment.",
+    title: "Requirement Discovery",
+    text: "We understand the business type, billing workflow, products, users, stores, inventory and reporting requirements.",
     icon: Search,
   },
   {
-    title: "Try-On & UX Planning",
-    text: "We plan the preview logic, interaction flow, product mapping and customer journey.",
-    icon: Sparkles,
-  },
-  {
-    title: "Interface Design",
-    text: "We design the selected web, mobile or display interface around the required trial experience.",
+    title: "POS & UX Planning",
+    text: "We plan the billing flow, product structure, user roles, dashboard experience and required operational modules.",
     icon: Layers3,
   },
   {
-    title: "Platform Configuration",
-    text: "The required product mapping, preview workflow, backend logic and integrations are configured or developed.",
+    title: "Interface Configuration",
+    text: "We configure or design the billing screen, product catalogue, administrative dashboard and selected user journeys.",
+    icon: ShoppingCart,
+  },
+  {
+    title: "Data & Integrations",
+    text: "Products, inventory, taxes, payment workflows, devices and required third-party integrations are configured or developed.",
     icon: Database,
   },
   {
-    title: "Testing & Validation",
-    text: "We test the configured interaction flow, product presentation and supported deployment setup.",
+    title: "Testing & Staff Training",
+    text: "We validate billing, inventory, permissions, reports and connected workflows before guiding the operational team.",
     icon: ShieldCheck,
   },
   {
-    title: "Deployment & Handover",
-    text: "The platform is deployed with implementation guidance according to the agreed project scope.",
+    title: "Deployment & Support",
+    text: "The POS platform is deployed with implementation guidance, handover and support according to the agreed scope.",
     icon: Gauge,
   },
 ];
@@ -123,40 +123,40 @@ const workflowLayout = [
 ];
 
 const integrations = [
+  "Payment Gateways",
+  "Barcode Scanners",
+  "Receipt Printers",
+  "Inventory Systems",
+  "CRM Platforms",
+  "Accounting Software",
   "Ecommerce Platforms",
-  "Product Catalogues",
-  "Product Pages",
-  "Shopping Workflows",
-  "Camera or Image Input",
-  "Analytics Tools",
-  "CRM Systems",
   "External APIs",
 ];
 
 const faqs = [
   {
-    q: "What is a Virtual Trial Room?",
-    a: "A Virtual Trial Room is a digital product preview experience that allows users to explore selected products through a configured virtual try-on or product visualization workflow before purchase.",
+    q: "What is POS Software?",
+    a: "POS Software is a business system used to manage billing, payments, products, inventory, customers, employees and sales reporting from a connected point-of-sale interface.",
   },
   {
-    q: "Can BrainADZ build a custom Virtual Trial Room?",
-    a: "Yes. The product preview flow, interface, catalogue mapping, deployment environment and integrations can be planned according to the project requirement.",
+    q: "Can BrainADZ build custom POS Software?",
+    a: "Yes. The billing flow, product catalogue, inventory, user roles, reports, store structure and integrations can be planned according to the business requirement.",
   },
   {
-    q: "Does every Virtual Trial Room use AI?",
-    a: "Not necessarily. The final approach depends on the product type and project requirement. The experience may use image-based, camera-based or other product visualization methods according to the selected configuration.",
+    q: "Can the POS support multiple stores?",
+    a: "Yes. Multi-store access, outlet-wise products, inventory, users and sales reporting can be included according to the required operating model.",
   },
   {
-    q: "Can it connect with an ecommerce platform?",
-    a: "Yes. Integration with product catalogues, product pages or shopping workflows can be planned where suitable APIs or technical interfaces are available.",
+    q: "Can POS Software connect with hardware devices?",
+    a: "Integration can be planned for supported barcode scanners, receipt printers, cash drawers, customer displays and other compatible devices required by the project.",
   },
   {
-    q: "Can the experience work on mobile or in-store displays?",
-    a: "The platform can be planned for selected web, mobile or in-store display environments. Final compatibility depends on the required experience and technical setup.",
+    q: "Can the POS connect with ecommerce, CRM or accounting software?",
+    a: "Yes. Integration with ecommerce platforms, CRM systems, accounting software, payment services and external APIs can be planned where suitable technical interfaces are available.",
   },
 ];
 
-export default function VirtualTrialRoomPage() {
+export default function POSSoftwarePage() {
   const [openFaq, setOpenFaq] = useState(0);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -165,8 +165,8 @@ export default function VirtualTrialRoomPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/virtual-trail-room.jpg"
-          alt="Virtual Trial Room by BrainADZ Live"
+          src="/hero/pos-software.jpg"
+          alt="POS Software by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -187,20 +187,20 @@ export default function VirtualTrialRoomPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">Virtual Trial Room</span>
+            <span className="text-white/90">POS Software</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Virtual Trial Room for Digital Product Preview Experiences
+              POS Software for Billing, Inventory and Retail Operations
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              A configurable virtual product preview platform for creating
-              interactive try-on experiences across selected ecommerce, web,
-              mobile and in-store environments.
+              A configurable POS platform for managing billing, payments, products,
+              inventory, customers and store operations through one connected
+              business system.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -234,36 +234,35 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Bring product exploration into a digital preview experience.
+              Bring billing, inventory and store operations into one POS platform.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live Virtual Trial Room is designed for businesses that
-              want customers to explore selected products through a digital
-              preview workflow. The experience can be planned around product
-              visuals, catalogue data, customer interaction and the required
-              shopping journey.
+              BrainADZ Live POS Software is designed for retail stores,
+              restaurants, service businesses and multi-location operations that
+              need a connected system for billing, products, inventory, customers,
+              users and business reporting.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
                 <h3 className="text-[20px] font-normal">
-                  Interactive Product Exploration
+                  Faster Billing Operations
                 </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Give users a more visual way to explore selected products.
+                  Help teams process sales through a clear and efficient billing workflow.
                 </p>
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
                 <h3 className="text-[20px] font-normal">
-                  Configurable Preview Journey
+                  Centralized Store Management
                 </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Plan the trial experience around the product type and
-                  customer journey.
+                  Manage products, stock, users and reports through one connected
+                  platform.
                 </p>
               </div>
             </div>
@@ -274,8 +273,8 @@ export default function VirtualTrialRoomPage() {
 
             <div className="relative overflow-hidden rounded-[30px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/software/virtual-trial-room-dashboard.webp"
-                alt="Virtual Trial Room platform preview"
+                src="/software/pos-software-dashboard.webp"
+                alt="POS Software dashboard preview"
                 className="h-130 w-full object-cover"
               />
             </div>
@@ -292,27 +291,27 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Add a more visual layer to the customer product journey.
+              Improve billing accuracy and gain better control over daily operations.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {[
               {
-                title: "Interactive Product Exploration",
-                text: "Give customers another way to explore selected products through a digital preview experience.",
+                title: "Faster Billing Operations",
+                text: "Help cashiers and teams complete billing with faster product selection, taxes, discounts and payment handling.",
               },
               {
-                title: "Pre-Purchase Product Preview",
-                text: "Help users view eligible products through the configured visualization or try-on workflow.",
+                title: "Connected Inventory Visibility",
+                text: "Keep stock quantities, sales movement and low-stock information connected with billing activity.",
               },
               {
-                title: "Brand-Aligned Experience",
-                text: "Create a digital product journey that follows the required brand and interface direction.",
+                title: "Consistent Operational Control",
+                text: "Standardize products, pricing, discounts, taxes and user permissions across the required business setup.",
               },
               {
-                title: "Flexible Deployment Planning",
-                text: "Plan the experience for selected ecommerce, web, mobile or in-store use cases.",
+                title: "Scalable Store Management",
+                text: "Plan the POS for a single outlet, multiple stores or selected business locations according to the requirement.",
               },
             ].map((item, index) => (
               <div
@@ -346,14 +345,14 @@ export default function VirtualTrialRoomPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Core capabilities for a virtual product preview experience.
+                Core capabilities for connected billing and store operations.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              The platform structure can combine product preview, catalogue
-              mapping, customer interaction and selected reporting according to
-              the project scope.
+              The platform can combine billing, product management, inventory,
+              customer records, employee access and operational reporting
+              according to the project scope.
             </p>
           </div>
 
@@ -387,33 +386,33 @@ export default function VirtualTrialRoomPage() {
         </div>
       </section>
 
-      {/* VIRTUAL TRY-ON EXPERIENCE */}
+      {/* POS CAPABILITIES */}
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.76fr_1.24fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
-              Virtual Try-On Experience
+              POS Capabilities
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Plan the product preview journey around the actual customer
-              experience.
+              Plan the POS workflow around real billing and operational
+              requirements.
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              BrainADZ Live plans Virtual Trial Room experiences around the
-              product type, catalogue structure, customer interaction and
-              selected deployment environment.
+              BrainADZ Live plans POS Software around the business type,
+              billing process, product catalogue, inventory structure, user roles
+              and required store environment.
             </p>
 
             <div className="mt-8 rounded-[26px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
               <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                Plan the right preview experience
+                Plan the right POS system
               </h3>
 
               <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                Define the products, users, interaction flow and deployment
-                environment before selecting the final technical approach.
+                Define billing, products, inventory, users, stores, devices and
+                reporting needs before finalizing the POS configuration.
               </p>
 
               <button
@@ -470,12 +469,12 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our Virtual Trial Room Implementation Roadmap
+              Our POS Software Implementation Roadmap
             </h2>
 
             <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
               A practical process for planning, configuring and deploying a
-              virtual product preview experience.
+              connected point-of-sale platform.
             </p>
           </div>
 
@@ -528,7 +527,7 @@ export default function VirtualTrialRoomPage() {
             >
               <defs>
                 <marker
-                  id="trial-arrowhead"
+                  id="pos-arrowhead"
                   markerHeight="14"
                   markerUnits="userSpaceOnUse"
                   markerWidth="18"
@@ -549,7 +548,7 @@ export default function VirtualTrialRoomPage() {
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
-                markerEnd="url(#trial-arrowhead)"
+                markerEnd="url(#pos-arrowhead)"
               />
 
               <path
@@ -566,7 +565,7 @@ export default function VirtualTrialRoomPage() {
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
-                markerEnd="url(#trial-arrowhead)"
+                markerEnd="url(#pos-arrowhead)"
               />
 
               <path
@@ -575,7 +574,7 @@ export default function VirtualTrialRoomPage() {
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
-                markerEnd="url(#trial-arrowhead)"
+                markerEnd="url(#pos-arrowhead)"
               />
 
               <path
@@ -584,7 +583,7 @@ export default function VirtualTrialRoomPage() {
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
-                markerEnd="url(#trial-arrowhead)"
+                markerEnd="url(#pos-arrowhead)"
               />
             </svg>
 
@@ -628,18 +627,18 @@ export default function VirtualTrialRoomPage() {
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
-                Integration Planning
+                POS Integrations
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Connect the preview experience with selected commerce systems.
+                Connect POS operations with selected business systems and devices.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Integration scope can be planned around the product catalogue,
-              ecommerce platform, shopping workflow and APIs available for the
-              project.
+              Integration scope can be planned around payments, barcode devices,
+              printers, inventory, ecommerce, CRM, accounting software and
+              available APIs.
             </p>
           </div>
 
@@ -664,7 +663,7 @@ export default function VirtualTrialRoomPage() {
 
       <IndustriesSection />
 
-      {/* DASHBOARD PREVIEW */}
+      {/* POS DASHBOARD PREVIEW */}
       <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
@@ -673,15 +672,15 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A central view for products, trial experiences and configured
-              activity data.
+              A central view for sales, products, inventory and operational
+              activity.
             </h2>
           </div>
 
           <div className="overflow-hidden rounded-[34px] border border-black/10 bg-white p-4 shadow-[0_30px_90px_rgba(0,0,0,0.08)] md:p-6">
             <img
-              src="/software/virtual-trial-room-preview-large.webp"
-              alt="Virtual Trial Room platform preview"
+              src="/software/pos-software-preview-large.webp"
+              alt="POS Software dashboard preview"
               className="h-full w-full rounded-3xl object-cover"
             />
           </div>
@@ -697,28 +696,28 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Virtual Trial Room planning based on products, users and the
-              required shopping journey.
+              POS Software planning based on billing, products, inventory, users
+              and business operations.
             </h2>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {[
               {
-                title: "Experience-First Planning",
-                text: "We start with the product type, user journey and intended preview experience before selecting the final approach.",
+                title: "Business-First Planning",
+                text: "We start with the business type, billing workflow, products, users and operational priorities before selecting the final approach.",
               },
               {
-                title: "Product & Catalogue Alignment",
-                text: "The trial workflow is planned around the available product information, visuals and catalogue structure.",
+                title: "Billing & Catalogue Alignment",
+                text: "The POS workflow is planned around products, categories, pricing, taxes, discounts and the required billing structure.",
               },
               {
-                title: "Integration Planning",
-                text: "Connections with selected commerce and business systems are reviewed according to available technical interfaces.",
+                title: "POS Integrations",
+                text: "Connections with payment, inventory, ecommerce, CRM, accounting and device systems are reviewed according to available technical interfaces.",
               },
               {
                 title: "Scope-Based Implementation Support",
-                text: "Configuration, deployment guidance and handover support are provided according to the agreed project scope.",
+                text: "Configuration, deployment guidance, staff handover and implementation support are provided according to the agreed project scope.",
               },
             ].map((item, index) => (
               <div
@@ -751,7 +750,7 @@ export default function VirtualTrialRoomPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Virtual Trial Room.
+              Common questions about POS Software.
             </h2>
           </div>
 
@@ -804,8 +803,8 @@ export default function VirtualTrialRoomPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
-                alt="Virtual Trial Room by BrainADZ Live"
+                src="/CTA/cta.webp"
+                alt="POS Software by BrainADZ Live"
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-cover"
@@ -815,12 +814,12 @@ export default function VirtualTrialRoomPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to explore a Virtual Trial Room experience?
+                  Ready to improve your billing and store operations?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  See how selected products, catalogue data and customer
-                  interactions can be brought into one digital preview journey.
+                  See how billing, inventory, products, customers and business
+                  reporting can be managed through one connected POS platform.
                 </p>
               </div>
 

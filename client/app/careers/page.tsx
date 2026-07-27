@@ -1002,7 +1002,7 @@ export default function CareerPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="Careers at BrainADZ Live"
                 loading="lazy"
                 decoding="async"

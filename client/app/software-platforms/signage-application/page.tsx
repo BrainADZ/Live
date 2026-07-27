@@ -865,7 +865,7 @@ export default function SignageApplicationPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="Signage Application by BrainADZ Live"
                 loading="lazy"
                 decoding="async"

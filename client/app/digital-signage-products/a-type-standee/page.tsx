@@ -601,7 +601,7 @@ export default function ATypeStandeePage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="A Type Digital Standee deployment showcase"
                 loading="lazy"
                 decoding="async"
@@ -738,7 +738,7 @@ export default function ATypeStandeePage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="A Type Digital Standee deployment showcase"
                 loading="lazy"
                 decoding="async"

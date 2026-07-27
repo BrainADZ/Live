@@ -44,11 +44,11 @@ const platforms: Platform[] = [
     href: "/software-platforms/cloud-signage-software",
   },
   {
-    title: "Virtual Trial Room",
+    title: "POS Software",
     description:
-      "Create interactive virtual try-on experiences that help fashion and retail customers explore products in a more engaging way.",
+      "A configurable POS platform for managing billing, payments, products, inventory, customers and store operations through one connected business system.",
     icon: "/icons/icons8-fitting-room-50.svg",
-    href: "/software-platforms/virtual-trial-room",
+    href: "/software-platforms/pos",
   },
 ];
 
@@ -275,7 +275,7 @@ export default function SoftwarePlatformsPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Software Platforms"
                 loading="lazy"
                 decoding="async"

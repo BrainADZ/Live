@@ -670,7 +670,7 @@ export default function MobileAppDevelopmentPage() {
           <div className="flex min-h-65 overflow-hidden bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/App-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Mobile App Development"
                 className="h-full w-full object-cover"
               />
@@ -935,7 +935,7 @@ export default function MobileAppDevelopmentPage() {
                                   <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                                     <div className="hidden w-[32%] shrink-0 md:block">
                                       <img
-                                        src="/CTA/App-CTA.jpg"
+                                        src="/CTA/cta.webp"
                                         alt="BrainADZ Live Mobile App Development Services"
                                         loading="lazy"
                                         decoding="async"

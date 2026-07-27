@@ -13,62 +13,62 @@ const industries: Industry[] = [
   {
     title: "Healthcare",
     slug: "health-care",
-    icon: "/industries/healthcare.png",
+    icon: "/industries/healthcare.svg",
   },
   {
     title: "EdTech",
     slug: "education-tech",
-    icon: "/industries/edu.png",
+    icon: "/industries/education.svg",
   },
   {
     title: "Fintech",
     slug: "finance-tech",
-    icon: "/industries/hand.png",
+    icon: "/industries/finance.svg",
   },
   {
     title: "Proptech",
     slug: "property-tech",
-    icon: "/industries/monitor.png",
+    icon: "/industries/property.svg",
   },
   {
     title: "Retail",
     slug: "retail",
-    icon: "/industries/marketplace.png",
+    icon: "/industries/retail.svg",
   },
   {
     title: "Transport",
     slug: "transport",
-    icon: "/industries/transportation.png",
+    icon: "/industries/transport.svg",
   },
   {
     title: "Telecom",
     slug: "telecom",
-    icon: "/industries/telecommunication.png",
+    icon: "/industries/telecom.svg",
   },
   {
     title: "Automotive",
     slug: "automotive",
-    icon: "/industries/automotive.png",
+    icon: "/industries/automotive.svg",
   },
   {
     title: "Insurtech",
     slug: "insurance-tech",
-    icon: "/industries/insurance.png",
+    icon: "/industries/insurance.svg",
   },
   {
     title: "Travel and Hospitality",
     slug: "travel-hospitality",
-    icon: "/industries/travel-and-tourism.png",
+    icon: "/industries/travel.svg",
   },
   {
     title: "Facility Management",
     slug: "facility-management",
-    icon: "/industries/facility-management.png",
+    icon: "/industries/facility.svg",
   },
   {
     title: "Media & Entertainment",
     slug: "media-entertainment",
-    icon: "/industries/smartphone.png",
+    icon: "/industries/media.svg",
   },
 ];
 

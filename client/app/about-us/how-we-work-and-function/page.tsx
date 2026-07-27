@@ -384,7 +384,7 @@ export default function HowWeWorkPage() {
           {/* LEFT IMAGE */}
           <div className="hidden w-[32%] shrink-0 md:block">
             <img
-              src="/CTA/home-cta.png"
+              src="/CTA/cta.webp"
               alt="How BrainADZ Live works with clients"
               loading="lazy"
               decoding="async"

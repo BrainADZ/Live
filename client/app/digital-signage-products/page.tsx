@@ -85,14 +85,14 @@ const products: Product[] = [
     title: "Interactive Panel",
     description:
       "Interactive display for lessons, presentations, annotations and collaborative sessions in classrooms and training spaces.",
-    image: "/products/Teaching.png",
+    image: "/products/Teaching.jpeg",
     href: "/digital-signage-products/interactive-panel",
   },
   {
     title: "Vertical Mobile Charging Kiosk",
     description:
       "Convenient charging station for mobile devices, ideal for public spaces, retail environments and customer waiting areas.",
-    image: "/products/Mobile-Charging.jpeg",
+    image: "/products/mobilecharging.webp",
     href: "/digital-signage-products/vertical-mobile-charging-digital-kiosk",
   },
 ];
@@ -302,7 +302,7 @@ export default function DigitalSignageProductsPage() {
                 <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                   <div className="hidden w-[32%] shrink-0 md:block">
                     <img
-                      src="/CTA/home-cta.png"
+                      src="/CTA/cta.webp"
                       alt="BrainADZ Live Digital Signage Products"
                       loading="lazy"
                       decoding="async"
