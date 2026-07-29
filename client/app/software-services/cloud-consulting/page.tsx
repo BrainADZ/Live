@@ -207,7 +207,7 @@ const techStack: Record<TabType, StackItem[]> = {
   devops: [
     { name: "Jenkins", icon: "/icons/Jenkins.svg" },
     { name: "GitLab", icon: "/icons/GitLab.svg" },
-    { name: "GitHub Actions", icon: "/icons/GitHub.svg" },
+    { name: "GitHub Actions", icon: "/icons/GitHubActions.svg" },
     { name: "Terraform", icon: "/icons/Terraform.svg" },
     { name: "Ansible", icon: "/icons/Ansible.svg" },
     { name: "Prometheus", icon: "/icons/Prometheus.svg" },

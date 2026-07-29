@@ -695,7 +695,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/services/hero/enterprise-dashboard.jpg"
+              src="/overview/enterprise-sol.webp"
               alt="Enterprise dashboard software"
               className="h-full w-full object-cover"
             />
@@ -900,7 +900,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/services/hero/enterprise-support.jpg"
+              src="/overview/enterprise-main.webp"
               alt="Enterprise software support"
               className="h-full w-full object-cover"
             />

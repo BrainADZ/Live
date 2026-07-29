@@ -262,7 +262,7 @@ const techStack: Record<TabType, StackItem[]> = {
     { name: "Microsoft Azure", icon: "/icons/Azure.svg" },
     { name: "Google Cloud", icon: "/icons/GoogleCloud.svg" },
     { name: "Oracle Cloud", icon: "/icons/Oracle.svg" },
-    { name: "IBM Cloud", icon: "/icons/IBM.svg" },
+    { name: "IBM Cloud", icon: "/icons/IBMCloud.svg" },
     { name: "Alibaba Cloud", icon: "/icons/AlibabaCloud.svg" },
   ],
   devops: [

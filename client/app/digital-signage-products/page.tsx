@@ -188,9 +188,9 @@ export default function DigitalSignageProductsPage() {
               </div>
 
               <img
-                src="/solutions/digital-signage-about.jpg"
+                src="/overview/digital-signage.webp"
                 alt="Digital signage products by BrainADZ Live"
-                className="relative z-10 h-90 w-full object-cover md:h-130"
+                className="relative z-10 h-90 w-full object-cover md:h-110"
                 onError={(event) => {
                   event.currentTarget.style.display = "none";
                 }}

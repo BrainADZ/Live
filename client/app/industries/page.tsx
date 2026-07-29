@@ -35,84 +35,84 @@ const industries: Industry[] = [
   {
     title: "Healthcare",
     href: "/industries/health-care",
-    icon: "/industries/healthcare.png",
+    icon: "/industries/healthcare.svg",
     description:
       "Software, dashboards and display systems for appointments, internal workflows, patient communication and operational visibility.",
   },
   {
     title: "Education Tech",
     href: "/industries/education-tech",
-    icon: "/industries/edu.png",
+    icon: "/industries/education.svg",
     description:
       "Learning platforms, student and admin dashboards, classroom displays and digital systems for campus communication and education operations.",
   },
   {
     title: "Finance Tech",
     href: "/industries/finance-tech",
-    icon: "/industries/hand.png",
+    icon: "/industries/finance.svg",
     description:
       "Customer portals, workflow systems, reporting dashboards and controlled access for financial operations and service teams.",
   },
   {
     title: "Property Tech",
     href: "/industries/property-tech",
-    icon: "/industries/monitor.png",
+    icon: "/industries/property.svg",
     description:
       "Property portals, lead and sales workflows, digital showcases and management dashboards for property businesses.",
   },
   {
     title: "Retail",
     href: "/industries/retail",
-    icon: "/industries/marketplace.png",
+    icon: "/industries/retail.svg",
     description:
       "Store displays, self-service kiosks, commerce systems, customer engagement tools and software for retail operations.",
   },
   {
     title: "Transport",
     href: "/industries/transport",
-    icon: "/industries/transportation.png",
+    icon: "/industries/transport.svg",
     description:
       "Information displays, tracking dashboards, booking or service workflows and operational systems for transport teams.",
   },
   {
     title: "Telecom",
     href: "/industries/telecom",
-    icon: "/industries/telecommunication.png",
+    icon: "/industries/telecom.svg",
     description:
       "Customer service platforms, operational dashboards, workflow tools and internal systems for telecom processes.",
   },
   {
     title: "Automotive",
     href: "/industries/automotive",
-    icon: "/industries/automotive.png",
+    icon: "/industries/automotive.svg",
     description:
       "Showroom displays, service workflows, customer systems and digital tools for automotive operations.",
   },
   {
     title: "Insurance Tech",
     href: "/industries/insurance-tech",
-    icon: "/industries/insurance.png",
+    icon: "/industries/insurance.svg",
     description:
       "Policy, claims, customer and agent workflows supported by portals, dashboards and process automation.",
   },
   {
     title: "Travel & Hospitality",
     href: "/industries/travel-hospitality",
-    icon: "/industries/travel-and-tourism.png",
+    icon: "/industries/travel.svg",
     description:
       "Booking and guest-service workflows, menu and information displays, kiosks and operational dashboards.",
   },
   {
     title: "Facility Management",
     href: "/industries/facility-management",
-    icon: "/industries/facility-management.png",
+    icon: "/industries/facility.svg",
     description:
       "Task, service, asset and team workflows supported by dashboards, digital notices and internal management systems.",
   },
   {
     title: "Media & Entertainment",
     href: "/industries/media-entertainment",
-    icon: "/industries/smartphone.png",
+    icon: "/industries/media.svg",
     description:
       "Content and engagement platforms, interactive displays, LED visuals and operational tools for media environments.",
   },
@@ -207,9 +207,9 @@ export default function IndustriesPage() {
               </div>
 
               <img
-                src="/solutions/industries-about.jpg"
+                src="/overview/industries.webp"
                 alt="Industries served by BrainADZ Live"
-                className="relative z-10 h-90 w-full object-cover md:h-130"
+                className="relative z-10 h-90 w-full object-cover md:h-115"
                 onError={(event) => {
                   event.currentTarget.style.display = "none";
                 }}

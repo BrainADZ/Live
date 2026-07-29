@@ -242,10 +242,10 @@ const tabs: { label: string; value: TabType }[] = [
 const techStack: Record<TabType, StackItem[]> = {
   design: [
     { name: "Figma", icon: "/icons/Figma.svg" },
-    { name: "Adobe XD", icon: "/icons/AdobeXD.svg" },
+    { name: "Adobe XD", icon: "/icons/Adobe XD.svg" },
     { name: "Sketch", icon: "/icons/Sketch.svg" },
-    { name: "Photoshop", icon: "/icons/Photoshop.svg" },
-    { name: "Illustrator", icon: "/icons/Illustrator.svg" },
+    { name: "Photoshop", icon: "/icons/Adobe Photoshop.svg" },
+    { name: "Illustrator", icon: "/icons/Adobe Illustrator.svg" },
     { name: "Canva", icon: "/icons/Canva.svg" },
   ],
   prototype: [

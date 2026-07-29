@@ -223,7 +223,7 @@ const techStack: Record<TabType, StackItem[]> = {
   ],
   frameworks: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
-    { name: "Express.js", icon: "/icons/Express.js.svg" },
+    { name: "Express.js", icon: "/icons/Express.svg" },
     { name: "Django", icon: "/icons/Django.svg" },
     { name: "Laravel", icon: "/icons/Laravel.svg" },
     { name: "Spring Boot", icon: "/icons/Spring.svg" },
@@ -243,7 +243,7 @@ const techStack: Record<TabType, StackItem[]> = {
     { name: "Google Cloud", icon: "/icons/GoogleCloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
-    { name: "GitHub Actions", icon: "/icons/GitHub.svg" },
+    { name: "GitHub Actions", icon: "/icons/GitHubActions.svg" },
   ],
 };
 
@@ -816,7 +816,7 @@ export default function ApiIntegrationPage() {
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden rounded-[28px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/services/hero/api-support.jpg"
+              src="/overview/apiinte-main.webp"
               alt="API support and maintenance"
               className="h-full w-full object-cover"
             />

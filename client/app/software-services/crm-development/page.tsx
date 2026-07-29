@@ -233,7 +233,7 @@ const techStack: Record<TabType, StackItem[]> = {
     { name: "Firebase", icon: "/icons/Firebase.svg" },
   ],
   integrations: [
-    { name: "REST API", icon: "/icons/API.svg" },
+    { name: "REST API", icon: "/icons/RestAPI.svg" },
     { name: "GraphQL", icon: "/icons/GraphQL.svg" },
     { name: "WhatsApp", icon: "/icons/WhatsApp.svg" },
     { name: "Stripe", icon: "/icons/Stripe.svg" },

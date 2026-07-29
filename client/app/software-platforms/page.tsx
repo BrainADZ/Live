@@ -19,35 +19,35 @@ const platforms: Platform[] = [
     title: "CRM Software",
     description:
       "Manage leads, follow-ups, customer records, sales pipelines, team activity and reporting from one connected CRM platform.",
-    icon: "/icons/crm-software.svg",
+    icon: "/service-icons/crm-soft.svg",
     href: "/software-platforms/crm-software",
   },
   {
     title: "ERP Software",
     description:
       "Connect sales, purchase, inventory, finance, users and reporting through one structured ERP platform for daily operations.",
-    icon: "/icons/erp.svg",
+    icon: "/service-icons/erp-soft.svg",
     href: "/software-platforms/erp-software",
   },
   {
     title: "Signage Application",
     description:
       "Manage content, playlists and playback for digital standees, kiosks and connected displays from one signage application.",
-    icon: "/icons/digital-signage (1).svg",
+    icon: "/service-icons/signage.svg",
     href: "/software-platforms/signage-application",
   },
   {
     title: "Cloud Signage Software",
     description:
       "Publish, schedule and update content across connected screens remotely through a cloud-based signage management platform.",
-    icon: "/icons/store-sign.svg",
+    icon: "/service-icons/cms.svg",
     href: "/software-platforms/cloud-signage-software",
   },
   {
     title: "POS Software",
     description:
       "A configurable POS platform for managing billing, payments, products, inventory, customers and store operations through one connected business system.",
-    icon: "/icons/icons8-fitting-room-50.svg",
+    icon: "/service-icons/pos.svg",
     href: "/software-platforms/pos",
   },
 ];
@@ -146,9 +146,9 @@ export default function SoftwarePlatformsPage() {
               </div>
 
               <img
-                src="/solutions/software-platforms-about.jpg"
+                src="/overview/software-platform.webp"
                 alt="Software platforms by BrainADZ Live"
-                className="relative z-10 h-90 w-full object-cover md:h-130"
+                className="relative z-10 h-90 w-full object-cover md:h-110"
                 onError={(event) => {
                   event.currentTarget.style.display = "none";
                 }}

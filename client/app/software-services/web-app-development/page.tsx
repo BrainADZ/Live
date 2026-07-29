@@ -282,10 +282,10 @@ const techStack: Record<TabType, StackItem[]> = {
   frontend: [
     { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.svg" },
+    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
     { name: "JavaScript", icon: "/icons/JavaScript.svg" },
-    { name: "Tailwind CSS", icon: "/icons/Tailwind.svg" },
+    { name: "Tailwind CSS", icon: "/icons/TailwindCSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
@@ -309,7 +309,7 @@ const techStack: Record<TabType, StackItem[]> = {
     { name: "Google Cloud", icon: "/icons/GoogleCloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
-    { name: "GitHub Actions", icon: "/icons/Github.svg" },
+    { name: "GitHub Actions", icon: "/icons/GithubActions.svg" },
   ],
 };
 

@@ -470,7 +470,7 @@ export default function SoftwareDevelopmentPage() {
             <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#193175]/10 blur-3xl" />
             <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/services/Software-Development-Models.avif"
+                src="/overview/software-dev.webp"
                 alt="Software development dashboard"
                 className="h-full w-full object-cover"
               />
