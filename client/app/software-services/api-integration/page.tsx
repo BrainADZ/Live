@@ -5,33 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  Bell,
   CheckCircle2,
-  Cloud,
-  Code2,
-  Database,
-  Gauge,
-  GraduationCap,
-  HeartPulse,
-  Landmark,
-  LifeBuoy,
-  Link2,
-  LockKeyhole,
   Minus,
-  Network,
-  PackageCheck,
-  PlugZap,
   Plus,
-  RefreshCcw,
-  Search,
-  Settings2,
-  ShieldCheck,
-  ShoppingCart,
-  Store,
-  Truck,
-  Users,
-  WalletCards,
-  Workflow,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries"
 import PopupForm from "@/components/PopupForm";
@@ -44,36 +20,59 @@ type StackItem = {
   text?: string;
 };
 
+const overviewHighlights = [
+  {
+    title: "Unified Data Flow",
+    text: "Move information accurately between applications, databases and business systems.",
+    iconSrc: "/icons/api-integration/overview/unified-data-flow.svg",
+  },
+  {
+    title: "Less Manual Work",
+    text: "Reduce repeated data entry and handoffs between disconnected tools.",
+    iconSrc: "/icons/api-integration/overview/less-manual-work.svg",
+  },
+  {
+    title: "Faster Operations",
+    text: "Trigger updates and actions automatically across connected workflows.",
+    iconSrc: "/icons/api-integration/overview/faster-operations.svg",
+  },
+  {
+    title: "Scalable Connections",
+    text: "Add new tools and services without rebuilding your entire setup.",
+    iconSrc: "/icons/api-integration/overview/scalable-connections.svg",
+  },
+];
+
 const processSteps = [
   {
     title: "Discovery & System Analysis",
     text: "We review your existing applications, business workflows, data flow and integration requirements before defining the right connection approach.",
-    icon: Search,
+    iconSrc: "/icons/api-integration/workflow/discovery-system-analysis.svg",
   },
   {
     title: "Integration Planning & Design",
     text: "We define endpoints, authentication, data mapping, error handling and the integration logic required between your systems.",
-    icon: Workflow,
+    iconSrc: "/icons/api-integration/workflow/integration-planning-design.svg",
   },
   {
     title: "API Development & Integration",
     text: "We build custom APIs or connect existing ones using secure, scalable and maintainable integration patterns.",
-    icon: Code2,
+    iconSrc: "/icons/api-integration/workflow/api-development-integration.svg",
   },
   {
     title: "Testing & Security Validation",
     text: "We test functionality, permissions, data accuracy, response handling and failure scenarios across every connected system.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/api-integration/workflow/testing-security-validation.svg",
   },
   {
     title: "Deployment & Documentation",
     text: "We deploy the integration with access controls, environment configuration, monitoring and clear technical documentation.",
-    icon: Cloud,
+    iconSrc: "/icons/api-integration/workflow/deployment-documentation.svg",
   },
   {
     title: "Support & Optimization",
     text: "We monitor performance, resolve integration issues and update connections as your applications, APIs and business needs change.",
-    icon: LifeBuoy,
+    iconSrc: "/icons/api-integration/workflow/support-optimization.svg",
   },
 ];
 
@@ -90,22 +89,22 @@ const challenges = [
   {
     title: "Data Silos",
     text: "Disconnected systems create scattered data and poor business visibility.",
-    icon: Database,
+    iconSrc: "/icons/api-integration/challenges/data-silos.svg",
   },
   {
     title: "Repeated Manual Work",
     text: "Teams lose time entering the same information and updating multiple systems separately.",
-    icon: Settings2,
+    iconSrc: "/icons/api-integration/challenges/repeated-manual-work.svg",
   },
   {
     title: "Fragile Connections",
     text: "Unplanned point-to-point connections become difficult to maintain as more tools are added.",
-    icon: Gauge,
+    iconSrc: "/icons/api-integration/challenges/fragile-connections.svg",
   },
   {
     title: "Security & Access Gaps",
     text: "Poor authentication, weak permissions and unsafe data transfer can expose business-critical information.",
-    icon: LockKeyhole,
+    iconSrc: "/icons/api-integration/challenges/security-access-gaps.svg",
   },
 ];
 
@@ -113,22 +112,22 @@ const services = [
   {
     title: "Custom API Development",
     text: "Purpose-built APIs for web apps, mobile apps, dashboards and internal business systems.",
-    icon: Code2,
+    iconSrc: "/icons/api-integration/services/custom-api-development.svg",
   },
   {
     title: "Third-Party API Integration",
     text: "Connect payment gateways, maps, WhatsApp, SMS, email, analytics and other external platforms.",
-    icon: PlugZap,
+    iconSrc: "/icons/api-integration/services/third-party-api-integration.svg",
   },
   {
     title: "CRM & ERP Integration",
     text: "Connect CRM, ERP, sales, inventory and other business systems so data moves between them reliably.",
-    icon: Network,
+    iconSrc: "/icons/api-integration/services/crm-erp-integration.svg",
   },
   {
     title: "Legacy & System Integration",
     text: "Connect existing software, databases and newer applications without rebuilding your entire technology setup.",
-    icon: Settings2,
+    iconSrc: "/icons/api-integration/services/legacy-system-integration.svg",
   },
 ];
 
@@ -136,22 +135,22 @@ const integrationTypes = [
   {
     title: "Web & Mobile App Integration",
     text: "Connect web applications, mobile apps, admin panels and backend systems through reliable APIs.",
-    icon: Link2,
+    iconSrc: "/icons/api-integration/types/web-mobile-app-integration.svg",
   },
   {
     title: "Data & Database Integration",
     text: "Synchronize data between databases, dashboards and business applications with accurate data mapping.",
-    icon: Database,
+    iconSrc: "/icons/api-integration/types/data-database-integration.svg",
   },
   {
     title: "Cloud & SaaS Integration",
     text: "Connect cloud services, SaaS tools and hosted platforms with your existing applications and workflows.",
-    icon: Cloud,
+    iconSrc: "/icons/api-integration/types/cloud-saas-integration.svg",
   },
   {
     title: "Business System Integration",
     text: "Connect CRM, ERP, sales, inventory, support and other operational systems around one data flow.",
-    icon: Users,
+    iconSrc: "/icons/api-integration/types/business-system-integration.svg",
   },
 ];
 
@@ -351,34 +350,23 @@ export default function ApiIntegrationPage() {
           </div>
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2">
-            {[
-              [
-                "Unified Data Flow",
-                "Move information accurately between applications, databases and business systems.",
-              ],
-              [
-                "Less Manual Work",
-                "Reduce repeated data entry and handoffs between disconnected tools.",
-              ],
-              [
-                "Faster Operations",
-                "Trigger updates and actions automatically across connected workflows.",
-              ],
-              [
-                "Scalable Connections",
-                "Add new tools and services without rebuilding your entire setup.",
-              ],
-            ].map(([title, text]) => (
-              <div key={title} className="border-t border-black/10 pt-6">
-                <CheckCircle2
-                  size={27}
-                  className="mb-4 text-[#193175]"
-                />
+            {overviewHighlights.map((item) => (
+              <div key={item.title} className="border-t border-black/10 pt-6">
+                <div className="manual-icon-box mb-5 flex h-14 w-14 items-center justify-center">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
+
                 <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                  {title}
+                  {item.title}
                 </h3>
+
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                  {text}
+                  {item.text}
                 </p>
               </div>
             ))}
@@ -408,26 +396,29 @@ export default function ApiIntegrationPage() {
           </div>
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-            {challenges.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="border-t border-black/10 pt-7"
-                >
-                  <Icon size={30} className="mb-5 text-[#193175]" />
-
-                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {challenges.map((item) => (
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <div className="manual-icon-box mb-5 flex h-14 w-14 items-center justify-center">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[22px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -446,31 +437,29 @@ export default function ApiIntegrationPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_20px_65px_rgba(0,0,0,0.05)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_28px_80px_rgba(60,91,155,0.12)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={27}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {services.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_20px_65px_rgba(0,0,0,0.05)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_28px_80px_rgba(60,91,155,0.12)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -505,40 +494,37 @@ export default function ApiIntegrationPage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {processSteps.map((item, index) => {
-                const Icon = item.icon;
+              {processSteps.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== processSteps.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
 
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== processSteps.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
 
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
-                        />
-                      </div>
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
 
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -609,33 +595,30 @@ export default function ApiIntegrationPage() {
               />
             </svg>
 
-            {processLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
-                >
-                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
-                    />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
+            {processLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                style={{ left: item.left, top: item.top }}
+              >
+                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -661,26 +644,29 @@ export default function ApiIntegrationPage() {
           </div>
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2">
-            {integrationTypes.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="border-t border-black/10 pt-7"
-                >
-                  <Icon size={30} className="mb-5 text-[#193175]" />
-
-                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {integrationTypes.map((item) => (
+              <div
+                key={item.title}
+                className="border-t border-black/10 pt-7"
+              >
+                <div className="manual-icon-box mb-5 flex h-14 w-14 items-center justify-center">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[22px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

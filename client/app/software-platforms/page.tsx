@@ -233,13 +233,12 @@ export default function SoftwarePlatformsPage() {
           className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
         >
           {/* MANUAL DOWNLOADED ICON */}
-          <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#b8c8e1] group-hover:bg-white">
+          <div className="manual-icon-box flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
             <img
-              src={item.icon}
-              alt=""
-              aria-hidden="true"
-              className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110 md:h-11 md:w-11"
-            />
+  src={item.icon}
+  alt=""
+  className="manual-icon object-contain"
+/>
           </div>
 
           {/* CARD CONTENT */}

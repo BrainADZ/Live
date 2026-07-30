@@ -3,33 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  Bell,
-  Bug,
-  CheckCircle2,
-  Code2,
-  Gauge,
-  GraduationCap,
-  HeartPulse,
-  Landmark,
-  LifeBuoy,
-  MapPinned,
-  Minus,
-  MonitorSmartphone,
-  PackageCheck,
-  Plus,
-  Rocket,
-  Search,
-  ShieldCheck,
-  ShoppingCart,
-  Smartphone,
-  Store,
-  Truck,
-  Users,
-  WalletCards,
-  Workflow,
-} from "lucide-react";
+import { ArrowRight, Minus, Plus } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries"
 import PopupForm from "@/components/PopupForm";
 
@@ -44,32 +18,32 @@ const processSteps = [
   {
     title: "Product & User Discovery",
     text: "We understand your app idea, target users, business workflow, required features, integrations and success goals before planning the build.",
-    icon: Search,
+    iconSrc: "/icons/mobile-app/workflow/product-user-discovery.svg",
   },
   {
     title: "App Flow & UI/UX Planning",
     text: "We map user journeys, screens, navigation, forms and key actions so the app feels simple and practical on mobile.",
-    icon: Smartphone,
+    iconSrc: "/icons/mobile-app/workflow/app-flow-ui-ux-planning.svg",
   },
   {
     title: "Backend & App Architecture",
     text: "We plan the app structure, APIs, database, admin panel, security, notifications and future scalability.",
-    icon: Workflow,
+    iconSrc: "/icons/mobile-app/workflow/backend-app-architecture.svg",
   },
   {
     title: "Mobile App Development",
     text: "We build Android, iOS or cross-platform apps with clean code, stable features and connected backend functionality.",
-    icon: Code2,
+    iconSrc: "/icons/mobile-app/workflow/mobile-app-development.svg",
   },
   {
     title: "Testing & Quality Check",
     text: "We test devices, performance, crashes, APIs, security, usability and real user scenarios before release.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/mobile-app/workflow/testing-quality-check.svg",
   },
   {
     title: "Launch, Updates & Support",
     text: "We support store submission, deployment, bug fixes, updates and feature improvements after launch.",
-    icon: Rocket,
+    iconSrc: "/icons/mobile-app/workflow/launch-updates-support.svg",
   },
 ];
 
@@ -83,14 +57,38 @@ const processLayout = [
 ];
 
 const appSolutions = [
-  { title: "Ecommerce & Shopping Apps", icon: ShoppingCart },
-  { title: "Booking & Appointment Apps", icon: Bell },
-  { title: "Delivery & Tracking Apps", icon: Truck },
-  { title: "Learning & Training Apps", icon: GraduationCap },
-  { title: "Healthcare Service Apps", icon: HeartPulse },
-  { title: "Finance & Payment Apps", icon: WalletCards },
-  { title: "Logistics & Field Apps", icon: MapPinned },
-  { title: "Internal Business Apps", icon: Users },
+  {
+    title: "Ecommerce & Shopping Apps",
+    iconSrc: "/icons/mobile-app/solutions/ecommerce-shopping-apps.svg",
+  },
+  {
+    title: "Booking & Appointment Apps",
+    iconSrc: "/icons/mobile-app/solutions/booking-appointment-apps.svg",
+  },
+  {
+    title: "Delivery & Tracking Apps",
+    iconSrc: "/icons/mobile-app/solutions/delivery-tracking-apps.svg",
+  },
+  {
+    title: "Learning & Training Apps",
+    iconSrc: "/icons/mobile-app/solutions/learning-training-apps.svg",
+  },
+  {
+    title: "Healthcare Service Apps",
+    iconSrc: "/icons/mobile-app/solutions/healthcare-service-apps.svg",
+  },
+  {
+    title: "Finance & Payment Apps",
+    iconSrc: "/icons/mobile-app/solutions/finance-payment-apps.svg",
+  },
+  {
+    title: "Logistics & Field Apps",
+    iconSrc: "/icons/mobile-app/solutions/logistics-field-apps.svg",
+  },
+  {
+    title: "Internal Business Apps",
+    iconSrc: "/icons/mobile-app/solutions/internal-business-apps.svg",
+  },
 ];
 
 const appTypes = [
@@ -168,27 +166,27 @@ const supportItems = [
   {
     title: "Bug & Crash Fixing",
     text: "Resolve app crashes, bugs, broken flows and device-specific issues after release.",
-    icon: Bug,
+    iconSrc: "/icons/mobile-app/maintenance/bug-crash-fixing.svg",
   },
   {
     title: "OS Compatibility Updates",
     text: "Keep the app aligned with Android, iOS and device-level changes over time.",
-    icon: MonitorSmartphone,
+    iconSrc: "/icons/mobile-app/maintenance/os-compatibility-updates.svg",
   },
   {
     title: "Performance Monitoring",
     text: "Review loading speed, API response, app stability and user experience issues.",
-    icon: Gauge,
+    iconSrc: "/icons/mobile-app/maintenance/performance-monitoring.svg",
   },
   {
     title: "Feature Enhancements",
     text: "Add new features, improve user flows and extend app functionality as your business grows.",
-    icon: PackageCheck,
+    iconSrc: "/icons/mobile-app/maintenance/feature-enhancements.svg",
   },
   {
     title: "Ongoing Technical Support",
     text: "Support updates, maintenance, backend changes and continuous product improvements.",
-    icon: LifeBuoy,
+    iconSrc: "/icons/mobile-app/maintenance/ongoing-technical-support.svg",
   },
 ];
 
@@ -333,24 +331,27 @@ export default function MobileAppDevelopmentPage() {
               {
                 title: "Android, iOS & Cross-Platform Apps",
                 text: "Build mobile apps using the technology that fits your users, budget and product roadmap.",
-                icon: Smartphone,
+                iconSrc: "/icons/mobile-app/overview/mobile-apps.svg",
               },
               {
                 title: "Backend, APIs & Admin Panels",
                 text: "Connect your app with secure databases, dashboards, notifications and third-party systems.",
-                icon: Code2,
+                iconSrc: "/icons/mobile-app/overview/backend-apis-admin-panels.svg",
               },
             ].map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="rounded-[28px] border border-black/10 bg-[#f8faff] p-8 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
-                    <Icon size={28} className="text-[#193175]" />
-                  </div>
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {item.title}
@@ -397,8 +398,6 @@ export default function MobileAppDevelopmentPage() {
     <div className="lg:hidden">
       <div className="space-y-5">
         {processSteps.map((item, index) => {
-          const Icon = item.icon;
-
           return (
             <div
               key={item.title}
@@ -409,9 +408,14 @@ export default function MobileAppDevelopmentPage() {
               )}
 
               <div className="relative z-10 flex gap-5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                  <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
-                </div>
+                <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                 <div>
                   <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
@@ -493,17 +497,20 @@ export default function MobileAppDevelopmentPage() {
       </svg>
 
       {processLayout.map((item) => {
-        const Icon = item.icon;
-
         return (
           <div
             key={item.title}
             className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
             style={{ left: item.left, top: item.top }}
           >
-            <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-              <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
-            </div>
+            <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
             <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
               {item.title}
@@ -542,19 +549,19 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {appSolutions.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="group rounded-[26px] border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={24}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                   <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                     {item.title}
@@ -585,16 +592,14 @@ export default function MobileAppDevelopmentPage() {
                 key={item.title}
                 className="rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#193175]/10">
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="max-h-9 max-w-9 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
-                </div>
+                <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={item.icon}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                   {item.title}
@@ -848,15 +853,18 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
             {supportItems.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
-                    <Icon size={28} className="text-[#193175]" />
+                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10 p-4">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-full w-full object-contain"
+                    />
                   </div>
 
                   <div>

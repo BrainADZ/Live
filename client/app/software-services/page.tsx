@@ -2,28 +2,14 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 
-type IconType =
-  | "code"
-  | "mobile"
-  | "modern"
-  | "web"
-  | "enterprise"
-  | "api"
-  | "crm"
-  | "erp"
-  | "design"
-  | "saas"
-  | "cloud";
-
 type Service = {
   title: string;
   description: string;
-  icon: IconType;
+  iconSrc: string;
   href: string;
 };
 
@@ -33,162 +19,14 @@ function ArrowRightIcon({ className }: { className?: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.6"
+      strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
+      aria-hidden="true"
     >
       <path d="M5 12h14" />
       <path d="M13 6l6 6-6 6" />
-    </svg>
-  );
-}
-
-function ServiceIcon({
-  type,
-  className,
-}: {
-  type: IconType;
-  className?: string;
-}) {
-  if (type === "mobile") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <rect x="7" y="2" width="10" height="20" rx="2" />
-        <path d="M11 18h2" />
-      </svg>
-    );
-  }
-
-  if (type === "api") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <path d="M8 8H6a4 4 0 0 0 0 8h2" />
-        <path d="M16 8h2a4 4 0 0 1 0 8h-2" />
-        <path d="M9 12h6" />
-      </svg>
-    );
-  }
-
-  if (type === "design") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4 11.5-11.5z" />
-      </svg>
-    );
-  }
-
-  if (type === "cloud" || type === "saas") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <path d="M17.5 18H8a5 5 0 1 1 1.1-9.88A6.5 6.5 0 0 1 21 12.5 3.5 3.5 0 0 1 17.5 18z" />
-      </svg>
-    );
-  }
-
-  if (type === "enterprise" || type === "erp") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <path d="M4 21V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v16" />
-        <path d="M17 9h1a2 2 0 0 1 2 2v10" />
-        <path d="M8 7h5" />
-        <path d="M8 11h5" />
-        <path d="M8 15h5" />
-      </svg>
-    );
-  }
-
-  if (type === "crm") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <circle cx="9" cy="7" r="4" />
-        <path d="M3 21v-2a4 4 0 0 1 4-4h4" />
-        <path d="M16 11l2 2 4-5" />
-        <path d="M17 21v-4a3 3 0 0 0-3-3h-1" />
-      </svg>
-    );
-  }
-
-  if (type === "modern") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-      >
-        <path d="M4 4h16v6H4z" />
-        <path d="M4 14h7v6H4z" />
-        <path d="M15 14h5v6h-5z" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M8 9 4 12l4 3" />
-      <path d="M16 9l4 3-4 3" />
-      <path d="M14 5l-4 14" />
     </svg>
   );
 }
@@ -198,77 +36,77 @@ const services: Service[] = [
     title: "Software Development",
     description:
       "Custom software for operations, internal teams, workflow automation, dashboards and connected business processes.",
-    icon: "code",
+    iconSrc: "/icons/services/software-development.svg",
     href: "/software-services/software-development",
   },
   {
     title: "Mobile App Development",
     description:
       "Android, iOS and cross-platform apps with user-focused interfaces, backend APIs, integrations and admin controls.",
-    icon: "mobile",
+    iconSrc: "/icons/services/mobile-app-development.svg",
     href: "/software-services/mobile-app-development",
   },
   {
     title: "Application Modernization",
     description:
       "Improve existing applications through UI upgrades, code modernization, architecture changes, integrations and cloud readiness.",
-    icon: "modern",
+    iconSrc: "/icons/services/application-modernization.svg",
     href: "/software-services/application-modernization",
   },
   {
     title: "Web App Development",
     description:
       "Browser-based applications, portals and dashboards built around workflows, responsive interfaces, APIs and business data.",
-    icon: "web",
+    iconSrc: "/icons/services/web-app-development.svg",
     href: "/software-services/web-app-development",
   },
   {
     title: "Enterprise Software Solutions",
     description:
       "Custom platforms for multi-team operations, role-based workflows, internal processes, reporting and connected systems.",
-    icon: "enterprise",
+    iconSrc: "/icons/services/enterprise-software-solutions.svg",
     href: "/software-services/enterprise-software-solutions",
   },
   {
     title: "API Integration",
     description:
       "Connect applications, CRM, ERP, payments, logistics and third-party platforms through secure APIs and reliable data flows.",
-    icon: "api",
+    iconSrc: "/icons/services/api-integration.svg",
     href: "/software-services/api-integration",
   },
   {
     title: "CRM Development",
     description:
       "CRM platforms for leads, follow-ups, sales pipelines, customer history, tasks, reporting and business integrations.",
-    icon: "crm",
+    iconSrc: "/icons/services/crm-development.svg",
     href: "/software-services/crm-development",
   },
   {
     title: "ERP Development",
     description:
       "ERP systems that connect sales, purchase, inventory, finance, teams, approvals and reporting across daily operations.",
-    icon: "erp",
+    iconSrc: "/icons/services/erp-development.svg",
     href: "/software-services/erp-development",
   },
   {
     title: "UI/UX Design",
     description:
       "User research, flows, wireframes, interface design, prototypes and design systems prepared for product development.",
-    icon: "design",
+    iconSrc: "/icons/services/ui-ux-design.svg",
     href: "/software-services/ui-ux-design",
   },
   {
     title: "SaaS Development",
     description:
       "SaaS platforms with accounts, roles, subscriptions, billing integration, admin tools and scalable product architecture.",
-    icon: "saas",
+    iconSrc: "/icons/services/saas-development.svg",
     href: "/software-services/saas-development",
   },
   {
     title: "Cloud Consulting",
     description:
       "Cloud assessment, strategy, migration, architecture, security, optimization and ongoing infrastructure support.",
-    icon: "cloud",
+    iconSrc: "/icons/services/cloud-consulting.svg",
     href: "/software-services/cloud-consulting",
   },
 ];
@@ -320,7 +158,7 @@ export default function SoftwareServicesPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRightIcon className="h-5 w-5" />
               </button>
             </div>
           </div>
@@ -410,61 +248,65 @@ export default function SoftwareServicesPage() {
       </section>
 
       {/* SERVICES */}
-<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
-  <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
+      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
-  <div className="relative z-10 mx-auto max-w-450">
-    <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-      <div>
-        <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-          Explore Services
-        </p>
+        <div className="relative z-10 mx-auto max-w-450">
+          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+                Explore Services
+              </p>
 
-        <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-          Software services for new products, existing systems and business
-          operations
-        </h2>
-      </div>
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+                Software services for new products, existing systems and
+                business operations
+              </h2>
+            </div>
 
-      <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-        Whether you are building from scratch, modernizing an existing
-        application, connecting systems or improving internal workflows,
-        choose the service that fits the problem you need to solve.
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-      {services.map((item) => (
-        <Link
-          key={item.title}
-          href={item.href}
-          aria-label={`Explore ${item.title}`}
-          className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
-        >
-          <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
-            <ServiceIcon type={item.icon} className="h-9 w-9" />
-          </div>
-
-          <div>
-            <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
-              {item.title}
-            </h3>
-
-            <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-              {item.description}
+            <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+              Whether you are building from scratch, modernizing an existing
+              application, connecting systems or improving internal workflows,
+              choose the service that fits the problem you need to solve.
             </p>
-
-            <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]">
-              Explore service
-
-              <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
           </div>
-        </Link>
-      ))}
-    </div>
-  </div>
-</section>
+
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {services.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                aria-label={`Explore ${item.title}`}
+                className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
+              >
+                <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
+                <div>
+                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+                    {item.description}
+                  </p>
+
+                  <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]">
+                    Explore service
+
+                    <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* FINAL CTA */}
       <section className="lazy-section bg-white py-8">
@@ -500,7 +342,7 @@ export default function SoftwareServicesPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRightIcon className="h-6.5 w-6.5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>

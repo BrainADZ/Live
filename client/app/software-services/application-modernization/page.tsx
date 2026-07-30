@@ -8,36 +8,17 @@ import {
   ArrowRight,
   Bug,
   CheckCircle2,
-  Cloud,
-  Code2,
-  Database,
-  Gauge,
+  Factory,
   GraduationCap,
-  HeartPulse,
   Hotel,
   Landmark,
-  Layers3,
-  LifeBuoy,
-  LockKeyhole,
   Minus,
-  MonitorCog,
-  Network,
-  PackageCheck,
   Plus,
-  RefreshCcw,
-  Rocket,
-  Search,
-  Settings2,
-  ShieldCheck,
   ShoppingCart,
-  SplitSquareVertical,
   Stethoscope,
-  Store,
   Truck,
-  Workflow,
-  Factory,
 } from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "cloud" | "devops" | "databases" | "frameworks";
@@ -51,32 +32,32 @@ const challenges = [
   {
     title: "Slow Performance",
     text: "Older applications can become slower over time as usage, data and business requirements grow.",
-    icon: Gauge,
+    iconSrc: "/icons/application-modernization/challenges/slow-performance.svg",
   },
   {
     title: "High Maintenance Cost",
     text: "Outdated code, dependencies and infrastructure can make routine fixes and updates harder to manage.",
-    icon: Settings2,
+    iconSrc: "/icons/application-modernization/challenges/high-maintenance-cost.svg",
   },
   {
     title: "Security Risks",
     text: "Unsupported technologies, outdated dependencies and weak access controls can increase security exposure.",
-    icon: LockKeyhole,
+    iconSrc: "/icons/application-modernization/challenges/security-risks.svg",
   },
   {
     title: "Integration Issues",
     text: "Older applications may not connect cleanly with modern APIs, cloud services and the tools your teams now use.",
-    icon: Network,
+    iconSrc: "/icons/application-modernization/challenges/integration-issues.svg",
   },
   {
     title: "Poor User Experience",
     text: "Outdated interfaces and complicated user flows make everyday tasks slower for employees and customers.",
-    icon: MonitorCog,
+    iconSrc: "/icons/application-modernization/challenges/poor-user-experience.svg",
   },
   {
     title: "Limited Scalability",
     text: "Legacy architecture can make it difficult to support more users, larger workloads and new capabilities.",
-    icon: SplitSquareVertical,
+    iconSrc: "/icons/application-modernization/challenges/limited-scalability.svg",
   },
 ];
 
@@ -84,32 +65,32 @@ const modernizationServices = [
   {
     title: "Replatforming",
     text: "Move the application to a more suitable platform or managed environment while keeping most of its core functionality intact.",
-    icon: Cloud,
+    iconSrc: "/icons/application-modernization/services/replatforming.svg",
   },
   {
     title: "Refactoring",
     text: "Restructure and improve existing code to make the application easier to maintain, optimize and extend.",
-    icon: Code2,
+    iconSrc: "/icons/application-modernization/services/refactoring.svg",
   },
   {
     title: "Rehosting",
     text: "Move an existing application to modern cloud infrastructure with minimal changes to the application itself.",
-    icon: Rocket,
+    iconSrc: "/icons/application-modernization/services/rehosting.svg",
   },
   {
     title: "Rebuilding",
     text: "Rebuild applications or critical modules when the existing technology can no longer support business needs effectively.",
-    icon: Layers3,
+    iconSrc: "/icons/application-modernization/services/rebuilding.svg",
   },
   {
     title: "API Modernization",
     text: "Replace rigid connections with secure APIs that help applications, databases and third-party services work together.",
-    icon: Network,
+    iconSrc: "/icons/application-modernization/services/api-modernization.svg",
   },
   {
     title: "UI/UX Modernization",
     text: "Improve outdated interfaces and user flows so employees and customers can complete tasks more easily.",
-    icon: MonitorCog,
+    iconSrc: "/icons/application-modernization/services/ui-ux-modernization.svg",
   },
 ];
 
@@ -117,32 +98,32 @@ const modernizationProcess = [
   {
     title: "Assess & Analyze",
     text: "We review your current application, codebase, integrations, infrastructure, dependencies and business-critical workflows.",
-    icon: Search,
+    iconSrc: "/icons/application-modernization/workflow/assess-analyze.svg",
   },
   {
     title: "Modernization Strategy",
     text: "We decide what should be retained, refactored, replatformed, migrated or rebuilt and define a practical delivery roadmap.",
-    icon: Workflow,
+    iconSrc: "/icons/application-modernization/workflow/modernization-strategy.svg",
   },
   {
     title: "Architecture Upgrade",
     text: "We improve the application architecture, data flow and integration model where the existing structure limits future changes.",
-    icon: Layers3,
+    iconSrc: "/icons/application-modernization/workflow/architecture-upgrade.svg",
   },
   {
     title: "Migration & Refactoring",
     text: "We modernize code and modules, move data where required and use phased changes to reduce disruption to live operations.",
-    icon: Code2,
+    iconSrc: "/icons/application-modernization/workflow/migration-refactoring.svg",
   },
   {
     title: "Testing & Optimization",
     text: "We validate business workflows, data accuracy, integrations, performance, security and compatibility before release.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/application-modernization/workflow/testing-optimization.svg",
   },
   {
     title: "Deploy & Evolve",
     text: "We release the modernized application with monitoring, documentation and ongoing support for future improvements.",
-    icon: Rocket,
+    iconSrc: "/icons/application-modernization/workflow/deploy-evolve.svg",
   },
 ];
 
@@ -220,32 +201,32 @@ const supportItems = [
   {
     title: "Monitoring",
     text: "Track uptime, errors, performance and application health so issues can be identified early.",
-    icon: Gauge,
+    iconSrc: "/icons/application-modernization/support/monitoring.svg",
   },
   {
     title: "Security Updates",
     text: "Keep dependencies, access controls and application components updated as technologies and risks change.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/application-modernization/support/security-updates.svg",
   },
   {
     title: "Performance Tuning",
     text: "Review slow workflows, database queries, APIs and application performance as usage grows.",
-    icon: Settings2,
+    iconSrc: "/icons/application-modernization/support/performance-tuning.svg",
   },
   {
     title: "Feature Enhancements",
     text: "Extend the modernized application with new features, integrations and workflow improvements over time.",
-    icon: PackageCheck,
+    iconSrc: "/icons/application-modernization/support/feature-enhancements.svg",
   },
   {
     title: "Infrastructure Scaling",
     text: "Adjust infrastructure, deployment and application capacity as users, data and workloads increase.",
-    icon: RefreshCcw,
+    iconSrc: "/icons/application-modernization/support/infrastructure-scaling.svg",
   },
   {
     title: "Ongoing Support",
     text: "Get ongoing technical support for fixes, releases, compatibility changes and future improvements.",
-    icon: LifeBuoy,
+    iconSrc: "/icons/application-modernization/support/ongoing-support.svg",
   },
 ];
 
@@ -399,35 +380,35 @@ export default function AppModernizationPage() {
               {
                 title: "Improve Maintainability",
                 text: "Make the application easier to update, support and extend as requirements change.",
-                icon: Gauge,
+                iconSrc: "/icons/application-modernization/overview/improve-maintainability.svg",
               },
               {
                 title: "Strengthen Security",
                 text: "Address outdated dependencies, access controls and other risks in the existing application.",
-                icon: ShieldCheck,
+                iconSrc: "/icons/application-modernization/overview/strengthen-security.svg",
               },
               {
                 title: "Improve Performance & Scale",
                 text: "Optimize architecture, data flow and infrastructure for growing users and workloads.",
-                icon: Cloud,
+                iconSrc: "/icons/application-modernization/overview/improve-performance-scale.svg",
               },
               {
                 title: "Support Future Change",
                 text: "Make new features, integrations and business workflow changes easier to introduce.",
-                icon: Rocket,
+                iconSrc: "/icons/application-modernization/overview/support-future-change.svg",
               },
             ].map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={26}
-                      className="text-[#193175] transition group-hover:text-white"
+                  <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
                     />
                   </div>
                   <h3 className="text-[21px] font-normal tracking-[-0.4px]">
@@ -465,17 +446,17 @@ export default function AppModernizationPage() {
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {challenges.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={24}
-                      className="text-[#193175] transition group-hover:text-white"
+                  <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
                     />
                   </div>
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
@@ -510,15 +491,18 @@ export default function AppModernizationPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {modernizationServices.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
                 >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
-                    <Icon size={27} className="text-[#193175]" />
+                  <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
                   </div>
                   <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                     {item.title}
@@ -562,8 +546,6 @@ export default function AppModernizationPage() {
           <div className="lg:hidden">
             <div className="space-y-5">
               {modernizationProcess.map((item, index) => {
-                const Icon = item.icon;
-
                 return (
                   <div
                     key={item.title}
@@ -574,11 +556,12 @@ export default function AppModernizationPage() {
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
+                      <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <img
+                          src={item.iconSrc}
+                          alt=""
+                          aria-hidden="true"
+                          className="manual-icon object-contain"
                         />
                       </div>
 
@@ -661,19 +644,18 @@ export default function AppModernizationPage() {
             </svg>
 
             {modernizationLayout.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
                   style={{ left: item.left, top: item.top }}
                 >
-                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
+                  <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
                     />
                   </div>
 
@@ -1000,11 +982,15 @@ export default function AppModernizationPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
             {supportItems.map((item) => {
-              const Icon = item.icon;
               return (
                 <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
-                    <Icon size={28} className="text-[#193175]" />
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-[23px] font-normal tracking-[-0.4px]">

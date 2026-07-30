@@ -278,15 +278,15 @@ export default function IndustriesPage() {
           aria-label={`Explore ${item.title}`}
           className="group grid min-h-55 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
         >
-          <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
-            <img
-              src={item.icon}
-              alt={`${item.title} icon`}
-              loading="lazy"
-              decoding="async"
-              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
-            />
-          </div>
+          <div className="manual-icon-box flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
+  <img
+    src={item.icon}
+    alt={`${item.title} icon`}
+    loading="lazy"
+    decoding="async"
+    className="manual-icon object-contain"
+  />
+</div>
 
           <div>
             <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">

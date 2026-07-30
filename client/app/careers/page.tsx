@@ -6,7 +6,7 @@ import CtaSection from "@/components/home/CTA";
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
-import { useState, type ComponentType, type SVGProps } from "react";
+import { useState, type SVGProps } from "react";
 import PopupForm from "@/components/PopupForm";
 
 type IconProps = SVGProps<SVGSVGElement>;
@@ -29,66 +29,8 @@ function ArrowRightIcon({ className, strokeWidth = 1.6, ...props }: IconProps) {
   );
 }
 
-function BriefcaseIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1" />
-      <path d="M4 7h16a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V9a2 2 0 0 1 2-2z" />
-      <path d="M2 13h20" />
-      <path d="M9 13v2h6v-2" />
-    </svg>
-  );
-}
 
-function RocketIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M14 4c3.5.4 5.6 2.5 6 6l-6.5 6.5-4-4L14 4z" />
-      <path d="M9.5 12.5 5 17l2 2 4.5-4.5" />
-      <path d="M14 4 9 5.5 7 9l2.5 3.5" />
-      <path d="M20 10l-1.5 5-3.5 2-3.5-2.5" />
-      <circle cx="15.5" cy="8.5" r="1.4" />
-    </svg>
-  );
-}
 
-function UsersIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-    </svg>
-  );
-}
 
 function CodeIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   return (
@@ -109,28 +51,6 @@ function CodeIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   );
 }
 
-function BrainIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5.2A3.5 3.5 0 0 0 8 18h1" />
-      <path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5.2A3.5 3.5 0 0 1 16 18h-1" />
-      <path d="M12 3v18" />
-      <path d="M8 9h4" />
-      <path d="M12 9h4" />
-      <path d="M8 14h4" />
-      <path d="M12 14h4" />
-    </svg>
-  );
-}
 
 function ShieldIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   return (
@@ -169,60 +89,8 @@ function TargetIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   );
 }
 
-function GrowthIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M4 19h16" />
-      <path d="M6 16l4-4 3 3 6-8" />
-      <path d="M16 7h3v3" />
-    </svg>
-  );
-}
 
-function LearningIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M3 6.5 12 3l9 3.5-9 3.5-9-3.5z" />
-      <path d="M5 10v5.5c0 1.4 3.1 3.5 7 3.5s7-2.1 7-3.5V10" />
-      <path d="M21 7v6" />
-    </svg>
-  );
-}
 
-function HeartIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={strokeWidth}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      {...props}
-    >
-      <path d="M20.8 4.6a5.3 5.3 0 0 0-7.5 0L12 5.9l-1.3-1.3a5.3 5.3 0 0 0-7.5 7.5L12 21l8.8-8.9a5.3 5.3 0 0 0 0-7.5z" />
-    </svg>
-  );
-}
 
 function CheckIcon({ className, strokeWidth = 1.6, ...props }: IconProps) {
   return (
@@ -262,7 +130,7 @@ function SendIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
 type Benefit = {
   title: string;
   description: string;
-  icon: ComponentType<IconProps>;
+  iconSrc: string;
 };
 
 type Role = {
@@ -272,6 +140,7 @@ type Role = {
   experience: string;
   description: string;
   skills: string[];
+  iconSrc: string;
 };
 
 const benefits: Benefit[] = [
@@ -279,37 +148,37 @@ const benefits: Benefit[] = [
     title: "Practical project exposure",
     description:
       "Contribute to software, mobile and web applications, business platforms or digital signage projects depending on your role.",
-    icon: RocketIcon,
+    iconSrc: "/icons/career/practical-project-exposure.svg",
   },
   {
     title: "Guided learning",
     description:
       "Improve through project feedback, reviews, documentation and hands-on problem solving instead of learning only in theory.",
-    icon: LearningIcon,
+    iconSrc: "/icons/career/guided-learning.svg",
   },
   {
     title: "Cross-functional collaboration",
     description:
       "Work with design, development, deployment and business teams to understand how a complete solution moves from idea to delivery.",
-    icon: UsersIcon,
+    iconSrc: "/icons/career/cross-functional-collaboration.svg",
   },
   {
     title: "Ownership and responsibility",
     description:
       "Take responsibility for your work, understand why it matters and improve it through review, feedback and real project use.",
-    icon: GrowthIcon,
+    iconSrc: "/icons/career/ownership-responsibility.svg",
   },
   {
     title: "Range of technology work",
     description:
       "Gain exposure to custom software, mobile and web apps, business platforms, integrations and digital signage technology.",
-    icon: BrainIcon,
+    iconSrc: "/icons/career/range-of-technology-work.svg",
   },
   {
     title: "Clear working culture",
     description:
       "Work in an environment that values clear communication, documentation, ownership, review and continuous improvement.",
-    icon: HeartIcon,
+    iconSrc: "/icons/career/clear-working-culture.svg",
   },
 ];
 
@@ -322,6 +191,7 @@ const roles: Role[] = [
     description:
       "Implement responsive interfaces, reusable components and API-connected screens using React, Next.js and modern frontend workflows.",
     skills: ["React", "Next.js", "Tailwind CSS", "UI implementation"],
+    iconSrc: "/icons/career/frontend-developer.svg",
   },
   {
     title: "Full Stack Developer",
@@ -331,6 +201,7 @@ const roles: Role[] = [
     description:
       "Build web applications, backend APIs, admin panels, database workflows and integrations for business software projects.",
     skills: ["Next.js", "Node.js", "APIs", "Databases"],
+    iconSrc: "/icons/career/full-stack-developer.svg",
   },
   {
     title: "AI & Automation Engineer",
@@ -340,6 +211,7 @@ const roles: Role[] = [
     description:
       "Build business automation workflows, API integrations, AI-assisted features and internal tools that solve practical operational problems.",
     skills: ["Python", "APIs", "Automation", "AI tools"],
+    iconSrc: "/icons/career/ai-automation-engineer.svg",
   },
   {
     title: "UI/UX Designer",
@@ -349,6 +221,7 @@ const roles: Role[] = [
     description:
       "Create user flows, wireframes, interface designs, prototypes and development-ready handoffs for websites and digital products.",
     skills: ["Figma", "Wireframes", "Visual Design", "User flows"],
+    iconSrc: "/icons/career/ui-ux-designer.svg",
   },
   {
     title: "Hardware Deployment Executive",
@@ -358,6 +231,7 @@ const roles: Role[] = [
     description:
       "Coordinate installation, testing and on-site support for digital standees, kiosks, LFD and LED displays and interactive systems.",
     skills: ["Installation", "Coordination", "Support", "Hardware basics"],
+    iconSrc: "/icons/career/hardware-deployment.svg",
   },
   {
     title: "Digital Marketing Executive",
@@ -367,6 +241,7 @@ const roles: Role[] = [
     description:
       "Support content planning, social media, SEO, campaigns and lead-generation activities with clear reporting and execution.",
     skills: ["Social Media", "SEO basics", "Content", "Campaigns"],
+    iconSrc: "/icons/career/digital-marketing.svg",
   },
 ];
 
@@ -580,10 +455,7 @@ export default function CareerPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {benefits.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
+            {benefits.map((item, index) => (
                 <div
                   key={item.title}
                   data-aos="card-reveal"
@@ -593,9 +465,14 @@ export default function CareerPage() {
                 >
                   <div className="absolute -right-13.75 -top-13.75 h-37.5 w-37.5 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
 
-                  <div className="relative z-10 flex h-14.5 w-14.5 items-center justify-center rounded-[14px] border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
-                    <Icon className="h-7.5 w-7.5" />
-                  </div>
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                   <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
                     {item.title}
@@ -607,8 +484,7 @@ export default function CareerPage() {
 
                   <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
                 </div>
-              );
-            })}
+              ))}
           </div>
         </div>
       </section>
@@ -663,8 +539,13 @@ export default function CareerPage() {
                     </h3>
                   </div>
 
-                  <div className="flex h-13.5 w-13.5 shrink-0 items-center justify-center rounded-full bg-white text-[#193175]">
-                    <BriefcaseIcon className="h-7 w-7" />
+                  <div className="flex h-13.5 w-13.5 shrink-0 items-center justify-center rounded-full border border-[#dbe3f0] bg-white p-3.5 transition-all duration-300 group-hover:border-[#193175] group-hover:bg-[#193175]">
+                    <img
+                      src={role.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-full w-full object-contain transition duration-300 group-hover:brightness-0 group-hover:invert"
+                    />
                   </div>
                 </div>
 
