@@ -16,37 +16,37 @@ const processSteps = [
     number: "01",
     title: "Discovery & Requirement Mapping",
     desc: "We understand the business problem, users, current process, existing systems, constraints and the outcome the project needs to support.",
-    iconSrc: "/icons/how-we-work/discovery-requirement-mapping.svg",
+    iconSrc: "/our-work-function/discovery-requirement.svg",
   },
   {
     number: "02",
     title: "Scope & Delivery Planning",
     desc: "We define the project scope, priorities, responsibilities, technical direction, delivery stages and the information needed before development begins.",
-    iconSrc: "/icons/how-we-work/scope-delivery-planning.svg",
+    iconSrc: "/our-work-function/delivery-planning.svg",
   },
   {
     number: "03",
     title: "UX & Workflow Design",
     desc: "We map user journeys, screens, permissions and operational flows so the product is clear for users and practical for the team that will manage it.",
-    iconSrc: "/icons/how-we-work/ux-workflow-design.svg",
+    iconSrc: "/our-work-function/ux-workflow-design.svg",
   },
   {
     number: "04",
     title: "Development & Integration",
     desc: "We build the agreed modules, interfaces, APIs and integrations in controlled development cycles with regular internal review.",
-    iconSrc: "/icons/how-we-work/development-integration.svg",
+    iconSrc: "/our-work-function/development-integration.svg",
   },
   {
     number: "05",
     title: "Validation & Quality Checks",
     desc: "We test core workflows, permissions, integrations, responsive behaviour and agreed business scenarios before release.",
-    iconSrc: "/icons/how-we-work/validation-quality-checks.svg",
+    iconSrc: "/our-work-function/validation-qualitychecks.svg",
   },
   {
     number: "06",
     title: "Deployment & Improvement",
     desc: "We prepare the release, support handover and continue with fixes, updates or new requirements based on the agreed support scope.",
-    iconSrc: "/icons/how-we-work/deployment-improvement.svg",
+    iconSrc: "/our-work-function/deployment-improvement.svg",
   },
 ];
 
@@ -334,7 +334,7 @@ export default function HowWeWorkPage() {
           <div className="grid grid-cols-1 border border-[#e5e5e5] lg:grid-cols-3">
             <div className="border-b border-[#e5e5e5] p-8 lg:border-b-0 lg:border-r">
               <img
-                src="/icons/how-we-work/understand.svg"
+                src="/our-work-function/understand.svg"
                 alt=""
                 aria-hidden="true"
                 className="mb-8 h-8.5 w-8.5 object-contain"
@@ -350,7 +350,7 @@ export default function HowWeWorkPage() {
 
             <div className="border-b border-[#e5e5e5] p-8 lg:border-b-0 lg:border-r">
               <img
-                src="/icons/how-we-work/build.svg"
+                src="/our-work-function/build.svg"
                 alt=""
                 aria-hidden="true"
                 className="mb-8 h-8.5 w-8.5 object-contain"
@@ -366,7 +366,7 @@ export default function HowWeWorkPage() {
 
             <div className="p-8">
               <img
-                src="/icons/how-we-work/improve.svg"
+                src="/our-work-function/improve.svg"
                 alt=""
                 aria-hidden="true"
                 className="mb-8 h-8.5 w-8.5 object-contain"

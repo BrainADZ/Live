@@ -18,32 +18,32 @@ const processSteps = [
   {
     title: "Product & User Discovery",
     text: "We understand your app idea, target users, business workflow, required features, integrations and success goals before planning the build.",
-    iconSrc: "/icons/mobile-app/workflow/product-user-discovery.svg",
+    iconSrc: "/mobile-app-development/product-user-discovery.svg",
   },
   {
     title: "App Flow & UI/UX Planning",
     text: "We map user journeys, screens, navigation, forms and key actions so the app feels simple and practical on mobile.",
-    iconSrc: "/icons/mobile-app/workflow/app-flow-ui-ux-planning.svg",
+    iconSrc: "/mobile-app-development/appflow-planning.svg",
   },
   {
     title: "Backend & App Architecture",
     text: "We plan the app structure, APIs, database, admin panel, security, notifications and future scalability.",
-    iconSrc: "/icons/mobile-app/workflow/backend-app-architecture.svg",
+    iconSrc: "/mobile-app-development/backend-app-architecture.svg",
   },
   {
     title: "Mobile App Development",
     text: "We build Android, iOS or cross-platform apps with clean code, stable features and connected backend functionality.",
-    iconSrc: "/icons/mobile-app/workflow/mobile-app-development.svg",
+    iconSrc: "/mobile-app-development/mobile-development.svg",
   },
   {
     title: "Testing & Quality Check",
     text: "We test devices, performance, crashes, APIs, security, usability and real user scenarios before release.",
-    iconSrc: "/icons/mobile-app/workflow/testing-quality-check.svg",
+    iconSrc: "/mobile-app-development/testing-deployment.svg",
   },
   {
     title: "Launch, Updates & Support",
     text: "We support store submission, deployment, bug fixes, updates and feature improvements after launch.",
-    iconSrc: "/icons/mobile-app/workflow/launch-updates-support.svg",
+    iconSrc: "/mobile-app-development/launch-updates-support.svg",
   },
 ];
 

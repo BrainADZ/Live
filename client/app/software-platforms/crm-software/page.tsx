@@ -5,24 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  BarChart3,
-  Bell,
-  CheckCircle2,
-  ContactRound,
-  Database,
   Download,
-  Gauge,
-  Handshake,
-  Layers3,
-  LineChart,
-  Mail,
   Minus,
   Plus,
-  Search,
-  Settings2,
-  ShieldCheck,
-  Target,
-  Workflow,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
@@ -31,22 +16,22 @@ const modules = [
   {
     title: "Lead Management",
     text: "Organize enquiries, lead details, sources, owners and current status through one CRM workflow.",
-    icon: Target,
+    iconSrc: "/icons/crm-software/core-modules/lead-management.svg",
   },
   {
     title: "Contact Management",
     text: "Maintain customer and contact information with relevant notes, activities and business details.",
-    icon: ContactRound,
+    iconSrc: "/icons/crm-software/core-modules/contact-management.svg",
   },
   {
     title: "Sales Pipeline",
     text: "Track opportunities through configurable stages with owners, next actions and deal status.",
-    icon: LineChart,
+    iconSrc: "/icons/crm-software/core-modules/sales-pipeline.svg",
   },
   {
     title: "Reports & Dashboards",
     text: "Review configured sales, pipeline and activity information from CRM data available in the system.",
-    icon: BarChart3,
+    iconSrc: "/icons/crm-software/core-modules/reports-dashboards.svg",
   },
 ];
 
@@ -55,37 +40,37 @@ const pipeline = [
     title: "New Lead",
     text: "Add new enquiries with available contact details, source information and initial requirements.",
     status: "Incoming",
-    icon: Mail,
+    iconSrc: "/icons/crm-software/sales-pipeline/new-lead.svg",
   },
   {
     title: "Qualified",
     text: "Review the opportunity and capture the information needed before moving it to the next stage.",
     status: "Reviewed",
-    icon: Target,
+    iconSrc: "/icons/crm-software/sales-pipeline/qualified.svg",
   },
   {
     title: "Follow-up",
     text: "Assign an owner, record activities and plan the next customer action within the CRM.",
     status: "Active",
-    icon: Bell,
+    iconSrc: "/icons/crm-software/sales-pipeline/follow-up.svg",
   },
   {
     title: "Proposal",
     text: "Record proposal progress, commercials, relevant documents and the next planned action.",
     status: "Shared",
-    icon: Settings2,
+    iconSrc: "/icons/crm-software/sales-pipeline/proposal.svg",
   },
   {
     title: "Negotiation",
     text: "Track discussions, revisions, approvals and pending actions before the opportunity is closed.",
     status: "Review",
-    icon: Handshake,
+    iconSrc: "/icons/crm-software/sales-pipeline/negotiation.svg",
   },
   {
     title: "Won",
     text: "Mark the opportunity as converted and retain relevant deal information for the next business process.",
     status: "Closed",
-    icon: CheckCircle2,
+    iconSrc: "/icons/crm-software/sales-pipeline/won.svg",
   },
 ];
 
@@ -120,32 +105,34 @@ const workflowSteps = [
   {
     title: "CRM Discovery",
     text: "We understand the sales process, lead flow, customer journey, team roles and reporting requirements.",
-    icon: Search,
+    iconSrc: "/icons/crm-software/workflow/crm-discovery.svg",
   },
   {
     title: "Process & Pipeline Mapping",
     text: "We define stages, ownership rules, activities, data fields and the required CRM workflow.",
-    icon: Workflow,
+    iconSrc:
+      "/icons/crm-software/workflow/process-pipeline-mapping.svg",
   },
   {
     title: "Dashboard Planning",
     text: "We plan CRM screens and views around the daily needs of users, managers and decision makers.",
-    icon: Layers3,
+    iconSrc: "/icons/crm-software/workflow/dashboard-planning.svg",
   },
   {
     title: "Platform Configuration",
     text: "The required CRM modules, workflows, dashboards and integrations are configured or developed for the project.",
-    icon: Database,
+    iconSrc:
+      "/icons/crm-software/workflow/platform-configuration.svg",
   },
   {
     title: "Testing & Handover",
     text: "We test the configured workflows and prepare users for the agreed CRM operating process.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/crm-software/workflow/testing-handover.svg",
   },
   {
     title: "Deployment Support",
     text: "The CRM is deployed with implementation support according to the agreed project scope.",
-    icon: Gauge,
+    iconSrc: "/icons/crm-software/workflow/deployment-support.svg",
   },
 ];
 
@@ -395,31 +382,29 @@ export default function CRMSoftwarePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {modules.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={27}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {modules.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -470,7 +455,6 @@ export default function CRMSoftwarePage() {
 
             <div className="space-y-5">
               {pipeline.map((item, index) => {
-                const Icon = item.icon;
                 const isFinalStage = index === pipeline.length - 1;
 
                 return (
@@ -478,8 +462,13 @@ export default function CRMSoftwarePage() {
                     key={item.title}
                     className="relative grid gap-5 border border-black/10 bg-white p-5 shadow-[0_18px_55px_rgba(0,0,0,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#193175]/35 hover:shadow-[0_24px_70px_rgba(60,91,155,0.12)] md:grid-cols-[64px_1fr_auto] md:items-center md:p-6"
                   >
-                    <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-[#193175]/25 bg-[#eef4ff] text-[#193175]">
-                      <Icon size={26} strokeWidth={2.1} />
+                    <div className="manual-icon-box relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-[#193175]/25 bg-[#eef4ff]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
                     </div>
 
                     <div>
@@ -605,40 +594,37 @@ export default function CRMSoftwarePage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {workflowSteps.map((item, index) => {
-                const Icon = item.icon;
+              {workflowSteps.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== workflowSteps.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
 
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== workflowSteps.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
 
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
-                        />
-                      </div>
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
 
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -712,36 +698,33 @@ export default function CRMSoftwarePage() {
               />
             </svg>
 
-            {workflowLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
-                  style={{
-                    left: item.left,
-                    top: item.top,
-                  }}
-                >
-                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
-                    />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
+            {workflowLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                style={{
+                  left: item.left,
+                  top: item.top,
+                }}
+              >
+                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

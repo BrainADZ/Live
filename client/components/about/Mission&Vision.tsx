@@ -8,7 +8,7 @@ const cards = [
     title: "Turn business requirements into practical technology systems",
     description:
       "Our mission is to understand how businesses work and translate those requirements into software, platforms and digital experiences that are clear, usable and ready for real operations.",
-    iconSrc: "/icons/about/mission.svg",
+    iconSrc: "/about/icons/mission.svg",
     points: [
       "Understand the workflow before building",
       "Connect technology to practical requirements",
@@ -20,7 +20,7 @@ const cards = [
     title: "Become a trusted partner for connected digital solutions",
     description:
       "Our vision is to help businesses bring software, platforms, integrations and physical digital experiences together through thoughtful technology planning and dependable delivery.",
-    iconSrc: "/icons/about/vision.svg",
+    iconSrc: "/about/icons/vision.svg",
     points: [
       "Create better connected digital systems",
       "Support long-term technology decisions",

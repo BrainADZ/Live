@@ -1,34 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  BarChart3,
-  Cloud,
-  CloudCog,
-  CloudUpload,
-  DatabaseBackup,
-  Gauge,
-  GitBranch,
-  HardDrive,
-  LifeBuoy,
-  LockKeyhole,
-  Minus,
-  MonitorCog,
-  Network,
-  Plus,
-  RefreshCcw,
-  Rocket,
-  Search,
-  ServerCog,
-  Settings2,
-  ShieldCheck,
-  TrendingUp,
-  Workflow,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Minus, Plus, ShieldCheck } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries"
 import PopupForm from "@/components/PopupForm";
 
@@ -43,32 +19,37 @@ const cloudServices = [
   {
     title: "Cloud Strategy & Assessment",
     text: "We assess your applications, infrastructure, workloads and business priorities to define the right cloud approach.",
-    icon: CloudCog,
+    iconSrc:
+      "/icons/cloud-consulting/services/cloud-strategy-assessment.svg",
   },
   {
     title: "Cloud Migration",
     text: "Move applications, databases and workloads to the cloud through a planned migration approach designed to reduce business disruption.",
-    icon: CloudUpload,
+    iconSrc: "/icons/cloud-consulting/services/cloud-migration.svg",
   },
   {
     title: "Cloud Architecture & Setup",
     text: "Design and configure cloud environments around your performance, security, availability and scalability requirements.",
-    icon: ServerCog,
+    iconSrc:
+      "/icons/cloud-consulting/services/cloud-architecture-setup.svg",
   },
   {
     title: "Cloud Security & Access",
     text: "Improve identity, permissions, network controls, monitoring and secure deployment practices across your cloud environment.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/icons/cloud-consulting/services/cloud-security-access.svg",
   },
   {
     title: "Cost & Performance Optimization",
     text: "Review cloud usage, right-size resources and improve workload performance without paying for capacity you do not need.",
-    icon: TrendingUp,
+    iconSrc:
+      "/icons/cloud-consulting/services/cost-performance-optimization.svg",
   },
   {
     title: "Cloud Support & Management",
     text: "Keep cloud environments monitored, maintained and optimized as applications, workloads and business requirements change.",
-    icon: LifeBuoy,
+    iconSrc:
+      "/icons/cloud-consulting/services/cloud-support-management.svg",
   },
 ];
 
@@ -150,32 +131,32 @@ const cloudProcess = [
   {
     title: "Discover & Assess",
     text: "We review your applications, infrastructure, workloads, dependencies, cost and current cloud readiness.",
-    icon: Search,
+    iconSrc: "/icons/cloud-consulting/workflow/discover-assess.svg",
   },
   {
     title: "Strategy & Plan",
     text: "We define the cloud approach, priorities, migration sequence and delivery roadmap around your business needs.",
-    icon: Workflow,
+    iconSrc: "/icons/cloud-consulting/workflow/strategy-plan.svg",
   },
   {
     title: "Design & Architect",
     text: "We plan the cloud environment, networking, access, data, availability and deployment approach.",
-    icon: CloudCog,
+    iconSrc: "/icons/cloud-consulting/workflow/design-architect.svg",
   },
   {
     title: "Migrate & Implement",
     text: "We move and configure workloads through controlled execution, testing and validation.",
-    icon: CloudUpload,
+    iconSrc: "/icons/cloud-consulting/workflow/migrate-implement.svg",
   },
   {
     title: "Monitor & Optimize",
     text: "We improve performance, cost, security and operational visibility after the environment is running.",
-    icon: Settings2,
+    iconSrc: "/icons/cloud-consulting/workflow/monitor-optimize.svg",
   },
   {
     title: "Support & Evolve",
     text: "We help adapt the cloud environment as applications, users and business requirements change.",
-    icon: Rocket,
+    iconSrc: "/icons/cloud-consulting/workflow/support-evolve.svg",
   },
 ];
 
@@ -410,18 +391,29 @@ export default function CloudConsultingPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {cloudServices.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]">
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
-                  </div>
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">{item.title}</h3>
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
+            {cloudServices.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -519,23 +511,37 @@ export default function CloudConsultingPage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {cloudProcess.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="group relative rounded-[26px] border border-black/10 bg-white p-6">
-                    {index !== cloudProcess.length - 1 && <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />}
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
-                      </div>
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">{item.title}</h3>
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">{item.text}</p>
-                      </div>
+              {cloudProcess.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== cloudProcess.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
+
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -553,18 +559,30 @@ export default function CloudConsultingPage() {
               <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#cloud-process-arrowhead)" />
             </svg>
 
-            {cloudProcessLayout.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="group absolute z-10 w-[390px] -translate-x-1/2 text-center" style={{ left: item.left, top: item.top }}>
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
-                  </div>
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">{item.text}</p>
+            {cloudProcessLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                style={{ left: item.left, top: item.top }}
+              >
+                <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

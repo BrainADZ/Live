@@ -30,32 +30,32 @@ const workflow = [
   {
     title: "Business & System Discovery",
     text: "We understand your users, workflows, existing tools, data and the operational problems the software needs to solve.",
-    iconSrc: "/icons/software-development/workflow/business-system-discovery.svg",
+    iconSrc: "/software-development/business-system-discovery.svg",
   },
   {
     title: "Solution Architecture",
     text: "We plan modules, permissions, data structure, integrations and the technical foundation required for the product.",
-    iconSrc: "/icons/software-development/workflow/solution-architecture.svg",
+    iconSrc: "/software-development/solution-architcture.svg",
   },
   {
     title: "UX & Workflow Design",
     text: "We design screens, forms, dashboards and user flows around the tasks people need to complete every day.",
-    iconSrc: "/icons/software-development/workflow/ux-workflow-design.svg",
+    iconSrc: "/software-development/ux-workflow-design.svg",
   },
   {
     title: "Software Development",
     text: "We build the required frontend, backend, business logic, APIs and integrations in planned development stages.",
-    iconSrc: "/icons/software-development/workflow/software-development.svg",
+    iconSrc: "/software-development/software-development.svg",
   },
   {
     title: "Testing & Deployment",
     text: "We test workflows, permissions, data handling, integrations and performance before a controlled release.",
-    iconSrc: "/icons/software-development/workflow/testing-deployment.svg",
+    iconSrc: "/software-development/testing-deployment.svg",
   },
   {
     title: "Support & Evolution",
     text: "We monitor the software, resolve issues and improve features as users, processes and business needs change.",
-    iconSrc: "/icons/software-development/workflow/support-evolution.svg",
+    iconSrc: "/software-development/support-evolution.svg",
   },
 ];
 
@@ -135,37 +135,37 @@ const supportItems = [
   {
     title: "Application Monitoring",
     text: "We track important application, server and performance signals so issues can be identified and addressed.",
-    iconSrc: "/icons/software-development/support/application-monitoring.svg",
+    iconSrc: "/software-development/application-monitoring.svg",
   },
   {
     title: "Issue Resolution",
     text: "We investigate bugs, errors and workflow issues that appear after the software is in real use.",
-    iconSrc: "/icons/software-development/support/issue-resolution.svg",
+    iconSrc: "/software-development/issue-resolution.svg",
   },
   {
     title: "Feature & Workflow Enhancements",
     text: "We add modules and improve existing workflows as business requirements and user needs change.",
-    iconSrc: "/icons/software-development/support/feature-workflow-enhancements.svg",
+    iconSrc: "/software-development/workflow-inhancement.svg",
   },
   {
     title: "Ongoing Technical Support",
     text: "We support updates, integrations, releases and maintenance required to keep the software useful over time.",
-    iconSrc: "/icons/software-development/support/ongoing-technical-support.svg",
+    iconSrc: "/software-development/technical-support.svg",
   },
 ];
 
 const supportHighlights = [
   {
     title: "Updates",
-    iconSrc: "/icons/software-development/support/updates.svg",
+    iconSrc: "/software-development/updates.svg",
   },
   {
     title: "Monitoring",
-    iconSrc: "/icons/software-development/support/monitoring.svg",
+    iconSrc: "/software-development/monitoring.svg",
   },
   {
     title: "Security",
-    iconSrc: "/icons/software-development/support/security.svg",
+    iconSrc: "/software-development/security.svg",
   },
 ];
 

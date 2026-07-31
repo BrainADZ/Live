@@ -7,37 +7,37 @@ const values = [
     title: "Business-First Thinking",
     description:
       "We start with the business problem, user workflow and operating requirement before choosing the technology.",
-    iconSrc: "/icons/about/business-first-thinking.svg",
+    iconSrc: "/about/icons/business-first-thinking.svg",
   },
   {
     title: "Clarity in Delivery",
     description:
       "We believe responsibilities, project scope, priorities and decisions should remain clear throughout delivery.",
-    iconSrc: "/icons/about/clarity-in-delivery.svg",
+    iconSrc: "/about/icons/clarity-delivery.svg",
   },
   {
     title: "Built for Real Use",
     description:
       "A solution should work for the people using it every day, not only look impressive during a presentation.",
-    iconSrc: "/icons/about/built-for-real-use.svg",
+    iconSrc: "/about/icons/built-real.svg",
   },
   {
     title: "Connected Thinking",
     description:
       "Software, platforms, integrations and physical technology should work together instead of creating isolated systems.",
-    iconSrc: "/icons/about/connected-thinking.svg",
+    iconSrc: "/about/icons/connected-thinking.svg",
   },
   {
     title: "Scalable Decisions",
     description:
       "We make architecture and product decisions with future changes, integrations and operational growth in mind.",
-    iconSrc: "/icons/about/scalable-decisions.svg",
+    iconSrc: "/about/icons/scalable-decision.svg",
   },
   {
     title: "Responsible Delivery",
     description:
       "We take ownership of quality, communication and the practical requirements needed to move a project into real use.",
-    iconSrc: "/icons/about/responsible-delivery.svg",
+    iconSrc: "/about/icons/responsible-delivery.svg",
   },
 ];
 

@@ -6,7 +6,6 @@ import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
-  CheckCircle2,
   Minus,
   Plus,
   Download,
@@ -59,12 +58,36 @@ const specifications = [
 ];
 
 const useCases = [
-  "Restaurants",
-  "Cafes",
-  "QSR Outlets",
-  "Food Courts",
-  "Cinema & Entertainment Counters",
-  "Self-Service Ordering Zones",
+  {
+    title: "Restaurants",
+    iconSrc:
+      "/icons/self-ordering-kiosk/applications/restaurants.svg",
+  },
+  {
+    title: "Cafes",
+    iconSrc:
+      "/icons/self-ordering-kiosk/applications/cafes.svg",
+  },
+  {
+    title: "QSR Outlets",
+    iconSrc:
+      "/icons/self-ordering-kiosk/applications/qsr-outlets.svg",
+  },
+  {
+    title: "Food Courts",
+    iconSrc:
+      "/icons/self-ordering-kiosk/applications/food-courts.svg",
+  },
+  {
+    title: "Cinema & Entertainment Counters",
+    iconSrc:
+      "/icons/self-ordering-kiosk/applications/cinema-entertainment-counters.svg",
+  },
+  {
+    title: "Self-Service Ordering Zones",
+    iconSrc:
+      "/icons/self-ordering-kiosk/applications/self-service-ordering-zones.svg",
+  },
 ];
 
 const features = [
@@ -326,16 +349,20 @@ export default function SelfOrderingKioskPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {useCases.map((item) => (
               <div
-                key={item}
+                key={item.title}
                 className="group rounded-3xl border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
               >
-                <CheckCircle2
-                  size={26}
-                  className="mb-5 text-[#193175]"
-                />
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
                 <h3 className="text-[21px] font-normal tracking-[-0.4px]">
-                  {item}
+                  {item.title}
                 </h3>
               </div>
             ))}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -7,58 +8,48 @@ import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BadgeCheck,
-  BatteryCharging,
-  Building2,
-  Cable,
   CheckCircle2,
-  Cloud,
   Download,
-  GraduationCap,
-  Hospital,
-  Hotel,
-  Image as ImageIcon,
   Minus,
-  MonitorSmartphone,
-  Palette,
-  Plane,
   Plus,
-  Settings2,
-  ShieldCheck,
-  ShoppingBag,
-  Store,
-  Wrench,
 } from "lucide-react";
 
 const whyChoose = [
   {
     title: "Multi-Device Charging",
     text: "Provide convenient charging support through configurable USB-A, USB-C, charging cables and optional wireless charging.",
-    icon: BatteryCharging,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/multi-device-charging.svg",
   },
   {
     title: "Digital Content Display",
     text: "Use the integrated portrait display for advertisements, announcements, offers, wayfinding and branded communication.",
-    icon: MonitorSmartphone,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/digital-content-display.svg",
   },
   {
     title: "Protected Power Management",
     text: "Internal power distribution and protected wiring help create a reliable charging setup for public and commercial spaces.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/protected-power-management.svg",
   },
   {
     title: "Organized Cable Management",
     text: "Keep charging cables and internal wiring properly routed inside the kiosk for a cleaner and more professional installation.",
-    icon: Cable,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/organized-cable-management.svg",
   },
   {
     title: "Custom Branding",
     text: "Customize the kiosk body colour, vinyl graphics, logo placement, campaign artwork and digital screen content.",
-    icon: Palette,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/custom-branding.svg",
   },
   {
     title: "Requirement-Based Setup",
     text: "Plan the charging configuration, display, connectivity, software and deployment approach around the actual project requirement.",
-    icon: Settings2,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/requirement-based-setup.svg",
   },
 ];
 
@@ -66,27 +57,32 @@ const useCases = [
   {
     title: "Shopping Malls & Retail",
     text: "Offer mobile charging while displaying promotions, launches, offers and store information.",
-    icon: ShoppingBag,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/shopping-malls-retail.svg",
   },
   {
     title: "Airports & Transit Hubs",
     text: "Support travellers in waiting areas while showing advertisements, announcements and travel information.",
-    icon: Plane,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/airports-transit-hubs.svg",
   },
   {
     title: "Hospitals & Healthcare",
     text: "Provide a practical charging point for patients and visitors with optional awareness or directional content.",
-    icon: Hospital,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/hospitals-healthcare.svg",
   },
   {
     title: "Educational Campuses",
     text: "Install the kiosk in libraries, reception areas, student zones and common spaces for charging and campus communication.",
-    icon: GraduationCap,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/educational-campuses.svg",
   },
   {
     title: "Hotels & Corporate Spaces",
     text: "Improve visitor convenience while promoting services, events, company information and branded communication.",
-    icon: Hotel,
+    iconSrc:
+      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/hotels-corporate-spaces.svg",
   },
 ];
 
@@ -375,25 +371,26 @@ export default function VerticalMobileChargingDigitalKioskPage() {
           </div>
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-            {whyChoose.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#193175]/10">
-                    <Icon size={26} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {whyChoose.map((item) => (
+              <div key={item.title} className="border-t border-black/10 pt-7">
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -498,28 +495,29 @@ export default function VerticalMobileChargingDigitalKioskPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
-            {useCases.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-[26px] border border-black/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
-                >
-                  <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#193175]/10">
-                    <Icon size={25} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="text-[19px] font-normal tracking-[-0.3px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
-                    {item.text}
-                  </p>
+            {useCases.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[26px] border border-black/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
+              >
+                <div className="manual-icon-box mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[19px] font-normal tracking-[-0.3px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

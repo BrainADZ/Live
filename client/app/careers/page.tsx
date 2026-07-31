@@ -148,37 +148,37 @@ const benefits: Benefit[] = [
     title: "Practical project exposure",
     description:
       "Contribute to software, mobile and web applications, business platforms or digital signage projects depending on your role.",
-    iconSrc: "/icons/career/practical-project-exposure.svg",
+    iconSrc: "/career/practical-project-exposure.svg",
   },
   {
     title: "Guided learning",
     description:
       "Improve through project feedback, reviews, documentation and hands-on problem solving instead of learning only in theory.",
-    iconSrc: "/icons/career/guided-learning.svg",
+    iconSrc: "/career/guided-learning.svg",
   },
   {
     title: "Cross-functional collaboration",
     description:
       "Work with design, development, deployment and business teams to understand how a complete solution moves from idea to delivery.",
-    iconSrc: "/icons/career/cross-functional-collaboration.svg",
+    iconSrc: "/career/cross-functional-collaboration.svg",
   },
   {
     title: "Ownership and responsibility",
     description:
       "Take responsibility for your work, understand why it matters and improve it through review, feedback and real project use.",
-    iconSrc: "/icons/career/ownership-responsibility.svg",
+    iconSrc: "/career/ownership-responsibility.svg",
   },
   {
     title: "Range of technology work",
     description:
       "Gain exposure to custom software, mobile and web apps, business platforms, integrations and digital signage technology.",
-    iconSrc: "/icons/career/range-of-technology-work.svg",
+    iconSrc: "/career/range-technology.svg",
   },
   {
     title: "Clear working culture",
     description:
       "Work in an environment that values clear communication, documentation, ownership, review and continuous improvement.",
-    iconSrc: "/icons/career/clear-working-culture.svg",
+    iconSrc: "/career/clear-working-culture.svg",
   },
 ];
 
@@ -191,7 +191,7 @@ const roles: Role[] = [
     description:
       "Implement responsive interfaces, reusable components and API-connected screens using React, Next.js and modern frontend workflows.",
     skills: ["React", "Next.js", "Tailwind CSS", "UI implementation"],
-    iconSrc: "/icons/career/frontend-developer.svg",
+    iconSrc: "/career/job-opening.svg",
   },
   {
     title: "Full Stack Developer",
@@ -201,7 +201,7 @@ const roles: Role[] = [
     description:
       "Build web applications, backend APIs, admin panels, database workflows and integrations for business software projects.",
     skills: ["Next.js", "Node.js", "APIs", "Databases"],
-    iconSrc: "/icons/career/full-stack-developer.svg",
+    iconSrc: "/career/job-opening.svg",
   },
   {
     title: "AI & Automation Engineer",
@@ -211,7 +211,7 @@ const roles: Role[] = [
     description:
       "Build business automation workflows, API integrations, AI-assisted features and internal tools that solve practical operational problems.",
     skills: ["Python", "APIs", "Automation", "AI tools"],
-    iconSrc: "/icons/career/ai-automation-engineer.svg",
+    iconSrc: "/career/job-opening.svg",
   },
   {
     title: "UI/UX Designer",
@@ -221,7 +221,7 @@ const roles: Role[] = [
     description:
       "Create user flows, wireframes, interface designs, prototypes and development-ready handoffs for websites and digital products.",
     skills: ["Figma", "Wireframes", "Visual Design", "User flows"],
-    iconSrc: "/icons/career/ui-ux-designer.svg",
+    iconSrc: "/career/job-opening.svg",
   },
   {
     title: "Hardware Deployment Executive",
@@ -231,7 +231,7 @@ const roles: Role[] = [
     description:
       "Coordinate installation, testing and on-site support for digital standees, kiosks, LFD and LED displays and interactive systems.",
     skills: ["Installation", "Coordination", "Support", "Hardware basics"],
-    iconSrc: "/icons/career/hardware-deployment.svg",
+    iconSrc: "/career/job-opening.svg",
   },
   {
     title: "Digital Marketing Executive",
@@ -241,7 +241,7 @@ const roles: Role[] = [
     description:
       "Support content planning, social media, SEO, campaigns and lead-generation activities with clear reporting and execution.",
     skills: ["Social Media", "SEO basics", "Content", "Campaigns"],
-    iconSrc: "/icons/career/digital-marketing.svg",
+    iconSrc: "/career/job-opening.svg",
   },
 ];
 

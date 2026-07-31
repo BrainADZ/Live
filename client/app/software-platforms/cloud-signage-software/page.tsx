@@ -5,18 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  CalendarClock,
-  Cloud,
-  Database,
   Download,
-  Gauge,
-  Layers3,
   Minus,
-  MonitorSmartphone,
   Plus,
-  Search,
-  ShieldCheck,
-  UploadCloud,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
@@ -25,22 +16,26 @@ const modules = [
   {
     title: "Central Media Library",
     text: "Upload and organize videos, images and campaign assets from one cloud-based content library.",
-    icon: UploadCloud,
+    iconSrc:
+      "/icons/cloud-signage-software/cloud-features/central-media-library.svg",
   },
   {
     title: "Playlist & Scheduling",
     text: "Arrange content into playlists and plan when selected content should run on configured screens.",
-    icon: CalendarClock,
+    iconSrc:
+      "/icons/cloud-signage-software/cloud-features/playlist-scheduling.svg",
   },
   {
     title: "Screen & Location Mapping",
     text: "Organize configured displays by screen, location or group for easier content control.",
-    icon: MonitorSmartphone,
+    iconSrc:
+      "/icons/cloud-signage-software/cloud-features/screen-location-mapping.svg",
   },
   {
     title: "Remote Content Publishing",
     text: "Publish approved content to configured screens without manually updating media at every location.",
-    icon: Cloud,
+    iconSrc:
+      "/icons/cloud-signage-software/cloud-features/remote-content-publishing.svg",
   },
 ];
 
@@ -83,32 +78,38 @@ const workflowSteps = [
   {
     title: "Requirement Discovery",
     text: "We understand the screen network, locations, content workflow, users and management requirements.",
-    icon: Search,
+    iconSrc:
+      "/icons/cloud-signage-software/workflow/requirement-discovery.svg",
   },
   {
     title: "Screen & Content Architecture",
     text: "We plan screen grouping, content flow, scheduling logic and platform structure around the deployment.",
-    icon: Cloud,
+    iconSrc:
+      "/icons/cloud-signage-software/workflow/screen-content-architecture.svg",
   },
   {
     title: "Dashboard Planning",
     text: "We organize the dashboard workflow for media, playlists, screens, locations and content publishing.",
-    icon: Layers3,
+    iconSrc:
+      "/icons/cloud-signage-software/workflow/dashboard-planning.svg",
   },
   {
     title: "Platform Configuration",
     text: "The required media, screen, scheduling and management modules are configured or developed for the project.",
-    icon: Database,
+    iconSrc:
+      "/icons/cloud-signage-software/workflow/platform-configuration.svg",
   },
   {
     title: "Testing & Deployment",
     text: "We test the configured content workflow, screen mapping and publishing process before deployment.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/icons/cloud-signage-software/workflow/testing-deployment.svg",
   },
   {
     title: "Handover & Support",
     text: "The platform is handed over with guidance and support according to the agreed project scope.",
-    icon: Gauge,
+    iconSrc:
+      "/icons/cloud-signage-software/workflow/handover-support.svg",
   },
 ];
 
@@ -358,31 +359,29 @@ export default function CloudSignageSoftwarePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {modules.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={27}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {modules.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -480,40 +479,37 @@ export default function CloudSignageSoftwarePage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {workflowSteps.map((item, index) => {
-                const Icon = item.icon;
+              {workflowSteps.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== workflowSteps.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
 
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== workflowSteps.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
 
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
-                        />
-                      </div>
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
 
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -587,36 +583,33 @@ export default function CloudSignageSoftwarePage() {
               />
             </svg>
 
-            {workflowLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
-                  style={{
-                    left: item.left,
-                    top: item.top,
-                  }}
-                >
-                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
-                    />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
+            {workflowLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                style={{
+                  left: item.left,
+                  top: item.top,
+                }}
+              >
+                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

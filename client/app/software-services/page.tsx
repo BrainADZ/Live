@@ -36,77 +36,77 @@ const services: Service[] = [
     title: "Software Development",
     description:
       "Custom software for operations, internal teams, workflow automation, dashboards and connected business processes.",
-    iconSrc: "/icons/services/software-development.svg",
+    iconSrc: "/software-services/home/software-development.svg",
     href: "/software-services/software-development",
   },
   {
     title: "Mobile App Development",
     description:
       "Android, iOS and cross-platform apps with user-focused interfaces, backend APIs, integrations and admin controls.",
-    iconSrc: "/icons/services/mobile-app-development.svg",
+    iconSrc: "/software-services/home/mobile-app-development.svg",
     href: "/software-services/mobile-app-development",
   },
   {
     title: "Application Modernization",
     description:
       "Improve existing applications through UI upgrades, code modernization, architecture changes, integrations and cloud readiness.",
-    iconSrc: "/icons/services/application-modernization.svg",
+    iconSrc: "/software-services/home/application-modernization.svg",
     href: "/software-services/application-modernization",
   },
   {
     title: "Web App Development",
     description:
       "Browser-based applications, portals and dashboards built around workflows, responsive interfaces, APIs and business data.",
-    iconSrc: "/icons/services/web-app-development.svg",
+    iconSrc: "/software-services/home/web-app-development.svg",
     href: "/software-services/web-app-development",
   },
   {
     title: "Enterprise Software Solutions",
     description:
       "Custom platforms for multi-team operations, role-based workflows, internal processes, reporting and connected systems.",
-    iconSrc: "/icons/services/enterprise-software-solutions.svg",
+    iconSrc: "/software-services/home/enterprise-software-solutions.svg",
     href: "/software-services/enterprise-software-solutions",
   },
   {
     title: "API Integration",
     description:
       "Connect applications, CRM, ERP, payments, logistics and third-party platforms through secure APIs and reliable data flows.",
-    iconSrc: "/icons/services/api-integration.svg",
+    iconSrc: "/software-services/home/api-integration.svg",
     href: "/software-services/api-integration",
   },
   {
     title: "CRM Development",
     description:
       "CRM platforms for leads, follow-ups, sales pipelines, customer history, tasks, reporting and business integrations.",
-    iconSrc: "/icons/services/crm-development.svg",
+    iconSrc: "/software-services/home/crm-development.svg",
     href: "/software-services/crm-development",
   },
   {
     title: "ERP Development",
     description:
       "ERP systems that connect sales, purchase, inventory, finance, teams, approvals and reporting across daily operations.",
-    iconSrc: "/icons/services/erp-development.svg",
+    iconSrc: "/software-services/home/erp-development.svg",
     href: "/software-services/erp-development",
   },
   {
     title: "UI/UX Design",
     description:
       "User research, flows, wireframes, interface design, prototypes and design systems prepared for product development.",
-    iconSrc: "/icons/services/ui-ux-design.svg",
+    iconSrc: "/software-services/home/ui-ux-design.svg",
     href: "/software-services/ui-ux-design",
   },
   {
     title: "SaaS Development",
     description:
       "SaaS platforms with accounts, roles, subscriptions, billing integration, admin tools and scalable product architecture.",
-    iconSrc: "/icons/services/saas-development.svg",
+    iconSrc: "/software-services/home/saas-development.svg",
     href: "/software-services/saas-development",
   },
   {
     title: "Cloud Consulting",
     description:
       "Cloud assessment, strategy, migration, architecture, security, optimization and ongoing infrastructure support.",
-    iconSrc: "/icons/services/cloud-consulting.svg",
+    iconSrc: "/software-services/home/cloud-consulting.svg",
     href: "/software-services/cloud-consulting",
   },
 ];

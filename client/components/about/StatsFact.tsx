@@ -9,35 +9,35 @@ const services = [
     title: "Software Services",
     description:
       "Custom software, mobile apps, web applications, SaaS products and enterprise systems built around business requirements.",
-    iconSrc: "/icons/about/software-services.svg",
+    iconSrc: "/about/icons/software-services.svg",
     href: "/software-services",
   },
   {
     title: "Software Platforms",
     description:
       "CRM, ERP, signage applications, cloud signage software and interactive retail platforms.",
-    iconSrc: "/icons/about/software-platforms.svg",
+    iconSrc: "/about/icons/software-platforms.svg",
     href: "/software-platforms",
   },
   {
     title: "Digital Signage Products",
     description:
       "Digital standees, kiosks, LFD displays, LED displays and interactive teaching displays for physical spaces.",
-    iconSrc: "/icons/about/digital-signage-products.svg",
+    iconSrc: "/about/icons/digital-signage-product.svg",
     href: "/digital-signage-products",
   },
   {
     title: "Technology Consulting",
     description:
       "Planning for software, platforms, integrations, modernization and digital customer environments.",
-    iconSrc: "/icons/about/technology-consulting.svg",
+    iconSrc: "/about/icons/technology-consulting.svg",
     href: "/consulting",
   },
   {
     title: "Integration & Modernization",
     description:
       "Connect existing systems, improve older applications and prepare technology environments for future requirements.",
-    iconSrc: "/icons/about/integration-modernization.svg",
+    iconSrc: "/about/icons/integration-modernization.svg",
     href: "/software-services/api-integration",
   },
 ];
