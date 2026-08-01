@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">D-Type Kiosk Standee Outline Icon</title>
+  <desc id="desc">Minimal outline icon of a D-type interactive kiosk standee with an angled landscape screen, angular support body, and flat base.</desc>
+
+  <g fill="none" stroke="#172B4D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Angled display frame -->
+    <path d="M112 92 L342 84 L418 150 L184 170 Z"/>
+    <path d="M132 106 L335 100 L392 148 L194 156 Z"/>
+
+    <!-- Display thickness -->
+    <path d="M184 170 L194 182 L415 162 L418 150"/>
+    <path d="M112 92 L104 101 L178 177 L184 170"/>
+
+    <!-- Main D-type support body -->
+    <path d="M182 174
+             L237 184
+             L300 366
+             L223 398
+             L160 394
+             L174 176 Z"/>
+
+    <!-- Front angular contour -->
+    <path d="M237 184
+             L319 178
+             L360 270
+             L300 366"/>
+
+    <!-- Inner decorative cut-out -->
+    <path d="M193 210
+             L226 224
+             L252 282
+             L219 334
+             L194 326 Z"/>
+
+    <!-- Base plate -->
+    <path d="M160 394
+             L223 398
+             L300 366
+             L366 386
+             L327 423
+             L204 432
+             L137 409 Z"/>
+
+    <!-- Base thickness -->
+    <path d="M137 409 L141 421 L206 444 L332 435 L366 398 L366 386"/>
+  </g>
+</svg>

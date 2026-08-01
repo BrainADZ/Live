@@ -60,29 +60,29 @@ const specifications = [
 const useCases = [
   {
     title: "Retail & Showrooms",
-    iconSrc: "/icons/lfd-display/applications/retail-showrooms.svg",
+    iconSrc: "/signage-products/retail-stores.svg",
   },
   {
     title: "Corporate Offices",
-    iconSrc: "/icons/lfd-display/applications/corporate-offices.svg",
+    iconSrc: "/signage-products/corporate-reception.svg",
   },
   {
     title: "Reception & Visitor Areas",
     iconSrc:
-      "/icons/lfd-display/applications/reception-visitor-areas.svg",
+      "/signage-products/reception-areas.svg",
   },
   {
     title: "Shopping Malls",
-    iconSrc: "/icons/lfd-display/applications/shopping-malls.svg",
+    iconSrc: "/signage-products/shopping-malls.svg",
   },
   {
     title: "Education & Training Spaces",
     iconSrc:
-      "/icons/lfd-display/applications/education-training-spaces.svg",
+      "/signage-products/education-training-spaces.svg",
   },
   {
     title: "Hotels & Hospitality",
-    iconSrc: "/icons/lfd-display/applications/hotels-hospitality.svg",
+    iconSrc: "/signage-products/hospitality.svg",
   },
 ];
 

@@ -61,32 +61,32 @@ const useCases = [
   {
     title: "Schools",
     iconSrc:
-      "/icons/interactive-teaching-display/applications/schools.svg",
+      "/signage-products/schools.svg",
   },
   {
     title: "Colleges",
     iconSrc:
-      "/icons/interactive-teaching-display/applications/colleges.svg",
+      "/signage-products/colleges.svg",
   },
   {
     title: "Coaching Centers",
     iconSrc:
-      "/icons/interactive-teaching-display/applications/coaching-centers.svg",
+      "/signage-products/coaching-centers.svg",
   },
   {
     title: "Training Rooms",
     iconSrc:
-      "/icons/interactive-teaching-display/applications/training-rooms.svg",
+      "/signage-products/education-training-spaces.svg",
   },
   {
     title: "Corporate Learning",
     iconSrc:
-      "/icons/interactive-teaching-display/applications/corporate-learning.svg",
+      "/signage-products/corporate-learning.svg",
   },
   {
     title: "Smart Classrooms",
     iconSrc:
-      "/icons/interactive-teaching-display/applications/smart-classrooms.svg",
+      "/signage-products/smart-classrooms.svg",
   },
 ];
 

@@ -19,37 +19,37 @@ const whyChoose = [
     title: "Multi-Device Charging",
     text: "Provide convenient charging support through configurable USB-A, USB-C, charging cables and optional wireless charging.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/multi-device-charging.svg",
+      "/signage-products/multi-device-charging.svg",
   },
   {
     title: "Digital Content Display",
     text: "Use the integrated portrait display for advertisements, announcements, offers, wayfinding and branded communication.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/digital-content-display.svg",
+      "/signage-products/dynamic-content-display.svg",
   },
   {
     title: "Protected Power Management",
     text: "Internal power distribution and protected wiring help create a reliable charging setup for public and commercial spaces.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/protected-power-management.svg",
+      "/signage-products/wireless-charging.svg",
   },
   {
     title: "Organized Cable Management",
     text: "Keep charging cables and internal wiring properly routed inside the kiosk for a cleaner and more professional installation.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/organized-cable-management.svg",
+      "/signage-products/wireless-charging.svg",
   },
   {
     title: "Custom Branding",
     text: "Customize the kiosk body colour, vinyl graphics, logo placement, campaign artwork and digital screen content.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/custom-branding.svg",
+      "/signage-products/campaigns-launches.svg",
   },
   {
     title: "Requirement-Based Setup",
     text: "Plan the charging configuration, display, connectivity, software and deployment approach around the actual project requirement.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/why-choose/requirement-based-setup.svg",
+      "/signage-products/requirement-based-setup.svg",
   },
 ];
 
@@ -58,31 +58,31 @@ const useCases = [
     title: "Shopping Malls & Retail",
     text: "Offer mobile charging while displaying promotions, launches, offers and store information.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/shopping-malls-retail.svg",
+      "/signage-products/shopping-malls.svg",
   },
   {
     title: "Airports & Transit Hubs",
     text: "Support travellers in waiting areas while showing advertisements, announcements and travel information.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/airports-transit-hubs.svg",
+      "/signage-products/airport.svg",
   },
   {
     title: "Hospitals & Healthcare",
     text: "Provide a practical charging point for patients and visitors with optional awareness or directional content.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/hospitals-healthcare.svg",
+      "/signage-products/healthcare-facilities.svg",
   },
   {
     title: "Educational Campuses",
     text: "Install the kiosk in libraries, reception areas, student zones and common spaces for charging and campus communication.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/educational-campuses.svg",
+      "/signage-products/colleges.svg",
   },
   {
     title: "Hotels & Corporate Spaces",
     text: "Improve visitor convenience while promoting services, events, company information and branded communication.",
     iconSrc:
-      "/icons/vertical-mobile-charging-digital-kiosk/use-cases/hotels-corporate-spaces.svg",
+      "/signage-products/corporate-reception.svg",
   },
 ];
 

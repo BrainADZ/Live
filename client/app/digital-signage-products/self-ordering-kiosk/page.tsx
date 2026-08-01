@@ -61,32 +61,32 @@ const useCases = [
   {
     title: "Restaurants",
     iconSrc:
-      "/icons/self-ordering-kiosk/applications/restaurants.svg",
+      "/signage-products/restaurants.svg",
   },
   {
     title: "Cafes",
     iconSrc:
-      "/icons/self-ordering-kiosk/applications/cafes.svg",
+      "/signage-products/cafes.svg",
   },
   {
     title: "QSR Outlets",
     iconSrc:
-      "/icons/self-ordering-kiosk/applications/qsr-outlets.svg",
+      "/signage-products/qsr-outlets.svg",
   },
   {
     title: "Food Courts",
     iconSrc:
-      "/icons/self-ordering-kiosk/applications/food-courts.svg",
+      "/signage-products/food-courts.svg",
   },
   {
     title: "Cinema & Entertainment Counters",
     iconSrc:
-      "/icons/self-ordering-kiosk/applications/cinema-entertainment-counters.svg",
+      "/signage-products/cinema-counter.svg",
   },
   {
     title: "Self-Service Ordering Zones",
     iconSrc:
-      "/icons/self-ordering-kiosk/applications/self-service-ordering-zones.svg",
+      "/signage-products/self-service-ordering-zones.svg",
   },
 ];
 

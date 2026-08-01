@@ -22,37 +22,37 @@ const whyChoose = [
     title: "Professional Digital Display",
     text: "A freestanding D-type digital signage format designed for customer-facing business communication.",
     iconSrc:
-      "/icons/d-type-standee/why-choose/professional-digital-display.svg",
+      "/signage-products/professional-digital-display.svg",
   },
   {
     title: "Dynamic Content Display",
     text: "Present promotional videos, images, campaign creatives and business information on screen.",
     iconSrc:
-      "/icons/d-type-standee/why-choose/dynamic-content-display.svg",
+      "/signage-products/dynamic-content-display.svg",
   },
   {
     title: "Flexible Media Playback",
     text: "Use local media playback for planned content without depending on printed promotional material.",
     iconSrc:
-      "/icons/d-type-standee/why-choose/flexible-media-playback.svg",
+      "/signage-products/flexible-media-playback.svg",
   },
   {
     title: "Optional Cloud Management",
     text: "Add cloud signage management when remote content control is required for the deployment.",
     iconSrc:
-      "/icons/d-type-standee/why-choose/optional-cloud-management.svg",
+      "/signage-products/optional-cloud-management.svg",
   },
   {
     title: "Requirement-Based Setup",
     text: "Plan the display, content setup and deployment approach around the actual business requirement.",
     iconSrc:
-      "/icons/d-type-standee/why-choose/requirement-based-setup.svg",
+      "/signage-products/requirement-based-setup.svg",
   },
   {
     title: "Enclosure Branding",
     text: "Coordinate the enclosure finish and branding treatment with the surrounding business environment.",
     iconSrc:
-      "/icons/d-type-standee/why-choose/enclosure-branding.svg",
+      "/signage-products/enclosure-branding.svg",
   },
 ];
 
@@ -60,30 +60,30 @@ const useCases = [
   {
     title: "Retail Stores",
     text: "Display offers, launches, collections and promotional campaigns.",
-    iconSrc: "/icons/d-type-standee/use-cases/retail-stores.svg",
+    iconSrc: "/signage-products/retail-stores.svg",
   },
   {
     title: "Events & Exhibitions",
     text: "Present event content, sponsor visuals and campaign communication.",
     iconSrc:
-      "/icons/d-type-standee/use-cases/events-exhibitions.svg",
+      "/signage-products/events-exhibitions.svg",
   },
   {
     title: "Hospitality",
     text: "Show promotions, guest information and customer-facing content.",
-    iconSrc: "/icons/d-type-standee/use-cases/hospitality.svg",
+    iconSrc: "/signage-products/hospitality.svg",
   },
   {
     title: "Corporate & Reception",
     text: "Present welcome content, company information and visitor communication.",
     iconSrc:
-      "/icons/d-type-standee/use-cases/corporate-reception.svg",
+      "/signage-products/corporate-reception.svg",
   },
   {
     title: "Campaigns & Launches",
     text: "Support product launches, announcements and changing campaign content.",
     iconSrc:
-      "/icons/d-type-standee/use-cases/campaigns-launches.svg",
+      "/signage-products/campaigns-launches.svg",
   },
 ];
 

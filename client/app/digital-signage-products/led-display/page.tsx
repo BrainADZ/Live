@@ -60,28 +60,28 @@ const specifications = [
 const useCases = [
   {
     title: "Events & Exhibitions",
-    iconSrc: "/icons/led-display/applications/events-exhibitions.svg",
+    iconSrc: "/signage-products/events-exhibitions.svg",
   },
   {
     title: "Retail & Showrooms",
-    iconSrc: "/icons/led-display/applications/retail-showrooms.svg",
+    iconSrc: "/signage-products/retail-stores.svg",
   },
   {
     title: "Shopping Malls",
-    iconSrc: "/icons/led-display/applications/shopping-malls.svg",
+    iconSrc: "/signage-products/shopping-malls.svg",
   },
   {
     title: "Corporate Spaces",
-    iconSrc: "/icons/led-display/applications/corporate-spaces.svg",
+    iconSrc: "/signage-products/corporate-reception.svg",
   },
   {
     title: "Brand Campaigns",
-    iconSrc: "/icons/led-display/applications/brand-campaigns.svg",
+    iconSrc: "/signage-products/campaigns-launches.svg",
   },
   {
     title: "Public Information Areas",
     iconSrc:
-      "/icons/led-display/applications/public-information-areas.svg",
+      "/signage-products/public-areas.svg",
   },
 ];
 

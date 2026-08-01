@@ -65,25 +65,25 @@ const applications = [
     title: "Retail Stores",
     text: "Display promotions, product campaigns, offers and customer-facing digital content.",
     iconSrc:
-      "/icons/wall-mounted-display/applications/retail-stores.svg",
+      "/signage-products/retail-stores.svg",
   },
   {
     title: "Reception Areas",
     text: "Present welcome content, visitor information, announcements and business communication.",
     iconSrc:
-      "/icons/wall-mounted-display/applications/reception-areas.svg",
+      "/signage-products/reception-areas.svg",
   },
   {
     title: "Showrooms",
     text: "Showcase product content, launches, brand films and promotional visuals.",
     iconSrc:
-      "/icons/wall-mounted-display/applications/showrooms.svg",
+      "/signage-products/showrooms.svg",
   },
   {
     title: "Corporate Spaces",
     text: "Use for announcements, company information and internal visual communication.",
     iconSrc:
-      "/icons/wall-mounted-display/applications/corporate-spaces.svg",
+      "/signage-products/corporate-reception.svg",
   },
 ];
 

@@ -47,32 +47,32 @@ const applications = [
   {
     title: "Retail Stores",
     iconSrc:
-      "/icons/floor-mounted-standee/applications/retail-stores.svg",
+      "/signage-products/retail-stores.svg",
   },
   {
     title: "Shopping Malls",
     iconSrc:
-      "/icons/floor-mounted-standee/applications/shopping-malls.svg",
+      "/signage-products/shopping-malls.svg",
   },
   {
     title: "Corporate & Reception",
     iconSrc:
-      "/icons/floor-mounted-standee/applications/corporate-reception.svg",
+      "/signage-products/corporate-reception.svg",
   },
   {
     title: "Healthcare Facilities",
     iconSrc:
-      "/icons/floor-mounted-standee/applications/healthcare-facilities.svg",
+      "/signage-products/healthcare-facilities.svg",
   },
   {
     title: "Events & Exhibitions",
     iconSrc:
-      "/icons/floor-mounted-standee/applications/events-exhibitions.svg",
+      "/signage-products/events-exhibitions.svg",
   },
   {
     title: "Hotels & Hospitality",
     iconSrc:
-      "/icons/floor-mounted-standee/applications/hotels-hospitality.svg",
+      "/signage-products/hospitality.svg",
   },
 ];
 
