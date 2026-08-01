@@ -32,32 +32,32 @@ const challenges = [
   {
     title: "Slow Performance",
     text: "Older applications can become slower over time as usage, data and business requirements grow.",
-    iconSrc: "/icons/application-modernization/challenges/slow-performance.svg",
+    iconSrc: "/app-modernization/slow-performance.svg",
   },
   {
     title: "High Maintenance Cost",
     text: "Outdated code, dependencies and infrastructure can make routine fixes and updates harder to manage.",
-    iconSrc: "/icons/application-modernization/challenges/high-maintenance-cost.svg",
+    iconSrc: "/app-modernization/high-maintenance-cost.svg",
   },
   {
     title: "Security Risks",
     text: "Unsupported technologies, outdated dependencies and weak access controls can increase security exposure.",
-    iconSrc: "/icons/application-modernization/challenges/security-risks.svg",
+    iconSrc: "/app-modernization/security-risks.svg",
   },
   {
     title: "Integration Issues",
     text: "Older applications may not connect cleanly with modern APIs, cloud services and the tools your teams now use.",
-    iconSrc: "/icons/application-modernization/challenges/integration-issues.svg",
+    iconSrc: "/app-modernization/integration-issues.svg",
   },
   {
     title: "Poor User Experience",
     text: "Outdated interfaces and complicated user flows make everyday tasks slower for employees and customers.",
-    iconSrc: "/icons/application-modernization/challenges/poor-user-experience.svg",
+    iconSrc: "/app-modernization/poor-user-experience.svg",
   },
   {
     title: "Limited Scalability",
     text: "Legacy architecture can make it difficult to support more users, larger workloads and new capabilities.",
-    iconSrc: "/icons/application-modernization/challenges/limited-scalability.svg",
+    iconSrc: "/app-modernization/limited-scalability.svg",
   },
 ];
 
@@ -65,32 +65,32 @@ const modernizationServices = [
   {
     title: "Replatforming",
     text: "Move the application to a more suitable platform or managed environment while keeping most of its core functionality intact.",
-    iconSrc: "/icons/application-modernization/services/replatforming.svg",
+    iconSrc: "/app-modernization/replatforming.svg",
   },
   {
     title: "Refactoring",
     text: "Restructure and improve existing code to make the application easier to maintain, optimize and extend.",
-    iconSrc: "/icons/application-modernization/services/refactoring.svg",
+    iconSrc: "/app-modernization/refactoring.svg",
   },
   {
     title: "Rehosting",
     text: "Move an existing application to modern cloud infrastructure with minimal changes to the application itself.",
-    iconSrc: "/icons/application-modernization/services/rehosting.svg",
+    iconSrc: "/app-modernization/rehosting.svg",
   },
   {
     title: "Rebuilding",
     text: "Rebuild applications or critical modules when the existing technology can no longer support business needs effectively.",
-    iconSrc: "/icons/application-modernization/services/rebuilding.svg",
+    iconSrc: "/app-modernization/rebuilding.svg",
   },
   {
     title: "API Modernization",
     text: "Replace rigid connections with secure APIs that help applications, databases and third-party services work together.",
-    iconSrc: "/icons/application-modernization/services/api-modernization.svg",
+    iconSrc: "/app-modernization/api-modernization.svg",
   },
   {
     title: "UI/UX Modernization",
     text: "Improve outdated interfaces and user flows so employees and customers can complete tasks more easily.",
-    iconSrc: "/icons/application-modernization/services/ui-ux-modernization.svg",
+    iconSrc: "/app-modernization/uiux-modernization.svg",
   },
 ];
 
@@ -98,32 +98,32 @@ const modernizationProcess = [
   {
     title: "Assess & Analyze",
     text: "We review your current application, codebase, integrations, infrastructure, dependencies and business-critical workflows.",
-    iconSrc: "/icons/application-modernization/workflow/assess-analyze.svg",
+    iconSrc: "/app-modernization/assess-analyze.svg",
   },
   {
     title: "Modernization Strategy",
     text: "We decide what should be retained, refactored, replatformed, migrated or rebuilt and define a practical delivery roadmap.",
-    iconSrc: "/icons/application-modernization/workflow/modernization-strategy.svg",
+    iconSrc: "/app-modernization/modernization-strategy.svg",
   },
   {
     title: "Architecture Upgrade",
     text: "We improve the application architecture, data flow and integration model where the existing structure limits future changes.",
-    iconSrc: "/icons/application-modernization/workflow/architecture-upgrade.svg",
+    iconSrc: "/app-modernization/architecture-upgrade.svg",
   },
   {
     title: "Migration & Refactoring",
     text: "We modernize code and modules, move data where required and use phased changes to reduce disruption to live operations.",
-    iconSrc: "/icons/application-modernization/workflow/migration-refactoring.svg",
+    iconSrc: "/app-modernization/migration-refactoring.svg",
   },
   {
     title: "Testing & Optimization",
     text: "We validate business workflows, data accuracy, integrations, performance, security and compatibility before release.",
-    iconSrc: "/icons/application-modernization/workflow/testing-optimization.svg",
+    iconSrc: "/app-modernization/testing-optimization.svg",
   },
   {
     title: "Deploy & Evolve",
     text: "We release the modernized application with monitoring, documentation and ongoing support for future improvements.",
-    iconSrc: "/icons/application-modernization/workflow/deploy-evolve.svg",
+    iconSrc: "/app-modernization/deploy-evolve.svg",
   },
 ];
 
@@ -201,32 +201,32 @@ const supportItems = [
   {
     title: "Monitoring",
     text: "Track uptime, errors, performance and application health so issues can be identified early.",
-    iconSrc: "/icons/application-modernization/support/monitoring.svg",
+    iconSrc: "/app-modernization/monitoring.svg",
   },
   {
     title: "Security Updates",
     text: "Keep dependencies, access controls and application components updated as technologies and risks change.",
-    iconSrc: "/icons/application-modernization/support/security-updates.svg",
+    iconSrc: "/app-modernization/security-updates.svg",
   },
   {
     title: "Performance Tuning",
     text: "Review slow workflows, database queries, APIs and application performance as usage grows.",
-    iconSrc: "/icons/application-modernization/support/performance-tuning.svg",
+    iconSrc: "/app-modernization/performance-tuning.svg",
   },
   {
     title: "Feature Enhancements",
     text: "Extend the modernized application with new features, integrations and workflow improvements over time.",
-    iconSrc: "/icons/application-modernization/support/feature-enhancements.svg",
+    iconSrc: "/app-modernization/feature-enhancements.svg",
   },
   {
     title: "Infrastructure Scaling",
     text: "Adjust infrastructure, deployment and application capacity as users, data and workloads increase.",
-    iconSrc: "/icons/application-modernization/support/infrastructure-scaling.svg",
+    iconSrc: "/app-modernization/infrastructure-scaling.svg",
   },
   {
     title: "Ongoing Support",
     text: "Get ongoing technical support for fixes, releases, compatibility changes and future improvements.",
-    iconSrc: "/icons/application-modernization/support/ongoing-support.svg",
+    iconSrc: "/app-modernization/ongoing-support.svg",
   },
 ];
 
@@ -380,22 +380,22 @@ export default function AppModernizationPage() {
               {
                 title: "Improve Maintainability",
                 text: "Make the application easier to update, support and extend as requirements change.",
-                iconSrc: "/icons/application-modernization/overview/improve-maintainability.svg",
+                iconSrc: "/app-modernization/improve-maintainability.svg",
               },
               {
                 title: "Strengthen Security",
                 text: "Address outdated dependencies, access controls and other risks in the existing application.",
-                iconSrc: "/icons/application-modernization/overview/strengthen-security.svg",
+                iconSrc: "/app-modernization/strengthen-security.svg",
               },
               {
                 title: "Improve Performance & Scale",
                 text: "Optimize architecture, data flow and infrastructure for growing users and workloads.",
-                iconSrc: "/icons/application-modernization/overview/improve-performance-scale.svg",
+                iconSrc: "/app-modernization/improve-performance-scale.svg",
               },
               {
                 title: "Support Future Change",
                 text: "Make new features, integrations and business workflow changes easier to introduce.",
-                iconSrc: "/icons/application-modernization/overview/support-future-change.svg",
+                iconSrc: "/app-modernization/support-future-change.svg",
               },
             ].map((item) => {
               return (

@@ -59,35 +59,35 @@ const processLayout = [
 const appSolutions = [
   {
     title: "Ecommerce & Shopping Apps",
-    iconSrc: "/icons/mobile-app/solutions/ecommerce-shopping-apps.svg",
+    iconSrc: "/mobile-app-development/shopping-apps.svg",
   },
   {
     title: "Booking & Appointment Apps",
-    iconSrc: "/icons/mobile-app/solutions/booking-appointment-apps.svg",
+    iconSrc: "/mobile-app-development/booking-apps.svg",
   },
   {
     title: "Delivery & Tracking Apps",
-    iconSrc: "/icons/mobile-app/solutions/delivery-tracking-apps.svg",
+    iconSrc: "/mobile-app-development/tracking-apps.svg",
   },
   {
     title: "Learning & Training Apps",
-    iconSrc: "/icons/mobile-app/solutions/learning-training-apps.svg",
+    iconSrc: "/mobile-app-development/learning-apps.svg",
   },
   {
     title: "Healthcare Service Apps",
-    iconSrc: "/icons/mobile-app/solutions/healthcare-service-apps.svg",
+    iconSrc: "/mobile-app-development/healthcare-service-apps.svg",
   },
   {
     title: "Finance & Payment Apps",
-    iconSrc: "/icons/mobile-app/solutions/finance-payment-apps.svg",
+    iconSrc: "/mobile-app-development/payment-apps.svg",
   },
   {
     title: "Logistics & Field Apps",
-    iconSrc: "/icons/mobile-app/solutions/logistics-field-apps.svg",
+    iconSrc: "/mobile-app-development/logistics-apps.svg",
   },
   {
     title: "Internal Business Apps",
-    iconSrc: "/icons/mobile-app/solutions/internal-business-apps.svg",
+    iconSrc: "/mobile-app-development/internal-business-apps.svg",
   },
 ];
 
@@ -166,27 +166,27 @@ const supportItems = [
   {
     title: "Bug & Crash Fixing",
     text: "Resolve app crashes, bugs, broken flows and device-specific issues after release.",
-    iconSrc: "/icons/mobile-app/maintenance/bug-crash-fixing.svg",
+    iconSrc: "/mobile-app-development/bug-crash-fixing.svg",
   },
   {
     title: "OS Compatibility Updates",
     text: "Keep the app aligned with Android, iOS and device-level changes over time.",
-    iconSrc: "/icons/mobile-app/maintenance/os-compatibility-updates.svg",
+    iconSrc: "/mobile-app-development/os-compatibility-updates.svg",
   },
   {
     title: "Performance Monitoring",
     text: "Review loading speed, API response, app stability and user experience issues.",
-    iconSrc: "/icons/mobile-app/maintenance/performance-monitoring.svg",
+    iconSrc: "/mobile-app-development/performance-monitoring.svg",
   },
   {
     title: "Feature Enhancements",
     text: "Add new features, improve user flows and extend app functionality as your business grows.",
-    iconSrc: "/icons/mobile-app/maintenance/feature-enhancements.svg",
+    iconSrc: "/mobile-app-development/feature-enhancements.svg",
   },
   {
     title: "Ongoing Technical Support",
     text: "Support updates, maintenance, backend changes and continuous product improvements.",
-    iconSrc: "/icons/mobile-app/maintenance/ongoing-technical-support.svg",
+    iconSrc: "/mobile-app-development/ongoing-technical-support.svg",
   },
 ];
 
@@ -331,12 +331,12 @@ export default function MobileAppDevelopmentPage() {
               {
                 title: "Android, iOS & Cross-Platform Apps",
                 text: "Build mobile apps using the technology that fits your users, budget and product roadmap.",
-                iconSrc: "/icons/mobile-app/overview/mobile-apps.svg",
+                iconSrc: "/mobile-app-development/android-apps.svg",
               },
               {
                 title: "Backend, APIs & Admin Panels",
                 text: "Connect your app with secure databases, dashboards, notifications and third-party systems.",
-                iconSrc: "/icons/mobile-app/overview/backend-apis-admin-panels.svg",
+                iconSrc: "/mobile-app-development/backend-adminpanels.svg",
               },
             ].map((item) => {
               return (
@@ -858,14 +858,14 @@ export default function MobileAppDevelopmentPage() {
                   key={item.title}
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10 p-4">
-                    <img
-                      src={item.iconSrc}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-full w-full object-contain"
-                    />
-                  </div>
+                  <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                   <div>
                     <h3 className="text-[23px] font-normal tracking-[-0.4px]">
