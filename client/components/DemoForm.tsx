@@ -3,6 +3,7 @@
 
 import { type FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { getApiUrl } from "@/lib/api";
 import {
   BriefcaseBusiness,
   Building2,
@@ -23,6 +24,7 @@ type DemoFormProps = {
   isOpen: boolean;
   onClose: () => void;
   demoHref?: string;
+  demoType?: "erp";
 };
 
 const companySizes = [
@@ -41,11 +43,14 @@ export default function DemoForm({
   isOpen,
   onClose,
   demoHref = "/demos",
+  demoType,
 }: DemoFormProps) {
   const router = useRouter();
   const [captchaCode, setCaptchaCode] = useState(captchaCodes[0]);
   const [captchaValue, setCaptchaValue] = useState("");
   const [captchaError, setCaptchaError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const refreshCaptcha = () => {
     const currentIndex = captchaCodes.indexOf(captchaCode);
@@ -56,7 +61,7 @@ export default function DemoForm({
     setCaptchaError("");
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (captchaValue.trim().toUpperCase() !== captchaCode) {
@@ -65,8 +70,54 @@ export default function DemoForm({
     }
 
     setCaptchaError("");
-    onClose();
-    router.push(demoHref);
+    setSubmitError("");
+
+    if (demoType !== "erp") {
+      onClose();
+      router.push(demoHref);
+      return;
+    }
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name"),
+      companyWebsite: formData.get("companyWebsite"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      industry: formData.get("industry"),
+      companySize: formData.get("companySize"),
+      requirements: formData.get("requirements"),
+      preferredLanguage: formData.get("preferredLanguage"),
+      source: formData.get("source"),
+    };
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch(getApiUrl("/api/erp-demo"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to create ERP demo access.");
+      }
+
+      form.reset();
+      setCaptchaValue("");
+      onClose();
+      window.location.assign(data.redirectUrl || demoHref);
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Failed to create ERP demo access. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   useEffect(() => {
@@ -174,6 +225,7 @@ export default function DemoForm({
               <UserRound className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id="demo-full-name"
+                name="name"
                 type="text"
                 required
                 placeholder="Full name"
@@ -192,6 +244,7 @@ export default function DemoForm({
               />
               <input
                 id="demo-company-website"
+                name="companyWebsite"
                 type="text"
                 required
                 placeholder="Company website"
@@ -206,6 +259,7 @@ export default function DemoForm({
               <Mail className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id="demo-work-email"
+                name="email"
                 type="email"
                 required
                 placeholder="Work email"
@@ -220,6 +274,7 @@ export default function DemoForm({
               <Phone className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id="demo-phone-number"
+                name="phone"
                 type="tel"
                 required
                 placeholder="Phone number"
@@ -234,6 +289,7 @@ export default function DemoForm({
               <Building2 className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id="demo-industry"
+                name="industry"
                 type="text"
                 required
                 placeholder="Industry"
@@ -245,7 +301,7 @@ export default function DemoForm({
               <label className="sr-only" htmlFor="demo-company-size">
                 Company size
               </label>
-              <select id="demo-company-size" required className={selectClass}>
+              <select id="demo-company-size" name="companySize" required className={selectClass}>
                 <option value="">Company size</option>
                 {companySizes.map((size) => (
                   <option key={size} value={size}>
@@ -271,6 +327,7 @@ export default function DemoForm({
               />
               <textarea
                 id="demo-requirements"
+                name="requirements"
                 rows={4}
                 required
                 placeholder="Describe your requirements"
@@ -285,6 +342,7 @@ export default function DemoForm({
               <Languages className={iconClass} size={19} strokeWidth={1.8} />
               <select
                 id="demo-language"
+                name="preferredLanguage"
                 required
                 className={`${selectClass} pl-11`}
               >
@@ -309,6 +367,7 @@ export default function DemoForm({
               <HelpCircle className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id="demo-source"
+                name="source"
                 type="text"
                 placeholder="How did you hear about BrainADZ?"
                 className={fieldClass}
@@ -359,11 +418,18 @@ export default function DemoForm({
 
             <button
               type="submit"
-              className="inline-flex h-12.5 w-full items-center justify-center gap-3 rounded-[10px] bg-[#193175] px-6 text-[14px] font-semibold text-white shadow-[0_16px_34px_rgba(60,91,155,0.25)] transition hover:-translate-y-0.5 hover:bg-[#2f4a82] md:col-span-2"
+              disabled={isSubmitting}
+              className="inline-flex h-12.5 w-full items-center justify-center gap-3 rounded-[10px] bg-[#193175] px-6 text-[14px] font-semibold text-white shadow-[0_16px_34px_rgba(60,91,155,0.25)] transition hover:-translate-y-0.5 hover:bg-[#2f4a82] disabled:cursor-not-allowed disabled:opacity-65 md:col-span-2"
             >
               <Send size={18} />
-              Submit Request
+              {isSubmitting ? "Creating Demo Access..." : "Submit Request"}
             </button>
+
+            {submitError && (
+              <p className="text-center text-[13px] text-red-600 md:col-span-2">
+                {submitError}
+              </p>
+            )}
           </form>
         </div>
       </div>

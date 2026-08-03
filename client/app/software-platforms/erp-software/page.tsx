@@ -859,7 +859,8 @@ export default function ERPSoftwarePage() {
       <DemoForm
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
-        demoHref="/demos"
+        demoType="erp"
+        demoHref="https://erp.brainadzlive.in/"
       />
     </main>
   );
