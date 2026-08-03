@@ -53,8 +53,6 @@ const EMAIL_ASSETS = {
 
   messageIcon: emailAssetUrl("message.svg"),
 
-  pageUrlIcon: emailAssetUrl("url.svg"),
-
   submittedIcon: emailAssetUrl("submitted.svg"),
 };
 
@@ -213,7 +211,6 @@ const sendEnquireNow = async (req, res) => {
       solution,
       service,
       message,
-      pageUrl,
     } = req.body;
 
 
@@ -265,12 +262,6 @@ const sendEnquireNow = async (req, res) => {
 
     const safeMessage = escapeHtml(
       message || "No message provided"
-    );
-
-    const rawPageUrl = pageUrl || "";
-
-    const safePageUrl = escapeHtml(
-      rawPageUrl || "Not available"
     );
 
 
@@ -642,15 +633,6 @@ const sendEnquireNow = async (req, res) => {
                   label: "Message:",
                   value: safeMessage,
                   isMessage: true,
-                })}
-
-
-                ${createDetailRow({
-                  icon: EMAIL_ASSETS.pageUrlIcon,
-                  label: "Page URL:",
-                  value: safePageUrl,
-                  isLink: Boolean(rawPageUrl),
-                  href: rawPageUrl || "#",
                 })}
 
 
