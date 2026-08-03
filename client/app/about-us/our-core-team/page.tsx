@@ -76,12 +76,6 @@ const projectTeam: TeamMember[] = [
     image: "/team/sde.png",
     linkedin: "https://www.linkedin.com/",
   },
-  // {
-  //   name: "Ayushman Singh",
-  //   role: "Software Developer",
-  //   image: "/team/aa1.png",
-  //   linkedin: "https://www.linkedin.com/",
-  // },
   {
     name: "Komal Kushwaha",
     role: "Designer",
@@ -98,28 +92,7 @@ const projectTeam: TeamMember[] = [
 
 const SHOW_PROJECT_TEAM = true;
 
-const values = [
-  {
-    title: "Purpose Driven",
-    desc: "We align every step with our mission and client goals.",
-    icon: Target,
-  },
-  {
-    title: "Collaborative",
-    desc: "We work together to achieve greater outcomes.",
-    icon: Users,
-  },
-  //   {
-  //     title: "Innovative",
-  //     desc: "We embrace new ideas and emerging technologies.",
-  //     icon: Lightbulb,
-  //   },
-  //   {
-  //     title: "Responsible",
-  //     desc: "We deliver with ownership, quality, and accountability.",
-  //     icon: ShieldCheck,
-  //   },
-];
+
 
 function MemberCard({
   member,
@@ -137,7 +110,7 @@ function MemberCard({
           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/5 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
 
         <a
           href={member.linkedin}
@@ -175,7 +148,7 @@ export default function OurCoreTeamPage() {
   return (
     <main className="bg-white text-[#161616]">
       {/* HERO */}
-      <section className="relative min-h-[420px] overflow-hidden bg-black text-white md:min-h-[480px] lg:min-h-[540px]">
+      <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
           src="/hero/our-team.webp"
           alt="Our Core Team"
@@ -184,7 +157,7 @@ export default function OurCoreTeamPage() {
 
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-        <div className="relative z-10 mx-auto flex min-h-[540px] max-w-[1800px] flex-col px-5 py-10 md:min-h-[600px] md:px-4 lg:min-h-[540px] lg:px-12">
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div
             className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
             data-aos="fade-up"
@@ -205,7 +178,7 @@ export default function OurCoreTeamPage() {
           </div>
 
           <div
-            className="mt-12 max-w-[820px] md:mt-14"
+            className="mt-12 max-w-205 md:mt-14"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -219,7 +192,7 @@ export default function OurCoreTeamPage() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <p className="max-w-[780px] text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
+            <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
               Leadership sets the direction, and our project teams turn plans
               into working software, platforms, digital signage and deployed
               solutions.
@@ -288,11 +261,11 @@ export default function OurCoreTeamPage() {
             </div> */}
           </div>
 
-          <div className="overflow-hidden rounded-[24px] border border-[#e6e6e6] bg-white p-3 shadow-[0_16px_60px_rgba(0,0,0,0.08)]">
+          <div className="overflow-hidden rounded-3xl border border-[#e6e6e6] bg-white p-3 shadow-[0_16px_60px_rgba(0,0,0,0.08)]">
             <img
               src="/team/team.webp"
               alt="BrainADZ Live team workspace"
-              className="h-[520px] w-full rounded-[18px] object-cover"
+              className="h-130 w-full rounded-[18px] object-cover"
             />
           </div>
         </div>
