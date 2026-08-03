@@ -270,25 +270,6 @@ export default function ATypeStandeePage() {
         </div>
       </section>
 
-      {/* QUICK HIGHLIGHTS */}
-      <section className="bg-white px-5 py-10 md:px-4 lg:px-12">
-        <div className="mx-auto grid max-w-450 gap-6 border-b border-black/10 pb-10 md:grid-cols-4">
-          {[
-            "Digital Content Display",
-            "Video & Image Playback",
-            "Custom Enclosure Branding",
-            "Software Options",
-          ].map((item) => (
-            <div key={item} className="flex items-center gap-4">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#193175]/10">
-                <CheckCircle2 size={23} className="text-[#193175]" />
-              </span>
-              <p className="text-[16px] font-light text-black/75">{item}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* PRODUCT OVERVIEW */}
       <section className="bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-22">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">

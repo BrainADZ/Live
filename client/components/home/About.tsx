@@ -15,7 +15,7 @@ const stats = [
 export default function AboutSection() {
   return (
     <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-10 lg:px-12">
-      <div className="mx-auto max-w-425">
+      <div className="mx-auto w-full max-w-[1800px]">
         {/* MAIN HEADING */}
         <h2
           className="max-w-262.5 text-[40px] font-normal leading-[1.05] tracking-[-2px] md:text-[48px] lg:text-[55px]"

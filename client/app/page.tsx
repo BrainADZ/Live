@@ -38,7 +38,7 @@ export default function Home() {
 
         {/* DIVIDER */}
         <div
-          className="mx-auto mt-4 h-px w-full max-w-450 bg-[#d0d0d0] px-4 md:px-12"
+          className="mx-auto mt-4 h-px w-full max-w-[1800px] bg-[#d0d0d0] px-4 md:px-12"
           data-aos="fade-up"
         />
         <NewsSection />

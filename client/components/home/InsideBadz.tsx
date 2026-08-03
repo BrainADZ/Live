@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 export default function InsideBadzSection() {
   return (
-    <section className="lazy-section mx-auto max-w-450 bg-white px-6 py-22.5 text-[#161616] md:px-10 lg:px-12">
+    <section className="lazy-section mx-auto w-full max-w-[1800px] bg-white px-6 py-22.5 text-[#161616] md:px-10 lg:px-12">
       <div>
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.05fr_1fr_1fr_1fr] lg:gap-20">
           {/* LEFT HEADING */}

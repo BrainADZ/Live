@@ -1,0 +1,68 @@
+import type { MetadataRoute } from "next";
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.in";
+
+const routes = [
+  "",
+  "/about-us",
+  "/about-us/how-we-work-and-function",
+  "/about-us/our-core-team",
+  "/about-us/overview",
+  "/blog",
+  "/careers",
+  "/case-studies",
+  "/community",
+  "/consulting",
+  "/contact-us",
+  "/demos",
+  "/digital-signage-products",
+  "/digital-signage-products/a-type-standee",
+  "/digital-signage-products/d-type-standee",
+  "/digital-signage-products/floor-mounted-standee",
+  "/digital-signage-products/interactive-panel",
+  "/digital-signage-products/led-display",
+  "/digital-signage-products/lfd-display",
+  "/digital-signage-products/self-ordering-kiosk",
+  "/digital-signage-products/vertical-mobile-charging-digital-kiosk",
+  "/digital-signage-products/wall-mounted-standee",
+  "/industries",
+  "/industries/automotive",
+  "/industries/education-tech",
+  "/industries/facility-management",
+  "/industries/finance-tech",
+  "/industries/health-care",
+  "/industries/insurance-tech",
+  "/industries/media-entertainment",
+  "/industries/property-tech",
+  "/industries/retail",
+  "/industries/telecom",
+  "/industries/transport",
+  "/industries/travel-hospitality",
+  "/software-platforms",
+  "/software-platforms/cloud-signage-software",
+  "/software-platforms/crm-software",
+  "/software-platforms/erp-software",
+  "/software-platforms/pos",
+  "/software-platforms/signage-application",
+  "/software-services",
+  "/software-services/api-integration",
+  "/software-services/application-modernization",
+  "/software-services/cloud-consulting",
+  "/software-services/crm-development",
+  "/software-services/enterprise-software-solutions",
+  "/software-services/erp-development",
+  "/software-services/mobile-app-development",
+  "/software-services/saas-development",
+  "/software-services/software-development",
+  "/software-services/ui-ux-design",
+  "/software-services/web-app-development",
+] as const;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return routes.map((route) => ({
+    url: `${siteUrl}${route}`,
+    changeFrequency: route === "" ? "weekly" : "monthly",
+    priority: route === "" ? 1 : route.split("/").length === 2 ? 0.8 : 0.7,
+  }));
+}

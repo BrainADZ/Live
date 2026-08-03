@@ -519,7 +519,7 @@ export default function SignageApplicationPage() {
           }}
         />
 
-        <div className="mx-auto max-w-375">
+        <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Workflow

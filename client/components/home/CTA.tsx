@@ -7,7 +7,7 @@ export default function CtaSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <section className="lazy-section bg-white py-8">
-      <div className="mx-auto max-w-450 px-4 lg:px-10">
+      <div className="mx-auto w-full max-w-[1800px] px-4 lg:px-10">
         <div
           className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
           data-aos="zoom-in"

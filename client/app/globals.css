@@ -6,6 +6,21 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Keep every section's primary content edge aligned with the 1800px shell. */
+section > div.mx-auto,
+section.mx-auto {
+  width: 100%;
+  max-width: 1800px;
 }
 
 html:not(.aos-ready) [data-aos] {

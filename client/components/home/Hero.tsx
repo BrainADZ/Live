@@ -48,7 +48,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02)_0%,rgba(0,0,0,0.08)_58%,rgba(0,0,0,0.45)_100%)]" />
 
       {/* MAIN CONTENT WRAPPER */}
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-72px)] max-w-450 items-end justify-between gap-10 px-6 pb-27 md:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-72px)] w-full max-w-[1800px] items-end justify-between gap-10 px-6 pb-27 md:px-10">
         {/* LEFT CONTAINER */}
         <div
           className="w-full max-w-132.5"

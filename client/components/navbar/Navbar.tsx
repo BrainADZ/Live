@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
 import Link from "next/link";
 import {
   ChevronDown,
@@ -567,12 +566,12 @@ export default function Navbar() {
                   ))}
                 </div>
 
-                <div className="rounded-[10px] bg-[#f6f8fc] px-4 py-3">
+                {/* <div className="rounded-[10px] bg-[#f6f8fc] px-4 py-3">
                   <p className="text-[13px] font-light leading-[1.55] text-black/65">
                     Client login dashboard can be added later when admin/client
                     panel is ready.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -678,7 +677,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed left-0 top-21 z-40 h-[calc(100dvh-84px)] w-full overflow-y-auto bg-white/90 backdrop-blur-xl transition-all duration-300 xl:hidden ${
+        className={`fixed inset-x-0 top-21 z-40 h-[calc(100dvh-84px)] w-auto overflow-x-hidden overflow-y-auto bg-white/90 backdrop-blur-xl transition-all duration-300 xl:hidden ${
           mobileOpen
             ? "visible translate-x-0 opacity-100"
             : "invisible translate-x-full opacity-0"
