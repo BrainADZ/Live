@@ -76,13 +76,12 @@ const projectTeam: TeamMember[] = [
     image: "/team/sde.png",
     linkedin: "https://www.linkedin.com/",
   },
-  {
-    name: "Ayushman Singh",
-    role: "Software Developer",
-    image: "/team/aa1.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-
+  // {
+  //   name: "Ayushman Singh",
+  //   role: "Software Developer",
+  //   image: "/team/aa1.png",
+  //   linkedin: "https://www.linkedin.com/",
+  // },
   {
     name: "Komal Kushwaha",
     role: "Designer",
