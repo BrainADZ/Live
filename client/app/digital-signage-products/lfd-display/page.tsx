@@ -6,10 +6,9 @@ import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
-  CheckCircle2,
+  Download,
   Minus,
   Plus,
-  Download,
 } from "lucide-react";
 
 const benefits = [
@@ -59,12 +58,32 @@ const specifications = [
 ];
 
 const useCases = [
-  "Retail & Showrooms",
-  "Corporate Offices",
-  "Reception & Visitor Areas",
-  "Shopping Malls",
-  "Education & Training Spaces",
-  "Hotels & Hospitality",
+  {
+    title: "Retail & Showrooms",
+    iconSrc: "/signage-products/retail-stores.svg",
+  },
+  {
+    title: "Corporate Offices",
+    iconSrc: "/signage-products/corporate-reception.svg",
+  },
+  {
+    title: "Reception & Visitor Areas",
+    iconSrc:
+      "/signage-products/reception-areas.svg",
+  },
+  {
+    title: "Shopping Malls",
+    iconSrc: "/signage-products/shopping-malls.svg",
+  },
+  {
+    title: "Education & Training Spaces",
+    iconSrc:
+      "/signage-products/education-training-spaces.svg",
+  },
+  {
+    title: "Hotels & Hospitality",
+    iconSrc: "/signage-products/hospitality.svg",
+  },
 ];
 
 const features = [
@@ -329,16 +348,20 @@ export default function LFDDisplayPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {useCases.map((item) => (
               <div
-                key={item}
+                key={item.title}
                 className="group rounded-3xl border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
               >
-                <CheckCircle2
-                  size={26}
-                  className="mb-5 text-[#193175]"
-                />
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
                 <h3 className="text-[21px] font-normal tracking-[-0.4px]">
-                  {item}
+                  {item.title}
                 </h3>
               </div>
             ))}
@@ -446,7 +469,7 @@ export default function LFDDisplayPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="LFD Display solution showcase"
                 loading="lazy"
                 decoding="async"

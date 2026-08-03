@@ -1,6 +1,6 @@
 "use client";
 
-import { Eye, Target } from "lucide-react";
+/* eslint-disable @next/next/no-img-element */
 
 const cards = [
   {
@@ -8,7 +8,7 @@ const cards = [
     title: "Turn business requirements into practical technology systems",
     description:
       "Our mission is to understand how businesses work and translate those requirements into software, platforms and digital experiences that are clear, usable and ready for real operations.",
-    icon: Target,
+    iconSrc: "/about/icons/mission.svg",
     points: [
       "Understand the workflow before building",
       "Connect technology to practical requirements",
@@ -20,7 +20,7 @@ const cards = [
     title: "Become a trusted partner for connected digital solutions",
     description:
       "Our vision is to help businesses bring software, platforms, integrations and physical digital experiences together through thoughtful technology planning and dependable delivery.",
-    icon: Eye,
+    iconSrc: "/about/icons/vision.svg",
     points: [
       "Create better connected digital systems",
       "Support long-term technology decisions",
@@ -62,65 +62,67 @@ export default function MissionVision() {
 
         {/* MISSION VISION CARDS */}
         <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-2">
-          {cards.map((card, index) => {
-            const Icon = card.icon;
+          {cards.map((card, index) => (
+            <div
+              key={card.type}
+              data-aos="card-reveal"
+              data-aos-delay={index * 120}
+              data-aos-duration="520"
+              className="group relative flex min-h-130 overflow-hidden rounded-[20px] border border-[#dfe6f1] bg-white p-8 shadow-[0_20px_70px_rgba(22,22,22,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_90px_rgba(22,22,22,0.08)] md:p-10 lg:p-12"
+            >
+              <div className="absolute -right-20 -top-20 h-55 w-55 rounded-full bg-[#193175]/[0.07] transition duration-500 group-hover:scale-125" />
 
-            return (
-              <div
-                key={card.type}
-                data-aos="card-reveal"
-                data-aos-delay={index * 120}
-                data-aos-duration="520"
-                className="group relative flex min-h-130 overflow-hidden rounded-[20px] border border-[#dfe6f1] bg-white p-8 shadow-[0_20px_70px_rgba(22,22,22,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_90px_rgba(22,22,22,0.08)] md:p-10 lg:p-12"
-              >
-                <div className="absolute -right-20 -top-20 h-55 w-55 rounded-full bg-[#193175]/[0.07] transition duration-500 group-hover:scale-125" />
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
 
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
+              <div className="relative z-10 flex w-full flex-col">
+                {/* TOP ROW */}
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+                      {card.type}
+                    </p>
 
-                <div className="relative z-10 flex w-full flex-col">
-                  {/* TOP ROW */}
-                  <div className="flex items-start justify-between gap-6">
-                    <div>
-                      <p className="text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-                        {card.type}
+                    <h3 className="mt-5 max-w-155 text-[32px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px] lg:min-h-38 lg:text-[44px]">
+                      {card.title}
+                    </h3>
+                  </div>
+
+                  {/* MANUAL SVG ICON */}
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={card.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
+                </div>
+
+                {/* DESCRIPTION */}
+                <p className="mt-7 max-w-180 text-[16px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[18px] lg:min-h-32.5">
+                  {card.description}
+                </p>
+
+                {/* POINTS */}
+                <div className="mt-auto space-y-4 pt-8">
+                  {card.points.map((point, pointIndex) => (
+                    <div
+                      key={point}
+                      className="flex items-center gap-4 border-t border-[#e8edf5] pt-4 first:border-t-0 first:pt-0"
+                    >
+                      <span className="flex h-7.5 w-7.5 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-light text-[#193175]">
+                        {pointIndex + 1}
+                      </span>
+
+                      <p className="text-[15px] font-light leading-[1.6] text-[#616161] md:text-[16px]">
+                        {point}
                       </p>
-
-                      <h3 className="mt-5 max-w-155 text-[32px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px] lg:min-h-38 lg:text-[44px]">
-                        {card.title}
-                      </h3>
                     </div>
-
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
-                      <Icon size={30} strokeWidth={1.45} />
-                    </div>
-                  </div>
-
-                  {/* DESCRIPTION */}
-                  <p className="mt-7 max-w-180 text-[16px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[18px] lg:min-h-32.5">
-                    {card.description}
-                  </p>
-
-                  {/* POINTS */}
-                  <div className="mt-auto space-y-4 pt-8">
-                    {card.points.map((point, pointIndex) => (
-                      <div
-                        key={point}
-                        className="flex items-center gap-4 border-t border-[#e8edf5] pt-4 first:border-t-0 first:pt-0"
-                      >
-                        <span className="flex h-7.5 w-7.5 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-light text-[#193175]">
-                          {pointIndex + 1}
-                        </span>
-
-                        <p className="text-[15px] font-light leading-[1.6] text-[#616161] md:text-[16px]">
-                          {point}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                  ))}
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

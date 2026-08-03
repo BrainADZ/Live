@@ -6,10 +6,9 @@ import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
 import {
-  CheckCircle2,
+  Download,
   Minus,
   Plus,
-  Download,
 } from "lucide-react";
 
 const benefits = [
@@ -59,12 +58,36 @@ const specifications = [
 ];
 
 const useCases = [
-  "Schools",
-  "Colleges",
-  "Coaching Centers",
-  "Training Rooms",
-  "Corporate Learning",
-  "Smart Classrooms",
+  {
+    title: "Schools",
+    iconSrc:
+      "/signage-products/schools.svg",
+  },
+  {
+    title: "Colleges",
+    iconSrc:
+      "/signage-products/colleges.svg",
+  },
+  {
+    title: "Coaching Centers",
+    iconSrc:
+      "/signage-products/coaching-centers.svg",
+  },
+  {
+    title: "Training Rooms",
+    iconSrc:
+      "/signage-products/education-training-spaces.svg",
+  },
+  {
+    title: "Corporate Learning",
+    iconSrc:
+      "/signage-products/corporate-learning.svg",
+  },
+  {
+    title: "Smart Classrooms",
+    iconSrc:
+      "/signage-products/smart-classrooms.svg",
+  },
 ];
 
 const features = [
@@ -330,16 +353,20 @@ export default function InteractiveTeachingDisplayPage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {useCases.map((item) => (
               <div
-                key={item}
+                key={item.title}
                 className="group rounded-3xl border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
               >
-                <CheckCircle2
-                  size={26}
-                  className="mb-5 text-[#193175]"
-                />
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
                 <h3 className="text-[21px] font-light tracking-[-0.4px]">
-                  {item}
+                  {item.title}
                 </h3>
               </div>
             ))}
@@ -447,7 +474,7 @@ export default function InteractiveTeachingDisplayPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="Interactive Teaching Display for learning and training spaces"
                 loading="lazy"
                 decoding="async"

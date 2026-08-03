@@ -76,13 +76,12 @@ const projectTeam: TeamMember[] = [
     image: "/team/sde.png",
     linkedin: "https://www.linkedin.com/",
   },
-  {
-    name: "Ayushman Singh",
-    role: "Software Developer",
-    image: "/team/aa1.png",
-    linkedin: "https://www.linkedin.com/",
-  },
-
+  // {
+  //   name: "Ayushman Singh",
+  //   role: "Software Developer",
+  //   image: "/team/aa1.png",
+  //   linkedin: "https://www.linkedin.com/",
+  // },
   {
     name: "Komal Kushwaha",
     role: "Designer",
@@ -358,7 +357,7 @@ export default function OurCoreTeamPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Team"
                 loading="lazy"
                 decoding="async"

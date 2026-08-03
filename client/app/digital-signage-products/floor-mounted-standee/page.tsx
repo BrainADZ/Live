@@ -44,12 +44,36 @@ const specifications = [
 ];
 
 const applications = [
-  "Retail Stores",
-  "Shopping Malls",
-  "Corporate & Reception",
-  "Healthcare Facilities",
-  "Events & Exhibitions",
-  "Hotels & Hospitality",
+  {
+    title: "Retail Stores",
+    iconSrc:
+      "/signage-products/retail-stores.svg",
+  },
+  {
+    title: "Shopping Malls",
+    iconSrc:
+      "/signage-products/shopping-malls.svg",
+  },
+  {
+    title: "Corporate & Reception",
+    iconSrc:
+      "/signage-products/corporate-reception.svg",
+  },
+  {
+    title: "Healthcare Facilities",
+    iconSrc:
+      "/signage-products/healthcare-facilities.svg",
+  },
+  {
+    title: "Events & Exhibitions",
+    iconSrc:
+      "/signage-products/events-exhibitions.svg",
+  },
+  {
+    title: "Hotels & Hospitality",
+    iconSrc:
+      "/signage-products/hospitality.svg",
+  },
 ];
 
 const features = [
@@ -372,13 +396,20 @@ export default function FloorMountedStandeePage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {applications.map((item) => (
               <div
-                key={item}
+                key={item.title}
                 className="group rounded-3xl border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
               >
-                <CheckCircle2 size={26} className="mb-5 text-[#193175]" />
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
                 <h3 className="text-[21px] font-normal tracking-[-0.4px]">
-                  {item}
+                  {item.title}
                 </h3>
               </div>
             ))}
@@ -538,7 +569,7 @@ export default function FloorMountedStandeePage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="Floor Mounted Digital Standee showcase"
                 loading="lazy"
                 decoding="async"

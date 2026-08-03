@@ -5,19 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  Boxes,
-  Database,
-  Gauge,
-  Layers3,
+  Download,
   Minus,
   Plus,
-  Download,
-  Search,
-  ShieldCheck,
-  ShoppingCart,
-  Users,
-  WalletCards,
-  Workflow,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
@@ -26,22 +16,22 @@ const modules = [
   {
     title: "Finance & Accounts",
     text: "Manage invoices, expenses, account records and financial summaries through the configured ERP workflow.",
-    icon: WalletCards,
+    iconSrc: "/icons/erp-software/modules/finance-accounts.svg",
   },
   {
     title: "Inventory & Stock",
     text: "Organize products, stock movement, warehouse records and inventory requirements in one module.",
-    icon: Boxes,
+    iconSrc: "/icons/erp-software/modules/inventory-stock.svg",
   },
   {
     title: "HR & Employee Records",
     text: "Maintain employee information, departments, roles and configured attendance or leave workflows.",
-    icon: Users,
+    iconSrc: "/icons/erp-software/modules/hr-employee-records.svg",
   },
   {
     title: "Purchase & Sales",
     text: "Manage purchase orders, sales orders, vendors, customers and related approval stages.",
-    icon: ShoppingCart,
+    iconSrc: "/icons/erp-software/modules/purchase-sales.svg",
   },
 ];
 
@@ -87,32 +77,34 @@ const workflowSteps = [
   {
     title: "Business Process Discovery",
     text: "We study departments, workflows, responsibilities, approval needs, data sources and reporting requirements.",
-    icon: Search,
+    iconSrc: "/icons/erp-software/workflow/business-process-discovery.svg",
   },
   {
     title: "ERP Structure Planning",
     text: "We plan the module structure, user access, data relationships and required system connections.",
-    icon: Layers3,
+    iconSrc: "/icons/erp-software/workflow/erp-structure-planning.svg",
   },
   {
     title: "Module & Workflow Mapping",
     text: "We define the required finance, HR, inventory, procurement, sales and operational workflows.",
-    icon: Workflow,
+    iconSrc:
+      "/icons/erp-software/workflow/module-workflow-mapping.svg",
   },
   {
     title: "Platform Configuration",
     text: "The required ERP modules, dashboards, workflows and integrations are configured or developed for the project.",
-    icon: Database,
+    iconSrc: "/icons/erp-software/workflow/platform-configuration.svg",
   },
   {
     title: "Testing & Data Preparation",
     text: "We test configured processes and prepare required data or migration activities according to the agreed scope.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/icons/erp-software/workflow/testing-data-preparation.svg",
   },
   {
     title: "Deployment & Handover",
     text: "The ERP is deployed with implementation guidance and handover according to the agreed project scope.",
-    icon: Gauge,
+    iconSrc: "/icons/erp-software/workflow/deployment-handover.svg",
   },
 ];
 
@@ -364,31 +356,29 @@ export default function ERPSoftwarePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {modules.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={27}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {modules.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -515,40 +505,37 @@ export default function ERPSoftwarePage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {workflowSteps.map((item, index) => {
-                const Icon = item.icon;
+              {workflowSteps.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== workflowSteps.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
 
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== workflowSteps.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
 
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
-                        />
-                      </div>
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
 
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -622,36 +609,33 @@ export default function ERPSoftwarePage() {
               />
             </svg>
 
-            {workflowLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
-                  style={{
-                    left: item.left,
-                    top: item.top,
-                  }}
-                >
-                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
-                    />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
+            {workflowLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                style={{
+                  left: item.left,
+                  top: item.top,
+                }}
+              >
+                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -837,7 +821,7 @@ export default function ERPSoftwarePage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="ERP Software platform by BrainADZ Live"
                 loading="lazy"
                 decoding="async"

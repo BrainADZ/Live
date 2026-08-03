@@ -5,36 +5,15 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  Bell,
   Boxes,
-  BriefcaseBusiness,
-  Bug,
   CheckCircle2,
-  Code2,
   Database,
-  Gauge,
-  GraduationCap,
-  HeartPulse,
-  Landmark,
-  Layers3,
-  LifeBuoy,
-  LockKeyhole,
   Minus,
-  MonitorCog,
   MonitorSmartphone,
   Network,
-  PackageCheck,
   Plus,
-  Rocket,
-  Search,
   ServerCog,
-  ShieldCheck,
-  ShoppingCart,
-  Store,
-  TabletSmartphone,
-  Truck,
   Users,
-  Workflow,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries"
 import PopupForm from "@/components/PopupForm";
@@ -50,32 +29,38 @@ const workflow = [
   {
     title: "Discovery & Workflow Mapping",
     text: "We understand your users, business processes, data needs, existing systems and the actions the web app needs to support.",
-    icon: Search,
+    iconSrc:
+      "/icons/web-app-development/workflow/discovery-workflow-mapping.svg",
   },
   {
     title: "UX & Interface Planning",
     text: "We map user journeys, screen structure and responsive layouts before development begins.",
-    icon: TabletSmartphone,
+    iconSrc:
+      "/icons/web-app-development/workflow/ux-interface-planning.svg",
   },
   {
     title: "Architecture & Integration Planning",
     text: "We define frontend, backend, database, APIs, access control and deployment requirements around the project scope.",
-    icon: Workflow,
+    iconSrc:
+      "/icons/web-app-development/workflow/architecture-integration-planning.svg",
   },
   {
     title: "Web App Development",
     text: "We build the frontend, backend, business logic, dashboards and integrations required for the application.",
-    icon: Code2,
+    iconSrc:
+      "/icons/web-app-development/workflow/web-app-development.svg",
   },
   {
     title: "Testing & Release Validation",
     text: "We test workflows, permissions, responsiveness, browser behavior, integrations and performance before release.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/icons/web-app-development/workflow/testing-release-validation.svg",
   },
   {
     title: "Deployment & Ongoing Improvement",
     text: "We deploy the web app and continue with issue resolution, updates and improvements as requirements evolve.",
-    icon: Rocket,
+    iconSrc:
+      "/icons/web-app-development/workflow/deployment-ongoing-improvement.svg",
   },
 ];
 
@@ -92,32 +77,34 @@ const challenges = [
   {
     title: "Slow or Unstable Performance",
     text: "Heavy pages, inefficient queries and weak backend logic can make everyday tasks frustrating for users.",
-    icon: Gauge,
+    iconSrc:
+      "/icons/web-app-development/challenges/slow-or-unstable-performance.svg",
   },
   {
     title: "Rigid Architecture",
     text: "Poorly planned systems become difficult to extend when users, data, workflows or integrations increase.",
-    icon: Layers3,
+    iconSrc: "/icons/web-app-development/challenges/rigid-architecture.svg",
   },
   {
     title: "Weak Access Control",
     text: "Unclear permissions and unprotected endpoints can expose business data or allow the wrong actions.",
-    icon: LockKeyhole,
+    iconSrc: "/icons/web-app-development/challenges/weak-access-control.svg",
   },
   {
     title: "Disconnected Business Tools",
     text: "Manual movement of data between web apps, payment systems, CRM, ERP and other tools creates repeated work.",
-    icon: Network,
+    iconSrc:
+      "/icons/web-app-development/challenges/disconnected-business-tools.svg",
   },
   {
     title: "Confusing User Flows",
     text: "Complex navigation and inconsistent screens make it harder for users to complete tasks accurately.",
-    icon: MonitorSmartphone,
+    iconSrc: "/icons/web-app-development/challenges/confusing-user-flows.svg",
   },
   {
     title: "Difficult Maintenance",
     text: "Unstructured code and outdated dependencies make fixes, releases and future development harder to manage.",
-    icon: MonitorCog,
+    iconSrc: "/icons/web-app-development/challenges/difficult-maintenance.svg",
   },
 ];
 
@@ -125,32 +112,38 @@ const services = [
   {
     title: "Custom Business Web Apps",
     text: "Browser-based applications built around your workflows, users, data and operational requirements.",
-    icon: Code2,
+    iconSrc:
+      "/icons/web-app-development/services/custom-business-web-apps.svg",
   },
   {
     title: "Customer & Partner Portals",
     text: "Secure self-service portals for accounts, requests, documents, orders, status updates and communication.",
-    icon: BriefcaseBusiness,
+    iconSrc:
+      "/icons/web-app-development/services/customer-partner-portals.svg",
   },
   {
     title: "Progressive Web Applications",
     text: "Responsive web experiences with app-like behavior for users who need access across devices.",
-    icon: TabletSmartphone,
+    iconSrc:
+      "/icons/web-app-development/services/progressive-web-applications.svg",
   },
   {
     title: "Backend & API Integration",
     text: "Connect the web app with databases, payment systems and approved third-party or internal APIs.",
-    icon: Network,
+    iconSrc:
+      "/icons/web-app-development/services/backend-api-integration.svg",
   },
   {
     title: "Web App Modernization",
     text: "Improve outdated interfaces, workflows, performance and application structure without rebuilding more than needed.",
-    icon: LifeBuoy,
+    iconSrc:
+      "/icons/web-app-development/services/web-app-modernization.svg",
   },
   {
     title: "Web App Support & Enhancement",
     text: "Resolve issues, improve existing workflows and add features as the application continues to evolve.",
-    icon: MonitorSmartphone,
+    iconSrc:
+      "/icons/web-app-development/services/web-app-support-enhancement.svg",
   },
 ];
 
@@ -188,14 +181,46 @@ const architectureLayers = [
 ];
 
 const useCases = [
-  { title: "Operations Management Systems", icon: Workflow },
-  { title: "Admin & Management Dashboards", icon: MonitorCog },
-  { title: "Customer & Partner Portals", icon: Users },
-  { title: "Order & Commerce Platforms", icon: ShoppingCart },
-  { title: "Booking & Scheduling Systems", icon: Bell },
-  { title: "Multi-Role Internal Applications", icon: BriefcaseBusiness },
-  { title: "Reporting & Analytics Platforms", icon: Gauge },
-  { title: "Workflow & Approval Applications", icon: Layers3 },
+  {
+    title: "Operations Management Systems",
+    iconSrc:
+      "/icons/web-app-development/use-cases/operations-management-systems.svg",
+  },
+  {
+    title: "Admin & Management Dashboards",
+    iconSrc:
+      "/icons/web-app-development/use-cases/admin-management-dashboards.svg",
+  },
+  {
+    title: "Customer & Partner Portals",
+    iconSrc:
+      "/icons/web-app-development/use-cases/customer-partner-portals.svg",
+  },
+  {
+    title: "Order & Commerce Platforms",
+    iconSrc:
+      "/icons/web-app-development/use-cases/order-commerce-platforms.svg",
+  },
+  {
+    title: "Booking & Scheduling Systems",
+    iconSrc:
+      "/icons/web-app-development/use-cases/booking-scheduling-systems.svg",
+  },
+  {
+    title: "Multi-Role Internal Applications",
+    iconSrc:
+      "/icons/web-app-development/use-cases/multi-role-internal-applications.svg",
+  },
+  {
+    title: "Reporting & Analytics Platforms",
+    iconSrc:
+      "/icons/web-app-development/use-cases/reporting-analytics-platforms.svg",
+  },
+  {
+    title: "Workflow & Approval Applications",
+    iconSrc:
+      "/icons/web-app-development/use-cases/workflow-approval-applications.svg",
+  },
 ];
 
 const caseStudies = [
@@ -252,22 +277,25 @@ const supportItems = [
   {
     title: "Issue Resolution",
     text: "Investigate application errors, failed workflows and browser-specific problems that affect users.",
-    icon: Bug,
+    iconSrc: "/icons/web-app-development/support/issue-resolution.svg",
   },
   {
     title: "Performance Improvement",
     text: "Review page loading, API response times, database queries and other application bottlenecks.",
-    icon: Gauge,
+    iconSrc:
+      "/icons/web-app-development/support/performance-improvement.svg",
   },
   {
     title: "Security & Access Updates",
     text: "Maintain authentication, permissions, dependencies and protected application endpoints.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/icons/web-app-development/support/security-access-updates.svg",
   },
   {
     title: "Workflow & Feature Enhancements",
     text: "Improve existing flows and add new modules as users and business requirements change.",
-    icon: PackageCheck,
+    iconSrc:
+      "/icons/web-app-development/support/workflow-feature-enhancements.svg",
   },
 ];
 
@@ -282,10 +310,10 @@ const techStack: Record<TabType, StackItem[]> = {
   frontend: [
     { name: "React", icon: "/icons/React.svg" },
     { name: "Next.js", icon: "/icons/Next.js.svg" },
-    { name: "Vue.js", icon: "/icons/Vue.svg" },
+    { name: "Vue.js", icon: "/icons/Vue.js.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
     { name: "JavaScript", icon: "/icons/JavaScript.svg" },
-    { name: "Tailwind CSS", icon: "/icons/Tailwind.svg" },
+    { name: "Tailwind CSS", icon: "/icons/TailwindCSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
@@ -309,7 +337,7 @@ const techStack: Record<TabType, StackItem[]> = {
     { name: "Google Cloud", icon: "/icons/GoogleCloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
-    { name: "GitHub Actions", icon: "/icons/Github.svg" },
+    { name: "GitHub Actions", icon: "/icons/GithubActions.svg" },
   ],
 };
 
@@ -429,45 +457,50 @@ export default function WebAppDevelopmentPage() {
               {
                 title: "Clear User Workflows",
                 text: "Responsive interfaces that help users complete important tasks with less friction.",
-                icon: MonitorSmartphone,
+                iconSrc:
+                  "/icons/web-app-development/overview/clear-user-workflows.svg",
               },
               {
                 title: "Maintainable Structure",
                 text: "Application architecture planned for future users, data, features and integrations.",
-                icon: Layers3,
+                iconSrc:
+                  "/icons/web-app-development/overview/maintainable-structure.svg",
               },
               {
                 title: "Controlled Access",
                 text: "Authentication, role permissions and protected data flows built around user responsibilities.",
-                icon: ShieldCheck,
+                iconSrc:
+                  "/icons/web-app-development/overview/controlled-access.svg",
               },
               {
                 title: "Connected Systems",
                 text: "Integrations that reduce repeated work between the web app and the tools your business already uses.",
-                icon: Rocket,
+                iconSrc:
+                  "/icons/web-app-development/overview/connected-systems.svg",
               },
-            ].map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-[28px] border border-black/10 bg-[#f8faff] p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
-                >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#193175]/10">
-                    <Icon size={26} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="text-[21px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[28px] border border-black/10 bg-[#f8faff] p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
+              >
+                <div className="manual-icon-box mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#193175]/10">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[21px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -494,28 +527,29 @@ export default function WebAppDevelopmentPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {challenges.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10">
-                    <Icon size={24} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="text-[21px] font-normal tracking-[-0.3px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {challenges.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[26px] border border-black/10 bg-white p-6 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_70px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[21px] font-normal tracking-[-0.3px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -534,28 +568,29 @@ export default function WebAppDevelopmentPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_70px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {services.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_70px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -590,35 +625,36 @@ export default function WebAppDevelopmentPage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {workflow.map((item, index) => {
-                const Icon = item.icon;
+              {workflow.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== workflow.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
 
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
 
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
-                      </div>
-
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -651,29 +687,30 @@ export default function WebAppDevelopmentPage() {
               <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
             </svg>
 
-            {workflowLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
-                >
-                  <div className="mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
+            {workflowLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
+                style={{ left: item.left, top: item.top }}
+              >
+                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -757,19 +794,20 @@ export default function WebAppDevelopmentPage() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {useCases.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div key={item.title} className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]">
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon size={24} className="text-[#193175] transition group-hover:text-white" />
-                  </div>
-
-                  <h3 className="text-[20px] font-normal tracking-[-0.3px]">{item.title}</h3>
+            {useCases.map((item) => (
+              <div key={item.title} className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]">
+                <div className="manual-icon-box mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[20px] font-normal tracking-[-0.3px]">{item.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -971,27 +1009,28 @@ export default function WebAppDevelopmentPage() {
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
-            {supportItems.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
-                    <Icon size={28} className="text-[#193175]" />
-                  </div>
-
-                  <div>
-                    <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                      {item.text}
-                    </p>
-                  </div>
+            {supportItems.map((item) => (
+              <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
+                <div className="manual-icon-box flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <div>
+                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                    {item.text}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1047,7 +1086,7 @@ export default function WebAppDevelopmentPage() {
                                   <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                                     <div className="hidden w-[32%] shrink-0 md:block">
                                       <img
-                                        src="/CTA/WebApp-CTA.jpg"
+                                        src="/CTA/cta.webp"
                                         alt="BrainADZ Live Web App Development Services"
                                         loading="lazy"
                                         decoding="async"

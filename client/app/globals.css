@@ -120,3 +120,42 @@ html.aos-ready .minimal-scroll-reveal [data-aos][data-aos-delay].aos-animate {
     transition: none !important;
   }
 }
+
+/* Manual SVG icon wrapper */
+.manual-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  overflow: visible;
+}
+
+/* Manual SVG icon */
+.manual-icon {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+
+  object-fit: contain;
+  object-position: center;
+
+  transform: scale(1.08);
+  transform-origin: center;
+
+  filter: none !important;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover par halka zoom */
+.group:hover .manual-icon {
+  transform: scale(1.15);
+}

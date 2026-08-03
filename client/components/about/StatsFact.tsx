@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  BriefcaseBusiness,
-  Code2,
-  MonitorSmartphone,
-  PanelsTopLeft,
-  PlugZap,
-} from "lucide-react";
+/* eslint-disable @next/next/no-img-element */
+
 import StatsSection from "../home/Stats";
 
 const services = [
@@ -14,35 +9,35 @@ const services = [
     title: "Software Services",
     description:
       "Custom software, mobile apps, web applications, SaaS products and enterprise systems built around business requirements.",
-    icon: Code2,
+    iconSrc: "/about/icons/software-services.svg",
     href: "/software-services",
   },
   {
     title: "Software Platforms",
     description:
       "CRM, ERP, signage applications, cloud signage software and interactive retail platforms.",
-    icon: PanelsTopLeft,
+    iconSrc: "/about/icons/software-platforms.svg",
     href: "/software-platforms",
   },
   {
     title: "Digital Signage Products",
     description:
       "Digital standees, kiosks, LFD displays, LED displays and interactive teaching displays for physical spaces.",
-    icon: MonitorSmartphone,
+    iconSrc: "/about/icons/digital-signage-product.svg",
     href: "/digital-signage-products",
   },
   {
     title: "Technology Consulting",
     description:
       "Planning for software, platforms, integrations, modernization and digital customer environments.",
-    icon: BriefcaseBusiness,
+    iconSrc: "/about/icons/technology-consulting.svg",
     href: "/consulting",
   },
   {
     title: "Integration & Modernization",
     description:
       "Connect existing systems, improve older applications and prepare technology environments for future requirements.",
-    icon: PlugZap,
+    iconSrc: "/about/icons/integration-modernization.svg",
     href: "/software-services/api-integration",
   },
 ];
@@ -77,31 +72,33 @@ export default function FastFacts() {
 
           {/* RIGHT SERVICES */}
           <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, index) => {
-              const Icon = service.icon;
+            {services.map((service, index) => (
+              <div
+                key={service.title}
+                className="group max-w-[360px]"
+                data-aos="card-reveal"
+                data-aos-delay={(index % 3) * 100}
+                data-aos-duration="520"
+              >
+                {/* MANUAL SVG ICON */}
+                <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={service.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
-              return (
-                <div
-                  key={service.title}
-                  className="group max-w-[360px]"
-                  data-aos="card-reveal"
-                  data-aos-delay={(index % 3) * 100}
-                  data-aos-duration="520"
-                >
-                  <div className="mb-5 flex h-[52px] w-[52px] items-center justify-center rounded-full border border-[#dbe3f0] bg-[#f8faff] text-[#193175] transition-all duration-300 group-hover:bg-[#193175] group-hover:text-white">
-                    <Icon size={25} strokeWidth={1.45} />
-                  </div>
+                <h4 className="text-[18px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[20px]">
+                  {service.title}
+                </h4>
 
-                  <h4 className="text-[18px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[20px]">
-                    {service.title}
-                  </h4>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.65] tracking-[-0.1px] text-[#616161] md:text-[16px]">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
+                <p className="mt-3 text-[15px] font-light leading-[1.65] tracking-[-0.1px] text-[#616161] md:text-[16px]">
+                  {service.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

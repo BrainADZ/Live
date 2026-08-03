@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -5,27 +6,15 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  Box,
-  Bug,
-  CheckCircle2,
-  Code2,
-  Gauge,
   GraduationCap,
   Hotel,
   Landmark,
-  LifeBuoy,
-  Plus,
   Minus,
-  RefreshCcw,
-  Search,
-  ShieldCheck,
+  Plus,
   ShoppingCart,
-  Star,
   Stethoscope,
   Truck,
   Factory,
-  Settings2,
-  Rocket,
 } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries"
 import PopupForm from "@/components/PopupForm";
@@ -41,32 +30,32 @@ const workflow = [
   {
     title: "Business & System Discovery",
     text: "We understand your users, workflows, existing tools, data and the operational problems the software needs to solve.",
-    icon: Search,
+    iconSrc: "/software-development/business-system-discovery.svg",
   },
   {
     title: "Solution Architecture",
     text: "We plan modules, permissions, data structure, integrations and the technical foundation required for the product.",
-    icon: Box,
+    iconSrc: "/software-development/solution-architcture.svg",
   },
   {
     title: "UX & Workflow Design",
     text: "We design screens, forms, dashboards and user flows around the tasks people need to complete every day.",
-    icon: Star,
+    iconSrc: "/software-development/ux-workflow-design.svg",
   },
   {
     title: "Software Development",
     text: "We build the required frontend, backend, business logic, APIs and integrations in planned development stages.",
-    icon: Code2,
+    iconSrc: "/software-development/software-development.svg",
   },
   {
     title: "Testing & Deployment",
     text: "We test workflows, permissions, data handling, integrations and performance before a controlled release.",
-    icon: ShieldCheck,
+    iconSrc: "/software-development/testing-deployment.svg",
   },
   {
     title: "Support & Evolution",
     text: "We monitor the software, resolve issues and improve features as users, processes and business needs change.",
-    icon: Gauge,
+    iconSrc: "/software-development/support-evolution.svg",
   },
 ];
 
@@ -146,22 +135,37 @@ const supportItems = [
   {
     title: "Application Monitoring",
     text: "We track important application, server and performance signals so issues can be identified and addressed.",
-    icon: Gauge,
+    iconSrc: "/software-development/application-monitoring.svg",
   },
   {
     title: "Issue Resolution",
     text: "We investigate bugs, errors and workflow issues that appear after the software is in real use.",
-    icon: Bug,
+    iconSrc: "/software-development/issue-resolution.svg",
   },
   {
     title: "Feature & Workflow Enhancements",
     text: "We add modules and improve existing workflows as business requirements and user needs change.",
-    icon: RefreshCcw,
+    iconSrc: "/software-development/workflow-inhancement.svg",
   },
   {
     title: "Ongoing Technical Support",
     text: "We support updates, integrations, releases and maintenance required to keep the software useful over time.",
-    icon: LifeBuoy,
+    iconSrc: "/software-development/technical-support.svg",
+  },
+];
+
+const supportHighlights = [
+  {
+    title: "Updates",
+    iconSrc: "/software-development/updates.svg",
+  },
+  {
+    title: "Monitoring",
+    iconSrc: "/software-development/monitoring.svg",
+  },
+  {
+    title: "Security",
+    iconSrc: "/software-development/security.svg",
   },
 ];
 
@@ -470,7 +474,7 @@ export default function SoftwareDevelopmentPage() {
             <div className="absolute -left-6 -top-6 h-40 w-40 rounded-full bg-[#193175]/10 blur-3xl" />
             <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/services/Software-Development-Models.avif"
+                src="/overview/software-dev.webp"
                 alt="Software development dashboard"
                 className="h-full w-full object-cover"
               />
@@ -507,8 +511,6 @@ export default function SoftwareDevelopmentPage() {
           <div className="lg:hidden">
             <div className="space-y-5">
               {workflow.map((item, index) => {
-                const Icon = item.icon;
-
                 return (
                   <div
                     key={item.title}
@@ -519,13 +521,14 @@ export default function SoftwareDevelopmentPage() {
                     )}
 
                     <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
-                        />
-                      </div>
+                      <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                       <div>
                         <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
@@ -606,21 +609,20 @@ export default function SoftwareDevelopmentPage() {
             </svg>
 
             {workflowLayout.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
                   style={{ left: item.left, top: item.top }}
                 >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
-                    />
-                  </div>
+                  <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                   <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {item.title}
@@ -751,7 +753,7 @@ export default function SoftwareDevelopmentPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/SoftwareDev-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Custom Software Development"
                 loading="lazy"
                 decoding="async"
@@ -941,16 +943,19 @@ export default function SoftwareDevelopmentPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {supportItems.map((item) => {
-              const Icon = item.icon;
-
               return (
                 <div
                   key={item.title}
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
-                  <div className="flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
-                    <Icon size={28} className="text-[#193175]" />
-                  </div>
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={item.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
 
                   <div>
                     <h3 className="text-[23px] font-normal tracking-[-0.4px]">
@@ -980,17 +985,19 @@ export default function SoftwareDevelopmentPage() {
               </div>
 
               <div className="grid gap-4 md:grid-cols-3">
-                {["Updates", "Monitoring", "Security"].map((item) => (
+                {supportHighlights.map((item) => (
                   <div
-                    key={item}
+                    key={item.title}
                     className="rounded-[22px] bg-white p-5 text-center shadow-[0_16px_45px_rgba(0,0,0,0.04)]"
                   >
-                    <CheckCircle2
-                      size={28}
-                      className="mx-auto mb-3 text-[#193175]"
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="mx-auto mb-3 h-7 w-7 object-contain"
                     />
                     <p className="text-[15px] font-light text-black/70">
-                      {item}
+                      {item.title}
                     </p>
                   </div>
                 ))}
@@ -1087,7 +1094,7 @@ export default function SoftwareDevelopmentPage() {
             {/* LEFT IMAGE */}
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/SoftwareDev-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Custom Software Development"
                 loading="lazy"
                 decoding="async"

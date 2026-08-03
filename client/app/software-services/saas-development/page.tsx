@@ -3,34 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  BarChart3,
-  Bell,
-  Boxes,
-  BriefcaseBusiness,
-  CheckCircle2,
-  Code2,
-  CreditCard,
-  Database,
-  Gauge,
-  GraduationCap,
-  KeyRound,
-  Layers3,
-  LifeBuoy,
-  LockKeyhole,
-  Minus,
-  MonitorSmartphone,
-  Plus,
-  Rocket,
-  Search,
-  Settings2,
-  ShieldCheck,
-  ShoppingCart,
-  Store,
-  Users,
-  Workflow,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Minus, Plus } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries"
 import PopupForm from "@/components/PopupForm";
 
@@ -45,32 +18,35 @@ const workflow = [
   {
     title: "Product Discovery",
     text: "We understand the product idea, target users, core problem, business model, feature priorities and launch goals.",
-    icon: Search,
+    iconSrc: "/icons/saas-development/workflow/product-discovery.svg",
   },
   {
     title: "Product & Architecture Planning",
     text: "We define user roles, account structure, modules, billing needs, APIs, data flow, integrations and cloud architecture.",
-    icon: Layers3,
+    iconSrc:
+      "/icons/saas-development/workflow/product-architecture-planning.svg",
   },
   {
     title: "UI/UX & Prototype",
     text: "We design onboarding, dashboards, product workflows and admin experiences before development begins.",
-    icon: MonitorSmartphone,
+    iconSrc: "/icons/saas-development/workflow/ui-ux-prototype.svg",
   },
   {
     title: "MVP & Core Product Development",
     text: "We build the priority features, user accounts, admin controls, subscriptions and integrations required for launch.",
-    icon: Code2,
+    iconSrc:
+      "/icons/saas-development/workflow/mvp-core-product-development.svg",
   },
   {
     title: "Testing & Deployment",
     text: "We test workflows, permissions, billing, performance and security before deploying the platform to the selected environment.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/saas-development/workflow/testing-deployment.svg",
   },
   {
     title: "Measure, Improve & Scale",
     text: "We improve features, performance, reporting, integrations and infrastructure as product usage and requirements grow.",
-    icon: Rocket,
+    iconSrc:
+      "/icons/saas-development/workflow/measure-improve-scale.svg",
   },
 ];
 
@@ -87,32 +63,63 @@ const saasBenefits = [
   {
     title: "Subscription & Account Management",
     text: "Support plans, user accounts, renewals and billing workflows based on the product model you choose.",
-    icon: CreditCard,
+    iconSrc:
+      "/icons/saas-development/overview/subscription-account-management.svg",
   },
   {
     title: "Scalable Product Foundation",
     text: "Add users, modules, integrations and infrastructure capacity as product usage grows.",
-    icon: Gauge,
+    iconSrc:
+      "/icons/saas-development/overview/scalable-product-foundation.svg",
   },
   {
     title: "Centralized Product Operations",
     text: "Manage users, permissions, plans, reports and product activity from one controlled platform.",
-    icon: Settings2,
+    iconSrc:
+      "/icons/saas-development/overview/centralized-product-operations.svg",
   },
   {
     title: "Accessible Digital Product",
     text: "Deliver a web-based product that authorized users can access across devices through secure accounts.",
-    icon: Rocket,
+    iconSrc:
+      "/icons/saas-development/overview/accessible-digital-product.svg",
   },
 ];
 
 const solutions = [
-  { title: "CRM SaaS Platforms", text: "Lead management, sales workflows, customer history, team access and reporting.", icon: Users },
-  { title: "ERP SaaS Platforms", text: "Connected modules for operations, finance, inventory, HR, approvals and reporting.", icon: BriefcaseBusiness },
-  { title: "Marketplace Platforms", text: "Vendor onboarding, listings, orders, payments, commissions and admin control.", icon: Store },
-  { title: "Project & Workflow SaaS", text: "Tasks, approvals, timelines, collaboration, status tracking and team visibility.", icon: Workflow },
-  { title: "Learning SaaS Platforms", text: "Courses, users, progress, assessments, content management and reporting.", icon: GraduationCap },
-  { title: "Analytics & Reporting SaaS", text: "Dashboards, KPIs, custom reports, data views and controlled user access.", icon: BarChart3 },
+  {
+    title: "CRM SaaS Platforms",
+    text: "Lead management, sales workflows, customer history, team access and reporting.",
+    iconSrc: "/icons/saas-development/solutions/crm-saas-platforms.svg",
+  },
+  {
+    title: "ERP SaaS Platforms",
+    text: "Connected modules for operations, finance, inventory, HR, approvals and reporting.",
+    iconSrc: "/icons/saas-development/solutions/erp-saas-platforms.svg",
+  },
+  {
+    title: "Marketplace Platforms",
+    text: "Vendor onboarding, listings, orders, payments, commissions and admin control.",
+    iconSrc: "/icons/saas-development/solutions/marketplace-platforms.svg",
+  },
+  {
+    title: "Project & Workflow SaaS",
+    text: "Tasks, approvals, timelines, collaboration, status tracking and team visibility.",
+    iconSrc:
+      "/icons/saas-development/solutions/project-workflow-saas.svg",
+  },
+  {
+    title: "Learning SaaS Platforms",
+    text: "Courses, users, progress, assessments, content management and reporting.",
+    iconSrc:
+      "/icons/saas-development/solutions/learning-saas-platforms.svg",
+  },
+  {
+    title: "Analytics & Reporting SaaS",
+    text: "Dashboards, KPIs, custom reports, data views and controlled user access.",
+    iconSrc:
+      "/icons/saas-development/solutions/analytics-reporting-saas.svg",
+  },
 ];
 
 const architectureItems = [
@@ -128,32 +135,38 @@ const saasTypes = [
   {
     title: "Business Management SaaS",
     text: "Custom platforms that bring users, records, approvals, tasks, dashboards and reporting into one online product.",
-    icon: Layers3,
+    iconSrc:
+      "/icons/saas-development/platforms/business-management-saas.svg",
   },
   {
     title: "ERP & Operations SaaS",
     text: "Modular platforms for operations, inventory, finance, HR, purchasing, approvals and management reporting.",
-    icon: BriefcaseBusiness,
+    iconSrc:
+      "/icons/saas-development/platforms/erp-operations-saas.svg",
   },
   {
     title: "Project & Workflow SaaS",
     text: "Products for tasks, projects, approvals, timelines, collaboration and progress visibility across teams.",
-    icon: Workflow,
+    iconSrc:
+      "/icons/saas-development/platforms/project-workflow-saas.svg",
   },
   {
     title: "Communication & Service Platforms",
     text: "Account-based platforms for messages, notifications, service requests, conversations and team coordination.",
-    icon: Bell,
+    iconSrc:
+      "/icons/saas-development/platforms/communication-service-platforms.svg",
   },
   {
     title: "HR & Workforce SaaS",
     text: "Systems for employee records, onboarding, attendance, workflows, documents, permissions and reports.",
-    icon: Users,
+    iconSrc:
+      "/icons/saas-development/platforms/hr-workforce-saas.svg",
   },
   {
     title: "CRM & Customer Operations SaaS",
     text: "Platforms for enquiries, leads, follow-ups, pipelines, customer history, tasks and customer-facing workflows.",
-    icon: ShoppingCart,
+    iconSrc:
+      "/icons/saas-development/platforms/crm-customer-operations-saas.svg",
   },
 ];
 
@@ -232,7 +245,7 @@ const techStack: Record<TabType, StackItem[]> = {
     { name: "Vue.js", icon: "/icons/Vue.js.svg" },
     { name: "Angular", icon: "/icons/Angular.svg" },
     { name: "TypeScript", icon: "/icons/TypeScript.svg" },
-    { name: "Tailwind CSS", icon: "/icons/Tailwind CSS.svg" },
+    { name: "Tailwind CSS", icon: "/icons/TailwindCSS.svg" },
   ],
   backend: [
     { name: "Node.js", icon: "/icons/Node.js.svg" },
@@ -253,10 +266,10 @@ const techStack: Record<TabType, StackItem[]> = {
   cloud: [
     { name: "AWS", icon: "/icons/AWS.svg" },
     { name: "Azure", icon: "/icons/Azure.svg" },
-    { name: "Google Cloud", icon: "/icons/Google Cloud.svg" },
+    { name: "Google Cloud", icon: "/icons/GoogleCloud.svg" },
     { name: "Docker", icon: "/icons/Docker.svg" },
     { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
-    { name: "GitHub Actions", icon: "/icons/GitHub Actions.svg" },
+    { name: "GitHub Actions", icon: "/icons/GitHubActions.svg" },
   ],
 };
 
@@ -361,18 +374,27 @@ export default function SaaSDevelopmentPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {saasBenefits.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="border-l-2 border-[#193175] pl-5">
-                  <Icon size={28} className="mb-4 text-[#193175]" />
-                  <h3 className="text-[20px] font-normal">{item.title}</h3>
-                  <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                    {item.text}
-                  </p>
+            {saasBenefits.map((item) => (
+              <div
+                key={item.title}
+                className="border-l-2 border-[#193175] pl-5"
+              >
+                <div className="manual-icon-box mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[20px] font-normal">{item.title}</h3>
+
+                <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -420,23 +442,29 @@ export default function SaaSDevelopmentPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {solutions.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon size={27} className="text-[#193175] transition group-hover:text-white" />
-                  </div>
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">{item.title}</h3>
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {solutions.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_24px_75px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -498,25 +526,37 @@ export default function SaaSDevelopmentPage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {workflow.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.title} className="group relative rounded-[26px] border border-black/10 bg-white p-6">
-                    {index !== workflow.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon size={23} strokeWidth={2.4} className="text-[#193175]" />
-                      </div>
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">{item.title}</h3>
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">{item.text}</p>
-                      </div>
+              {workflow.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== workflow.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
+
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -534,18 +574,30 @@ export default function SaaSDevelopmentPage() {
               <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
             </svg>
 
-            {workflowLayout.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="group absolute z-10 w-[390px] -translate-x-1/2 text-center" style={{ left: item.left, top: item.top }}>
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon size={36} strokeWidth={2.25} className="text-[#193175]" />
-                  </div>
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">{item.title}</h3>
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">{item.text}</p>
+            {workflowLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                style={{ left: item.left, top: item.top }}
+              >
+                <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -581,20 +633,31 @@ export default function SaaSDevelopmentPage() {
           </div>
 
           <div>
-            {saasTypes.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.title} className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]">
-                  <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
-                    <Icon size={29} className="text-[#193175]" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">{item.title}</h3>
-                    <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">{item.text}</p>
-                  </div>
+            {saasTypes.map((item) => (
+              <div
+                key={item.title}
+                className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
+              >
+                <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <div>
+                  <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
+                    {item.text}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -831,7 +894,7 @@ export default function SaaSDevelopmentPage() {
                                   <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                                     <div className="hidden w-[32%] shrink-0 md:block">
                                       <img
-                                        src="/CTA/Saas-CTA.jpg"
+                                        src="/CTA/cta.webp"
                                         alt="BrainADZ Live SaaS Development Services"
                                         loading="lazy"
                                         decoding="async"

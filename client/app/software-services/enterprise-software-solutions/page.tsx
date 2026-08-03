@@ -4,39 +4,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  BarChart3,
-  Boxes,
-  BrainCircuit,
-  BriefcaseBusiness,
-  Bug,
-  CheckCircle2,
-  Code2,
-  Database,
-  Gauge,
-  GitBranch,
-  GraduationCap,
-  HeartPulse,
-  Hotel,
-  Landmark,
-  LifeBuoy,
-  LineChart,
-  LockKeyhole,
-  Minus,
-  Network,
-  PackageCheck,
-  Plus,
-  RefreshCcw,
-  Search,
-  Settings2,
-  ShieldCheck,
-  ShoppingCart,
-  Truck,
-  Users,
-  Workflow,
-} from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import { ArrowRight, CheckCircle2, Minus, Plus } from "lucide-react";
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "frontend" | "backend" | "databases" | "devops";
@@ -50,32 +19,32 @@ const processSteps = [
   {
     title: "Business & Workflow Discovery",
     text: "We understand your departments, users, existing systems, data flow, bottlenecks and operational priorities.",
-    icon: Search,
+    iconSrc: "/icons/enterprise-software/workflow/business-workflow-discovery.svg",
   },
   {
     title: "Solution Planning & Architecture",
     text: "We define modules, roles, permissions, data structure, integrations and a practical phased delivery roadmap.",
-    icon: GitBranch,
+    iconSrc: "/icons/enterprise-software/workflow/solution-planning-architecture.svg",
   },
   {
     title: "UX & Process Design",
     text: "We design dashboards, forms, approval flows and user journeys around the tasks each team needs to complete.",
-    icon: Workflow,
+    iconSrc: "/icons/enterprise-software/workflow/ux-process-design.svg",
   },
   {
     title: "Custom Software Development",
     text: "We build the required modules, workflows, dashboards, APIs and admin controls on a maintainable architecture.",
-    icon: Code2,
+    iconSrc: "/icons/enterprise-software/workflow/custom-software-development.svg",
   },
   {
     title: "Testing & Business Validation",
     text: "We test roles, workflows, integrations, reports, data handling and performance against real business scenarios.",
-    icon: ShieldCheck,
+    iconSrc: "/icons/enterprise-software/workflow/testing-business-validation.svg",
   },
   {
     title: "Deployment & Ongoing Improvement",
     text: "We deploy in planned stages, support adoption and continue improving the platform as processes and requirements change.",
-    icon: LifeBuoy,
+    iconSrc: "/icons/enterprise-software/workflow/deployment-ongoing-improvement.svg",
   },
 ];
 
@@ -92,22 +61,22 @@ const overviewHighlights = [
   {
     title: "Connected Operations",
     text: "Bring departments, workflows and business data into one coordinated system.",
-    icon: Gauge,
+    iconSrc: "/icons/enterprise-software/overview/connected-operations.svg",
   },
   {
     title: "Clear Business Visibility",
     text: "Use dashboards and reports to understand activity, bottlenecks and performance.",
-    icon: BarChart3,
+    iconSrc: "/icons/enterprise-software/overview/clear-business-visibility.svg",
   },
   {
     title: "Role-Based Access",
     text: "Control what users can view, update and approve based on their responsibilities.",
-    icon: LockKeyhole,
+    iconSrc: "/icons/enterprise-software/overview/role-based-access.svg",
   },
   {
     title: "Built to Evolve",
     text: "Add users, modules, workflows and integrations as business requirements change.",
-    icon: Boxes,
+    iconSrc: "/icons/enterprise-software/overview/built-to-evolve.svg",
   },
 ];
 
@@ -134,22 +103,22 @@ const services = [
   {
     title: "Custom Operations Platforms",
     text: "Centralized software for managing multi-step business operations, teams, records and internal processes.",
-    icon: BriefcaseBusiness,
+    iconSrc: "/icons/enterprise-software/services/custom-operations-platforms.svg",
   },
   {
     title: "Enterprise Portals & Dashboards",
     text: "Role-based portals and dashboards that give teams one place to access tasks, data, reports and actions.",
-    icon: Users,
+    iconSrc: "/icons/enterprise-software/services/enterprise-portals-dashboards.svg",
   },
   {
     title: "Workflow Automation Systems",
     text: "Automate approvals, assignments, notifications and repetitive handoffs across departments.",
-    icon: Settings2,
+    iconSrc: "/icons/enterprise-software/services/workflow-automation-systems.svg",
   },
   {
     title: "System & API Integration",
     text: "Connect existing software, databases, APIs and third-party platforms so information moves between systems.",
-    icon: Network,
+    iconSrc: "/icons/enterprise-software/services/system-api-integration.svg",
   },
 ];
 
@@ -368,23 +337,26 @@ export default function EnterpriseSoftwareSolutionsPage() {
           </div>
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2">
-            {overviewHighlights.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <Icon size={28} className="mb-5 text-[#193175]" />
-
-                  <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {overviewHighlights.map((item) => (
+              <div key={item.title} className="border-t border-black/10 pt-7">
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[22px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -449,31 +421,29 @@ export default function EnterpriseSoftwareSolutionsPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((item) => {
-              const Icon = item.icon;
+            {services.map((item) => (
+              <article
+                key={item.title}
+                className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.045)] transition duration-300 hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_26px_80px_rgba(60,91,155,0.11)]"
+              >
+                <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
-              return (
-                <article
-                  key={item.title}
-                  className="group rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.045)] transition duration-300 hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_26px_80px_rgba(60,91,155,0.11)]"
-                >
-                  <div className="mb-6 flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={28}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
 
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
-                </article>
-              );
-            })}
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -508,40 +478,37 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
           <div className="lg:hidden">
             <div className="space-y-5">
-              {processSteps.map((item, index) => {
-                const Icon = item.icon;
+              {processSteps.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                >
+                  {index !== processSteps.length - 1 && (
+                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                  )}
 
-                return (
-                  <div
-                    key={item.title}
-                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                  >
-                    {index !== processSteps.length - 1 && (
-                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                    )}
+                  <div className="relative z-10 flex gap-5">
+                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                      <img
+                        src={item.iconSrc}
+                        alt=""
+                        aria-hidden="true"
+                        className="manual-icon object-contain"
+                      />
+                    </div>
 
-                    <div className="relative z-10 flex gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-                        <Icon
-                          size={23}
-                          strokeWidth={2.4}
-                          className="text-[#193175]"
-                        />
-                      </div>
+                    <div>
+                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                        {item.title}
+                      </h3>
 
-                      <div>
-                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
-                        </h3>
-
-                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                          {item.text}
-                        </p>
-                      </div>
+                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                        {item.text}
+                      </p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -612,33 +579,30 @@ export default function EnterpriseSoftwareSolutionsPage() {
               />
             </svg>
 
-            {processLayout.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-                  style={{ left: item.left, top: item.top }}
-                >
-                  <div className="mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-                    <Icon
-                      size={36}
-                      strokeWidth={2.25}
-                      className="text-[#193175]"
-                    />
-                  </div>
-
-                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                    {item.text}
-                  </p>
+            {processLayout.map((item) => (
+              <div
+                key={item.title}
+                className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                style={{ left: item.left, top: item.top }}
+              >
+                <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
+                  {item.title}
+                </h3>
+
+                <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -695,7 +659,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/services/hero/enterprise-dashboard.jpg"
+              src="/overview/enterprise-sol.webp"
               alt="Enterprise dashboard software"
               className="h-full w-full object-cover"
             />
@@ -900,7 +864,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/services/hero/enterprise-support.jpg"
+              src="/overview/enterprise-main.webp"
               alt="Enterprise software support"
               className="h-full w-full object-cover"
             />
@@ -1013,7 +977,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/Enterprise-CTA.jpg"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Enterprise Software Solutions"
                 loading="lazy"
                 decoding="async"

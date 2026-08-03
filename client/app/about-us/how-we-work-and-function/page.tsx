@@ -6,15 +6,8 @@ import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   CheckCircle2,
-  ClipboardCheck,
-  Code2,
-  Database,
   Headphones,
-  Layers3,
   LineChart,
-  Rocket,
-  ShieldCheck,
-  Users,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -23,37 +16,37 @@ const processSteps = [
     number: "01",
     title: "Discovery & Requirement Mapping",
     desc: "We understand the business problem, users, current process, existing systems, constraints and the outcome the project needs to support.",
-    icon: ClipboardCheck,
+    iconSrc: "/our-work-function/discovery-requirement.svg",
   },
   {
     number: "02",
     title: "Scope & Delivery Planning",
     desc: "We define the project scope, priorities, responsibilities, technical direction, delivery stages and the information needed before development begins.",
-    icon: Layers3,
+    iconSrc: "/our-work-function/delivery-planning.svg",
   },
   {
     number: "03",
     title: "UX & Workflow Design",
     desc: "We map user journeys, screens, permissions and operational flows so the product is clear for users and practical for the team that will manage it.",
-    icon: Users,
+    iconSrc: "/our-work-function/ux-workflow-design.svg",
   },
   {
     number: "04",
     title: "Development & Integration",
     desc: "We build the agreed modules, interfaces, APIs and integrations in controlled development cycles with regular internal review.",
-    icon: Code2,
+    iconSrc: "/our-work-function/development-integration.svg",
   },
   {
     number: "05",
     title: "Validation & Quality Checks",
     desc: "We test core workflows, permissions, integrations, responsive behaviour and agreed business scenarios before release.",
-    icon: ShieldCheck,
+    iconSrc: "/our-work-function/validation-qualitychecks.svg",
   },
   {
     number: "06",
     title: "Deployment & Improvement",
     desc: "We prepare the release, support handover and continue with fixes, updates or new requirements based on the agreed support scope.",
-    icon: Rocket,
+    iconSrc: "/our-work-function/deployment-improvement.svg",
   },
 ];
 
@@ -206,34 +199,35 @@ export default function HowWeWorkPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {processSteps.map((step) => {
-              const Icon = step.icon;
+            {processSteps.map((step) => (
+              <div
+                key={step.number}
+                className="group border border-[#e3e6ec] bg-white p-8 transition hover:-translate-y-1 hover:border-[#193175] hover:shadow-[0_22px_60px_rgba(0,0,0,0.08)]"
+              >
+                <div className="mb-10 flex items-center justify-between">
+                  <span className="text-[42px] font-light tracking-[-1.5px] text-[#d7dce8] transition group-hover:text-[#193175]">
+                    {step.number}
+                  </span>
 
-              return (
-                <div
-                  key={step.number}
-                  className="group border border-[#e3e6ec] bg-white p-8 transition hover:-translate-y-1 hover:border-[#193175] hover:shadow-[0_22px_60px_rgba(0,0,0,0.08)]"
-                >
-                  <div className="mb-10 flex items-center justify-between">
-                    <span className="text-[42px] font-light tracking-[-1.5px] text-[#d7dce8] transition group-hover:text-[#193175]">
-                      {step.number}
-                    </span>
-
-                    <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[#eef3ff] text-[#193175]">
-                      <Icon size={24} strokeWidth={1.5} />
-                    </div>
-                  </div>
-
-                  <h3 className="mb-4 text-[24px] font-normal tracking-[-0.5px] text-[#161616]">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
-                    {step.desc}
-                  </p>
+                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+  <img
+    src={step.iconSrc}
+    alt=""
+    aria-hidden="true"
+    className="manual-icon object-contain"
+  />
+</div>
                 </div>
-              );
-            })}
+
+                <h3 className="mb-4 text-[24px] font-normal tracking-[-0.5px] text-[#161616]">
+                  {step.title}
+                </h3>
+
+                <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
+                  {step.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -339,7 +333,12 @@ export default function HowWeWorkPage() {
 
           <div className="grid grid-cols-1 border border-[#e5e5e5] lg:grid-cols-3">
             <div className="border-b border-[#e5e5e5] p-8 lg:border-b-0 lg:border-r">
-              <Database className="mb-8 text-[#193175]" size={34} />
+              <img
+                src="/our-work-function/understand.svg"
+                alt=""
+                aria-hidden="true"
+                className="mb-8 h-8.5 w-8.5 object-contain"
+              />
               <h3 className="mb-4 text-[25px] font-normal tracking-[-0.5px]">
                 Understand
               </h3>
@@ -350,7 +349,12 @@ export default function HowWeWorkPage() {
             </div>
 
             <div className="border-b border-[#e5e5e5] p-8 lg:border-b-0 lg:border-r">
-              <Code2 className="mb-8 text-[#193175]" size={34} />
+              <img
+                src="/our-work-function/build.svg"
+                alt=""
+                aria-hidden="true"
+                className="mb-8 h-8.5 w-8.5 object-contain"
+              />
               <h3 className="mb-4 text-[25px] font-normal tracking-[-0.5px]">
                 Build
               </h3>
@@ -361,7 +365,12 @@ export default function HowWeWorkPage() {
             </div>
 
             <div className="p-8">
-              <Headphones className="mb-8 text-[#193175]" size={34} />
+              <img
+                src="/our-work-function/improve.svg"
+                alt=""
+                aria-hidden="true"
+                className="mb-8 h-8.5 w-8.5 object-contain"
+              />
               <h3 className="mb-4 text-[25px] font-normal tracking-[-0.5px]">
                 Improve
               </h3>
@@ -384,7 +393,7 @@ export default function HowWeWorkPage() {
           {/* LEFT IMAGE */}
           <div className="hidden w-[32%] shrink-0 md:block">
             <img
-              src="/CTA/home-cta.png"
+              src="/CTA/cta.webp"
               alt="How BrainADZ Live works with clients"
               loading="lazy"
               decoding="async"

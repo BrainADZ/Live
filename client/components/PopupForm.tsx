@@ -271,7 +271,7 @@ export default function PopupForm({
 
         <div className="relative hidden min-h-170 overflow-hidden bg-black lg:block">
           <img
-            src="/about/Enow.jpeg"
+            src="/about/Enow.webp"
             alt="BrainADZ Live enquiry"
             className="absolute inset-0 h-full w-full object-cover"
           />

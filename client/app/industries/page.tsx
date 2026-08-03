@@ -35,84 +35,84 @@ const industries: Industry[] = [
   {
     title: "Healthcare",
     href: "/industries/health-care",
-    icon: "/industries/healthcare.png",
+    icon: "/industries/healthcare.svg",
     description:
       "Software, dashboards and display systems for appointments, internal workflows, patient communication and operational visibility.",
   },
   {
     title: "Education Tech",
     href: "/industries/education-tech",
-    icon: "/industries/edu.png",
+    icon: "/industries/education.svg",
     description:
       "Learning platforms, student and admin dashboards, classroom displays and digital systems for campus communication and education operations.",
   },
   {
     title: "Finance Tech",
     href: "/industries/finance-tech",
-    icon: "/industries/hand.png",
+    icon: "/industries/finance.svg",
     description:
       "Customer portals, workflow systems, reporting dashboards and controlled access for financial operations and service teams.",
   },
   {
     title: "Property Tech",
     href: "/industries/property-tech",
-    icon: "/industries/monitor.png",
+    icon: "/industries/property.svg",
     description:
       "Property portals, lead and sales workflows, digital showcases and management dashboards for property businesses.",
   },
   {
     title: "Retail",
     href: "/industries/retail",
-    icon: "/industries/marketplace.png",
+    icon: "/industries/retail.svg",
     description:
       "Store displays, self-service kiosks, commerce systems, customer engagement tools and software for retail operations.",
   },
   {
     title: "Transport",
     href: "/industries/transport",
-    icon: "/industries/transportation.png",
+    icon: "/industries/transport.svg",
     description:
       "Information displays, tracking dashboards, booking or service workflows and operational systems for transport teams.",
   },
   {
     title: "Telecom",
     href: "/industries/telecom",
-    icon: "/industries/telecommunication.png",
+    icon: "/industries/telecom.svg",
     description:
       "Customer service platforms, operational dashboards, workflow tools and internal systems for telecom processes.",
   },
   {
     title: "Automotive",
     href: "/industries/automotive",
-    icon: "/industries/automotive.png",
+    icon: "/industries/automotive.svg",
     description:
       "Showroom displays, service workflows, customer systems and digital tools for automotive operations.",
   },
   {
     title: "Insurance Tech",
     href: "/industries/insurance-tech",
-    icon: "/industries/insurance.png",
+    icon: "/industries/insurance.svg",
     description:
       "Policy, claims, customer and agent workflows supported by portals, dashboards and process automation.",
   },
   {
     title: "Travel & Hospitality",
     href: "/industries/travel-hospitality",
-    icon: "/industries/travel-and-tourism.png",
+    icon: "/industries/travel.svg",
     description:
       "Booking and guest-service workflows, menu and information displays, kiosks and operational dashboards.",
   },
   {
     title: "Facility Management",
     href: "/industries/facility-management",
-    icon: "/industries/facility-management.png",
+    icon: "/industries/facility.svg",
     description:
       "Task, service, asset and team workflows supported by dashboards, digital notices and internal management systems.",
   },
   {
     title: "Media & Entertainment",
     href: "/industries/media-entertainment",
-    icon: "/industries/smartphone.png",
+    icon: "/industries/media.svg",
     description:
       "Content and engagement platforms, interactive displays, LED visuals and operational tools for media environments.",
   },
@@ -207,9 +207,9 @@ export default function IndustriesPage() {
               </div>
 
               <img
-                src="/solutions/industries-about.jpg"
+                src="/overview/industries.webp"
                 alt="Industries served by BrainADZ Live"
-                className="relative z-10 h-90 w-full object-cover md:h-130"
+                className="relative z-10 h-90 w-full object-cover md:h-115"
                 onError={(event) => {
                   event.currentTarget.style.display = "none";
                 }}
@@ -278,15 +278,15 @@ export default function IndustriesPage() {
           aria-label={`Explore ${item.title}`}
           className="group grid min-h-55 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
         >
-          <div className="flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
-            <img
-              src={item.icon}
-              alt={`${item.title} icon`}
-              loading="lazy"
-              decoding="async"
-              className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-110"
-            />
-          </div>
+          <div className="manual-icon-box flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
+  <img
+    src={item.icon}
+    alt={`${item.title} icon`}
+    loading="lazy"
+    decoding="async"
+    className="manual-icon object-contain"
+  />
+</div>
 
           <div>
             <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
@@ -315,7 +315,7 @@ export default function IndustriesPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="BrainADZ Live Industry Solutions"
                 loading="lazy"
                 decoding="async"

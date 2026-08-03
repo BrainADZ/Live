@@ -7,21 +7,13 @@ import PopupForm from "@/components/PopupForm";
 import {
   ArrowRight,
   BadgeCheck,
-  Building2,
-  CalendarDays,
   CheckCircle2,
-  CloudSun,
   Download,
   Image as ImageIcon,
   Minus,
-  PackageCheck,
   Paintbrush,
   Plus,
-  ShieldCheck,
-  ShoppingBag,
-  Store,
   Truck,
-  Utensils,
   Wrench,
 } from "lucide-react";
 
@@ -29,32 +21,38 @@ const whyChoose = [
   {
     title: "Professional Digital Display",
     text: "A freestanding D-type digital signage format designed for customer-facing business communication.",
-    icon: ShieldCheck,
+    iconSrc:
+      "/signage-products/professional-digital-display.svg",
   },
   {
     title: "Dynamic Content Display",
     text: "Present promotional videos, images, campaign creatives and business information on screen.",
-    icon: ImageIcon,
+    iconSrc:
+      "/signage-products/dynamic-content-display.svg",
   },
   {
     title: "Flexible Media Playback",
     text: "Use local media playback for planned content without depending on printed promotional material.",
-    icon: PackageCheck,
+    iconSrc:
+      "/signage-products/flexible-media-playback.svg",
   },
   {
     title: "Optional Cloud Management",
     text: "Add cloud signage management when remote content control is required for the deployment.",
-    icon: CloudSun,
+    iconSrc:
+      "/signage-products/optional-cloud-management.svg",
   },
   {
     title: "Requirement-Based Setup",
     text: "Plan the display, content setup and deployment approach around the actual business requirement.",
-    icon: Wrench,
+    iconSrc:
+      "/signage-products/requirement-based-setup.svg",
   },
   {
     title: "Enclosure Branding",
     text: "Coordinate the enclosure finish and branding treatment with the surrounding business environment.",
-    icon: Paintbrush,
+    iconSrc:
+      "/signage-products/enclosure-branding.svg",
   },
 ];
 
@@ -62,27 +60,30 @@ const useCases = [
   {
     title: "Retail Stores",
     text: "Display offers, launches, collections and promotional campaigns.",
-    icon: Store,
+    iconSrc: "/signage-products/retail-stores.svg",
   },
   {
     title: "Events & Exhibitions",
     text: "Present event content, sponsor visuals and campaign communication.",
-    icon: CalendarDays,
+    iconSrc:
+      "/signage-products/events-exhibitions.svg",
   },
   {
     title: "Hospitality",
     text: "Show promotions, guest information and customer-facing content.",
-    icon: Utensils,
+    iconSrc: "/signage-products/hospitality.svg",
   },
   {
     title: "Corporate & Reception",
     text: "Present welcome content, company information and visitor communication.",
-    icon: Building2,
+    iconSrc:
+      "/signage-products/corporate-reception.svg",
   },
   {
     title: "Campaigns & Launches",
     text: "Support product launches, announcements and changing campaign content.",
-    icon: ShoppingBag,
+    iconSrc:
+      "/signage-products/campaigns-launches.svg",
   },
 ];
 
@@ -378,25 +379,26 @@ export default function DTypeStandeePage() {
           </div>
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-            {whyChoose.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div key={item.title} className="border-t border-black/10 pt-7">
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#193175]/10">
-                    <Icon size={26} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                    {item.text}
-                  </p>
+            {whyChoose.map((item) => (
+              <div key={item.title} className="border-t border-black/10 pt-7">
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[23px] font-normal tracking-[-0.4px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -500,28 +502,29 @@ export default function DTypeStandeePage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-5">
-            {useCases.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-[26px] border border-black/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
-                >
-                  <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#193175]/10">
-                    <Icon size={25} className="text-[#193175]" />
-                  </div>
-
-                  <h3 className="text-[19px] font-normal tracking-[-0.3px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
-                    {item.text}
-                  </p>
+            {useCases.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[26px] border border-black/10 bg-white p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
+              >
+                <div className="manual-icon-box mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[19px] font-normal tracking-[-0.3px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -610,7 +613,7 @@ export default function DTypeStandeePage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="D Type Digital Standee deployment showcase"
                 loading="lazy"
                 decoding="async"
@@ -747,7 +750,7 @@ export default function DTypeStandeePage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="D Type Digital Standee deployment showcase"
                 loading="lazy"
                 decoding="async"

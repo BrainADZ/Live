@@ -9,12 +9,8 @@ import {
   CheckCircle2,
   ChevronRight,
   Download,
-  Layers,
-  MapPin,
   Minus,
   Plus,
-  Store,
-  Tag,
 } from "lucide-react";
 
 type SpecItem = {
@@ -68,22 +64,26 @@ const applications = [
   {
     title: "Retail Stores",
     text: "Display promotions, product campaigns, offers and customer-facing digital content.",
-    icon: Store,
+    iconSrc:
+      "/signage-products/retail-stores.svg",
   },
   {
     title: "Reception Areas",
     text: "Present welcome content, visitor information, announcements and business communication.",
-    icon: MapPin,
+    iconSrc:
+      "/signage-products/reception-areas.svg",
   },
   {
     title: "Showrooms",
     text: "Showcase product content, launches, brand films and promotional visuals.",
-    icon: Tag,
+    iconSrc:
+      "/signage-products/showrooms.svg",
   },
   {
     title: "Corporate Spaces",
     text: "Use for announcements, company information and internal visual communication.",
-    icon: Layers,
+    iconSrc:
+      "/signage-products/corporate-reception.svg",
   },
 ];
 
@@ -346,31 +346,29 @@ export default function WallMountedDisplayPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {applications.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
-                >
-                  <div className="mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
-                    <Icon
-                      size={24}
-                      className="text-[#193175] transition group-hover:text-white"
-                    />
-                  </div>
-
-                  <h3 className="text-[20px] font-normal tracking-[-0.3px]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-[14px] font-light leading-[1.65] text-black/65">
-                    {item.text}
-                  </p>
+            {applications.map((item) => (
+              <div
+                key={item.title}
+                className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+              >
+                <div className="manual-icon-box mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              );
-            })}
+
+                <h3 className="text-[20px] font-normal tracking-[-0.3px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[14px] font-light leading-[1.65] text-black/65">
+                  {item.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -520,7 +518,7 @@ export default function WallMountedDisplayPage() {
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
               <img
-                src="/CTA/home-cta.png"
+                src="/CTA/cta.webp"
                 alt="Wall Mounted Digital Display showcase"
                 loading="lazy"
                 decoding="async"
