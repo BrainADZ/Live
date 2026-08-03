@@ -264,6 +264,10 @@ const sendEnquireNow = async (req, res) => {
       message || "No message provided"
     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d5b90faefc44f77f36ed8b1153b102be8f73017f
     /* =====================================================
        SUBMITTED DATE & TIME
     ===================================================== */
