@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-weight-light: 400;
+}
+
 html {
   scroll-behavior: smooth;
 }

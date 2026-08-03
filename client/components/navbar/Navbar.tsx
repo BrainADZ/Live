@@ -30,7 +30,7 @@ const normalizedDigitalSignageProducts = menuContent[
 ]
   .filter((item) => item.title !== "Vertical Mobile Charging Digital Kiosk")
   .map((item) =>
-    item.title === "Interactive Teaching Display"
+    item.title === "Interactive Panel"
       ? {
           ...item,
           title: "Interactive Panel",
@@ -503,7 +503,7 @@ export default function Navbar() {
                       key={item.label}
                       href={item.href}
                       onClick={closeAccountPanel}
-                      className="group block rounded-[8px] px-3 py-3 transition hover:bg-[#f6f8fc]"
+                      className="group block rounded-lg px-3 py-3 transition hover:bg-[#f6f8fc]"
                     >
                       <span className="flex items-center justify-between gap-4 text-[15px] font-normal text-[#161616] group-hover:text-[#193175]">
                         {item.label}
