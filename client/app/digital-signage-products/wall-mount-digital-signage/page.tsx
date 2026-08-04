@@ -230,9 +230,9 @@ export default function WallMountDigitalSignagePage() {
 
             <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/products/wall.png"
+                src="/overview/wall-mount-digital-signage.webp"
                 alt="Wall Mount Digital Signage"
-                className="h-full w-full object-cover"
+                className="h-130 w-full object-cover"
               />
             </div>
           </div>

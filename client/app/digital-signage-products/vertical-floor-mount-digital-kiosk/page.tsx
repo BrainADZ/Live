@@ -237,7 +237,7 @@ export default function VerticalFloorMountDigitalKioskPage() {
               <img
                 src="/overview/vertical-floor-mount1.webp"
                 alt="Vertical Floor Mount Digital Kiosk Overview"
-                className="h-full w-full object-cover"
+                className="h-130 w-full object-cover"
               />
             </div>
           </div>
@@ -322,7 +322,7 @@ export default function VerticalFloorMountDigitalKioskPage() {
         <div className="mx-auto grid max-w-450 gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div className="overflow-hidden rounded-[28px] shadow-[0_24px_75px_rgba(0,0,0,0.08)]">
             <img
-              src="/products/Floor.png"
+              src="/overview/vertical-floor-mount3.webp"
               alt="Vertical Floor Mount Digital Kiosk Features"
               className="h-140 w-full object-cover"
             />
@@ -431,7 +431,7 @@ export default function VerticalFloorMountDigitalKioskPage() {
 
             <div className="mt-8 overflow-hidden rounded-[26px] bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
               <img
-                src="/products/Floor.png"
+                src="/overview/vertical-floor-mount2.webp"
                 alt="Vertical Floor Mount Digital Kiosk Benefits"
                 className="h-90 w-full object-cover"
               />
