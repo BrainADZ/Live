@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   {
-    value: 120,
+    value: 3500,
     suffix: "+",
     label: "Digital Installations",
   },
