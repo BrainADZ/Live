@@ -19,7 +19,7 @@ const { sendMail } = require("../service/mailerService");
 
 const EMAIL_ASSET_BASE_URL = (
   process.env.EMAIL_ASSET_BASE_URL ||
-  "https://brainadzlive.in/enquire-form"
+  "https://brainadzlive.com/enquire-form"
 ).replace(/\/$/, "");
 
 // Version query Gmail ke failed-image proxy cache ko invalidate karti hai.
