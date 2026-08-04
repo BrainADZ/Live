@@ -157,7 +157,7 @@ const solutions = [
     icon: FileText,
   },
   {
-    title: "Interactive Teaching Display",
+    title: "Digital Teaching & Conference Board (IFPD)",
     text: "Plan interactive classroom and training experiences for digital content, annotation and collaborative teaching sessions.",
     icon: MonitorSmartphone,
   },
@@ -210,7 +210,7 @@ const edtechTypes = [
   },
   {
     title: "Smart Classroom & Display Solutions",
-    text: "Plan Interactive Teaching Displays and digital signage workflows for teaching, information and campus communication.",
+    text: "Plan Digital Teaching & Conference Boards (IFPD) and digital signage workflows for teaching, information and campus communication.",
     icon: MonitorSmartphone,
   },
 ];
@@ -281,7 +281,7 @@ const whyChoose = [
   },
   {
     title: "Software & Classroom Technology Alignment",
-    text: "Digital platforms and Interactive Teaching Display requirements can be planned as part of one education technology approach.",
+    text: "Digital platforms and Digital Teaching & Conference Board (IFPD) requirements can be planned as part of one education technology approach.",
   },
   {
     title: "Scope-Based Implementation Support",
@@ -366,8 +366,8 @@ const faqs = [
     a: "Yes. ERP modules can be planned for admissions, student records, attendance, fees, staff, timetables and other required operational workflows.",
   },
   {
-    q: "Do you provide Interactive Teaching Display solutions?",
-    a: "Yes. Interactive Teaching Displays can be planned for classrooms, coaching spaces, training rooms and other learning environments according to the project requirement.",
+    q: "Do you provide Digital Teaching & Conference Board (IFPD) solutions?",
+    a: "Yes. Digital Teaching & Conference Boards (IFPD) can be planned for classrooms, coaching spaces, training rooms and other learning environments according to the project requirement.",
   },
   {
     q: "Can you build student or teacher mobile apps?",

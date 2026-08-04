@@ -248,7 +248,7 @@ export default function SelfOrderingKioskPage() {
 
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/products/self-ordering-kiosk.jpg"
+              src="/overview/self-ordering-kiosk.jpg"
               alt="Self Ordering Kiosk customer ordering interface"
               className="h-full w-full object-cover"
             />

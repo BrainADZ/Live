@@ -254,7 +254,7 @@ export default function CaseStudiesPage() {
       {/* HERO */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/case-studies.jpg"
+          src="/hero/case-studies.webp"
           alt="BrainADZ Live Case Studies"
           className="absolute inset-0 h-full w-full object-cover"
           onError={(event) => {

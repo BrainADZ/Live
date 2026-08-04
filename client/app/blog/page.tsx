@@ -181,7 +181,7 @@ const allArticles: Article[] = [
   {
     title: "How to Choose the Right Digital Signage Product for a Space",
     description:
-      "Compare digital standees, kiosks, LFD displays, LED displays and interactive screens based on placement and purpose.",
+      "Compare digital standees, kiosks, LFD video walls, commercial LED displays and screens, and interactive screens based on placement and purpose.",
     category: "Digital Signage",
     image: "/blog/choose-digital-signage-product.jpg",
     href: "/blog/how-to-choose-a-digital-signage-product",
@@ -324,7 +324,7 @@ const topicCards = [
   {
     title: "Digital Signage & Displays",
     description:
-      "Standee, kiosk, LFD, LED and signage-software planning for physical spaces.",
+      "Standee, kiosk, LFD video wall, commercial LED and signage-software planning for physical spaces.",
     icon: blogIcons.digitalSignage,
     category: "Digital Signage" as BlogCategory,
   },
@@ -402,7 +402,7 @@ export default function BlogPage() {
       {/* HERO */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/hero/blog.jpg"
+          src="/hero/blog.webp"
           alt="BrainADZ Live Blog"
           className="absolute inset-0 h-full w-full object-cover"
           onError={(event) => {

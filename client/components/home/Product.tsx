@@ -6,23 +6,23 @@ import { ArrowRight } from "lucide-react";
 
 const products = [
   {
-    title: "A-Type Standee",
-    href: "/digital-signage-products/a-type-standee",
+    title: "A-Frame Digital Standee",
+    href: "/digital-signage-products/a-frame-digital-standee",
     image: "/products/A.png",
   },
   {
-    title: "D-Type Standee",
-    href: "/digital-signage-products/d-type-standee",
+    title: "D-Model Floor Mount Digital Kiosk",
+    href: "/digital-signage-products/d-model-floor-mount-digital-kiosk",
     image: "/products/D.png",
   },
   {
-    title: "Wall Mounted Standee",
-    href: "/digital-signage-products/wall-mounted-standee",
+    title: "Wall Mount Digital Signage",
+    href: "/digital-signage-products/wall-mount-digital-signage",
     image: "/products/wall.png",
   },
   {
-    title: "I-Type Floor Mounted Standee",
-    href: "/digital-signage-products/floor-mounted-standee",
+    title: "Vertical Floor Mount Digital Kiosk",
+    href: "/digital-signage-products/vertical-floor-mount-digital-kiosk",
     image: "/products/Floor.png",
   },
   {
@@ -31,18 +31,18 @@ const products = [
     image: "/products/Selforder.png",
   },
   {
-    title: "LFD Wall Display",
-    href: "/digital-signage-products/lfd-display",
+    title: "LFD Video Walls",
+    href: "/digital-signage-products/lfd-video-walls",
     image: "/products/lfd.png",
   },
   {
-    title: "LED Wall Display",
-    href: "/digital-signage-products/led-display",
+    title: "Commercial LED Displays & Screens",
+    href: "/digital-signage-products/commercial-led-displays-screens",
     image: "/products/Led.png",
   },
   {
-    title: "Interactive Panel",
-    href: "/digital-signage-products/interactive-panel",
+    title: "Digital Teaching & Conference Board (IFPD)",
+    href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
     image: "/products/Teaching.jpeg",
   },
 ];

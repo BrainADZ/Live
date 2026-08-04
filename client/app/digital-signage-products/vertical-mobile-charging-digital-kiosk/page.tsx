@@ -183,7 +183,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
         <img
-          src="/products/vertical-mobile-charging-digital-kiosk/hero.webp"
+          src="/hero/mobile-charging-kiosk.webp"
           alt="Vertical Mobile Charging Digital Kiosk by BrainADZ Live"
           className="absolute inset-0 h-full w-full object-cover"
           onError={(event) => {

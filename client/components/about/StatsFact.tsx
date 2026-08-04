@@ -22,7 +22,7 @@ const services = [
   {
     title: "Digital Signage Products",
     description:
-      "Digital standees, kiosks, LFD displays, LED displays and interactive teaching displays for physical spaces.",
+      "Digital standees, kiosks, LFD video walls, commercial LED displays and screens, and digital teaching and conference boards for physical spaces.",
     iconSrc: "/about/icons/digital-signage-product.svg",
     href: "/digital-signage-products",
   },

@@ -28,14 +28,14 @@ const footerColumns = [
   {
     title: "Digital Signage Products",
     links: [
-      { label: "A Type Standee", href: "/digital-signage-products/a-type-standee" },
-      { label: "D Type Standee", href: "/digital-signage-products/d-type-standee" },
-      { label: "LED Display", href: "/digital-signage-products/led-display" },
-      { label: "LFD Display", href: "/digital-signage-products/lfd-display" },
+      { label: "A-Frame Digital Standee", href: "/digital-signage-products/a-frame-digital-standee" },
+      { label: "D-Model Floor Mount Digital Kiosk", href: "/digital-signage-products/d-model-floor-mount-digital-kiosk" },
+      { label: "Commercial LED Displays & Screens", href: "/digital-signage-products/commercial-led-displays-screens" },
+      { label: "LFD Video Walls", href: "/digital-signage-products/lfd-video-walls" },
       { label: "Self Ordering Kiosk", href: "/digital-signage-products/self-ordering-kiosk" },
-      { label: "Floor Mounted Standee", href: "/digital-signage-products/floor-mounted-standee" },
-      { label: "Interactive Teaching Display", href: "/digital-signage-products/interactive-teaching-display" },
-      { label: "Wall Mounted Standee", href: "/digital-signage-products/wall-mounted-standee" },
+      { label: "Vertical Floor Mount Digital Kiosk", href: "/digital-signage-products/vertical-floor-mount-digital-kiosk" },
+      { label: "Digital Teaching & Conference Board (IFPD)", href: "/digital-signage-products/digital-teaching-conference-board-ifpd" },
+      { label: "Wall Mount Digital Signage", href: "/digital-signage-products/wall-mount-digital-signage" },
     ],
   },
   {

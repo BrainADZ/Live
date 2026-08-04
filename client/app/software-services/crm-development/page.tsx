@@ -821,7 +821,7 @@ export default function CRMDevelopmentPage() {
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/services/hero/crm-support.jpg"
+              src="/overview/crm-development.webp"
               alt="CRM support and optimization"
               className="h-full w-full object-cover"
             />

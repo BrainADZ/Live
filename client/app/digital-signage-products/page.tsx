@@ -33,32 +33,32 @@ function ArrowRightIcon({ className }: { className?: string }) {
 
 const products: Product[] = [
   {
-    title: "A-Type Standee",
+    title: "A-Frame Digital Standee",
     description:
       "Freestanding digital display for entrances, promotions, product launches and brand communication in customer-facing spaces.",
     image: "/products/A.png",
-    href: "/digital-signage-products/a-type-standee",
+    href: "/digital-signage-products/a-frame-digital-standee",
   },
   {
-    title: "D-Type Standee",
+    title: "D-Model Floor Mount Digital Kiosk",
     description:
       "Slim freestanding digital display for promotions, information and brand content across stores, showrooms and business spaces.",
     image: "/products/D.png",
-    href: "/digital-signage-products/d-type-standee",
+    href: "/digital-signage-products/d-model-floor-mount-digital-kiosk",
   },
   {
-    title: "Wall Mounted Standee",
+    title: "Wall Mount Digital Signage",
     description:
-      "Wall-mounted digital display for menus, schedules, notices, directories and promotional content where floor space is limited.",
+      "Wall Mount Digital Signage for menus, schedules, notices, directories and promotional content where floor space is limited.",
     image: "/products/wall.png",
-    href: "/digital-signage-products/wall-mounted-standee",
+    href: "/digital-signage-products/wall-mount-digital-signage",
   },
   {
-    title: "I-Type Floor Mounted Standee",
+    title: "Vertical Floor Mount Digital Kiosk",
     description:
       "Floor-mounted digital display for prominent content placement in entrances, waiting areas, retail zones and public-facing spaces.",
     image: "/products/Floor.png",
-    href: "/digital-signage-products/i-type-floor-mounted-standee",
+    href: "/digital-signage-products/vertical-floor-mount-digital-kiosk",
   },
   {
     title: "Self Ordering Kiosk",
@@ -68,25 +68,25 @@ const products: Product[] = [
     href: "/digital-signage-products/self-ordering-kiosk",
   },
   {
-    title: "LFD Wall Display",
+    title: "LFD Video Walls",
     description:
-      "Large-format display for presentations, brand content, dashboards, information and digital communication across shared spaces.",
+      "LFD Video Walls for presentations, brand content, dashboards, information and digital communication across shared spaces.",
     image: "/products/lfd.png",
-    href: "/digital-signage-products/lfd-wall-display",
+    href: "/digital-signage-products/lfd-video-walls",
   },
   {
-    title: "LED Wall Display",
+    title: "Commercial LED Displays & Screens",
     description:
-      "High-visibility LED display for large-scale visual communication, campaigns, stage environments and suitable indoor or outdoor installations.",
+      "High-visibility commercial LED displays and screens for large-scale visual communication, campaigns, stage environments and suitable indoor or outdoor installations.",
     image: "/products/Led.png",
-    href: "/digital-signage-products/led-wall-display",
+    href: "/digital-signage-products/commercial-led-displays-screens",
   },
   {
-    title: "Interactive Panel",
+    title: "Digital Teaching & Conference Board (IFPD)",
     description:
       "Interactive display for lessons, presentations, annotations and collaborative sessions in classrooms and training spaces.",
     image: "/products/Teaching.jpeg",
-    href: "/digital-signage-products/interactive-panel",
+    href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
   },
   {
     title: "Vertical Mobile Charging Kiosk",
@@ -131,7 +131,7 @@ export default function DigitalSignageProductsPage() {
 
       <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
         <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-          From freestanding standees and kiosks to LFD, LED and interactive
+          From freestanding standees and kiosks to LFD video walls, commercial LED screens and interactive
           displays, choose hardware suited to how and where your content needs
           to be seen.
         </p>
@@ -169,8 +169,8 @@ export default function DigitalSignageProductsPage() {
                 BrainADZ Live provides a focused range of digital signage
                 hardware for presenting information, promotions, visual content
                 and interactive experiences. The range includes freestanding
-                and mounted standees, self-ordering kiosks, LFD screens, LED
-                displays and interactive teaching displays.
+                and mounted standees, self-ordering kiosks, LFD video walls, commercial LED
+                displays and digital teaching and conference boards.
               </p>
 
               <p className="mt-5 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -247,7 +247,7 @@ export default function DigitalSignageProductsPage() {
 
       <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
         Compare standees, self-service kiosks, large-format screens, LED
-        displays and interactive teaching displays based on placement,
+        displays and digital teaching and conference boards based on placement,
         visibility and interaction needs.
       </p>
     </div>

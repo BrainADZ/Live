@@ -229,7 +229,7 @@ const roles: Role[] = [
     location: "On-site",
     experience: "0–2 years",
     description:
-      "Coordinate installation, testing and on-site support for digital standees, kiosks, LFD and LED displays and interactive systems.",
+      "Coordinate installation, testing and on-site support for digital standees, kiosks, LFD video walls, commercial LED displays and screens, and interactive systems.",
     skills: ["Installation", "Coordination", "Support", "Hardware basics"],
     iconSrc: "/career/job-opening.svg",
   },

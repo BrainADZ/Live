@@ -44,15 +44,15 @@ const modules = [
 
 const supportedDevices = [
   {
-    title: "LED Display",
+    title: "Commercial LED Displays & Screens",
     icon: Monitor,
   },
   {
-    title: "LFD Display",
+    title: "LFD Video Walls",
     icon: Tv,
   },
   {
-    title: "Wall Mounted Display",
+    title: "Wall Mount Digital Signage",
     icon: MonitorSmartphone,
   },
   {
@@ -60,11 +60,11 @@ const supportedDevices = [
     icon: Smartphone,
   },
   {
-    title: "A Type Digital Standee",
+    title: "A-Frame Digital Standee",
     icon: PlaySquare,
   },
   {
-    title: "D Type Digital Standee",
+    title: "D-Model Floor Mount Digital Kiosk",
     icon: Video,
   },
 ];

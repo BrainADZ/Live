@@ -27,11 +27,13 @@ const verticalMobileChargingKiosk: MenuItem = {
 const interactivePanelTitles = [
   "Interactive Teaching Display",
   "Interactive Panel",
+  "Digital Teaching & Conference Board (IFPD)",
 ];
 
 const interactivePanelUrls = [
   "/digital-signage-products/interactive-teaching-display",
   "/digital-signage-products/interactive-panel",
+  "/digital-signage-products/digital-teaching-conference-board-ifpd",
 ];
 
 const normalizedDigitalSignageProducts = menuContent[
@@ -43,14 +45,14 @@ const normalizedDigitalSignageProducts = menuContent[
     interactivePanelUrls.includes(item.href)
       ? {
           ...item,
-          title: "Interactive Panel",
-          href: "/digital-signage-products/interactive-panel",
+          title: "Digital Teaching & Conference Board (IFPD)",
+          href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
         }
       : item
   );
 
 const interactivePanelIndex = normalizedDigitalSignageProducts.findIndex(
-  (item) => item.title === "Interactive Panel"
+  (item) => item.title === "Digital Teaching & Conference Board (IFPD)"
 );
 
 const updatedDigitalSignageProducts =
@@ -181,9 +183,9 @@ const searchLinks = [
     keywords: "digital signage kiosk display standee led lfd",
   },
   {
-    label: "Interactive Panel",
-    href: "/digital-signage-products/interactive-panel",
-    description: "Interactive display solution for classrooms and collaborative spaces",
+    label: "Digital Teaching & Conference Board (IFPD)",
+    href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
+    description: "Digital teaching and conference board for classrooms and collaborative spaces",
     keywords: "interactive panel interactive teaching display smart classroom display",
   },
   {

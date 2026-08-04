@@ -839,7 +839,7 @@ export default function SaaSDevelopmentPage() {
       <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
-            <img src="/services/hero/saas-support.jpg" alt="SaaS Support and Growth" className="h-full w-full object-cover" />
+            <img src="/overview/saas-development.webp" alt="SaaS Support and Growth" className="h-full w-full object-cover" />
           </div>
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">SaaS Support & Growth</p>
