@@ -947,7 +947,7 @@ export default function CRMSoftwarePage() {
       <DemoForm
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
-        demoHref="/demos"
+        demoHref="https://democrm.brainadzlive.in/"
       />
     </main>
   );
