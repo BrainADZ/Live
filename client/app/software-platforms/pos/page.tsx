@@ -826,7 +826,7 @@ export default function POSSoftwarePage() {
       <DemoForm
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
-        demoHref="https://posbadz.netlify.app/kiosk"
+        demoHref="https://posbadz.onrender.com/"
       />
     </main>
   );
