@@ -826,6 +826,7 @@ export default function POSSoftwarePage() {
       <DemoForm
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
+        demoType="pos"
         demoHref="https://posbadz.onrender.com/"
       />
     </main>

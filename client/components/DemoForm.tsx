@@ -24,7 +24,7 @@ type DemoFormProps = {
   isOpen: boolean;
   onClose: () => void;
   demoHref?: string;
-  demoType?: "erp";
+  demoType?: "crm" | "erp" | "pos";
 };
 
 const companySizes = [
@@ -72,7 +72,7 @@ export default function DemoForm({
     setCaptchaError("");
     setSubmitError("");
 
-    if (demoType !== "erp") {
+    if (!demoType) {
       onClose();
       router.push(demoHref);
       return;
@@ -80,7 +80,7 @@ export default function DemoForm({
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    const payload = {
+    const demoPayload = {
       name: formData.get("name"),
       companyWebsite: formData.get("companyWebsite"),
       email: formData.get("email"),
@@ -94,7 +94,30 @@ export default function DemoForm({
 
     try {
       setIsSubmitting(true);
-      const response = await fetch(getApiUrl("/api/erp-demo"), {
+      const isErpDemo = demoType === "erp";
+      const endpoint = isErpDemo ? "/api/erp-demo" : "/api/enquire-now";
+      const payload = isErpDemo
+        ? demoPayload
+        : {
+            name: demoPayload.name,
+            email: demoPayload.email,
+            phone: demoPayload.phone,
+            company: demoPayload.companyWebsite,
+            solution: "Software Platforms",
+            service: `${demoType.toUpperCase()} Software Demo`,
+            message: [
+              `Industry: ${demoPayload.industry}`,
+              `Company size: ${demoPayload.companySize}`,
+              `Preferred demo language: ${demoPayload.preferredLanguage}`,
+              `How they heard about BrainADZ: ${demoPayload.source || "Not provided"}`,
+              "",
+              "Requirements:",
+              demoPayload.requirements,
+            ].join("\n"),
+            pageUrl: window.location.href,
+          };
+
+      const response = await fetch(getApiUrl(endpoint), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -102,18 +125,20 @@ export default function DemoForm({
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Failed to create ERP demo access.");
+        throw new Error(data.message || "Failed to submit the demo request.");
       }
 
       form.reset();
       setCaptchaValue("");
       onClose();
-      window.location.assign(data.redirectUrl || demoHref);
+      window.location.assign(
+        isErpDemo ? data.redirectUrl || demoHref : demoHref
+      );
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
-          : "Failed to create ERP demo access. Please try again."
+          : "Failed to submit the demo request. Please try again."
       );
     } finally {
       setIsSubmitting(false);
@@ -422,7 +447,7 @@ export default function DemoForm({
               className="inline-flex h-12.5 w-full items-center justify-center gap-3 rounded-[10px] bg-[#193175] px-6 text-[14px] font-semibold text-white shadow-[0_16px_34px_rgba(60,91,155,0.25)] transition hover:-translate-y-0.5 hover:bg-[#2f4a82] disabled:cursor-not-allowed disabled:opacity-65 md:col-span-2"
             >
               <Send size={18} />
-              {isSubmitting ? "Creating Demo Access..." : "Submit Request"}
+              {isSubmitting ? "Submitting Request..." : "Submit Request"}
             </button>
 
             {submitError && (
