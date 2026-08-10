@@ -10,7 +10,7 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   categoryLinks,
   menuContent,
@@ -257,6 +257,7 @@ const accountLinks = [
 ];
 
 export default function Navbar() {
+  const megaMenuCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
@@ -284,7 +285,29 @@ export default function Navbar() {
     setMobileAboutOpen(false);
   };
 
+  const openMegaMenu = () => {
+    if (megaMenuCloseTimer.current) {
+      clearTimeout(megaMenuCloseTimer.current);
+      megaMenuCloseTimer.current = null;
+    }
+    setShowMegaMenu(true);
+  };
+
+  const scheduleMegaMenuClose = () => {
+    if (megaMenuCloseTimer.current) {
+      clearTimeout(megaMenuCloseTimer.current);
+    }
+    megaMenuCloseTimer.current = setTimeout(() => {
+      setShowMegaMenu(false);
+      megaMenuCloseTimer.current = null;
+    }, 180);
+  };
+
   const closeMegaMenu = () => {
+    if (megaMenuCloseTimer.current) {
+      clearTimeout(megaMenuCloseTimer.current);
+      megaMenuCloseTimer.current = null;
+    }
     setShowMegaMenu(false);
   };
 
@@ -340,8 +363,8 @@ export default function Navbar() {
             {/* SOLUTIONS MEGA MENU */}
             <div
               className="relative"
-              onMouseEnter={() => setShowMegaMenu(true)}
-              onMouseLeave={() => setShowMegaMenu(false)}
+              onMouseEnter={openMegaMenu}
+              onMouseLeave={scheduleMegaMenuClose}
             >
               <button
                 type="button"
@@ -360,6 +383,8 @@ export default function Navbar() {
 
               {/* MEGA MENU */}
               <div
+                onMouseEnter={openMegaMenu}
+                onMouseLeave={scheduleMegaMenuClose}
                 className={`fixed left-0 top-21 w-full border-t border-[#e5e5e5] bg-white shadow-xl transition-all duration-200 ${
                   showMegaMenu
                     ? "visible opacity-100"

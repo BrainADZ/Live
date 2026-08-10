@@ -5,9 +5,25 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   max-width: 100%;
   overflow-x: clip;
+}
+
+/* Keep every page static: no motion, fades, transitions, or smooth scrolling. */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
 }
 
 body {
@@ -173,4 +189,60 @@ html.aos-ready .minimal-scroll-reveal [data-aos][data-aos-delay].aos-animate {
 /* Hover par halka zoom */
 .group:hover .manual-icon {
   transform: scale(1.15);
+}
+
+/* Stats layout must be available before client hydration to prevent layout shift. */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-item::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 56px);
+  background: #d8d8d8;
+}
+
+.stat-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  width: calc(100% - 48px);
+  height: 1px;
+  background: #d8d8d8;
+}
+
+.stat-item:nth-child(2n)::after {
+  display: none;
+}
+
+.stat-item:nth-last-child(-n + 2)::before {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .stat-item:nth-child(2n)::after {
+    display: block;
+  }
+
+  .stat-item:nth-child(4n)::after {
+    display: none;
+  }
+
+  .stat-item::before {
+    display: block;
+  }
+
+  .stat-item:nth-last-child(-n + 4)::before {
+    display: none;
+  }
 }

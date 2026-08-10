@@ -7,6 +7,7 @@ import HeroSlider from "@/components/home/Hero-Slider";
 import IndustriesSection from "@/components/home/Industries";
 import InsideBadzSection from "@/components/home/InsideBadz";
 import NewsSection from "@/components/home/News";
+import OurSoftware from "@/components/home/Software";
 import ProductSection from "@/components/home/Product";
 import ServiceSection from "@/components/home/Service";
 import StatsSection from "@/components/home/Stats";
@@ -14,6 +15,7 @@ import TeamSection from "@/components/home/Team";
 import TechStackSection from "@/components/home/TechStack";
 import TestimonialSection from "@/components/home/Testimonials";
 import WhyChooseSection from "@/components/home/WhyBrainADZ";
+import Software from "@/components/home/Software";
 
 export default function Home() {
   return (
@@ -23,6 +25,7 @@ export default function Home() {
       <AboutSection />
       <CtaSection />
       <ServiceSection />
+      <Software />
       <ProductSection />
       <BrandCarousel />
       <IndustriesSection />

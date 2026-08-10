@@ -48,70 +48,50 @@ const stats = [
 export default function StatsSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const hasAnimated = useRef(false);
-
-  const [counts, setCounts] = useState<number[]>(
-    stats.map(() => 0)
-  );
+  const animationFrame = useRef<number | null>(null);
+  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
 
   useEffect(() => {
     const section = sectionRef.current;
-
     if (!section) return;
 
-    const animateCounts = () => {
-      const duration = 1400;
-      const startTime = performance.now();
-
-      const updateCounts = (currentTime: number) => {
-        const progress = Math.min(
-          (currentTime - startTime) / duration,
-          1
-        );
-
-        const easedProgress =
-          1 - Math.pow(1 - progress, 3);
-
-        setCounts(
-          stats.map((item) =>
-            Math.floor(item.value * easedProgress)
-          )
-        );
-
-        if (progress < 1) {
-          requestAnimationFrame(updateCounts);
-        } else {
-          setCounts(stats.map((item) => item.value));
-        }
-      };
-
-      requestAnimationFrame(updateCounts);
-    };
-
     const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
+      ([entry]) => {
+        if (!entry?.isIntersecting || hasAnimated.current) return;
 
-        if (!entry) return;
+        hasAnimated.current = true;
+        observer.unobserve(section);
 
-        if (
-          entry.isIntersecting &&
-          entry.intersectionRatio >= 0.3 &&
-          !hasAnimated.current
-        ) {
-          hasAnimated.current = true;
-          animateCounts();
-          observer.unobserve(section);
-        }
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const updateCounts = (currentTime: number) => {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+          setCounts(
+            stats.map((item) => Math.floor(item.value * easedProgress))
+          );
+
+          if (progress < 1) {
+            animationFrame.current = requestAnimationFrame(updateCounts);
+          } else {
+            setCounts(stats.map((item) => item.value));
+          }
+        };
+
+        animationFrame.current = requestAnimationFrame(updateCounts);
       },
-      {
-        threshold: [0.3, 0.5, 0.7],
-      }
+      { threshold: 0.3 }
     );
 
     observer.observe(section);
 
     return () => {
       observer.disconnect();
+      if (animationFrame.current !== null) {
+        cancelAnimationFrame(animationFrame.current);
+      }
     };
   }, []);
 
@@ -183,62 +163,6 @@ export default function StatsSection() {
         </div>
       </div>
 
-      <style jsx>{`
-        .stats-grid {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .stat-item::after {
-          content: "";
-          position: absolute;
-          top: 28px;
-          right: 0;
-          width: 1px;
-          height: calc(100% - 56px);
-          background: #d8d8d8;
-        }
-
-        .stat-item::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 24px;
-          width: calc(100% - 48px);
-          height: 1px;
-          background: #d8d8d8;
-        }
-
-        .stat-item:nth-child(2n)::after {
-          display: none;
-        }
-
-        .stat-item:nth-last-child(-n + 2)::before {
-          display: none;
-        }
-
-        @media (min-width: 1024px) {
-          .stats-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-          }
-
-          .stat-item:nth-child(2n)::after {
-            display: block;
-          }
-
-          .stat-item:nth-child(4n)::after {
-            display: none;
-          }
-
-          .stat-item::before {
-            display: block;
-          }
-
-          .stat-item:nth-last-child(-n + 4)::before {
-            display: none;
-          }
-        }
-      `}</style>
     </section>
   );
 }

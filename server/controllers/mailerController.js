@@ -53,8 +53,27 @@ const EMAIL_ASSETS = {
 
   messageIcon: emailAssetUrl("message.svg"),
 
+  pageUrlIcon: emailAssetUrl("url.svg"),
+
   submittedIcon: emailAssetUrl("submitted.svg"),
 };
+
+/* =========================================================
+   ENQUIRY RECIPIENTS
+========================================================= */
+
+const getEnquiryRecipients = () => {
+  const recipients = [
+    process.env.ENQUIRY_EMAIL_1,
+    process.env.ENQUIRY_EMAIL_2,
+  ]
+    .map((email) => String(email || "").trim())
+    .filter(Boolean);
+
+  // Duplicate email IDs remove kar do.
+  return [...new Set(recipients)];
+};
+
 
 
 /* =========================================================
@@ -211,6 +230,7 @@ const sendEnquireNow = async (req, res) => {
       solution,
       service,
       message,
+      pageUrl,
     } = req.body;
 
 
@@ -239,14 +259,27 @@ const sendEnquireNow = async (req, res) => {
       });
     }
 
+    const phoneDigits = String(phone).replace(/\D/g, "");
+    const normalizedPhone =
+      phoneDigits.length === 12 && phoneDigits.startsWith("91")
+        ? phoneDigits.slice(2)
+        : phoneDigits;
+
+    if (!/^\d{10}$/.test(normalizedPhone)) {
+      return res.status(400).json({
+        success: false,
+        message: "Please enter a valid 10-digit phone number.",
+      });
+    }
+
 
     /* =====================================================
        SAFE VALUES
     ===================================================== */
 
-    const safeName = escapeHtml(name);
+    const safeName = escapeHtml(String(name).trim());
     const safeEmail = escapeHtml(rawEmail);
-    const safePhone = escapeHtml(phone);
+    const safePhone = escapeHtml(`+91 ${normalizedPhone}`);
 
     const safeCompany = escapeHtml(
       company || "Not provided"
@@ -262,6 +295,12 @@ const sendEnquireNow = async (req, res) => {
 
     const safeMessage = escapeHtml(
       message || "No message provided"
+    );
+
+    const rawPageUrl = String(pageUrl || "").trim();
+    const hasValidPageUrl = /^https?:\/\//i.test(rawPageUrl);
+    const safePageUrl = escapeHtml(
+      hasValidPageUrl ? rawPageUrl : "Not available"
     );
 
     /* =====================================================
@@ -286,7 +325,22 @@ const sendEnquireNow = async (req, res) => {
        SEND EMAIL
     ===================================================== */
 
+    const enquiryRecipients = getEnquiryRecipients();
+
+    if (enquiryRecipients.length < 2) {
+      console.error(
+        "Both ENQUIRY_EMAIL_1 and ENQUIRY_EMAIL_2 must be configured in .env"
+      );
+
+      return res.status(500).json({
+        success: false,
+        message: "Enquiry email recipients are not configured properly.",
+      });
+    }
+
     await sendMail({
+      // String form Nodemailer aur most custom wrappers dono ke saath safe hai.
+      to: enquiryRecipients.join(", "),
       replyTo: rawEmail,
 
       subject: `New Website Enquiry Received - ${safeName}`,
@@ -632,6 +686,15 @@ const sendEnquireNow = async (req, res) => {
                   label: "Message:",
                   value: safeMessage,
                   isMessage: true,
+                })}
+
+
+                ${createDetailRow({
+                  icon: EMAIL_ASSETS.pageUrlIcon,
+                  label: "Page URL:",
+                  value: safePageUrl,
+                  isLink: hasValidPageUrl,
+                  href: hasValidPageUrl ? safePageUrl : "",
                 })}
 
 
