@@ -151,7 +151,7 @@ export default function DigitalSignageProductsPage() {
   </section>
 
       {/* ABOUT DIGITAL SIGNAGE PRODUCTS */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-18">
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
@@ -202,7 +202,7 @@ export default function DigitalSignageProductsPage() {
         </div>
       </section>
 
-      {/* DIGITAL SIGNAGE STATS */}
+      {/* DIGITAL SIGNAGE STATS
       <section className="bg-[#f8faff] px-5 py-16 md:px-4 lg:px-12 lg:py-20">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -227,10 +227,10 @@ export default function DigitalSignageProductsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
      {/* PRODUCTS */}
-<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-15">
   <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
   <div className="relative z-10 mx-auto max-w-450">
