@@ -4,6 +4,16 @@ const { sendMail } = require("../service/mailerService");
 const ERP_DEMO_URL =
   process.env.ERP_DEMO_URL || "https://erp.brainadzlive.in/";
 
+const getDemoNotificationRecipients = () =>
+  [process.env.ENQUIRY_EMAIL_1, process.env.ENQUIRY_EMAIL_2]
+    .map((email) => String(email || "").trim())
+    .filter(Boolean)
+    .filter((email, index, recipients) =>
+      recipients.findIndex(
+        (recipient) => recipient.toLowerCase() === email.toLowerCase()
+      ) === index
+    );
+
 const escapeHtml = (value = "") =>
   String(value)
     .replace(/&/g, "&amp;")
@@ -103,8 +113,20 @@ const submitErpDemo = async (req, res) => {
     }
 
     const subjectName = fields["Full Name"].replace(/[\r\n]+/g, " ");
+    const notificationRecipients = getDemoNotificationRecipients();
+
+    if (notificationRecipients.length < 2) {
+      console.error(
+        "Both ENQUIRY_EMAIL_1 and ENQUIRY_EMAIL_2 must be configured for ERP demo notifications"
+      );
+      return res.status(500).json({
+        success: false,
+        message: "ERP demo notification recipients are not configured properly.",
+      });
+    }
 
     await sendMail({
+      to: notificationRecipients.join(", "),
       replyTo: normalizedEmail,
       subject: `New ERP Demo Request - ${subjectName}`,
       html: `

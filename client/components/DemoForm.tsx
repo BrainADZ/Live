@@ -2,7 +2,6 @@
 "use client";
 
 import { type FormEvent, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { getApiUrl } from "@/lib/api";
 import {
   BriefcaseBusiness,
@@ -45,7 +44,6 @@ export default function DemoForm({
   demoHref = "/demos",
   demoType,
 }: DemoFormProps) {
-  const router = useRouter();
   const [captchaCode, setCaptchaCode] = useState(captchaCodes[0]);
   const [captchaValue, setCaptchaValue] = useState("");
   const [captchaError, setCaptchaError] = useState("");
@@ -64,6 +62,8 @@ export default function DemoForm({
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (isSubmitting) return;
+
     if (captchaValue.trim().toUpperCase() !== captchaCode) {
       setCaptchaError("Please enter the captcha shown.");
       return;
@@ -71,12 +71,6 @@ export default function DemoForm({
 
     setCaptchaError("");
     setSubmitError("");
-
-    if (!demoType) {
-      onClose();
-      router.push(demoHref);
-      return;
-    }
 
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -104,7 +98,9 @@ export default function DemoForm({
             phone: demoPayload.phone,
             company: demoPayload.companyWebsite,
             solution: "Software Platforms",
-            service: `${demoType.toUpperCase()} Software Demo`,
+            service: demoType
+              ? `${demoType.toUpperCase()} Software Demo`
+              : "Software Platform Demo",
             message: [
               `Industry: ${demoPayload.industry}`,
               `Company size: ${demoPayload.companySize}`,
