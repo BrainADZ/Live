@@ -1,4 +1,26 @@
 const { sendMail } = require("../service/mailerService");
+const crypto = require("crypto");
+
+// Stops a double-click, an accidental refresh, or a client retry from
+// creating another email for the same enquiry. This process is single-server,
+// so an in-memory window is sufficient here.
+const recentEnquiries = new Map();
+const DUPLICATE_ENQUIRY_WINDOW_MS = 60 * 1000;
+
+const getEnquiryFingerprint = (values) =>
+  crypto
+    .createHash("sha256")
+    .update(values.map((value) => String(value || "").trim().toLowerCase()).join("|"))
+    .digest("hex");
+
+const clearExpiredEnquiries = () => {
+  const now = Date.now();
+  for (const [fingerprint, createdAt] of recentEnquiries) {
+    if (now - createdAt > DUPLICATE_ENQUIRY_WINDOW_MS) {
+      recentEnquiries.delete(fingerprint);
+    }
+  }
+};
 
 /* =========================================================
    EMAIL ASSETS
@@ -149,8 +171,9 @@ const createDetailRow = ({
     `;
 
   return `
-    <tr>
+    <tr class="detail-row${isLast ? " detail-row--last" : ""}">
       <td
+        class="detail-label"
         style="
           width:200px;
           padding:15px 18px;
@@ -203,6 +226,7 @@ const createDetailRow = ({
       </td>
 
       <td
+        class="detail-value"
         style="
           padding:15px 22px;
           vertical-align:${isMessage ? "top" : "middle"};
@@ -221,6 +245,8 @@ const createDetailRow = ({
 ========================================================= */
 
 const sendEnquireNow = async (req, res) => {
+  let enquiryFingerprint;
+
   try {
     const {
       name,
@@ -303,6 +329,29 @@ const sendEnquireNow = async (req, res) => {
       hasValidPageUrl ? rawPageUrl : "Not available"
     );
 
+    enquiryFingerprint = getEnquiryFingerprint([
+      name,
+      rawEmail,
+      normalizedPhone,
+      company,
+      solution,
+      service,
+      message,
+      rawPageUrl,
+    ]);
+
+    clearExpiredEnquiries();
+    if (recentEnquiries.has(enquiryFingerprint)) {
+      return res.status(200).json({
+        success: true,
+        message: "This enquiry was already submitted.",
+      });
+    }
+
+    // Reserve the fingerprint before sending so two simultaneous requests
+    // cannot each send an email.
+    recentEnquiries.set(enquiryFingerprint, Date.now());
+
     /* =====================================================
        SUBMITTED DATE & TIME
     ===================================================== */
@@ -373,6 +422,25 @@ const sendEnquireNow = async (req, res) => {
     New Website Enquiry Received
   </title>
 
+  <style>
+    @media only screen and (max-width: 600px) {
+      .email-outer { padding: 0 !important; }
+      .email-shell { width: 100% !important; border-radius: 0 !important; }
+      .email-logo-cell { padding: 22px 20px 16px !important; }
+      .email-divider { padding: 0 20px !important; }
+      .email-section { padding: 22px 20px !important; }
+      .email-heading-icon, .email-heading-text { display: block !important; width: auto !important; }
+      .email-heading-icon { padding: 0 0 14px !important; }
+      .email-heading-text h1 { font-size: 22px !important; }
+      .detail-label, .detail-value { display: block !important; width: auto !important; }
+      .detail-label { padding: 14px 16px 5px !important; border-right: 0 !important; border-bottom: 0 !important; }
+      .detail-value { padding: 0 16px 14px !important; border-bottom: 1px solid #e2e8f0 !important; }
+      .detail-row--last .detail-value { border-bottom: 0 !important; }
+      .email-footer { padding: 0 20px 22px !important; }
+      .email-note { padding: 14px 20px 18px !important; }
+    }
+  </style>
+
 </head>
 
 
@@ -405,6 +473,7 @@ const sendEnquireNow = async (req, res) => {
 
       <td
         align="center"
+        class="email-outer"
         style="
           padding:32px 12px;
         "
@@ -414,6 +483,7 @@ const sendEnquireNow = async (req, res) => {
         <!-- MAIN EMAIL CONTAINER -->
 
         <table
+          class="email-shell"
           width="100%"
           cellpadding="0"
           cellspacing="0"
@@ -439,6 +509,7 @@ const sendEnquireNow = async (req, res) => {
 
             <td
               align="center"
+              class="email-logo-cell"
               style="
                 padding:28px 28px 18px;
                 background:#ffffff;
@@ -469,6 +540,7 @@ const sendEnquireNow = async (req, res) => {
           <tr>
 
             <td
+              class="email-divider"
               style="
                 padding:0 32px;
               "
@@ -495,6 +567,7 @@ const sendEnquireNow = async (req, res) => {
           <tr>
 
             <td
+              class="email-section"
               style="
                 padding:28px 32px 22px;
               "
@@ -514,6 +587,7 @@ const sendEnquireNow = async (req, res) => {
                   <!-- HEADING ICON -->
 
                   <td
+                    class="email-heading-icon"
                     width="78"
                     valign="middle"
                     style="
@@ -571,6 +645,7 @@ const sendEnquireNow = async (req, res) => {
 
                   <td
                     valign="middle"
+                    class="email-heading-text"
                   >
 
                     <h1
@@ -616,6 +691,7 @@ const sendEnquireNow = async (req, res) => {
           <tr>
 
             <td
+              class="email-section"
               style="
                 padding:0 32px 28px;
               "
@@ -719,6 +795,7 @@ const sendEnquireNow = async (req, res) => {
           <tr>
 
             <td
+              class="email-footer"
               style="
                 padding:0 32px 28px;
               "
@@ -844,6 +921,7 @@ const sendEnquireNow = async (req, res) => {
 
             <td
               align="center"
+              class="email-note"
               style="
                 padding:16px 12px 0;
               "
@@ -891,6 +969,10 @@ const sendEnquireNow = async (req, res) => {
     });
 
   } catch (error) {
+
+    if (enquiryFingerprint) {
+      recentEnquiries.delete(enquiryFingerprint);
+    }
 
     console.error(
       "Enquire now mail error:",

@@ -197,6 +197,8 @@ export default function ContactPage() {
   ) => {
     event.preventDefault();
 
+    if (isSubmitting) return;
+
     const form = event.currentTarget;
     const formData = new FormData(form);
 

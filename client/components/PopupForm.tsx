@@ -95,6 +95,8 @@ export default function PopupForm({
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (isSubmitting) return;
+
     const form = event.currentTarget;
     const formData = new FormData(form);
 
