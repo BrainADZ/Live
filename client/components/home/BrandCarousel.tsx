@@ -17,6 +17,7 @@ type BrandsApiResponse = {
 export default function BrandCarousel() {
   const [brands, setBrands] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -112,14 +113,23 @@ export default function BrandCarousel() {
 
           {/* Brand carousel */}
           {!isLoading && brands.length > 0 && (
-            <div className="brand-carousel relative overflow-hidden">
+            <div
+              className="brand-carousel relative overflow-hidden"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               {/* Left fade */}
               <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 bg-gradient-to-r from-white to-transparent md:w-32 lg:w-44" />
 
               {/* Right fade */}
               <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 bg-gradient-to-l from-white to-transparent md:w-32 lg:w-44" />
 
-              <div className="brand-track flex w-max items-center">
+              <div
+                className="brand-track flex w-max items-center"
+                style={{
+                  animationPlayState: isHovered ? "paused" : "running",
+                }}
+              >
                 {duplicatedBrands.map((brand, index) => (
                   <div
                     key={`${brand.logo}-${index}`}
@@ -167,12 +177,8 @@ export default function BrandCarousel() {
 
       <style jsx>{`
         .brand-track {
-          animation: brandScroll 35s linear infinite;
+          animation: brandScroll 35s linear infinite !important;
           will-change: transform;
-        }
-
-        .brand-carousel:hover .brand-track {
-          animation-play-state: paused;
         }
 
         @keyframes brandScroll {
@@ -188,13 +194,6 @@ export default function BrandCarousel() {
         @media (max-width: 768px) {
           .brand-track {
             animation-duration: 20s;
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .brand-track {
-            animation: none;
-            transform: translateX(0);
           }
         }
       `}</style>
