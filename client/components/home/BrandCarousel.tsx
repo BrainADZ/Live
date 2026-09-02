@@ -17,7 +17,6 @@ type BrandsApiResponse = {
 export default function BrandCarousel() {
   const [brands, setBrands] = useState<Brand[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -58,8 +57,6 @@ export default function BrandCarousel() {
       controller.abort();
     };
   }, []);
-
-  const duplicatedBrands = [...brands, ...brands];
 
   return (
     <>
@@ -113,53 +110,33 @@ export default function BrandCarousel() {
 
           {/* Brand carousel */}
           {!isLoading && brands.length > 0 && (
-            <div
-              className="brand-carousel relative overflow-hidden"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
+            <div className="brand-carousel relative overflow-hidden">
               {/* Left fade */}
               <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 bg-gradient-to-r from-white to-transparent md:w-32 lg:w-44" />
 
               {/* Right fade */}
               <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 bg-gradient-to-l from-white to-transparent md:w-32 lg:w-44" />
 
-              <div
-                className="brand-track flex w-max items-center"
-                style={{
-                  animationPlayState: isHovered ? "paused" : "running",
-                }}
-              >
-                {duplicatedBrands.map((brand, index) => (
-                  <div
-                    key={`${brand.logo}-${index}`}
-                    className="brand-item group flex h-[120px] w-[220px] shrink-0 items-center justify-center border-r border-[#161616]/8 px-10 md:h-[140px] md:w-[260px]"
-                  >
-                    <img
-                      src={brand.logo}
-                      alt={`${brand.name} logo`}
-                      loading="lazy"
-                      decoding="async"
-                      className="max-h-[46px] max-w-[140px] object-contain opacity-45 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 md:max-h-[52px] md:max-w-[160px]"
-                      onError={(event) => {
-                        event.currentTarget.style.display = "none";
-
-                        const fallback =
-                          event.currentTarget
-                            .nextElementSibling as HTMLSpanElement | null;
-
-                        if (fallback) {
-                          fallback.style.display = "block";
-                        }
-                      }}
+              <div className="brand-track">
+                {/* First brand group */}
+                <div className="brand-list">
+                  {brands.map((brand, index) => (
+                    <BrandItem
+                      key={`first-${brand.logo}-${index}`}
+                      brand={brand}
                     />
+                  ))}
+                </div>
 
-                    {/* Fallback brand name */}
-                    <span className="hidden text-center text-[20px] font-medium tracking-[-0.02em] text-[#161616]/45 transition-colors duration-300 group-hover:text-[#193175]">
-                      {brand.name}
-                    </span>
-                  </div>
-                ))}
+                {/* Duplicate group for seamless infinite loop */}
+                <div className="brand-list" aria-hidden="true">
+                  {brands.map((brand, index) => (
+                    <BrandItem
+                      key={`second-${brand.logo}-${index}`}
+                      brand={brand}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -176,27 +153,103 @@ export default function BrandCarousel() {
       </section>
 
       <style jsx>{`
+        .brand-carousel {
+          width: 100%;
+          overflow: hidden;
+        }
+
         .brand-track {
+          display: flex;
+          width: max-content;
+          min-width: max-content;
+          align-items: center;
+
+          /* globals.css disables animations globally, so this intentional
+             carousel motion needs an explicit opt-in. */
           animation: brandScroll 35s linear infinite !important;
+          animation-play-state: running !important;
+
           will-change: transform;
         }
 
+        .brand-list {
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          width: max-content;
+        }
+
+        .brand-carousel:hover .brand-track {
+          animation-play-state: paused !important;
+        }
+
+        .brand-item,
+        .brand-item img,
+        .brand-item span {
+          transition-property: background-color, border-color, box-shadow,
+            color, filter, opacity, transform !important;
+          transition-duration: 300ms !important;
+          transition-timing-function: ease !important;
+        }
+
+        .brand-item:hover {
+          background: rgba(25, 49, 117, 0.05);
+          border-color: rgba(25, 49, 117, 0.2);
+          box-shadow: inset 0 -2px 0 rgba(25, 49, 117, 0.75);
+        }
+
         @keyframes brandScroll {
-          from {
-            transform: translateX(0);
+          0% {
+            transform: translate3d(0, 0, 0);
           }
 
-          to {
-            transform: translateX(-50%);
+          100% {
+            transform: translate3d(-50%, 0, 0);
           }
         }
 
         @media (max-width: 768px) {
           .brand-track {
-            animation-duration: 20s;
+            animation-duration: 20s !important;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .brand-track {
+            animation: none !important;
+            transform: translate3d(0, 0, 0);
           }
         }
       `}</style>
     </>
+  );
+}
+
+function BrandItem({ brand }: { brand: Brand }) {
+  return (
+    <div className="brand-item group flex h-[120px] w-[220px] shrink-0 items-center justify-center border-r border-[#161616]/8 px-10 md:h-[140px] md:w-[260px]">
+      <img
+        src={brand.logo}
+        alt={`${brand.name} logo`}
+        loading="lazy"
+        decoding="async"
+        className="max-h-[46px] max-w-[140px] object-contain opacity-45 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 md:max-h-[52px] md:max-w-[160px]"
+        onError={(event) => {
+          event.currentTarget.style.display = "none";
+
+          const fallback = event.currentTarget
+            .nextElementSibling as HTMLSpanElement | null;
+
+          if (fallback) {
+            fallback.style.display = "block";
+          }
+        }}
+      />
+
+      {/* Fallback brand name */}
+      <span className="hidden text-center text-[20px] font-medium tracking-[-0.02em] text-[#161616]/45 transition-colors duration-300 group-hover:text-[#193175]">
+        {brand.name}
+      </span>
+    </div>
   );
 }
