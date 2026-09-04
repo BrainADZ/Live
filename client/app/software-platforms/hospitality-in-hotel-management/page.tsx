@@ -1214,29 +1214,11 @@ export default function HospitalityManagementSoftwarePage() {
         </div>
       </section>
 
-      {/* DEMO POPUP */}
-      {isPopupOpen && (
-        <div
-          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/65 p-4 backdrop-blur-sm"
-          onClick={() => setIsPopupOpen(false)}
-        >
-          <div
-            className="relative max-h-[92vh] w-full max-w-[780px] overflow-y-auto rounded-[24px] bg-white p-5 shadow-2xl md:p-8"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              onClick={() => setIsPopupOpen(false)}
-              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#f2f4f8] text-[#193175] transition hover:bg-[#e3e8f2]"
-              aria-label="Close demo form"
-            >
-              <Plus size={20} className="rotate-45" />
-            </button>
-
-            <DemoForm />
-          </div>
-        </div>
-      )}
+      <DemoForm
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        demoType="hospitality"
+      />
     </main>
   );
 }
