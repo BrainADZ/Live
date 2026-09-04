@@ -91,9 +91,9 @@ export default function Hero() {
           >
             {hasContent && (
               <>
-                <h1 className="text-[38px] font-semibold leading-[1.16] tracking-[-1.2px] text-white sm:text-[40px] md:text-[48px] lg:text-[56px]">
+                {/* <h1 className="text-[38px] font-semibold leading-[1.16] tracking-[-1.2px] text-white sm:text-[40px] md:text-[48px] lg:text-[56px]">
                   {currentSlide.heading}
-                </h1>
+                </h1> */}
 
                 <p className="mt-7 max-w-190 text-[14px] font-normal leading-[1.65] tracking-[-0.1px] text-white/90 md:text-[16px]">
                   {currentSlide.description}
