@@ -27,9 +27,9 @@ const androidApps = [
     controlledWith: "Live Remote mobile app",
     icon: "controller",
     apk: {
-      href: "/BrainAdz-Player-v2.4.12.apk",
-      fileName: "BrainAdz-Player-v2.4.12.apk",
-      version: "2.4.12",
+      href: "/BrainAdz-Player-v2.4.13.apk",
+      fileName: "BrainAdz-Player-v2.4.13.apk",
+      version: "2.4.13",
       buttonLabel: "Download Mobile Player",
     },
   },
