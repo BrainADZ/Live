@@ -23,7 +23,7 @@ type DemoFormProps = {
   isOpen: boolean;
   onClose: () => void;
   demoHref?: string;
-  demoType?: "crm" | "erp" | "pos";
+  demoType?: "crm" | "erp" | "pos" | "hospitality";
 };
 
 const companySizes = [
@@ -98,9 +98,12 @@ export default function DemoForm({
             phone: demoPayload.phone,
             company: demoPayload.companyWebsite,
             solution: "Software Platforms",
-            service: demoType
-              ? `${demoType.toUpperCase()} Software Demo`
-              : "Software Platform Demo",
+            service:
+              demoType === "hospitality"
+                ? "Hospitality Management Software Demo"
+                : demoType
+                  ? `${demoType.toUpperCase()} Software Demo`
+                  : "Software Platform Demo",
             message: [
               `Industry: ${demoPayload.industry}`,
               `Company size: ${demoPayload.companySize}`,

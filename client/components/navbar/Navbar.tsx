@@ -75,7 +75,7 @@ const hasVirtualTrialRoom = menuContent["Software Platforms"].some((item) =>
   virtualTrialRoomTitles.includes(item.title)
 );
 
-const updatedSoftwarePlatforms = hasVirtualTrialRoom
+const softwarePlatformsWithPos = hasVirtualTrialRoom
   ? menuContent["Software Platforms"].map((item) =>
       virtualTrialRoomTitles.includes(item.title) ? posPlatform : item
     )
@@ -88,6 +88,28 @@ const updatedSoftwarePlatforms = hasVirtualTrialRoom
           : item
       )
     : [...menuContent["Software Platforms"], posPlatform];
+
+const hospitalityPlatform: MenuItem = {
+  title: "Hospitality In Hotel Management",
+  href: "/software-platforms/hospitality-in-hotel-management",
+};
+
+const softwarePlatformsWithoutHospitality = softwarePlatformsWithPos.filter(
+  (item) => item.title !== hospitalityPlatform.title
+);
+
+const posPlatformIndex = softwarePlatformsWithoutHospitality.findIndex(
+  (item) => item.title === posPlatform.title
+);
+
+const updatedSoftwarePlatforms =
+  posPlatformIndex >= 0
+    ? [
+        ...softwarePlatformsWithoutHospitality.slice(0, posPlatformIndex + 1),
+        hospitalityPlatform,
+        ...softwarePlatformsWithoutHospitality.slice(posPlatformIndex + 1),
+      ]
+    : [...softwarePlatformsWithoutHospitality, hospitalityPlatform];
 
 const updatedMenuContent: Record<Category, MenuItem[]> = {
   ...menuContent,
