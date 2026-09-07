@@ -75,14 +75,14 @@ export default function NewsSection() {
                 an unsubscribe link in every newsletter. You can manage your
                 subscriptions or unsubscribe{" "}
                 <a
-                  href="/unsubscribe"
+                  href="/contact-us"
                   className="text-[#193175] hover:underline"
                 >
                   here
                 </a>
                 . Refer to our{" "}
                 <a
-                  href="/privacy-policy"
+                  href="/contact-us"
                   className="text-[#193175] hover:underline"
                 >
                   BrainADZ Privacy Statement

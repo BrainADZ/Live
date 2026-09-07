@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
 import LocationsSection from "./Location";
 
 const INITIAL_VISIBLE_LINKS = 5;
@@ -72,7 +71,6 @@ const footerColumns = [
       { label: "Case studies", href: "/case-studies" },
       { label: "Consulting", href: "/consulting" },
       { label: "Contact", href: "/contact-us" },
-      { label: "FAQs", href: "/faqs" },
     ],
   },
   {
@@ -81,8 +79,6 @@ const footerColumns = [
       { label: "Overview", href: "/about-us" },
       { label: "Careers", href: "/careers" },
       { label: "Contact us", href: "/contact-us" },
-      { label: "Privacy policy", href: "/privacy-policy" },
-      { label: "Terms of use", href: "/terms" },
     ],
   },
 ];
@@ -153,25 +149,6 @@ export default function Footer() {
       {/* BOTTOM FOOTER BAR */}
       <div className="mx-auto flex max-w-450 flex-col gap-4 px-6 pb-7 md:px-10 lg:px-12 xl:flex-row xl:items-center xl:justify-between">
         {/* LEFT */}
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-          <Link
-            href="/privacy-choices"
-            className="flex items-center gap-2 text-[12px] text-[#616161] transition hover:text-[#193175] hover:underline"
-          >
-            <span className="flex h-5.5 w-11.5 items-center justify-center rounded-full bg-[#0067ff] text-white">
-              <ShieldCheck size={15} strokeWidth={2} />
-            </span>
-            Your Privacy Choices
-          </Link>
-
-          <Link
-            href="/consumer-health-privacy"
-            className="text-[12px] text-[#616161] transition hover:text-[#193175] hover:underline"
-          >
-            Consumer Health Privacy
-          </Link>
-        </div>
-
         {/* RIGHT */}
         <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
           {/* {bottomLinks.map((link) => (

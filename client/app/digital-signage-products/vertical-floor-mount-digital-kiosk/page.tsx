@@ -463,7 +463,7 @@ export default function VerticalFloorMountDigitalKioskPage() {
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* GALLERY
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-12 flex flex-col justify-between gap-7 md:flex-row md:items-end">
@@ -505,7 +505,7 @@ export default function VerticalFloorMountDigitalKioskPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
       <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">

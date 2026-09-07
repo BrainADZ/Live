@@ -168,7 +168,7 @@ export default function OurCoreTeamPage() {
 
             <span className="text-white/80">/</span>
 
-            <Link href="/about" className="text-[#fbfbfb] hover:underline">
+            <Link href="/about-us" className="text-[#fbfbfb] hover:underline">
               About
             </Link>
 
