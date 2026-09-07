@@ -27,10 +27,26 @@ const androidApps = [
     controlledWith: "Live Remote mobile app",
     icon: "controller",
     apk: {
-      href: "/BrainAdz-Player-v2.4.13.apk",
-      fileName: "BrainAdz-Player-v2.4.13.apk",
-      version: "2.4.13",
+      href: "/BrainAdz-Player-v2.4.14.apk",
+      fileName: "BrainAdz-Player-v2.4.14.apk",
+      version: "2.4.14",
       buttonLabel: "Download Mobile Player",
+    },
+  },
+  {
+    id: "mobile-autolauncher",
+    label: "Startup utility",
+    name: "Mobile Autolauncher",
+    description:
+      "Install this utility on your Android signage device to launch the BrainAdz mobile-controlled Player automatically when the device starts.",
+    installOn: "Android signage device",
+    controlledWith: "Device startup",
+    icon: "launcher",
+    apk: {
+      href: "/brainadz-auto-launcher-v1.0.13.apk",
+      fileName: "brainadz-auto-launcher-v1.0.13.apk",
+      version: "1.0.13",
+      buttonLabel: "Download Autolauncher",
     },
   },
 ] as const;
@@ -38,10 +54,30 @@ const androidApps = [
 export const metadata: Metadata = {
   title: "Download BrainAdz Android Apps",
   description:
-    "Download the cloud-managed or mobile-controlled BrainAdz Player app for Android.",
+    "Download the BrainAdz Players and Mobile Autolauncher for Android.",
 };
 
-function AppIcon({ type }: { type: "player" | "controller" }) {
+function AppIcon({ type }: { type: "player" | "controller" | "launcher" }) {
+  if (type === "launcher") {
+    return (
+      <svg
+        aria-hidden="true"
+        className="h-9 w-9"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <rect x="6" y="2.5" width="12" height="19" rx="2.25" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 7v7m0 0 3-3m-3 3-3-3M10 18h4"
+        />
+      </svg>
+    );
+  }
+
   if (type === "controller") {
     return (
       <svg
@@ -105,8 +141,8 @@ function DownloadIcon() {
 
 export default function ApkDownloadPage() {
   return (
-    <main className="flex min-h-[72vh] items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50 px-5 py-16 sm:py-20">
-      <section className="w-full max-w-6xl">
+    <main className="flex min-h-[72vh] items-center justify-center bg-linear-to-br from-slate-50 via-white to-blue-50 px-5 py-16 sm:py-20">
+      <section className="w-full max-w-7xl">
         <header className="mx-auto max-w-3xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">
             Android Applications
@@ -115,12 +151,12 @@ export default function ApkDownloadPage() {
             Choose how you want to control your screen
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            Use Cloud Player for cloud-managed signage, or choose the
-            mobile-controlled Player for local control from your phone.
+            Choose a Player for your preferred control method, and use Mobile
+            Autolauncher when the mobile-controlled Player should open at startup.
           </p>
         </header>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {androidApps.map((app) => {
             return (
               <article
@@ -132,7 +168,9 @@ export default function ApkDownloadPage() {
                     className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg ${
                       app.icon === "player"
                         ? "bg-blue-600 shadow-blue-200"
-                        : "bg-violet-600 shadow-violet-200"
+                        : app.icon === "controller"
+                          ? "bg-violet-600 shadow-violet-200"
+                          : "bg-amber-500 shadow-amber-200"
                     }`}
                   >
                     <AppIcon type={app.icon} />
@@ -146,7 +184,11 @@ export default function ApkDownloadPage() {
 
                 <p
                   className={`mt-7 text-sm font-semibold uppercase tracking-[0.16em] ${
-                    app.icon === "player" ? "text-blue-600" : "text-violet-600"
+                    app.icon === "player"
+                      ? "text-blue-600"
+                      : app.icon === "controller"
+                        ? "text-violet-600"
+                        : "text-amber-600"
                   }`}
                 >
                   {app.label}
@@ -183,7 +225,9 @@ export default function ApkDownloadPage() {
                   className={`mt-6 inline-flex w-full items-center justify-center gap-3 rounded-xl px-6 py-4 text-base font-semibold text-white shadow-lg focus:outline-none focus:ring-4 ${
                     app.icon === "player"
                       ? "bg-blue-600 shadow-blue-200 hover:bg-blue-700 focus:ring-blue-200"
-                      : "bg-violet-600 shadow-violet-200 hover:bg-violet-700 focus:ring-violet-200"
+                      : app.icon === "controller"
+                        ? "bg-violet-600 shadow-violet-200 hover:bg-violet-700 focus:ring-violet-200"
+                        : "bg-amber-500 shadow-amber-200 hover:bg-amber-600 focus:ring-amber-200"
                   }`}
                 >
                   <DownloadIcon />
@@ -191,8 +235,8 @@ export default function ApkDownloadPage() {
                 </a>
 
                 <p className="mt-4 text-center text-sm text-slate-500">
-                  Version {app.apk.version}{" "}
-                  <span aria-hidden="true">&bull;</span> Android APK
+                  {"version" in app.apk && `Version ${app.apk.version} · `}
+                  Android APK
                 </p>
               </article>
             );
