@@ -314,9 +314,9 @@ export default function AFrameDigitalStandeePage() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              ["/overview/a-type-standee2.webp", "Right Side View"],
+              ["/overview/a-type-standee1.webp", "Right Side View"],
               ["/overview/a-type-standee.webp", "Front View"],
-              ["/overview/a-type-standee3.webp", "Left Side View"],
+              ["/overview/a-type-standee2.webp", "Left Side View"],
             ].map(([src, label]) => (
               <div key={label} className="text-center">
                 <div className="overflow-hidden rounded-[20px] bg-[#f6f8fc] shadow-[0_22px_65px_rgba(0,0,0,0.06)]">

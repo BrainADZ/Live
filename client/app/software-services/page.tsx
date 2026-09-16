@@ -203,7 +203,7 @@ export default function SoftwareServicesPage() {
               </div>
 
               <img
-                src="/overview/software-service.webp"
+                src="/overview/Software-Services.webp"
                 alt="Software services by BrainADZ Live"
                 className="relative z-10 h-90 w-full object-cover md:h-130"
                 onError={(event) => {

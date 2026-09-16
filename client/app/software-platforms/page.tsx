@@ -146,7 +146,7 @@ export default function SoftwarePlatformsPage() {
               </div>
 
               <img
-                src="/overview/software-platform.webp"
+                src="/overview/Software-Platforms.webp"
                 alt="Software platforms by BrainADZ Live"
                 className="relative z-10 h-90 w-full object-cover md:h-110"
                 onError={(event) => {
