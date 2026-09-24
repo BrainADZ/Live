@@ -273,7 +273,7 @@ export default function ERPSoftwarePage() {
 
             <div className="relative overflow-hidden rounded-[30px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/software/erp-dashboard.webp"
+                src="/overview/ERP-Overview.webp"
                 alt="ERP Software dashboard preview"
                 className="h-130 w-full object-cover"
               />
@@ -700,7 +700,7 @@ export default function ERPSoftwarePage() {
 
           <div className="overflow-hidden rounded-[34px] border border-black/10 bg-white p-4 shadow-[0_30px_90px_rgba(0,0,0,0.08)] md:p-6">
             <img
-              src="/software/erp-preview-large.webp"
+              src="/overview/ERP-Dash.webp"
               alt="ERP Software dashboard preview"
               className="h-full w-full rounded-3xl object-cover"
             />

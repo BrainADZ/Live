@@ -245,7 +245,7 @@ export default function CommercialLEDDisplaysScreensPage() {
 
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/products/led-display.jpg"
+              src="/overview/LED.webp"
               alt="Commercial LED Displays & Screens for large-format visual communication"
               className="h-full w-full object-cover"
             />

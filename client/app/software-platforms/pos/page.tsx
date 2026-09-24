@@ -269,7 +269,7 @@ export default function POSSoftwarePage() {
 
             <div className="relative overflow-hidden rounded-[30px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/software/pos-software-dashboard.webp"
+                src="/overview/POS-Poster.webp"
                 alt="POS Software dashboard preview"
                 className="h-130 w-full object-cover"
               />
@@ -667,7 +667,7 @@ export default function POSSoftwarePage() {
 
           <div className="overflow-hidden rounded-[34px] border border-black/10 bg-white p-4 shadow-[0_30px_90px_rgba(0,0,0,0.08)] md:p-6">
             <img
-              src="/software/pos-software-preview-large.webp"
+              src="/overview/POS-Dash.webp"
               alt="POS Software dashboard preview"
               className="h-full w-full rounded-3xl object-cover"
             />

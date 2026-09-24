@@ -217,7 +217,7 @@ export default function HospitalityManagementSoftwarePage() {
 
             <div className="relative overflow-hidden rounded-[30px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/industries/travel-hospitality/hotel-booking.jpg"
+                src="/overview/HMS-Overview.webp"
                 alt="Hotel booking and management preview"
                 className="h-130 w-full object-cover"
               />
@@ -676,7 +676,7 @@ export default function HospitalityManagementSoftwarePage() {
 
           <div className="overflow-hidden rounded-[34px] border border-black/10 bg-white p-4 shadow-[0_30px_90px_rgba(0,0,0,0.08)] md:p-6">
             <img
-              src="/industries/travel-hospitality/hotel-booking.jpg"
+              src="/overview/HMS-Dash.webp"
               alt="Hotel booking and management preview"
               className="h-full w-full rounded-3xl object-cover"
             />

@@ -300,7 +300,7 @@ export default function CRMSoftwarePage() {
 
             <div className="relative overflow-hidden rounded-[30px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
               <img
-                src="/software/crm-overview.jpeg"
+                src="/overview/CRM-Overview.webp"
                 alt="CRM Software dashboard preview"
                 className="h-130 w-full object-cover"
               />

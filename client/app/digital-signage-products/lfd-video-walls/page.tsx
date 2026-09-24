@@ -248,7 +248,7 @@ export default function LFDVideoWallsPage() {
 
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/products/lfd-display.jpg"
+              src="/overview/LFD.webp"
               alt="LFD Video Walls for digital signage and business presentation"
               className="h-full w-full object-cover"
             />

@@ -253,7 +253,7 @@ export default function DigitalTeachingConferenceBoardPage() {
 
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/products/interactive-teaching-display.jpg"
+              src="/overview/Teaching-Panel.webp"
               alt="Digital Teaching & Conference Board (IFPD) for classrooms and training spaces"
               className="h-full w-full object-cover"
             />
