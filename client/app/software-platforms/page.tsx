@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -83,7 +85,7 @@ export default function SoftwarePlatformsPage() {
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Software platforms for business management, digital signage and interactive retail
+              Software Platforms for Business Management, Digital Signage and Interactive Retail
             </h1>
           </div>
 
@@ -109,7 +111,7 @@ export default function SoftwarePlatformsPage() {
       </section>
 
       {/* ABOUT SOFTWARE PLATFORMS */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-18">
+      <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
@@ -120,7 +122,7 @@ export default function SoftwarePlatformsPage() {
               </p>
 
               <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Purpose-built platforms for customers, operations and digital displays
+                Purpose-Built Platforms for Customers, Operations and Digital Displays
               </h2>
 
               <p className="mt-7 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -200,7 +202,7 @@ export default function SoftwarePlatformsPage() {
       </section> */}
 
       {/* PLATFORMS */}
-<section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-15">
+<section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
   <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
   <div className="relative z-10 mx-auto max-w-450">
@@ -212,7 +214,7 @@ export default function SoftwarePlatformsPage() {
         </p>
 
         <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-          Five platforms built for distinct business and customer experiences
+          Five Platforms Built for Distinct Business and Customer Experiences
         </h2>
       </div>
 
@@ -244,7 +246,7 @@ export default function SoftwarePlatformsPage() {
           {/* CARD CONTENT */}
           <div>
             <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
-              {item.title}
+              {titleCaseHeading(item.title)}
             </h3>
 
             <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
@@ -269,7 +271,7 @@ export default function SoftwarePlatformsPage() {
 </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -285,7 +287,7 @@ export default function SoftwarePlatformsPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Looking for the right software platform for your business?
+                  Looking for the Right Software Platform for Your Business?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -134,7 +136,7 @@ export default function TechStackSection() {
   const rows = createRows(activeItems, rowPattern[activeTab]);
 
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+    <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -144,7 +146,7 @@ export default function TechStackSection() {
             </p>
 
             <h2 className="max-w-170 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Modern technologies behind smarter digital systems
+              Modern Technologies Behind Smarter Digital Systems
             </h2>
           </div>
 
@@ -226,7 +228,7 @@ export default function TechStackSection() {
 
                     {/* NAME */}
                     <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
-                      {item.name}
+                      {titleCaseHeading(item.name)}
                     </h3>
                   </div>
                 ))}

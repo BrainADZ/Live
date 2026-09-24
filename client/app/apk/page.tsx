@@ -1,3 +1,4 @@
+import { titleCaseHeading } from "@/lib/title-case-heading";
 import type { Metadata } from "next";
 
 const androidApps = [
@@ -141,14 +142,14 @@ function DownloadIcon() {
 
 export default function ApkDownloadPage() {
   return (
-    <main className="flex min-h-[72vh] items-center justify-center bg-linear-to-br from-slate-50 via-white to-blue-50 px-5 py-16 sm:py-20">
+    <main className="flex min-h-[72vh] items-center justify-center bg-linear-to-br from-slate-50 via-white to-blue-50 px-5 section-spacing">
       <section className="w-full max-w-7xl">
         <header className="mx-auto max-w-3xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">
             Android Applications
           </p>
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            Choose how you want to control your screen
+            Choose How You Want to Control Your Screen
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
             Choose a Player for your preferred control method, and use Mobile
@@ -194,7 +195,7 @@ export default function ApkDownloadPage() {
                   {app.label}
                 </p>
                 <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                  {app.name}
+                  {titleCaseHeading(app.name)}
                 </h2>
                 <p className="mt-4 flex-1 text-base leading-7 text-slate-600">
                   {app.description}

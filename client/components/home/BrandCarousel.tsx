@@ -60,7 +60,7 @@ export default function BrandCarousel() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-white py-2 md:py-4 lg:py-8">
+      <section className="section-spacing relative overflow-hidden bg-white">
         {/* Decorative background */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-32 top-0 h-80 w-80 rounded-full bg-[#193175]/5 blur-3xl" />
@@ -80,7 +80,7 @@ export default function BrandCarousel() {
               </div>
 
               <h2 className="max-w-xl text-[36px] font-normal leading-[1.08] tracking-[-0.035em] text-[#161616] md:text-[48px] lg:text-[56px]">
-                Brands that trust
+                Brands That Trust
                 <span className="text-[#193175]"> BrainADZ Live.</span>
               </h2>
             </div>

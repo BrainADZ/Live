@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 import Link from "next/link";
 import {
   ChevronDown,
@@ -475,7 +477,7 @@ export default function Navbar() {
                         >
                           {/* OPTION TITLE */}
                           <h3 className="text-[18px] font-normal leading-[1.35] text-[#161616] transition-colors duration-300 group-hover:text-[#193175]">
-                            {item.title}
+                            {titleCaseHeading(item.title)}
                           </h3>
 
                           {/* RIGHT SIDE ARROW */}
@@ -524,7 +526,7 @@ export default function Navbar() {
                       onClick={() => setShowAbout(false)}
                       className="block px-5 py-3.5 text-[15px] font-normal text-[#161616] transition hover:bg-white/70 hover:text-[#193175]"
                     >
-                      {item.title}
+                      {titleCaseHeading(item.title)}
                     </Link>
                   ))}
                 </div>
@@ -586,7 +588,7 @@ export default function Navbar() {
                   </p>
 
                   <h3 className="mt-2 text-[20px] font-normal tracking-[-0.4px] text-[#161616]">
-                    Account & quick actions
+                    Account & Quick Actions
                   </h3>
 
                   <p className="mt-2 text-[13px] font-light leading-[1.55] text-black/60">
@@ -661,7 +663,7 @@ export default function Navbar() {
               </p>
 
               <h3 className="mt-2 text-[28px] font-normal tracking-[-0.8px] text-[#161616] md:text-[36px]">
-                Find services, platforms, industries and insights
+                Find Services, Platforms, Industries and Insights
               </h3>
             </div>
 
@@ -833,7 +835,7 @@ export default function Navbar() {
                           onClick={closeMobileMenu}
                           className="group flex items-center justify-between gap-4 text-[15px] font-light leading-[1.45] text-[#262626] transition hover:text-[#193175]"
                         >
-                          <span>{item.title}</span>
+                          <span>{titleCaseHeading(item.title)}</span>
 
                           <ArrowRight size={20} strokeWidth={1.8} className="shrink-0 text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
@@ -871,7 +873,7 @@ export default function Navbar() {
                   onClick={closeMobileMenu}
                   className="block px-4 py-4 text-[16px] font-normal text-[#161616] transition hover:text-[#193175]"
                 >
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </Link>
               ))}
             </div>

@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -357,14 +359,14 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Overview
             </p>
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Turn your software idea into a SaaS product people can use and manage.
+              Turn Your Software Idea into a SaaS Product People Can Use and Manage.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
               BrainADZ Live designs and develops custom SaaS platforms around your
@@ -389,7 +391,7 @@ export default function SaaSDevelopmentPage() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-normal">{item.title}</h3>
+                <h3 className="text-[20px] font-normal">{titleCaseHeading(item.title)}</h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   {item.text}
@@ -401,14 +403,14 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* WHY BUILD SAAS */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Build SaaS
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Build one online product that can serve users, teams and customers at scale.
+              Build One Online Product That Can Serve Users, Teams and Customers at Scale.
             </h2>
           </div>
 
@@ -419,7 +421,7 @@ export default function SaaSDevelopmentPage() {
                   0{index + 1}
                 </span>
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
@@ -431,14 +433,14 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* SAAS SOLUTIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Solutions We Build
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              SaaS products built around different workflows and product models.
+              SaaS Products Built Around Different Workflows and Product Models.
             </h2>
           </div>
 
@@ -458,7 +460,7 @@ export default function SaaSDevelopmentPage() {
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -471,14 +473,14 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* SAAS ARCHITECTURE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Architecture
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Plan the product foundation before adding more users and features.
+              Plan the Product Foundation Before Adding More Users and Features.
             </h2>
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
               A SaaS product needs more than screens. We plan how accounts,
@@ -501,7 +503,7 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* SAAS DEVELOPMENT PROCESS */}
-      <section className="relative overflow-hidden bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-14">
+      <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
         <div
           className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
@@ -517,7 +519,7 @@ export default function SaaSDevelopmentPage() {
               SaaS Development Process
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              From product idea to launch and continuous improvement
+              From Product Idea to Launch and Continuous Improvement
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
               We move from product discovery and architecture to MVP development,
@@ -548,7 +550,7 @@ export default function SaaSDevelopmentPage() {
 
                     <div>
                       <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                        {item.title}
+                        {titleCaseHeading(item.title)}
                       </h3>
 
                       <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -591,7 +593,7 @@ export default function SaaSDevelopmentPage() {
                 </div>
 
                 <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
@@ -604,14 +606,14 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* TYPES OF APPS STICKY SECTION */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               SaaS Platforms We Build
             </p>
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Flexible SaaS products for different business and operational needs
+              Flexible SaaS Products for Different Business and Operational Needs
             </h2>
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
               BrainADZ Live builds custom SaaS products around the workflow,
@@ -650,7 +652,7 @@ export default function SaaSDevelopmentPage() {
 
                 <div>
                   <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
@@ -664,12 +666,12 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* CORE FEATURES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Core SaaS Features</p>
-              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Core capabilities that support users, operations and product management.</h2>
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Core Capabilities That Support Users, Operations and Product Management.</h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
               We build the features required to manage users, permissions, billing,
@@ -689,11 +691,11 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* MVP TO FULL PRODUCT */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-8 lg:grid-cols-2">
           <div className="border-t border-black/10 pt-8">
             <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">MVP Launch</span>
-            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Launch the core product before adding everything.</h2>
+            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Launch the Core Product Before Adding Everything.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
               We define the first usable version around the core user journey,
               essential admin controls and priority features so the product can be
@@ -702,7 +704,7 @@ export default function SaaSDevelopmentPage() {
           </div>
           <div className="border-t border-black/10 pt-8">
             <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Full Product Scaling</span>
-            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Expand the product as real needs become clearer.</h2>
+            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Expand the Product as Real Needs Become Clearer.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
               After launch, we can add modules, automation, billing improvements,
               integrations, reporting and performance work based on usage, feedback
@@ -713,12 +715,12 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
               <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Case Studies</p>
-              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS platforms built around real product and operational workflows.</h2>
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS Platforms Built Around Real Product and Operational Workflows.</h2>
             </div>
             <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
               View Case Studies <ArrowRight size={18} />
@@ -733,7 +735,7 @@ export default function SaaSDevelopmentPage() {
                 </div>
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">{item.title}</h3>
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">{titleCaseHeading(item.title)}</h3>
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
                       <ArrowRight size={18} className="text-[#193175]" />
                     </span>
@@ -749,12 +751,12 @@ export default function SaaSDevelopmentPage() {
       <IndustriesSection />
 
       {/* TECH STACK */}
-      <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+      <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">Tech Stack</p>
             <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies we use to build custom SaaS products
+              Technologies We Use to Build Custom SaaS Products
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
               We use modern frontend, backend, database and cloud technologies to
@@ -806,7 +808,7 @@ export default function SaaSDevelopmentPage() {
                         />
                       </div>
                       <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
-                        {item.name}
+                        {titleCaseHeading(item.name)}
                       </h3>
                     </div>
                   ))}
@@ -818,17 +820,17 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Why Choose BrainADZ Live</p>
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">We build SaaS products around users, workflows and a clear product roadmap.</h2>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">We Build SaaS Products Around Users, Workflows and a Clear Product Roadmap.</h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{item.title}</h3>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{titleCaseHeading(item.title)}</h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
               </div>
             ))}
@@ -837,14 +839,14 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* SUPPORT */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
-            <img src="/overview/saas-development.webp" alt="SaaS Support and Growth" className="h-full w-full object-cover" />
+            <img src="/overview/SAAS-Poster.webp" alt="SaaS Support and Growth" className="h-full w-full object-cover" />
           </div>
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">SaaS Support & Growth</p>
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Keep improving the product after launch.</h2>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Keep Improving the Product After Launch.</h2>
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
               After launch, we help resolve issues, improve performance and continue
               developing features, integrations, billing flows and product operations
@@ -863,17 +865,17 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">FAQ</p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Common questions about custom SaaS development.</h2>
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Common Questions about Custom SaaS Development.</h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
               <div key={faq.q} className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}>
                 <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
-                  <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">{faq.q}</span>
+                  <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">{titleCaseHeading(faq.q)}</span>
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
                     {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
                   </span>
@@ -890,7 +892,7 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="lazy-section bg-white py-8">
+                  <section className="section-spacing lazy-section bg-white">
                                 <div className="mx-auto max-w-450 px-4 lg:px-10">
                                   <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                                     <div className="hidden w-[32%] shrink-0 md:block">
@@ -905,7 +907,7 @@ export default function SaaSDevelopmentPage() {
                                     <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
                                       <div className="max-w-145">
                                         <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to turn your software idea into a SaaS product?
+                                          Ready to Turn Your Software Idea into a SaaS Product?
                                         </h3>
                                         <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
                                           Let BrainADZ Live design and build your SaaS platform around the users, workflows, subscriptions, integrations and product roadmap you actually need.

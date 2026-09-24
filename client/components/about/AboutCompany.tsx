@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function AboutCompany() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-14 text-[#161616] md:px-4 lg:px-12 lg:py-28">
+    <section className="section-spacing relative overflow-hidden bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="relative z-10 mx-auto max-w-450">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.72fr_1fr] lg:gap-20">
           {/* LEFT CONTENT */}
@@ -52,7 +52,7 @@ export default function AboutCompany() {
           <div className="relative" data-aos="fade-left" data-aos-delay="100">
             <div className="relative overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] shadow-[0_24px_80px_rgba(22,22,22,0.08)]">
               <img
-                src="/overview/aboutsection.webp"
+                src="/overview/About-Overview.webp"
                 alt="BrainADZ Live technology and project delivery"
                 className="h-90 w-full object-cover md:h-130 lg:h-142.5"
               />

@@ -64,7 +64,7 @@ export default function FutureCommitments() {
   const activeItem = tabs.find((tab) => tab.key === activeTab) ?? tabs[0];
 
   return (
-    <section className="bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-28">
+    <section className="section-spacing bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* HEADING */}
         <div data-aos="fade-up">
@@ -73,7 +73,7 @@ export default function FutureCommitments() {
           </p>
 
           <h2 className="max-w-262.5 text-[40px] font-normal leading-[1.08] tracking-[-1.9px] text-[#262626] md:text-[54px] lg:text-[64px]">
-            What we want to keep improving
+            What We Want to Keep Improving
           </h2>
         </div>
 

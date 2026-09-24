@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 
 import { ArrowRight } from "lucide-react";
@@ -30,7 +32,7 @@ const blogs = [
 
 export default function BlogSection() {
   return (
-    <section className="lazy-section bg-[#f8faff] px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+    <section className="section-spacing lazy-section bg-[#f8faff] px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* HEADING */}
         <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
@@ -40,7 +42,7 @@ export default function BlogSection() {
             </p>
 
             <h2 className="max-w-175 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Insights on AI, software, and smart display solutions
+              Insights on AI, Software, and Smart Display Solutions
             </h2>
           </div>
 
@@ -99,7 +101,7 @@ export default function BlogSection() {
                 </div>
 
                 <h3 className="mt-6 min-h-23 text-[24px] font-normal leading-[1.32] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175]">
-                  {blog.title}
+                  {titleCaseHeading(blog.title)}
                 </h3>
 
                 <div className="mt-8 flex items-center justify-between">

@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -60,28 +62,30 @@ export default function OurSoftwareSection() {
 
   return (
     <>
-      <section className="bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-450">
+      <section className="section-spacing bg-white px-5 md:px-8 lg:px-12">
+        <div className="mx-auto max-w-[1720px]">
           {/* TOP HEADING + DESCRIPTION */}
-          <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div className="mb-9 grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-end">
             <div data-aos="fade-right">
-              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.22em] text-[#193175]">
                 Business Software
               </p>
 
-              <h2 className="max-w-180 text-[36px] font-normal leading-[1.15] tracking-[-1px] text-[#242424] md:text-[46px]">
+              <h2 className="text-[36px] font-normal leading-none tracking-[-1.4px] text-[#242424] md:text-[48px] lg:text-[52px]">
                 Our Softwares
               </h2>
             </div>
 
             <p
-              className="max-w-155 text-[22px] font-light leading-[1.45] tracking-[-0.6px] text-[#262626]"
+              className="max-w-[620px] text-[18px] font-light leading-[1.55] tracking-[-0.3px] text-[#454545] lg:ml-auto lg:text-[20px]"
               data-aos="fade-left"
               data-aos-delay="100"
             >
               Powerful business platforms designed to{" "}
-              <span className="text-[#193175]">simplify operations</span>,
-              connect teams and help businesses manage everyday workflows more
+              <span className="font-normal text-[#193175]">
+                simplify operations
+              </span>
+              , connect teams and help businesses manage everyday workflows more
               efficiently.
             </p>
           </div>
@@ -89,140 +93,97 @@ export default function OurSoftwareSection() {
           {/* SOFTWARE GRID */}
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {softwares.map((software, index) => (
-              <div
+              <article
                 key={software.title}
-                data-aos="card-reveal"
+                data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-duration="520"
-                className="software-card group relative flex min-h-75 flex-col justify-between overflow-hidden rounded-[5px] border border-[#c6c6c6] bg-white p-6 transition-colors duration-300 hover:bg-[#eeeeee]"
+                className="software-card group relative flex min-h-[300px] flex-col overflow-hidden rounded-[7px] border border-[#d3d3d3] bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#193175] hover:shadow-[0_16px_45px_rgba(25,49,117,0.08)] lg:p-8"
               >
-                {/* ANIMATED BORDER */}
-                <span className="border-line border-top" />
-                <span className="border-line border-right" />
-                <span className="border-line border-bottom" />
-                <span className="border-line border-left" />
+                {/* TOP HOVER LINE */}
+                <span className="absolute left-0 top-0 h-[3px] w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
 
-                {/* TITLE / DESCRIPTION */}
-                <div className="relative z-10 min-h-28">
-                  <h3 className="max-w-82.5 text-[23px] font-normal leading-[1.35] tracking-[-0.3px] text-[#242424] transition-all duration-300 group-hover:opacity-0">
-                    {software.title}
-                  </h3>
+                {/* TITLE + ICON */}
+                <div className="relative z-10 flex items-start justify-between gap-5">
+                  <div className="min-w-0">
+                    <span className="mb-4 block text-[11px] font-medium uppercase tracking-[0.18em] text-[#949494]">
+                      0{index + 1}
+                    </span>
 
-                  <p className="absolute left-0 top-0 max-w-95 text-[18px] font-light leading-[1.5] tracking-[-0.3px] text-[#242424] opacity-0 transition-all duration-300 group-hover:opacity-100">
-                    {software.description}
-                  </p>
-                </div>
+                    <h3 className="text-[24px] font-normal leading-[1.25] tracking-[-0.5px] text-[#242424] lg:text-[26px]">
+                      {titleCaseHeading(software.title)}
+                    </h3>
+                  </div>
 
-                {/* ICON */}
-                <div className="relative z-10 mt-6">
-                  <div className="flex h-17.5 w-17.5 items-center justify-center">
+                  {/* ICON */}
+                  <div className="flex h-[70px] w-[70px] shrink-0 items-center justify-center rounded-[8px] bg-[#f5f7fb] transition-all duration-300 group-hover:bg-[#eef1f8]">
                     <img
                       src={software.icon}
                       alt={`${software.title} icon`}
                       loading="lazy"
                       decoding="async"
-                      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="h-[48px] w-[48px] object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 </div>
 
-                {/* BOTTOM ACTIONS */}
-                <div className="relative z-10 mt-7 flex items-center justify-between border-t border-black/10 pt-5">
-                  {/* VIEW DEMO BUTTON */}
+                {/* DESCRIPTION */}
+                <p className="relative z-10 mt-5 max-w-[450px] text-[15px] font-light leading-[1.7] tracking-[-0.15px] text-[#606060] lg:text-[16px]">
+                  {software.description}
+                </p>
+
+                {/* BOTTOM ACTION */}
+                <div className="relative z-10 mt-auto flex items-center justify-between border-t border-[#e8e8e8] pt-5">
+                  {/* VIEW DEMO */}
                   <button
                     type="button"
                     onClick={() => openDemo(software)}
-                    className="group/demo inline-flex h-11 items-center justify-center gap-3 rounded-[3px] border border-[#193175] px-5 text-[14px] font-medium text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
+                    className="group/demo inline-flex h-[44px] items-center justify-center gap-3 rounded-[4px] border border-[#193175] px-5 text-[14px] font-medium text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
                   >
                     <span>View Demo</span>
 
                     <ArrowRight
-                      size={18}
+                      size={17}
                       strokeWidth={1.8}
                       className="transition-transform duration-300 group-hover/demo:translate-x-1"
                     />
                   </button>
 
-                  {/* SOFTWARE PAGE LINK */}
+                  {/* PAGE LINK */}
                   <Link
                     href={software.href}
                     aria-label={`View ${software.title}`}
-                    className="group/link flex h-11 w-11 items-center justify-center rounded-full transition-all duration-300 hover:bg-[#193175]"
+                    className="group/link flex h-[44px] w-[44px] items-center justify-center rounded-full bg-[#f5f5f5] transition-all duration-300 hover:bg-[#193175]"
                   >
                     <ArrowRight
-                      size={30}
-                      strokeWidth={1.8}
+                      size={23}
+                      strokeWidth={1.7}
                       className="text-[#193175] transition-all duration-300 group-hover/link:translate-x-1 group-hover/link:text-white"
                     />
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
 
         <style jsx>{`
-          .border-line {
+          .software-card::after {
+            content: "";
             position: absolute;
-            z-index: 20;
-            background: #193175;
+            inset: 0;
             pointer-events: none;
+            background: linear-gradient(
+              135deg,
+              rgba(25, 49, 117, 0.03),
+              transparent 45%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
           }
 
-          .border-top {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.22s ease;
-          }
-
-          .border-right {
-            top: 0;
-            right: 0;
-            width: 2px;
-            height: 100%;
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 0.22s ease 0.12s;
-          }
-
-          .border-bottom {
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 2px;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.22s ease 0.24s;
-          }
-
-          .border-left {
-            bottom: 0;
-            left: 0;
-            width: 2px;
-            height: 100%;
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform 0.22s ease 0.36s;
-          }
-
-          .software-card:hover .border-top {
-            transform: scaleX(1);
-          }
-
-          .software-card:hover .border-right {
-            transform: scaleY(1);
-          }
-
-          .software-card:hover .border-bottom {
-            transform: scaleX(1);
-          }
-
-          .software-card:hover .border-left {
-            transform: scaleY(1);
+          .software-card:hover::after {
+            opacity: 1;
           }
         `}</style>
       </section>

@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -190,7 +192,7 @@ export default function WallMountDigitalSignagePage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -198,7 +200,7 @@ export default function WallMountDigitalSignagePage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital content on the wall, without using valuable floor space.
+              Digital Content on the Wall, without Using Valuable Floor Space.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
@@ -240,7 +242,7 @@ export default function WallMountDigitalSignagePage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -248,7 +250,7 @@ export default function WallMountDigitalSignagePage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A fixed digital display for visible and changing communication.
+              A Fixed Digital Display for Visible and Changing Communication.
             </h2>
           </div>
 
@@ -280,7 +282,7 @@ export default function WallMountDigitalSignagePage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -293,7 +295,7 @@ export default function WallMountDigitalSignagePage() {
       </section>
 
       {/* SPECIFICATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <div>
@@ -302,7 +304,7 @@ export default function WallMountDigitalSignagePage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Plan the display around the wall, content and management needs.
+                Plan the Display Around the Wall, Content and Management Needs.
               </h2>
             </div>
 
@@ -320,7 +322,7 @@ export default function WallMountDigitalSignagePage() {
                 className="grid gap-3 border-b border-black/10 py-5 last:border-b-0 md:grid-cols-[0.35fr_0.65fr] md:gap-8"
               >
                 <h3 className="text-[17px] font-normal text-black">
-                  {item.label}
+                  {titleCaseHeading(item.label)}
                 </h3>
 
                 <p className="text-[15px] font-light leading-[1.7] text-black/65">
@@ -333,7 +335,7 @@ export default function WallMountDigitalSignagePage() {
       </section>
 
       {/* APPLICATIONS */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -341,7 +343,7 @@ export default function WallMountDigitalSignagePage() {
             </p>
 
             <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Suitable for customer-facing and professional business spaces.
+              Suitable for Customer-Facing and Professional Business Spaces.
             </h2>
           </div>
 
@@ -361,7 +363,7 @@ export default function WallMountDigitalSignagePage() {
                 </div>
 
                 <h3 className="text-[20px] font-normal tracking-[-0.3px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] font-light leading-[1.65] text-black/65">
@@ -373,8 +375,8 @@ export default function WallMountDigitalSignagePage() {
         </div>
       </section>
 
-      {/* CUSTOMIZATION */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      {/* CUSTOMIZATION
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
@@ -390,8 +392,8 @@ export default function WallMountDigitalSignagePage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Configure the display around your content, wall space and
-              management workflow.
+              Configure the Display Around Your Content, Wall Space and
+              Management Workflow.
             </h2>
 
             <div className="mt-8 border-y border-black/10">
@@ -413,7 +415,7 @@ export default function WallMountDigitalSignagePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* GALLERY
       <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
@@ -456,7 +458,7 @@ export default function WallMountDigitalSignagePage() {
       </section> */}
 
       {/* FAQ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -464,7 +466,7 @@ export default function WallMountDigitalSignagePage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Wall Mount Digital Signage.
+              Common Questions about Wall Mount Digital Signage.
             </h2>
           </div>
 
@@ -487,7 +489,7 @@ export default function WallMountDigitalSignagePage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -513,7 +515,7 @@ export default function WallMountDigitalSignagePage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -529,7 +531,7 @@ export default function WallMountDigitalSignagePage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Planning a Wall Mount Digital Signage setup?
+                  Planning a Wall Mount Digital Signage Setup?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -30,7 +32,7 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white px-5 py-14 text-[#161616] md:px-4 lg:px-12 overflow-hidden">
+    <section className="section-spacing bg-white px-5 text-[#161616] md:px-4 lg:px-12 overflow-hidden">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -40,7 +42,7 @@ export default function TestimonialSection() {
             </p>
 
             <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Trusted by businesses building smarter digital experiences
+              Trusted by Businesses Building Smarter Digital Experiences
             </h2>
           </div>
 
@@ -111,7 +113,7 @@ export default function TestimonialSection() {
 
                   <div>
                     <h3 className="text-[19px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] md:text-[20px]">
-                      {item.name}
+                      {titleCaseHeading(item.name)}
                     </h3>
 
                     <p className="mt-1 text-[14px] font-light leading-normal text-[#616161]">

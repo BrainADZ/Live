@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -43,7 +45,7 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-20">
+    <section className="section-spacing relative overflow-hidden bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/6 blur-[80px]" />
 
       <div className="pointer-events-none absolute -bottom-45 -left-37.5 h-90 w-90 rounded-full bg-[#193175]/4.5 blur-[80px]" />
@@ -57,7 +59,7 @@ export default function CoreValues() {
             </p>
 
             <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Principles that shape how we plan, build and deliver
+              Principles That Shape How We Plan, Build and Deliver
             </h2>
           </div>
 
@@ -94,7 +96,7 @@ export default function CoreValues() {
   />
 </div>
               <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[26px]">
-                {value.title}
+                {titleCaseHeading(value.title)}
               </h3>
 
               <p className="relative z-10 mt-4 max-w-107.5 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">

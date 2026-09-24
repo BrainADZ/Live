@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -74,7 +76,7 @@ const industries: Industry[] = [
 
 export default function IndustriesSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+    <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* TOP CONTENT */}
         <div className="mb-16" data-aos="fade-up">
@@ -119,7 +121,7 @@ export default function IndustriesSection() {
 
                 {/* TITLE */}
                 <h3 className="relative z-10 mt-5 max-w-46.25 text-[15px] font-normal leading-[1.3] tracking-[-0.1px] text-[#525252] transition duration-300 group-hover:text-[#193175] md:text-[17px]">
-                  {industry.title}
+                  {titleCaseHeading(industry.title)}
                 </h3>
               </a>
             ))}

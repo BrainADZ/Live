@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -287,7 +289,7 @@ export default function CaseStudiesPage() {
             </p>
 
             <h1 className="text-[38px] font-semibold leading-[1.08] tracking-[-1.5px] text-white md:text-[48px] lg:text-[58px]">
-              See how technology takes shape around real business workflows
+              See How Technology Takes Shape Around Real Business Workflows
             </h1>
           </div>
 
@@ -317,7 +319,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* FEATURED CASE STUDY */}
-      <section className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
@@ -326,7 +328,7 @@ export default function CaseStudiesPage() {
               </p>
 
               <h2 className="text-[40px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[52px] lg:text-[60px]">
-                One project, viewed from problem to working system
+                One Project, Viewed from Problem to Working System
               </h2>
             </div>
 
@@ -369,7 +371,7 @@ export default function CaseStudiesPage() {
               </div>
 
               <h3 className="mt-8 max-w-190 text-[32px] font-normal leading-[1.12] tracking-[-1.1px] text-[#262626] transition group-hover:text-[#193175] md:text-[44px]">
-                {featuredCaseStudy.title}
+                {titleCaseHeading(featuredCaseStudy.title)}
               </h3>
 
               <p className="mt-6 max-w-180 text-[16px] font-light leading-[1.8] text-[#616161] md:text-[18px]">
@@ -402,7 +404,7 @@ export default function CaseStudiesPage() {
       {/* CASE STUDIES GRID */}
       <section
         id="case-studies"
-        className="scroll-mt-24 bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing scroll-mt-24 bg-[#f8faff] px-5 md:px-4 lg:px-12"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
@@ -412,7 +414,7 @@ export default function CaseStudiesPage() {
               </p>
 
               <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore case studies by solution area
+                Explore Case Studies by Solution Area
               </h2>
             </div>
 
@@ -496,7 +498,7 @@ export default function CaseStudiesPage() {
                     </div>
 
                     <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
-                      {caseStudy.title}
+                      {titleCaseHeading(caseStudy.title)}
                     </h3>
 
                     <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
@@ -534,7 +536,7 @@ export default function CaseStudiesPage() {
               />
 
               <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
-                No case studies found
+                No Case Studies Found
               </h3>
 
               <p className="mx-auto mt-3 max-w-130 text-[15px] font-light leading-[1.7] text-[#616161]">
@@ -580,7 +582,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* WHAT THE CASE STUDIES COVER */}
-      <section className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -589,7 +591,7 @@ export default function CaseStudiesPage() {
               </p>
 
               <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Different project types, one focus on practical delivery
+                Different Project Types, One Focus on Practical Delivery
               </h2>
             </div>
 
@@ -616,7 +618,7 @@ export default function CaseStudiesPage() {
                   </div>
 
                   <h3 className="mt-8 text-[25px] font-normal leading-tight tracking-[-0.5px] text-[#262626]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
@@ -631,7 +633,7 @@ export default function CaseStudiesPage() {
 
 
       {/* FINAL CTA */}
-      <section className="bg-white py-8">
+      <section className="section-spacing bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -647,7 +649,7 @@ export default function CaseStudiesPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-155">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Have a project that could become the next case study?
+                  Have a Project That Could Become the Next Case Study?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

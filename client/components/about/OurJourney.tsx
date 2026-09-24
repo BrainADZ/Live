@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -125,7 +127,7 @@ export default function DigitalExcellenceTimeline() {
   const activeItem = timelineData[activeIndex];
 
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-24 text-[#161616] md:px-4 lg:px-12 lg:py-32">
+    <section className="section-spacing relative overflow-hidden bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       {/* LIGHT BRAND BACKGROUND */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_48%,rgba(60,91,155,0.08)_0%,rgba(60,91,155,0.03)_30%,transparent_60%)]" />
 
@@ -139,7 +141,7 @@ export default function DigitalExcellenceTimeline() {
           </p>
 
           <h2 className="text-[38px] font-normal leading-[1.08] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-            How our technology capabilities have expanded
+            How Our Technology Capabilities Have Expanded
           </h2>
 
           <p className="mt-6 max-w-[800px] text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -197,7 +199,7 @@ export default function DigitalExcellenceTimeline() {
                 className="timeline-content"
               >
                 <h3 className="max-w-[560px] text-[30px] font-normal leading-[1.12] tracking-[-1px] text-[#262626] xl:text-[34px]">
-                  {activeItem.title}
+                  {titleCaseHeading(activeItem.title)}
                 </h3>
 
                 <p className="mt-6 max-w-[560px] text-[16px] font-light leading-[1.78] tracking-[-0.1px] text-[#393939]">
@@ -244,7 +246,7 @@ export default function DigitalExcellenceTimeline() {
                 className="timeline-content py-2"
               >
                 <h3 className="text-[28px] font-normal leading-[1.14] tracking-[-0.8px] text-[#262626] md:text-[34px]">
-                  {activeItem.title}
+                  {titleCaseHeading(activeItem.title)}
                 </h3>
 
                 <p className="mt-6 text-[16px] font-light leading-[1.75] text-[#393939] md:text-[17px]">

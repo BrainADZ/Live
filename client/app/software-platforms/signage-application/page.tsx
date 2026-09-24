@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -248,7 +250,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -256,8 +258,8 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Bring signage media, playlists and screen playback into one
-              application workflow.
+              Bring Signage Media, Playlists and Screen Playback into One
+              Application Workflow.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
@@ -308,7 +310,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* WHY SIGNAGE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -316,8 +318,8 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Create a structured workflow for digital signage content and
-              playback.
+              Create a Structured Workflow for Digital Signage Content and
+              Playback.
             </h2>
           </div>
 
@@ -349,7 +351,7 @@ export default function SignageApplicationPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -362,7 +364,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* CORE FEATURES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
@@ -371,7 +373,7 @@ export default function SignageApplicationPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Core tools for preparing and managing signage playback.
+                Core Tools for Preparing and Managing Signage Playback.
               </h2>
             </div>
 
@@ -398,7 +400,7 @@ export default function SignageApplicationPage() {
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -411,7 +413,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* SUPPORTED DEVICES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -419,7 +421,7 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Plan the application around compatible digital display formats.
+              Plan the Application Around Compatible Digital Display Formats.
             </h2>
 
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
@@ -444,7 +446,7 @@ export default function SignageApplicationPage() {
                   />
 
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
                 </div>
               );
@@ -454,7 +456,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* STICKY FEATURES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.76fr_1.24fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -462,7 +464,7 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Practical tools for managing signage content and playback.
+              Practical Tools for Managing Signage Content and Playback.
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
@@ -495,7 +497,7 @@ export default function SignageApplicationPage() {
 
                 <div>
                   <h3 className="text-[26px] font-normal tracking-[-0.5px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[15px] font-light leading-[1.75] text-black/65 md:text-[16px]">
@@ -509,7 +511,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-4 lg:px-12 lg:py-14">
+      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div
           className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
@@ -558,7 +560,7 @@ export default function SignageApplicationPage() {
 
                     <div>
                       <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                        {item.title}
+                        {titleCaseHeading(item.title)}
                       </h3>
 
                       <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -660,7 +662,7 @@ export default function SignageApplicationPage() {
                 </div>
 
                 <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
@@ -673,7 +675,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* INTEGRATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -682,7 +684,7 @@ export default function SignageApplicationPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Align the application with displays and connected systems.
+                Align the Application with Displays and Connected Systems.
               </h2>
             </div>
 
@@ -715,7 +717,7 @@ export default function SignageApplicationPage() {
       <IndustriesSection />
 
       {/* DASHBOARD PREVIEW */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -723,8 +725,8 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              One application view for media, playlists and configured
-              displays.
+              One Application View for Media, Playlists and Configured
+              Displays.
             </h2>
           </div>
 
@@ -739,7 +741,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* WHY BRAINADZ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -747,8 +749,8 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Signage application planning based on real content and display
-              workflows.
+              Signage Application Planning Based on Real Content and Display
+              Workflows.
             </h2>
           </div>
 
@@ -780,7 +782,7 @@ export default function SignageApplicationPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -793,7 +795,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -801,7 +803,7 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Signage Application.
+              Common Questions about Signage Application.
             </h2>
           </div>
 
@@ -823,7 +825,7 @@ export default function SignageApplicationPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -849,7 +851,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -865,7 +867,7 @@ export default function SignageApplicationPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to review your signage application workflow?
+                  Ready to Review Your Signage Application Workflow?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

@@ -98,7 +98,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="lazy-section bg-white px-5 pb-8 pt-14 text-[#161616] md:px-4 md:pb-10 md:pt-16 lg:px-12"
+      className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12"
     >
       <div className="mx-auto max-w-[1800px]">
         {/* HEADING SECTION */}
@@ -114,9 +114,9 @@ export default function StatsSection() {
             </div>
 
             <h2 className="max-w-[760px] text-[38px] font-normal leading-[1.08] tracking-[-1.7px] text-[#161616] md:text-[48px] lg:text-[54px]">
-              Creating measurable impact through{" "}
+              Creating Measurable Impact through{" "}
               <span className="text-[#193175]">
-                technology
+                Technology
               </span>
             </h2>
           </div>

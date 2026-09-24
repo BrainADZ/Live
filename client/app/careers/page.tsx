@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import { ArrowRight } from "lucide-react";
 import CtaSection from "@/components/home/CTA";
@@ -330,7 +332,7 @@ export default function CareerPage() {
               >
 
                 <h1 className="text-[38px] font-semibold leading-[1.05] tracking-[-2px] text-white md:text-[48px] lg:text-[56px]">
-                  Build your career by working on real digital products
+                  Build Your Career by Working on Real Digital Products
                 </h1>
               </div>
 
@@ -358,7 +360,7 @@ export default function CareerPage() {
       </section>
 
       {/* CAREER INTRO */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
@@ -369,7 +371,7 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Learn by building products and systems businesses actually use
+                Learn by Building Products and Systems Businesses Actually Use
               </h2>
 
               <p className="mt-7 max-w-180 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -430,7 +432,7 @@ export default function CareerPage() {
       </section>
 
       {/* WHY JOIN */}
-      <section className="relative overflow-hidden bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing relative overflow-hidden bg-[#f8faff] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
             <div data-aos="fade-right">
@@ -439,7 +441,7 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Build skills through practical work, feedback and responsibility
+                Build Skills through Practical Work, Feedback and Responsibility
               </h2>
             </div>
 
@@ -475,7 +477,7 @@ export default function CareerPage() {
 </div>
 
                   <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="relative z-10 mt-4 max-w-115 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
@@ -492,7 +494,7 @@ export default function CareerPage() {
       {/* OPEN ROLES */}
       <section
         id="open-roles"
-        className="scroll-mt-24 bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing scroll-mt-24 bg-white px-5 md:px-4 lg:px-12"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -502,7 +504,7 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore roles across development, design, automation and deployment
+                Explore Roles Across Development, Design, Automation and Deployment
               </h2>
             </div>
 
@@ -535,7 +537,7 @@ export default function CareerPage() {
                     </p>
 
                     <h3 className="mt-4 text-[26px] font-normal leading-[1.18] tracking-[-0.8px] text-[#262626] transition group-hover:text-[#193175] md:text-[30px]">
-                      {role.title}
+                      {titleCaseHeading(role.title)}
                     </h3>
                   </div>
 
@@ -592,7 +594,7 @@ export default function CareerPage() {
       </section>
 
       {/* VALUES + PROCESS */}
-      <section className="bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-[#f8faff] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div
@@ -605,7 +607,7 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-155 text-[36px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
-                How we expect people to work
+                How We Expect People to Work
               </h2>
 
               <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -637,7 +639,7 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-155 text-[36px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[46px]">
-                A straightforward hiring process
+                A Straightforward Hiring Process
               </h2>
 
               <div className="mt-9 space-y-6">
@@ -649,7 +651,7 @@ export default function CareerPage() {
 
                     <div className="border-b border-[#dfe6f1] pb-6 last:border-b-0">
                       <h3 className="text-[22px] font-normal leading-[1.3] tracking-[-0.4px] text-[#262626]">
-                        {step.title}
+                        {titleCaseHeading(step.title)}
                       </h3>
 
                       <p className="mt-2 max-w-170 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
@@ -667,7 +669,7 @@ export default function CareerPage() {
       {/* APPLY FORM */}
       <section
         id="apply"
-        className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12"
       >
         <div className="pointer-events-none absolute -left-40 -bottom-40 h-95 w-95 rounded-full bg-[#193175]/6 blur-[90px]" />
 
@@ -679,7 +681,7 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Apply for a role at BrainADZ Live
+                Apply for a Role at BrainADZ Live
               </h2>
 
               <p className="mt-6 max-w-180 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -701,7 +703,7 @@ export default function CareerPage() {
 
                   <div>
                     <h3 className="text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626]">
-                      Before you apply
+                      Before You Apply
                     </h3>
 
                     <p className="mt-3 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
@@ -874,7 +876,7 @@ export default function CareerPage() {
 
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div
             className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
@@ -896,7 +898,7 @@ export default function CareerPage() {
               {/* TEXT */}
               <div className="max-w-140">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Not sure which role fits your profile?
+                  Not Sure Which Role Fits Your Profile?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

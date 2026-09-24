@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -277,7 +279,7 @@ export default function DModelFloorMountDigitalKioskPage() {
 
 
       {/* PRODUCT OVERVIEW */}
-      <section className="bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-22">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -285,8 +287,8 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A freestanding digital display for visible customer-facing
-              communication.
+              A Freestanding Digital Display for Visible Customer-Facing
+              Communication.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -347,7 +349,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -355,8 +357,8 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for changing content and professional customer-facing
-              communication.
+              Built for Changing Content and Professional Customer-Facing
+              Communication.
             </h2>
           </div>
 
@@ -373,7 +375,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -386,7 +388,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* SPECIFICATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -394,7 +396,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Configuration options for different deployment needs.
+              Configuration Options for Different Deployment Needs.
             </h2>
 
             <div className="mt-8 overflow-hidden border border-black/10">
@@ -444,8 +446,8 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Planned around display content, management and deployment
-              requirements.
+              Planned Around Display Content, Management and Deployment
+              Requirements.
             </h2>
 
             <div className="mt-8 space-y-4">
@@ -470,7 +472,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* USE CASES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -478,8 +480,8 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for customer-facing spaces where content needs to stay
-              current.
+              Built for Customer-Facing Spaces Where Content Needs to Stay
+              Current.
             </h2>
           </div>
 
@@ -499,7 +501,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                 </div>
 
                 <h3 className="text-[19px] font-normal tracking-[-0.3px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
@@ -512,7 +514,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* CUSTOMIZATION */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -520,7 +522,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Configure the standee around your content, placement and brand.
+              Configure the Standee Around Your Content, Placement and Brand.
             </h2>
 
             <p className="mt-5 max-w-160 text-[16px] font-light leading-[1.7] text-black/65">
@@ -548,7 +550,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                 </span>
 
                 <h3 className="text-[20px] font-normal tracking-[-0.3px]">
-                  {item}
+                  {titleCaseHeading(item)}
                 </h3>
               </div>
             ))}
@@ -557,7 +559,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* BUSINESS BENEFITS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -565,7 +567,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital communication that can change with the campaign.
+              Digital Communication That Can Change with the Campaign.
             </h2>
           </div>
 
@@ -577,7 +579,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -590,7 +592,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -606,7 +608,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Planning a D-Model Floor Mount Digital Kiosk deployment?
+                  Planning a D-Model Floor Mount Digital Kiosk Deployment?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
@@ -630,7 +632,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* WHY BRAINADZ */}
-      <section className="bg-[#f6f8fc] px-5 py-14 md:px-4 lg:px-12">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-10 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -638,7 +640,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Digital signage planning with practical deployment support.
+              Digital Signage Planning with Practical Deployment Support.
             </h2>
           </div>
 
@@ -670,7 +672,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -678,7 +680,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about D-Model Floor Mount Digital Kiosk.
+              Common Questions about D-Model Floor Mount Digital Kiosk.
             </h2>
           </div>
 
@@ -701,7 +703,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -727,7 +729,7 @@ export default function DModelFloorMountDigitalKioskPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -743,7 +745,7 @@ export default function DModelFloorMountDigitalKioskPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Bring your business content to a digital display format.
+                  Bring Your Business Content to a Digital Display Format.
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

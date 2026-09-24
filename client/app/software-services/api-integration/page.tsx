@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -330,7 +332,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -338,7 +340,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Make your systems work together.
+              Make Your Systems Work Together.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -362,7 +364,7 @@ export default function ApiIntegrationPage() {
                 </div>
 
                 <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -375,7 +377,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
@@ -384,7 +386,7 @@ export default function ApiIntegrationPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Disconnected systems slow down everyday operations.
+                Disconnected Systems Slow Down Everyday Operations.
               </h2>
             </div>
 
@@ -411,7 +413,7 @@ export default function ApiIntegrationPage() {
                 </div>
 
                 <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -424,7 +426,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -432,7 +434,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              API integration services built around your systems.
+              API Integration Services Built Around Your Systems.
             </h2>
           </div>
 
@@ -452,7 +454,7 @@ export default function ApiIntegrationPage() {
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -465,7 +467,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* API INTEGRATION PROCESS */}
-      <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-4 lg:px-12 lg:py-14">
+      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div
           className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
@@ -482,7 +484,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              From disconnected systems to one reliable integration flow.
+              From Disconnected Systems to One Reliable Integration Flow.
             </h2>
 
             <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
@@ -515,7 +517,7 @@ export default function ApiIntegrationPage() {
 
                     <div>
                       <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                        {item.title}
+                        {titleCaseHeading(item.title)}
                       </h3>
 
                       <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -611,7 +613,7 @@ export default function ApiIntegrationPage() {
                 </div>
 
                 <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
@@ -624,7 +626,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* TYPES OF INTEGRATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -632,7 +634,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Connect every part of your digital ecosystem.
+              Connect Every Part of Your Digital Ecosystem.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -659,7 +661,7 @@ export default function ApiIntegrationPage() {
                 </div>
 
                 <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -672,7 +674,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* TECH STACK */}
-      <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+      <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
@@ -680,7 +682,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies powering API integration
+              Technologies Powering API Integration
             </h2>
 
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -748,7 +750,7 @@ export default function ApiIntegrationPage() {
                       </div>
 
                       <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
-                        {item.name}
+                        {titleCaseHeading(item.name)}
                       </h3>
                     </div>
                   ))}
@@ -762,7 +764,7 @@ export default function ApiIntegrationPage() {
       <IndustriesSection />
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -770,7 +772,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We connect technology around the way your business works.
+              We Connect Technology Around the Way Your Business Works.
             </h2>
           </div>
 
@@ -785,7 +787,7 @@ export default function ApiIntegrationPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -798,11 +800,11 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* SUPPORT */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden rounded-[28px] bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
             <img
-              src="/overview/apiinte-main.webp"
+              src="/overview/API-Integration-Poster.webp"
               alt="API support and maintenance"
               className="h-full w-full object-cover"
             />
@@ -814,7 +816,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Keep every integration stable after launch.
+              Keep Every Integration Stable After Launch.
             </h2>
 
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
@@ -842,7 +844,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
@@ -851,7 +853,7 @@ export default function ApiIntegrationPage() {
               </p>
 
               <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Integration solutions built around real operational needs.
+                Integration Solutions Built Around Real Operational Needs.
               </h2>
             </div>
 
@@ -881,7 +883,7 @@ export default function ApiIntegrationPage() {
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-normal tracking-[-0.5px]">
-                      {item.title}
+                      {titleCaseHeading(item.title)}
                     </h3>
 
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
@@ -900,7 +902,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-300">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -908,7 +910,7 @@ export default function ApiIntegrationPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              What businesses usually ask before an API integration project.
+              What Businesses Usually Ask Before an API Integration Project.
             </h2>
           </div>
 
@@ -930,7 +932,7 @@ export default function ApiIntegrationPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -956,7 +958,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -972,7 +974,7 @@ export default function ApiIntegrationPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to connect your systems and simplify your workflows?
+                  Ready to Connect Your Systems and Simplify Your Workflows?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 
 import { ArrowRight } from "lucide-react";
@@ -49,7 +51,7 @@ const products = [
 
 export default function ProductSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+    <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* TOP HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -59,7 +61,7 @@ export default function ProductSection() {
             </p>
 
             <h2 className="max-w-180 text-[42px] font-normal leading-[1.08] tracking-[-2px] text-[#161616] md:text-[54px] lg:text-[62px]">
-              Smart display products built for modern businesses
+              Smart Display Products Built for Modern Businesses
             </h2>
           </div>
 
@@ -110,7 +112,7 @@ export default function ProductSection() {
                 {/* CONTENT AREA */}
                 <div className="relative flex min-h-37.5 flex-1 flex-col justify-between p-6">
                   <h3 className="max-w-72.5 text-[24px] font-normal leading-[1.2] tracking-[-0.6px] text-[#161616] transition-all duration-500 group-hover:-translate-y-1 group-hover:text-[#193175] md:text-[26px]">
-                    {product.title}
+                    {titleCaseHeading(product.title)}
                   </h3>
 
                   <div className="mt-9 flex items-center justify-between">

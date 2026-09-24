@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -292,7 +294,7 @@ export default function ConsultingPage() {
     </section>
 
       {/* ORCHESTRATE AI */}
-      <section className="relative overflow-hidden bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
         <div className="relative z-10 mx-auto max-w-450">
@@ -303,7 +305,7 @@ export default function ConsultingPage() {
               </p>
 
               <h2 className="max-w-180 text-[46px] font-normal leading-[1.08] tracking-[-2px] text-[#193175] md:text-[66px] lg:text-[82px]">
-                Turn business requirements into a practical technology plan
+                Turn Business Requirements into a Practical Technology Plan
               </h2>
             </div>
 
@@ -347,7 +349,7 @@ export default function ConsultingPage() {
       </section>
 
       {/* QUICK STORY CARDS */}
-      <section className="bg-white px-5 pb-20 md:px-4 lg:px-12 lg:pb-28">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             {quickStories.map((story, index) => (
@@ -372,7 +374,7 @@ export default function ConsultingPage() {
                 <div className="flex flex-col justify-between">
                   <div>
                     <h3 className="text-[15px] font-normal leading-[1.45] text-[#262626] transition group-hover:text-[#193175]">
-                      {story.title}
+                      {titleCaseHeading(story.title)}
                     </h3>
 
                     <p className="mt-2 hidden text-[13px] font-light leading-[1.55] text-[#616161] 2xl:block">
@@ -391,7 +393,7 @@ export default function ConsultingPage() {
       {/* SERVICES */}
       <section
         id="services"
-        className="relative overflow-hidden bg-[#f8faff] px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing relative overflow-hidden bg-[#f8faff] px-5 md:px-4 lg:px-12"
       >
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
@@ -403,7 +405,7 @@ export default function ConsultingPage() {
               </p>
 
               <h2 className="max-w-195 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Consulting focused on scope, systems and practical next steps
+                Consulting Focused on Scope, Systems and Practical Next Steps
               </h2>
             </div>
 
@@ -439,7 +441,7 @@ export default function ConsultingPage() {
                   </div>
 
                   <h3 className="relative z-10 mt-8 text-[25px] font-normal leading-tight tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
-                    {service.title}
+                    {titleCaseHeading(service.title)}
                   </h3>
 
                   <p className="relative z-10 mt-4 max-w-130 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
@@ -455,7 +457,7 @@ export default function ConsultingPage() {
       </section>
 
       {/* APPROACH */}
-      <section className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
             <div data-aos="fade-right">
@@ -464,7 +466,7 @@ export default function ConsultingPage() {
               </p>
 
               <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                From unclear requirements to an executable project direction
+                From Unclear Requirements to an Executable Project Direction
               </h2>
 
               <p className="mt-6 max-w-170 text-[17px] font-light leading-[1.75] text-[#525252] md:text-[19px]">
@@ -487,7 +489,7 @@ export default function ConsultingPage() {
                   </div>
 
                   <h3 className="text-[26px] font-normal leading-[1.2] tracking-[-0.6px] text-[#262626]">
-                    {step.title}
+                    {titleCaseHeading(step.title)}
                   </h3>
 
                   <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
@@ -503,14 +505,14 @@ export default function ConsultingPage() {
       {/* LATEST NEWS AND INSIGHTS */}
       <section
         id="insights"
-        className="bg-white px-5 pb-20 md:px-4 lg:px-12 lg:pb-28"
+        className="section-spacing bg-white px-5 md:px-4 lg:px-12"
       >
         <div className="mx-auto max-w-450">
           <h2
             className="mb-12 text-[42px] font-normal leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
             data-aos="fade-up"
           >
-            Consulting insights and technology perspectives
+            Consulting Insights and Technology Perspectives
           </h2>
 
           <div
@@ -538,7 +540,7 @@ export default function ConsultingPage() {
                 </p>
 
                 <h3 className="mt-3 text-[22px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626]">
-                  What to define before starting a custom software project
+                  What to Define Before Starting a Custom Software Project
                 </h3>
 
                 <Link
@@ -567,8 +569,8 @@ export default function ConsultingPage() {
                 </p>
 
                 <h3 className="mt-3 max-w-162.5 text-[24px] font-normal leading-[1.35] tracking-[-0.5px] text-[#262626]">
-                  Good technology decisions start with clear workflows,
-                  system boundaries and ownership of data.
+                  Good Technology Decisions Start with Clear Workflows,
+                  System Boundaries and Ownership of Data.
                 </h3>
 
                 <Link
@@ -594,8 +596,8 @@ export default function ConsultingPage() {
                 </p>
 
                 <h3 className="mt-3 text-[20px] font-normal leading-[1.45] text-[#262626]">
-                  Where automation can reduce repetitive work without adding
-                  unnecessary system complexity.
+                  Where Automation Can Reduce Repetitive Work without Adding
+                  Unnecessary System Complexity.
                 </h3>
 
                 <Link
@@ -621,8 +623,8 @@ export default function ConsultingPage() {
                 </p>
 
                 <h3 className="mt-3 text-[20px] font-normal leading-[1.45] text-[#262626]">
-                  Choosing the right mix of software, kiosks and displays for
-                  a customer-facing environment.
+                  Choosing the Right Mix of Software, Kiosks and Displays for
+                  a Customer-Facing Environment.
                 </h3>
 
                 <Link
@@ -672,7 +674,7 @@ export default function ConsultingPage() {
      <TestimonialSection/>
 
       {/* FINAL CTA */}
-            <section className="lazy-section bg-white py-8">
+            <section className="section-spacing lazy-section bg-white">
               <div className="mx-auto max-w-450 px-4 lg:px-10">
                 <div
                   className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
@@ -694,7 +696,7 @@ export default function ConsultingPage() {
                     {/* TEXT */}
                     <div className="max-w-140">
                       <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                        Need clarity before you start a technology project?
+                        Need Clarity Before You Start a Technology Project?
                       </h3>
       
                       <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

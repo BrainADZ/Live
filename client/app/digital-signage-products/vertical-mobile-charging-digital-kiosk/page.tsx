@@ -1,6 +1,8 @@
  
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -256,7 +258,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* QUICK HIGHLIGHTS */}
-      <section className="bg-white px-5 py-10 md:px-4 lg:px-12">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-6 border-b border-black/10 pb-10 md:grid-cols-4">
           {[
             "Multi-Device Charging",
@@ -276,7 +278,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* PRODUCT OVERVIEW */}
-      <section className="bg-white px-5 py-16 md:px-4 lg:px-12 lg:py-22">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -284,8 +286,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A useful charging facility combined with digital brand
-              communication.
+              A Useful Charging Facility Combined with Digital Brand
+              Communication.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
@@ -322,16 +324,16 @@ export default function VerticalMobileChargingDigitalKioskPage() {
           <div className="grid gap-4 md:grid-cols-3">
             {[
               [
-                "/products/vertical-mobile-charging-digital-kiosk/front.webp",
+                "/overview/Charging-Right.webp",
+                "Kiosk Right View",
+              ],
+              [
+                "/overview/Charging.webp",
                 "Kiosk Front View",
               ],
               [
-                "/products/vertical-mobile-charging-digital-kiosk/charging.webp",
-                "Charging Interface",
-              ],
-              [
-                "/products/vertical-mobile-charging-digital-kiosk/side.webp",
-                "Kiosk Side View",
+                "/overview/Charging-Left.webp",
+                "Kiosk Left View",
               ],
             ].map(([src, label]) => (
               <div key={label} className="text-center">
@@ -357,7 +359,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -365,8 +367,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for charging convenience, digital visibility and
-              professional customer-facing deployment.
+              Built for Charging Convenience, Digital Visibility and
+              Professional Customer-Facing Deployment.
             </h2>
           </div>
 
@@ -383,7 +385,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -396,7 +398,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* SPECIFICATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -404,7 +406,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Configuration options for different charging and signage needs.
+              Configuration Options for Different Charging and Signage Needs.
             </h2>
 
             <div className="mt-8 overflow-x-auto border border-black/10">
@@ -455,8 +457,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Planned around charging capacity, content, branding and
-              deployment requirements.
+              Planned Around Charging Capacity, Content, Branding and
+              Deployment Requirements.
             </h2>
 
             <div className="mt-8 space-y-4">
@@ -481,7 +483,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* USE CASES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -489,8 +491,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Designed for high-footfall spaces where people need charging and
-              businesses need visible communication.
+              Designed for High-Footfall Spaces Where People Need Charging and
+              Businesses Need Visible Communication.
             </h2>
           </div>
 
@@ -510,7 +512,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                 </div>
 
                 <h3 className="text-[19px] font-normal tracking-[-0.3px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[14px] font-light leading-[1.6] text-black/60">
@@ -523,7 +525,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* CUSTOMIZATION */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -531,7 +533,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Configure the kiosk around your charging needs, space and brand.
+              Configure the Kiosk Around Your Charging Needs, Space and Brand.
             </h2>
 
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
@@ -560,7 +562,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                 </span>
 
                 <h3 className="text-[20px] font-normal tracking-[-0.3px]">
-                  {item}
+                  {titleCaseHeading(item)}
                 </h3>
               </div>
             ))}
@@ -569,7 +571,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* BUSINESS BENEFITS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -577,7 +579,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              More than a charging station for your customer-facing space.
+              More than a Charging Station for Your Customer-Facing Space.
             </h2>
           </div>
 
@@ -589,7 +591,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -602,7 +604,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -618,7 +620,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-165">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Planning a Vertical Mobile Charging Digital Kiosk deployment?
+                  Planning a Vertical Mobile Charging Digital Kiosk Deployment?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
@@ -646,7 +648,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* WHY BRAINADZ */}
-      <section className="bg-[#f6f8fc] px-5 py-14 md:px-4 lg:px-12">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-10 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -654,8 +656,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-190 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Charging kiosk planning with practical digital signage and
-              deployment support.
+              Charging Kiosk Planning with Practical Digital Signage and
+              Deployment Support.
             </h2>
           </div>
 
@@ -687,7 +689,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -695,7 +697,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-240 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about the Vertical Mobile Charging Digital Kiosk.
+              Common Questions about the Vertical Mobile Charging Digital Kiosk.
             </h2>
           </div>
 
@@ -716,7 +718,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -742,7 +744,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -758,7 +760,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-165">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Turn mobile charging into a useful digital brand experience.
+                  Turn Mobile Charging into a Useful Digital Brand Experience.
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

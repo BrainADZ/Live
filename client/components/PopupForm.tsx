@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import { type FormEvent, useEffect, useState } from "react";
 import { CheckCircle2, Send, X } from "lucide-react";
@@ -217,7 +219,7 @@ export default function PopupForm({
             </p>
 
             <h2 className="relative mt-3 text-[40px] font-normal tracking-[-1.4px] text-white md:text-[46px]">
-              Thank you!
+              Thank You!
             </h2>
 
             <p className="relative mx-auto mt-4 max-w-100 text-[15px] font-light leading-[1.7] text-white/75">
@@ -227,7 +229,7 @@ export default function PopupForm({
 
           <div className="px-6 py-9 text-center md:px-10">
             <h3 className="text-[23px] font-normal tracking-[-0.5px] text-[#262626]">
-              We&apos;ll connect with you soon.
+              We&apos;Ll Connect with You Soon.
             </h3>
 
             <p className="mx-auto mt-3 max-w-100 text-[15px] font-light leading-[1.75] text-[#686868]">
@@ -287,7 +289,7 @@ export default function PopupForm({
             </p>
 
             <h2 className="max-w-105 text-[42px] font-normal leading-[1.05] tracking-[-1.6px] text-white">
-              Turn your idea into a reliable digital solution.
+              Turn Your Idea into a Reliable Digital Solution.
             </h2>
 
             <p className="mt-5 max-w-105 text-[16px] font-light leading-[1.7] text-white/78">
@@ -326,7 +328,7 @@ export default function PopupForm({
             </p>
 
             <h3 className="text-[32px] font-normal leading-[1.12] tracking-[-1.1px] text-[#262626] md:text-[40px]">
-              Tell us about your requirement.
+              Tell Us about Your Requirement.
             </h3>
 
             <p className="mt-4 max-w-150 text-[15px] font-light leading-[1.7] text-[#525252] md:text-[16px]">
@@ -464,7 +466,7 @@ export default function PopupForm({
 
                 {selectedServices.map((service) => (
                   <option key={service.href} value={service.title}>
-                    {service.title}
+                    {titleCaseHeading(service.title)}
                   </option>
                 ))}
               </select>

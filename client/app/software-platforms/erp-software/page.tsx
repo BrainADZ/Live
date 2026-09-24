@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -221,7 +223,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -229,8 +231,8 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Bring department workflows and business records into one ERP
-              platform.
+              Bring Department Workflows and Business Records into One ERP
+              Platform.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
@@ -281,7 +283,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* WHY ERP */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -289,8 +291,8 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Replace disconnected operational records with a structured
-              business system.
+              Replace Disconnected Operational Records with a Structured
+              Business System.
             </h2>
           </div>
 
@@ -322,7 +324,7 @@ export default function ERPSoftwarePage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -335,7 +337,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* CORE MODULES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
@@ -344,7 +346,7 @@ export default function ERPSoftwarePage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Core modules for managing everyday business operations.
+                Core Modules for Managing Everyday Business Operations.
               </h2>
             </div>
 
@@ -371,7 +373,7 @@ export default function ERPSoftwarePage() {
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -384,7 +386,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* DEPARTMENT MANAGEMENT */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -392,7 +394,7 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Organize different departments through one ERP structure.
+              Organize Different Departments through One ERP Structure.
             </h2>
 
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
@@ -422,7 +424,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* STICKY FEATURES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.76fr_1.24fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -430,7 +432,7 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Practical ERP capabilities for structured business operations.
+              Practical ERP Capabilities for Structured Business Operations.
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
@@ -463,7 +465,7 @@ export default function ERPSoftwarePage() {
 
                 <div>
                   <h3 className="text-[26px] font-normal tracking-[-0.5px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[15px] font-light leading-[1.75] text-black/65 md:text-[16px]">
@@ -477,7 +479,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-4 lg:px-12 lg:py-14">
+      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div
           className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
@@ -526,7 +528,7 @@ export default function ERPSoftwarePage() {
 
                     <div>
                       <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                        {item.title}
+                        {titleCaseHeading(item.title)}
                       </h3>
 
                       <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
@@ -628,7 +630,7 @@ export default function ERPSoftwarePage() {
                 </div>
 
                 <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
@@ -641,7 +643,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* INTEGRATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -650,7 +652,7 @@ export default function ERPSoftwarePage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Connect ERP with selected business systems.
+                Connect ERP with Selected Business Systems.
               </h2>
             </div>
 
@@ -683,7 +685,7 @@ export default function ERPSoftwarePage() {
       <IndustriesSection />
 
       {/* DASHBOARD PREVIEW */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -691,8 +693,8 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A central ERP view for departments, workflows and business
-              records.
+              A Central ERP View for Departments, Workflows and Business
+              Records.
             </h2>
           </div>
 
@@ -707,7 +709,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* WHY BRAINADZ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -715,7 +717,7 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              ERP planning based on real department and operational workflows.
+              ERP Planning Based on Real Department and Operational Workflows.
             </h2>
           </div>
 
@@ -747,7 +749,7 @@ export default function ERPSoftwarePage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -760,7 +762,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -768,7 +770,7 @@ export default function ERPSoftwarePage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about ERP Software.
+              Common Questions about ERP Software.
             </h2>
           </div>
 
@@ -790,7 +792,7 @@ export default function ERPSoftwarePage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -816,7 +818,7 @@ export default function ERPSoftwarePage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -832,7 +834,7 @@ export default function ERPSoftwarePage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to review your ERP requirements?
+                  Ready to Review Your ERP Requirements?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
