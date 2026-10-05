@@ -11,10 +11,26 @@ const androidApps = [
     controlledWith: "BrainAdz cloud platform",
     icon: "player",
     apk: {
-      href: "/BrainAdz-Cloud-Player-v3.1.6.apk",
-      fileName: "BrainAdz-Cloud-Player-v3.1.6.apk",
-      version: "3.1.6",
+      href: "/BrainAdz-Cloud-Player-v3.2.8.apk",
+      fileName: "BrainAdz-Cloud-Player-v3.2.8.apk",
+      version: "3.2.8",
       buttonLabel: "Download Cloud Player",
+    },
+  },
+  {
+    id: "cloud-updater",
+    label: "Cloud Player utility",
+    name: "BrainAdz Cloud Updater",
+    description:
+      "Install this utility on your Android signage device to update BrainAdz Cloud Player.",
+    installOn: "Android signage device",
+    controlledWith: "BrainAdz Cloud Player",
+    icon: "updater",
+    apk: {
+      href: "/BrainAdz-Cloud-Updater-v1.0.2.apk",
+      fileName: "BrainAdz-Cloud-Updater-v1.0.2.apk",
+      version: "1.0.2",
+      buttonLabel: "Download Cloud Updater",
     },
   },
   {
@@ -27,9 +43,9 @@ const androidApps = [
     controlledWith: "Live Remote mobile app",
     icon: "controller",
     apk: {
-      href: "/BrainAdz-Player-v2.4.14.apk",
-      fileName: "BrainAdz-Player-v2.4.14.apk",
-      version: "2.4.14",
+      href: "/BrainAdz-Player-v2.4.19.apk",
+      fileName: "BrainAdz-Player-v2.4.19.apk",
+      version: "2.4.19",
       buttonLabel: "Download Mobile Player",
     },
   },
@@ -54,10 +70,34 @@ const androidApps = [
 export const metadata: Metadata = {
   title: "Download BrainAdz Android Apps",
   description:
-    "Download the BrainAdz Players and Mobile Autolauncher for Android.",
+    "Download the BrainAdz Players, Cloud Updater, and Mobile Autolauncher for Android.",
 };
 
-function AppIcon({ type }: { type: "player" | "controller" | "launcher" }) {
+function AppIcon({
+  type,
+}: {
+  type: "player" | "updater" | "controller" | "launcher";
+}) {
+  if (type === "updater") {
+    return (
+      <svg
+        aria-hidden="true"
+        className="h-9 w-9"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <rect x="6" y="2.5" width="12" height="19" rx="2.25" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 11a3 3 0 0 1 5-2.2L15.5 10M15 13a3 3 0 0 1-5 2.2L8.5 14M15.5 7.5V10H13m-4.5 6.5V14H11"
+        />
+      </svg>
+    );
+  }
+
   if (type === "launcher") {
     return (
       <svg
@@ -148,15 +188,16 @@ export default function ApkDownloadPage() {
             Android Applications
           </p>
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            Choose how you want to control your screen
+            Download apps for your screen
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            Choose a Player for your preferred control method, and use Mobile
-            Autolauncher when the mobile-controlled Player should open at startup.
+            Choose a Player for your preferred control method. Cloud Updater
+            updates the Cloud Player, and Mobile Autolauncher opens the
+            mobile-controlled Player at startup.
           </p>
         </header>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {androidApps.map((app) => {
             return (
               <article
@@ -168,9 +209,11 @@ export default function ApkDownloadPage() {
                     className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg ${
                       app.icon === "player"
                         ? "bg-blue-600 shadow-blue-200"
-                        : app.icon === "controller"
-                          ? "bg-violet-600 shadow-violet-200"
-                          : "bg-amber-500 shadow-amber-200"
+                        : app.icon === "updater"
+                          ? "bg-teal-600 shadow-teal-200"
+                          : app.icon === "controller"
+                            ? "bg-violet-600 shadow-violet-200"
+                            : "bg-amber-500 shadow-amber-200"
                     }`}
                   >
                     <AppIcon type={app.icon} />
@@ -186,9 +229,11 @@ export default function ApkDownloadPage() {
                   className={`mt-7 text-sm font-semibold uppercase tracking-[0.16em] ${
                     app.icon === "player"
                       ? "text-blue-600"
-                      : app.icon === "controller"
-                        ? "text-violet-600"
-                        : "text-amber-600"
+                      : app.icon === "updater"
+                        ? "text-teal-600"
+                        : app.icon === "controller"
+                          ? "text-violet-600"
+                          : "text-amber-600"
                   }`}
                 >
                   {app.label}
@@ -211,7 +256,7 @@ export default function ApkDownloadPage() {
                   </div>
                   <div className="border-t border-slate-200 pt-4 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
                     <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      Controlled with
+                      {app.icon === "updater" ? "Updates" : "Controlled with"}
                     </p>
                     <p className="mt-1 font-semibold text-slate-800">
                       {app.controlledWith}
@@ -225,9 +270,11 @@ export default function ApkDownloadPage() {
                   className={`mt-6 inline-flex w-full items-center justify-center gap-3 rounded-xl px-6 py-4 text-base font-semibold text-white shadow-lg focus:outline-none focus:ring-4 ${
                     app.icon === "player"
                       ? "bg-blue-600 shadow-blue-200 hover:bg-blue-700 focus:ring-blue-200"
-                      : app.icon === "controller"
-                        ? "bg-violet-600 shadow-violet-200 hover:bg-violet-700 focus:ring-violet-200"
-                        : "bg-amber-500 shadow-amber-200 hover:bg-amber-600 focus:ring-amber-200"
+                      : app.icon === "updater"
+                        ? "bg-teal-600 shadow-teal-200 hover:bg-teal-700 focus:ring-teal-200"
+                        : app.icon === "controller"
+                          ? "bg-violet-600 shadow-violet-200 hover:bg-violet-700 focus:ring-violet-200"
+                          : "bg-amber-500 shadow-amber-200 hover:bg-amber-600 focus:ring-amber-200"
                   }`}
                 >
                   <DownloadIcon />
