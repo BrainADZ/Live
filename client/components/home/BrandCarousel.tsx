@@ -164,8 +164,6 @@ export default function BrandCarousel() {
           min-width: max-content;
           align-items: center;
 
-          /* globals.css disables animations globally, so this intentional
-             carousel motion needs an explicit opt-in. */
           animation: brandScroll 35s linear infinite !important;
           animation-play-state: running !important;
 
@@ -233,7 +231,7 @@ function BrandItem({ brand }: { brand: Brand }) {
         alt={`${brand.name} logo`}
         loading="lazy"
         decoding="async"
-        className="max-h-[46px] max-w-[140px] object-contain opacity-45 grayscale transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 md:max-h-[52px] md:max-w-[160px]"
+        className="max-h-[46px] max-w-[140px] object-contain opacity-100 transition-all duration-500 group-hover:scale-105 group-hover:opacity-50 group-hover:grayscale md:max-h-[52px] md:max-w-[160px]"
         onError={(event) => {
           event.currentTarget.style.display = "none";
 
