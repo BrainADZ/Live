@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -355,7 +357,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -363,7 +365,7 @@ export default function AppModernizationPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Keep what works. Modernize what holds you back.
+              Keep What Works. Modernize What Holds You Back.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -412,7 +414,7 @@ export default function AppModernizationPage() {
                     />
                   </div>
                   <h3 className="text-[21px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
@@ -425,7 +427,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
@@ -433,7 +435,7 @@ export default function AppModernizationPage() {
                 Challenges With Legacy Systems
               </p>
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Legacy applications become harder to change as business needs grow.
+                Legacy Applications Become Harder to Change as Business Needs Grow.
               </h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
@@ -460,7 +462,7 @@ export default function AppModernizationPage() {
                     />
                   </div>
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
@@ -473,14 +475,14 @@ export default function AppModernizationPage() {
       </section>
 
       {/* MODERNIZATION SERVICES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Modernization Services
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Choose the right modernization path for your existing application.
+              Choose the Right Modernization Path for Your Existing Application.
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
               Not every application needs a full rebuild. We assess the current
@@ -505,7 +507,7 @@ export default function AppModernizationPage() {
                     />
                   </div>
                   <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                     {item.text}
@@ -518,7 +520,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* APP MODERNIZATION PROCESS */}
-      <section className="relative overflow-hidden bg-[#f6f8fc] px-5 py-16 md:px-4 lg:px-12 lg:py-14">
+      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div
           className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
@@ -567,7 +569,7 @@ export default function AppModernizationPage() {
 
                       <div>
                         <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                          {item.title}
+                          {titleCaseHeading(item.title)}
                         </h3>
                         <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
                           {item.text}
@@ -660,7 +662,7 @@ export default function AppModernizationPage() {
                   </div>
 
                   <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
@@ -736,7 +738,7 @@ export default function AppModernizationPage() {
       </section> */}
 
       {/* USE CASES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div className="lg:sticky lg:top-28 lg:self-start">
@@ -744,7 +746,7 @@ export default function AppModernizationPage() {
                 Modernization Use Cases
               </p>
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Modernize the applications your business already depends on.
+                Modernize the Applications Your Business Already Depends on.
               </h2>
               <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
                 From ERP and CRM platforms to internal tools and customer-facing
@@ -761,7 +763,7 @@ export default function AppModernizationPage() {
                   </div>
                   <div>
                     <h3 className="text-[20px] font-normal tracking-[-0.3px]">
-                      {item}
+                      {titleCaseHeading(item)}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
                       Improve performance, usability, integration and maintainability
@@ -776,7 +778,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
@@ -784,7 +786,7 @@ export default function AppModernizationPage() {
                 Case Studies
               </p>
               <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Modernization projects built around existing business systems.
+                Modernization Projects Built Around Existing Business Systems.
               </h2>
             </div>
             <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
@@ -801,7 +803,7 @@ export default function AppModernizationPage() {
                 <div className="p-7 md:p-8">
                   <div className="mb-5 flex items-center justify-between gap-5">
                     <h3 className="text-[23px] font-normal tracking-[-0.5px]">
-                      {item.title}
+                      {titleCaseHeading(item.title)}
                     </h3>
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
                       <ArrowRight size={18} className="text-[#193175]" />
@@ -818,7 +820,7 @@ export default function AppModernizationPage() {
       <IndustriesSection />
 
       {/* CTA */}
-                  <section className="lazy-section bg-white py-8">
+                  <section className="section-spacing lazy-section bg-white">
                                 <div className="mx-auto max-w-450 px-4 lg:px-10">
                                   <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                                     <div className="hidden w-[32%] shrink-0 md:block">
@@ -833,7 +835,7 @@ export default function AppModernizationPage() {
                                     <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
                                       <div className="max-w-145">
                                         <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Is your existing application becoming difficult to maintain or scale?
+                                          Is Your Existing Application Becoming Difficult to Maintain or Scale?
                                         </h3>
                                         <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
                                           We can assess your current system and define the right path to refactor, replatform, migrate or rebuild only what is necessary.
@@ -853,14 +855,14 @@ export default function AppModernizationPage() {
                               </section>
 
       {/* TECH STACK */}
-      <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+      <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
               Tech Stack
             </p>
             <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies used to modernize existing applications
+              Technologies Used to Modernize Existing Applications
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
               We use modern cloud platforms, deployment tools, databases and
@@ -915,7 +917,7 @@ export default function AppModernizationPage() {
                         />
                       </div>
                       <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
-                        {item.name}
+                        {titleCaseHeading(item.name)}
                       </h3>
                     </div>
                   ))}
@@ -927,14 +929,14 @@ export default function AppModernizationPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               Why Choose BrainADZ Live
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Modernization decisions based on your current system—not a one-size-fits-all approach.
+              Modernization Decisions Based on Your Current System—Not a One-Size-Fits-All Approach.
             </h2>
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
               We assess the application first, protect important business workflows
@@ -950,7 +952,7 @@ export default function AppModernizationPage() {
                   0{index + 1}
                 </span>
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                   {item.text}
@@ -962,7 +964,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* SUPPORT */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
@@ -970,7 +972,7 @@ export default function AppModernizationPage() {
                 Support & Continuous Optimization
               </p>
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Keep the modernized application reliable after launch.
+                Keep the Modernized Application Reliable After Launch.
               </h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
@@ -994,7 +996,7 @@ export default function AppModernizationPage() {
                   </div>
                   <div>
                     <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                      {item.title}
+                      {titleCaseHeading(item.title)}
                     </h3>
                     <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
                       {item.text}
@@ -1008,14 +1010,14 @@ export default function AppModernizationPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               FAQ
             </p>
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about application modernization.
+              Common Questions about Application Modernization.
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
               Understand how we assess existing systems, choose a modernization
@@ -1044,7 +1046,7 @@ export default function AppModernizationPage() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                      {faq.q}
+                      {titleCaseHeading(faq.q)}
                     </span>
                   </span>
                   <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}>
@@ -1066,7 +1068,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="lazy-section bg-white py-8">
+                  <section className="section-spacing lazy-section bg-white">
                                 <div className="mx-auto max-w-450 px-4 lg:px-10">
                                   <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
                                     <div className="hidden w-[32%] shrink-0 md:block">
@@ -1081,7 +1083,7 @@ export default function AppModernizationPage() {
                                     <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
                                       <div className="max-w-145">
                                         <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to modernize the application your business already relies on?
+                                          Ready to Modernize the Application Your Business Already Relies on?
                                         </h3>
                                         <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
                                           Let BrainADZ Live help you improve your existing application with the right mix of refactoring, migration, integration and rebuilding.

@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
@@ -102,7 +104,7 @@ export default function Footer() {
   return (
     <footer className="lazy-section bg-[#f2f2f2] text-[#616161]">
       {/* TOP FOOTER LINKS */}
-      <div className="mx-auto max-w-450 px-6 pb-20 pt-14 md:px-10 lg:px-12">
+      <div className="section-spacing mx-auto max-w-450 px-6 md:px-10 lg:px-12">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-12">
           {footerColumns.map((column) => {
             const isExpanded = expandedColumns[column.title];
@@ -115,7 +117,7 @@ export default function Footer() {
             return (
               <div key={column.title}>
                 <h3 className="mb-5 text-[14px] font-semibold leading-none text-[#616161]">
-                  {column.title}
+                  {titleCaseHeading(column.title)}
                 </h3>
 
                 <ul className="space-y-5">

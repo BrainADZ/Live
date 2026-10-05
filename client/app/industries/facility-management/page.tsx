@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -415,7 +417,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -423,8 +425,8 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Connect facility requests, assets, maintenance and operational
-              workflows.
+              Connect Facility Requests, Assets, Maintenance and Operational
+              Workflows.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -451,7 +453,7 @@ export default function FacilityManagementIndustryPage() {
                   />
 
                   <h3 className="text-[20px] font-normal">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
@@ -465,7 +467,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -473,7 +475,7 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common workflow problems across facility operations.
+              Common Workflow Problems Across Facility Operations.
             </h2>
           </div>
 
@@ -488,7 +490,7 @@ export default function FacilityManagementIndustryPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -501,7 +503,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* SOLUTIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -509,8 +511,8 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital systems for assets, maintenance, requests and facility
-              communication.
+              Digital Systems for Assets, Maintenance, Requests and Facility
+              Communication.
             </h2>
           </div>
 
@@ -531,7 +533,7 @@ export default function FacilityManagementIndustryPage() {
                   </div>
 
                   <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -545,7 +547,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* ARCHITECTURE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -553,8 +555,8 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Plan connected workflows around locations, assets and service
-              operations.
+              Plan Connected Workflows Around Locations, Assets and Service
+              Operations.
             </h2>
 
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
@@ -585,7 +587,7 @@ export default function FacilityManagementIndustryPage() {
 
 
       {/* PLATFORM TYPES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -593,7 +595,7 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Types of facility solutions we plan and build
+              Types of Facility Solutions We Plan and Build
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
@@ -634,7 +636,7 @@ export default function FacilityManagementIndustryPage() {
 
                   <div>
                     <h3 className="text-[24px] font-normal tracking-[-0.4px] text-black md:text-[26px]">
-                      {item.title}
+                      {titleCaseHeading(item.title)}
                     </h3>
 
                     <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65 md:text-[17px]">
@@ -649,7 +651,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* CORE FEATURES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
@@ -658,8 +660,8 @@ export default function FacilityManagementIndustryPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Practical features for facility operations and service
-                workflows.
+                Practical Features for Facility Operations and Service
+                Workflows.
               </h2>
             </div>
 
@@ -690,7 +692,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* SECURITY */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -698,7 +700,7 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Plan user access and operational controls around the platform.
+              Plan User Access and Operational Controls Around the Platform.
             </h2>
 
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
@@ -732,7 +734,7 @@ export default function FacilityManagementIndustryPage() {
         </div>
       </section>
 
-      {/* SOLUTION SCENARIOS */}
+      {/* SOLUTION SCENARIOS
       <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
@@ -791,10 +793,10 @@ export default function FacilityManagementIndustryPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* TECH STACK */}
-      <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+      <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
@@ -802,7 +804,7 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Technologies selected around the facility platform requirement
+              Technologies Selected Around the Facility Platform Requirement
             </h2>
 
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -874,7 +876,7 @@ export default function FacilityManagementIndustryPage() {
                       </div>
 
                       <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
-                        {item.name}
+                        {titleCaseHeading(item.name)}
                       </h3>
                     </div>
                   ))}
@@ -886,7 +888,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -894,7 +896,7 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Facility technology planning based on real operational workflows.
+              Facility Technology Planning Based on Real Operational Workflows.
             </h2>
           </div>
 
@@ -909,7 +911,7 @@ export default function FacilityManagementIndustryPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -921,7 +923,7 @@ export default function FacilityManagementIndustryPage() {
         </div>
       </section>
 
-      {/* SUPPORT */}
+      {/* SUPPORT
       <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
@@ -967,10 +969,10 @@ export default function FacilityManagementIndustryPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -978,7 +980,7 @@ export default function FacilityManagementIndustryPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Facility Management technology solutions.
+              Common Questions about Facility Management Technology Solutions.
             </h2>
           </div>
 
@@ -1001,7 +1003,7 @@ export default function FacilityManagementIndustryPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -1027,7 +1029,7 @@ export default function FacilityManagementIndustryPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -1043,7 +1045,7 @@ export default function FacilityManagementIndustryPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-145">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Planning a Facility Management platform?
+                  Planning a Facility Management Platform?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

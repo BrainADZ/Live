@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -226,7 +228,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -234,8 +236,8 @@ export default function SelfOrderingKioskPage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Bring product selection and order placement into one self-service
-              flow.
+              Bring Product Selection and Order Placement into One Self-Service
+              Flow.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
@@ -258,7 +260,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -266,7 +268,7 @@ export default function SelfOrderingKioskPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Designed around customer ordering and operational requirements.
+              Designed Around Customer Ordering and Operational Requirements.
             </h2>
           </div>
 
@@ -281,7 +283,7 @@ export default function SelfOrderingKioskPage() {
                 </span>
 
                 <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -294,7 +296,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* SPECIFICATIONS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -303,7 +305,7 @@ export default function SelfOrderingKioskPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Plan the kiosk around the customer and operational workflow.
+                Plan the Kiosk Around the Customer and Operational Workflow.
               </h2>
             </div>
 
@@ -334,7 +336,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* USE CASES */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -342,8 +344,8 @@ export default function SelfOrderingKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Suitable for customer-facing spaces that need self-service
-              ordering.
+              Suitable for Customer-Facing Spaces That Need Self-Service
+              Ordering.
             </h2>
           </div>
 
@@ -363,7 +365,7 @@ export default function SelfOrderingKioskPage() {
                 </div>
 
                 <h3 className="text-[21px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
               </div>
             ))}
@@ -372,7 +374,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* FEATURES */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -380,7 +382,7 @@ export default function SelfOrderingKioskPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Practical ordering features for customer self-service.
+              Practical Ordering Features for Customer Self-Service.
             </h2>
           </div>
 
@@ -396,7 +398,7 @@ export default function SelfOrderingKioskPage() {
 
                 <div>
                   <h3 className="text-[25px] font-normal tracking-[-0.5px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[15px] font-light leading-[1.75] text-black/65">
@@ -410,7 +412,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -418,7 +420,7 @@ export default function SelfOrderingKioskPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about Self Ordering Kiosk.
+              Common Questions about Self Ordering Kiosk.
             </h2>
           </div>
 
@@ -440,7 +442,7 @@ export default function SelfOrderingKioskPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -466,7 +468,7 @@ export default function SelfOrderingKioskPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -482,7 +484,7 @@ export default function SelfOrderingKioskPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Planning a Self Ordering Kiosk setup?
+                  Planning a Self Ordering Kiosk Setup?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

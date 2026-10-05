@@ -40,7 +40,7 @@ export default function Hero() {
           </p> */}
 
           <h1 className="text-[38px] font-semibold leading-[1.1] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-            Building practical technology for connected business experiences
+            Building Practical Technology for Connected Business Experiences
           </h1>
         </div>
 

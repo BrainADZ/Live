@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -204,8 +206,8 @@ export default function CommunityPage() {
             </p>
 
             <h1 className="text-[38px] font-semibold leading-[1.12] tracking-[-1.2px] text-white md:text-[50px] lg:text-[62px]">
-              Join a community built around technology, business and digital
-              growth
+              Join a Community Built Around Technology, Business and Digital
+              Growth
             </h1>
           </div>
 
@@ -239,7 +241,7 @@ export default function CommunityPage() {
       </section>
 
       {/* INTRO */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -247,7 +249,7 @@ export default function CommunityPage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A space to learn, discuss and grow with practical digital ideas.
+              A Space to Learn, Discuss and Grow with Practical Digital Ideas.
             </h2>
           </div>
 
@@ -287,7 +289,7 @@ export default function CommunityPage() {
       </section>
 
       {/* BENEFITS */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -295,7 +297,7 @@ export default function CommunityPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              What you get by joining the BrainADZ Live Community
+              What You Get by Joining the BrainADZ Live Community
             </h2>
           </div>
 
@@ -313,7 +315,7 @@ export default function CommunityPage() {
                   </div>
 
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -327,7 +329,7 @@ export default function CommunityPage() {
       </section>
 
       {/* TOPICS */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
@@ -336,8 +338,8 @@ export default function CommunityPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Discussions around the services and solutions BrainADZ Live
-                works with.
+                Discussions Around the Services and Solutions BrainADZ Live
+                Works with.
               </h2>
             </div>
 
@@ -362,7 +364,7 @@ export default function CommunityPage() {
                   />
 
                   <h3 className="text-[24px] font-normal tracking-[-0.4px]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -376,7 +378,7 @@ export default function CommunityPage() {
       </section>
 
       {/* WHO CAN JOIN */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -384,7 +386,7 @@ export default function CommunityPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Built for people who want to understand and use digital better.
+              Built for People Who Want to Understand and Use Digital Better.
             </h2>
 
             <p className="mt-5 max-w-170 text-[16px] font-light leading-[1.75] text-black/65">
@@ -416,7 +418,7 @@ export default function CommunityPage() {
       {/* DISCUSSION PREVIEW */}
       <section
         id="discussions"
-        className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24"
+        className="section-spacing bg-white px-5 md:px-4 lg:px-12"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
@@ -426,7 +428,7 @@ export default function CommunityPage() {
               </p>
 
               <h2 className="max-w-210 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Community discussions that can later become a full forum.
+                Community Discussions That Can Later Become a Full Forum.
               </h2>
             </div>
 
@@ -457,7 +459,7 @@ export default function CommunityPage() {
                 </div>
 
                 <h3 className="text-[24px] font-normal leading-tight tracking-[-0.5px] text-black">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-4 text-[15px] font-light leading-[1.7] text-black/65">
@@ -476,7 +478,7 @@ export default function CommunityPage() {
 
                 <div>
                   <h3 className="text-[24px] font-normal tracking-[-0.5px]">
-                    Full forum can be added later
+                    Full Forum Can Be Added Later
                   </h3>
 
                   <p className="mt-1 text-[14px] font-light text-black/60">
@@ -497,7 +499,7 @@ export default function CommunityPage() {
       </section>
 
       {/* COMMUNITY FLOW */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -505,7 +507,7 @@ export default function CommunityPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Simple community flow for learning and discussion
+              Simple Community Flow for Learning and Discussion
             </h2>
           </div>
 
@@ -520,7 +522,7 @@ export default function CommunityPage() {
                 </span>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
-                  {item.title}
+                  {titleCaseHeading(item.title)}
                 </h3>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
@@ -533,7 +535,7 @@ export default function CommunityPage() {
       </section>
 
       {/* CTA IMAGE SECTION */}
-      <section className="bg-white px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -541,7 +543,7 @@ export default function CommunityPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Get closer to technology ideas before starting your next project.
+              Get Closer to Technology Ideas Before Starting Your Next Project.
             </h2>
 
             <p className="mt-5 max-w-180 text-[16px] font-light leading-[1.75] text-black/65">
@@ -598,7 +600,7 @@ export default function CommunityPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#f6f8fc] px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -606,7 +608,7 @@ export default function CommunityPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common questions about the BrainADZ Live Community
+              Common Questions about the BrainADZ Live Community
             </h2>
           </div>
 
@@ -629,7 +631,7 @@ export default function CommunityPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
-                    {faq.q}
+                    {titleCaseHeading(faq.q)}
                   </span>
 
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
@@ -655,7 +657,7 @@ export default function CommunityPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -671,7 +673,7 @@ export default function CommunityPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-155">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to join the BrainADZ Live Community?
+                  Ready to Join the BrainADZ Live Community?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

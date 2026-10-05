@@ -203,7 +203,7 @@ export default function DemoForm({
               Product Walkthrough
             </p>
             <h2 className="max-w-100 text-[44px] font-normal leading-[1.05] tracking-[-1.4px]">
-              Request a focused platform demo.
+              Request a Focused Platform Demo.
             </h2>
             <p className="mt-5 max-w-100 text-[15px] font-light leading-[1.7] text-white/78">
               Tell us about your company and requirements so we can route you
@@ -231,7 +231,7 @@ export default function DemoForm({
               View Demo
             </p>
             <h2 className="text-[34px] font-normal leading-tight tracking-[-0.9px] text-black md:text-[42px]">
-              Request a demo
+              Request a Demo
             </h2>
             <p className="mt-3 max-w-150 text-[14px] font-light leading-[1.65] text-black/58">
               Fill this registration form and continue to our demo library.

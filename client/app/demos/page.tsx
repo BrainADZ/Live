@@ -1,3 +1,4 @@
+import { titleCaseHeading } from "@/lib/title-case-heading";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import {
@@ -79,7 +80,7 @@ export default function DemosPage() {
         </div>
       </section>
 
-      <section className="px-5 py-18 md:px-4 lg:px-12 lg:py-24">
+      <section className="section-spacing px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-7 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
@@ -87,7 +88,7 @@ export default function DemosPage() {
                 Demo Library
               </p>
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Choose the platform demo you want to review.
+                Choose the Platform Demo You Want to Review.
               </h2>
             </div>
 
@@ -123,7 +124,7 @@ export default function DemosPage() {
                       {demo.category}
                     </p>
                     <h3 className="mt-3 text-[25px] font-normal leading-tight tracking-[-0.5px]">
-                      {demo.title}
+                      {titleCaseHeading(demo.title)}
                     </h3>
 
                     <div className="mt-5 grid gap-3">

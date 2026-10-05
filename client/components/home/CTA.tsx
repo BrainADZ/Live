@@ -6,7 +6,7 @@ import PopupForm from "../PopupForm";
 export default function CtaSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
-    <section className="lazy-section bg-white py-8">
+    <section className="section-spacing lazy-section bg-white">
       <div className="mx-auto w-full max-w-[1800px] px-4 lg:px-10">
         <div
           className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
@@ -28,7 +28,7 @@ export default function CtaSection() {
             {/* TEXT */}
             <div className="max-w-140">
               <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                Build connected digital solutions with BrainADZ Live
+                Build Connected Digital Solutions with BrainADZ Live
               </h3>
 
               <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

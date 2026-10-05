@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* Shared section rhythm: adjacent content has 48 / 64 / 80px breathing room.
+   Apply to content wrappers; heroes retain their own height and inset layout. */
+:root {
+  --section-space: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-space: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-space: 2.5rem;
+  }
+}
+
+@utility section-spacing {
+  padding-block: var(--section-space);
+}
+
 @theme {
   --font-weight-light: 400;
 }

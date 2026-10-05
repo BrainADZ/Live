@@ -1,3 +1,4 @@
+import { titleCaseHeading } from "@/lib/title-case-heading";
 /* eslint-disable @next/next/no-img-element */
 
 const locations = [
@@ -37,7 +38,7 @@ const locations = [
 
 export default function LocationsSection() {
   return (
-    <section className="lazy-section bg-[#f2f2f2] px-6 py-8 text-[#161616] md:px-10 md:py-14 lg:px-12">
+    <section className="section-spacing lazy-section bg-[#f2f2f2] px-6 text-[#161616] md:px-10 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* HEADING */}
         <div className="mb-8 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">
@@ -51,9 +52,9 @@ export default function LocationsSection() {
             </div>
 
             <h2 className="max-w-[680px] text-[34px] font-normal leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]">
-              Connected across{" "}
+              Connected Across{" "}
               <span className="text-[#193175]">
-                global markets.
+                Global Markets.
               </span>
             </h2>
           </div>
@@ -106,7 +107,7 @@ export default function LocationsSection() {
                 </p>
 
                 <h3 className="mt-2 text-[24px] font-normal leading-none tracking-[-0.6px] text-[#161616]">
-                  {location.country}
+                  {titleCaseHeading(location.country)}
                 </h3>
               </div>
 

@@ -1,3 +1,4 @@
+import { titleCaseHeading } from "@/lib/title-case-heading";
 import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
@@ -14,14 +15,14 @@ const stats = [
 
 export default function AboutSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-10 lg:px-12">
+    <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-10 lg:px-12">
       <div className="mx-auto w-full max-w-450">
         {/* MAIN HEADING */}
         <h2
           className="max-w-262.5 text-[40px] font-normal leading-[1.05] tracking-[-2px] md:text-[48px] lg:text-[55px]"
           data-aos="fade-up"
         >
-          Smarter business. Real impact.
+          Smarter Business. Real Impact.
         </h2>
 
         {/* CONTENT SECTION - NO LOGO GRID */}
@@ -47,7 +48,7 @@ export default function AboutSection() {
                   data-aos-duration="520"
                 >
                   <h4 className="text-[34px] font-normal leading-none tracking-[-1px] text-[#193175] md:text-[42px]">
-                    {item.value}
+                    {titleCaseHeading(item.value)}
                   </h4>
 
                   <p className="mt-5 max-w-82.5 text-[16px] leading-[1.45] text-[#393939]">

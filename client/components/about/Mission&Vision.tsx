@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -31,7 +33,7 @@ const cards = [
 
 export default function MissionVision() {
   return (
-    <section className="relative overflow-hidden bg-[#f8faff] px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+    <section className="section-spacing relative overflow-hidden bg-[#f8faff] px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="pointer-events-none absolute -right-40 -top-40 h-95 w-95 rounded-full bg-[#193175]/[0.07] blur-[70px]" />
 
       <div className="pointer-events-none absolute -bottom-45 -left-40 h-90 w-90 rounded-full bg-[#193175]/6 blur-[80px]" />
@@ -45,7 +47,7 @@ export default function MissionVision() {
             </p>
 
             <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              A clear purpose behind the technology we deliver
+              A Clear Purpose Behind the Technology We Deliver
             </h2>
           </div>
 
@@ -83,7 +85,7 @@ export default function MissionVision() {
                     </p>
 
                     <h3 className="mt-5 max-w-155 text-[32px] font-normal leading-[1.15] tracking-[-1.2px] text-[#262626] md:text-[40px] lg:min-h-38 lg:text-[44px]">
-                      {card.title}
+                      {titleCaseHeading(card.title)}
                     </h3>
                   </div>
 

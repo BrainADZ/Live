@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import {
@@ -128,7 +130,7 @@ function MemberCard({
           className={`font-medium tracking-[-0.3px] text-[#161616] ${compact ? "text-[16px]" : "text-[20px]"
             }`}
         >
-          {member.name}
+          {titleCaseHeading(member.name)}
         </h3>
 
         <p
@@ -183,7 +185,7 @@ export default function OurCoreTeamPage() {
             data-aos-delay="100"
           >
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Meet the people behind BrainADZ Live
+              Meet the People Behind BrainADZ Live
             </h1>
           </div>
 
@@ -213,7 +215,7 @@ export default function OurCoreTeamPage() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="bg-white px-5 py-22 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 grid-cols-1 gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="mb-5 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -221,7 +223,7 @@ export default function OurCoreTeamPage() {
             </p>
 
             <h2 className="max-w-180 text-[38px] font-normal leading-[1.12] tracking-[-1.5px] text-[#161616] md:text-[52px]">
-              Leadership, delivery and technical teams working as one
+              Leadership, Delivery and Technical Teams Working as One
             </h2>
 
             <p className="mt-7 max-w-190 text-[17px] font-light leading-[1.8] text-[#5a5a5a]">
@@ -272,14 +274,14 @@ export default function OurCoreTeamPage() {
       </section>
 
       {/* CORE TEAM */}
-      <section className="bg-[#fafafa] px-5 py-22 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-[#fafafa] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
             Our Core Team
           </p>
 
           <h2 className="mb-14 max-w-220 text-[36px] font-normal leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
-            Leadership shaping direction, priorities and delivery
+            Leadership Shaping Direction, Priorities and Delivery
           </h2>
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -292,7 +294,7 @@ export default function OurCoreTeamPage() {
 
       {/* PROJECT TEAM - hidden until final member images are available */}
       {SHOW_PROJECT_TEAM && (
-        <section className="bg-white px-5 py-24 md:px-4 lg:px-12 lg:py-32">
+        <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
           <div className="mx-auto max-w-450">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
               Our Project Team
@@ -300,7 +302,7 @@ export default function OurCoreTeamPage() {
 
             <div className="mb-14 max-w-260">
               <h2 className="text-[36px] font-normal leading-[1.15] tracking-[-1.3px] text-[#161616] md:text-[52px]">
-                The people turning plans into working products and deployments
+                The People Turning Plans into Working Products and Deployments
               </h2>
 
               <p className="mt-6 max-w-190 text-[17px] font-light leading-[1.8] text-[#5a5a5a]">
@@ -321,7 +323,7 @@ export default function OurCoreTeamPage() {
       )}
 
       {/* FINAL CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div
             className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
@@ -343,7 +345,7 @@ export default function OurCoreTeamPage() {
               {/* TEXT */}
               <div className="max-w-140">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Want to work with the team behind BrainADZ Live projects?
+                  Want to Work with the Team Behind BrainADZ Live Projects?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

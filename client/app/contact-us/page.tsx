@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -329,7 +331,7 @@ export default function ContactPage() {
 
       <section
         id="enquire"
-        className="relative overflow-hidden bg-[#f8faff] px-5 py-14 text-[#161616] md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing relative overflow-hidden bg-[#f8faff] px-5 text-[#161616] md:px-4 lg:px-12"
       >
         <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
@@ -343,7 +345,7 @@ export default function ContactPage() {
               </p>
 
               <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Tell us what you are planning, improving or looking for
+                Tell Us What You Are Planning, Improving or Looking for
               </h2>
             </div>
 
@@ -386,7 +388,7 @@ export default function ContactPage() {
 
                   <div className="min-w-0 flex-1">
                     <h3 className="text-[24px] font-normal leading-tight tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175] md:text-[28px]">
-                      {item.title}
+                      {titleCaseHeading(item.title)}
                     </h3>
 
                     {item.socials ? (
@@ -651,7 +653,7 @@ export default function ContactPage() {
 
       <section
         id="find-us"
-        className="bg-white px-5 py-14 md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing bg-white px-5 md:px-4 lg:px-12"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
@@ -661,7 +663,7 @@ export default function ContactPage() {
               </p>
 
               <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Visit our office or connect with the right team
+                Visit Our Office or Connect with the Right Team
               </h2>
             </div>
 

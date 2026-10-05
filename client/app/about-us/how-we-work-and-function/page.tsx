@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link"
 import PopupForm from "@/components/PopupForm";
@@ -139,7 +141,7 @@ export default function HowWeWorkPage() {
   </section>
 
       {/* OVERVIEW */}
-      <section className="px-5 py-22 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -147,7 +149,7 @@ export default function HowWeWorkPage() {
             </p>
 
             <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              Every project starts with the problem, not the technology
+              Every Project Starts with the Problem, Not the Technology
             </h2>
           </div>
 
@@ -186,7 +188,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="bg-[#f7f8fb] px-5 py-22 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-[#f7f8fb] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-16 max-w-220">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -194,7 +196,7 @@ export default function HowWeWorkPage() {
             </p>
 
             <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              A six-stage process from requirement mapping to release
+              A Six-Stage Process from Requirement Mapping to Release
             </h2>
           </div>
 
@@ -220,7 +222,7 @@ export default function HowWeWorkPage() {
                 </div>
 
                 <h3 className="mb-4 text-[24px] font-normal tracking-[-0.5px] text-[#161616]">
-                  {step.title}
+                  {titleCaseHeading(step.title)}
                 </h3>
 
                 <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
@@ -233,7 +235,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* HOW OUR TEAMS FUNCTION */}
-      <section className="px-5 py-22 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 grid-cols-1 gap-14 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div className="relative">
             <img
@@ -256,7 +258,7 @@ export default function HowWeWorkPage() {
             </p>
 
             <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              Different functions stay connected through the project
+              Different Functions Stay Connected through the Project
             </h2>
 
             <div className="mt-10 space-y-5">
@@ -266,7 +268,7 @@ export default function HowWeWorkPage() {
                   className="border-l-2 border-[#193175] bg-[#f7f8fb] px-6 py-5"
                 >
                   <h3 className="text-[21px] font-normal tracking-[-0.4px] text-[#161616]">
-                    {item.title}
+                    {titleCaseHeading(item.title)}
                   </h3>
 
                   <p className="mt-2 text-[16px] font-light leading-[1.7] text-[#525252]">
@@ -280,7 +282,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* DELIVERY PRINCIPLES */}
-      <section className="bg-[#050505] px-5 py-22 text-white md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing bg-[#050505] px-5 text-white md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 grid-cols-1 gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#8fb1ff]">
@@ -288,7 +290,7 @@ export default function HowWeWorkPage() {
             </p>
 
             <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] md:text-[52px]">
-              The working principles behind our delivery process
+              The Working Principles Behind Our Delivery Process
             </h2>
 
             <p className="mt-7 text-[18px] font-light leading-[1.8] text-white/65">
@@ -319,7 +321,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* OPERATING MODEL */}
-      <section className="px-5 py-22 md:px-4 lg:px-12 lg:py-28">
+      <section className="section-spacing px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 max-w-230">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -327,7 +329,7 @@ export default function HowWeWorkPage() {
             </p>
 
             <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.5px] text-[#262626] md:text-[52px]">
-              A simple operating model: understand, build and improve
+              A Simple Operating Model: Understand, Build and Improve
             </h2>
           </div>
 
@@ -384,7 +386,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* CTA */}
-      <section className="lazy-section bg-white py-8">
+      <section className="section-spacing lazy-section bg-white">
       <div className="mx-auto max-w-450 px-4 lg:px-10">
         <div
           className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
@@ -406,7 +408,7 @@ export default function HowWeWorkPage() {
             {/* TEXT */}
             <div className="max-w-140">
               <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                Have a project that needs a clearer delivery plan?
+                Have a Project That Needs a Clearer Delivery Plan?
               </h3>
 
               <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

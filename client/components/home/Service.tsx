@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 
 import { ArrowRight } from "lucide-react";
@@ -65,14 +67,14 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="lazy-section mx-auto w-full max-w-[1800px] bg-white px-5 py-16 text-[#161616] md:px-4 lg:px-10">
+    <section className="section-spacing lazy-section mx-auto w-full max-w-[1800px] bg-white px-5 text-[#161616] md:px-4 lg:px-10">
       {/* TOP HEADING + DESCRIPTION */}
       <div className="mb-27.5 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
         <h2
           className="max-w-137.5 text-[46px] font-normal leading-[1.08] tracking-[-2.4px] text-[#161616] md:text-[52px]"
           data-aos="fade-right"
         >
-          Build smarter digital solutions with BrainADZ Live
+          Build Smarter Digital Solutions with BrainADZ Live
         </h2>
 
         <p
@@ -107,7 +109,7 @@ export default function ServiceSection() {
             {/* TITLE / DESCRIPTION AREA */}
             <div className="relative z-10 min-h-24">
               <h3 className="max-w-82.5 text-[21px] font-normal leading-[1.35] tracking-[-0.2px] text-[#242424] transition-all duration-300 group-hover:opacity-0">
-                {service.title}
+                {titleCaseHeading(service.title)}
               </h3>
 
               <p className="absolute left-0 top-0 max-w-90 text-[20px] font-light leading-[1.45] tracking-[-0.3px] text-[#242424] opacity-0 transition-all duration-300 group-hover:opacity-100">

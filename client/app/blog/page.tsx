@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 import Link from "next/link";
 import { useState } from "react";
@@ -437,7 +439,7 @@ export default function BlogPage() {
             </p>
 
             <h1 className="text-[38px] font-semibold leading-[1.08] tracking-[-1.5px] text-white md:text-[48px] lg:text-[58px]">
-              Practical insights for better technology decisions
+              Practical Insights for Better Technology Decisions
             </h1>
           </div>
 
@@ -469,14 +471,14 @@ export default function BlogPage() {
       {/* FEATURED INSIGHTS */}
 <section
   id="featured-insights"
-  className="bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+  className="section-spacing bg-white px-5 md:px-4 lg:px-12"
 >
   <div className="mx-auto max-w-450">
     <h2
       className="mb-12 text-[42px] font-normal leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
       data-aos="fade-up"
     >
-      Featured insights and technology perspectives
+      Featured Insights and Technology Perspectives
     </h2>
 
     <div
@@ -505,7 +507,7 @@ export default function BlogPage() {
           </p>
 
           <h3 className="mt-3 text-[22px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626]">
-            {mainFeaturedArticle.title}
+            {titleCaseHeading(mainFeaturedArticle.title)}
           </h3>
 
           <div className="mt-4 inline-flex items-center gap-2 text-[13px] font-light text-[#616161]">
@@ -595,7 +597,7 @@ export default function BlogPage() {
                     : "text-[20px]"
                 }`}
               >
-                {article.title}
+                {titleCaseHeading(article.title)}
               </h3>
 
               <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] group-hover:underline">
@@ -619,7 +621,7 @@ export default function BlogPage() {
       {/* LATEST INSIGHTS */}
       <section
         id="latest-insights"
-        className="scroll-mt-24 bg-white px-5 py-20 md:px-4 lg:px-12 lg:py-28"
+        className="section-spacing scroll-mt-24 bg-white px-5 md:px-4 lg:px-12"
       >
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
@@ -629,7 +631,7 @@ export default function BlogPage() {
               </p>
 
               <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore practical technology topics
+                Explore Practical Technology Topics
               </h2>
             </div>
 
@@ -722,7 +724,7 @@ export default function BlogPage() {
                     </div>
 
                     <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
-                      {article.title}
+                      {titleCaseHeading(article.title)}
                     </h3>
 
                     <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
@@ -753,7 +755,7 @@ export default function BlogPage() {
               />
 
               <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
-                No articles found
+                No Articles Found
               </h3>
 
               <p className="mx-auto mt-3 max-w-130 text-[15px] font-light leading-[1.7] text-[#616161]">
@@ -810,7 +812,7 @@ export default function BlogPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="bg-white py-8">
+      <section className="section-spacing bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
           <div className="flex min-h-65 overflow-hidden bg-[#193175] md:min-h-75">
             <div className="hidden w-[32%] shrink-0 md:block">
@@ -826,7 +828,7 @@ export default function BlogPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Have a technology question behind your project?
+                  Have a Technology Question Behind Your Project?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">

@@ -27,7 +27,7 @@ const tabs: {
       "We are committed to building software around clear workflows, usable interfaces, scalable architecture and the real responsibilities of the people using the system.",
     linkText: "Explore software services",
     href: "/software-services",
-    image: "/about/futuresustain.webp",
+    image: "/overview/Commitment1.webp",
   },
   {
     key: "platforms",
@@ -36,7 +36,7 @@ const tabs: {
       "CRM, ERP and business platforms should reduce disconnected work. Our focus is on creating clearer data flows, operational visibility and better coordination between teams.",
     linkText: "Explore software platforms",
     href: "/software-platforms",
-    image: "/about/futureAI.webp",
+    image: "/overview/Commitment2.webp",
   },
   {
     key: "experiences",
@@ -45,7 +45,7 @@ const tabs: {
       "We see physical and digital experiences becoming more connected through kiosks, interactive displays, signage software and customer-facing technology.",
     linkText: "Explore digital signage products",
     href: "/digital-signage-products",
-    image: "/about/futuresustain.webp",
+    image: "/overview/Commitment3.webp",
   },
   {
     key: "delivery",
@@ -54,7 +54,7 @@ const tabs: {
       "Our long-term commitment is to make technology decisions clearer through better discovery, planning, integration thinking and delivery ownership.",
     linkText: "Explore technology consulting",
     href: "/consulting",
-    image: "/about/futurework.webp",
+    image: "/overview/Commitment4.webp",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function FutureCommitments() {
   const activeItem = tabs.find((tab) => tab.key === activeTab) ?? tabs[0];
 
   return (
-    <section className="bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12 lg:py-28">
+    <section className="section-spacing bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto max-w-450">
         {/* HEADING */}
         <div data-aos="fade-up">
@@ -73,7 +73,7 @@ export default function FutureCommitments() {
           </p>
 
           <h2 className="max-w-262.5 text-[40px] font-normal leading-[1.08] tracking-[-1.9px] text-[#262626] md:text-[54px] lg:text-[64px]">
-            What we want to keep improving
+            What We Want to Keep Improving
           </h2>
         </div>
 

@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -52,7 +54,7 @@ export default function FastFacts() {
         </div>
 
         {/* TECHNOLOGY AND SERVICES */}
-        <div className="mt-10 grid grid-cols-1 gap-12 px-5 text-[#161616] md:px-4 lg:grid-cols-[0.62fr_1.38fr] lg:gap-16 lg:px-12">
+        <div className="section-spacing grid grid-cols-1 gap-12 px-5 text-[#161616] md:px-4 lg:grid-cols-[0.62fr_1.38fr] lg:gap-16 lg:px-12">
           {/* LEFT TITLE */}
           <div data-aos="fade-right">
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -60,7 +62,7 @@ export default function FastFacts() {
             </p>
 
             <h3 className="max-w-[470px] text-[38px] font-normal leading-[1.12] tracking-[-1.6px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              One company, multiple connected technology capabilities
+              One Company, Multiple Connected Technology Capabilities
             </h3>
 
             <p className="mt-6 max-w-[540px] text-[16px] font-light leading-[1.7] text-[#525252] md:text-[18px]">
@@ -91,7 +93,7 @@ export default function FastFacts() {
 </div>
 
                 <h4 className="text-[18px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[20px]">
-                  {service.title}
+                  {titleCaseHeading(service.title)}
                 </h4>
 
                 <p className="mt-3 text-[15px] font-light leading-[1.65] tracking-[-0.1px] text-[#616161] md:text-[16px]">

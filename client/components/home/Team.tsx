@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -48,7 +50,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-white px-5 py-10 text-[#161616] md:px-4 lg:px-12 lg:py-18">
+    <section className="section-spacing bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* SECTION HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
@@ -59,7 +61,7 @@ export default function TeamSection() {
             </p>
 
             <h2 className="max-w-180 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-              Meet the people building smarter digital experiences
+              Meet the People Building Smarter Digital Experiences
             </h2>
           </div>
 
@@ -111,7 +113,7 @@ export default function TeamSection() {
               {/* MEMBER DETAILS */}
               <div className="pt-5">
                 <h3 className="text-[19px] font-medium leading-[1.3] tracking-[-0.3px] text-[#161616]">
-                  {member.name}
+                  {titleCaseHeading(member.name)}
                 </h3>
 
                 <p className="mt-1.5 text-[14px] font-light leading-[1.5] text-[#646464]">

@@ -1,4 +1,6 @@
 "use client";
+import { titleCaseHeading } from "@/lib/title-case-heading";
+
 
 const reasons = [
   {
@@ -41,7 +43,7 @@ const reasons = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="lazy-section bg-white px-5 py-20 text-[#161616] md:px-4 lg:px-12">
+    <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* TOP HEADING LEFT */}
         <div className="mb-14 max-w-205" data-aos="fade-up">
@@ -50,7 +52,7 @@ export default function WhyChooseSection() {
           </p>
 
           <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-            Technology solutions built with clarity, reliability, and scale
+            Technology Solutions Built with Clarity, Reliability, and Scale
           </h2>
 
           <p className="mt-6 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -84,7 +86,7 @@ export default function WhyChooseSection() {
 
               {/* TEXT */}
               <h3 className="relative z-10 mt-7 text-[21px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626] md:text-[22px]">
-                {reason.title}
+                {titleCaseHeading(reason.title)}
               </h3>
 
               <p className="relative z-10 mt-4 max-w-105 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
