@@ -384,6 +384,13 @@ export default function Navbar() {
 
           {/* DESKTOP NAVIGATION */}
           <div className="hidden items-center gap-8 xl:flex">
+            <Link
+              href="/"
+              className="text-[15px] font-normal text-[#161616] transition hover:text-[#193175]"
+            >
+              Home
+            </Link>
+
             {/* SOLUTIONS MEGA MENU */}
             <div
               className="relative"
@@ -794,6 +801,14 @@ export default function Navbar() {
               </div>
             </div>
           )}
+
+          <Link
+            href="/"
+            onClick={closeMobileMenu}
+            className="border-b border-[#e5e5e5] px-5 py-5 text-[18px] font-normal text-[#161616]"
+          >
+            Home
+          </Link>
 
           {/* MOBILE SOLUTIONS */}
           <button

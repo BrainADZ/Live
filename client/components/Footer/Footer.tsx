@@ -72,7 +72,6 @@ const footerColumns = [
       { label: "Blogs", href: "/blog" },
       { label: "Case studies", href: "/case-studies" },
       { label: "Consulting", href: "/consulting" },
-      { label: "Contact", href: "/contact-us" },
     ],
   },
   {

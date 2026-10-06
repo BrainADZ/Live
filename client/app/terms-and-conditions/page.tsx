@@ -4,22 +4,103 @@ import PolicyPage, { type PolicySection } from "@/components/legal/PolicyPage";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "Website usage and engagement terms for BrainADZ Live software services, business platforms and digital signage products.",
-  alternates: { canonical: "/terms-and-conditions" },
+  alternates: {
+    canonical: "/terms-and-conditions",
+  },
 };
 
 const sections: PolicySection[] = [
-  { id: "scope", title: "Website and engagement scope", paragraphs: ["These terms explain the use of the BrainADZ Live website and the basis on which you may enquire about software development, CRM and ERP platforms, cloud services, consulting and digital signage hardware or software.", "A website enquiry is not an order confirmation or a binding project commitment. Scope, pricing, payment milestones, delivery, acceptance and support are established through an approved quotation, order confirmation or project agreement. Specific agreed terms govern the relevant engagement, subject to applicable law."] },
-  { id: "use", title: "Responsible website use", paragraphs: ["Use the website for lawful purposes and provide accurate contact and enquiry information. You must be authorised to share any business information, files or third-party materials you submit."], bullets: ["Do not attempt unauthorised access, interfere with website systems or introduce malicious code.", "Do not impersonate another person or send fraudulent, abusive or unlawful submissions.", "Do not reproduce or distribute website materials without permission except where allowed by law."] },
-  { id: "information", title: "Product and service information", paragraphs: ["Website descriptions, demonstrations and illustrations provide an overview of available solutions. Hardware specifications, compatibility, dimensions, integrations, software features and availability should be confirmed in writing for your requirement before placing an order.", "Project outcomes depend on the agreed scope, customer requirements, available integrations and deployment environment. Examples and case studies do not constitute a guarantee of identical results for every engagement."] },
-  { id: "commercial", title: "Quotations, payments and changes", paragraphs: ["Prices, taxes, shipping, installation charges, subscriptions and third-party costs are governed by the applicable quotation or agreement. Confirm what is included before accepting an order or project.", "Changes to approved requirements, quantities, specifications or delivery arrangements may require a revised scope, price and schedule agreed in writing. Cancellation and refund requests are considered under the relevant agreement and our Return Policy, subject to applicable rights."] },
-  { id: "delivery", title: "Delivery and customer responsibilities", paragraphs: ["Software milestones and hardware delivery or installation arrangements are agreed for each engagement. Customers should provide the approvals, content, system access and site readiness identified in the agreed scope.", "Dependencies such as third-party APIs, licences, internet access, electrical provision or mounting arrangements should be confirmed before deployment. If a dependency or requirement changes, the resulting impact on scope and schedule should be discussed and documented."] },
-  { id: "ownership", title: "Intellectual property and licences", paragraphs: ["BrainADZ Live website content, branding and original materials are protected by applicable intellectual property laws. Third-party names, logos and technologies belong to their respective owners.", "Ownership of custom deliverables, source code access, software licences and permitted usage are determined by the project agreement. Third-party and open-source components remain subject to their respective licence terms. Customers retain responsibility for obtaining permission to use content or materials they supply."] },
-  { id: "support", title: "Support, warranties and third parties", paragraphs: ["Support coverage, maintenance, service availability and hardware warranty terms depend on the product and agreed engagement. Do not assume a particular warranty period, service level or ongoing support entitlement unless it is included in the written terms.", "External platforms, cloud providers, payment services and other third-party integrations have their own terms and availability conditions. Any relevant dependency should be considered when agreeing the solution."] },
-  { id: "privacy", title: "Privacy and confidential information", paragraphs: ["Personal information submitted through this website is addressed in our Privacy Policy. Confidential project data, customer records and access credentials should be exchanged only through an agreed appropriate channel. Additional confidentiality and data processing responsibilities may be specified in the project agreement."] },
-  { id: "rights", title: "Applicable rights and resolving concerns", paragraphs: ["Nothing in these terms excludes rights, remedies or responsibilities that cannot lawfully be excluded. Any project-specific allocation of liability is governed by the relevant agreement and applicable law.", "Please contact our team with an enquiry or project reference if you have a concern. Applicable Indian law and any valid dispute-resolution terms in your agreement govern the engagement, without limiting mandatory consumer protections or access to competent authorities."] },
-  { id: "updates", title: "Updates and contact", paragraphs: ["These website terms may be updated as our website or offerings change. Changes do not automatically alter an existing signed agreement. For questions about these terms, contact info@brainadzlive.com before confirming an engagement."] },
+  {
+    id: "scope",
+    title: "Website and engagement scope",
+    paragraphs: [
+      "These terms explain the use of the BrainADZ Live website and the basis on which you may enquire about software development, CRM and ERP platforms, cloud services, consulting and digital signage hardware or software.",
+      "A website enquiry is not an order confirmation or a binding project commitment. Scope, pricing, payment milestones, delivery, acceptance and support are established through an approved quotation, order confirmation or project agreement. Specific agreed terms govern the relevant engagement, subject to applicable law.",
+    ],
+  },
+  {
+    id: "use",
+    title: "Responsible website use",
+    paragraphs: [
+      "Use the website for lawful purposes and provide accurate contact and enquiry information. You must be authorised to share any business information, files or third-party materials you submit.",
+    ],
+    bullets: [
+      "Do not attempt unauthorised access, interfere with website systems or introduce malicious code.",
+      "Do not impersonate another person or send fraudulent, abusive or unlawful submissions.",
+      "Do not reproduce or distribute website materials without permission except where allowed by law.",
+    ],
+  },
+  {
+    id: "information",
+    title: "Product and service information",
+    paragraphs: [
+      "Website descriptions, demonstrations and illustrations provide an overview of available solutions. Hardware specifications, compatibility, dimensions, integrations, software features and availability should be confirmed in writing for your requirement before placing an order.",
+      "Project outcomes depend on the agreed scope, customer requirements, available integrations and deployment environment. Examples and case studies do not constitute a guarantee of identical results for every engagement.",
+    ],
+  },
+  {
+    id: "commercial",
+    title: "Quotations, payments and changes",
+    paragraphs: [
+      "Prices, taxes, shipping, installation charges, subscriptions and third-party costs are governed by the applicable quotation or agreement. Confirm what is included before accepting an order or project.",
+      "Changes to approved requirements, quantities, specifications or delivery arrangements may require a revised scope, price and schedule agreed in writing. Cancellation and refund requests are considered under the relevant agreement and our Return Policy, subject to applicable rights.",
+    ],
+  },
+  {
+    id: "delivery",
+    title: "Delivery and customer responsibilities",
+    paragraphs: [
+      "Software milestones and hardware delivery or installation arrangements are agreed for each engagement. Customers should provide the approvals, content, system access and site readiness identified in the agreed scope.",
+      "Dependencies such as third-party APIs, licences, internet access, electrical provision or mounting arrangements should be confirmed before deployment. If a dependency or requirement changes, the resulting impact on scope and schedule should be discussed and documented.",
+    ],
+  },
+  {
+    id: "ownership",
+    title: "Intellectual property and licences",
+    paragraphs: [
+      "BrainADZ Live website content, branding and original materials are protected by applicable intellectual property laws. Third-party names, logos and technologies belong to their respective owners.",
+      "Ownership of custom deliverables, source code access, software licences and permitted usage are determined by the project agreement. Third-party and open-source components remain subject to their respective licence terms. Customers retain responsibility for obtaining permission to use content or materials they supply.",
+    ],
+  },
+  {
+    id: "support",
+    title: "Support, warranties and third parties",
+    paragraphs: [
+      "Support coverage, maintenance, service availability and hardware warranty terms depend on the product and agreed engagement. Do not assume a particular warranty period, service level or ongoing support entitlement unless it is included in the written terms.",
+      "External platforms, cloud providers, payment services and other third-party integrations have their own terms and availability conditions. Any relevant dependency should be considered when agreeing the solution.",
+    ],
+  },
+  {
+    id: "privacy",
+    title: "Privacy and confidential information",
+    paragraphs: [
+      "Personal information submitted through this website is addressed in our Privacy Policy. Confidential project data, customer records and access credentials should be exchanged only through an agreed appropriate channel. Additional confidentiality and data processing responsibilities may be specified in the project agreement.",
+    ],
+  },
+  {
+    id: "rights",
+    title: "Applicable rights and resolving concerns",
+    paragraphs: [
+      "Nothing in these terms excludes rights, remedies or responsibilities that cannot lawfully be excluded. Any project-specific allocation of liability is governed by the relevant agreement and applicable law.",
+      "Please contact our team with an enquiry or project reference if you have a concern. Applicable Indian law and any valid dispute-resolution terms in your agreement govern the engagement, without limiting mandatory consumer protections or access to competent authorities.",
+    ],
+  },
+  {
+    id: "updates",
+    title: "Updates and contact",
+    paragraphs: [
+      "These website terms may be updated as our website or offerings change. Changes do not automatically alter an existing signed agreement. For questions about these terms, contact info@brainadzlive.com before confirming an engagement.",
+    ],
+  },
 ];
 
 export default function TermsAndConditions() {
-  return <PolicyPage title="Terms & Conditions" heroImage="/hero/about.webp" description="Clear terms for using our website and enquiring about software, business platforms and digital signage solutions." sections={sections} />;
+  return (
+    <PolicyPage
+      title="Terms & Conditions"
+      heroImage="/hero/about.webp"
+      description="Clear terms for using our website and enquiring about software, business platforms and digital signage solutions."
+      sections={sections}
+    />
+  );
 }

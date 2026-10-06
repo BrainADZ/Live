@@ -10,42 +10,42 @@ const products = [
   {
     title: "A-Frame Digital Standee",
     href: "/digital-signage-products/a-frame-digital-standee",
-    image: "/products/A.png",
+    image: "/products/A-type-Standee.webp",
   },
   {
     title: "D-Model Floor Mount Digital Kiosk",
     href: "/digital-signage-products/d-model-floor-mount-digital-kiosk",
-    image: "/products/D.png",
+    image: "/products/D-type-Standee.webp",
   },
   {
     title: "Wall Mount Digital Signage",
     href: "/digital-signage-products/wall-mount-digital-signage",
-    image: "/products/wall.png",
+    image: "/products/Wall-Mount.webp",
   },
   {
     title: "Vertical Floor Mount Digital Kiosk",
     href: "/digital-signage-products/vertical-floor-mount-digital-kiosk",
-    image: "/products/Floor.png",
+    image: "/products/Floor-Mount.webp",
   },
   {
     title: "Self Ordering Kiosk",
     href: "/digital-signage-products/self-ordering-kiosk",
-    image: "/products/Selforder.png",
+    image: "/products/Selforder-Kiosk.webp",
   },
   {
     title: "LFD Video Walls",
     href: "/digital-signage-products/lfd-video-walls",
-    image: "/products/lfd.png",
+    image: "/products/LFD.webp",
   },
   {
     title: "Commercial LED Displays & Screens",
     href: "/digital-signage-products/commercial-led-displays-screens",
-    image: "/products/Led.png",
+    image: "/products/LED.webp",
   },
   {
     title: "Digital Teaching & Conference Board (IFPD)",
     href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
-    image: "/products/Teaching.jpeg",
+    image: "/products/Teaching Panel.webp",
   },
 ];
 
