@@ -85,11 +85,12 @@ const footerColumns = [
   },
 ];
 
-// const bottomLinks = [
-//   { label: "Contact BrainADZ", href: "/contact" },
-//   { label: "Privacy", href: "/privacy-policy" },
-//   { label: "About our ads", href: "/ads" },
-// ];
+const bottomLinks = [
+  // Bypass the previously cached permanent redirect to Contact Us.
+  { label: "Privacy Policy", href: "/privacy-policy?v=20261006" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Return Policy", href: "/return-policy" },
+];
 
 export default function Footer() {
   const [expandedColumns, setExpandedColumns] = useState<Record<string, boolean>>({});
@@ -149,24 +150,22 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM FOOTER BAR */}
-      <div className="mx-auto flex max-w-450 flex-col gap-4 px-6 pb-7 md:px-10 lg:px-12 xl:flex-row xl:items-center xl:justify-between">
-        {/* LEFT */}
-        {/* RIGHT */}
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
-          {/* {bottomLinks.map((link) => (
+      <div className="mx-auto flex max-w-450 flex-col gap-4 px-6 pb-7 md:flex-row md:items-center md:justify-between md:px-10 lg:px-12">
+        <span className="shrink-0 text-[12px] text-[#616161]">
+          © BrainADZ Live 2026 | All rights reserved.
+        </span>
+        <nav aria-label="Legal policies" className="flex flex-wrap items-center gap-x-6 gap-y-3 md:justify-end">
+          {bottomLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-[12px] text-[#616161] transition hover:text-[#193175] hover:underline"
+              prefetch={false}
+              className="text-[12px] text-[#616161] transition hover:text-[#193175] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#193175]"
             >
               {link.label}
             </Link>
-          ))} */}
-
-          <span className="text-[12px] text-[#616161]">
-            © BrainADZ Live 2026 | All rights reserved.
-          </span>
-        </div>
+          ))}
+        </nav>
       </div>
     </footer>
   );

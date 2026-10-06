@@ -27,12 +27,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       { source: "/faqs", destination: "/contact-us", permanent: true },
-      {
-        source: "/privacy-policy",
-        destination: "/contact-us",
-        permanent: true,
-      },
-      { source: "/terms", destination: "/contact-us", permanent: true },
+      { source: "/terms", destination: "/terms-and-conditions", permanent: true },
       {
         source: "/privacy-choices",
         destination: "/contact-us",
