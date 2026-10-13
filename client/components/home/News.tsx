@@ -82,7 +82,7 @@ export default function NewsSection() {
                 </a>
                 . Refer to our{" "}
                 <a
-                  href="/privacy-policy?v=20261006"
+                  href="/privacy-policy"
                   className="text-[#193175] hover:underline"
                 >
                   BrainADZ Privacy Statement

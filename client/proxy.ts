@@ -4,6 +4,19 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.com";
 
 export function proxy(request: NextRequest) {
+  // Normalize links shared with the old redirect-cache workaround.
+  if (
+    request.nextUrl.pathname === "/privacy-policy" &&
+    request.nextUrl.searchParams.get("v") === "20261006"
+  ) {
+    const url = request.nextUrl.clone();
+    url.searchParams.delete("v");
+    return NextResponse.redirect(url, {
+      status: 307,
+      headers: { "Cache-Control": "no-store" },
+    });
+  }
+
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-canonical-path", request.nextUrl.pathname);
 
