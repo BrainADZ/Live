@@ -189,11 +189,7 @@ export default function ApkDownloadPage() {
             Android Applications
           </p>
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-<<<<<<< HEAD
             Download apps for your screen
-=======
-            Choose How You Want to Control Your Screen
->>>>>>> 95d1141a937bfa9b4073911166397dba3d05d928
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
             Choose a Player for your preferred control method. Cloud Updater

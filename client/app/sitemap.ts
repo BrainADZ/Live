@@ -1,3 +1,4 @@
+import { contentList, getBlogs, getCaseStudies } from "@/lib/cms";
 import type { MetadataRoute } from "next";
 
 const siteUrl =
@@ -59,10 +60,14 @@ const routes = [
   "/software-services/web-app-development",
 ] as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const [blogs, studies] = await Promise.all([contentList(() => getBlogs()), contentList(getCaseStudies)]);
+  const content = [...blogs.docs.map(doc => ({ doc, prefix: "/blog" })), ...studies.docs.map(doc => ({ doc, prefix: "/case-studies" }))]
+    .filter(({ doc }) => !doc.seo?.noIndex && !doc.seo?.robots?.includes("noindex"))
+    .map(({ doc, prefix }) => ({ url: `${siteUrl}${prefix}/${encodeURIComponent(doc.slug)}`, lastModified: doc.updatedAt, changeFrequency: "monthly" as const, priority: 0.7 }));
+  return [...routes.map((route) => ({
     url: `${siteUrl}${route}`,
-    changeFrequency: route === "" ? "weekly" : "monthly",
+    changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
     priority: route === "" ? 1 : route.split("/").length === 2 ? 0.8 : 0.7,
-  }));
+  })), ...content];
 }

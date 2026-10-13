@@ -1,3 +1,5 @@
+import { contentList, getBlogs } from "@/lib/cms";
+import { blogCard } from "@/lib/cms-content";
 import AboutSection from "@/components/home/About";
 import BlogSection from "@/components/home/Blog";
 import BrandCarousel from "@/components/home/BrandCarousel";
@@ -17,7 +19,8 @@ import TestimonialSection from "@/components/home/Testimonials";
 import WhyChooseSection from "@/components/home/WhyBrainADZ";
 import Software from "@/components/home/Software";
 
-export default function Home() {
+export default async function Home() {
+  const { docs } = await contentList(() => getBlogs(3));
   return (
     <main>
       <HeroSlider />
@@ -37,7 +40,7 @@ export default function Home() {
         <CtaSection />
         <TeamSection />
         <TestimonialSection />
-        <BlogSection />
+        <BlogSection blogs={docs.map(blogCard)} />
 
         {/* DIVIDER */}
         <div
