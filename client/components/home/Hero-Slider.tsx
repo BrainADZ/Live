@@ -122,7 +122,7 @@ export default function Hero() {
           data-aos-duration="520"
         >
           <div className="relative w-full overflow-hidden">
-            <div className="hero-awards-track flex w-max gap-5">
+            <div className="hero-awards-track flex w-max gap-5 pr-5">
               {repeatedAwards.map((award, index) => (
                 <div
                   key={`${award.alt}-${index}`}
@@ -147,7 +147,7 @@ export default function Hero() {
         data-aos="fade-up"
         data-aos-delay="150"
       >
-        <div className="hero-awards-track flex w-max gap-4">
+        <div className="hero-awards-track flex w-max gap-4 pr-4">
           {repeatedAwards.map((award, index) => (
             <div
               key={`mobile-${award.alt}-${index}`}
@@ -167,7 +167,8 @@ export default function Hero() {
       {/* CAROUSEL ANIMATION */}
       <style jsx>{`
         .hero-awards-track {
-          animation: heroAwardsScroll 24s linear infinite;
+          /* Override the site's global animation reset for certificates only. */
+          animation: heroAwardsScroll 24s linear infinite !important;
         }
 
         .hero-awards-track:hover {
@@ -181,6 +182,12 @@ export default function Hero() {
 
           100% {
             transform: translateX(-50%);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .hero-awards-track {
+            animation: none !important;
           }
         }
       `}</style>
