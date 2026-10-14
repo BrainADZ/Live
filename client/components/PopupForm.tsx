@@ -16,6 +16,8 @@ import { getApiUrl } from "@/lib/api";
 type PopupFormProps = {
   isOpen: boolean;
   onClose: () => void;
+  hideImage?: boolean;
+  embedded?: boolean;
 };
 
 const industryServices = [
@@ -61,6 +63,8 @@ const isIndustryService = (title: string) => {
 export default function PopupForm({
   isOpen,
   onClose,
+  hideImage = false,
+  embedded = false,
 }: PopupFormProps) {
   const [selectedCategory, setSelectedCategory] =
     useState<Category | "">("");
@@ -155,7 +159,7 @@ export default function PopupForm({
   };
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || embedded) return;
 
     document.body.style.overflow = "hidden";
 
@@ -176,7 +180,7 @@ export default function PopupForm({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleEscape);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, embedded]);
 
   if (!isOpen) return null;
 
@@ -184,23 +188,23 @@ export default function PopupForm({
 
   if (showThankYou) {
     return (
-      <div className="fixed inset-0 z-9999 flex items-center justify-center px-4 py-5">
-        <button
+      <div className={embedded ? "w-full" : "fixed inset-0 z-9999 flex items-center justify-center px-4 py-5"}>
+        {!embedded && <button
           type="button"
           aria-label="Close thank you popup"
           onClick={handleClose}
           className="absolute inset-0 cursor-default bg-black/60 backdrop-blur-md"
-        />
+        />}
 
         <div className="relative z-10 w-full max-w-135 overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.4)]">
-          <button
+          {!embedded && <button
             type="button"
             aria-label="Close thank you popup"
             onClick={handleClose}
             className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-white hover:text-[#193175]"
           >
             <X size={21} />
-          </button>
+          </button>}
 
           <div className="relative overflow-hidden bg-[#193175] px-6 pb-14 pt-16 text-center md:px-10">
             <div className="absolute -left-24 -top-24 h-60 w-60 rounded-full border border-white/10" />
@@ -253,27 +257,27 @@ export default function PopupForm({
   /* Main Enquiry Popup */
 
   return (
-    <div className="fixed inset-0 z-9999 flex items-center justify-center px-4 py-5">
-      <button
+    <div className={embedded ? "w-full" : "fixed inset-0 z-9999 flex items-center justify-center px-4 py-5"}>
+      {!embedded && <button
         type="button"
         aria-label="Close enquiry popup"
         onClick={handleClose}
         className="absolute inset-0 cursor-default bg-black/55 backdrop-blur-md"
-      />
+      />}
 
-      <div className="relative z-10 grid max-h-[92vh] w-full max-w-280 overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)] lg:grid-cols-[0.9fr_1.1fr]">
-        <button
+      <div className={embedded ? "relative w-full bg-white" : `relative z-10 grid max-h-[92vh] w-full ${hideImage ? "max-w-170" : "max-w-280 lg:grid-cols-[0.9fr_1.1fr]"} overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)]`}>
+        {!embedded && <button
           type="button"
           aria-label="Close popup"
           onClick={handleClose}
           className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/35 text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#193175] lg:border-black/10 lg:bg-white lg:text-[#193175] lg:hover:bg-[#193175] lg:hover:text-white"
         >
           <X size={22} />
-        </button>
+        </button>}
 
         {/* Left Image Section */}
 
-        <div className="relative hidden min-h-170 overflow-hidden bg-black lg:block">
+        {!hideImage && <div className="relative hidden min-h-170 overflow-hidden bg-black lg:block">
           <img
             src="/about/Enow.webp"
             alt="BrainADZ Live enquiry"
@@ -317,12 +321,12 @@ export default function PopupForm({
               ))}
             </div>
           </div>
-        </div>
+        </div>}
 
         {/* Right Form Section */}
 
-        <div className="max-h-[92vh] overflow-y-auto bg-white px-5 py-8 md:px-4 lg:px-10 lg:py-10">
-          <div className="mb-8 pr-12 lg:pr-8">
+        <div className={embedded ? "bg-white" : "max-h-[92vh] overflow-y-auto bg-white px-5 py-8 md:px-4 lg:px-10 lg:py-10"}>
+          <div className={embedded ? "mb-6" : "mb-8 pr-12 lg:pr-8"}>
             <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
               Enquire Now
             </p>

@@ -4,10 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "aos/dist/aos.css";
 import "./globals.css";
 
-import Navbar from "@/components/navbar/Navbar";
-import SocialMediaSection from "@/components/Footer/SocialMedia";
-import LocationsSection from "@/components/Footer/Location";
-import Footer from "@/components/Footer/Footer";
+import SiteChrome from "@/components/SiteChrome";
 import AosProvider from "@/components/AosProvider";
 
 const siteUrl =
@@ -328,15 +325,7 @@ export default function RootLayout({
 
         <AosProvider />
 
-        <Navbar />
-
-        {children}
-
-        <SocialMediaSection />
-
-        <LocationsSection />
-
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
