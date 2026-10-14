@@ -1,0 +1,27 @@
+.cms-rich-text { color: #525252; font-size: 1.125rem; line-height: 1.85; overflow-wrap: anywhere; }
+.cms-rich-text p { margin-block: 1.2em; }
+.cms-rich-text h1, .cms-rich-text h2, .cms-rich-text h3, .cms-rich-text h4, .cms-rich-text h5, .cms-rich-text h6 { color: #262626; line-height: 1.25; font-weight: 500; margin-top: 1.75em; margin-bottom: .65em; }
+.cms-rich-text h1 { font-size: 2.5rem; }
+.cms-rich-text h2 { font-size: 2rem; }
+.cms-rich-text h3 { font-size: 1.6rem; }
+.cms-rich-text h4 { font-size: 1.35rem; }
+.cms-rich-text h5 { font-size: 1.2rem; }
+.cms-rich-text h6 { font-size: 1.1rem; }
+.cms-rich-text strong { font-weight: 650; }
+.cms-rich-text a { color: #193175; text-decoration: underline; text-underline-offset: 3px; }
+.cms-rich-text ul { list-style: disc; padding-inline-start: 1.5em; margin-block: 1.25em; }
+.cms-rich-text ol { list-style: decimal; padding-inline-start: 1.5em; margin-block: 1.25em; }
+.cms-rich-text li { margin-block: .45em; }
+.cms-rich-text blockquote { border-inline-start: 4px solid #193175; padding: .5em 1.4em; background: #f8faff; margin-block: 1.5em; }
+.cms-rich-text code { background: #eef2f8; border-radius: 4px; padding: .1em .3em; font-size: .9em; }
+.cms-rich-text hr { margin-block: 2em; border-color: #dfe6f1; }
+.cms-rich-text figure { margin-block: 2em; }
+.cms-rich-text img { max-width: 100%; height: auto; border-radius: 12px; }
+.cms-rich-text figcaption { color: #777; font-size: .9rem; margin-top: .75em; }
+.cms-table-scroll { overflow-x: auto; margin-block: 1.5em; }
+.cms-rich-text table { border-collapse: collapse; min-width: 100%; }
+.cms-rich-text td, .cms-rich-text th { border: 1px solid #dfe6f1; padding: .75em 1em; min-width: 120px; }
+.cms-rich-text th { background: #eef2f8; color: #193175; }
+.cms-faq details { border-bottom: 1px solid #dfe6f1; padding-block: 1em; }
+.cms-faq summary { cursor: pointer; color: #262626; font-weight: 500; }
+@media (max-width: 767px) { .cms-rich-text { font-size: 1rem; } .cms-rich-text h1 { font-size: 2rem; } .cms-rich-text h2 { font-size: 1.65rem; } }

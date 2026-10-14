@@ -20,12 +20,6 @@ const nextConfig: NextConfig = {
         destination: "/digital-signage-products",
         permanent: true,
       },
-      { source: "/blog/:slug", destination: "/blog", permanent: true },
-      {
-        source: "/case-studies/:slug",
-        destination: "/case-studies",
-        permanent: true,
-      },
       { source: "/faqs", destination: "/contact-us", permanent: true },
       { source: "/terms", destination: "/terms-and-conditions", permanent: true },
       {

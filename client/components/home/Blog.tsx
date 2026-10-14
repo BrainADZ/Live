@@ -1,36 +1,14 @@
 "use client";
-import { titleCaseHeading } from "@/lib/title-case-heading";
+import Link from "next/link";
 
 
 
 import { ArrowRight } from "lucide-react";
+import type { ArticleCard } from "@/lib/cms-content";
 /* eslint-disable @next/next/no-img-element */
 
-const blogs = [
-  {
-    category: "AI & Automation",
-    title: "How AI-powered systems are changing modern business operations",
-    date: "June 2026",
-    href: "/blog",
-    image: "/blog/blog1.jpeg",
-  },
-  {
-    category: "Digital Signage",
-    title: "Why smart kiosks and digital standees improve customer experience",
-    date: "June 2026",
-    href: "/blog",
-    image: "/blog/blog2.jpeg",
-  },
-  {
-    category: "Technology",
-    title: "Building scalable software with hardware integration in mind",
-    date: "June 2026",
-    href: "/blog",
-    image: "/blog/blog3.jpeg",
-  },
-];
-
-export default function BlogSection() {
+export default function BlogSection({ blogs }: { blogs: ArticleCard[] }) {
+  if (!blogs.length) return null;
   return (
     <section className="section-spacing lazy-section bg-[#f8faff] px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
@@ -46,7 +24,7 @@ export default function BlogSection() {
             </h2>
           </div>
 
-          <a
+          <Link
             href="/blog"
             data-aos="fade-left"
             data-aos-delay="100"
@@ -54,13 +32,13 @@ export default function BlogSection() {
           >
             View all blogs
             <ArrowRight size={28} strokeWidth={1.8} className="text-[28px] leading-none" />
-          </a>
+          </Link>
         </div>
 
         {/* BLOG GRID */}
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {blogs.map((blog, index) => (
-            <a
+            <Link
               key={blog.title}
               href={blog.href}
               data-aos="card-reveal"
@@ -76,7 +54,7 @@ export default function BlogSection() {
 
                 <img
                   src={blog.image}
-                  alt={blog.title}
+                  alt={blog.imageAlt}
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {
@@ -101,7 +79,7 @@ export default function BlogSection() {
                 </div>
 
                 <h3 className="mt-6 min-h-23 text-[24px] font-normal leading-[1.32] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175]">
-                  {titleCaseHeading(blog.title)}
+                  {blog.title}
                 </h3>
 
                 <div className="mt-8 flex items-center justify-between">
@@ -114,7 +92,7 @@ export default function BlogSection() {
               </div>
 
               <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

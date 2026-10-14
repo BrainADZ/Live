@@ -67,7 +67,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="section-spacing lazy-section mx-auto w-full max-w-[1800px] bg-white px-5 text-[#161616] md:px-4 lg:px-10">
+    <section className="section-spacing lazy-section mx-auto w-full max-w-450 bg-white px-5 text-[#161616] md:px-4 lg:px-10">
       {/* TOP HEADING + DESCRIPTION */}
       <div className="mb-27.5 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
         <h2

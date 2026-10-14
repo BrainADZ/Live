@@ -1,0 +1,36 @@
+{
+  "name": "brainadz-cms",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "eslint",
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap"
+  },
+  "dependencies": {
+    "@payloadcms/db-mongodb": "3.88.0",
+    "@payloadcms/email-nodemailer": "^3.88.0",
+    "@payloadcms/next": "3.88.0",
+    "@payloadcms/plugin-redirects": "^3.88.0",
+    "@payloadcms/richtext-lexical": "3.88.0",
+    "graphql": "^16.8.1",
+    "next": "16.2.6",
+    "payload": "3.88.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "typescript": "^5"
+  }
+}

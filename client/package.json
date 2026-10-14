@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test:cms": "node --test tests/cms-integration.test.cjs"
   },
   "dependencies": {
     "aos": "^2.3.4",

@@ -85,8 +85,7 @@ const footerColumns = [
 ];
 
 const bottomLinks = [
-  // Bypass the previously cached permanent redirect to Contact Us.
-  { label: "Privacy Policy", href: "/privacy-policy?v=20261006" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms & Conditions", href: "/terms-and-conditions" },
   { label: "Return Policy", href: "/return-policy" },
 ];
