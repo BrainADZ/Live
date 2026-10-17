@@ -1,34 +1,11 @@
 "use client";
+import Link from "next/link";
 import { titleCaseHeading } from "@/lib/title-case-heading";
-
+import { testimonials } from "@/data/testimonials";
 
 /* eslint-disable @next/next/no-img-element */
 
 import { Quote, Star, ArrowRight } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Retail Business Owner",
-    role: "Digital Standee Deployment",
-    image: "/signage-products/retail-stores.svg",
-    message:
-      "BrainADZ Live helped us upgrade our in-store branding with smart digital standees. The installation was smooth, the display quality is excellent, and the support team was very responsive.",
-  },
-  {
-    name: "Restaurant Manager",
-    role: "Menu Display & Kiosk Solution",
-    image: "/signage-products/restaurants.svg",
-    message:
-      "Their menu display system made our customer experience cleaner and faster. The solution looks premium and helps us manage promotions with better visibility.",
-  },
-  {
-    name: "Education Institute",
-    role: "Interactive Display Solution",
-    image: "/signage-products/education-training-spaces.svg",
-    message:
-      "We needed a reliable digital setup for teaching and presentations. BrainADZ Live delivered a professional solution that is easy to use and works well for our team.",
-  },
-];
 
 export default function TestimonialSection() {
   return (
@@ -131,7 +108,7 @@ export default function TestimonialSection() {
 
         {/* CTA */}
         <div className="mt-14 flex justify-center" data-aos="fade-up">
-          <a
+          <Link
             href="/case-studies"
             className="group inline-flex h-13.5 items-center justify-center gap-4 rounded-full border border-[#193175] px-4 text-[15px] font-normal text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
           >
@@ -141,7 +118,7 @@ export default function TestimonialSection() {
               strokeWidth={1.6}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

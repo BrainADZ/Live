@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { type FormEvent, useEffect, useState } from "react";
+import { type FormEvent, useEffect, useId, useState } from "react";
 import { getApiUrl } from "@/lib/api";
 import {
   BriefcaseBusiness,
@@ -24,6 +24,7 @@ type DemoFormProps = {
   onClose: () => void;
   demoHref?: string;
   demoType?: "crm" | "erp" | "pos" | "hospitality";
+  embedded?: boolean;
 };
 
 const companySizes = [
@@ -43,7 +44,9 @@ export default function DemoForm({
   onClose,
   demoHref = "/demos",
   demoType,
+  embedded = false,
 }: DemoFormProps) {
+  const formId = useId();
   const [captchaCode, setCaptchaCode] = useState(captchaCodes[0]);
   const [captchaValue, setCaptchaValue] = useState("");
   const [captchaError, setCaptchaError] = useState("");
@@ -131,13 +134,13 @@ export default function DemoForm({
       setCaptchaValue("");
       onClose();
       window.location.assign(
-        isErpDemo ? data.redirectUrl || demoHref : demoHref
+        isErpDemo ? data.redirectUrl || demoHref : demoHref,
       );
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
-          : "Failed to submit the demo request. Please try again."
+          : "Failed to submit the demo request. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -145,7 +148,7 @@ export default function DemoForm({
   };
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || embedded) return;
 
     document.body.style.overflow = "hidden";
 
@@ -159,7 +162,7 @@ export default function DemoForm({
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleEscape);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, embedded]);
 
   if (!isOpen) return null;
 
@@ -171,84 +174,144 @@ export default function DemoForm({
     "pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#7b8492]";
 
   return (
-    <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/60 px-4 py-5 backdrop-blur-md">
-      <button
-        type="button"
-        aria-label="Close demo form"
-        onClick={onClose}
-        className="absolute inset-0 cursor-default"
-      />
-
-      <div className="relative z-10 grid max-h-[94vh] w-full max-w-295 overflow-hidden rounded-3xl bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)] lg:grid-cols-[0.9fr_1.1fr]">
+    <div
+      className={
+        embedded
+          ? "w-full"
+          : "fixed inset-0 z-9999 flex items-center justify-center bg-black/60 px-4 py-5 backdrop-blur-md"
+      }
+    >
+      {!embedded && (
         <button
           type="button"
           aria-label="Close demo form"
           onClick={onClose}
-          className="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-[#6d6d6d] shadow-[0_12px_30px_rgba(0,0,0,0.12)] transition hover:bg-[#193175] hover:text-white"
-        >
-          <X size={24} strokeWidth={2.2} />
-        </button>
+          className="absolute inset-0 cursor-default"
+        />
+      )}
 
-        <div className="relative hidden min-h-180 overflow-hidden bg-black lg:block">
-          <img
-            src="/hero/crm-software.jpg"
-            alt="BrainADZ demo preview"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12)_0%,rgba(0,0,0,0.58)_48%,rgba(0,0,0,0.94)_100%)]" />
-          <div className="absolute inset-0 bg-[#193175]/20" />
+      <div
+        className={
+          embedded
+            ? "w-full bg-white"
+            : "relative z-10 grid max-h-[94vh] w-full max-w-295 overflow-hidden rounded-3xl bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)] lg:grid-cols-[0.9fr_1.1fr]"
+        }
+      >
+        {!embedded && (
+          <button
+            type="button"
+            aria-label="Close demo form"
+            onClick={onClose}
+            className="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-[#6d6d6d] shadow-[0_12px_30px_rgba(0,0,0,0.12)] transition hover:bg-[#193175] hover:text-white"
+          >
+            <X
+              size={24}
+              strokeWidth={2.2}
+            />
+          </button>
+        )}
 
-          <div className="relative z-10 flex h-full flex-col justify-end p-9 text-white">
-            <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-[#a9c5ff]">
-              Product Walkthrough
-            </p>
-            <h2 className="max-w-100 text-[44px] font-normal leading-[1.05] tracking-[-1.4px]">
-              Request a Focused Platform Demo.
-            </h2>
-            <p className="mt-5 max-w-100 text-[15px] font-light leading-[1.7] text-white/78">
-              Tell us about your company and requirements so we can route you
-              to the right CRM, ERP, signage or trial room preview.
-            </p>
+        {!embedded && (
+          <div className="relative hidden min-h-180 overflow-hidden bg-black lg:block">
+            <img
+              src="/hero/crm-software.jpg"
+              alt="BrainADZ demo preview"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12)_0%,rgba(0,0,0,0.58)_48%,rgba(0,0,0,0.94)_100%)]" />
+            <div className="absolute inset-0 bg-[#193175]/20" />
 
-            <div className="mt-8 grid gap-3">
-              {[
-                "Guided product walkthrough",
-                "Business-fit recommendations",
-                "Fast access to demo library",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-white/90">
-                  <CheckCircle2 size={18} className="text-[#a9c5ff]" />
-                  <span className="text-[14px] font-light">{item}</span>
-                </div>
-              ))}
+            <div className="relative z-10 flex h-full flex-col justify-end p-9 text-white">
+              <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-[#a9c5ff]">
+                Product Walkthrough
+              </p>
+              <h2 className="max-w-100 text-[44px] font-normal leading-[1.05] tracking-[-1.4px]">
+                Request a Focused Platform Demo.
+              </h2>
+              <p className="mt-5 max-w-100 text-[15px] font-light leading-[1.7] text-white/78">
+                Tell us about your company and requirements so we can route you
+                to the right CRM, ERP, signage or trial room preview.
+              </p>
+
+              <div className="mt-8 grid gap-3">
+                {[
+                  "Guided product walkthrough",
+                  "Business-fit recommendations",
+                  "Fast access to demo library",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 text-white/90"
+                  >
+                    <CheckCircle2
+                      size={18}
+                      className="text-[#a9c5ff]"
+                    />
+                    <span className="text-[14px] font-light">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
-        <div className="max-h-[94vh] overflow-y-auto px-5 py-7 md:px-4 md:py-8 lg:px-9">
-          <div className="pr-12">
-            <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
-              View Demo
-            </p>
-            <h2 className="text-[34px] font-normal leading-tight tracking-[-0.9px] text-black md:text-[42px]">
+        <div
+          className={
+            embedded
+              ? "w-full"
+              : "max-h-[94vh] overflow-y-auto px-5 py-7 md:px-4 md:py-8 lg:px-9"
+          }
+        >
+          <div className={embedded ? "" : "pr-12"}>
+            {!embedded && (
+              <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
+                View Demo
+              </p>
+            )}
+            <h2
+              className={
+                embedded
+                  ? "text-[25px] font-medium leading-tight tracking-[-0.5px] text-[#303030]"
+                  : "text-[34px] font-normal leading-tight tracking-[-0.9px] text-black md:text-[42px]"
+              }
+            >
               Request a Demo
             </h2>
-            <p className="mt-3 max-w-150 text-[14px] font-light leading-[1.65] text-black/58">
-              Fill this registration form and continue to our demo library.
+            <p
+              className={
+                embedded
+                  ? "mt-2 text-[14px] leading-[1.6] text-black/60"
+                  : "mt-3 max-w-150 text-[14px] font-light leading-[1.65] text-black/58"
+              }
+            >
+              {embedded && demoType === "erp"
+                ? "Tell us about your business to explore the ERP demo."
+                : "Fill this registration form and continue to our demo library."}
             </p>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
+            className={
+              embedded
+                ? "mt-5 grid grid-cols-1 gap-3 md:grid-cols-2"
+                : "mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
+            }
           >
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-full-name">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-full-name`}
+              >
                 Full name
               </label>
-              <UserRound className={iconClass} size={19} strokeWidth={1.8} />
+              <UserRound
+                className={iconClass}
+                size={19}
+                strokeWidth={1.8}
+              />
               <input
-                id="demo-full-name"
+                id={`${formId}-demo-full-name`}
                 name="name"
                 type="text"
                 required
@@ -258,7 +321,10 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-company-website">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-company-website`}
+              >
                 Company website
               </label>
               <BriefcaseBusiness
@@ -267,7 +333,7 @@ export default function DemoForm({
                 strokeWidth={1.8}
               />
               <input
-                id="demo-company-website"
+                id={`${formId}-demo-company-website`}
                 name="companyWebsite"
                 type="text"
                 required
@@ -277,12 +343,19 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-work-email">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-work-email`}
+              >
                 Work email
               </label>
-              <Mail className={iconClass} size={19} strokeWidth={1.8} />
+              <Mail
+                className={iconClass}
+                size={19}
+                strokeWidth={1.8}
+              />
               <input
-                id="demo-work-email"
+                id={`${formId}-demo-work-email`}
                 name="email"
                 type="email"
                 required
@@ -292,12 +365,19 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-phone-number">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-phone-number`}
+              >
                 Phone number
               </label>
-              <Phone className={iconClass} size={19} strokeWidth={1.8} />
+              <Phone
+                className={iconClass}
+                size={19}
+                strokeWidth={1.8}
+              />
               <input
-                id="demo-phone-number"
+                id={`${formId}-demo-phone-number`}
                 name="phone"
                 type="tel"
                 required
@@ -307,12 +387,19 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-industry">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-industry`}
+              >
                 Industry
               </label>
-              <Building2 className={iconClass} size={19} strokeWidth={1.8} />
+              <Building2
+                className={iconClass}
+                size={19}
+                strokeWidth={1.8}
+              />
               <input
-                id="demo-industry"
+                id={`${formId}-demo-industry`}
                 name="industry"
                 type="text"
                 required
@@ -322,13 +409,24 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-company-size">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-company-size`}
+              >
                 Company size
               </label>
-              <select id="demo-company-size" name="companySize" required className={selectClass}>
+              <select
+                id={`${formId}-demo-company-size`}
+                name="companySize"
+                required
+                className={selectClass}
+              >
                 <option value="">Company size</option>
                 {companySizes.map((size) => (
-                  <option key={size} value={size}>
+                  <option
+                    key={size}
+                    value={size}
+                  >
                     {size}
                   </option>
                 ))}
@@ -341,7 +439,10 @@ export default function DemoForm({
             </div>
 
             <div className="relative md:col-span-2">
-              <label className="sr-only" htmlFor="demo-requirements">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-requirements`}
+              >
                 Describe your requirements
               </label>
               <PencilLine
@@ -350,9 +451,9 @@ export default function DemoForm({
                 strokeWidth={1.8}
               />
               <textarea
-                id="demo-requirements"
+                id={`${formId}-demo-requirements`}
                 name="requirements"
-                rows={4}
+                rows={embedded ? 3 : 4}
                 required
                 placeholder="Describe your requirements"
                 className="w-full resize-none rounded-[10px] border border-[#d4deeb] bg-white px-4 py-3.5 pl-11 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
@@ -360,19 +461,29 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-language">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-language`}
+              >
                 Preferred demo language
               </label>
-              <Languages className={iconClass} size={19} strokeWidth={1.8} />
+              <Languages
+                className={iconClass}
+                size={19}
+                strokeWidth={1.8}
+              />
               <select
-                id="demo-language"
+                id={`${formId}-demo-language`}
                 name="preferredLanguage"
                 required
                 className={`${selectClass} pl-11`}
               >
                 <option value="">Preferred demo language</option>
                 {demoLanguages.map((language) => (
-                  <option key={language} value={language}>
+                  <option
+                    key={language}
+                    value={language}
+                  >
                     {language}
                   </option>
                 ))}
@@ -385,12 +496,19 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label className="sr-only" htmlFor="demo-source">
+              <label
+                className="sr-only"
+                htmlFor={`${formId}-demo-source`}
+              >
                 How did you hear about BrainADZ?
               </label>
-              <HelpCircle className={iconClass} size={19} strokeWidth={1.8} />
+              <HelpCircle
+                className={iconClass}
+                size={19}
+                strokeWidth={1.8}
+              />
               <input
-                id="demo-source"
+                id={`${formId}-demo-source`}
                 name="source"
                 type="text"
                 placeholder="How did you hear about BrainADZ?"
@@ -415,11 +533,14 @@ export default function DemoForm({
                 </div>
 
                 <div>
-                  <label className="sr-only" htmlFor="demo-captcha">
+                  <label
+                    className="sr-only"
+                    htmlFor={`${formId}-demo-captcha`}
+                  >
                     Enter the captcha
                   </label>
                   <input
-                    id="demo-captcha"
+                    id={`${formId}-demo-captcha`}
                     type="text"
                     required
                     value={captchaValue}

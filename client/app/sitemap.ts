@@ -1,8 +1,7 @@
 import { contentList, getBlogs, getCaseStudies } from "@/lib/cms";
 import type { MetadataRoute } from "next";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.com";
 
 const routes = [
   "",
@@ -20,6 +19,7 @@ const routes = [
   "/terms-and-conditions",
   "/return-policy",
   "/demos",
+  "/smart-erp",
   "/digital-signage-products",
   "/digital-signage-products/a-frame-digital-standee",
   "/digital-signage-products/d-model-floor-mount-digital-kiosk",
@@ -64,13 +64,30 @@ const routes = [
 ] as const;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [blogs, studies] = await Promise.all([contentList(() => getBlogs()), contentList(getCaseStudies)]);
-  const content = [...blogs.docs.map(doc => ({ doc, prefix: "/blog" })), ...studies.docs.map(doc => ({ doc, prefix: "/case-studies" }))]
-    .filter(({ doc }) => !doc.seo?.noIndex && !doc.seo?.robots?.includes("noindex"))
-    .map(({ doc, prefix }) => ({ url: `${siteUrl}${prefix}/${encodeURIComponent(doc.slug)}`, lastModified: doc.updatedAt, changeFrequency: "monthly" as const, priority: 0.7 }));
-  return [...routes.map((route) => ({
-    url: `${siteUrl}${route}`,
-    changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
-    priority: route === "" ? 1 : route.split("/").length === 2 ? 0.8 : 0.7,
-  })), ...content];
+  const [blogs, studies] = await Promise.all([
+    contentList(() => getBlogs()),
+    contentList(getCaseStudies),
+  ]);
+  const content = [
+    ...blogs.docs.map((doc) => ({ doc, prefix: "/blog" })),
+    ...studies.docs.map((doc) => ({ doc, prefix: "/case-studies" })),
+  ]
+    .filter(
+      ({ doc }) => !doc.seo?.noIndex && !doc.seo?.robots?.includes("noindex"),
+    )
+    .map(({ doc, prefix }) => ({
+      url: `${siteUrl}${prefix}/${encodeURIComponent(doc.slug)}`,
+      lastModified: doc.updatedAt,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
+  return [
+    ...routes.map((route) => ({
+      url: `${siteUrl}${route}`,
+      changeFrequency:
+        route === "" ? ("weekly" as const) : ("monthly" as const),
+      priority: route === "" ? 1 : route.split("/").length === 2 ? 0.8 : 0.7,
+    })),
+    ...content,
+  ];
 }

@@ -1,0 +1,446 @@
+.preview {
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: 816 / 320;
+  overflow: hidden;
+  background: linear-gradient(120deg, #9ecfff, #bad3d1 57%, #e4d57b);
+  color: #20242d;
+}
+
+.builderRail {
+  position: absolute;
+  top: 12%;
+  left: 5.5%;
+  display: grid;
+  align-content: start;
+  gap: 2.4cqw;
+  width: 7%;
+  height: 100%;
+  padding: 2.5cqw 0;
+  border-radius: 1cqw 1cqw 0 0;
+  background: #172b37;
+  color: #d5e0e8;
+  text-align: center;
+}
+
+.builderRail > span {
+  display: grid;
+  justify-items: center;
+  gap: 0.5cqw;
+}
+
+.builderRail svg {
+  width: 1.6cqw;
+  height: 1.6cqw;
+}
+
+.builderRail small {
+  font-size: 0.8cqw;
+}
+
+.builderPalette {
+  position: absolute;
+  top: 12%;
+  left: 13.3%;
+  width: 18%;
+  height: 100%;
+  padding: 1.4cqw;
+  border-radius: 1cqw 1cqw 0 0;
+  background: #08222c;
+  color: #53c4ed;
+  font-size: 0.85cqw;
+}
+
+.search {
+  margin-bottom: 1.5cqw;
+  padding: 0.6cqw;
+  border: 1px solid #39505b;
+  border-radius: 0.4cqw;
+  color: #92a7b4;
+}
+
+.builderPalette > span {
+  display: block;
+  margin-bottom: 1cqw;
+}
+
+.fieldButtons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55cqw;
+}
+
+.fieldButtons > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.2cqw;
+  border-radius: 0.4cqw;
+  background: #203b46;
+  color: #d2dfe5;
+  font-size: 0.65cqw;
+  text-align: center;
+}
+
+.paletteSection {
+  margin: 1.6cqw 0 1cqw;
+}
+
+.workspace {
+  position: absolute;
+  top: 19%;
+  left: 33%;
+  display: flex;
+  width: 76%;
+  min-height: 100%;
+  overflow: hidden;
+  border: 0.5cqw solid #172632;
+  border-radius: 2.2cqw 0 0;
+  background: #fff;
+}
+
+.workspaceNav {
+  display: flex;
+  flex: 0 0 14cqw;
+  flex-direction: column;
+  gap: 1.5cqw;
+  padding: 1.4cqw;
+  background: #20345d;
+  color: #d4def3;
+  font-size: 0.8cqw;
+}
+
+.workspaceNav strong {
+  margin-bottom: 0.8cqw;
+  font-size: 1cqw;
+}
+
+.workspaceBody {
+  flex: 1;
+  min-width: 0;
+  padding: 1.8cqw;
+}
+
+.workspaceHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1cqw;
+  margin-bottom: 2cqw;
+  font-size: 0.8cqw;
+}
+
+.workspaceHeader > span:last-child {
+  color: #8a94a6;
+}
+
+.workspaceCards {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 1.4cqw;
+}
+
+.workspaceCards article {
+  min-width: 0;
+  padding: 1.5cqw;
+  border: 1px solid #edf0f5;
+  border-radius: 1cqw;
+  font-size: 0.9cqw;
+}
+
+.orderCard,
+.summaryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1cqw;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 5cqw;
+  height: 5cqw;
+  border-radius: 1cqw;
+  background: #f9ccac;
+  color: #694032;
+  font-size: 1.6cqw;
+  font-weight: 600;
+}
+
+.approved {
+  padding: 0.2cqw 0.5cqw;
+  border-radius: 0.4cqw;
+  background: #e5f7ec;
+  color: #159662;
+  font-size: 0.65cqw;
+}
+
+.workspaceCards dl {
+  display: grid;
+  gap: 0.4cqw;
+  margin: 0.8cqw 0 0;
+  font-size: 0.7cqw;
+}
+
+.workspaceCards dt {
+  color: #8c95a5;
+}
+
+.workspaceCards dd {
+  margin: 0 0 0.8cqw;
+}
+
+.workspaceCards .summaryCard {
+  align-items: center;
+  background: #fcf8ef;
+  text-align: center;
+}
+
+.summaryCard > strong {
+  font-size: 1.8cqw;
+}
+
+.packageIcon {
+  display: grid;
+  place-items: center;
+  width: 7cqw;
+  height: 7cqw;
+  margin: 1cqw 0;
+  border-radius: 50%;
+  background: #f0e7d6;
+  color: #b18a42;
+}
+
+.packageIcon svg {
+  width: 4cqw;
+  height: 4cqw;
+}
+
+.activityCard > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5cqw;
+  margin-top: 2cqw;
+  font-size: 0.7cqw;
+}
+
+.activityCard svg {
+  flex-shrink: 0;
+  width: 1cqw;
+  height: 1cqw;
+  color: #22996c;
+}
+
+.accessCard {
+  position: absolute;
+  top: 69%;
+  left: 29.5%;
+  display: grid;
+  gap: 0.55cqw;
+  width: 18%;
+  padding: 1.4cqw;
+  border: 0.6cqw solid #fff;
+  border-radius: 1.4cqw;
+  background: #fff3e9;
+  box-shadow: 0 1cqw 3cqw #2e3c5b10;
+  color: #686c7a;
+  font-size: 0.75cqw;
+}
+
+.accessCard strong {
+  color: #273650;
+  font-size: 0.85cqw;
+  font-weight: 500;
+}
+
+.performanceCard,
+.revenueCard,
+.targetCard {
+  position: absolute;
+  padding: 2.8cqw;
+  border: 1px solid #e3e7e8;
+  border-radius: 2cqw;
+  background: #fff;
+}
+
+.preview h3 {
+  margin: 0 0 1.4cqw;
+  color: #151515;
+  font-size: 1.7cqw;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.performanceCard {
+  top: 15%;
+  left: 5%;
+  width: 25%;
+}
+
+.performanceCard > strong {
+  font-size: 2.1cqw;
+  font-weight: 600;
+}
+
+.performanceCard p {
+  margin: 0.4cqw 0 0.9cqw;
+  color: #777;
+  font-size: 1cqw;
+  line-height: 1.5;
+}
+
+.performanceCard h3:not(:first-child) {
+  margin-top: 2.2cqw;
+}
+
+.progress {
+  height: 0.4cqw;
+  background: #ededed;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  background: #eb4a57;
+}
+
+.greenProgress > span {
+  background: #23b44d;
+}
+
+.revenueCard {
+  top: 31%;
+  left: 24.5%;
+  width: 29%;
+}
+
+.revenueChart {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 13.5cqw;
+  margin: 1.8cqw 0 1.4cqw;
+}
+
+.donut {
+  display: grid;
+  place-items: center;
+  width: 8.5cqw;
+  height: 8.5cqw;
+  border-radius: 50%;
+  background: conic-gradient(#ea414b 0 50%, #f3a23d 50% 72%, #1faf51 72% 100%);
+}
+
+.donut > span {
+  width: 5cqw;
+  height: 5cqw;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.revenueChart > span {
+  position: absolute;
+  color: #6e6e6e;
+  font-size: 1cqw;
+}
+
+.revenueTop {
+  top: 0;
+  left: 0;
+}
+
+.revenueRight {
+  top: 3cqw;
+  right: -0.4cqw;
+}
+
+.revenueLeft {
+  bottom: 0;
+  left: -0.5cqw;
+}
+
+.revenueLegend {
+  display: flex;
+  justify-content: center;
+  gap: 1.8cqw;
+  color: #777;
+  font-size: 1cqw;
+}
+
+.revenueLegend > span::before {
+  display: inline-block;
+  width: 0.7cqw;
+  height: 0.7cqw;
+  margin-right: 0.4cqw;
+  background: #ea414b;
+  content: "";
+}
+
+.revenueLegend > span:nth-child(2)::before {
+  background: #f3a23d;
+}
+
+.revenueLegend > span:nth-child(3)::before {
+  background: #1faf51;
+}
+
+.targetCard {
+  top: 31%;
+  left: 55.2%;
+  width: 41%;
+}
+
+.targetRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 1cqw;
+  margin-top: 1.5cqw;
+}
+
+.targetAvatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 3.3cqw;
+  height: 3.3cqw;
+  border: 0.3cqw solid #e2e9f1;
+  border-radius: 50%;
+  background: #bfcfdf;
+  color: #fff;
+  font-size: 0.9cqw;
+}
+
+.targetRow:nth-of-type(2) .targetAvatar {
+  background: #d3beca;
+}
+
+.targetDetail {
+  flex: 1;
+  min-width: 0;
+}
+
+.targetDetail > span {
+  display: block;
+  margin-bottom: 0.5cqw;
+  font-size: 0.9cqw;
+  text-align: right;
+}
+
+.targetBar {
+  height: 3cqw;
+  overflow: hidden;
+  border-radius: 2cqw;
+  background: #ededed;
+}
+
+.targetBar > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-right: 0.3cqw solid #6b7682;
+  background: #7bb4f7;
+  color: #fff;
+  font-size: 1.1cqw;
+  font-weight: 600;
+}
