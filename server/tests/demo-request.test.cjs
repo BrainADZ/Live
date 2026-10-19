@@ -65,6 +65,7 @@ test("demo submission, delivery and retry behavior", async (t) => {
     ENQUIRY_EMAIL_2: "",
   });
   let provisionCalls = [];
+  let crmRequests = [];
   let tracking = [];
   let provisioningStatus = 201;
   let crmAvailable = true;
@@ -87,6 +88,7 @@ test("demo submission, delivery and retry behavior", async (t) => {
       return { ok: false, status: 503, json: async () => ({}) };
     }
     if (options.method === "PATCH") tracking.push(JSON.parse(options.body));
+    if (options.method === "POST") crmRequests.push(JSON.parse(options.body));
     return {
       ok: true,
       status: 200,
@@ -102,6 +104,7 @@ test("demo submission, delivery and retry behavior", async (t) => {
   t.beforeEach(() => {
     messages.length = 0;
     provisionCalls = [];
+    crmRequests = [];
     tracking = [];
     rejectMail = false;
     provisioningStatus = 201;
@@ -118,7 +121,12 @@ test("demo submission, delivery and retry behavior", async (t) => {
       assert.equal(result.body.thankYouUrl, "/thank-you");
       assert.equal(result.body.redirectUrl, undefined);
       assert.equal(messages.length, 1);
-      assert.equal(provisionCalls[0].companyName, "Example & Company");
+      assert.deepEqual(Object.keys(provisionCalls[0]).sort(), [
+        "email",
+        "name",
+        "password",
+      ]);
+      assert.equal(crmRequests[0].companyName, "Example & Company");
       assert.match(messages[0].html, /Test &lt;Visitor&gt;/);
       assert.match(messages[0].html, /Login ID/);
       const password = provisionCalls[0].password;

@@ -11,7 +11,8 @@ or in the CRM record. `/api/erp-demo` remains an alias for ERP submissions.
 - Set the same random `WEBSITE_INGESTION_KEY` (at least 32 characters) in this
   server and the CRM backend. Keep it out of browser environment variables.
 - Keep the existing SMTP and ERP provisioning settings. The ERP provisioning
-  endpoint accepts `name`, `email`, `password` and `companyName`.
+  endpoint accepts only `name`, `email` and `password`. Company name is saved in
+  the CRM lead and included in emails; it must not be sent to ERP provisioning.
 - Product demo links are controlled by `ERP_DEMO_URL`, `CRM_DEMO_URL`,
   `POS_DEMO_URL`, `HOSPITALITY_DEMO_URL` and `SOFTWARE_DEMO_URL`.
 - Configure `ENQUIRY_EMAIL_1` / `ENQUIRY_EMAIL_2` for team notifications.

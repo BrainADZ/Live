@@ -32,7 +32,6 @@ const provisionErpAccess = async (fields) => {
     body: JSON.stringify({
       name: fields.name,
       email: fields.email,
-      companyName: fields.companyName,
       password,
     }),
     signal: AbortSignal.timeout(15000),
