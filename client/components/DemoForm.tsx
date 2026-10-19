@@ -1,19 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { type FormEvent, useEffect, useId, useState } from "react";
+import { type FormEvent, useEffect, useId, useRef, useState } from "react";
 import { getApiUrl } from "@/lib/api";
 import {
   BriefcaseBusiness,
-  Building2,
   CheckCircle2,
   ChevronDown,
-  HelpCircle,
-  Languages,
   Mail,
   PencilLine,
   Phone,
-  RotateCw,
   Send,
   UserRound,
   X,
@@ -35,114 +31,86 @@ const companySizes = [
   "501+ employees",
 ];
 
-const demoLanguages = ["English", "Hindi", "Hinglish"];
-
-const captchaCodes = ["B7K4", "P9R2", "M5Q8", "T3X6"];
-
 export default function DemoForm({
   isOpen,
   onClose,
-  demoHref = "/demos",
   demoType,
   embedded = false,
 }: DemoFormProps) {
   const formId = useId();
-  const [captchaCode, setCaptchaCode] = useState(captchaCodes[0]);
-  const [captchaValue, setCaptchaValue] = useState("");
-  const [captchaError, setCaptchaError] = useState("");
+  const requestId = useRef<string | null>(null);
+  const requestPayload = useRef("");
+  const submissionPending = useRef(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  const refreshCaptcha = () => {
-    const currentIndex = captchaCodes.indexOf(captchaCode);
-    const nextIndex = (currentIndex + 1) % captchaCodes.length;
-
-    setCaptchaCode(captchaCodes[nextIndex]);
-    setCaptchaValue("");
-    setCaptchaError("");
-  };
-
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    if (isSubmitting) return;
-
-    if (captchaValue.trim().toUpperCase() !== captchaCode) {
-      setCaptchaError("Please enter the captcha shown.");
-      return;
-    }
-
-    setCaptchaError("");
-    setSubmitError("");
+    if (submissionPending.current) return;
 
     const form = event.currentTarget;
-    const formData = new FormData(form);
-    const demoPayload = {
-      name: formData.get("name"),
-      companyWebsite: formData.get("companyWebsite"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      industry: formData.get("industry"),
-      companySize: formData.get("companySize"),
-      requirements: formData.get("requirements"),
-      preferredLanguage: formData.get("preferredLanguage"),
-      source: formData.get("source"),
+    const fields = new FormData(form);
+    const campaign = new URLSearchParams(window.location.search);
+    const payload = {
+      demoType: demoType || "software",
+      name: String(fields.get("name") || "").trim(),
+      companyName: String(fields.get("companyName") || "").trim(),
+      email: String(fields.get("email") || "").trim(),
+      phone: String(fields.get("phone") || "").trim(),
+      companySize: fields.get("companySize"),
+      requirements: String(fields.get("requirements") || "").trim(),
+      pageUrl: window.location.href,
+      campaign: Object.fromEntries(
+        [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_term",
+          "utm_content",
+          "gclid",
+        ].map((key) => [key, campaign.get(key) || ""]),
+      ),
     };
+    const fingerprint = JSON.stringify(payload);
+    if (requestPayload.current !== fingerprint || !requestId.current) {
+      requestId.current = window.crypto.randomUUID();
+      requestPayload.current = fingerprint;
+    }
+    submissionPending.current = true;
+    setIsSubmitting(true);
+    setSubmitError("");
 
     try {
-      setIsSubmitting(true);
-      const isErpDemo = demoType === "erp";
-      const endpoint = isErpDemo ? "/api/erp-demo" : "/api/enquire-now";
-      const payload = isErpDemo
-        ? demoPayload
-        : {
-            name: demoPayload.name,
-            email: demoPayload.email,
-            phone: demoPayload.phone,
-            company: demoPayload.companyWebsite,
-            solution: "Software Platforms",
-            service:
-              demoType === "hospitality"
-                ? "Hospitality Management Software Demo"
-                : demoType
-                  ? `${demoType.toUpperCase()} Software Demo`
-                  : "Software Platform Demo",
-            message: [
-              `Industry: ${demoPayload.industry}`,
-              `Company size: ${demoPayload.companySize}`,
-              `Preferred demo language: ${demoPayload.preferredLanguage}`,
-              `How they heard about BrainADZ: ${demoPayload.source || "Not provided"}`,
-              "",
-              "Requirements:",
-              demoPayload.requirements,
-            ].join("\n"),
-            pageUrl: window.location.href,
-          };
-
-      const response = await fetch(getApiUrl(endpoint), {
+      const response = await fetch(getApiUrl("/api/demo-request"), {
         method: "POST",
+        cache: "no-store",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          requestId: requestId.current,
+          ...payload,
+        }),
       });
       const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message || "Failed to submit the demo request.");
+      if (!response.ok || !data.success) {
+        throw new Error(
+          data.message ||
+            "Unable to submit your demo request. Please try again.",
+        );
       }
 
       form.reset();
-      setCaptchaValue("");
+      requestId.current = null;
       onClose();
-      window.location.assign(
-        isErpDemo ? data.redirectUrl || demoHref : demoHref,
-      );
+      window.location.assign("/thank-you");
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
-          : "Failed to submit the demo request. Please try again.",
+          : "Unable to submit your demo request. Please try again.",
       );
     } finally {
+      submissionPending.current = false;
       setIsSubmitting(false);
     }
   };
@@ -286,7 +254,7 @@ export default function DemoForm({
             >
               {embedded && demoType === "erp"
                 ? "Tell us about your business to explore the ERP demo."
-                : "Fill this registration form and continue to our demo library."}
+                : "Fill in your details. We will email your demo access to you."}
             </p>
           </div>
 
@@ -313,6 +281,8 @@ export default function DemoForm({
               <input
                 id={`${formId}-demo-full-name`}
                 name="name"
+                autoComplete="name"
+                maxLength={100}
                 type="text"
                 required
                 placeholder="Full name"
@@ -323,9 +293,9 @@ export default function DemoForm({
             <div className="relative">
               <label
                 className="sr-only"
-                htmlFor={`${formId}-demo-company-website`}
+                htmlFor={`${formId}-demo-company-name`}
               >
-                Company website
+                Company name
               </label>
               <BriefcaseBusiness
                 className={iconClass}
@@ -333,11 +303,13 @@ export default function DemoForm({
                 strokeWidth={1.8}
               />
               <input
-                id={`${formId}-demo-company-website`}
-                name="companyWebsite"
+                id={`${formId}-demo-company-name`}
+                name="companyName"
+                autoComplete="organization"
+                maxLength={200}
                 type="text"
                 required
-                placeholder="Company website"
+                placeholder="Company name"
                 className={fieldClass}
               />
             </div>
@@ -357,6 +329,8 @@ export default function DemoForm({
               <input
                 id={`${formId}-demo-work-email`}
                 name="email"
+                autoComplete="email"
+                maxLength={254}
                 type="email"
                 required
                 placeholder="Work email"
@@ -379,6 +353,8 @@ export default function DemoForm({
               <input
                 id={`${formId}-demo-phone-number`}
                 name="phone"
+                autoComplete="tel"
+                maxLength={30}
                 type="tel"
                 required
                 placeholder="Phone number"
@@ -386,29 +362,7 @@ export default function DemoForm({
               />
             </div>
 
-            <div className="relative">
-              <label
-                className="sr-only"
-                htmlFor={`${formId}-demo-industry`}
-              >
-                Industry
-              </label>
-              <Building2
-                className={iconClass}
-                size={19}
-                strokeWidth={1.8}
-              />
-              <input
-                id={`${formId}-demo-industry`}
-                name="industry"
-                type="text"
-                required
-                placeholder="Industry"
-                className={fieldClass}
-              />
-            </div>
-
-            <div className="relative">
+            <div className="relative md:col-span-2">
               <label
                 className="sr-only"
                 htmlFor={`${formId}-demo-company-size`}
@@ -453,112 +407,12 @@ export default function DemoForm({
               <textarea
                 id={`${formId}-demo-requirements`}
                 name="requirements"
+                maxLength={4000}
                 rows={embedded ? 3 : 4}
                 required
                 placeholder="Describe your requirements"
                 className="w-full resize-none rounded-[10px] border border-[#d4deeb] bg-white px-4 py-3.5 pl-11 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
               />
-            </div>
-
-            <div className="relative">
-              <label
-                className="sr-only"
-                htmlFor={`${formId}-demo-language`}
-              >
-                Preferred demo language
-              </label>
-              <Languages
-                className={iconClass}
-                size={19}
-                strokeWidth={1.8}
-              />
-              <select
-                id={`${formId}-demo-language`}
-                name="preferredLanguage"
-                required
-                className={`${selectClass} pl-11`}
-              >
-                <option value="">Preferred demo language</option>
-                {demoLanguages.map((language) => (
-                  <option
-                    key={language}
-                    value={language}
-                  >
-                    {language}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown
-                className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#9aa3af]"
-                size={20}
-                strokeWidth={1.8}
-              />
-            </div>
-
-            <div className="relative">
-              <label
-                className="sr-only"
-                htmlFor={`${formId}-demo-source`}
-              >
-                How did you hear about BrainADZ?
-              </label>
-              <HelpCircle
-                className={iconClass}
-                size={19}
-                strokeWidth={1.8}
-              />
-              <input
-                id={`${formId}-demo-source`}
-                name="source"
-                type="text"
-                placeholder="How did you hear about BrainADZ?"
-                className={fieldClass}
-              />
-            </div>
-
-            <div className="md:col-span-2">
-              <div className="grid gap-3 sm:grid-cols-[160px_1fr] sm:items-center">
-                <div className="flex h-12.5 items-center justify-between rounded-[10px] border border-[#d4deeb] bg-[#f5f8fd] px-4">
-                  <span className="font-mono text-[22px] font-semibold tracking-[0.22em] text-[#2f4a82]">
-                    {captchaCode}
-                  </span>
-                  <button
-                    type="button"
-                    aria-label="Refresh captcha"
-                    onClick={refreshCaptcha}
-                    className="flex h-8 w-8 items-center justify-center rounded-full text-[#193175] transition hover:bg-[#e6efff]"
-                  >
-                    <RotateCw size={18} />
-                  </button>
-                </div>
-
-                <div>
-                  <label
-                    className="sr-only"
-                    htmlFor={`${formId}-demo-captcha`}
-                  >
-                    Enter the captcha
-                  </label>
-                  <input
-                    id={`${formId}-demo-captcha`}
-                    type="text"
-                    required
-                    value={captchaValue}
-                    onChange={(event) => {
-                      setCaptchaValue(event.target.value);
-                      setCaptchaError("");
-                    }}
-                    placeholder="Enter the captcha"
-                    className="h-12.5 w-full rounded-[10px] border border-[#d4deeb] bg-white px-4 text-[14px] font-light uppercase text-[#243247] outline-none transition placeholder:normal-case placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
-                  />
-                </div>
-              </div>
-
-              {captchaError && (
-                <p className="mt-2 text-[13px] font-light text-red-600">
-                  {captchaError}
-                </p>
-              )}
             </div>
 
             <button
@@ -571,7 +425,10 @@ export default function DemoForm({
             </button>
 
             {submitError && (
-              <p className="text-center text-[13px] text-red-600 md:col-span-2">
+              <p
+                role="alert"
+                className="text-center text-[13px] text-red-600 md:col-span-2"
+              >
                 {submitError}
               </p>
             )}
