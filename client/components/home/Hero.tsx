@@ -35,7 +35,7 @@ export default function Hero() {
         playsInline
         preload="auto"
       >
-        <source src="/hero/hero_video.mp4" type="video/mp4" />
+        <source src="/hero/Hero.webm" type="video/webm" />
       </video>
 
       {/* LIGHT MAIN OVERLAY */}
