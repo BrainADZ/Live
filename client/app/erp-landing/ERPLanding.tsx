@@ -2,7 +2,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import DemoForm from "@/components/DemoForm";
 import ERPFeatures from "./ERPFeatures";
 import ERPAutomation from "./ERPAutomation";
@@ -18,13 +17,16 @@ export default function ERPLanding() {
   const [demoOpen, setDemoOpen] = useState(false);
 
   return (
-    <main className={styles.page}>
+    <main
+      id="erp-landing"
+      className={styles.page}
+    >
       <header className={hero.header}>
         <div className={hero.headerInner}>
-          <Link
-            href="/"
+          <a
+            href="#erp-landing"
             className={hero.brand}
-            aria-label="BrainADZ Live home"
+            aria-label="Back to the ERP landing page top"
           >
             <img
               src="/logos/logo--22.png"
@@ -33,7 +35,7 @@ export default function ERPLanding() {
               height="58"
             />
             <span>ERP</span>
-          </Link>
+          </a>
         </div>
       </header>
       <section
@@ -64,7 +66,7 @@ export default function ERPLanding() {
                 isOpen
                 embedded
                 demoType="erp"
-                demoHref="https://erp.brainadzlive.in/"
+                successHref="/thank-you?from=smart-erp"
                 onClose={() => {}}
               />
             </div>
@@ -94,7 +96,7 @@ export default function ERPLanding() {
         isOpen={demoOpen}
         onClose={() => setDemoOpen(false)}
         demoType="erp"
-        demoHref="https://erp.brainadzlive.in/"
+        successHref="/thank-you?from=smart-erp"
       />
     </main>
   );

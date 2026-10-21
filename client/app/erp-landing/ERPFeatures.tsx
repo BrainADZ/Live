@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import {
   CheckCircle2,
   ChartNoAxesCombined,
@@ -340,10 +339,10 @@ export default function ERPFeatures({
       >
         <header className={styles.header}>
           <div className={styles.headerInner}>
-            <Link
-              href="/"
+            <a
+              href="#erp-landing"
               className={styles.brand}
-              aria-label="BrainADZ Live home"
+              aria-label="Back to the ERP landing page top"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -353,7 +352,7 @@ export default function ERPFeatures({
                 height="58"
               />
               <span>ERP</span>
-            </Link>
+            </a>
             <button
               type="button"
               className={styles.demoButton}

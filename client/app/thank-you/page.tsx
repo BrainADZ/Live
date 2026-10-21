@@ -8,7 +8,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/thank-you" },
 };
 
-export default function ThankYouPage() {
+export default async function ThankYouPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ from?: string | string[] }>;
+}) {
+  const isErpLanding = (await searchParams).from === "smart-erp";
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#f5f7fc] px-5 py-14">
       <section className="w-full max-w-2xl rounded-3xl border border-[#dfe5ef] bg-white px-6 py-12 text-center shadow-sm md:px-14">
@@ -44,17 +49,19 @@ export default function ThankYouPage() {
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-5">
           <Link
-            href="/"
+            href={isErpLanding ? "/smart-erp#request-demo" : "/"}
             className="rounded-full bg-[#193175] px-7 py-3 text-sm font-semibold text-white"
           >
-            Back to home
+            {isErpLanding ? "Back to ERP" : "Back to home"}
           </Link>
-          <Link
-            href="/contact-us"
-            className="text-sm font-semibold text-[#193175] underline underline-offset-4"
-          >
-            Contact our team
-          </Link>
+          {!isErpLanding && (
+            <Link
+              href="/contact-us"
+              className="text-sm font-semibold text-[#193175] underline underline-offset-4"
+            >
+              Contact our team
+            </Link>
+          )}
         </div>
       </section>
     </main>

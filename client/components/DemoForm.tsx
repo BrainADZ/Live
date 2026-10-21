@@ -20,6 +20,7 @@ type DemoFormProps = {
   onClose: () => void;
   demoHref?: string;
   demoType?: "crm" | "erp" | "pos" | "hospitality";
+  successHref?: "/thank-you" | "/thank-you?from=smart-erp";
   embedded?: boolean;
 };
 
@@ -35,6 +36,7 @@ export default function DemoForm({
   isOpen,
   onClose,
   demoType,
+  successHref = "/thank-you",
   embedded = false,
 }: DemoFormProps) {
   const formId = useId();
@@ -102,7 +104,7 @@ export default function DemoForm({
       form.reset();
       requestId.current = null;
       onClose();
-      window.location.assign("/thank-you");
+      window.location.assign(successHref);
     } catch (error) {
       setSubmitError(
         error instanceof Error
