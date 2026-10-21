@@ -3,7 +3,9 @@
 Pixel ID: `1114302264165671` (a public identifier, not a secret).
 
 - The base script is placed in the head for `/smart-erp` and
-  `/thank-you?from=smart-erp`. The supplied noscript PageView image is in the body.
+  `/smart-erp/thank-you`. The supplied noscript PageView image is in the body.
+- Both ERP landing demo forms redirect to `/smart-erp/thank-you` after success.
+  The old `/thank-you?from=smart-erp` URL redirects to this dedicated page.
 - A client component also supports entering the landing page through Next.js
   navigation, when the existing root layout is reused.
 - Each visit sends `PageView`. The form marks a pending conversion only after

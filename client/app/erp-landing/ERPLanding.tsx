@@ -68,7 +68,7 @@ export default function ERPLanding() {
                 isOpen
                 embedded
                 demoType="erp"
-                successHref="/thank-you?from=smart-erp"
+                successHref="/smart-erp/thank-you"
                 onClose={() => {}}
               />
             </div>
@@ -98,7 +98,7 @@ export default function ERPLanding() {
         isOpen={demoOpen}
         onClose={() => setDemoOpen(false)}
         demoType="erp"
-        successHref="/thank-you?from=smart-erp"
+        successHref="/smart-erp/thank-you"
       />
     </main>
   );

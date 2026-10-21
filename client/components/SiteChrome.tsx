@@ -11,6 +11,7 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname()?.replace(/\/$/, "");
   const isLanding =
     pathname === "/thank-you" ||
+    pathname === "/smart-erp/thank-you" ||
     pathname === "/smart-erp" ||
     pathname === "/erp-demo" ||
     pathname === "/erp-landing" ||

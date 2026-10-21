@@ -21,7 +21,7 @@ type DemoFormProps = {
   onClose: () => void;
   demoHref?: string;
   demoType?: "crm" | "erp" | "pos" | "hospitality";
-  successHref?: "/thank-you" | "/thank-you?from=smart-erp";
+  successHref?: "/thank-you" | "/smart-erp/thank-you";
   embedded?: boolean;
 };
 
@@ -102,7 +102,7 @@ export default function DemoForm({
         );
       }
 
-      if (successHref === "/thank-you?from=smart-erp") {
+      if (successHref === "/smart-erp/thank-you") {
         prepareErpDemoLead(data.requestId || requestId.current);
       }
       form.reset();
