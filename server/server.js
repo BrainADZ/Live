@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const enquiryRoutes = require("./routes/enquiryRoutes");
+const { startLiveEnquiryRetries } = require("./service/liveEnquiryService");
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", enquiryRoutes);
+startLiveEnquiryRetries();
 
 const PORT = process.env.PORT || 5000;
 

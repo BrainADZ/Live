@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/data/enquiry-outbox/
 
 # next.js
 /.next/

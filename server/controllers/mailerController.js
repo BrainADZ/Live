@@ -1,5 +1,9 @@
 const { sendMail } = require("../service/mailerService");
 const crypto = require("crypto");
+const {
+  enqueueLiveEnquiry,
+  deliverQueuedLiveEnquiry,
+} = require("../service/liveEnquiryService");
 
 // Stops a double-click, an accidental refresh, or a client retry from
 // creating another email for the same enquiry. This process is single-server,
@@ -15,8 +19,8 @@ const getEnquiryFingerprint = (values) =>
 
 const clearExpiredEnquiries = () => {
   const now = Date.now();
-  for (const [fingerprint, createdAt] of recentEnquiries) {
-    if (now - createdAt > DUPLICATE_ENQUIRY_WINDOW_MS) {
+  for (const [fingerprint, entry] of recentEnquiries) {
+    if (!entry.inFlight && now - entry.createdAt > DUPLICATE_ENQUIRY_WINDOW_MS) {
       recentEnquiries.delete(fingerprint);
     }
   }
@@ -246,6 +250,15 @@ const createDetailRow = ({
 
 const sendEnquireNow = async (req, res) => {
   let enquiryFingerprint;
+  let enquiryReservation;
+  res.set("Cache-Control", "no-store");
+  const respond = (status, body) => {
+    if (enquiryReservation) {
+      enquiryReservation.inFlight = null;
+      enquiryReservation.resolve({ status, body });
+    }
+    return res.status(status).json(body);
+  };
 
   try {
     const {
@@ -341,16 +354,40 @@ const sendEnquireNow = async (req, res) => {
     ]);
 
     clearExpiredEnquiries();
-    if (recentEnquiries.has(enquiryFingerprint)) {
+    const existing = recentEnquiries.get(enquiryFingerprint);
+    if (existing?.inFlight) {
+      const result = await existing.inFlight;
+      return res.status(result.status).json(result.body);
+    }
+    if (existing?.emailSent) {
       return res.status(200).json({
         success: true,
         message: "This enquiry was already submitted.",
       });
     }
+    enquiryReservation = existing || {
+      requestId: crypto.randomUUID(),
+      createdAt: Date.now(),
+      emailSent: false,
+    };
+    enquiryReservation.inFlight = new Promise((resolve) => {
+      enquiryReservation.resolve = resolve;
+    });
+    recentEnquiries.set(enquiryFingerprint, enquiryReservation);
 
-    // Reserve the fingerprint before sending so two simultaneous requests
-    // cannot each send an email.
-    recentEnquiries.set(enquiryFingerprint, Date.now());
+    // Persist the CRM copy before sending email so a CRM outage cannot lose it.
+    await enqueueLiveEnquiry({
+      requestId: enquiryReservation.requestId,
+      submittedAt: new Date(enquiryReservation.createdAt).toISOString(),
+      name: String(name).trim().slice(0, 160),
+      email: rawEmail.toLowerCase(),
+      phone: `+91 ${normalizedPhone}`,
+      company: String(company || "").trim().slice(0, 200),
+      serviceCategory: String(solution || "").trim().slice(0, 160),
+      service: String(service || "").trim().slice(0, 240),
+      message: String(message || "").trim().slice(0, 10000),
+      pageUrl: hasValidPageUrl ? rawPageUrl.slice(0, 2048) : "",
+    });
 
     /* =====================================================
        SUBMITTED DATE & TIME
@@ -381,7 +418,7 @@ const sendEnquireNow = async (req, res) => {
         "Both ENQUIRY_EMAIL_1 and ENQUIRY_EMAIL_2 must be configured in .env"
       );
 
-      return res.status(500).json({
+      return respond(500, {
         success: false,
         message: "Enquiry email recipients are not configured properly.",
       });
@@ -963,23 +1000,30 @@ const sendEnquireNow = async (req, res) => {
        SUCCESS RESPONSE
     ===================================================== */
 
-    return res.status(200).json({
+    enquiryReservation.emailSent = true;
+    const crmDelivery = await deliverQueuedLiveEnquiry(enquiryReservation.requestId)
+      .catch((error) => {
+        console.error("Live enquiry CRM delivery deferred", {
+          requestId: enquiryReservation.requestId,
+          code: error.code || "OUTBOX_ERROR",
+        });
+        return { queued: true };
+      });
+    return respond(200, {
       success: true,
       message: "Enquiry submitted successfully.",
+      crmQueued: crmDelivery.queued === true,
     });
 
   } catch (error) {
 
-    if (enquiryFingerprint) {
-      recentEnquiries.delete(enquiryFingerprint);
-    }
 
     console.error(
       "Enquire now mail error:",
       error
     );
 
-    return res.status(500).json({
+    return respond(500, {
       success: false,
       message: "Failed to send enquiry.",
     });
