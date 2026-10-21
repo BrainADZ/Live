@@ -19,6 +19,11 @@ export function proxy(request: NextRequest) {
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-canonical-path", request.nextUrl.pathname);
+  const isErpPixelPage =
+    request.nextUrl.pathname === "/smart-erp" ||
+    (request.nextUrl.pathname === "/thank-you" &&
+      request.nextUrl.searchParams.get("from") === "smart-erp");
+  requestHeaders.set("x-erp-pixel-page", isErpPixelPage ? "1" : "0");
 
   const response = NextResponse.next({ request: { headers: requestHeaders } });
 

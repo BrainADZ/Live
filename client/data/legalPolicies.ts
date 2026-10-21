@@ -127,6 +127,7 @@ export const privacySections: PolicySection[] = [
     id: "cookies",
     title: "Cookies and external services",
     paragraphs: [
+      "The ERP demo landing page and its thank-you page use Meta Pixel to measure page visits and successful demo requests for advertising attribution. Our Lead event sends a demo label and a random request reference, without the form's name, email, phone, company details, requirements or ERP password. Meta may process browser and cookie information through its service; browser privacy settings and advertising blockers can limit this measurement.",
       "Our hosting infrastructure and any external services you access may use cookies or similar technologies. You can control cookies through your browser settings, although blocking them may affect features provided by those services.",
       "This website's enquiry forms collect the details you enter. This policy does not treat visiting the website as consent to optional advertising or analytics tracking.",
     ],

@@ -3,6 +3,7 @@
 
 import { type FormEvent, useEffect, useId, useRef, useState } from "react";
 import { getApiUrl } from "@/lib/api";
+import { prepareErpDemoLead } from "@/lib/metaPixel";
 import {
   BriefcaseBusiness,
   CheckCircle2,
@@ -101,6 +102,9 @@ export default function DemoForm({
         );
       }
 
+      if (successHref === "/thank-you?from=smart-erp") {
+        prepareErpDemoLead(data.requestId || requestId.current);
+      }
       form.reset();
       requestId.current = null;
       onClose();

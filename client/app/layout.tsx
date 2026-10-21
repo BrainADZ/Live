@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "aos/dist/aos.css";
 import "./globals.css";
 
 import SiteChrome from "@/components/SiteChrome";
 import AosProvider from "@/components/AosProvider";
+import {
+  META_PIXEL_BASE_CODE,
+  META_PIXEL_ID,
+  META_PIXEL_SCRIPT_ID,
+} from "@/lib/metaPixel";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.com";
@@ -285,11 +291,12 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isErpPixelPage = (await headers()).get("x-erp-pixel-page") === "1";
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -315,7 +322,29 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
+      <head>
+        {isErpPixelPage && (
+          <Script
+            id={META_PIXEL_SCRIPT_ID}
+            strategy="beforeInteractive"
+          >
+            {META_PIXEL_BASE_CODE}
+          </Script>
+        )}
+      </head>
       <body>
+        {isErpPixelPage && (
+          <noscript>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              height="1"
+              width="1"
+              style={{ display: "none" }}
+              src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+              alt=""
+            />
+          </noscript>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

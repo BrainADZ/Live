@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, Mail } from "lucide-react";
+import ErpMetaPixel from "@/components/ErpMetaPixel";
 
 export const metadata: Metadata = {
   title: "Thank You for Requesting a Demo",
@@ -16,6 +17,7 @@ export default async function ThankYouPage({
   const isErpLanding = (await searchParams).from === "smart-erp";
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#f5f7fc] px-5 py-14">
+      {isErpLanding && <ErpMetaPixel thankYou />}
       <section className="w-full max-w-2xl rounded-3xl border border-[#dfe5ef] bg-white px-6 py-12 text-center shadow-sm md:px-14">
         <CheckCircle2
           className="mx-auto mb-6 text-[#193175]"

@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import DemoForm from "@/components/DemoForm";
+import ErpMetaPixel from "@/components/ErpMetaPixel";
 import ERPFeatures from "./ERPFeatures";
 import ERPAutomation from "./ERPAutomation";
 import ERPInsights from "./ERPInsights";
@@ -21,6 +22,7 @@ export default function ERPLanding() {
       id="erp-landing"
       className={styles.page}
     >
+      <ErpMetaPixel />
       <header className={hero.header}>
         <div className={hero.headerInner}>
           <a
