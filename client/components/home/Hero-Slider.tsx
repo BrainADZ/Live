@@ -22,7 +22,7 @@ export default function HeroSlider() {
 
   return (
     <>
-    <section className="relative aspect-[2/1] w-full overflow-hidden bg-black text-white md:aspect-auto md:h-[min(90vh,920px)]">
+    <section className="relative aspect-2/1 w-full overflow-hidden bg-black text-white md:aspect-auto md:h-[min(90vh,920px)]">
       <div className="absolute inset-0">
         <video
           className="absolute inset-0 h-full w-full object-cover"
