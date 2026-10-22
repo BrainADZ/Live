@@ -4,8 +4,7 @@ import AboutSection from "@/components/home/About";
 import BlogSection from "@/components/home/Blog";
 import BrandCarousel from "@/components/home/BrandCarousel";
 import CtaSection from "@/components/home/CTA";
-import Hero from "@/components/home/Hero";
-//import HeroSlider from "@/components/home/Hero-Slider";
+import HeroSlider from "@/components/home/Hero-Slider";
 import IndustriesSection from "@/components/home/Industries";
 import InsideBadzSection from "@/components/home/InsideBadz";
 import NewsSection from "@/components/home/News";
@@ -23,7 +22,7 @@ export default async function Home() {
   const { docs } = await contentList(() => getBlogs(3));
   return (
     <main>
-      <Hero />
+      <HeroSlider />
       <AboutSection />
       <CtaSection />
       <ServiceSection />

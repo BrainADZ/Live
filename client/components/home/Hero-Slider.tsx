@@ -1,9 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import PopupForm from "@/components/PopupForm";
-import { ArrowRight } from "lucide-react";
-
 /* eslint-disable @next/next/no-img-element */
 
 const awards = [
@@ -21,102 +17,31 @@ const awards = [
   },
 ];
 
-const heroSlides = [
-  {
-    src: "/hero/Live Banner.jpg",
-    alt: "BrainADZ Live digital systems showcase",
-    heading: "",
-    description: "",
-  },
-  {
-    src: "/hero/Live Banner 2.jpg",
-    alt: "BrainADZ Live software and technology solutions",
-    heading: "Building Smarter Digital Systems for Modern Businesses",
-    description:
-      "BrainADZ Live builds secure, scalable digital ecosystems by combining software engineering, intelligent platforms, cloud capabilities, and advanced digital signage solutions to help businesses modernize operations and create connected experiences.",
-  },
-  {
-    src: "/hero/Live Banner 3.jpg",
-    alt: "BrainADZ Live digital signage and business solutions",
-    heading: "Building Smarter Digital Systems for Modern Businesses",
-    description:
-      "BrainADZ Live builds secure, scalable digital ecosystems by combining software engineering, intelligent platforms, cloud capabilities, and advanced digital signage solutions to help businesses modernize operations and create connected experiences.",
-  },
-];
-
-export default function Hero() {
+export default function HeroSlider() {
   const repeatedAwards = [...awards, ...awards];
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const currentSlide = heroSlides[activeSlide];
-  const hasContent = Boolean(currentSlide.heading);
-
-  useEffect(() => {
-    const slideTimer = window.setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 4500);
-
-    return () => window.clearInterval(slideTimer);
-  }, []);
-
   return (
-    <section className="relative min-h-[calc(100vh-72px)] overflow-hidden bg-black text-white">
-      {/* BACKGROUND IMAGE SLIDER */}
+    <>
+    <section className="relative aspect-video w-full overflow-hidden bg-black text-white">
       <div className="absolute inset-0">
-        {heroSlides.map((slide, index) => (
-          <img
-            key={slide.src}
-            src={slide.src}
-            alt={slide.alt}
-            decoding="async"
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
-              activeSlide === index ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+        <video
+          className="absolute inset-0 h-full w-full object-contain"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label="BrainADZ Live banner video"
+        >
+          <source src="/hero/Hero.webm" type="video/webm" />
+        </video>
       </div>
 
       {/* MAIN CONTENT WRAPPER */}
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-72px)] w-full max-w-[1800px] items-end justify-between gap-10 px-6 pb-27 md:px-10">
-        {/* LEFT CONTENT */}
-        <div className="w-full max-w-132.5">
-          <div
-            className={`transition-all duration-700 ease-in-out ${
-              hasContent
-                ? "translate-y-0 opacity-100"
-                : "pointer-events-none translate-y-5 opacity-0"
-            }`}
-          >
-            {hasContent && (
-              <>
-                <h1 className="text-[38px] font-semibold leading-[1.16] tracking-[-1.2px] text-white sm:text-[40px] md:text-[48px] lg:text-[56px]">
-                  {currentSlide.heading}
-                </h1>
-
-                <p className="mt-7 max-w-190 text-[14px] font-normal leading-[1.65] tracking-[-0.1px] text-white/90 md:text-[16px]">
-                  {currentSlide.description}
-                </p>
-
-                <div className="mt-8.5">
-                  <button
-                    type="button"
-                    onClick={() => setIsPopupOpen(true)}
-                    className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
-                  >
-                    Consult Our Strategy Team
-                    <span className="text-[20px] leading-none"><ArrowRight/></span>
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-
+      <div className="absolute inset-0 z-10 mx-auto hidden w-full max-w-[1800px] items-end justify-end px-10 pb-10 md:flex lg:pb-20">
         {/* RIGHT CONTAINER - AWARDS CAROUSEL */}
         <div
-          className="hidden w-175 shrink-0 overflow-hidden md:block"
+          className="w-full max-w-175 overflow-hidden"
           data-aos="fade-left"
           data-aos-delay="150"
           data-aos-duration="520"
@@ -141,9 +66,11 @@ export default function Hero() {
         </div>
       </div>
 
+    </section>
+
       {/* MOBILE AWARDS CAROUSEL */}
       <div
-        className="absolute bottom-7 left-0 right-0 z-20 block overflow-hidden px-5 md:hidden"
+        className="overflow-hidden bg-white px-5 py-5 md:hidden"
         data-aos="fade-up"
         data-aos-delay="150"
       >
@@ -151,7 +78,7 @@ export default function Hero() {
           {repeatedAwards.map((award, index) => (
             <div
               key={`mobile-${award.alt}-${index}`}
-              className="flex h-19 w-40 shrink-0 items-center justify-center rounded-xl border border-white/15 bg-black/15 px-4 backdrop-blur-xs"
+              className="flex h-19 w-40 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white px-4 shadow-sm"
             >
               <img
                 src={award.src}
@@ -192,10 +119,6 @@ export default function Hero() {
         }
       `}</style>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
-    </section>
+    </>
   );
 }

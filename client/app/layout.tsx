@@ -332,7 +332,8 @@ export default async function RootLayout({
           </Script>
         )}
       </head>
-      <body>
+      {/* Browser extensions can add attributes to body before hydration. */}
+      <body suppressHydrationWarning>
         {isErpPixelPage && (
           <noscript>
             {/* eslint-disable-next-line @next/next/no-img-element */}
