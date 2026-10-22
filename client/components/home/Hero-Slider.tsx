@@ -22,7 +22,7 @@ export default function HeroSlider() {
 
   return (
     <>
-    <section className="relative aspect-[2/1] w-full overflow-hidden bg-black text-white">
+    <section className="relative aspect-[2/1] w-full overflow-hidden bg-black text-white md:aspect-auto md:h-[min(65vh,680px)]">
       <div className="absolute inset-0">
         <video
           className="absolute inset-0 h-full w-full object-cover"
@@ -38,7 +38,7 @@ export default function HeroSlider() {
       </div>
 
       {/* MAIN CONTENT WRAPPER */}
-      <div className="absolute inset-0 z-10 mx-auto hidden w-full max-w-[1800px] items-end justify-end px-10 pb-10 md:flex lg:pb-20">
+      <div className="site-container absolute inset-0 z-10 hidden items-end justify-end pb-10 md:flex lg:pb-16">
         {/* RIGHT CONTAINER - AWARDS CAROUSEL */}
         <div
           className="w-full max-w-175 overflow-hidden"
@@ -70,7 +70,7 @@ export default function HeroSlider() {
 
       {/* MOBILE AWARDS CAROUSEL */}
       <div
-        className="overflow-hidden bg-white px-5 py-5 md:hidden"
+        className="overflow-hidden bg-white px-2 py-5 md:hidden"
         data-aos="fade-up"
         data-aos-delay="150"
       >

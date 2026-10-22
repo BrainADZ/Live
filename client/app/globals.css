@@ -4,21 +4,19 @@
    Apply to content wrappers; heroes retain their own height and inset layout. */
 :root {
   --section-space: 1.5rem;
-  --site-content-width: 1800px;
-  --site-gutter: 1.25rem;
+  --site-content-width: 1900px;
+  --site-gutter: 8px;
 }
 
 @media (min-width: 768px) {
   :root {
     --section-space: 2rem;
-    --site-gutter: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
     --section-space: 2.5rem;
-    --site-gutter: 2.5rem;
   }
 }
 
@@ -31,6 +29,11 @@
   max-width: var(--site-content-width);
   margin-inline: auto;
   padding-inline: var(--site-gutter);
+}
+
+/* Existing wide wrappers share the same cap while pages migrate to site-container. */
+:is(main, header, footer) :is([class~="max-w-450"], [class~="max-w-[1800px]"]) {
+  max-width: var(--site-content-width);
 }
 
 @theme {
@@ -69,7 +72,7 @@ body {
    Preserve its proportions, soften repeat seams, and leave the text area light. */
 body > main:not([class]),
 body > main.bg-white {
-  --pattern-width: clamp(1200px, 100vw, 1922px);
+  --pattern-width: 100vw;
   --pattern-height: calc(var(--pattern-width) * 1082 / 1922);
   --pattern-wash: rgb(255 255 255 / 38%);
   background-color: #fff;
