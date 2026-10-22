@@ -41,10 +41,9 @@ export default async function Home() {
         <BlogSection blogs={docs.map(blogCard)} />
 
         {/* DIVIDER */}
-        <div
-          className="mx-auto h-px w-full max-w-[1800px] bg-[#d0d0d0] px-4 md:px-12"
-          data-aos="fade-up"
-        />
+        <div className="site-container" data-aos="fade-up">
+          <div className="h-px bg-[#d0d0d0]" />
+        </div>
         <NewsSection />
       </div>
     </main>

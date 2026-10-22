@@ -63,7 +63,7 @@ export default function OurSoftwareSection() {
   return (
     <>
       <section className="section-spacing bg-white px-5 md:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1720px]">
+        <div className="mx-auto max-w-[1800px]">
           {/* TOP HEADING + DESCRIPTION */}
           <div className="mb-9 grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:items-end">
             <div data-aos="fade-right">

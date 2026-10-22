@@ -370,7 +370,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#e5e5e5] bg-white">
-      <nav className="mx-auto flex h-21 max-w-450 items-center justify-between px-5 md:px-4 lg:px-12">
+      <nav className="site-container flex h-21 items-center justify-between">
         {/* LEFT SIDE */}
         <div className="flex items-center">
           {/* LOGO */}
@@ -662,7 +662,7 @@ export default function Navbar() {
             : "invisible -translate-y-3 opacity-0"
         }`}
       >
-        <div className="mx-auto max-w-450 px-5 py-7 md:px-4 lg:px-12">
+        <div className="site-container py-7">
           <div className="flex items-center justify-between gap-5">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.16em] text-[#193175]">

@@ -22,10 +22,10 @@ export default function HeroSlider() {
 
   return (
     <>
-    <section className="relative aspect-video w-full overflow-hidden bg-black text-white">
+    <section className="relative aspect-[2/1] w-full overflow-hidden bg-black text-white">
       <div className="absolute inset-0">
         <video
-          className="absolute inset-0 h-full w-full object-contain"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop

@@ -38,8 +38,8 @@ const locations = [
 
 export default function LocationsSection() {
   return (
-    <section className="section-spacing lazy-section bg-[#f2f2f2] px-6 text-[#161616] md:px-10 lg:px-12">
-      <div className="mx-auto max-w-450">
+    <section className="section-spacing lazy-section bg-[#f2f2f2] text-[#161616]">
+      <div className="site-container">
         {/* HEADING */}
         <div className="mb-8 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">
           <div data-aos="fade-right">

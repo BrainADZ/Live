@@ -103,7 +103,7 @@ export default function Footer() {
   return (
     <footer className="lazy-section bg-[#f2f2f2] text-[#616161]">
       {/* TOP FOOTER LINKS */}
-      <div className="section-spacing mx-auto max-w-450 px-6 md:px-10 lg:px-12">
+      <div className="site-container section-spacing">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-12">
           {footerColumns.map((column) => {
             const isExpanded = expandedColumns[column.title];
@@ -148,7 +148,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM FOOTER BAR */}
-      <div className="mx-auto flex max-w-450 flex-col gap-4 px-6 pb-7 md:flex-row md:items-center md:justify-between md:px-10 lg:px-12">
+      <div className="site-container flex flex-col gap-4 pb-7 md:flex-row md:items-center md:justify-between">
         <span className="shrink-0 text-[12px] text-[#616161]">
           © BrainADZ Live 2026 | All rights reserved.
         </span>

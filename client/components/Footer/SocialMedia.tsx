@@ -14,8 +14,8 @@ export default function SocialMediaSection() {
   };
 
   return (
-    <section className="section-spacing lazy-section bg-white text-[#161616] max-w-450 mx-auto">
-      <div className="flex w-full items-center justify-between px-12 max-md:flex-col max-md:items-start max-md:gap-8 max-md:px-6">
+    <section className="section-spacing lazy-section bg-white text-[#161616]">
+      <div className="site-container flex items-center justify-between max-md:flex-col max-md:items-start max-md:gap-8">
         {/* LEFT SOCIAL SIDE */}
         <div className="flex items-center gap-4">
           <p className="text-[18px] font-normal leading-none tracking-[-0.3px] text-[#161616]">
