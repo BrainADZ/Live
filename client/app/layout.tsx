@@ -356,6 +356,18 @@ export default async function RootLayout({
         <AosProvider />
 
         <SiteChrome>{children}</SiteChrome>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CNMX598PJH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CNMX598PJH');
+          `}
+        </Script>
       </body>
     </html>
   );
