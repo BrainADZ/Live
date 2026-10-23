@@ -61,6 +61,12 @@ const normalizeDemoRequest = (body = {}) => {
       "INVALID_FIELDS",
     );
   }
+  if (/[0-9]/.test(fields.companyName))
+    throw requestError(
+      400,
+      "Company name cannot contain numbers.",
+      "INVALID_COMPANY_NAME",
+    );
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fields.email))
     throw requestError(
       400,

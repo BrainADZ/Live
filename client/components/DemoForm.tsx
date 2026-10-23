@@ -52,6 +52,16 @@ export default function DemoForm({
     if (submissionPending.current) return;
 
     const form = event.currentTarget;
+    const requiredFields = form.querySelectorAll<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >("input[required], textarea[required], select[required]");
+    for (const field of requiredFields) {
+      if (!field.value.trim()) {
+        field.setCustomValidity("This field is required.");
+        field.reportValidity();
+        return;
+      }
+    }
     const fields = new FormData(form);
     const campaign = new URLSearchParams(window.location.search);
     const payload = {
@@ -266,6 +276,13 @@ export default function DemoForm({
 
           <form
             onSubmit={handleSubmit}
+            onInput={(event) => {
+              if (event.target instanceof HTMLInputElement ||
+                  event.target instanceof HTMLTextAreaElement ||
+                  event.target instanceof HTMLSelectElement) {
+                event.target.setCustomValidity("");
+              }
+            }}
             className={
               embedded
                 ? "mt-5 grid grid-cols-1 gap-3 md:grid-cols-2"
@@ -315,6 +332,8 @@ export default function DemoForm({
                 maxLength={200}
                 type="text"
                 required
+                pattern="[^0-9]*"
+                title="Company name cannot contain numbers."
                 placeholder="Company name"
                 className={fieldClass}
               />
