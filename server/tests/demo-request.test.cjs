@@ -237,6 +237,10 @@ test("demo submission, delivery and retry behavior", async (t) => {
         /cannot contain numbers/,
       );
       assert.throws(
+        () => normalizeDemoRequest(fields({ companyName: "Example१२३" })),
+        /cannot contain numbers/,
+      );
+      assert.throws(
         () => normalizeDemoRequest(fields({ location: " " })),
         /required/,
       );

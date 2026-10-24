@@ -274,6 +274,9 @@ export default function DemoForm({
                 ? "Tell us about your business to explore the ERP demo."
                 : "Fill in your details. We will email your demo access to you."}
             </p>
+            <p className="mt-2 text-[12px] font-medium text-[#193175]">
+              All fields are required. Company name cannot contain numbers.
+            </p>
           </div>
 
           <form
@@ -338,7 +341,7 @@ export default function DemoForm({
                 title="Company name cannot contain numbers."
                 onInput={(event) => {
                   event.currentTarget.value = event.currentTarget.value.replace(
-                    /[0-9]/g,
+                    /\p{N}/gu,
                     "",
                   );
                 }}
