@@ -62,7 +62,7 @@ export default function ERPPreviewCarousel({
   return (
     <div
       ref={sliderRef}
-      className="erp-automation-slider [min-width:0]"
+      className="min-w-0"
       role="region"
       aria-roledescription="carousel"
       aria-label={label}
@@ -82,7 +82,7 @@ export default function ERPPreviewCarousel({
       }}
     >
       <div
-        className="erp-automation-viewport grid overflow-hidden [border-radius:16px] [touch-action:pan-y] max-[760px]:[border-radius:12px]"
+        className="grid touch-pan-y overflow-hidden rounded-2xl max-[760px]:rounded-xl"
         onTouchStart={(event) => {
           touchStart.current = event.touches[0].clientX;
         }}
@@ -104,7 +104,7 @@ export default function ERPPreviewCarousel({
         {slides.map((slide, index) => (
           <div
             key={slide.title}
-            className={`erp-automation-slide [grid-area:1_/_1] [min-width:0] [opacity:0] [visibility:hidden] pointer-events-none [transform:translate3d(20px,_0,_0)] [transition:opacity_420ms_ease,_transform_420ms_ease,_visibility_0s_linear_420ms]! motion-reduce:[transition:none]! motion-reduce:[transition-delay:0s]! ${index === activeIndex ? "erp-automation-active-slide [opacity:1] [visibility:visible] pointer-events-auto [transform:translate3d(0,_0,_0)] [transition-delay:0s]!" : ""}`}
+            className={`col-start-1 row-start-1 min-w-0 ${index === activeIndex ? "visible" : "pointer-events-none invisible"}`}
             role="group"
             aria-roledescription="slide"
             aria-label={`${index + 1} of ${slides.length}: ${slide.title}`}
@@ -116,28 +116,27 @@ export default function ERPPreviewCarousel({
         ))}
       </div>
 
-      <div className="erp-automation-controls relative flex items-center justify-center [min-height:44px] [&_.erp-automation-pause-button]:flex [&_.erp-automation-pause-button]:items-center [&_.erp-automation-pause-button]:justify-center [&_.erp-automation-pause-button]:[width:26px] [&_.erp-automation-pause-button]:[height:32px] [&_.erp-automation-pause-button]:[padding:0] [&_.erp-automation-pause-button]:[border:0] [&_.erp-automation-pause-button]:[background:transparent] [&_.erp-automation-pause-button]:[color:#73777b] [&_.erp-automation-pause-button]:absolute [&_.erp-automation-pause-button]:[right:0]">
-        <div
-          className="erp-automation-dots flex [&_button]:flex [&_button]:items-center [&_button]:justify-center [&_button]:[width:26px] [&_button]:[height:32px] [&_button]:[padding:0] [&_button]:[border:0] [&_button]:[background:transparent] [&_button]:[color:#73777b] [&_span]:[width:10px] [&_span]:[height:10px] [&_span]:rounded-full [&_span]:[background:#bdc0c5]"
-          aria-label="Choose preview"
-        >
+      <div className="relative flex min-h-11 items-center justify-center">
+        <div className="flex" aria-label="Choose preview">
           {slides.map((slide, index) => (
             <button
               key={slide.title}
               type="button"
-              className={index === activeIndex ? "erp-automation-active-dot [&_span]:[background:#656970]" : ""}
+              className="flex h-8 w-6.5 items-center justify-center bg-transparent p-0 text-[#73777b]"
               aria-label={`Show ${slide.title}`}
               aria-pressed={index === activeIndex}
               onClick={() => setActiveIndex(index)}
             >
-              <span />
+              <span
+                className={`size-2.5 rounded-full ${index === activeIndex ? "bg-[#656970]" : "bg-[#bdc0c5]"}`}
+              />
             </button>
           ))}
         </div>
 
         <button
           type="button"
-          className="erp-automation-pause-button"
+          className="absolute right-0 flex h-8 w-6.5 items-center justify-center border-0 bg-transparent p-0 text-[#73777b]"
           aria-label={
             paused ? "Play preview carousel" : "Pause preview carousel"
           }

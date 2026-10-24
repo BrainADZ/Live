@@ -1,0 +1,5 @@
+{
+  "files.associations": {
+    "**/client/app/globals.css": "tailwindcss"
+  }
+}

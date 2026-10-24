@@ -152,10 +152,17 @@ export default function DemoForm({
 
   if (!isOpen) return null;
 
-  const fieldClass =
-    "h-12.5 w-full rounded-[10px] border border-[#d4deeb] bg-white pl-11 pr-4 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]";
-  const selectClass =
-    "h-12.5 w-full appearance-none rounded-[10px] border border-[#d4deeb] bg-white px-4 pr-10 text-[14px] font-light text-[#607089] outline-none transition focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]";
+  const compactErp = embedded && demoType === "erp";
+  const fieldClass = `w-full border bg-white pr-4 pl-11 font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)] ${
+    compactErp
+      ? "h-11 rounded-3xl border-[#d6d6d6] text-[13px]"
+      : "h-12.5 rounded-[10px] border-[#d4deeb] text-sm"
+  }`;
+  const selectClass = `w-full appearance-none border bg-white pr-10 pl-4 font-light text-[#607089] outline-none transition focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)] ${
+    compactErp
+      ? "h-11 rounded-3xl border-[#d6d6d6] text-[13px]"
+      : "h-12.5 rounded-[10px] border-[#d4deeb] text-sm"
+  }`;
   const iconClass =
     "pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#7b8492]";
 
@@ -190,10 +197,7 @@ export default function DemoForm({
             onClick={onClose}
             className="absolute right-4 top-4 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-[#6d6d6d] shadow-[0_12px_30px_rgba(0,0,0,0.12)] transition hover:bg-[#193175] hover:text-white"
           >
-            <X
-              size={24}
-              strokeWidth={2.2}
-            />
+            <X size={24} strokeWidth={2.2} />
           </button>
         )}
 
@@ -229,10 +233,7 @@ export default function DemoForm({
                     key={item}
                     className="flex items-center gap-3 text-white/90"
                   >
-                    <CheckCircle2
-                      size={18}
-                      className="text-[#a9c5ff]"
-                    />
+                    <CheckCircle2 size={18} className="text-[#a9c5ff]" />
                     <span className="text-[14px] font-light">{item}</span>
                   </div>
                 ))}
@@ -282,9 +283,11 @@ export default function DemoForm({
           <form
             onSubmit={handleSubmit}
             onInput={(event) => {
-              if (event.target instanceof HTMLInputElement ||
-                  event.target instanceof HTMLTextAreaElement ||
-                  event.target instanceof HTMLSelectElement) {
+              if (
+                event.target instanceof HTMLInputElement ||
+                event.target instanceof HTMLTextAreaElement ||
+                event.target instanceof HTMLSelectElement
+              ) {
                 event.target.setCustomValidity("");
               }
             }}
@@ -295,17 +298,10 @@ export default function DemoForm({
             }
           >
             <div className="relative">
-              <label
-                className="sr-only"
-                htmlFor={`${formId}-demo-full-name`}
-              >
+              <label className="sr-only" htmlFor={`${formId}-demo-full-name`}>
                 Full name
               </label>
-              <UserRound
-                className={iconClass}
-                size={19}
-                strokeWidth={1.8}
-              />
+              <UserRound className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id={`${formId}-demo-full-name`}
                 name="name"
@@ -351,17 +347,10 @@ export default function DemoForm({
             </div>
 
             <div className="relative">
-              <label
-                className="sr-only"
-                htmlFor={`${formId}-demo-work-email`}
-              >
+              <label className="sr-only" htmlFor={`${formId}-demo-work-email`}>
                 Work email
               </label>
-              <Mail
-                className={iconClass}
-                size={19}
-                strokeWidth={1.8}
-              />
+              <Mail className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id={`${formId}-demo-work-email`}
                 name="email"
@@ -381,11 +370,7 @@ export default function DemoForm({
               >
                 Phone number
               </label>
-              <Phone
-                className={iconClass}
-                size={19}
-                strokeWidth={1.8}
-              />
+              <Phone className={iconClass} size={19} strokeWidth={1.8} />
               <input
                 id={`${formId}-demo-phone-number`}
                 name="phone"
@@ -396,10 +381,9 @@ export default function DemoForm({
                 pattern="[0-9]{7,15}"
                 title="Enter 7 to 15 digits."
                 onInput={(event) => {
-                  event.currentTarget.value = event.currentTarget.value.replace(
-                    /[^0-9]/g,
-                    "",
-                  ).slice(0, 15);
+                  event.currentTarget.value = event.currentTarget.value
+                    .replace(/[^0-9]/g, "")
+                    .slice(0, 15);
                 }}
                 placeholder="Phone number"
                 className={fieldClass}
@@ -408,17 +392,10 @@ export default function DemoForm({
 
             <div className="md:col-span-2">
               <div className="relative">
-                <label
-                  className="sr-only"
-                  htmlFor={`${formId}-demo-location`}
-                >
+                <label className="sr-only" htmlFor={`${formId}-demo-location`}>
                   Location
                 </label>
-                <MapPin
-                  className={iconClass}
-                  size={19}
-                  strokeWidth={1.8}
-                />
+                <MapPin className={iconClass} size={19} strokeWidth={1.8} />
                 <input
                   id={`${formId}-demo-location`}
                   name="location"
@@ -447,10 +424,7 @@ export default function DemoForm({
               >
                 <option value="">Company size</option>
                 {companySizes.map((size) => (
-                  <option
-                    key={size}
-                    value={size}
-                  >
+                  <option key={size} value={size}>
                     {size}
                   </option>
                 ))}
@@ -481,14 +455,14 @@ export default function DemoForm({
                 rows={embedded ? 3 : 4}
                 required
                 placeholder="Describe your requirements"
-                className="w-full resize-none rounded-[10px] border border-[#d4deeb] bg-white px-4 py-3.5 pl-11 text-[14px] font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)]"
+                className={`w-full resize-none border bg-white pr-4 py-3.5 pl-11 font-light text-[#243247] outline-none transition placeholder:text-[#607089] focus:border-[#193175] focus:shadow-[0_0_0_4px_rgba(60,91,155,0.08)] ${compactErp ? "rounded-[18px] border-[#d6d6d6] text-[13px]" : "rounded-[10px] border-[#d4deeb] text-sm"}`}
               />
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex h-12.5 w-full items-center justify-center gap-3 rounded-[10px] bg-[#193175] px-6 text-[14px] font-semibold text-white shadow-[0_16px_34px_rgba(60,91,155,0.25)] transition hover:-translate-y-0.5 hover:bg-[#2f4a82] disabled:cursor-not-allowed disabled:opacity-65 md:col-span-2"
+              className={`inline-flex w-full items-center justify-center gap-3 bg-[#193175] px-6 text-sm font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-65 md:col-span-2 ${compactErp ? "h-12 rounded-[28px] hover:bg-[#26468f]" : "h-12.5 rounded-[10px] shadow-[0_16px_34px_rgba(60,91,155,0.25)] hover:-translate-y-0.5 hover:bg-[#2f4a82]"}`}
             >
               <Send size={18} />
               {isSubmitting ? "Submitting Request..." : "Submit Request"}

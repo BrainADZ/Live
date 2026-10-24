@@ -71,7 +71,7 @@ body {
 /* One continuous canvas keeps the pattern aligned across white sections.
    Preserve its proportions, soften repeat seams, and leave the text area light. */
 body > main:not([class]),
-body > main.bg-white {
+body > main.bg-white:not(#erp-landing) {
   --pattern-width: 100vw;
   --pattern-height: calc(var(--pattern-width) * 1082 / 1922);
   --pattern-wash: rgb(255 255 255 / 38%);
@@ -100,29 +100,29 @@ body > main.bg-white {
 /* White sections reveal the shared canvas; cards, content panels, image
    wrappers, header, footer, and coloured sections retain their own surfaces. */
 body > main:not([class]) section.bg-white,
-body > main.bg-white section.bg-white {
+body > main.bg-white:not(#erp-landing) section.bg-white {
   background-color: transparent;
 }
 
 @media (max-width: 767px) {
   body > main:not([class]),
-  body > main.bg-white {
+  body > main.bg-white:not(#erp-landing) {
     --pattern-wash: rgb(255 255 255 / 56%);
   }
 }
 
 /* Match section gutters while preserving each inner container's own max width. */
-main section:is(.section-spacing, :not([class*=" max-w-"])):is(
+main:not(#erp-landing) section:is(.section-spacing, :not([class*=" max-w-"])):is(
     [class*=" px-"],
     [class^="px-"]
   ),
-main section:not(:is([class*=" px-"], [class^="px-"]))
+main:not(#erp-landing) section:not(:is([class*=" px-"], [class^="px-"]))
   > div.mx-auto:is([class*=" px-"], [class^="px-"]) {
   padding-inline: var(--site-gutter);
 }
 
 /* Padded full-width sections need a narrower inner box to line up with site-container. */
-main section:is([class*=" px-"], [class^="px-"])
+main:not(#erp-landing) section:is([class*=" px-"], [class^="px-"])
   > div.mx-auto:is([class~="max-w-450"], [class~="max-w-[1800px]"]) {
   max-width: calc(var(--site-content-width) - 2 * var(--site-gutter));
 }

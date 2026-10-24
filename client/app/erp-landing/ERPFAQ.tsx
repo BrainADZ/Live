@@ -38,39 +38,48 @@ export default function ERPFAQ() {
 
   return (
     <section
-      className="erp-faq-faq [padding:60px_0_48px] [background:#fff3e0] [color:#171a2d] [&_h2]:[margin:0_auto_72px] [&_h2]:[color:#171a2d] [&_h2]:text-[clamp(32px,3vw,44px)] [&_h2]:font-semibold [&_h2]:[line-height:1.2] [&_h2]:[letter-spacing:-1px] [&_h2]:text-center max-[760px]:[padding:44px_0] max-[760px]:[&_h2]:[margin-bottom:36px] max-[760px]:[&_h2]:[font-size:clamp(29px,_6vw,_36px)] max-[760px]:[&_h2]:[letter-spacing:-0.7px]"
+      className="bg-[#fff3e0] py-11 text-[#171a2d] md:pt-15 md:pb-12"
       id="erp-faq"
       aria-labelledby="erp-faq-heading"
     >
-      <div className="erp-faq-inner [width:min(1070px,_calc(100%_-_64px))] [margin:auto] max-[760px]:[width:calc(100%_-_32px)]">
-        <h2 id="erp-faq-heading">Frequently Asked Questions</h2>
+      <div className="mx-auto w-full max-w-283.5 px-4 md:px-8">
+        <h2
+          className="mx-auto mb-9 text-center text-[clamp(29px,6vw,36px)] leading-[1.2] font-semibold tracking-[-0.7px] md:mb-18 md:text-[clamp(32px,3vw,44px)] md:tracking-[-1px]"
+          id="erp-faq-heading"
+        >
+          Frequently Asked Questions
+        </h2>
 
-        <div className="erp-faq-card [max-width:880px] [margin:auto] [padding:12px_36px_18px] [border-radius:12px] [background:#fff] max-[760px]:[padding:4px_22px_8px]">
+        <div className="mx-auto max-w-220 rounded-xl bg-white px-5.5 pt-1 pb-2 md:px-9 md:pt-3 md:pb-4.5">
           {questions.map(({ question, answer }, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
-                className="erp-faq-item [border-bottom:1px_solid_#e2e2e2] [&:last-child]:[border-bottom:0] [&_h3]:[margin:0] [&_.erp-faq-question]:flex [&_.erp-faq-question]:items-center [&_.erp-faq-question]:justify-between [&_.erp-faq-question]:[gap:24px] [&_.erp-faq-question]:w-full [&_.erp-faq-question]:[min-height:94px] [&_.erp-faq-question]:[padding:27px_0] [&_.erp-faq-question]:[border:0] [&_.erp-faq-question]:[background:transparent] [&_.erp-faq-question]:[color:#080808] [&_.erp-faq-question]:[font-family:inherit] [&_.erp-faq-question]:[font-size:clamp(21px,_2vw,_26px)] [&_.erp-faq-question]:font-normal [&_.erp-faq-question]:leading-[1.4] [&_.erp-faq-question]:text-left max-[760px]:[&_.erp-faq-question]:[min-height:82px] max-[760px]:[&_.erp-faq-question]:[padding:22px_0] max-[760px]:[&_.erp-faq-question]:[gap:16px] max-[760px]:[&_.erp-faq-question]:[font-size:19px]"
+                className="border-b border-[#e2e2e2] last:border-b-0"
                 key={question}
               >
-                <h3>
+                <h3 className="m-0">
                   <button
                     type="button"
-                    className="erp-faq-question [&_svg]:[flex-shrink:0] [&_svg]:[color:#858585] [&_svg]:[stroke-width:1.8] [&:hover_>_span]:[color:#193175] max-[760px]:[&_svg]:[width:18px] max-[760px]:[&_svg]:[height:18px]"
+                    className="group flex min-h-20.5 w-full items-center justify-between gap-4 bg-transparent py-5.5 text-left text-[19px] leading-[1.4] font-normal text-[#080808] md:min-h-23.5 md:gap-6 md:py-6.75 md:text-[clamp(21px,2vw,26px)]"
                     id={`erp-faq-question-${index}`}
                     aria-expanded={isOpen}
                     aria-controls={`erp-faq-answer-${index}`}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
-                    <span>{question}</span>
+                    <span className="group-hover:text-[#193175]">
+                      {question}
+                    </span>
                     {isOpen ? (
                       <Minus
+                        className="size-4.5 shrink-0 stroke-[1.8] text-[#858585] md:size-5"
                         size={20}
                         aria-hidden="true"
                       />
                     ) : (
                       <Plus
+                        className="size-4.5 shrink-0 stroke-[1.8] text-[#858585] md:size-5"
                         size={20}
                         aria-hidden="true"
                       />
@@ -79,13 +88,15 @@ export default function ERPFAQ() {
                 </h3>
 
                 <div
-                  className="erp-faq-answer [padding:0_40px_27px_0] [&_p]:[margin:-12px_0_0] [&_p]:[color:#151515] [&_p]:[font-size:17px] [&_p]:font-normal [&_p]:[line-height:1.65] max-[760px]:[padding:0_0_22px] max-[760px]:[&_p]:[margin-top:-6px] max-[760px]:[&_p]:[font-size:15px]"
+                  className="pb-5.5 md:pr-10 md:pb-6.75"
                   id={`erp-faq-answer-${index}`}
                   role="region"
                   aria-labelledby={`erp-faq-question-${index}`}
                   hidden={!isOpen}
                 >
-                  <p>{answer}</p>
+                  <p className="-mt-1.5 text-[15px] leading-[1.65] font-normal text-[#151515] md:-mt-3 md:text-[17px]">
+                    {answer}
+                  </p>
                 </div>
               </div>
             );

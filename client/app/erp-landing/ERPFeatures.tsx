@@ -32,7 +32,7 @@ const slides = [
   {
     title: "Finance & accounts",
     theme: "finance",
-    themeClass: "erp-features-finance [background:linear-gradient(125deg,_#a8cfff,_#b4d1d6_52%,_#e6d77d)]",
+    themeClass: "bg-[linear-gradient(125deg,#a8cfff,#b4d1d6_52%,#e6d77d)]",
     icon: CircleDollarSign,
     columns: ["Invoice", "Customer", "Amount", "Status"],
     rows: [
@@ -47,7 +47,7 @@ const slides = [
   {
     title: "Inventory & stock",
     theme: "inventory",
-    themeClass: "erp-features-inventory [background:linear-gradient(125deg,_#c7b6ed,_#d2d7f2_50%,_#c5e8d8)]",
+    themeClass: "bg-[linear-gradient(125deg,#c7b6ed,#d2d7f2_50%,#c5e8d8)]",
     icon: Package,
     columns: ["SKU", "Product", "In stock", "Status"],
     rows: [
@@ -62,7 +62,7 @@ const slides = [
   {
     title: "Sales & purchasing",
     theme: "orders",
-    themeClass: "erp-features-orders [background:linear-gradient(125deg,_#a4d8ed,_#bde5df_50%,_#f1d8c3)]",
+    themeClass: "bg-[linear-gradient(125deg,#a4d8ed,#bde5df_50%,#f1d8c3)]",
     icon: ShoppingCart,
     columns: ["Order", "Customer", "Value", "Status"],
     rows: [
@@ -79,41 +79,52 @@ const slides = [
 function WorkspaceSlide({ slide }: { slide: (typeof slides)[number] }) {
   const Icon = slide.icon;
   return (
-    <div className={`erp-features-workspace relative [aspect-ratio:670_/_400] overflow-hidden [padding:64px_0_0_48px] max-[1100px]:[padding:40px_0_0_25px] max-[760px]:[min-height:245px] ${slide.themeClass}`}>
-      <div className="erp-features-workspace-window flex [min-height:350px] [width:calc(100%_+_20px)] [border-radius:12px_0_0] [background:#fff] [box-shadow:0_8px_30px_#14274414]">
+    <div
+      className={`relative aspect-670/400 overflow-hidden pt-16 pr-0 pb-0 pl-12 max-[1100px]:pt-10 max-[1100px]:pr-0 max-[1100px]:pb-0 max-[1100px]:pl-6.25 max-[760px]:min-h-61.25 ${slide.themeClass}`}
+    >
+      <div className="flex min-h-87.5 w-[calc(100%+20px)] rounded-[12px_0_0] bg-white shadow-[0_8px_30px_#14274414]">
         <aside
-          className="erp-features-workspace-sidebar flex [flex:0_0_58px] flex-col items-center [gap:25px] [padding:15px_0] [background:#19213b] [color:#91b1e7] max-[760px]:[flex-basis:42px]"
+          className="flex flex-[0_0_58px] flex-col items-center gap-6.25 bg-[#19213b] px-0 py-3.75 text-[#91b1e7] max-[760px]:basis-10.5"
           aria-hidden="true"
         >
-          <span className="erp-features-workspace-logo [color:#fff] [font-size:21px] font-semibold">B</span>
+          <span className="text-[21px] font-semibold text-white">B</span>
           <LayoutDashboard size={18} />
           <UsersRound size={18} />
-          <span className="erp-features-selected-icon flex items-center justify-center [width:36px] [height:36px] [margin-block:-7px] [border-radius:9px] [background:#303f62] [color:#83e0b2]">
+          <span className="-my-1.75 flex h-9 w-9 items-center justify-center rounded-[9px] bg-[#303f62] text-[#83e0b2]">
             <Icon size={18} />
           </span>
           <Package size={18} />
           <ChartNoAxesCombined size={18} />
         </aside>
-        <div className="erp-features-workspace-body [flex:1] [min-width:0] [padding:19px_16px] max-[760px]:[padding:14px_10px]">
-          <div className="erp-features-workspace-heading flex justify-between items-center [gap:10px] [margin-bottom:18px] [color:#26314c] [font-size:14px] font-semibold [&_>_span:last-child]:[color:#8993a4] [&_>_span:last-child]:[font-size:9px] [&_>_span:last-child]:font-normal max-[760px]:[font-size:12px]">
-            <span>{slide.title}</span>
-            <span>Overview</span>
+        <div className="min-w-0 flex-1 px-4 py-4.75 max-[760px]:px-2.5 max-[760px]:py-3.5">
+          <div className="mb-4.5 flex items-center justify-between gap-2.5 text-[14px] font-semibold text-[#26314c] max-[760px]:text-[12px]">
+            <span className="last:text-[9px] last:font-normal last:text-[#8993a4]">
+              {slide.title}
+            </span>
+            <span className="last:text-[9px] last:font-normal last:text-[#8993a4]">
+              Overview
+            </span>
           </div>
-          <div className="erp-features-workspace-table">
-            <div className="erp-features-table-head grid [grid-template-columns:0.85fr_1.4fr_1fr_1fr] [gap:10px] items-center [min-height:41px] [border-bottom:1px_solid_#edf0f6] [color:#657087] [font-size:10px] [min-height:30px] [color:#8a93a4] [font-size:9px] [&_>_span]:overflow-hidden [&_>_span]:[white-space:nowrap] [&_>_span]:[text-overflow:ellipsis]">
+          <div>
+            <div className="grid min-h-7.5 grid-cols-[0.85fr_1.4fr_1fr_1fr] items-center gap-2.5 border-b border-[#edf0f6] text-[9px] text-[#8a93a4]">
               {slide.columns.map((column) => (
-                <span key={column}>{column}</span>
+                <span
+                  className="overflow-hidden text-ellipsis whitespace-nowrap"
+                  key={column}
+                >
+                  {column}
+                </span>
               ))}
             </div>
             {slide.rows.map((row) => (
               <div
-                className="erp-features-table-row grid [grid-template-columns:0.85fr_1.4fr_1fr_1fr] [gap:10px] items-center [min-height:41px] [border-bottom:1px_solid_#edf0f6] [color:#657087] [font-size:10px] [&_>_span]:overflow-hidden [&_>_span]:[white-space:nowrap] [&_>_span]:[text-overflow:ellipsis] [&_.erp-features-status]:[width:fit-content] [&_.erp-features-status]:[max-width:100%] [&_.erp-features-status]:[padding:3px_8px] [&_.erp-features-status]:[border-radius:16px] [&_.erp-features-status]:[background:#e5f6ed] [&_.erp-features-status]:[color:#28966b] [&_.erp-features-status]:[font-size:9px]"
+                className="grid min-h-10.25 grid-cols-[0.85fr_1.4fr_1fr_1fr] items-center gap-2.5 border-b border-b-[#edf0f6] text-[10px] text-[#657087]"
                 key={row[0]}
               >
                 {row.map((cell, index) => (
                   <span
                     key={index}
-                    className={index === 3 ? "erp-features-status" : undefined}
+                    className={`overflow-hidden text-ellipsis whitespace-nowrap ${index === 3 ? "w-fit max-w-full rounded-2xl bg-[#e5f6ed] px-2 py-0.75 text-[9px] text-[#28966b]" : ""}`}
                   >
                     {cell}
                   </span>
@@ -123,26 +134,31 @@ function WorkspaceSlide({ slide }: { slide: (typeof slides)[number] }) {
           </div>
         </div>
       </div>
-      <div className="erp-features-highlight absolute [top:48%] [right:-12px] [left:85px] flex items-center justify-between [gap:10px] [min-height:76px] [padding:13px_20px] [border:7px_solid_#b3e0ed] [border-radius:17px] [background:#fff] [color:#2d3f61] [box-shadow:0_6px_20px_#27385c0d] [font-size:12px] [white-space:nowrap] [&_>_svg]:[flex-shrink:0] [&_strong]:font-medium max-[1100px]:[left:47px] max-[1100px]:[gap:8px] max-[1100px]:[padding-inline:12px] max-[1100px]:[font-size:10px] max-[1100px]:[&_>_span:first-of-type]:hidden max-[760px]:[left:38px] max-[760px]:[min-height:65px] max-[760px]:[padding:9px] max-[760px]:[border-width:5px] max-[760px]:[gap:7px] max-[760px]:[&_>_svg]:[width:17px]">
-        <CheckCircle2 size={23} />
-        <span>{slide.highlight[0]}</span>
-        <strong>{slide.highlight[1]}</strong>
-        <span>{slide.highlight[2]}</span>
-        <span className="erp-features-highlight-status [padding:5px_12px] [border-radius:24px] [background:#0aaa70] [color:#fff] [font-size:11px] max-[1100px]:[font-size:10px] max-[760px]:[padding-inline:8px] max-[760px]:[font-size:9px]">{slide.highlight[3]}</span>
+      <div className="absolute top-[48%] -right-3 left-21.25 flex min-h-19 items-center justify-between gap-2.5 rounded-[17px] border-[7px] border-[#b3e0ed] bg-white px-5 py-3.25 text-[12px] whitespace-nowrap text-[#2d3f61] shadow-[0_6px_20px_#27385c0d] max-[1100px]:left-11.75 max-[1100px]:gap-2 max-[1100px]:px-3 max-[1100px]:text-[10px] max-[760px]:left-9.5 max-[760px]:min-h-16.25 max-[760px]:gap-1.75 max-[760px]:border-[5px] max-[760px]:p-2.25">
+        <CheckCircle2 className="shrink-0 max-[760px]:w-4.25" size={23} />
+        <span className="max-[1100px]:first-of-type:hidden">
+          {slide.highlight[0]}
+        </span>
+        <strong className="font-medium">{slide.highlight[1]}</strong>
+        <span className="max-[1100px]:first-of-type:hidden">
+          {slide.highlight[2]}
+        </span>
+        <span className="rounded-3xl bg-[#0aaa70] px-3 py-1.25 text-[11px] text-white max-[1100px]:text-[10px] max-[1100px]:first-of-type:hidden max-[760px]:px-2 max-[760px]:text-[9px]">
+          {slide.highlight[3]}
+        </span>
       </div>
     </div>
   );
 }
 
 function FeatureSlider() {
-  const [position, setPosition] = useState({ index: 0, animate: true });
+  const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const [visible, setVisible] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
   const touchStart = useRef<number | null>(null);
-  const activeIndex = position.index % slides.length;
 
   useEffect(() => {
     const element = sliderRef.current;
@@ -163,24 +179,18 @@ function FeatureSlider() {
         window.matchMedia("(prefers-reduced-motion: reduce)").matches
       )
         return;
-      setPosition((current) => ({
-        index: (current.index % slides.length) + 1,
-        animate: true,
-      }));
+      setActiveIndex((current) => (current + 1) % slides.length);
     }, 4200);
     return () => window.clearInterval(timer);
   }, [paused, hovered, focused, visible]);
 
   const goTo = (index: number) =>
-    setPosition({
-      index: (index + slides.length) % slides.length,
-      animate: true,
-    });
+    setActiveIndex((index + slides.length) % slides.length);
 
   return (
     <div
       ref={sliderRef}
-      className="erp-features-slider [min-width:0]"
+      className="min-w-0"
       role="region"
       aria-roledescription="carousel"
       aria-label="ERP feature previews"
@@ -199,7 +209,7 @@ function FeatureSlider() {
       }}
     >
       <div
-        className="erp-features-viewport overflow-hidden [border-radius:13px] [touch-action:pan-y]"
+        className="touch-pan-y overflow-hidden rounded-[13px]"
         onTouchStart={(event) => {
           touchStart.current = event.touches[0].clientX;
         }}
@@ -215,53 +225,43 @@ function FeatureSlider() {
         }}
       >
         <div
-          className={`erp-features-track flex [transition:transform_650ms_cubic-bezier(0.22,_0.61,_0.36,_1)]! [will-change:transform] motion-reduce:[transition:none]! motion-reduce:[transition-delay:0s]! ${position.animate ? "" : "erp-features-track-still [transition:none]!"}`}
-          style={{ transform: `translate3d(-${position.index * 100}%, 0, 0)` }}
-          onTransitionEnd={(event) => {
-            if (
-              event.target === event.currentTarget &&
-              event.propertyName === "transform" &&
-              position.index === slides.length
-            ) {
-              setPosition({ index: 0, animate: false });
-            }
-          }}
+          className="flex"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          {[...slides, slides[0]].map((slide, index) => (
+          {slides.map((slide, index) => (
             <div
-              className="erp-features-slide [flex:0_0_100%] [min-width:0]"
+              className="min-w-0 flex-[0_0_100%]"
               key={`${slide.theme}-${index}`}
               role="group"
               aria-roledescription="slide"
-              aria-label={`${(index % slides.length) + 1} of ${slides.length}: ${slide.title}`}
-              aria-hidden={index !== position.index}
+              aria-label={`${index + 1} of ${slides.length}: ${slide.title}`}
+              aria-hidden={index !== activeIndex}
             >
               <WorkspaceSlide slide={slide} />
             </div>
           ))}
         </div>
       </div>
-      <div className="erp-features-slider-controls relative flex items-center justify-center [min-height:44px] [&_.erp-features-pause-button]:flex [&_.erp-features-pause-button]:items-center [&_.erp-features-pause-button]:justify-center [&_.erp-features-pause-button]:[width:28px] [&_.erp-features-pause-button]:[height:32px] [&_.erp-features-pause-button]:[padding:0] [&_.erp-features-pause-button]:[border:0] [&_.erp-features-pause-button]:[background:transparent] [&_.erp-features-pause-button]:[color:#73777b] [&_.erp-features-pause-button]:absolute [&_.erp-features-pause-button]:[right:0]">
-        <div
-          className="erp-features-dots flex [&_button]:flex [&_button]:items-center [&_button]:justify-center [&_button]:[width:28px] [&_button]:[height:32px] [&_button]:[padding:0] [&_button]:[border:0] [&_button]:[background:transparent] [&_button]:[color:#73777b] [&_span]:[width:10px] [&_span]:[height:10px] [&_span]:rounded-full [&_span]:[background:#cecece]"
-          aria-label="Choose feature preview"
-        >
+      <div className="relative flex min-h-11 items-center justify-center">
+        <div className="flex" aria-label="Choose feature preview">
           {slides.map((slide, index) => (
             <button
               key={slide.theme}
               type="button"
-              className={activeIndex === index ? "erp-features-active-dot [&_span]:[background:#63676b]" : ""}
+              className="flex h-8 w-7 items-center justify-center bg-transparent p-0 text-[#73777b]"
               aria-label={`Show ${slide.title}`}
               aria-pressed={activeIndex === index}
               onClick={() => goTo(index)}
             >
-              <span />
+              <span
+                className={`size-2.5 rounded-full ${activeIndex === index ? "bg-[#63676b]" : "bg-[#cecece]"}`}
+              />
             </button>
           ))}
         </div>
         <button
           type="button"
-          className="erp-features-pause-button"
+          className="absolute right-0 flex h-8 w-7 items-center justify-center border-0 bg-transparent p-0 text-[#73777b]"
           aria-label={paused ? "Play feature slider" : "Pause feature slider"}
           onClick={() => setPaused((value) => !value)}
         >
@@ -335,29 +335,32 @@ export default function ERPFeatures({
     <>
       <div
         ref={headerRef}
-        className={`erp-features-sticky-header fixed [top:0] [right:0] [left:0] [z-index:100] [opacity:0] [visibility:hidden] pointer-events-none [transform:translate3d(0,_-100%,_0)] [transition:transform_420ms_cubic-bezier(0.22,_0.61,_0.36,_1),_opacity_260ms_ease,_visibility_0s_linear_420ms]! [will-change:transform,_opacity] motion-reduce:[transition:none]! motion-reduce:[transition-delay:0s]! ${headerVisible ? "erp-features-header-shown [opacity:1] [visibility:visible] pointer-events-auto [transform:translate3d(0,_0,_0)] [transition-delay:0s]!" : ""}`}
+        className={`fixed inset-x-0 top-0 z-100 ${headerVisible ? "visible" : "pointer-events-none invisible"}`}
         aria-hidden={!headerVisible}
         inert={!headerVisible}
       >
-        <header className="erp-features-header [background:#fff] [border-bottom:1px_solid_#dedede] [box-shadow:0_3px_8px_#00000008]">
-          <div className="erp-features-header-inner [width:min(1720px,_calc(100%_-_96px))] [min-height:76px] [margin:auto] flex items-center justify-between [gap:20px] [&_.erp-features-demo-button]:[min-height:36px] [&_.erp-features-demo-button]:[padding:9px_23px] [&_.erp-features-demo-button]:[border:0] [&_.erp-features-demo-button]:[border-radius:30px] [&_.erp-features-demo-button]:[background:#ed2027] [&_.erp-features-demo-button]:[color:#fff] [&_.erp-features-demo-button]:[font-size:12px] [&_.erp-features-demo-button]:font-semibold [&_.erp-features-demo-button]:[line-height:1.5] [&_.erp-features-demo-button]:[text-transform:uppercase] [&_.erp-features-demo-button:hover]:[background:#cb151c] max-[760px]:[width:calc(100%_-_32px)] max-[760px]:[min-height:68px] max-[760px]:[gap:12px] max-[760px]:[&_.erp-features-demo-button]:[padding-inline:13px] max-[760px]:[&_.erp-features-demo-button]:[font-size:10px]">
+        <header className="border-b border-b-[#dedede] bg-white shadow-[0_3px_8px_#00000008]">
+          <div className="m-auto flex min-h-19 w-[min(1720px,calc(100%-96px))] items-center justify-between gap-5 max-[760px]:min-h-17 max-[760px]:w-[calc(100%-32px)] max-[760px]:gap-3">
             <a
               href="#erp-landing"
-              className="erp-features-brand inline-flex items-center [gap:16px] [color:#303030] [&_img]:[width:auto] [&_img]:[height:46px] [&_img]:[object-fit:contain] [&_span]:[border-left:1px_solid_#dedede] [&_span]:[padding-left:16px] [&_span]:[font-size:22px] [&_span]:font-semibold [&_span]:[line-height:1] max-[760px]:[gap:10px] max-[760px]:[&_img]:[height:38px] max-[760px]:[&_img]:[max-width:125px] max-[760px]:[&_span]:[padding-left:10px] max-[760px]:[&_span]:[font-size:18px]"
+              className="inline-flex items-center gap-4 text-[#303030] max-[760px]:gap-2.5"
               aria-label="Back to the ERP landing page top"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
+                className="h-11.5 w-auto object-contain max-[760px]:h-9.5 max-[760px]:max-w-31.25"
                 src="/logos/logo--22.png"
                 alt="BrainADZ Live"
                 width="160"
                 height="58"
               />
-              <span>ERP</span>
+              <span className="border-l border-l-[#dedede] pl-4 text-[22px] leading-none font-semibold max-[760px]:pl-2.5 max-[760px]:text-[18px]">
+                ERP
+              </span>
             </a>
             <button
               type="button"
-              className="erp-features-demo-button"
+              className="min-h-9 rounded-[30px] border-0 bg-[#ed2027] px-5.75 py-2.25 text-[12px] leading-normal font-semibold text-white uppercase hover:bg-[#cb151c] max-[760px]:px-3.25 max-[760px]:text-[10px]"
               onClick={onRequestDemo}
             >
               Request a demo
@@ -365,7 +368,7 @@ export default function ERPFeatures({
           </div>
         </header>
         <nav
-          className={`erp-features-navigation [min-height:50px] flex [align-items:stretch] justify-center [background:#fff] [border-bottom:1px_solid_#dedede] [box-shadow:0_3px_8px_#00000008] [opacity:0] [visibility:hidden] pointer-events-none [transform:translate3d(0,_-12px,_0)] [transition:transform_360ms_cubic-bezier(0.22,_0.61,_0.36,_1),_opacity_280ms_ease,_visibility_0s_linear_360ms]! [&_a]:flex [&_a]:items-center [&_a]:[padding:9px_21px] [&_a]:[border-bottom:3px_solid_transparent] [&_a]:[color:#111] [&_a]:[font-size:18px] [&_a]:[line-height:1.5] [&_a]:[white-space:nowrap] [&_.erp-features-active-link]:[border-bottom-color:#193175] [&_.erp-features-active-link]:[color:#193175] max-[760px]:[min-height:48px] max-[760px]:[&_a]:[padding-inline:16px] max-[760px]:[&_a]:[font-size:15px] motion-reduce:[transition:none]! motion-reduce:[transition-delay:0s]! ${headerVisible ? "erp-features-navigation-shown [opacity:1] [visibility:visible] pointer-events-auto [transform:translate3d(0,_0,_0)] [transition-delay:80ms,_80ms,_0s]!" : ""}`}
+          className="flex min-h-12 items-stretch justify-center border-b border-[#dedede] bg-white shadow-[0_3px_8px_#00000008] md:min-h-12.5"
           aria-label="ERP landing page sections"
           aria-hidden={!headerVisible}
           inert={!headerVisible}
@@ -374,7 +377,7 @@ export default function ERPFeatures({
             <a
               key={section.id}
               href={`#${section.id}`}
-              className={activeSection === section.id ? "erp-features-active-link" : ""}
+              className={`flex items-center border-b-3 px-5.25 py-2.25 text-lg leading-normal whitespace-nowrap max-[760px]:px-4 max-[760px]:text-[15px] ${activeSection === section.id ? "border-[#193175] text-[#193175]" : "border-transparent text-[#111]"}`}
               aria-current={
                 activeSection === section.id ? "location" : undefined
               }
@@ -386,26 +389,33 @@ export default function ERPFeatures({
         </nav>
       </div>
       <section
-        className="erp-features-features [background:#fff] [padding:140px_0_90px] [scroll-margin-top:0]! [&_h2]:[margin:0_0_18px] [&_h2]:[color:#193175] [&_h2]:[font-size:clamp(34px,_3vw,_48px)] [&_h2]:font-medium [&_h2]:[line-height:1.17] [&_h2]:[letter-spacing:-1.4px] [&_p]:[max-width:930px] [&_p]:[margin:0] [&_p]:[color:#151515] [&_p]:[font-size:18px] [&_p]:[line-height:1.65] max-[760px]:[padding:136px_0_52px] max-[760px]:[&_h2]:[font-size:clamp(30px,_6.6vw,_40px)] max-[760px]:[&_h2]:[letter-spacing:-0.8px] max-[760px]:[&_p]:[font-size:16px]"
+        className="scroll-mt-0! bg-white px-0 pt-35 pb-22.5 max-[760px]:px-0 max-[760px]:pt-34 max-[760px]:pb-13"
         id="erp-features"
         aria-labelledby="erp-features-heading"
       >
-        <div className="erp-features-feature-inner [width:min(1070px,_calc(100%_-_64px))] [margin:auto] max-[760px]:[width:calc(100%_-_40px)]">
-          <h2 id="erp-features-heading">
+        <div className="mx-auto w-full max-w-283.5 px-5 md:px-8">
+          <h2
+            className="mx-0 mt-0 mb-4.5 text-[clamp(34px,3vw,48px)] leading-[1.17] font-medium tracking-[-1.4px] text-[#193175] max-[760px]:text-[clamp(30px,6.6vw,40px)] max-[760px]:tracking-[-0.8px]"
+            id="erp-features-heading"
+          >
             ERP software that solves growing
-            <br className="erp-features-desktop-break max-[760px]:hidden" /> business challenges
+            <br className="max-[760px]:hidden" /> business challenges
           </h2>
-          <p>
+          <p className="m-0 max-w-232.5 text-[18px] leading-[1.65] text-[#151515] max-[760px]:text-[16px]">
             Bring finance, inventory, sales and purchasing together with an ERP
             built around your business. Simplify everyday operations, connect
             your teams and get a clearer view of the information you need to
             keep growing.
           </p>
-          <div className="erp-features-feature-grid grid [grid-template-columns:minmax(0,_350fr)_minmax(0,_670fr)] [gap:50px] [align-items:start] [margin-top:32px] max-[1100px]:[gap:28px] max-[1100px]:[grid-template-columns:minmax(0,_1fr)_minmax(0,_1.6fr)] max-[760px]:[grid-template-columns:minmax(0,_1fr)] max-[760px]:[gap:28px] max-[760px]:[margin-top:24px]">
-            <ul className="erp-features-feature-list grid [gap:20px] [list-style:none] [margin:18px_0_0] [padding:0] [&_li]:flex [&_li]:items-center [&_li]:[gap:12px] [&_li]:[color:#202020] [&_li]:[font-size:18px] [&_li]:font-medium [&_li]:[line-height:1.5] [&_svg]:[flex-shrink:0] [&_svg]:[color:#193175] max-[1100px]:[&_li]:[font-size:16px] max-[760px]:[margin-top:0] max-[760px]:[gap:16px]">
+          <div className="mt-8 grid grid-cols-[minmax(0,350fr)_minmax(0,670fr)] items-start gap-12.5 max-[1100px]:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] max-[1100px]:gap-7 max-[760px]:mt-6 max-[760px]:grid-cols-1 max-[760px]:gap-7">
+            <ul className="mx-0 mt-4.5 mb-0 grid list-none gap-5 p-0 max-[760px]:mt-0 max-[760px]:gap-4">
               {features.map((feature) => (
-                <li key={feature}>
+                <li
+                  className="flex items-center gap-3 text-[18px] leading-normal font-medium text-[#202020] max-[1100px]:text-[16px]"
+                  key={feature}
+                >
                   <CheckCircle2
+                    className="shrink-0 text-[#193175]"
                     size={18}
                     aria-hidden="true"
                   />
