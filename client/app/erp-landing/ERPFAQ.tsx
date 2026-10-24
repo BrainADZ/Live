@@ -38,21 +38,22 @@ export default function ERPFAQ() {
 
   return (
     <section
-      className="bg-[#fff3e0] py-11 text-[#171a2d] md:pt-15 md:pb-12"
+      className="bg-[#fff3e0] py-12 text-[#171a2d] md:pt-16"
       id="erp-faq"
       aria-labelledby="erp-faq-heading"
     >
-      <div className="mx-auto w-full max-w-283.5 px-4 md:px-8">
+      <div className="mx-auto w-full max-w-6xl px-4 md:px-8">
         <h2
-          className="mx-auto mb-9 text-center text-[clamp(29px,6vw,36px)] leading-[1.2] font-semibold tracking-[-0.7px] md:mb-18 md:text-[clamp(32px,3vw,44px)] md:tracking-[-1px]"
+          className="mb-10 text-center text-3xl leading-tight font-semibold tracking-tight md:mb-16 md:text-4xl lg:text-5xl"
           id="erp-faq-heading"
         >
           Frequently Asked Questions
         </h2>
 
-        <div className="mx-auto max-w-220 rounded-xl bg-white px-5.5 pt-1 pb-2 md:px-9 md:pt-3 md:pb-4.5">
+        <div className="mx-auto max-w-4xl rounded-xl bg-white px-6 py-2 md:px-9 md:py-4">
           {questions.map(({ question, answer }, index) => {
             const isOpen = openIndex === index;
+            const Icon = isOpen ? Minus : Plus;
 
             return (
               <div
@@ -62,7 +63,7 @@ export default function ERPFAQ() {
                 <h3 className="m-0">
                   <button
                     type="button"
-                    className="group flex min-h-20.5 w-full items-center justify-between gap-4 bg-transparent py-5.5 text-left text-[19px] leading-[1.4] font-normal text-[#080808] md:min-h-23.5 md:gap-6 md:py-6.75 md:text-[clamp(21px,2vw,26px)]"
+                    className="group flex min-h-20 w-full items-center justify-between gap-4 bg-transparent py-6 text-left text-lg leading-snug font-normal text-[#080808] md:min-h-24 md:gap-6 md:py-7 md:text-2xl"
                     id={`erp-faq-question-${index}`}
                     aria-expanded={isOpen}
                     aria-controls={`erp-faq-answer-${index}`}
@@ -71,30 +72,22 @@ export default function ERPFAQ() {
                     <span className="group-hover:text-[#193175]">
                       {question}
                     </span>
-                    {isOpen ? (
-                      <Minus
-                        className="size-4.5 shrink-0 stroke-[1.8] text-[#858585] md:size-5"
-                        size={20}
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <Plus
-                        className="size-4.5 shrink-0 stroke-[1.8] text-[#858585] md:size-5"
-                        size={20}
-                        aria-hidden="true"
-                      />
-                    )}
+                    <Icon
+                      className="size-5 shrink-0 text-[#858585]"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
                   </button>
                 </h3>
 
                 <div
-                  className="pb-5.5 md:pr-10 md:pb-6.75"
+                  className="pb-6 md:pr-10 md:pb-7"
                   id={`erp-faq-answer-${index}`}
                   role="region"
                   aria-labelledby={`erp-faq-question-${index}`}
                   hidden={!isOpen}
                 >
-                  <p className="-mt-1.5 text-[15px] leading-[1.65] font-normal text-[#151515] md:-mt-3 md:text-[17px]">
+                  <p className="-mt-2 text-base leading-relaxed text-[#151515] md:text-lg">
                     {answer}
                   </p>
                 </div>
