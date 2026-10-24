@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { faq as styles } from "./tailwind";
 
 const questions = [
   {
@@ -39,26 +38,26 @@ export default function ERPFAQ() {
 
   return (
     <section
-      className={styles.faq}
+      className="erp-faq-faq [padding:60px_0_48px] [background:#fff3e0] [color:#171a2d] [&_h2]:[margin:0_auto_72px] [&_h2]:[color:#171a2d] [&_h2]:text-[clamp(32px,3vw,44px)] [&_h2]:font-semibold [&_h2]:[line-height:1.2] [&_h2]:[letter-spacing:-1px] [&_h2]:text-center max-[760px]:[padding:44px_0] max-[760px]:[&_h2]:[margin-bottom:36px] max-[760px]:[&_h2]:[font-size:clamp(29px,_6vw,_36px)] max-[760px]:[&_h2]:[letter-spacing:-0.7px]"
       id="erp-faq"
       aria-labelledby="erp-faq-heading"
     >
-      <div className={styles.inner}>
+      <div className="erp-faq-inner [width:min(1070px,_calc(100%_-_64px))] [margin:auto] max-[760px]:[width:calc(100%_-_32px)]">
         <h2 id="erp-faq-heading">Frequently Asked Questions</h2>
 
-        <div className={styles.card}>
+        <div className="erp-faq-card [max-width:880px] [margin:auto] [padding:12px_36px_18px] [border-radius:12px] [background:#fff] max-[760px]:[padding:4px_22px_8px]">
           {questions.map(({ question, answer }, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
-                className={styles.item}
+                className="erp-faq-item [border-bottom:1px_solid_#e2e2e2] [&:last-child]:[border-bottom:0] [&_h3]:[margin:0] [&_.erp-faq-question]:flex [&_.erp-faq-question]:items-center [&_.erp-faq-question]:justify-between [&_.erp-faq-question]:[gap:24px] [&_.erp-faq-question]:w-full [&_.erp-faq-question]:[min-height:94px] [&_.erp-faq-question]:[padding:27px_0] [&_.erp-faq-question]:[border:0] [&_.erp-faq-question]:[background:transparent] [&_.erp-faq-question]:[color:#080808] [&_.erp-faq-question]:[font-family:inherit] [&_.erp-faq-question]:[font-size:clamp(21px,_2vw,_26px)] [&_.erp-faq-question]:font-normal [&_.erp-faq-question]:leading-[1.4] [&_.erp-faq-question]:text-left max-[760px]:[&_.erp-faq-question]:[min-height:82px] max-[760px]:[&_.erp-faq-question]:[padding:22px_0] max-[760px]:[&_.erp-faq-question]:[gap:16px] max-[760px]:[&_.erp-faq-question]:[font-size:19px]"
                 key={question}
               >
                 <h3>
                   <button
                     type="button"
-                    className={styles.question}
+                    className="erp-faq-question [&_svg]:[flex-shrink:0] [&_svg]:[color:#858585] [&_svg]:[stroke-width:1.8] [&:hover_>_span]:[color:#193175] max-[760px]:[&_svg]:[width:18px] max-[760px]:[&_svg]:[height:18px]"
                     id={`erp-faq-question-${index}`}
                     aria-expanded={isOpen}
                     aria-controls={`erp-faq-answer-${index}`}
@@ -80,7 +79,7 @@ export default function ERPFAQ() {
                 </h3>
 
                 <div
-                  className={styles.answer}
+                  className="erp-faq-answer [padding:0_40px_27px_0] [&_p]:[margin:-12px_0_0] [&_p]:[color:#151515] [&_p]:[font-size:17px] [&_p]:font-normal [&_p]:[line-height:1.65] max-[760px]:[padding:0_0_22px] max-[760px]:[&_p]:[margin-top:-6px] max-[760px]:[&_p]:[font-size:15px]"
                   id={`erp-faq-answer-${index}`}
                   role="region"
                   aria-labelledby={`erp-faq-question-${index}`}
