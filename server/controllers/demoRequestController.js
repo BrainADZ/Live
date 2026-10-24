@@ -138,6 +138,7 @@ const processDemoRequest = async (fields) => {
           Company: fields.companyName,
           Email: fields.email,
           Phone: fields.phone,
+          Location: fields.location,
           "Company size": fields.companySize,
           Requirements: fields.requirements,
           "Source page": fields.pageUrl,

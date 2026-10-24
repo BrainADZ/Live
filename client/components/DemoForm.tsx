@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Mail,
+  MapPin,
   PencilLine,
   Phone,
   Send,
@@ -70,6 +71,7 @@ export default function DemoForm({
       companyName: String(fields.get("companyName") || "").trim(),
       email: String(fields.get("email") || "").trim(),
       phone: String(fields.get("phone") || "").trim(),
+      location: String(fields.get("location") || "").trim(),
       companySize: fields.get("companySize"),
       requirements: String(fields.get("requirements") || "").trim(),
       pageUrl: window.location.href,
@@ -334,6 +336,12 @@ export default function DemoForm({
                 required
                 pattern="[^0-9]*"
                 title="Company name cannot contain numbers."
+                onInput={(event) => {
+                  event.currentTarget.value = event.currentTarget.value.replace(
+                    /[0-9]/g,
+                    "",
+                  );
+                }}
                 placeholder="Company name"
                 className={fieldClass}
               />
@@ -385,6 +393,32 @@ export default function DemoForm({
                 placeholder="Phone number"
                 className={fieldClass}
               />
+            </div>
+
+            <div className="md:col-span-2">
+              <div className="relative">
+                <label
+                  className="sr-only"
+                  htmlFor={`${formId}-demo-location`}
+                >
+                  Location
+                </label>
+                <MapPin
+                  className={iconClass}
+                  size={19}
+                  strokeWidth={1.8}
+                />
+                <input
+                  id={`${formId}-demo-location`}
+                  name="location"
+                  autoComplete="address-level2"
+                  maxLength={200}
+                  type="text"
+                  required
+                  placeholder="Your location (city / area)"
+                  className={fieldClass}
+                />
+              </div>
             </div>
 
             <div className="relative md:col-span-2">

@@ -27,6 +27,7 @@ const fields = (overrides = {}) => ({
   companyName: "Example & Company",
   email: "visitor@example.com",
   phone: "+91 98765 43210",
+  location: "New Delhi",
   companySize: "11-50 employees",
   requirements: "Inventory and accounts",
   ...overrides,
@@ -127,6 +128,7 @@ test("demo submission, delivery and retry behavior", async (t) => {
         "password",
       ]);
       assert.equal(crmRequests[0].companyName, "Example & Company");
+      assert.equal(crmRequests[0].location, "New Delhi");
       assert.match(messages[0].html, /Test &lt;Visitor&gt;/);
       assert.match(messages[0].html, /Login ID/);
       const password = provisionCalls[0].password;
@@ -228,6 +230,14 @@ test("demo submission, delivery and retry behavior", async (t) => {
       assert.equal(result.password, undefined);
       assert.throws(
         () => normalizeDemoRequest(fields({ companyName: " " })),
+        /required/,
+      );
+      assert.throws(
+        () => normalizeDemoRequest(fields({ companyName: "Example123" })),
+        /cannot contain numbers/,
+      );
+      assert.throws(
+        () => normalizeDemoRequest(fields({ location: " " })),
         /required/,
       );
       assert.throws(

@@ -21,6 +21,7 @@ const normalizeDemoRequest = (body = {}) => {
     companyName: normalize(body.companyName, 200),
     email: normalize(body.email, 254).toLowerCase(),
     phone: normalize(body.phone, 30),
+    location: normalize(body.location, 200),
     companySize: normalize(body.companySize, 50),
     requirements: normalize(body.requirements, 4000),
     pageUrl: normalize(body.pageUrl, 2048),
@@ -51,6 +52,7 @@ const normalizeDemoRequest = (body = {}) => {
     !fields.companyName ||
     !fields.email ||
     !fields.phone ||
+    !fields.location ||
     !fields.requirements ||
     !COMPANY_SIZES.includes(fields.companySize) ||
     !DEMO_TYPES.includes(fields.demoType)
