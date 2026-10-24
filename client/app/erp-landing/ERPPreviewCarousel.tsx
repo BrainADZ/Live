@@ -2,7 +2,7 @@
 
 import { type ReactNode, useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
-import styles from "./automation.module.css";
+import { automation as styles } from "./tailwind";
 
 type PreviewSlide = {
   title: string;

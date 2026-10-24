@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import styles from "./faq.module.css";
+import { faq as styles } from "./tailwind";
 
 const questions = [
   {

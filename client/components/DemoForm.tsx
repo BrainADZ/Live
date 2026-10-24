@@ -390,9 +390,17 @@ export default function DemoForm({
                 id={`${formId}-demo-phone-number`}
                 name="phone"
                 autoComplete="tel"
-                maxLength={30}
                 type="tel"
+                inputMode="numeric"
                 required
+                pattern="[0-9]{7,15}"
+                title="Enter 7 to 15 digits."
+                onInput={(event) => {
+                  event.currentTarget.value = event.currentTarget.value.replace(
+                    /[^0-9]/g,
+                    "",
+                  ).slice(0, 15);
+                }}
                 placeholder="Phone number"
                 className={fieldClass}
               />

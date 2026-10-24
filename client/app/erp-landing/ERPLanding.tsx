@@ -11,8 +11,7 @@ import ERPComparison from "./ERPComparison";
 import ERPFAQ from "./ERPFAQ";
 import ERPFooter from "./ERPFooter";
 import ERPTestimonials from "./ERPTestimonials";
-import styles from "./landing.module.css";
-import hero from "./hero.module.css";
+import { landing as styles, hero } from "./tailwind";
 
 export default function ERPLanding() {
   const [demoOpen, setDemoOpen] = useState(false);

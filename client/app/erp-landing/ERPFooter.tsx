@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { privacySections, termsSections } from "@/data/legalPolicies";
-import styles from "./footer.module.css";
+import { footer as styles } from "./tailwind";
 
 export default function ERPFooter({
   onRequestDemo,

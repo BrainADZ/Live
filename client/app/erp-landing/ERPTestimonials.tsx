@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
-import styles from "./testimonials.module.css";
+import { testimonials as styles } from "./tailwind";
 
 export default function ERPTestimonials({
   onRequestDemo,

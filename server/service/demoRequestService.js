@@ -75,10 +75,7 @@ const normalizeDemoRequest = (body = {}) => {
       "Please enter a valid email address.",
       "INVALID_EMAIL",
     );
-  if (
-    !/^\+?[\d\s().-]+$/.test(fields.phone) ||
-    !/^\d{7,15}$/.test(fields.phone.replace(/\D/g, ""))
-  )
+  if (!/^[0-9]{7,15}$/.test(fields.phone))
     throw requestError(
       400,
       "Please enter a valid phone number.",

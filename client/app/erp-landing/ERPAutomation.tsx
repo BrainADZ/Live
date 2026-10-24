@@ -2,7 +2,7 @@
 
 import { CheckCircle2, Workflow } from "lucide-react";
 import ERPPreviewCarousel from "./ERPPreviewCarousel";
-import styles from "./automation.module.css";
+import { automation as styles } from "./tailwind";
 
 const features = [
   "Multi-Step Workflow Automation",

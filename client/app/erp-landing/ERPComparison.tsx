@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import styles from "./comparison.module.css";
+import { comparison as styles } from "./tailwind";
 
 const comparisons = [
   {

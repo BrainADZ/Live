@@ -26,7 +26,7 @@ const fields = (overrides = {}) => ({
   name: "Test <Visitor>",
   companyName: "Example & Company",
   email: "visitor@example.com",
-  phone: "+91 98765 43210",
+  phone: "919876543210",
   location: "New Delhi",
   companySize: "11-50 employees",
   requirements: "Inventory and accounts",
@@ -246,6 +246,10 @@ test("demo submission, delivery and retry behavior", async (t) => {
       );
       assert.throws(
         () => normalizeDemoRequest(fields({ phone: "nope" })),
+        /phone/,
+      );
+      assert.throws(
+        () => normalizeDemoRequest(fields({ phone: "+91 98765 43210" })),
         /phone/,
       );
     },

@@ -12,7 +12,7 @@ import {
   ShoppingCart,
   UsersRound,
 } from "lucide-react";
-import styles from "./features.module.css";
+import { features as styles } from "./tailwind";
 
 const sectionLinks = [
   { id: "erp-features", label: "Start" },
@@ -77,7 +77,7 @@ const slides = [
 function WorkspaceSlide({ slide }: { slide: (typeof slides)[number] }) {
   const Icon = slide.icon;
   return (
-    <div className={`${styles.workspace} ${styles[slide.theme]}`}>
+    <div className={`${styles.workspace} ${styles[slide.theme as "finance" | "inventory" | "orders"]}`}>
       <div className={styles.workspaceWindow}>
         <aside
           className={styles.workspaceSidebar}

@@ -8,8 +8,7 @@ import {
   Settings,
 } from "lucide-react";
 import ERPPreviewCarousel from "./ERPPreviewCarousel";
-import section from "./automation.module.css";
-import styles from "./insights.module.css";
+import { automation as section, insights as styles } from "./tailwind";
 
 const features = [
   "Configurable ERP Workspaces",
