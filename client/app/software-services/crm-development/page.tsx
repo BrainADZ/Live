@@ -399,7 +399,7 @@ export default function CRMDevelopmentPage() {
       {/* CRM PROCESS */}
       <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
+          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
           style={{
             backgroundImage:
               "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
@@ -408,7 +408,7 @@ export default function CRMDevelopmentPage() {
         />
 
         <div className="mx-auto max-w-450">
-          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
+          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
               CRM Development Process
             </p>
@@ -417,7 +417,7 @@ export default function CRMDevelopmentPage() {
               From Workflow Discovery to a CRM Your Team Can Use Every Day.
             </h2>
 
-            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
               We translate your lead, sales and customer workflows into a
               structured CRM, then test, launch and improve it around real team
               usage.
@@ -460,7 +460,7 @@ export default function CRMDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
+          <div className="relative hidden h-197.5 lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
               viewBox="0 0 1600 790"
@@ -530,10 +530,10 @@ export default function CRMDevelopmentPage() {
             {crmProcessLayout.map((item) => (
               <div
                 key={item.title}
-                className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
                 style={{ left: item.left, top: item.top }}
               >
-                <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
                   <img
                     src={item.iconSrc}
                     alt=""
@@ -546,7 +546,7 @@ export default function CRMDevelopmentPage() {
                   {titleCaseHeading(item.title)}
                 </h3>
 
-                <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
+                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                   {item.text}
                 </p>
               </div>
