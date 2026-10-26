@@ -7,6 +7,7 @@ import ErpMetaPixel from "@/components/ErpMetaPixel";
 import ERPBrandCarousel from "./ERPBrandCarousel";
 import ERPStats from "./ERPStats";
 import ERPWhyChoose from "./ERPWhyChoose";
+import ERPTeam from "./ERPTeam";
 import ERPFeatures from "./ERPFeatures";
 import ERPAutomation from "./ERPAutomation";
 import ERPInsights from "./ERPInsights";
@@ -104,6 +105,7 @@ export default function ERPLanding() {
       <ERPInsights />
       <ERPComparison />
       <ERPWhyChoose />
+      <ERPTeam onContact={() => setDemoOpen(true)} />
       <ERPFAQ />
       <ERPFooter onRequestDemo={() => setDemoOpen(true)} />
       <DemoForm
