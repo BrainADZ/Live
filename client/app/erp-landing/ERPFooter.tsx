@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ERPLocations from "./ERPLocations";
 import { X } from "lucide-react";
 import { privacySections, termsSections } from "@/data/legalPolicies";
 
@@ -56,6 +57,9 @@ export default function ERPFooter({
           </button>
         </section>
 
+      </div>
+      <ERPLocations />
+      <div className="mx-auto w-full max-w-316 px-5 pt-6 md:px-8">
         <div className="flex items-center justify-between gap-6 pb-4.5 text-[12px] leading-normal max-[760px]:flex-col max-[760px]:gap-3.5 max-[760px]:pb-6 max-[760px]:text-center">
           <nav className="flex items-center" aria-label="Legal policies">
             <button

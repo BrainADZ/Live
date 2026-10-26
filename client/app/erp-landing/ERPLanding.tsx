@@ -4,6 +4,9 @@
 import { useState } from "react";
 import DemoForm from "@/components/DemoForm";
 import ErpMetaPixel from "@/components/ErpMetaPixel";
+import ERPBrandCarousel from "./ERPBrandCarousel";
+import ERPStats from "./ERPStats";
+import ERPWhyChoose from "./ERPWhyChoose";
 import ERPFeatures from "./ERPFeatures";
 import ERPAutomation from "./ERPAutomation";
 import ERPInsights from "./ERPInsights";
@@ -81,7 +84,7 @@ export default function ERPLanding() {
           <div className="mt-8 min-[800px]:mt-6">
             <img
               className="block aspect-38/11 h-auto w-full object-contain object-bottom"
-              src="/landing-hero.png"
+              src="/landing-hero.webp"
               alt="Business growth with BrainADZ ERP"
               width="1140"
               height="330"
@@ -94,10 +97,13 @@ export default function ERPLanding() {
       </section>
 
       <ERPFeatures onRequestDemo={() => setDemoOpen(true)} />
+      <ERPStats />
       <ERPTestimonials onRequestDemo={() => setDemoOpen(true)} />
       <ERPAutomation />
+      <ERPBrandCarousel />
       <ERPInsights />
       <ERPComparison />
+      <ERPWhyChoose />
       <ERPFAQ />
       <ERPFooter onRequestDemo={() => setDemoOpen(true)} />
       <DemoForm
