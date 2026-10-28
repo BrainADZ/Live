@@ -87,16 +87,13 @@ const contactInfo: ContactInfo[] = [
     title: "Phone Enquiries",
     icon: "/contact/phone.svg",
     iconAlt: "Phone enquiries",
-    primary: "Request a callback",
-    secondary:
-      "Share your phone number and requirement through the enquiry form so our team can contact you.",
+    primary: "+91 92112 93332",
   },
   {
     title: "Email Us",
     icon: "/contact/email.svg",
     iconAlt: "Email support",
-    primary: "info@brainadzlive.com",
-    secondary: "support@brainadzlive.com",
+    primary: "corpsales@brainadzlive.com",
   },
   {
     title: "Follow BrainADZ Live",

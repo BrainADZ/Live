@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Globe,
   Search,
+  Phone,
   CircleUserRound,
   Menu,
   X,
@@ -571,6 +572,16 @@ export default function Navbar() {
             <Search size={20} strokeWidth={1.5} />
           </button>
 
+          {/* CONTACT NUMBER - BETWEEN SEARCH AND ACCOUNT */}
+          <a
+            href="tel:+919911078143"
+            aria-label="Call BrainADZ Live at +91 99110 78143"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-[13px] font-medium text-[#193175] transition-colors duration-300 hover:text-[#161616] 2xl:text-[14px]"
+          >
+            <Phone size={16} strokeWidth={1.8} aria-hidden="true" />
+            <span>+91 99110 78143</span>
+          </a>
+
           <div className="relative">
             <button
               type="button"
@@ -753,11 +764,20 @@ export default function Navbar() {
               Search
             </button>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4">
+              {/* MOBILE CONTACT NUMBER */}
+              <a
+                href="tel:+919911078143"
+                aria-label="Call BrainADZ Live at +91 99110 78143"
+                className="inline-flex items-center gap-1.5 whitespace-nowrap text-[12px] font-medium text-[#193175] hover:text-[#161616] sm:text-[14px]"
+              >
+                <Phone size={15} strokeWidth={1.8} aria-hidden="true" />
+                <span>+91 99110 78143</span>
+              </a>
               <Globe
                 size={20}
                 strokeWidth={1.5}
-                className="text-[#525252]"
+                className="hidden text-[#525252] sm:block"
               />
 
               <button
