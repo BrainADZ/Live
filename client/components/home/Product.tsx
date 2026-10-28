@@ -66,7 +66,7 @@ export default function ProductSection() {
           </div>
 
           <p
-            className="max-w-190 text-[18px] font-light leading-[1.6] tracking-[-0.2px] text-[#393939] md:text-[21px]"
+            className="max-w-190 justify-self-end text-right text-[18px] font-light leading-[1.6] tracking-[-0.2px] text-[#393939] md:text-[21px]"
             data-aos="fade-left"
             data-aos-delay="100"
           >

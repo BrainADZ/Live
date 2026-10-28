@@ -123,7 +123,7 @@ export default function StatsSection() {
 
           {/* RIGHT */}
           <p
-            className="max-w-[650px] text-[16px] font-light leading-[1.7] text-[#525252] md:text-[18px]"
+            className="max-w-[650px] justify-self-end text-right text-[16px] font-light leading-[1.7] text-[#525252] md:text-[18px]"
             data-aos="fade-left"
             data-aos-delay="100"
           >

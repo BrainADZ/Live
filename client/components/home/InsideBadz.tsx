@@ -3,18 +3,20 @@ export default function InsideBadzSection() {
   return (
     <section className="section-spacing lazy-section mx-auto w-full max-w-[1800px] bg-white px-6 text-[#161616] md:px-10 lg:px-12">
       <div>
-        <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.05fr_1fr_1fr_1fr] lg:gap-20">
-          {/* LEFT HEADING */}
+        <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
           <div data-aos="fade-right">
             <h2 className="text-[50px] font-normal leading-[1.05] tracking-[-2.5px] text-[#161616] md:text-[60px] lg:text-[64px]">
               Inside BrainADZ
             </h2>
-
-            <p className="mt-6 max-w-80 text-[16px] font-light leading-[1.6] tracking-[-0.3px] text-[#525252]">
-              Three specialized verticals working across marketing, exhibition
-              experiences and technology.
-            </p>
           </div>
+
+          <p className="max-w-100 justify-self-end text-right text-[16px] font-light leading-[1.6] tracking-[-0.3px] text-[#525252]" data-aos="fade-left" data-aos-delay="100">
+            Three specialized verticals working across marketing, exhibition
+            experiences and technology.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-3 lg:gap-20">
 
           {/* COLUMN 1 - MARKETING */}
           <div

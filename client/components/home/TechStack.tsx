@@ -151,7 +151,7 @@ export default function TechStackSection() {
           </div>
 
           <p
-            className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]"
+            className="max-w-195 justify-self-end text-right text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]"
             data-aos="fade-left"
             data-aos-delay="100"
           >

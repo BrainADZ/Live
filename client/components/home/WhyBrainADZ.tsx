@@ -45,17 +45,19 @@ export default function WhyChooseSection() {
   return (
     <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
-        {/* TOP HEADING LEFT */}
-        <div className="mb-14 max-w-205" data-aos="fade-up">
-          <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-            Why Choose BrainADZLive
-          </p>
+        {/* TOP HEADING + DESCRIPTION */}
+        <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+          <div data-aos="fade-right">
+            <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+              Why Choose BrainADZLive
+            </p>
 
-          <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-            Technology Solutions Built with Clarity, Reliability, and Scale
-          </h2>
+            <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              Technology Solutions Built with Clarity, Reliability, and Scale
+            </h2>
+          </div>
 
-          <p className="mt-6 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+          <p className="max-w-195 justify-self-end text-right text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]" data-aos="fade-left" data-aos-delay="100">
             We help businesses move from idea to execution with smart hardware,
             custom software, automation, and AI-enabled systems.
           </p>

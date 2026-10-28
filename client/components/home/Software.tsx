@@ -77,7 +77,7 @@ export default function OurSoftwareSection() {
             </div>
 
             <p
-              className="max-w-[620px] text-[18px] font-light leading-[1.55] tracking-[-0.3px] text-[#454545] lg:ml-auto lg:text-[20px]"
+              className="max-w-[620px] justify-self-end text-right text-[18px] font-light leading-[1.55] tracking-[-0.3px] text-[#454545] lg:text-[20px]"
               data-aos="fade-left"
               data-aos-delay="100"
             >

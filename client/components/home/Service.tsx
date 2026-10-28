@@ -78,7 +78,7 @@ export default function ServiceSection() {
         </h2>
 
         <p
-          className="max-w-155 text-[22px] font-light leading-[1.45] tracking-[-0.6px] text-[#262626]"
+          className="max-w-155 justify-self-end text-right text-[22px] font-light leading-[1.45] tracking-[-0.6px] text-[#262626]"
           data-aos="fade-left"
           data-aos-delay="100"
         >

@@ -79,12 +79,12 @@ export default function IndustriesSection() {
     <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
         {/* TOP CONTENT */}
-        <div className="mb-16" data-aos="fade-up">
-          <h2 className="text-[40px] font-normal leading-[1.08] tracking-[-1.6px] text-[#161616] md:text-[52px] lg:text-[58px]">
+        <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+          <h2 className="text-[40px] font-normal leading-[1.08] tracking-[-1.6px] text-[#161616] md:text-[52px] lg:text-[58px]" data-aos="fade-right">
             Industries We Serve
           </h2>
 
-          <p className="mt-7 max-w-225 text-[18px] font-light leading-[1.65] tracking-[-0.2px] text-[#525252] md:text-[22px]">
+          <p className="max-w-225 justify-self-end text-right text-[18px] font-light leading-[1.65] tracking-[-0.2px] text-[#525252] md:text-[22px]" data-aos="fade-left" data-aos-delay="100">
             We serve a diverse range of industries, catering to a wide spectrum
             of fields and sectors.
           </p>

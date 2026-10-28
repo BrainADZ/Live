@@ -69,7 +69,7 @@ export default function BrandCarousel() {
 
         <div className="relative mx-auto max-w-[1800px] px-5 md:px-4 lg:px-12">
           {/* Section header */}
-          <div className="mb-14 grid gap-8 border-b border-[#161616]/10 pb-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <div className="mb-14 grid gap-8 border-b border-[#161616]/10 pb-10 lg:grid-cols-[0.9fr_1fr] lg:items-end">
             <div>
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-10 bg-[#193175]" />
@@ -85,8 +85,8 @@ export default function BrandCarousel() {
               </h2>
             </div>
 
-            <div className="lg:pb-2">
-              <p className="max-w-2xl text-[15px] font-light leading-7 text-[#161616]/60 md:text-[17px]">
+            <div className="justify-self-end lg:pb-2">
+              <p className="max-w-2xl text-right text-[15px] font-light leading-7 text-[#161616]/60 md:text-[17px]">
                 We collaborate with forward-thinking businesses to build
                 digital experiences, intelligent platforms, and technology
                 solutions designed for real-world impact.
