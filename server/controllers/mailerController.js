@@ -92,6 +92,7 @@ const getEnquiryRecipients = () => {
   const recipients = [
     process.env.ENQUIRY_EMAIL_1,
     process.env.ENQUIRY_EMAIL_2,
+    process.env.ENQUIRY_EMAIL_3 || "social@brainadz.com",
   ]
     .map((email) => String(email || "").trim())
     .filter(Boolean);

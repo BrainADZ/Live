@@ -97,6 +97,7 @@ test("existing enquiry emails and Live CRM delivery share the same submission", 
   const previousEnv = { ...process.env };
   process.env.ENQUIRY_EMAIL_1 = "sales@example.test";
   process.env.ENQUIRY_EMAIL_2 = "team@example.test";
+  process.env.ENQUIRY_EMAIL_3 = "social@brainadz.com";
   t.after(() => {
     process.env = previousEnv;
   });
@@ -170,7 +171,7 @@ test("existing enquiry emails and Live CRM delivery share the same submission", 
   assert.equal(queued[0].serviceCategory, fields.solution);
   assert.equal(queued[0].message, fields.message);
   assert.equal(queued[0].phone, "+91 9876543210");
-  assert.equal(mail[0].to, "sales@example.test, team@example.test");
+  assert.equal(mail[0].to, "sales@example.test, team@example.test, social@brainadz.com");
   assert.match(mail[0].html, /Visitor &lt;One&gt;/);
 
   crmQueued = true;
