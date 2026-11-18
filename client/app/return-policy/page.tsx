@@ -3,7 +3,8 @@ import PolicyPage, { type PolicySection } from "@/components/legal/PolicyPage";
 
 export const metadata: Metadata = {
   title: "Return Policy",
-  description: "Return, replacement and cancellation guidance for BrainADZ Live digital signage hardware, software and project services.",
+  description:
+    "Return, replacement and cancellation guidance for BrainADZ Live digital signage hardware, software and project services.",
   alternates: {
     canonical: "/return-policy",
   },

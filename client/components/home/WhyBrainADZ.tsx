@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 const reasons = [
   {
     title: "Hardware + Software Expertise",
@@ -57,7 +56,11 @@ export default function WhyChooseSection() {
             </h2>
           </div>
 
-          <p className="max-w-195 justify-self-end text-right text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]" data-aos="fade-left" data-aos-delay="100">
+          <p
+            className="max-w-195 justify-self-end text-right text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             We help businesses move from idea to execution with smart hardware,
             custom software, automation, and AI-enabled systems.
           </p>

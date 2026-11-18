@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import { ArrowRight } from "lucide-react";
@@ -14,11 +13,7 @@ import { getApiUrl } from "@/lib/api";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
-function ArrowRightIcon({
-  className,
-  strokeWidth = 1.6,
-  ...props
-}: IconProps) {
+function ArrowRightIcon({ className, strokeWidth = 1.6, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -36,11 +31,7 @@ function ArrowRightIcon({
   );
 }
 
-function SendIcon({
-  className,
-  strokeWidth = 1.4,
-  ...props
-}: IconProps) {
+function SendIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -191,9 +182,7 @@ export default function ContactPage() {
 
   /* Contact Form Submit */
 
-  const handleContactSubmit = async (
-    event: FormEvent<HTMLFormElement>
-  ) => {
+  const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (isSubmitting) return;
@@ -217,23 +206,18 @@ export default function ContactPage() {
       setFormStatus("");
       setIsFormSuccess(false);
 
-      const response = await fetch(
-        getApiUrl("/api/enquire-now"),
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      const response = await fetch(getApiUrl("/api/enquire-now"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(
-          data.message || "Failed to submit enquiry."
-        );
+        throw new Error(data.message || "Failed to submit enquiry.");
       }
 
       form.reset();
@@ -241,16 +225,14 @@ export default function ContactPage() {
       setSelectedService("");
 
       setIsFormSuccess(true);
-      setFormStatus(
-        "Thank you! Your enquiry has been submitted successfully."
-      );
+      setFormStatus("Thank you! Your enquiry has been submitted successfully.");
     } catch (error) {
       setIsFormSuccess(false);
 
       setFormStatus(
         error instanceof Error
           ? error.message
-          : "Failed to send enquiry. Please try again."
+          : "Failed to send enquiry. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -259,7 +241,6 @@ export default function ContactPage() {
 
   return (
     <main className="bg-white text-[#161616]">
-
       {/* HERO SECTION */}
 
       <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
@@ -282,9 +263,7 @@ export default function ContactPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">
-              Contact
-            </span>
+            <span className="text-white/90">Contact</span>
           </div>
 
           <div
@@ -315,14 +294,16 @@ export default function ContactPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* CONTACT INFO + ENQUIRE FORM */}
 
@@ -351,15 +332,14 @@ export default function ContactPage() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              Share your requirement with BrainADZ Live for software,
-              platforms, digital signage products, demos, project discussions
-              or support. The more context you provide, the easier it is for
-              our team to understand the right next step.
+              Share your requirement with BrainADZ Live for software, platforms,
+              digital signage products, demos, project discussions or support.
+              The more context you provide, the easier it is for our team to
+              understand the right next step.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-10 xl:grid-cols-[0.72fr_1.28fr] xl:gap-14">
-
             {/* LEFT CONTACT INFO */}
 
             <div className="space-y-0">
@@ -408,9 +388,7 @@ export default function ContactPage() {
                               />
                             </span>
 
-                            <span>
-                              {social.name}
-                            </span>
+                            <span>{social.name}</span>
                           </a>
                         ))}
                       </div>
@@ -430,7 +408,6 @@ export default function ContactPage() {
               ))}
             </div>
 
-
             {/* RIGHT ENQUIRE FORM */}
 
             <div
@@ -449,14 +426,12 @@ export default function ContactPage() {
                 </p>
               </div>
 
-
               {/* CONTACT FORM */}
 
               <form
                 onSubmit={handleContactSubmit}
                 className="grid grid-cols-1 gap-5 md:grid-cols-2"
               >
-
                 {/* FULL NAME */}
 
                 <div>
@@ -472,7 +447,6 @@ export default function ContactPage() {
                     className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
                   />
                 </div>
-
 
                 {/* EMAIL */}
 
@@ -490,7 +464,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-
                 {/* PHONE */}
 
                 <div>
@@ -507,7 +480,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-
                 {/* COMPANY */}
 
                 <div>
@@ -523,7 +495,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-
                 {/* AREA OF INTEREST */}
 
                 <div>
@@ -535,7 +506,7 @@ export default function ContactPage() {
                     value={selectedCategory}
                     onChange={(event) => {
                       setSelectedCategory(
-                        event.target.value as ServiceCategory
+                        event.target.value as ServiceCategory,
                       );
 
                       setSelectedService("");
@@ -547,16 +518,12 @@ export default function ContactPage() {
                     </option>
 
                     {Object.keys(serviceCategories).map((category) => (
-                      <option
-                        key={category}
-                        value={category}
-                      >
+                      <option key={category} value={category}>
                         {category}
                       </option>
                     ))}
                   </select>
                 </div>
-
 
                 {/* SELECT REQUIREMENT */}
 
@@ -568,9 +535,7 @@ export default function ContactPage() {
                   <select
                     value={selectedService}
                     disabled={!selectedCategory}
-                    onChange={(event) =>
-                      setSelectedService(event.target.value)
-                    }
+                    onChange={(event) => setSelectedService(event.target.value)}
                     className="h-13.5 w-full rounded-md border border-[#dfe6f1] bg-[#f8faff] px-4 text-[15px] font-light text-[#262626] outline-none transition disabled:cursor-not-allowed disabled:opacity-60 focus:border-[#193175] focus:bg-white"
                   >
                     <option value="" disabled>
@@ -581,16 +546,12 @@ export default function ContactPage() {
 
                     {selectedCategory &&
                       serviceCategories[selectedCategory].map((service) => (
-                        <option
-                          key={service}
-                          value={service}
-                        >
+                        <option key={service} value={service}>
                           {service}
                         </option>
                       ))}
                   </select>
                 </div>
-
 
                 {/* REQUIREMENT DETAILS */}
 
@@ -608,7 +569,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-
                 {/* SUBMIT BUTTON */}
 
                 <div className="md:col-span-2">
@@ -619,20 +579,15 @@ export default function ContactPage() {
                   >
                     <SendIcon className="h-5.25 w-5.25 transition-transform duration-300 group-hover:translate-x-1" />
 
-                    {isSubmitting
-                      ? "Submitting..."
-                      : "Submit Enquiry"}
+                    {isSubmitting ? "Submitting..." : "Submit Enquiry"}
                   </button>
-
 
                   {/* FORM STATUS */}
 
                   {formStatus && (
                     <p
                       className={`mt-4 text-[14px] font-light ${
-                        isFormSuccess
-                          ? "text-green-600"
-                          : "text-red-600"
+                        isFormSuccess ? "text-green-600" : "text-red-600"
                       }`}
                     >
                       {formStatus}
@@ -644,7 +599,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
 
       {/* FIND US MAP */}
 
@@ -702,7 +656,6 @@ export default function ContactPage() {
                   className="group mt-8 inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-[#193175] px-6 text-[15px] font-normal text-[#193175] transition hover:bg-[#193175] hover:text-white"
                 >
                   Open in Maps
-
                   <ArrowRightIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
@@ -721,14 +674,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-
       {/* ENQUIRE POPUP */}
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
-
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

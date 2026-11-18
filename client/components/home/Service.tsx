@@ -1,8 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
-
 import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
@@ -129,7 +127,11 @@ export default function ServiceSection() {
                 />
               </div>
 
-              <ArrowRight size={38} strokeWidth={1.8} className="text-[38px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight
+                size={38}
+                strokeWidth={1.8}
+                className="text-[38px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1"
+              />
             </div>
           </a>
         ))}

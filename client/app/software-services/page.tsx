@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
@@ -194,8 +193,8 @@ export default function SoftwareServicesPage() {
 
               <p className="mt-5 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
                 We can help you launch a new product, replace manual processes,
-                connect disconnected systems, improve an existing application
-                or extend software as your requirements change.
+                connect disconnected systems, improve an existing application or
+                extend software as your requirements change.
               </p>
             </div>
 
@@ -282,13 +281,13 @@ export default function SoftwareServicesPage() {
                 className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
               >
                 <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
                 <div>
                   <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
                     {titleCaseHeading(item.title)}
@@ -300,7 +299,6 @@ export default function SoftwareServicesPage() {
 
                   <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175]">
                     Explore service
-
                     <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -332,8 +330,8 @@ export default function SoftwareServicesPage() {
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
                   Tell us what you are building, replacing or trying to improve.
-                  BrainADZ Live can help across design, development, integration,
-                  modernization and cloud.
+                  BrainADZ Live can help across design, development,
+                  integration, modernization and cloud.
                 </p>
               </div>
 
@@ -351,10 +349,7 @@ export default function SoftwareServicesPage() {
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

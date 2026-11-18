@@ -5,14 +5,7 @@ import path from "node:path";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const allowedExtensions = [
-  ".png",
-  ".jpg",
-  ".jpeg",
-  ".webp",
-  ".svg",
-  ".avif",
-];
+const allowedExtensions = [".png", ".jpg", ".jpeg", ".webp", ".svg", ".avif"];
 
 function formatBrandName(fileName: string) {
   const nameWithoutExtension = fileName.replace(/\.[^/.]+$/, "");

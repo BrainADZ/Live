@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -40,9 +39,19 @@ const capabilityCards = [
   },
 ];
 
-export default function CaseStudyListing({ caseStudies, unavailable }: { caseStudies: CaseStudyCard[]; unavailable: boolean }) {
-  const categories = ["All Case Studies", ...new Set(caseStudies.map(study => study.category))];
-  const featuredCaseStudy = caseStudies.find(study => study.featured) || caseStudies[0];
+export default function CaseStudyListing({
+  caseStudies,
+  unavailable,
+}: {
+  caseStudies: CaseStudyCard[];
+  unavailable: boolean;
+}) {
+  const categories = [
+    "All Case Studies",
+    ...new Set(caseStudies.map((study) => study.category)),
+  ];
+  const featuredCaseStudy =
+    caseStudies.find((study) => study.featured) || caseStudies[0];
   const [activeCategory, setActiveCategory] =
     useState<CaseStudyCategory>("All Case Studies");
   const [searchQuery, setSearchQuery] = useState("");
@@ -118,10 +127,10 @@ export default function CaseStudyListing({ caseStudies, unavailable }: { caseStu
             data-aos-delay="200"
           >
             <p className="max-w-220 text-[14px] font-light leading-normal tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Explore project stories across software, CRM, ERP, digital
-              signage and customer-facing experiences. Each case study focuses
-              on the problem, the solution approach and the workflow behind the
-              final system.
+              Explore project stories across software, CRM, ERP, digital signage
+              and customer-facing experiences. Each case study focuses on the
+              problem, the solution approach and the workflow behind the final
+              system.
             </p>
 
             <div className="mt-8">
@@ -130,279 +139,288 @@ export default function CaseStudyListing({ caseStudies, unavailable }: { caseStu
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Explore Case Studies
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {!caseStudies.length && <section className="section-spacing px-5 lg:px-12"><CmsNotice unavailable={unavailable} kind="Case studies" /></section>}
+      {!caseStudies.length && (
+        <section className="section-spacing px-5 lg:px-12">
+          <CmsNotice unavailable={unavailable} kind="Case studies" />
+        </section>
+      )}
       {/* FEATURED CASE STUDY */}
       {featuredCaseStudy && (
-      <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
-        <div className="mx-auto max-w-450">
-          <div className="mb-12 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
-            <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
-                Featured Case Study
-              </p>
+        <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
+          <div className="mx-auto max-w-450">
+            <div className="mb-12 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+              <div>
+                <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
+                  Featured Case Study
+                </p>
 
-              <h2 className="text-[40px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[52px] lg:text-[60px]">
-                One Project, Viewed from Problem to Working System
-              </h2>
+                <h2 className="text-[40px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[52px] lg:text-[60px]">
+                  One Project, Viewed from Problem to Working System
+                </h2>
+              </div>
+
+              <p className="max-w-190 text-[17px] font-light leading-[1.75] text-[#525252] md:text-[19px]">
+                The best case studies show more than the final interface. They
+                explain the operational problem, the system decisions and how
+                the solution was shaped around real users and workflows.
+              </p>
             </div>
 
-            <p className="max-w-190 text-[17px] font-light leading-[1.75] text-[#525252] md:text-[19px]">
-              The best case studies show more than the final interface. They
-              explain the operational problem, the system decisions and how
-              the solution was shaped around real users and workflows.
-            </p>
-          </div>
+            <Link
+              href={featuredCaseStudy.href}
+              className="group grid overflow-hidden rounded-[20px] border border-[#dfe6f1] bg-[#f8faff] lg:grid-cols-[1.05fr_0.95fr]"
+              data-aos="fade-up"
+            >
+              <div className="relative min-h-100 overflow-hidden bg-[#e9eef7] lg:min-h-155">
+                <div className="absolute inset-0 flex items-center justify-center text-[15px] font-light text-[#8d8d8d]">
+                  Featured case study image
+                </div>
 
-          <Link
-            href={featuredCaseStudy.href}
-            className="group grid overflow-hidden rounded-[20px] border border-[#dfe6f1] bg-[#f8faff] lg:grid-cols-[1.05fr_0.95fr]"
-            data-aos="fade-up"
-          >
-            <div className="relative min-h-100 overflow-hidden bg-[#e9eef7] lg:min-h-155">
-              <div className="absolute inset-0 flex items-center justify-center text-[15px] font-light text-[#8d8d8d]">
-                Featured case study image
-              </div>
-
-              <img
-                src={featuredCaseStudy.image}
-                alt={featuredCaseStudy.imageAlt}
-                className="relative z-10 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                }}
-              />
-            </div>
-
-            <div className="flex flex-col justify-center p-8 md:p-10 lg:p-14">
-              <div className="flex flex-wrap items-center gap-3 text-[13px] font-light">
-                <span className="rounded-full bg-[#193175] px-4 py-2 text-white">
-                  {featuredCaseStudy.category}
-                </span>
-
-                <span className="rounded-full border border-[#dfe6f1] bg-white px-4 py-2 text-[#616161]">
-                  {featuredCaseStudy.industry}
-                </span>
-              </div>
-
-              <h3 className="mt-8 max-w-190 text-[32px] font-normal leading-[1.12] tracking-[-1.1px] text-[#262626] transition group-hover:text-[#193175] md:text-[44px]">
-                {featuredCaseStudy.title}
-              </h3>
-
-              <p className="mt-6 max-w-180 text-[16px] font-light leading-[1.8] text-[#616161] md:text-[18px]">
-                {featuredCaseStudy.summary}
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-2.5">
-                {featuredCaseStudy.services.map((service) => (
-                  <span
-                    key={service}
-                    className="border border-[#dfe6f1] bg-white px-3.5 py-2 text-[13px] font-light text-[#525252]"
-                  >
-                    {service}
-                  </span>
-                ))}
-              </div>
-
-              <span className="mt-10 inline-flex items-center gap-3 text-[15px] font-medium text-[#193175]">
-                Read Case Study
-                <ArrowRight
-                  size={19}
-                  className="transition group-hover:translate-x-1"
+                <img
+                  src={featuredCaseStudy.image}
+                  alt={featuredCaseStudy.imageAlt}
+                  className="relative z-10 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
                 />
-              </span>
-            </div>
-          </Link>
-        </div>
-      </section>
+              </div>
 
+              <div className="flex flex-col justify-center p-8 md:p-10 lg:p-14">
+                <div className="flex flex-wrap items-center gap-3 text-[13px] font-light">
+                  <span className="rounded-full bg-[#193175] px-4 py-2 text-white">
+                    {featuredCaseStudy.category}
+                  </span>
+
+                  <span className="rounded-full border border-[#dfe6f1] bg-white px-4 py-2 text-[#616161]">
+                    {featuredCaseStudy.industry}
+                  </span>
+                </div>
+
+                <h3 className="mt-8 max-w-190 text-[32px] font-normal leading-[1.12] tracking-[-1.1px] text-[#262626] transition group-hover:text-[#193175] md:text-[44px]">
+                  {featuredCaseStudy.title}
+                </h3>
+
+                <p className="mt-6 max-w-180 text-[16px] font-light leading-[1.8] text-[#616161] md:text-[18px]">
+                  {featuredCaseStudy.summary}
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-2.5">
+                  {featuredCaseStudy.services.map((service) => (
+                    <span
+                      key={service}
+                      className="border border-[#dfe6f1] bg-white px-3.5 py-2 text-[13px] font-light text-[#525252]"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+
+                <span className="mt-10 inline-flex items-center gap-3 text-[15px] font-medium text-[#193175]">
+                  Read Case Study
+                  <ArrowRight
+                    size={19}
+                    className="transition group-hover:translate-x-1"
+                  />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </section>
       )}
       {/* CASE STUDIES GRID */}
-      {caseStudies.length > 0 && <section
-        id="case-studies"
-        className="section-spacing scroll-mt-24 bg-[#f8faff] px-5 md:px-4 lg:px-12"
-      >
-        <div className="mx-auto max-w-450">
-          <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-            <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
-                Project Library
-              </p>
+      {caseStudies.length > 0 && (
+        <section
+          id="case-studies"
+          className="section-spacing scroll-mt-24 bg-[#f8faff] px-5 md:px-4 lg:px-12"
+        >
+          <div className="mx-auto max-w-450">
+            <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+              <div>
+                <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
+                  Project Library
+                </p>
 
-              <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore Case Studies by Solution Area
-              </h2>
-            </div>
+                <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+                  Explore Case Studies by Solution Area
+                </h2>
+              </div>
 
-            <div className="flex flex-col gap-5 lg:items-end">
-              <div className="relative w-full max-w-145">
-                <Search
-                  size={19}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#6b7280]"
-                />
+              <div className="flex flex-col gap-5 lg:items-end">
+                <div className="relative w-full max-w-145">
+                  <Search
+                    size={19}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-[#6b7280]"
+                  />
 
-                <input
-                  type="search"
-                  value={searchQuery}
-                  onChange={(event) => {
-                    setSearchQuery(event.target.value);
-                    setVisibleCount(6);
-                  }}
-                  aria-label="Search case studies"
-                  placeholder="Search case studies"
-                  className="h-13.5 w-full rounded-full border border-[#dfe6f1] bg-white pl-12 pr-5 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175]"
-                />
+                  <input
+                    type="search"
+                    value={searchQuery}
+                    onChange={(event) => {
+                      setSearchQuery(event.target.value);
+                      setVisibleCount(6);
+                    }}
+                    aria-label="Search case studies"
+                    placeholder="Search case studies"
+                    className="h-13.5 w-full rounded-full border border-[#dfe6f1] bg-white pl-12 pr-5 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175]"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="mb-10 flex flex-wrap gap-3">
-            {categories.map((category) => {
-              const isActive = activeCategory === category;
+            <div className="mb-10 flex flex-wrap gap-3">
+              {categories.map((category) => {
+                const isActive = activeCategory === category;
 
-              return (
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => {
+                      setActiveCategory(category);
+                      setVisibleCount(6);
+                    }}
+                    className={`rounded-full border px-5 py-2.5 text-[14px] font-light transition ${
+                      isActive
+                        ? "border-[#193175] bg-[#193175] text-white"
+                        : "border-[#dfe6f1] bg-white text-[#525252] hover:border-[#193175] hover:text-[#193175]"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                );
+              })}
+            </div>
+
+            {filteredCaseStudies.length > 0 ? (
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {visibleCaseStudies.map((caseStudy) => (
+                  <Link
+                    key={caseStudy.title}
+                    href={caseStudy.href}
+                    className="group overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)]"
+                  >
+                    <div className="relative h-64 overflow-hidden bg-[#eef2f8]">
+                      <div className="absolute inset-0 flex items-center justify-center text-[14px] font-light text-[#8d8d8d]">
+                        Case study image
+                      </div>
+
+                      <img
+                        src={caseStudy.image}
+                        alt={caseStudy.imageAlt}
+                        className="relative z-10 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
+                      />
+                    </div>
+
+                    <div className="p-7">
+                      <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-light">
+                        <span className="text-[#193175]">
+                          {caseStudy.category}
+                        </span>
+
+                        <span className="text-[#616161]">
+                          {caseStudy.industry}
+                        </span>
+                      </div>
+
+                      <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
+                        {caseStudy.title}
+                      </h3>
+
+                      <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
+                        {caseStudy.summary}
+                      </p>
+
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {caseStudy.services.slice(0, 2).map((service) => (
+                          <span
+                            key={service}
+                            className="bg-[#f3f6fb] px-3 py-1.5 text-[12px] font-light text-[#525252]"
+                          >
+                            {service}
+                          </span>
+                        ))}
+                      </div>
+
+                      <span className="mt-7 inline-flex items-center gap-3 text-[14px] font-medium text-[#193175]">
+                        View Case Study
+                        <ArrowRight
+                          size={17}
+                          className="transition group-hover:translate-x-1"
+                        />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-[18px] border border-[#dfe6f1] bg-white px-6 py-16 text-center">
+                <Workflow
+                  size={36}
+                  strokeWidth={1.5}
+                  className="mx-auto text-[#193175]"
+                />
+
+                <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
+                  No Case Studies Found
+                </h3>
+
+                <p className="mx-auto mt-3 max-w-130 text-[15px] font-light leading-[1.7] text-[#616161]">
+                  Try another search term or switch back to all case studies.
+                </p>
+
                 <button
-                  key={category}
                   type="button"
                   onClick={() => {
-                    setActiveCategory(category);
+                    setSearchQuery("");
+                    setActiveCategory("All Case Studies");
                     setVisibleCount(6);
                   }}
-                  className={`rounded-full border px-5 py-2.5 text-[14px] font-light transition ${
-                    isActive
-                      ? "border-[#193175] bg-[#193175] text-white"
-                      : "border-[#dfe6f1] bg-white text-[#525252] hover:border-[#193175] hover:text-[#193175]"
-                  }`}
+                  className="mt-6 inline-flex items-center gap-2 text-[14px] font-medium text-[#193175]"
                 >
-                  {category}
+                  Clear Filters
+                  <ArrowRight size={16} />
                 </button>
-              );
-            })}
-          </div>
+              </div>
+            )}
 
-          {filteredCaseStudies.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {visibleCaseStudies.map((caseStudy) => (
-                <Link
-                  key={caseStudy.title}
-                  href={caseStudy.href}
-                  className="group overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)]"
+            {filteredCaseStudies.length > 0 && hasMoreCaseStudies && (
+              <div className="mt-12 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setVisibleCount((currentCount) =>
+                      Math.min(currentCount + 6, filteredCaseStudies.length),
+                    )
+                  }
+                  className="group inline-flex h-13.5 min-w-52 items-center justify-between rounded-sm border border-[#193175] px-6 text-[15px] font-medium text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
                 >
-                  <div className="relative h-64 overflow-hidden bg-[#eef2f8]">
-                    <div className="absolute inset-0 flex items-center justify-center text-[14px] font-light text-[#8d8d8d]">
-                      Case study image
-                    </div>
+                  <span>Load More Projects</span>
 
-                    <img
-                      src={caseStudy.image}
-                      alt={caseStudy.imageAlt}
-                      className="relative z-10 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                      onError={(event) => {
-                        event.currentTarget.style.display = "none";
-                      }}
-                    />
-                  </div>
-
-                  <div className="p-7">
-                    <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-light">
-                      <span className="text-[#193175]">
-                        {caseStudy.category}
-                      </span>
-
-                      <span className="text-[#616161]">
-                        {caseStudy.industry}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
-                      {caseStudy.title}
-                    </h3>
-
-                    <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
-                      {caseStudy.summary}
-                    </p>
-
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {caseStudy.services.slice(0, 2).map((service) => (
-                        <span
-                          key={service}
-                          className="bg-[#f3f6fb] px-3 py-1.5 text-[12px] font-light text-[#525252]"
-                        >
-                          {service}
-                        </span>
-                      ))}
-                    </div>
-
-                    <span className="mt-7 inline-flex items-center gap-3 text-[14px] font-medium text-[#193175]">
-                      View Case Study
-                      <ArrowRight
-                        size={17}
-                        className="transition group-hover:translate-x-1"
-                      />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-[18px] border border-[#dfe6f1] bg-white px-6 py-16 text-center">
-              <Workflow
-                size={36}
-                strokeWidth={1.5}
-                className="mx-auto text-[#193175]"
-              />
-
-              <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
-                No Case Studies Found
-              </h3>
-
-              <p className="mx-auto mt-3 max-w-130 text-[15px] font-light leading-[1.7] text-[#616161]">
-                Try another search term or switch back to all case studies.
-              </p>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSearchQuery("");
-                  setActiveCategory("All Case Studies");
-                  setVisibleCount(6);
-                }}
-                className="mt-6 inline-flex items-center gap-2 text-[14px] font-medium text-[#193175]"
-              >
-                Clear Filters
-                <ArrowRight size={16} />
-              </button>
-            </div>
-          )}
-
-          {filteredCaseStudies.length > 0 && hasMoreCaseStudies && (
-            <div className="mt-12 flex justify-center">
-              <button
-                type="button"
-                onClick={() =>
-                  setVisibleCount((currentCount) =>
-                    Math.min(currentCount + 6, filteredCaseStudies.length),
-                  )
-                }
-                className="group inline-flex h-13.5 min-w-52 items-center justify-between rounded-sm border border-[#193175] px-6 text-[15px] font-medium text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
-              >
-                <span>Load More Projects</span>
-
-                <ArrowRight
-                  size={18}
-                  className="transition group-hover:translate-x-1"
-                />
-              </button>
-            </div>
-          )}
-        </div>
-      </section>}
+                  <ArrowRight
+                    size={18}
+                    className="transition group-hover:translate-x-1"
+                  />
+                </button>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* WHAT THE CASE STUDIES COVER */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
@@ -454,7 +472,6 @@ export default function CaseStudyListing({ caseStudies, unavailable }: { caseStu
         </div>
       </section>
 
-
       {/* FINAL CTA */}
       <section className="section-spacing bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
@@ -489,17 +506,18 @@ export default function CaseStudyListing({ caseStudies, unavailable }: { caseStu
               >
                 <span>Discuss Your Project</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

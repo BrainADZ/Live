@@ -53,17 +53,13 @@ export default function ERPLocations() {
 
             <h2 className="max-w-[680px] text-[34px] font-normal leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]">
               Connected Across{" "}
-              <span className="text-[#193175]">
-                Global Markets.
-              </span>
+              <span className="text-[#193175]">Global Markets.</span>
             </h2>
           </div>
 
-          <p
-            className="max-w-[540px] text-[14px] font-light leading-[1.65] text-[#616161] md:text-[16px]"
-          >
-            Working across borders to deliver technology, digital products,
-            and long-term business support.
+          <p className="max-w-[540px] text-[14px] font-light leading-[1.65] text-[#616161] md:text-[16px]">
+            Working across borders to deliver technology, digital products, and
+            long-term business support.
           </p>
         </div>
 

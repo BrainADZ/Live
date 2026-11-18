@@ -2,17 +2,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Minus,
-  Plus,
-  Download,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Minus, Plus, Download } from "lucide-react";
 
 const benefits = [
   {
@@ -48,33 +41,27 @@ const specifications = [
 const applications = [
   {
     title: "Retail Stores",
-    iconSrc:
-      "/signage-products/retail-stores.svg",
+    iconSrc: "/signage-products/retail-stores.svg",
   },
   {
     title: "Shopping Malls",
-    iconSrc:
-      "/signage-products/shopping-malls.svg",
+    iconSrc: "/signage-products/shopping-malls.svg",
   },
   {
     title: "Corporate & Reception",
-    iconSrc:
-      "/signage-products/corporate-reception.svg",
+    iconSrc: "/signage-products/corporate-reception.svg",
   },
   {
     title: "Healthcare Facilities",
-    iconSrc:
-      "/signage-products/healthcare-facilities.svg",
+    iconSrc: "/signage-products/healthcare-facilities.svg",
   },
   {
     title: "Events & Exhibitions",
-    iconSrc:
-      "/signage-products/events-exhibitions.svg",
+    iconSrc: "/signage-products/events-exhibitions.svg",
   },
   {
     title: "Hotels & Hospitality",
-    iconSrc:
-      "/signage-products/hospitality.svg",
+    iconSrc: "/signage-products/hospitality.svg",
   },
 ];
 
@@ -148,12 +135,15 @@ export default function VerticalFloorMountDigitalKioskPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">Vertical Floor Mount Digital Kiosk</span>
+            <span className="text-white/90">
+              Vertical Floor Mount Digital Kiosk
+            </span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Vertical Floor Mount Digital Kiosk for Customer-Facing Communication
+              Vertical Floor Mount Digital Kiosk for Customer-Facing
+              Communication
             </h1>
           </div>
 
@@ -171,7 +161,11 @@ export default function VerticalFloorMountDigitalKioskPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -195,16 +189,15 @@ export default function VerticalFloorMountDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              A Freestanding Digital Display for Visible Business
-              Communication.
+              A Freestanding Digital Display for Visible Business Communication.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              The BrainADZ Live Vertical Floor Mount Digital Kiosk is a screen-based
-              signage solution designed for promotional content, customer
-              information and business communication. It can display changing
-              videos and images through local playback or an optional signage
-              management setup based on the project requirement.
+              The BrainADZ Live Vertical Floor Mount Digital Kiosk is a
+              screen-based signage solution designed for promotional content,
+              customer information and business communication. It can display
+              changing videos and images through local playback or an optional
+              signage management setup based on the project requirement.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
@@ -341,9 +334,9 @@ export default function VerticalFloorMountDigitalKioskPage() {
             </h2>
 
             <p className="mt-6 text-[16px] font-light leading-[1.75] text-black/65">
-              Vertical Floor Mount Digital Kiosks provide a dedicated screen-based
-              communication point for promotional content, information and
-              customer-facing campaigns across business spaces.
+              Vertical Floor Mount Digital Kiosks provide a dedicated
+              screen-based communication point for promotional content,
+              information and customer-facing campaigns across business spaces.
             </p>
 
             <div className="mt-8 space-y-5">
@@ -368,7 +361,9 @@ export default function VerticalFloorMountDigitalKioskPage() {
                   />
 
                   <div>
-                    <h3 className="text-[20px] font-normal">{titleCaseHeading(item.title)}</h3>
+                    <h3 className="text-[20px] font-normal">
+                      {titleCaseHeading(item.title)}
+                    </h3>
 
                     <p className="mt-2 text-[15px] font-light leading-[1.7] text-black/65">
                       {item.text}
@@ -534,9 +529,7 @@ export default function VerticalFloorMountDigitalKioskPage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -598,17 +591,18 @@ export default function VerticalFloorMountDigitalKioskPage() {
               >
                 <span>Request a Quote</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

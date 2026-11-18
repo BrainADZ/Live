@@ -2,15 +2,9 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  Download,
-  Minus,
-  Plus,
-} from "lucide-react";
+import { ArrowRight, Download, Minus, Plus } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
 
@@ -112,8 +106,7 @@ const workflowSteps = [
   {
     title: "Process & Pipeline Mapping",
     text: "We define stages, ownership rules, activities, data fields and the required CRM workflow.",
-    iconSrc:
-      "/icons/crm-software/workflow/process-pipeline-mapping.svg",
+    iconSrc: "/icons/crm-software/workflow/process-pipeline-mapping.svg",
   },
   {
     title: "Dashboard Planning",
@@ -123,8 +116,7 @@ const workflowSteps = [
   {
     title: "Platform Configuration",
     text: "The required CRM modules, workflows, dashboards and integrations are configured or developed for the project.",
-    iconSrc:
-      "/icons/crm-software/workflow/platform-configuration.svg",
+    iconSrc: "/icons/crm-software/workflow/platform-configuration.svg",
   },
   {
     title: "Testing & Handover",
@@ -141,10 +133,10 @@ const workflowSteps = [
 const workflowLayout = [
   { ...workflowSteps[0], left: "21.75%", top: "0px" },
   { ...workflowSteps[1], left: "78.25%", top: "0px" },
-  { ...workflowSteps[2], left: "21.75%", top: "300px" },
-  { ...workflowSteps[3], left: "78.25%", top: "300px" },
-  { ...workflowSteps[4], left: "21.75%", top: "570px" },
-  { ...workflowSteps[5], left: "78.25%", top: "570px" },
+  { ...workflowSteps[2], left: "21.75%", top: "360px" },
+  { ...workflowSteps[3], left: "78.25%", top: "360px" },
+  { ...workflowSteps[4], left: "21.75%", top: "720px" },
+  { ...workflowSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const integrations = [
@@ -199,10 +191,7 @@ export default function CRMSoftwarePage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -235,7 +224,11 @@ export default function CRMSoftwarePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -264,17 +257,15 @@ export default function CRMSoftwarePage() {
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
               BrainADZ Live CRM Software helps businesses organize enquiries,
-              customer information, sales opportunities and follow-up
-              activities through one structured platform. The CRM workflow can
-              be configured around the stages, responsibilities, data and
-              reporting needs of the business.
+              customer information, sales opportunities and follow-up activities
+              through one structured platform. The CRM workflow can be
+              configured around the stages, responsibilities, data and reporting
+              needs of the business.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-normal">
-                  Pipeline Visibility
-                </h3>
+                <h3 className="text-[20px] font-normal">Pipeline Visibility</h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   Keep leads, opportunities, owners and next actions visible
@@ -341,10 +332,7 @@ export default function CRMSoftwarePage() {
                 text: "Create dashboards and reports using the CRM data and performance indicators defined for the project.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -526,8 +514,8 @@ export default function CRMSoftwarePage() {
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
               BrainADZ Live CRM Software can bring customer information,
-              activities, opportunities, reporting and planned integrations
-              into one structured sales workflow.
+              activities, opportunities, reporting and planned integrations into
+              one structured sales workflow.
             </p>
 
             <div className="mt-8">
@@ -568,16 +556,7 @@ export default function CRMSoftwarePage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -630,10 +609,10 @@ export default function CRMSoftwarePage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -648,10 +627,7 @@ export default function CRMSoftwarePage() {
                   refX="16"
                   refY="7"
                 >
-                  <path
-                    d="M 0 0 L 18 7 L 0 14 z"
-                    fill="#193175"
-                  />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
@@ -665,7 +641,7 @@ export default function CRMSoftwarePage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 171 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -673,16 +649,7 @@ export default function CRMSoftwarePage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#crm-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -691,7 +658,16 @@ export default function CRMSoftwarePage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#crm-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -829,10 +805,7 @@ export default function CRMSoftwarePage() {
                 text: "Configuration, deployment guidance and support are provided according to the agreed project scope.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -875,9 +848,7 @@ export default function CRMSoftwarePage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -939,7 +910,11 @@ export default function CRMSoftwarePage() {
               >
                 <span>Request a Demo</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>

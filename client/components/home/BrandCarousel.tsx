@@ -87,9 +87,9 @@ export default function BrandCarousel() {
 
             <div className="justify-self-end lg:pb-2">
               <p className="max-w-2xl text-right text-[15px] font-light leading-7 text-[#161616]/60 md:text-[17px]">
-                We collaborate with forward-thinking businesses to build
-                digital experiences, intelligent platforms, and technology
-                solutions designed for real-world impact.
+                We collaborate with forward-thinking businesses to build digital
+                experiences, intelligent platforms, and technology solutions
+                designed for real-world impact.
               </p>
             </div>
           </div>
@@ -184,8 +184,9 @@ export default function BrandCarousel() {
         .brand-item,
         .brand-item img,
         .brand-item span {
-          transition-property: background-color, border-color, box-shadow,
-            color, filter, opacity, transform !important;
+          transition-property:
+            background-color, border-color, box-shadow, color, filter, opacity,
+            transform !important;
           transition-duration: 300ms !important;
           transition-timing-function: ease !important;
         }

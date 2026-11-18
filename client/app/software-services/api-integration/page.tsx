@@ -2,16 +2,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Minus,
-  Plus,
-} from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import { ArrowRight, CheckCircle2, Minus, Plus } from "lucide-react";
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "languages" | "frameworks" | "databases" | "cloud";
@@ -81,10 +75,10 @@ const processSteps = [
 const processLayout = [
   { ...processSteps[0], left: "21.75%", top: "0px" },
   { ...processSteps[1], left: "78.25%", top: "0px" },
-  { ...processSteps[2], left: "21.75%", top: "300px" },
-  { ...processSteps[3], left: "78.25%", top: "300px" },
-  { ...processSteps[4], left: "21.75%", top: "570px" },
-  { ...processSteps[5], left: "78.25%", top: "570px" },
+  { ...processSteps[2], left: "21.75%", top: "360px" },
+  { ...processSteps[3], left: "78.25%", top: "360px" },
+  { ...processSteps[4], left: "21.75%", top: "720px" },
+  { ...processSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const challenges = [
@@ -324,7 +318,11 @@ export default function ApiIntegrationPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -399,10 +397,7 @@ export default function ApiIntegrationPage() {
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {challenges.map((item) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <div className="manual-icon-box mb-5 flex h-14 w-14 items-center justify-center">
                   <img
                     src={item.iconSrc}
@@ -467,16 +462,7 @@ export default function ApiIntegrationPage() {
       </section>
 
       {/* API INTEGRATION PROCESS */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -530,10 +516,10 @@ export default function ApiIntegrationPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -562,7 +548,7 @@ export default function ApiIntegrationPage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -570,16 +556,7 @@ export default function ApiIntegrationPage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#api-process-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -588,7 +565,16 @@ export default function ApiIntegrationPage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#api-process-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -647,10 +633,7 @@ export default function ApiIntegrationPage() {
 
           <div className="grid gap-x-10 gap-y-8 md:grid-cols-2">
             {integrationTypes.map((item) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <div className="manual-icon-box mb-5 flex h-14 w-14 items-center justify-center">
                   <img
                     src={item.iconSrc}
@@ -710,9 +693,7 @@ export default function ApiIntegrationPage() {
 
                   <span
                     className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                      isActive
-                        ? "w-full opacity-100"
-                        : "w-0 opacity-0"
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
                 </button>
@@ -778,10 +759,7 @@ export default function ApiIntegrationPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -926,9 +904,7 @@ export default function ApiIntegrationPage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -991,17 +967,18 @@ export default function ApiIntegrationPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

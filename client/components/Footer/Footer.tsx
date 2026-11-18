@@ -1,4 +1,3 @@
-
 "use client";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -262,22 +261,18 @@ export default function Footer() {
 
   return (
     <footer className="lazy-section bg-[#f2f2f2] text-[#616161]">
-
       {/* =====================================
           TOP FOOTER LINKS
       ===================================== */}
 
       <div className="site-container section-spacing">
-
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-12">
-
           {/* EXISTING FOOTER COLUMNS */}
 
           {footerColumns.map((column) => {
             const isExpanded = expandedColumns[column.title];
 
-            const hasMoreLinks =
-              column.links.length > INITIAL_VISIBLE_LINKS;
+            const hasMoreLinks = column.links.length > INITIAL_VISIBLE_LINKS;
 
             const visibleLinks = isExpanded
               ? column.links
@@ -285,7 +280,6 @@ export default function Footer() {
 
             return (
               <div key={column.title}>
-
                 {/* COLUMN HEADING */}
 
                 <h3 className="mb-5 text-[14px] font-semibold leading-none text-[#616161]">
@@ -319,7 +313,6 @@ export default function Footer() {
                     {isExpanded ? "View less" : "View more"}
                   </button>
                 )}
-
               </div>
             );
           })}
@@ -329,7 +322,6 @@ export default function Footer() {
           ===================================== */}
 
           <div>
-
             {/* HEADING */}
 
             <h3 className="mb-5 text-[14px] font-semibold leading-none text-[#616161]">
@@ -337,7 +329,6 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-5">
-
               {/* EMAIL */}
 
               <a
@@ -398,11 +389,8 @@ export default function Footer() {
                   className="mt-0.5 shrink-0 text-[#193175]"
                 />
 
-                <span>
-                  {contactDetails.locations}
-                </span>
+                <span>{contactDetails.locations}</span>
               </div>
-
             </div>
 
             {/* GET IN TOUCH BUTTON */}
@@ -419,9 +407,7 @@ export default function Footer() {
                 className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
             </Link>
-
           </div>
-
         </div>
       </div>
 
@@ -430,7 +416,6 @@ export default function Footer() {
       ===================================== */}
 
       <div className="site-container flex flex-col gap-4 pb-7 md:flex-row md:items-center md:justify-between">
-
         {/* COPYRIGHT */}
 
         <span className="shrink-0 text-[12px] text-[#616161]">
@@ -454,7 +439,6 @@ export default function Footer() {
             </Link>
           ))}
         </nav>
-
       </div>
     </footer>
   );

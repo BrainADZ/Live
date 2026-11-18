@@ -3,16 +3,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
-import {
-  ArrowRight,
-  Download,
-  Minus,
-  Plus,
-} from "lucide-react";
+import { ArrowRight, Download, Minus, Plus } from "lucide-react";
 
 const benefits = [
   {
@@ -34,18 +28,12 @@ const benefits = [
 ];
 
 const specifications = [
-  [
-    "Display Type",
-    "Large-format screen-based display",
-  ],
+  ["Display Type", "Large-format screen-based display"],
   [
     "Primary Use",
     "Digital signage, presentations, announcements and business communication",
   ],
-  [
-    "Content Support",
-    "Videos, images, slides and business information",
-  ],
+  ["Content Support", "Videos, images, slides and business information"],
   [
     "Placement Planning",
     "Placement and mounting approach based on the selected setup and project requirement",
@@ -71,8 +59,7 @@ const useCases = [
   },
   {
     title: "Reception & Visitor Areas",
-    iconSrc:
-      "/signage-products/reception-areas.svg",
+    iconSrc: "/signage-products/reception-areas.svg",
   },
   {
     title: "Shopping Malls",
@@ -80,8 +67,7 @@ const useCases = [
   },
   {
     title: "Education & Training Spaces",
-    iconSrc:
-      "/signage-products/education-training-spaces.svg",
+    iconSrc: "/signage-products/education-training-spaces.svg",
   },
   {
     title: "Hotels & Hospitality",
@@ -172,10 +158,7 @@ export default function LFDVideoWallsPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -208,7 +191,11 @@ export default function LFDVideoWallsPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -272,10 +259,7 @@ export default function LFDVideoWallsPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {benefits.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -434,9 +418,7 @@ export default function LFDVideoWallsPage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -499,17 +481,18 @@ export default function LFDVideoWallsPage() {
               >
                 <span>Request a Quote</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

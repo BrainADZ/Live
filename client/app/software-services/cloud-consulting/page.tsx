@@ -1,13 +1,11 @@
- 
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, Minus, Plus, ShieldCheck } from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "platforms" | "devops" | "containers" | "monitoring";
@@ -21,8 +19,7 @@ const cloudServices = [
   {
     title: "Cloud Strategy & Assessment",
     text: "We assess your applications, infrastructure, workloads and business priorities to define the right cloud approach.",
-    iconSrc:
-      "/icons/cloud-consulting/services/cloud-strategy-assessment.svg",
+    iconSrc: "/icons/cloud-consulting/services/cloud-strategy-assessment.svg",
   },
   {
     title: "Cloud Migration",
@@ -32,14 +29,12 @@ const cloudServices = [
   {
     title: "Cloud Architecture & Setup",
     text: "Design and configure cloud environments around your performance, security, availability and scalability requirements.",
-    iconSrc:
-      "/icons/cloud-consulting/services/cloud-architecture-setup.svg",
+    iconSrc: "/icons/cloud-consulting/services/cloud-architecture-setup.svg",
   },
   {
     title: "Cloud Security & Access",
     text: "Improve identity, permissions, network controls, monitoring and secure deployment practices across your cloud environment.",
-    iconSrc:
-      "/icons/cloud-consulting/services/cloud-security-access.svg",
+    iconSrc: "/icons/cloud-consulting/services/cloud-security-access.svg",
   },
   {
     title: "Cost & Performance Optimization",
@@ -50,8 +45,7 @@ const cloudServices = [
   {
     title: "Cloud Support & Management",
     text: "Keep cloud environments monitored, maintained and optimized as applications, workloads and business requirements change.",
-    iconSrc:
-      "/icons/cloud-consulting/services/cloud-support-management.svg",
+    iconSrc: "/icons/cloud-consulting/services/cloud-support-management.svg",
   },
 ];
 
@@ -165,10 +159,10 @@ const cloudProcess = [
 const cloudProcessLayout = [
   { ...cloudProcess[0], left: "21.75%", top: "0px" },
   { ...cloudProcess[1], left: "78.25%", top: "0px" },
-  { ...cloudProcess[2], left: "21.75%", top: "300px" },
-  { ...cloudProcess[3], left: "78.25%", top: "300px" },
-  { ...cloudProcess[4], left: "21.75%", top: "570px" },
-  { ...cloudProcess[5], left: "78.25%", top: "570px" },
+  { ...cloudProcess[2], left: "21.75%", top: "360px" },
+  { ...cloudProcess[3], left: "78.25%", top: "360px" },
+  { ...cloudProcess[4], left: "21.75%", top: "720px" },
+  { ...cloudProcess[5], left: "78.25%", top: "720px" },
 ];
 
 const tabs: { label: string; value: TabType }[] = [
@@ -303,18 +297,24 @@ export default function CloudConsultingPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-205 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              We help businesses assess, migrate, secure and optimize cloud environments so applications and infrastructure are easier to manage, scale and improve over time.
+              We help businesses assess, migrate, secure and optimize cloud
+              environments so applications and infrastructure are easier to
+              manage, scale and improve over time.
             </p>
 
             <div className="mt-8">
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -328,24 +328,47 @@ export default function CloudConsultingPage() {
               Overview
             </p>
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Plan the Right Cloud Environment for the Systems Your Business Actually Runs.
+              Plan the Right Cloud Environment for the Systems Your Business
+              Actually Runs.
             </h2>
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps businesses make practical cloud decisions—from assessing existing applications and infrastructure to planning migration, architecture, security, cost and ongoing operations. The goal is not to move everything blindly, but to build the right cloud setup for your workloads and business needs.
+              BrainADZ Live helps businesses make practical cloud decisions—from
+              assessing existing applications and infrastructure to planning
+              migration, architecture, security, cost and ongoing operations.
+              The goal is not to move everything blindly, but to build the right
+              cloud setup for your workloads and business needs.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-7 md:grid-cols-2">
             {[
-              ["Cloud Readiness", "Understand what should move, what should change and what should remain as it is."],
-              ["Secure Architecture", "Plan identity, permissions, networks and data protection from the start."],
-              ["Cost Visibility", "Understand resource usage and reduce spending on capacity you do not need."],
-              ["Operational Flexibility", "Adjust infrastructure and services as applications and workloads change."],
+              [
+                "Cloud Readiness",
+                "Understand what should move, what should change and what should remain as it is.",
+              ],
+              [
+                "Secure Architecture",
+                "Plan identity, permissions, networks and data protection from the start.",
+              ],
+              [
+                "Cost Visibility",
+                "Understand resource usage and reduce spending on capacity you do not need.",
+              ],
+              [
+                "Operational Flexibility",
+                "Adjust infrastructure and services as applications and workloads change.",
+              ],
             ].map(([title, text], index) => (
               <div key={title} className="border-t border-black/10 pt-6">
-                <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[22px] font-normal tracking-[-0.4px]">{titleCaseHeading(title)}</h3>
-                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{text}</p>
+                <span className="text-[13px] font-semibold text-[#193175]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-3 text-[22px] font-normal tracking-[-0.4px]">
+                  {titleCaseHeading(title)}
+                </h3>
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {text}
+                </p>
               </div>
             ))}
           </div>
@@ -365,15 +388,28 @@ export default function CloudConsultingPage() {
               </h2>
             </div>
             <p className="max-w-190 text-[16px] font-light leading-[1.7] text-black/65">
-              The right cloud setup can make infrastructure easier to scale, improve availability and give teams better visibility into systems and costs. The value comes from choosing the right services and architecture—not simply moving everything to the cloud.
+              The right cloud setup can make infrastructure easier to scale,
+              improve availability and give teams better visibility into systems
+              and costs. The value comes from choosing the right services and
+              architecture—not simply moving everything to the cloud.
             </p>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-5">
-            {["Flexible Scaling", "Cost Visibility", "Better Availability", "Stronger Access Control", "Faster Deployment"].map((item, index) => (
+            {[
+              "Flexible Scaling",
+              "Cost Visibility",
+              "Better Availability",
+              "Stronger Access Control",
+              "Faster Deployment",
+            ].map((item, index) => (
               <div key={item} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[22px] font-normal tracking-[-0.4px]">{titleCaseHeading(item)}</h3>
+                <span className="text-[13px] font-semibold text-[#193175]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-3 text-[22px] font-normal tracking-[-0.4px]">
+                  {titleCaseHeading(item)}
+                </h3>
               </div>
             ))}
           </div>
@@ -388,7 +424,8 @@ export default function CloudConsultingPage() {
               Cloud Consulting Services
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Cloud Consulting for Assessment, Migration, Architecture and Ongoing Optimization.
+              Cloud Consulting for Assessment, Migration, Architecture and
+              Ongoing Optimization.
             </h2>
           </div>
 
@@ -431,14 +468,20 @@ export default function CloudConsultingPage() {
               What a Well-Planned Cloud Approach Can Improve.
             </h2>
             <p className="mt-6 max-w-175 text-[16px] font-light leading-[1.75] text-black/70">
-              Cloud consulting should solve practical infrastructure and application problems. We focus on clearer planning, controlled migration, stronger visibility and an environment that can be managed as your systems change.
+              Cloud consulting should solve practical infrastructure and
+              application problems. We focus on clearer planning, controlled
+              migration, stronger visibility and an environment that can be
+              managed as your systems change.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8">
               <h3 className="text-[28px] font-normal leading-[1.15] tracking-[-0.7px] text-[#193175]">
                 Plan Your Next Cloud Move
               </h3>
-              <a href="/contact" className="mt-7 inline-flex h-12.5 items-center justify-center gap-3 rounded-sm bg-[#193175] px-6 text-[14px] font-semibold text-white transition hover:bg-[#2f4a82]">
+              <a
+                href="/contact"
+                className="mt-7 inline-flex h-12.5 items-center justify-center gap-3 rounded-sm bg-[#193175] px-6 text-[14px] font-semibold text-white transition hover:bg-[#2f4a82]"
+              >
                 Discuss Your Cloud Needs <ArrowRight size={18} />
               </a>
             </div>
@@ -446,13 +489,20 @@ export default function CloudConsultingPage() {
 
           <div>
             {benefits.map((item, index) => (
-              <div key={item.title} className="grid gap-5 border-b border-black/10 py-8 md:grid-cols-[78px_1fr]">
+              <div
+                key={item.title}
+                className="grid gap-5 border-b border-black/10 py-8 md:grid-cols-[78px_1fr]"
+              >
                 <div className="flex h-15 w-15 items-center justify-center rounded-full bg-[#193175]/10 text-[14px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <div>
-                  <h3 className="text-[24px] font-normal tracking-[-0.5px] text-black">{titleCaseHeading(item.title)}</h3>
-                  <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65">{item.text}</p>
+                  <h3 className="text-[24px] font-normal tracking-[-0.5px] text-black">
+                    {titleCaseHeading(item.title)}
+                  </h3>
+                  <p className="mt-3 text-[16px] font-light leading-[1.75] text-black/65">
+                    {item.text}
+                  </p>
                 </div>
               </div>
             ))}
@@ -471,16 +521,24 @@ export default function CloudConsultingPage() {
               A Practical Path from Assessment to Ongoing Cloud Operations.
             </h2>
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              We help you decide what to move, design the right environment, execute the change carefully and improve the setup after it is running.
+              We help you decide what to move, design the right environment,
+              execute the change carefully and improve the setup after it is
+              running.
             </p>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {adoptionItems.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{titleCaseHeading(item.title)}</h3>
-                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
+                <span className="text-[13px] font-semibold text-[#193175]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
+                  {titleCaseHeading(item.title)}
+                </h3>
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -488,16 +546,7 @@ export default function CloudConsultingPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -507,7 +556,9 @@ export default function CloudConsultingPage() {
               How We Plan and Deliver Cloud Consulting
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              A clear process to understand your current setup, plan the right change, implement it carefully and keep improving the environment after launch.
+              A clear process to understand your current setup, plan the right
+              change, implement it carefully and keep improving the environment
+              after launch.
             </p>
           </div>
 
@@ -547,18 +598,66 @@ export default function CloudConsultingPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
-            <svg className="pointer-events-none absolute inset-0 z-0 h-full w-full" viewBox="0 0 1600 790" fill="none" aria-hidden="true" preserveAspectRatio="none">
+          <div className="relative hidden h-[1080px] lg:block">
+            <svg
+              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+              viewBox="0 0 1600 1080"
+              fill="none"
+              aria-hidden="true"
+              preserveAspectRatio="none"
+            >
               <defs>
-                <marker id="cloud-process-arrowhead" markerHeight="14" markerUnits="userSpaceOnUse" markerWidth="18" orient="auto" refX="16" refY="7">
+                <marker
+                  id="cloud-process-arrowhead"
+                  markerHeight="14"
+                  markerUnits="userSpaceOnUse"
+                  markerWidth="18"
+                  orient="auto"
+                  refX="16"
+                  refY="7"
+                >
                   <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
-              <path d="M 392 43 L 1208 43" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#cloud-process-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#cloud-process-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#cloud-process-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#cloud-process-arrowhead)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#cloud-process-arrowhead)"
+              />
+              <path
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+              <path
+                d="M 1208 403 L 392 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#cloud-process-arrowhead)"
+              />
+              <path
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#cloud-process-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#cloud-process-arrowhead)"
+              />
             </svg>
 
             {cloudProcessLayout.map((item) => (
@@ -592,11 +691,27 @@ export default function CloudConsultingPage() {
       {/* PLATFORMS */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450 text-center">
-          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Cloud Platforms</p>
-          <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Cloud Platforms Selected Around the Project Requirement.</h2>
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+            Cloud Platforms
+          </p>
+          <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+            Cloud Platforms Selected Around the Project Requirement.
+          </h2>
           <div className="mt-12 grid gap-8 md:grid-cols-3 lg:grid-cols-6">
-            {["AWS", "Microsoft Azure", "Google Cloud", "Oracle Cloud", "DigitalOcean", "IBM Cloud"].map((item) => (
-              <div key={item} className="border-t border-black/10 pt-7 text-[20px] font-light text-black/75">{item}</div>
+            {[
+              "AWS",
+              "Microsoft Azure",
+              "Google Cloud",
+              "Oracle Cloud",
+              "DigitalOcean",
+              "IBM Cloud",
+            ].map((item) => (
+              <div
+                key={item}
+                className="border-t border-black/10 pt-7 text-[20px] font-light text-black/75"
+              >
+                {item}
+              </div>
             ))}
           </div>
         </div>
@@ -608,12 +723,16 @@ export default function CloudConsultingPage() {
       <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">Tech Stack</p>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
+              Tech Stack
+            </p>
             <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Platforms and Tools Used Across Cloud Projects
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use cloud platforms, deployment tools, container technologies and monitoring systems according to the architecture and operational needs of each project.
+              We use cloud platforms, deployment tools, container technologies
+              and monitoring systems according to the architecture and
+              operational needs of each project.
             </p>
           </div>
 
@@ -621,9 +740,16 @@ export default function CloudConsultingPage() {
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
               return (
-                <button key={tab.value} type="button" onClick={() => setActiveTab(tab.value)} className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"}`}>
+                <button
+                  key={tab.value}
+                  type="button"
+                  onClick={() => setActiveTab(tab.value)}
+                  className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"}`}
+                >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`}
+                  />
                 </button>
               );
             })}
@@ -631,14 +757,34 @@ export default function CloudConsultingPage() {
 
           <div className="mx-auto max-w-315">
             <div className="space-y-5 md:space-y-6">
-              {[techStack[activeTab].slice(0, 4), techStack[activeTab].slice(4, 6)].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
-                    <div key={item.name} className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""}`}>
+                    <div
+                      key={item.name}
+                      className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""}`}
+                    >
                       <div className="flex h-11.5 w-full items-center justify-center">
-                        <img src={item.icon} alt={item.name} loading="lazy" decoding="async" className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          loading="lazy"
+                          decoding="async"
+                          className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
                       </div>
-                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">{titleCaseHeading(item.name)}</h3>
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                        {titleCaseHeading(item.name)}
+                      </h3>
                     </div>
                   ))}
                 </div>
@@ -652,15 +798,25 @@ export default function CloudConsultingPage() {
       <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Why Choose BrainADZ Live</p>
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Cloud Decisions Based on Your Systems—Not a Fixed Template.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Why Choose BrainADZ Live
+            </p>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+              Cloud Decisions Based on Your Systems—Not a Fixed Template.
+            </h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{titleCaseHeading(item.title)}</h3>
-                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
+                <span className="text-[13px] font-semibold text-[#193175]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
+                  {titleCaseHeading(item.title)}
+                </h3>
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -671,16 +827,33 @@ export default function CloudConsultingPage() {
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
-            <img src="/overview/Cloud-Poster.webp" alt="Cloud support and optimization" className="h-full w-full object-cover" />
+            <img
+              src="/overview/Cloud-Poster.webp"
+              alt="Cloud support and optimization"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Support & Cloud Optimization</p>
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Keep Your Cloud Environment Visible, Maintained and Ready for Change.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Support & Cloud Optimization
+            </p>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+              Keep Your Cloud Environment Visible, Maintained and Ready for
+              Change.
+            </h2>
             <div className="mt-9 space-y-5">
               {supportItems.map((item) => (
-                <div key={item} className="flex gap-4 border-t border-black/10 pt-5">
-                  <ShieldCheck size={22} className="mt-1 shrink-0 text-[#193175]" />
-                  <p className="text-[16px] font-light leading-[1.65] text-black/70">{item}</p>
+                <div
+                  key={item}
+                  className="flex gap-4 border-t border-black/10 pt-5"
+                >
+                  <ShieldCheck
+                    size={22}
+                    className="mt-1 shrink-0 text-[#193175]"
+                  />
+                  <p className="text-[16px] font-light leading-[1.65] text-black/70">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>
@@ -692,20 +865,41 @@ export default function CloudConsultingPage() {
       <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">FAQ</p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Common Questions Businesses Ask Before a Cloud Project.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              FAQ
+            </p>
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+              Common Questions Businesses Ask Before a Cloud Project.
+            </h2>
           </div>
 
           <div className="mx-auto max-w-300 space-y-4">
             {faqs.map((faq, index) => (
-              <div key={faq.q} className={`overflow-hidden rounded-[26px] border bg-white transition ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}>
-                <button type="button" onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
-                  <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">{titleCaseHeading(faq.q)}</span>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">{openFaq === index ? <Minus size={18} /> : <Plus size={18} />}</span>
+              <div
+                key={faq.q}
+                className={`overflow-hidden rounded-[26px] border bg-white transition ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
+                >
+                  <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
+                    {titleCaseHeading(faq.q)}
+                  </span>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
+                  </span>
                 </button>
                 {openFaq === index && (
                   <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
-                    <p className="text-[15px] font-light leading-[1.75] text-black/65">{faq.a}</p>
+                    <p className="text-[15px] font-light leading-[1.75] text-black/65">
+                      {faq.a}
+                    </p>
                   </div>
                 )}
               </div>
@@ -715,44 +909,47 @@ export default function CloudConsultingPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live Cloud Consulting Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Planning a Cloud Migration or Improving Your Current Setup?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          Let BrainADZ Live assess your current systems and help plan the right cloud approach for migration, architecture, security and ongoing optimization.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                        
-                              <PopupForm
-                                isOpen={isPopupOpen}
-                                onClose={() => setIsPopupOpen(false)}
-                              />
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live Cloud Consulting Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Planning a Cloud Migration or Improving Your Current Setup?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Let BrainADZ Live assess your current systems and help plan
+                  the right cloud approach for migration, architecture, security
+                  and ongoing optimization.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

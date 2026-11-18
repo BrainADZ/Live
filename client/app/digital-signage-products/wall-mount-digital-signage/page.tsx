@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -66,26 +65,22 @@ const applications = [
   {
     title: "Retail Stores",
     text: "Display promotions, product campaigns, offers and customer-facing digital content.",
-    iconSrc:
-      "/signage-products/retail-stores.svg",
+    iconSrc: "/signage-products/retail-stores.svg",
   },
   {
     title: "Reception Areas",
     text: "Present welcome content, visitor information, announcements and business communication.",
-    iconSrc:
-      "/signage-products/reception-areas.svg",
+    iconSrc: "/signage-products/reception-areas.svg",
   },
   {
     title: "Showrooms",
     text: "Showcase product content, launches, brand films and promotional visuals.",
-    iconSrc:
-      "/signage-products/showrooms.svg",
+    iconSrc: "/signage-products/showrooms.svg",
   },
   {
     title: "Corporate Spaces",
     text: "Use for announcements, company information and internal visual communication.",
-    iconSrc:
-      "/signage-products/corporate-reception.svg",
+    iconSrc: "/signage-products/corporate-reception.svg",
   },
 ];
 
@@ -138,10 +133,7 @@ export default function WallMountDigitalSignagePage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -151,9 +143,7 @@ export default function WallMountDigitalSignagePage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">
-              Wall Mount Digital Signage
-            </span>
+            <span className="text-white/90">Wall Mount Digital Signage</span>
           </div>
 
           <div className="mt-12 max-w-210 md:mt-14">
@@ -165,8 +155,8 @@ export default function WallMountDigitalSignagePage() {
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-200 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
               A wall-mounted digital signage solution for displaying videos,
-              images, promotions, announcements and business information
-              without occupying floor space.
+              images, promotions, announcements and business information without
+              occupying floor space.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -176,7 +166,11 @@ export default function WallMountDigitalSignagePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -204,20 +198,17 @@ export default function WallMountDigitalSignagePage() {
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live Wall Mount Digital Signage is a screen-based
-              signage solution for businesses that need visible digital
-              communication in a fixed wall location. It can present videos,
-              images, promotional campaigns, announcements and information
-              through a content setup planned around the space and intended use.
+              BrainADZ Live Wall Mount Digital Signage is a screen-based signage
+              solution for businesses that need visible digital communication in
+              a fixed wall location. It can present videos, images, promotional
+              campaigns, announcements and information through a content setup
+              planned around the space and intended use.
             </p>
 
             <div className="mt-8 space-y-4">
               {highlights.map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2
-                    size={20}
-                    className="text-[#193175]"
-                  />
+                  <CheckCircle2 size={20} className="text-[#193175]" />
 
                   <span className="text-[15px] font-light text-black/70">
                     {item}
@@ -273,10 +264,7 @@ export default function WallMountDigitalSignagePage() {
                 text: "Use local playback or add signage software and cloud management according to the deployment requirement.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -483,9 +471,7 @@ export default function WallMountDigitalSignagePage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -548,17 +534,18 @@ export default function WallMountDigitalSignagePage() {
               >
                 <span>Request a Quote</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

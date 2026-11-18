@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";

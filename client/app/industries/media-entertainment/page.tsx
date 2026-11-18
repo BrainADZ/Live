@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -374,10 +373,7 @@ export default function MediaEntertainmentIndustryPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -387,9 +383,7 @@ export default function MediaEntertainmentIndustryPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">
-              Media & Entertainment
-            </span>
+            <span className="text-white/90">Media & Entertainment</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
@@ -401,8 +395,8 @@ export default function MediaEntertainmentIndustryPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Custom software, audience applications, creator portals, CRM,
-              ERP, event platforms and digital signage solutions for media and
+              Custom software, audience applications, creator portals, CRM, ERP,
+              event platforms and digital signage solutions for media and
               entertainment workflows.
             </p>
 
@@ -413,7 +407,11 @@ export default function MediaEntertainmentIndustryPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -434,10 +432,9 @@ export default function MediaEntertainmentIndustryPage() {
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
               BrainADZ Live helps media and entertainment businesses plan
-              digital systems for content, creators, audiences, events, CRM,
-              ERP and reporting. The final solution is shaped around the
-              content model, users and operational requirements included in the
-              project.
+              digital systems for content, creators, audiences, events, CRM, ERP
+              and reporting. The final solution is shaped around the content
+              model, users and operational requirements included in the project.
             </p>
           </div>
 
@@ -482,10 +479,7 @@ export default function MediaEntertainmentIndustryPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -512,8 +506,8 @@ export default function MediaEntertainmentIndustryPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Digital Systems for Content, Audiences, Creators, Events and
-              Media Operations.
+              Digital Systems for Content, Audiences, Creators, Events and Media
+              Operations.
             </h2>
           </div>
 
@@ -584,7 +578,6 @@ export default function MediaEntertainmentIndustryPage() {
           </div>
         </div>
       </section>
-      
 
       {/* PLATFORM TYPES */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
@@ -662,9 +655,8 @@ export default function MediaEntertainmentIndustryPage() {
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Final features are selected according to the content model,
-              users, creators, events and business processes included in the
-              project.
+              Final features are selected according to the content model, users,
+              creators, events and business processes included in the project.
             </p>
           </div>
 
@@ -674,10 +666,7 @@ export default function MediaEntertainmentIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <CheckCircle2
-                  size={24}
-                  className="shrink-0 text-[#193175]"
-                />
+                <CheckCircle2 size={24} className="shrink-0 text-[#193175]" />
 
                 <span className="text-[17px] font-light text-black/75">
                   {item}
@@ -829,9 +818,7 @@ export default function MediaEntertainmentIndustryPage() {
 
                   <span
                     className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                      isActive
-                        ? "w-full opacity-100"
-                        : "w-0 opacity-0"
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
                 </button>
@@ -899,10 +886,7 @@ export default function MediaEntertainmentIndustryPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -976,8 +960,7 @@ export default function MediaEntertainmentIndustryPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common Questions about Media & Entertainment Technology
-              Solutions.
+              Common Questions about Media & Entertainment Technology Solutions.
             </h2>
           </div>
 
@@ -994,9 +977,7 @@ export default function MediaEntertainmentIndustryPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -1058,17 +1039,18 @@ export default function MediaEntertainmentIndustryPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

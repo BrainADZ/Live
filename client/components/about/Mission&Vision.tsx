@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 const cards = [
@@ -56,9 +55,9 @@ export default function MissionVision() {
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            BrainADZ Live exists to make technology easier to understand,
-            better connected to business requirements and more practical to
-            operate after deployment.
+            BrainADZ Live exists to make technology easier to understand, better
+            connected to business requirements and more practical to operate
+            after deployment.
           </p>
         </div>
 
@@ -91,13 +90,13 @@ export default function MissionVision() {
 
                   {/* MANUAL SVG ICON */}
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={card.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={card.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
                 </div>
 
                 {/* DESCRIPTION */}

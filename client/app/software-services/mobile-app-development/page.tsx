@@ -2,11 +2,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, Minus, Plus } from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "languages" | "frameworks" | "backend";
@@ -50,12 +49,12 @@ const processSteps = [
 ];
 
 const processLayout = [
-        { ...processSteps[0], left: "21.75%", top: "0px" },
-        { ...processSteps[1], left: "78.25%", top: "0px" },
-        { ...processSteps[2], left: "21.75%", top: "300px" },
-        { ...processSteps[3], left: "78.25%", top: "300px" },
-        { ...processSteps[4], left: "21.75%", top: "570px" },
-        { ...processSteps[5], left: "78.25%", top: "570px" },
+  { ...processSteps[0], left: "21.75%", top: "0px" },
+  { ...processSteps[1], left: "78.25%", top: "0px" },
+  { ...processSteps[2], left: "21.75%", top: "360px" },
+  { ...processSteps[3], left: "78.25%", top: "360px" },
+  { ...processSteps[4], left: "21.75%", top: "720px" },
+  { ...processSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const appSolutions = [
@@ -260,52 +259,56 @@ export default function MobileAppDevelopmentPage() {
   return (
     <main className="bg-white text-[#111827]">
       {/* HERO SECTION */}
-<section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
-  <img
-    src="/hero/mobile-app.webp"
-    alt="Mobile App Development Services"
-    className="absolute inset-0 h-full w-full object-cover"
-  />
+      <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
+        <img
+          src="/hero/mobile-app.webp"
+          alt="Mobile App Development Services"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-  <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-  <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
-    <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-      <Link href="/" className="text-[#6da0ff] hover:underline">
-        Home
-      </Link>
-      <span className="text-white/80">/</span>
-      <span className="text-white/90">Services</span>
-      <span className="text-white/80">/</span>
-      <span className="text-white/90">Mobile App Development</span>
-    </div>
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
+          <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
+            <Link href="/" className="text-[#6da0ff] hover:underline">
+              Home
+            </Link>
+            <span className="text-white/80">/</span>
+            <span className="text-white/90">Services</span>
+            <span className="text-white/80">/</span>
+            <span className="text-white/90">Mobile App Development</span>
+          </div>
 
-    <div className="mt-12 max-w-205 md:mt-14">
-      <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-        Custom Mobile App Development Services
-      </h1>
-    </div>
+          <div className="mt-12 max-w-205 md:mt-14">
+            <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
+              Custom Mobile App Development Services
+            </h1>
+          </div>
 
-    <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
-      <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-        We design and develop Android, iOS and cross-platform mobile apps
-        with clean UI, secure backend systems and workflows built around your
-        business goals.
-      </p>
+          <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
+            <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
+              We design and develop Android, iOS and cross-platform mobile apps
+              with clean UI, secure backend systems and workflows built around
+              your business goals.
+            </p>
 
-      <div className="mt-8">
-        <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="mt-8">
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* OVERVIEW */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
@@ -347,13 +350,13 @@ export default function MobileAppDevelopmentPage() {
                   className="rounded-[28px] border border-black/10 bg-[#f8faff] p-8 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
                 >
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
 
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {titleCaseHeading(item.title)}
@@ -369,164 +372,155 @@ export default function MobileAppDevelopmentPage() {
         </div>
       </section>
 
-{/* DEVELOPMENT PROCESS */}
-<section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-  <div
-    className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-    style={{
-      backgroundImage:
-        "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-      transform: "rotate(5deg) scaleX(0.72)",
-    }}
-  />
+      {/* DEVELOPMENT PROCESS */}
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
+        <div className="mx-auto max-w-450">
+          <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Mobile App Development Process
+            </p>
 
-  <div className="mx-auto max-w-450">
-    <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
-      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
-        Mobile App Development Process
-      </p>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
+              From Idea to Launch, Our Mobile App Development Roadmap
+            </h2>
 
-      <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-        From Idea to Launch, Our Mobile App Development Roadmap
-      </h2>
+            <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
+              We move from product discovery and user-flow planning to
+              development, testing, store launch and continuous improvement so
+              your app is built with clarity from the start.
+            </p>
+          </div>
 
-      <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-        We move from product discovery and user-flow planning to development,
-        testing, store launch and continuous improvement so your app is built
-        with clarity from the start.
-      </p>
-    </div>
+          <div className="lg:hidden">
+            <div className="space-y-5">
+              {processSteps.map((item, index) => {
+                return (
+                  <div
+                    key={item.title}
+                    className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                  >
+                    {index !== processSteps.length - 1 && (
+                      <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
+                    )}
 
-    <div className="lg:hidden">
-      <div className="space-y-5">
-        {processSteps.map((item, index) => {
-          return (
-            <div
-              key={item.title}
-              className="group relative rounded-[26px] border border-black/10 bg-white p-6"
+                    <div className="relative z-10 flex gap-5">
+                      <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
+                        <img
+                          src={item.iconSrc}
+                          alt=""
+                          aria-hidden="true"
+                          className="manual-icon object-contain"
+                        />
+                      </div>
+
+                      <div>
+                        <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+                          {titleCaseHeading(item.title)}
+                        </h3>
+
+                        <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                          {item.text}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="relative hidden h-[1080px] lg:block">
+            <svg
+              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+              viewBox="0 0 1600 1080"
+              fill="none"
+              aria-hidden="true"
+              preserveAspectRatio="none"
             >
-              {index !== processSteps.length - 1 && (
-                <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-              )}
+              <defs>
+                <marker
+                  id="mobile-process-arrowhead"
+                  markerHeight="14"
+                  markerUnits="userSpaceOnUse"
+                  markerWidth="18"
+                  orient="auto"
+                  refX="16"
+                  refY="7"
+                >
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
+                </marker>
+              </defs>
 
-              <div className="relative z-10 flex gap-5">
-                <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#mobile-process-arrowhead)"
+              />
+              <path
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+              <path
+                d="M 1208 403 L 392 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#mobile-process-arrowhead)"
+              />
+              <path
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#mobile-process-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#mobile-process-arrowhead)"
+              />
+            </svg>
 
-                <div>
-                  <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
+            {processLayout.map((item) => {
+              return (
+                <div
+                  key={item.title}
+                  className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
+                  style={{ left: item.left, top: item.top }}
+                >
+                  <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
+
+                  <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {titleCaseHeading(item.title)}
                   </h3>
 
-                  <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
+                  <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
                     {item.text}
                   </p>
                 </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-
-    <div className="relative hidden h-[790px] lg:block">
-      <svg
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-        viewBox="0 0 1600 790"
-        fill="none"
-        aria-hidden="true"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <marker
-            id="mobile-process-arrowhead"
-            markerHeight="14"
-            markerUnits="userSpaceOnUse"
-            markerWidth="18"
-            orient="auto"
-            refX="16"
-            refY="7"
-          >
-            <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
-          </marker>
-        </defs>
-
-        <path
-          d="M 392 43 L 1208 43"
-          stroke="#193175"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#mobile-process-arrowhead)"
-        />
-        <path
-          d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
-          stroke="#193175"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-        />
-        <path
-          d="M 1208 343 L 392 343"
-          stroke="#193175"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#mobile-process-arrowhead)"
-        />
-        <path
-          d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
-          stroke="#193175"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#mobile-process-arrowhead)"
-        />
-        <path
-          d="M 392 613 L 1208 613"
-          stroke="#193175"
-          strokeDasharray="10 12"
-          strokeLinecap="round"
-          strokeWidth="2.5"
-          markerEnd="url(#mobile-process-arrowhead)"
-        />
-      </svg>
-
-      {processLayout.map((item) => {
-        return (
-          <div
-            key={item.title}
-            className="group absolute z-10 w-[390px] -translate-x-1/2 text-center"
-            style={{ left: item.left, top: item.top }}
-          >
-            <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
-
-            <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-              {titleCaseHeading(item.title)}
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-[330px] text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-              {item.text}
-            </p>
+              );
+            })}
           </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* SOLUTIONS */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
@@ -543,9 +537,9 @@ export default function MobileAppDevelopmentPage() {
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build mobile apps that support digital sales, bookings,
-              service requests, field teams, payments, delivery tracking,
-              learning experiences and internal business workflows.
+              We build mobile apps that support digital sales, bookings, service
+              requests, field teams, payments, delivery tracking, learning
+              experiences and internal business workflows.
             </p>
           </div>
 
@@ -557,13 +551,13 @@ export default function MobileAppDevelopmentPage() {
                   className="group rounded-[26px] border border-black/10 bg-[#f8faff] p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
                 >
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
 
                   <h3 className="text-[20px] font-normal tracking-[-0.3px]">
                     {titleCaseHeading(item.title)}
@@ -595,13 +589,13 @@ export default function MobileAppDevelopmentPage() {
                 className="rounded-[28px] border border-black/10 bg-white p-7 shadow-[0_18px_55px_rgba(0,0,0,0.04)]"
               >
                 <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={item.icon}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                  <img
+                    src={item.icon}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
                   {titleCaseHeading(item.title)}
@@ -697,12 +691,16 @@ export default function MobileAppDevelopmentPage() {
               </div>
 
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
->
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
                 <span>Enquire Now</span>
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] transition-transform group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] transition-transform group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
@@ -710,94 +708,94 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* TECH STACK */}
-<section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
-  <div className="mx-auto max-w-450">
-    <div className="mb-14 text-center">
-      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
-        Tech Stack
-      </p>
+      <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
+        <div className="mx-auto max-w-450">
+          <div className="mb-14 text-center">
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
+              Tech Stack
+            </p>
 
-      <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-        Technologies We Use for Mobile App Development
-      </h2>
+            <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+              Technologies We Use for Mobile App Development
+            </h2>
 
-      <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-        We use the right mobile technologies, frameworks and backend tools to
-        build Android, iOS and cross-platform apps with secure APIs, databases
-        and admin systems.
-      </p>
-    </div>
-
-    <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
-      {tabs.map((tab) => {
-        const isActive = activeTab === tab.value;
-
-        return (
-          <button
-            key={tab.value}
-            type="button"
-            onClick={() => setActiveTab(tab.value)}
-            className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-              isActive
-                ? "text-[#161616]"
-                : "text-[#8d8d8d] hover:text-[#193175]"
-            }`}
-          >
-            {tab.label}
-
-            <span
-              className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                isActive ? "w-full opacity-100" : "w-0 opacity-0"
-              }`}
-            />
-          </button>
-        );
-      })}
-    </div>
-
-    <div className="mx-auto max-w-315">
-      <div className="space-y-5 md:space-y-6">
-        {[
-          techStack[activeTab].slice(0, 4),
-          techStack[activeTab].slice(4, 6),
-        ].map((row, rowIndex) => (
-          <div
-            key={`${activeTab}-${rowIndex}`}
-            className="flex flex-wrap items-center justify-center gap-y-5"
-          >
-            {row.map((item, index) => (
-              <div
-                key={item.name}
-                className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
-                  index !== row.length - 1
-                    ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
-                    : ""
-                }`}
-              >
-                <div className="flex h-11.5 w-full items-center justify-center">
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    loading="lazy"
-                    decoding="async"
-                    className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
-                </div>
-
-                <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
-                  {titleCaseHeading(item.name)}
-                </h3>
-              </div>
-            ))}
+            <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+              We use the right mobile technologies, frameworks and backend tools
+              to build Android, iOS and cross-platform apps with secure APIs,
+              databases and admin systems.
+            </p>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+
+          <div className="mb-12 flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24">
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab.value;
+
+              return (
+                <button
+                  key={tab.value}
+                  type="button"
+                  onClick={() => setActiveTab(tab.value)}
+                  className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
+                    isActive
+                      ? "text-[#161616]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
+                  }`}
+                >
+                  {tab.label}
+
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
+                    }`}
+                  />
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="mx-auto max-w-315">
+            <div className="space-y-5 md:space-y-6">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
+                  {row.map((item, index) => (
+                    <div
+                      key={item.name}
+                      className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
+                        index !== row.length - 1
+                          ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
+                          : ""
+                      }`}
+                    >
+                      <div className="flex h-11.5 w-full items-center justify-center">
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          loading="lazy"
+                          decoding="async"
+                          className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      </div>
+
+                      <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
+                        {titleCaseHeading(item.name)}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* WHY CHOOSE */}
       <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
@@ -808,7 +806,8 @@ export default function MobileAppDevelopmentPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              We Build Mobile Apps Around Users, Business Workflows and Long-Term Product Growth.
+              We Build Mobile Apps Around Users, Business Workflows and
+              Long-Term Product Growth.
             </h2>
           </div>
 
@@ -861,13 +860,13 @@ export default function MobileAppDevelopmentPage() {
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
                   <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
 
                   <div>
                     <h3 className="text-[23px] font-normal tracking-[-0.4px]">
@@ -940,44 +939,47 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live Mobile App Development Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to Build a Mobile App Your Users Can Rely on?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          Let BrainADZ Live design and develop a mobile app with the right user flow, secure backend, integrations and long-term support.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                        
-                              <PopupForm
-                                isOpen={isPopupOpen}
-                                onClose={() => setIsPopupOpen(false)}
-                              />
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live Mobile App Development Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Ready to Build a Mobile App Your Users Can Rely on?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Let BrainADZ Live design and develop a mobile app with the
+                  right user flow, secure backend, integrations and long-term
+                  support.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

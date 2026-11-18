@@ -1,8 +1,6 @@
- 
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
-
 
 import Link from "next/link";
 import { useState } from "react";
@@ -21,12 +19,14 @@ const processSteps = [
   {
     title: "Business & Workflow Discovery",
     text: "We understand your departments, users, existing systems, data flow, bottlenecks and operational priorities.",
-    iconSrc: "/icons/enterprise-software/workflow/business-workflow-discovery.svg",
+    iconSrc:
+      "/icons/enterprise-software/workflow/business-workflow-discovery.svg",
   },
   {
     title: "Solution Planning & Architecture",
     text: "We define modules, roles, permissions, data structure, integrations and a practical phased delivery roadmap.",
-    iconSrc: "/icons/enterprise-software/workflow/solution-planning-architecture.svg",
+    iconSrc:
+      "/icons/enterprise-software/workflow/solution-planning-architecture.svg",
   },
   {
     title: "UX & Process Design",
@@ -36,27 +36,30 @@ const processSteps = [
   {
     title: "Custom Software Development",
     text: "We build the required modules, workflows, dashboards, APIs and admin controls on a maintainable architecture.",
-    iconSrc: "/icons/enterprise-software/workflow/custom-software-development.svg",
+    iconSrc:
+      "/icons/enterprise-software/workflow/custom-software-development.svg",
   },
   {
     title: "Testing & Business Validation",
     text: "We test roles, workflows, integrations, reports, data handling and performance against real business scenarios.",
-    iconSrc: "/icons/enterprise-software/workflow/testing-business-validation.svg",
+    iconSrc:
+      "/icons/enterprise-software/workflow/testing-business-validation.svg",
   },
   {
     title: "Deployment & Ongoing Improvement",
     text: "We deploy in planned stages, support adoption and continue improving the platform as processes and requirements change.",
-    iconSrc: "/icons/enterprise-software/workflow/deployment-ongoing-improvement.svg",
+    iconSrc:
+      "/icons/enterprise-software/workflow/deployment-ongoing-improvement.svg",
   },
 ];
 
 const processLayout = [
   { ...processSteps[0], left: "21.75%", top: "0px" },
   { ...processSteps[1], left: "78.25%", top: "0px" },
-  { ...processSteps[2], left: "21.75%", top: "300px" },
-  { ...processSteps[3], left: "78.25%", top: "300px" },
-  { ...processSteps[4], left: "21.75%", top: "570px" },
-  { ...processSteps[5], left: "78.25%", top: "570px" },
+  { ...processSteps[2], left: "21.75%", top: "360px" },
+  { ...processSteps[3], left: "78.25%", top: "360px" },
+  { ...processSteps[4], left: "21.75%", top: "720px" },
+  { ...processSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const overviewHighlights = [
@@ -68,7 +71,8 @@ const overviewHighlights = [
   {
     title: "Clear Business Visibility",
     text: "Use dashboards and reports to understand activity, bottlenecks and performance.",
-    iconSrc: "/icons/enterprise-software/overview/clear-business-visibility.svg",
+    iconSrc:
+      "/icons/enterprise-software/overview/clear-business-visibility.svg",
   },
   {
     title: "Role-Based Access",
@@ -105,17 +109,20 @@ const services = [
   {
     title: "Custom Operations Platforms",
     text: "Centralized software for managing multi-step business operations, teams, records and internal processes.",
-    iconSrc: "/icons/enterprise-software/services/custom-operations-platforms.svg",
+    iconSrc:
+      "/icons/enterprise-software/services/custom-operations-platforms.svg",
   },
   {
     title: "Enterprise Portals & Dashboards",
     text: "Role-based portals and dashboards that give teams one place to access tasks, data, reports and actions.",
-    iconSrc: "/icons/enterprise-software/services/enterprise-portals-dashboards.svg",
+    iconSrc:
+      "/icons/enterprise-software/services/enterprise-portals-dashboards.svg",
   },
   {
     title: "Workflow Automation Systems",
     text: "Automate approvals, assignments, notifications and repetitive handoffs across departments.",
-    iconSrc: "/icons/enterprise-software/services/workflow-automation-systems.svg",
+    iconSrc:
+      "/icons/enterprise-software/services/workflow-automation-systems.svg",
   },
   {
     title: "System & API Integration",
@@ -284,9 +291,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
             <span className="text-white/80">/</span>
             <span className="text-white/90">Services</span>
             <span className="text-white/80">/</span>
-            <span className="text-white/90">
-              Enterprise Software Solutions
-            </span>
+            <span className="text-white/90">Enterprise Software Solutions</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
@@ -309,7 +314,11 @@ export default function EnterpriseSoftwareSolutionsPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -388,10 +397,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {challenges.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -451,16 +457,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
       </section>
 
       {/* DEVELOPMENT PROCESS */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -473,8 +470,8 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
               We move from workflow discovery and architecture to development,
-              business validation and staged deployment so the software
-              reflects how your operations work.
+              business validation and staged deployment so the software reflects
+              how your operations work.
             </p>
           </div>
 
@@ -514,10 +511,10 @@ export default function EnterpriseSoftwareSolutionsPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -546,7 +543,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -554,16 +551,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#enterprise-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -572,7 +560,16 @@ export default function EnterpriseSoftwareSolutionsPage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#enterprise-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -624,8 +621,8 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
               We build custom internal platforms that reduce fragmented work,
-              give teams clearer access to information and connect the
-              processes that depend on one another.
+              give teams clearer access to information and connect the processes
+              that depend on one another.
             </p>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -743,8 +740,8 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
               We use modern frontend, backend, database and cloud technologies
-              to build maintainable platforms with secure access, connected
-              data and room for future modules.
+              to build maintainable platforms with secure access, connected data
+              and room for future modules.
             </p>
           </div>
 
@@ -767,9 +764,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
 
                   <span
                     className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                      isActive
-                        ? "w-full opacity-100"
-                        : "w-0 opacity-0"
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
                 </button>
@@ -832,18 +827,15 @@ export default function EnterpriseSoftwareSolutionsPage() {
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              We combine workflow discovery, modular engineering and
-              integration planning to build software that teams can use, manage
-              and continue improving over time.
+              We combine workflow discovery, modular engineering and integration
+              planning to build software that teams can use, manage and continue
+              improving over time.
             </p>
           </div>
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -936,9 +928,7 @@ export default function EnterpriseSoftwareSolutionsPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -1006,17 +996,18 @@ export default function EnterpriseSoftwareSolutionsPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

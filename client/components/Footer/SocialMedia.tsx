@@ -1,6 +1,11 @@
 "use client";
 
-import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ArrowUp } from "lucide-react";
 import { LiaLinkedin } from "react-icons/lia";
@@ -34,7 +39,6 @@ export default function SocialMediaSection() {
               <FaFacebookF className="h-4.5 w-4.5" />
             </a>
 
-
             {/* INSTAGRAM */}
             <a
               href="https://www.instagram.com/brainadz.live/"
@@ -56,7 +60,7 @@ export default function SocialMediaSection() {
             >
               <FaLinkedin className="h-4.5 w-4.5" />
             </a>
-                        {/* YOUTUBE */}
+            {/* YOUTUBE */}
             <a
               href="https://www.youtube.com/@BrainADZLive"
               target="_blank"

@@ -3,7 +3,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -18,7 +17,7 @@ import {
   Truck,
   Factory,
 } from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "languages" | "databases" | "frameworks";
@@ -64,10 +63,10 @@ const workflow = [
 const workflowLayout = [
   { ...workflow[0], left: "21.75%", top: "0px" },
   { ...workflow[1], left: "78.25%", top: "0px" },
-  { ...workflow[2], left: "21.75%", top: "300px" },
-  { ...workflow[3], left: "78.25%", top: "300px" },
-  { ...workflow[4], left: "21.75%", top: "570px" },
-  { ...workflow[5], left: "78.25%", top: "570px" },
+  { ...workflow[2], left: "21.75%", top: "360px" },
+  { ...workflow[3], left: "78.25%", top: "360px" },
+  { ...workflow[4], left: "21.75%", top: "720px" },
+  { ...workflow[5], left: "78.25%", top: "720px" },
 ];
 
 const useCases = [
@@ -333,7 +332,6 @@ function createRows(items: StackItem[], pattern: number[]) {
   });
 }
 
-
 const faqs = [
   {
     q: "What types of custom software do you build?",
@@ -422,14 +420,18 @@ export default function SoftwareDevelopmentPage() {
             </p>
 
             <div className="mt-8">
-<button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -444,7 +446,8 @@ export default function SoftwareDevelopmentPage() {
             </p>
 
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Turn Manual Processes and Disconnected Tools into One Working System.
+              Turn Manual Processes and Disconnected Tools into One Working
+              System.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
@@ -459,14 +462,18 @@ export default function SoftwareDevelopmentPage() {
               <div className="border-l-2 border-[#193175] pl-5">
                 <h3 className="text-[20px] font-normal">Workflow Automation</h3>
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Replace repeated handoffs, approvals and updates with structured digital workflows.
+                  Replace repeated handoffs, approvals and updates with
+                  structured digital workflows.
                 </p>
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-normal">Custom Business Platforms</h3>
+                <h3 className="text-[20px] font-normal">
+                  Custom Business Platforms
+                </h3>
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Bring users, records, tasks and reporting into software designed for your operations.
+                  Bring users, records, tasks and reporting into software
+                  designed for your operations.
                 </p>
               </div>
             </div>
@@ -486,16 +493,7 @@ export default function SoftwareDevelopmentPage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -506,7 +504,8 @@ export default function SoftwareDevelopmentPage() {
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
               We move from workflow discovery and architecture to design,
-              development, testing and ongoing improvement through one connected process.
+              development, testing and ongoing improvement through one connected
+              process.
             </p>
           </div>
 
@@ -524,13 +523,13 @@ export default function SoftwareDevelopmentPage() {
 
                     <div className="relative z-10 flex gap-5">
                       <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff] transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)] group-hover:-translate-y-1.5 group-hover:bg-white group-hover:shadow-[0_18px_42px_rgba(60,91,155,0.24)]">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                        <img
+                          src={item.iconSrc}
+                          alt=""
+                          aria-hidden="true"
+                          className="manual-icon object-contain"
+                        />
+                      </div>
 
                       <div>
                         <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
@@ -547,10 +546,10 @@ export default function SoftwareDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -578,22 +577,14 @@ export default function SoftwareDevelopmentPage() {
                 markerEnd="url(#workflow-arrowhead)"
               />
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
               />
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#workflow-arrowhead)"
-              />
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -601,7 +592,15 @@ export default function SoftwareDevelopmentPage() {
                 markerEnd="url(#workflow-arrowhead)"
               />
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#workflow-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -618,13 +617,13 @@ export default function SoftwareDevelopmentPage() {
                   style={{ left: item.left, top: item.top }}
                 >
                   <div className="manual-icon-box mx-auto flex h-[86px] w-[86px] items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff] shadow-[0_16px_42px_rgba(60,91,155,0.16)] transition duration-300 ease-out hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)] group-hover:-translate-y-2 group-hover:bg-white group-hover:shadow-[0_26px_58px_rgba(60,91,155,0.28)]">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
 
                   <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
                     {titleCaseHeading(item.title)}
@@ -675,7 +674,8 @@ export default function SoftwareDevelopmentPage() {
                       {titleCaseHeading(item)}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
-                      Built around your users, data, rules and day-to-day process.
+                      Built around your users, data, rules and day-to-day
+                      process.
                     </p>
                   </div>
                 </div>
@@ -743,7 +743,7 @@ export default function SoftwareDevelopmentPage() {
       </section>
 
       {/* INDUSTRIES WE BUILD FOR */}
-<IndustriesSection/>
+      <IndustriesSection />
 
       {/* MIDDLE CTA */}
       <section className="section-spacing lazy-section bg-white">
@@ -768,29 +768,34 @@ export default function SoftwareDevelopmentPage() {
               {/* TEXT */}
               <div className="max-w-140">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Have a Process That Still Depends on Spreadsheets and Disconnected Tools?
+                  Have a Process That Still Depends on Spreadsheets and
+                  Disconnected Tools?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live turn that workflow into custom software with the right users, permissions, integrations and reporting.
+                  Let BrainADZ Live turn that workflow into custom software with
+                  the right users, permissions, integrations and reporting.
                 </p>
               </div>
 
               {/* BUTTON */}
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
->
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* TECH STACK */}
       <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
@@ -902,10 +907,7 @@ export default function SoftwareDevelopmentPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -939,7 +941,8 @@ export default function SoftwareDevelopmentPage() {
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
               After launch, we help resolve issues, maintain integrations and
-              improve the software as users, workflows and operational needs change.
+              improve the software as users, workflows and operational needs
+              change.
             </p>
           </div>
 
@@ -951,13 +954,13 @@ export default function SoftwareDevelopmentPage() {
                   className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
                 >
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={item.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
 
                   <div>
                     <h3 className="text-[23px] font-normal tracking-[-0.4px]">
@@ -977,7 +980,8 @@ export default function SoftwareDevelopmentPage() {
             <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               <div>
                 <h3 className="text-[28px] font-normal tracking-[-0.6px] md:text-[34px]">
-                  Maintenance Can Include Monitoring, Updates and Product Improvements.
+                  Maintenance Can Include Monitoring, Updates and Product
+                  Improvements.
                 </h3>
 
                 <p className="mt-4 text-[15px] font-light leading-[1.7] text-black/65">
@@ -1109,32 +1113,35 @@ export default function SoftwareDevelopmentPage() {
               {/* TEXT */}
               <div className="max-w-140">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Ready to Build Software Around the Way Your Business Actually Works?
+                  Ready to Build Software Around the Way Your Business Actually
+                  Works?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Let BrainADZ Live design and develop a custom software system around your users, workflows, data and connected tools.
+                  Let BrainADZ Live design and develop a custom software system
+                  around your users, workflows, data and connected tools.
                 </p>
               </div>
 
               {/* BUTTON */}
-<button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
->
-  <span>Enquire Now</span>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
 
-  <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-</button>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
             </div>
           </div>
         </div>
       </section>
-      <PopupForm
-  isOpen={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-/>
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

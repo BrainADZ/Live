@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -34,7 +33,7 @@ const questions = [
 
 export default function ERPFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(
-    questions.length - 1
+    questions.length - 1,
   );
 
   return (
@@ -110,9 +109,7 @@ export default function ERPFAQ() {
                     id={`erp-faq-question-${index}`}
                     aria-expanded={isOpen}
                     aria-controls={`erp-faq-answer-${index}`}
-                    onClick={() =>
-                      setOpenIndex(isOpen ? null : index)
-                    }
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
                     className="
                       erp-faq-question
                       flex

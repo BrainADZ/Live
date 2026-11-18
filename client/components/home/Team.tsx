@@ -1,4 +1,3 @@
-
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
@@ -28,32 +27,28 @@ const teamMembers: TeamMember[] = [
     name: "Rakesh Singh Rajput",
     role: "Sales Manager",
     image: "/team/head.png",
-    linkedin:
-      "https://www.linkedin.com/in/rakesh-singh-rajput-a4957419/",
+    linkedin: "https://www.linkedin.com/in/rakesh-singh-rajput-a4957419/",
     phone: "+91 99110 78143",
   },
   {
     name: "Sarthak Raina",
     role: "Corporate Sale & Project Manager",
     image: "/team/cops.png",
-    linkedin:
-      "https://www.linkedin.com/in/sarthak-raina-693427165/",
+    linkedin: "https://www.linkedin.com/in/sarthak-raina-693427165/",
     phone: "+91 92112 93332",
   },
   {
     name: "Pooja Paswan",
     role: "Sales Executive",
     image: "/team/sale.png",
-    linkedin:
-      "https://www.linkedin.com/in/pooja-paswan-620693245/",
+    linkedin: "https://www.linkedin.com/in/pooja-paswan-620693245/",
     phone: "+91 70489 15802",
   },
   {
     name: "Anand Upadhyay",
     role: "Technical Manager",
     image: "/team/tech.png",
-    linkedin:
-      "https://www.linkedin.com/in/anand-upadhyay-553875220/",
+    linkedin: "https://www.linkedin.com/in/anand-upadhyay-553875220/",
     phone: "+91 92113 66484",
   },
 ];
@@ -62,10 +57,8 @@ export default function TeamSection() {
   return (
     <section className="section-spacing bg-white px-5 text-[#161616] md:px-4 lg:px-12">
       <div className="mx-auto w-full max-w-[1800px]">
-
         {/* SECTION HEADING */}
         <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-
           {/* LEFT */}
           <div>
             <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
@@ -96,13 +89,10 @@ export default function TeamSection() {
 
         {/* TEAM GRID */}
         <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-
           {teamMembers.map((member) => (
             <article key={member.name} className="group">
-
               {/* TEAM MEMBER IMAGE */}
               <div className="relative aspect-square overflow-hidden rounded-[20px] border border-[#e8e8e8] bg-[#f5f7fb] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_60px_rgba(22,22,22,0.1)]">
-
                 <img
                   src={member.image}
                   alt={member.name}
@@ -127,7 +117,6 @@ export default function TeamSection() {
 
               {/* MEMBER DETAILS */}
               <div className="pt-5">
-
                 {/* NAME */}
                 <h3 className="text-[19px] font-medium leading-[1.3] tracking-[-0.3px] text-[#161616]">
                   {titleCaseHeading(member.name)}
@@ -145,22 +134,16 @@ export default function TeamSection() {
                     aria-label={`Call ${member.name} at ${member.phone}`}
                     className="mt-3 inline-flex items-center gap-2 text-[14px] font-medium text-[#193175] transition-all duration-300 hover:text-[#161616]"
                   >
-                    <Phone
-                      size={16}
-                      strokeWidth={1.8}
-                      className="shrink-0"
-                    />
+                    <Phone size={16} strokeWidth={1.8} className="shrink-0" />
 
                     <span className="transition-colors duration-300">
                       {member.phone}
                     </span>
                   </a>
                 )}
-
               </div>
             </article>
           ))}
-
         </div>
       </div>
     </section>

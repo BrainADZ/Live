@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import { ArrowRight } from "lucide-react";
@@ -236,62 +235,66 @@ export default function ConsultingPage() {
   return (
     <main className="bg-white text-[#161616]">
       {/* HERO */}
-    <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
-      <img
-        src="/hero/consulting.webp"
-        alt="Consulting BrainADZ Live"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
+        <img
+          src="/hero/consulting.webp"
+          alt="Consulting BrainADZ Live"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
-        <div
-          className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
-          data-aos="fade-up"
-        >
-          <Link href="/" className="text-[#6da0ff] hover:underline">
-            Home
-          </Link>
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
+          <div
+            className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
+            data-aos="fade-up"
+          >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
+              Home
+            </Link>
 
-          <span className="text-white/80">/</span>
+            <span className="text-white/80">/</span>
 
-          <span className="text-white/90">Consulting</span>
-        </div>
+            <span className="text-white/90">Consulting</span>
+          </div>
 
-        <div
-          className="mt-12 max-w-205 md:mt-14"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-            Technology Consulting for Practical Business Decisions
-          </h1>
-        </div>
+          <div
+            className="mt-12 max-w-205 md:mt-14"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
+              Technology Consulting for Practical Business Decisions
+            </h1>
+          </div>
 
-        <div
-          className="mt-auto pb-8 md:pb-9 lg:pb-10"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-            Get clarity before you invest in software, platforms, integrations,
-            cloud modernization or digital signage technology.
-          </p>
+          <div
+            className="mt-auto pb-8 md:pb-9 lg:pb-10"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
+              Get clarity before you invest in software, platforms,
+              integrations, cloud modernization or digital signage technology.
+            </p>
 
-          <div className="mt-8">
-            <button
+            <div className="mt-8">
+              <button
                 type="button"
                 onClick={() => setIsPopupOpen(true)}
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
-              Discuss Your Requirement
-              <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-            </button>
+                Discuss Your Requirement
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* ORCHESTRATE AI */}
       <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
@@ -431,7 +434,6 @@ export default function ConsultingPage() {
                 >
                   <div className="absolute -right-13.75 -top-13.75 h-37.5 w-37.5 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
 
-
                   <div className="relative z-10 flex h-16 w-16 items-center justify-center">
                     <img
                       src={service.icon}
@@ -555,7 +557,6 @@ export default function ConsultingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="relative min-h-80 border-b border-[#dfe6f1] p-8 md:col-span-2">
-
                 <div className="mb-8 flex h-27.5 w-27.5 items-center justify-center">
                   <img
                     src={insightIcons.strategicPartnerships}
@@ -569,8 +570,8 @@ export default function ConsultingPage() {
                 </p>
 
                 <h3 className="mt-3 max-w-162.5 text-[24px] font-normal leading-[1.35] tracking-[-0.5px] text-[#262626]">
-                  Good Technology Decisions Start with Clear Workflows,
-                  System Boundaries and Ownership of Data.
+                  Good Technology Decisions Start with Clear Workflows, System
+                  Boundaries and Ownership of Data.
                 </h3>
 
                 <Link
@@ -623,8 +624,8 @@ export default function ConsultingPage() {
                 </p>
 
                 <h3 className="mt-3 text-[20px] font-normal leading-[1.45] text-[#262626]">
-                  Choosing the Right Mix of Software, Kiosks and Displays for
-                  a Customer-Facing Environment.
+                  Choosing the Right Mix of Software, Kiosks and Displays for a
+                  Customer-Facing Environment.
                 </h3>
 
                 <Link
@@ -669,61 +670,62 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-     <BrandCarousel/>
+      <BrandCarousel />
 
-     <TestimonialSection/>
+      <TestimonialSection />
 
       {/* FINAL CTA */}
-            <section className="section-spacing lazy-section bg-white">
-              <div className="mx-auto max-w-450 px-4 lg:px-10">
-                <div
-                  className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
-                  data-aos="zoom-in"
-                >
-                  {/* LEFT IMAGE */}
-                  <div className="hidden w-[32%] shrink-0 md:block">
-                    <img
-                      src="/CTA/cta.webp"
-                      alt="BrainADZ Live technology consulting"
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-      
-                  {/* RIGHT CONTENT */}
-                  <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                    {/* TEXT */}
-                    <div className="max-w-140">
-                      <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                        Need Clarity Before You Start a Technology Project?
-                      </h3>
-      
-                      <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                        Share the problem, current process and systems you are
-                        working with. We can help define the right scope,
-                        priorities and next steps before execution.
-                      </p>
-                    </div>
-      
-                    {/* BUTTON */}
-                    <button
-                      type="button"
-                      onClick={() => setIsPopupOpen(true)}
-                      className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                    >
-                      <span>Enquire Now</span>
-      
-                      <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                    </button>
-                  </div>
-                </div>
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div
+            className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
+            data-aos="zoom-in"
+          >
+            {/* LEFT IMAGE */}
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live technology consulting"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* RIGHT CONTENT */}
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              {/* TEXT */}
+              <div className="max-w-140">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Need Clarity Before You Start a Technology Project?
+                </h3>
+
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Share the problem, current process and systems you are working
+                  with. We can help define the right scope, priorities and next
+                  steps before execution.
+                </p>
               </div>
-            </section>
-                  <PopupForm
-              isOpen={isPopupOpen}
-              onClose={() => setIsPopupOpen(false)}
-            />
+
+              {/* BUTTON */}
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

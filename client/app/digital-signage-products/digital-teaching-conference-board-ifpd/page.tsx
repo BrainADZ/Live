@@ -3,15 +3,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
-import {
-  Download,
-  Minus,
-  Plus,
-} from "lucide-react";
+import { Download, Minus, Plus } from "lucide-react";
 
 const benefits = [
   {
@@ -33,10 +28,7 @@ const benefits = [
 ];
 
 const specifications = [
-  [
-    "Display Type",
-    "Interactive teaching and presentation display",
-  ],
+  ["Display Type", "Interactive teaching and presentation display"],
   [
     "Primary Use",
     "Classrooms, coaching spaces, training rooms and learning environments",
@@ -62,33 +54,27 @@ const specifications = [
 const useCases = [
   {
     title: "Schools",
-    iconSrc:
-      "/signage-products/schools.svg",
+    iconSrc: "/signage-products/schools.svg",
   },
   {
     title: "Colleges",
-    iconSrc:
-      "/signage-products/colleges.svg",
+    iconSrc: "/signage-products/colleges.svg",
   },
   {
     title: "Coaching Centers",
-    iconSrc:
-      "/signage-products/coaching-centers.svg",
+    iconSrc: "/signage-products/coaching-centers.svg",
   },
   {
     title: "Training Rooms",
-    iconSrc:
-      "/signage-products/education-training-spaces.svg",
+    iconSrc: "/signage-products/education-training-spaces.svg",
   },
   {
     title: "Corporate Learning",
-    iconSrc:
-      "/signage-products/corporate-learning.svg",
+    iconSrc: "/signage-products/corporate-learning.svg",
   },
   {
     title: "Smart Classrooms",
-    iconSrc:
-      "/signage-products/smart-classrooms.svg",
+    iconSrc: "/signage-products/smart-classrooms.svg",
   },
 ];
 
@@ -175,10 +161,7 @@ export default function DigitalTeachingConferenceBoardPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -195,14 +178,15 @@ export default function DigitalTeachingConferenceBoardPage() {
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Digital Teaching &amp; Conference Board (IFPD) for Modern Learning and Meeting Spaces
+              Digital Teaching &amp; Conference Board (IFPD) for Modern Learning
+              and Meeting Spaces
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              A screen-based interactive teaching and presentation solution
-              for classrooms, coaching spaces, training rooms and learning
+              A screen-based interactive teaching and presentation solution for
+              classrooms, coaching spaces, training rooms and learning
               environments that need digital content, annotation and
               collaborative sessions.
             </p>
@@ -243,11 +227,11 @@ export default function DigitalTeachingConferenceBoardPage() {
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              The BrainADZ Live Digital Teaching &amp; Conference Board (IFPD) is designed for
-              learning and training environments that need a more visual and
-              interactive way to present content. The setup can support digital
-              learning materials, annotation, presentation and classroom
-              interaction according to the selected configuration.
+              The BrainADZ Live Digital Teaching &amp; Conference Board (IFPD)
+              is designed for learning and training environments that need a
+              more visual and interactive way to present content. The setup can
+              support digital learning materials, annotation, presentation and
+              classroom interaction according to the selected configuration.
             </p>
           </div>
 
@@ -277,10 +261,7 @@ export default function DigitalTeachingConferenceBoardPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {benefits.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -423,7 +404,8 @@ export default function DigitalTeachingConferenceBoardPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-light leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Common Questions about the Digital Teaching &amp; Conference Board (IFPD).
+              Common Questions about the Digital Teaching &amp; Conference Board
+              (IFPD).
             </h2>
           </div>
 
@@ -439,9 +421,7 @@ export default function DigitalTeachingConferenceBoardPage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -487,7 +467,8 @@ export default function DigitalTeachingConferenceBoardPage() {
             <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
               <div className="max-w-150">
                 <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                  Planning a Digital Teaching &amp; Conference Board (IFPD) Setup?
+                  Planning a Digital Teaching &amp; Conference Board (IFPD)
+                  Setup?
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
@@ -513,10 +494,7 @@ export default function DigitalTeachingConferenceBoardPage() {
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

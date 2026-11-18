@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -98,8 +97,17 @@ const blogIcons = {
   },
 } satisfies Record<string, ManualIconConfig>;
 
-export default function BlogListing({ allArticles, unavailable }: { allArticles: ArticleCard[]; unavailable: boolean }) {
-  const categories = ["All Insights", ...new Set(allArticles.map(article => article.category))];
+export default function BlogListing({
+  allArticles,
+  unavailable,
+}: {
+  allArticles: ArticleCard[];
+  unavailable: boolean;
+}) {
+  const categories = [
+    "All Insights",
+    ...new Set(allArticles.map((article) => article.category)),
+  ];
   const [activeCategory, setActiveCategory] =
     useState<BlogCategory>("All Insights");
 
@@ -121,8 +129,7 @@ export default function BlogListing({ allArticles, unavailable }: { allArticles:
 
   const filteredArticles = latestArticles.filter((article) => {
     const matchesCategory =
-      activeCategory === "All Insights" ||
-      article.category === activeCategory;
+      activeCategory === "All Insights" || article.category === activeCategory;
 
     const query = searchQuery.trim().toLowerCase();
 
@@ -198,360 +205,363 @@ export default function BlogListing({ allArticles, unavailable }: { allArticles:
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Explore Insights
-
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {!allArticles.length && <section className="section-spacing px-5 lg:px-12"><CmsNotice unavailable={unavailable} kind="Blogs" /></section>}
+      {!allArticles.length && (
+        <section className="section-spacing px-5 lg:px-12">
+          <CmsNotice unavailable={unavailable} kind="Blogs" />
+        </section>
+      )}
       {/* FEATURED INSIGHTS */}
       {mainFeaturedArticle && (
-<section
-  id="featured-insights"
-  className="section-spacing bg-white px-5 md:px-4 lg:px-12"
->
-  <div className="mx-auto max-w-450">
-    <h2
-      className="mb-12 text-[42px] font-normal leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
-      data-aos="fade-up"
-    >
-      Featured Insights and Technology Perspectives
-    </h2>
-
-    <div
-      className={`grid grid-cols-1 overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white shadow-[0_24px_80px_rgba(22,22,22,0.06)] ${supportingFeaturedArticles.length ? "lg:grid-cols-[1fr_1fr]" : ""}`}
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      {/* MAIN FEATURED INSIGHT */}
-      <div className="relative min-h-130 overflow-hidden border-b border-[#dfe6f1] bg-[#eef2f8] lg:min-h-160 lg:border-b-0 lg:border-r">
-        <div className="absolute inset-0 flex items-center justify-center text-[15px] font-light text-[#8d8d8d]">
-          Featured insight image
-        </div>
-
-        <img
-          src={mainFeaturedArticle.image}
-          alt={mainFeaturedArticle.imageAlt}
-          className="absolute inset-0 z-10 h-full w-full object-cover"
-          onError={(event) => {
-            event.currentTarget.style.display = "none";
-          }}
-        />
-
-        <div className="absolute bottom-0 right-0 z-20 w-[calc(100%-24px)] max-w-107.5 border-l border-t border-[#dfe6f1] bg-white p-7 shadow-[0_18px_50px_rgba(22,22,22,0.12)]">
-          <p className="text-[14px] font-light text-[#616161]">
-            {mainFeaturedArticle.category}
-          </p>
-
-          <h3 className="mt-3 text-[22px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626]">
-            {mainFeaturedArticle.title}
-          </h3>
-
-          <div className="mt-4 inline-flex items-center gap-2 text-[13px] font-light text-[#616161]">
-            <IconWithFallback
-              icon={blogIcons.clock}
-              fallback={Clock3}
-              className="h-4 w-4 object-contain"
-              fallbackClassName="h-4 w-4"
-            />
-
-            {mainFeaturedArticle.readTime}
-          </div>
-
-          <Link
-            href={mainFeaturedArticle.href}
-            className="group mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] hover:underline"
-          >
-            Read the insight
-
-            <IconWithFallback
-              icon={blogIcons.arrow}
-              fallback={ArrowRight}
-              className="h-4.5 w-4.5 object-contain transition-transform duration-300 group-hover:translate-x-1"
-              fallbackClassName="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
-        </div>
-      </div>
-
-      {/* SUPPORTING FEATURED INSIGHTS */}
-      {supportingFeaturedArticles.length > 0 && <div className="grid grid-cols-1 md:grid-cols-2">
-        {supportingFeaturedArticles.map((article, index) => (
-          <Link
-            key={article.href}
-            href={article.href}
-            className={`group overflow-hidden bg-white transition-colors duration-300 hover:bg-[#fbfcff] ${
-              index === 0
-                ? "border-b border-[#dfe6f1] md:col-span-2"
-                : index === 1
-                  ? "border-b border-[#dfe6f1] md:border-b-0 md:border-r"
-                  : ""
-            }`}
-          >
-            {/* FEATURED BLOG IMAGE */}
-            <div
-              className={`relative overflow-hidden border-b border-[#dfe6f1] bg-[#eef2f8] ${
-                index === 0 ? "h-52 lg:h-55" : "h-45 lg:h-48"
-              }`}
+        <section
+          id="featured-insights"
+          className="section-spacing bg-white px-5 md:px-4 lg:px-12"
+        >
+          <div className="mx-auto max-w-450">
+            <h2
+              className="mb-12 text-[42px] font-normal leading-[1.1] tracking-[-1.8px] text-[#262626] md:text-[58px] lg:text-[68px]"
+              data-aos="fade-up"
             >
-              <div className="absolute inset-0 flex items-center justify-center text-[14px] font-light text-[#8d8d8d]">
-                Featured insight image
-              </div>
+              Featured Insights and Technology Perspectives
+            </h2>
 
-              <img
-                src={article.image}
-                alt={article.imageAlt}
-                className="relative z-10 h-full w-full object-cover transition duration-600 group-hover:scale-105"
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                }}
-              />
-            </div>
+            <div
+              className={`grid grid-cols-1 overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white shadow-[0_24px_80px_rgba(22,22,22,0.06)] ${supportingFeaturedArticles.length ? "lg:grid-cols-[1fr_1fr]" : ""}`}
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              {/* MAIN FEATURED INSIGHT */}
+              <div className="relative min-h-130 overflow-hidden border-b border-[#dfe6f1] bg-[#eef2f8] lg:min-h-160 lg:border-b-0 lg:border-r">
+                <div className="absolute inset-0 flex items-center justify-center text-[15px] font-light text-[#8d8d8d]">
+                  Featured insight image
+                </div>
 
-            {/* FEATURED BLOG CONTENT */}
-            <div className={index === 0 ? "p-8" : "p-7"}>
-              <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-light text-[#616161]">
-                <span className="text-[#193175]">
-                  {article.category}
-                </span>
-
-                <span className="inline-flex items-center gap-2">
-                  <IconWithFallback
-                    icon={blogIcons.clock}
-                    fallback={Clock3}
-                    className="h-3.75 w-3.75 object-contain"
-                    fallbackClassName="h-3.75 w-3.75"
-                  />
-
-                  {article.readTime}
-                </span>
-              </div>
-
-              <h3
-                className={`mt-3 font-normal leading-[1.4] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] ${
-                  index === 0
-                    ? "max-w-162.5 text-[24px] tracking-[-0.5px]"
-                    : "text-[20px]"
-                }`}
-              >
-                {article.title}
-              </h3>
-
-              <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] group-hover:underline">
-                Read more
-
-                <IconWithFallback
-                  icon={blogIcons.arrow}
-                  fallback={ArrowRight}
-                  className="h-4.5 w-4.5 object-contain transition-transform duration-300 group-hover:translate-x-1"
-                  fallbackClassName="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1"
+                <img
+                  src={mainFeaturedArticle.image}
+                  alt={mainFeaturedArticle.imageAlt}
+                  className="absolute inset-0 z-10 h-full w-full object-cover"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
                 />
-              </span>
-            </div>
-          </Link>
-        ))}
-      </div>}
-    </div>
-  </div>
-</section>
 
+                <div className="absolute bottom-0 right-0 z-20 w-[calc(100%-24px)] max-w-107.5 border-l border-t border-[#dfe6f1] bg-white p-7 shadow-[0_18px_50px_rgba(22,22,22,0.12)]">
+                  <p className="text-[14px] font-light text-[#616161]">
+                    {mainFeaturedArticle.category}
+                  </p>
+
+                  <h3 className="mt-3 text-[22px] font-normal leading-[1.35] tracking-[-0.4px] text-[#262626]">
+                    {mainFeaturedArticle.title}
+                  </h3>
+
+                  <div className="mt-4 inline-flex items-center gap-2 text-[13px] font-light text-[#616161]">
+                    <IconWithFallback
+                      icon={blogIcons.clock}
+                      fallback={Clock3}
+                      className="h-4 w-4 object-contain"
+                      fallbackClassName="h-4 w-4"
+                    />
+
+                    {mainFeaturedArticle.readTime}
+                  </div>
+
+                  <Link
+                    href={mainFeaturedArticle.href}
+                    className="group mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] hover:underline"
+                  >
+                    Read the insight
+                    <IconWithFallback
+                      icon={blogIcons.arrow}
+                      fallback={ArrowRight}
+                      className="h-4.5 w-4.5 object-contain transition-transform duration-300 group-hover:translate-x-1"
+                      fallbackClassName="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </Link>
+                </div>
+              </div>
+
+              {/* SUPPORTING FEATURED INSIGHTS */}
+              {supportingFeaturedArticles.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  {supportingFeaturedArticles.map((article, index) => (
+                    <Link
+                      key={article.href}
+                      href={article.href}
+                      className={`group overflow-hidden bg-white transition-colors duration-300 hover:bg-[#fbfcff] ${
+                        index === 0
+                          ? "border-b border-[#dfe6f1] md:col-span-2"
+                          : index === 1
+                            ? "border-b border-[#dfe6f1] md:border-b-0 md:border-r"
+                            : ""
+                      }`}
+                    >
+                      {/* FEATURED BLOG IMAGE */}
+                      <div
+                        className={`relative overflow-hidden border-b border-[#dfe6f1] bg-[#eef2f8] ${
+                          index === 0 ? "h-52 lg:h-55" : "h-45 lg:h-48"
+                        }`}
+                      >
+                        <div className="absolute inset-0 flex items-center justify-center text-[14px] font-light text-[#8d8d8d]">
+                          Featured insight image
+                        </div>
+
+                        <img
+                          src={article.image}
+                          alt={article.imageAlt}
+                          className="relative z-10 h-full w-full object-cover transition duration-600 group-hover:scale-105"
+                          onError={(event) => {
+                            event.currentTarget.style.display = "none";
+                          }}
+                        />
+                      </div>
+
+                      {/* FEATURED BLOG CONTENT */}
+                      <div className={index === 0 ? "p-8" : "p-7"}>
+                        <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-light text-[#616161]">
+                          <span className="text-[#193175]">
+                            {article.category}
+                          </span>
+
+                          <span className="inline-flex items-center gap-2">
+                            <IconWithFallback
+                              icon={blogIcons.clock}
+                              fallback={Clock3}
+                              className="h-3.75 w-3.75 object-contain"
+                              fallbackClassName="h-3.75 w-3.75"
+                            />
+
+                            {article.readTime}
+                          </span>
+                        </div>
+
+                        <h3
+                          className={`mt-3 font-normal leading-[1.4] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] ${
+                            index === 0
+                              ? "max-w-162.5 text-[24px] tracking-[-0.5px]"
+                              : "text-[20px]"
+                          }`}
+                        >
+                          {article.title}
+                        </h3>
+
+                        <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] group-hover:underline">
+                          Read more
+                          <IconWithFallback
+                            icon={blogIcons.arrow}
+                            fallback={ArrowRight}
+                            className="h-4.5 w-4.5 object-contain transition-transform duration-300 group-hover:translate-x-1"
+                            fallbackClassName="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1"
+                          />
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
       )}
       {/* LATEST INSIGHTS */}
-      {allArticles.length > 0 && <section
-        id="latest-insights"
-        className="section-spacing scroll-mt-24 bg-white px-5 md:px-4 lg:px-12"
-      >
-        <div className="mx-auto max-w-450">
-          <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-            <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
-                Latest Insights
-              </p>
+      {allArticles.length > 0 && (
+        <section
+          id="latest-insights"
+          className="section-spacing scroll-mt-24 bg-white px-5 md:px-4 lg:px-12"
+        >
+          <div className="mx-auto max-w-450">
+            <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+              <div>
+                <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
+                  Latest Insights
+                </p>
 
-              <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore Practical Technology Topics
-              </h2>
-            </div>
+                <h2 className="text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+                  Explore Practical Technology Topics
+                </h2>
+              </div>
 
-            <div className="flex flex-col gap-5 lg:items-end">
-              <div className="relative w-full max-w-145">
-                <IconWithFallback
-                  icon={blogIcons.search}
-                  fallback={Search}
-                  className="absolute left-4 top-1/2 h-4.5 w-4.5 -translate-y-1/2 object-contain"
-                  fallbackClassName="absolute left-4 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-[#6b7280]"
-                />
+              <div className="flex flex-col gap-5 lg:items-end">
+                <div className="relative w-full max-w-145">
+                  <IconWithFallback
+                    icon={blogIcons.search}
+                    fallback={Search}
+                    className="absolute left-4 top-1/2 h-4.5 w-4.5 -translate-y-1/2 object-contain"
+                    fallbackClassName="absolute left-4 top-1/2 h-4.5 w-4.5 -translate-y-1/2 text-[#6b7280]"
+                  />
 
-                <input
-                  type="search"
-                  value={searchQuery}
-                  onChange={(event) => {
-                    setSearchQuery(event.target.value);
-                    setVisibleCount(12);
-                  }}
-                  aria-label="Search blogs"
-                  placeholder="Search articles"
-                  className="h-13.5 w-full rounded-full border border-[#dfe6f1] bg-[#f8faff] pl-12 pr-5 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
-                />
+                  <input
+                    type="search"
+                    value={searchQuery}
+                    onChange={(event) => {
+                      setSearchQuery(event.target.value);
+                      setVisibleCount(12);
+                    }}
+                    aria-label="Search blogs"
+                    placeholder="Search articles"
+                    className="h-13.5 w-full rounded-full border border-[#dfe6f1] bg-[#f8faff] pl-12 pr-5 text-[15px] font-light text-[#262626] outline-none transition placeholder:text-[#8d8d8d] focus:border-[#193175] focus:bg-white"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="mb-10 flex flex-wrap gap-3">
-            {categories.map((category) => {
-              const isActive = activeCategory === category;
+            <div className="mb-10 flex flex-wrap gap-3">
+              {categories.map((category) => {
+                const isActive = activeCategory === category;
 
-              return (
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => {
+                      setActiveCategory(category);
+                      setVisibleCount(12);
+                    }}
+                    className={`rounded-full border px-5 py-2.5 text-[14px] font-light transition ${
+                      isActive
+                        ? "border-[#193175] bg-[#193175] text-white"
+                        : "border-[#dfe6f1] bg-white text-[#525252] hover:border-[#193175] hover:text-[#193175]"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                );
+              })}
+            </div>
+
+            {filteredArticles.length > 0 ? (
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {visibleArticles.map((article) => (
+                  <Link
+                    key={article.title}
+                    href={article.href}
+                    className="group overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)]"
+                  >
+                    <div className="relative h-64 overflow-hidden bg-[#eef2f8]">
+                      <div className="absolute inset-0 flex items-center justify-center text-[14px] font-light text-[#8d8d8d]">
+                        Article image
+                      </div>
+
+                      <img
+                        src={article.image}
+                        alt={article.imageAlt}
+                        className="relative z-10 h-full w-full object-cover transition duration-600 group-hover:scale-105"
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
+                      />
+                    </div>
+
+                    <div className="p-7">
+                      <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-light text-[#616161]">
+                        <span className="text-[#193175]">
+                          {article.category}
+                        </span>
+
+                        <span className="inline-flex items-center gap-2">
+                          <IconWithFallback
+                            icon={blogIcons.clock}
+                            fallback={Clock3}
+                            className="h-3.75 w-3.75 object-contain"
+                            fallbackClassName="h-3.75 w-3.75"
+                          />
+
+                          {article.readTime}
+                        </span>
+                      </div>
+
+                      <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
+                        {article.title}
+                      </h3>
+
+                      <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
+                        {article.description}
+                      </p>
+
+                      <span className="mt-7 inline-flex items-center gap-3 text-[14px] font-medium text-[#193175]">
+                        Read article
+                        <IconWithFallback
+                          icon={blogIcons.arrow}
+                          fallback={ArrowRight}
+                          className="h-4 w-4 object-contain transition group-hover:translate-x-1"
+                          fallbackClassName="h-4 w-4 transition group-hover:translate-x-1"
+                        />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] px-6 py-16 text-center">
+                <IconWithFallback
+                  icon={blogIcons.emptyState}
+                  fallback={BookOpen}
+                  className="mx-auto h-9 w-9 object-contain"
+                  fallbackClassName="mx-auto h-9 w-9 text-[#193175]"
+                />
+
+                <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
+                  No Articles Found
+                </h3>
+
+                <p className="mx-auto mt-3 max-w-130 text-[15px] font-light leading-[1.7] text-[#616161]">
+                  Try another search term or switch back to all insights.
+                </p>
+
                 <button
-                  key={category}
                   type="button"
                   onClick={() => {
-                    setActiveCategory(category);
+                    setSearchQuery("");
+                    setActiveCategory("All Insights");
                     setVisibleCount(12);
                   }}
-                  className={`rounded-full border px-5 py-2.5 text-[14px] font-light transition ${
-                    isActive
-                      ? "border-[#193175] bg-[#193175] text-white"
-                      : "border-[#dfe6f1] bg-white text-[#525252] hover:border-[#193175] hover:text-[#193175]"
-                  }`}
+                  className="mt-6 inline-flex items-center gap-2 text-[14px] font-medium text-[#193175]"
                 >
-                  {category}
+                  Clear filters
+                  <IconWithFallback
+                    icon={blogIcons.arrow}
+                    fallback={ArrowRight}
+                    className="h-4 w-4 object-contain"
+                    fallbackClassName="h-4 w-4"
+                  />
                 </button>
-              );
-            })}
-          </div>
+              </div>
+            )}
 
-          {filteredArticles.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {visibleArticles.map((article) => (
-                <Link
-                  key={article.title}
-                  href={article.href}
-                  className="group overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)]"
+            {filteredArticles.length > 0 && hasMoreArticles && (
+              <div className="mt-12 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setVisibleCount((currentCount) =>
+                      Math.min(currentCount + 6, filteredArticles.length),
+                    )
+                  }
+                  className="group inline-flex h-13.5 min-w-55 items-center justify-between rounded-sm border border-[#193175] px-6 text-[15px] font-medium text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
                 >
-                  <div className="relative h-64 overflow-hidden bg-[#eef2f8]">
-                    <div className="absolute inset-0 flex items-center justify-center text-[14px] font-light text-[#8d8d8d]">
-                      Article image
-                    </div>
+                  <span>Load More Insights</span>
 
-                    <img
-                      src={article.image}
-                      alt={article.imageAlt}
-                      className="relative z-10 h-full w-full object-cover transition duration-600 group-hover:scale-105"
-                      onError={(event) => {
-                        event.currentTarget.style.display = "none";
-                      }}
-                    />
-                  </div>
-
-                  <div className="p-7">
-                    <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-light text-[#616161]">
-                      <span className="text-[#193175]">
-                        {article.category}
-                      </span>
-
-                      <span className="inline-flex items-center gap-2">
-                        <IconWithFallback
-                          icon={blogIcons.clock}
-                          fallback={Clock3}
-                          className="h-3.75 w-3.75 object-contain"
-                          fallbackClassName="h-3.75 w-3.75"
-                        />
-
-                        {article.readTime}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-5 text-[24px] font-normal leading-[1.28] tracking-[-0.6px] text-[#262626] transition group-hover:text-[#193175]">
-                      {article.title}
-                    </h3>
-
-                    <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161]">
-                      {article.description}
-                    </p>
-
-                    <span className="mt-7 inline-flex items-center gap-3 text-[14px] font-medium text-[#193175]">
-                      Read article
-
-                      <IconWithFallback
-                        icon={blogIcons.arrow}
-                        fallback={ArrowRight}
-                        className="h-4 w-4 object-contain transition group-hover:translate-x-1"
-                        fallbackClassName="h-4 w-4 transition group-hover:translate-x-1"
-                      />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] px-6 py-16 text-center">
-              <IconWithFallback
-                icon={blogIcons.emptyState}
-                fallback={BookOpen}
-                className="mx-auto h-9 w-9 object-contain"
-                fallbackClassName="mx-auto h-9 w-9 text-[#193175]"
-              />
-
-              <h3 className="mt-5 text-[24px] font-normal text-[#262626]">
-                No Articles Found
-              </h3>
-
-              <p className="mx-auto mt-3 max-w-130 text-[15px] font-light leading-[1.7] text-[#616161]">
-                Try another search term or switch back to all insights.
-              </p>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSearchQuery("");
-                  setActiveCategory("All Insights");
-                  setVisibleCount(12);
-                }}
-                className="mt-6 inline-flex items-center gap-2 text-[14px] font-medium text-[#193175]"
-              >
-                Clear filters
-
-                <IconWithFallback
-                  icon={blogIcons.arrow}
-                  fallback={ArrowRight}
-                  className="h-4 w-4 object-contain"
-                  fallbackClassName="h-4 w-4"
-                />
-              </button>
-            </div>
-          )}
-
-          {filteredArticles.length > 0 && hasMoreArticles && (
-            <div className="mt-12 flex justify-center">
-              <button
-                type="button"
-                onClick={() =>
-                  setVisibleCount((currentCount) =>
-                    Math.min(
-                      currentCount + 6,
-                      filteredArticles.length,
-                    ),
-                  )
-                }
-                className="group inline-flex h-13.5 min-w-55 items-center justify-between rounded-sm border border-[#193175] px-6 text-[15px] font-medium text-[#193175] transition-all duration-300 hover:bg-[#193175] hover:text-white"
-              >
-                <span>Load More Insights</span>
-
-                <IconWithFallback
-                  icon={blogIcons.arrow}
-                  fallback={ArrowRight}
-                  className="h-4.5 w-4.5 object-contain transition-transform duration-300 group-hover:translate-x-1"
-                  fallbackClassName="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </button>
-            </div>
-          )}
-        </div>
-      </section>}
+                  <IconWithFallback
+                    icon={blogIcons.arrow}
+                    fallback={ArrowRight}
+                    className="h-4.5 w-4.5 object-contain transition-transform duration-300 group-hover:translate-x-1"
+                    fallbackClassName="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </button>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* FINAL CTA */}
       <section className="section-spacing bg-white">
@@ -587,17 +597,18 @@ export default function BlogListing({ allArticles, unavailable }: { allArticles:
               >
                 <span>Discuss Your Requirement</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

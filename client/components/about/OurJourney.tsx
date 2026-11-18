@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import { useState } from "react";

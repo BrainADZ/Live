@@ -70,7 +70,7 @@ export default function StatsSection() {
           const easedProgress = 1 - Math.pow(1 - progress, 3);
 
           setCounts(
-            stats.map((item) => Math.floor(item.value * easedProgress))
+            stats.map((item) => Math.floor(item.value * easedProgress)),
           );
 
           if (progress < 1) {
@@ -82,7 +82,7 @@ export default function StatsSection() {
 
         animationFrame.current = requestAnimationFrame(updateCounts);
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(section);
@@ -115,9 +115,7 @@ export default function StatsSection() {
 
             <h2 className="max-w-[760px] text-[38px] font-normal leading-[1.08] tracking-[-1.7px] text-[#161616] md:text-[48px] lg:text-[54px]">
               Creating Measurable Impact through{" "}
-              <span className="text-[#193175]">
-                Technology
-              </span>
+              <span className="text-[#193175]">Technology</span>
             </h2>
           </div>
 
@@ -127,17 +125,13 @@ export default function StatsSection() {
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            Our numbers reflect practical technology, reliable
-            execution, and the long-term value we create for
-            modern businesses.
+            Our numbers reflect practical technology, reliable execution, and
+            the long-term value we create for modern businesses.
           </p>
         </div>
 
         {/* STATS GRID */}
-        <div
-          className="stats-grid bg-white"
-          data-aos="fade-up"
-        >
+        <div className="stats-grid bg-white" data-aos="fade-up">
           {stats.map((item, index) => (
             <div
               key={item.label}
@@ -162,7 +156,6 @@ export default function StatsSection() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }
