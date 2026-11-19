@@ -368,6 +368,11 @@ export default async function RootLayout({
             gtag('config', 'G-CNMX598PJH');
           `}
         </Script>
+        <Script
+          id="google-tag-manager"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NQB5LR2F"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
