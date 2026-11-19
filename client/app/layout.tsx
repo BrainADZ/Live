@@ -13,8 +13,7 @@ import {
   META_PIXEL_SCRIPT_ID,
 } from "@/lib/metaPixel";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://brainadzlive.com";
 
 const siteDescription =
   "BrainADZ Live builds custom software, web and mobile applications, cloud solutions, business platforms, and digital signage products for modern businesses.";
@@ -45,11 +44,9 @@ const routeTitles: Record<string, string> = {
   "/digital-signage-products/digital-teaching-conference-board-ifpd":
     "Digital Teaching and Conference Board (IFPD)",
 
-  "/digital-signage-products/lfd-video-walls":
-    "LFD Video Walls",
+  "/digital-signage-products/lfd-video-walls": "LFD Video Walls",
 
-  "/digital-signage-products/self-ordering-kiosk":
-    "Self-Ordering Kiosk",
+  "/digital-signage-products/self-ordering-kiosk": "Self-Ordering Kiosk",
 
   "/digital-signage-products/vertical-floor-mount-digital-kiosk":
     "Vertical Floor Mount Digital Kiosk",
@@ -62,95 +59,71 @@ const routeTitles: Record<string, string> = {
 
   "/industries": "Industries We Serve",
 
-  "/industries/automotive":
-    "Automotive Technology Solutions",
+  "/industries/automotive": "Automotive Technology Solutions",
 
-  "/industries/education-tech":
-    "Education Technology Solutions",
+  "/industries/education-tech": "Education Technology Solutions",
 
-  "/industries/facility-management":
-    "Facility Management Technology Solutions",
+  "/industries/facility-management": "Facility Management Technology Solutions",
 
-  "/industries/finance-tech":
-    "Financial Technology Solutions",
+  "/industries/finance-tech": "Financial Technology Solutions",
 
-  "/industries/health-care":
-    "Healthcare Technology Solutions",
+  "/industries/health-care": "Healthcare Technology Solutions",
 
-  "/industries/insurance-tech":
-    "Insurance Technology Solutions",
+  "/industries/insurance-tech": "Insurance Technology Solutions",
 
   "/industries/media-entertainment":
     "Media and Entertainment Technology Solutions",
 
-  "/industries/property-tech":
-    "Property Technology Solutions",
+  "/industries/property-tech": "Property Technology Solutions",
 
-  "/industries/retail":
-    "Retail Technology Solutions",
+  "/industries/retail": "Retail Technology Solutions",
 
-  "/industries/telecom":
-    "Telecom Technology Solutions",
+  "/industries/telecom": "Telecom Technology Solutions",
 
-  "/industries/transport":
-    "Transport Technology Solutions",
+  "/industries/transport": "Transport Technology Solutions",
 
   "/industries/travel-hospitality":
     "Travel and Hospitality Technology Solutions",
 
-  "/software-platforms":
-    "Business Software Platforms",
+  "/software-platforms": "Business Software Platforms",
 
-  "/software-platforms/cloud-signage-software":
-    "Cloud Signage Software",
+  "/software-platforms/cloud-signage-software": "Cloud Signage Software",
 
-  "/software-platforms/crm-software":
-    "CRM Software",
+  "/software-platforms/crm-software": "CRM Software",
 
-  "/software-platforms/erp-software":
-    "ERP Software",
+  "/software-platforms/erp-software": "ERP Software",
 
-  "/software-platforms/pos":
-    "POS Billing Software",
+  "/software-platforms/pos": "POS Billing Software",
 
-  "/software-platforms/signage-application":
-    "Digital Signage Application",
+  "/software-platforms/signage-application": "Digital Signage Application",
 
-  "/software-services":
-    "Software Development Services",
+  "/software-services": "Software Development Services",
 
-  "/software-services/api-integration":
-    "API Integration Services",
+  "/software-services/api-integration": "API Integration Services",
 
   "/software-services/application-modernization":
     "Application Modernization Services",
 
-  "/software-services/cloud-consulting":
-    "Cloud Consulting Services",
+  "/software-services/cloud-consulting": "Cloud Consulting Services",
 
-  "/software-services/crm-development":
-    "CRM Development Services",
+  "/software-services/crm-development": "CRM Development Services",
 
   "/software-services/enterprise-software-solutions":
     "Enterprise Software Solutions",
 
-  "/software-services/erp-development":
-    "ERP Development Services",
+  "/software-services/erp-development": "ERP Development Services",
 
   "/software-services/mobile-app-development":
     "Mobile App Development Services",
 
-  "/software-services/saas-development":
-    "SaaS Development Services",
+  "/software-services/saas-development": "SaaS Development Services",
 
   "/software-services/software-development":
     "Custom Software Development Services",
 
-  "/software-services/ui-ux-design":
-    "UI/UX Design Services",
+  "/software-services/ui-ux-design": "UI/UX Design Services",
 
-  "/software-services/web-app-development":
-    "Web App Development Services",
+  "/software-services/web-app-development": "Web App Development Services",
 };
 
 const geistSans = Geist({
@@ -167,8 +140,7 @@ const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default:
-      "BrainADZ Live | Software, Cloud & Digital Signage Solutions",
+    default: "BrainADZ Live | Software, Cloud & Digital Signage Solutions",
     template: "%s | BrainADZ Live",
   },
 
@@ -199,8 +171,7 @@ const defaultMetadata: Metadata = {
   ],
 
   verification: {
-    google:
-      "4GUu01sDPZQ2D1rPn74tulJyTFb9yNhb6JlPKOkgrTg",
+    google: "4GUu01sDPZQ2D1rPn74tulJyTFb9yNhb6JlPKOkgrTg",
   },
 
   icons: {
@@ -228,8 +199,7 @@ const defaultMetadata: Metadata = {
     locale: "en_IN",
     siteName: "BrainADZ Live",
 
-    title:
-      "BrainADZ Live | Software, Cloud & Digital Signage Solutions",
+    title: "BrainADZ Live | Software, Cloud & Digital Signage Solutions",
 
     description: siteDescription,
 
@@ -246,8 +216,7 @@ const defaultMetadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "BrainADZ Live | Software, Cloud & Digital Signage Solutions",
+    title: "BrainADZ Live | Software, Cloud & Digital Signage Solutions",
 
     description: siteDescription,
 
@@ -273,8 +242,7 @@ const defaultMetadata: Metadata = {
 export async function generateMetadata(): Promise<Metadata> {
   const headerList = await headers();
 
-  const pathname =
-    headerList.get("x-canonical-path") || "/";
+  const pathname = headerList.get("x-canonical-path") || "/";
 
   return {
     ...defaultMetadata,
@@ -318,16 +286,10 @@ export default async function RootLayout({
   };
 
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
         {isErpPixelPage && (
-          <Script
-            id={META_PIXEL_SCRIPT_ID}
-            strategy="beforeInteractive"
-          >
+          <Script id={META_PIXEL_SCRIPT_ID} strategy="beforeInteractive">
             {META_PIXEL_BASE_CODE}
           </Script>
         )}

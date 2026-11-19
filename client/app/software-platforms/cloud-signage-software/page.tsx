@@ -2,15 +2,9 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  Download,
-  Minus,
-  Plus,
-} from "lucide-react";
+import { ArrowRight, Download, Minus, Plus } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
 
@@ -80,8 +74,7 @@ const workflowSteps = [
   {
     title: "Requirement Discovery",
     text: "We understand the screen network, locations, content workflow, users and management requirements.",
-    iconSrc:
-      "/icons/cloud-signage-software/workflow/requirement-discovery.svg",
+    iconSrc: "/icons/cloud-signage-software/workflow/requirement-discovery.svg",
   },
   {
     title: "Screen & Content Architecture",
@@ -92,8 +85,7 @@ const workflowSteps = [
   {
     title: "Dashboard Planning",
     text: "We organize the dashboard workflow for media, playlists, screens, locations and content publishing.",
-    iconSrc:
-      "/icons/cloud-signage-software/workflow/dashboard-planning.svg",
+    iconSrc: "/icons/cloud-signage-software/workflow/dashboard-planning.svg",
   },
   {
     title: "Platform Configuration",
@@ -104,24 +96,22 @@ const workflowSteps = [
   {
     title: "Testing & Deployment",
     text: "We test the configured content workflow, screen mapping and publishing process before deployment.",
-    iconSrc:
-      "/icons/cloud-signage-software/workflow/testing-deployment.svg",
+    iconSrc: "/icons/cloud-signage-software/workflow/testing-deployment.svg",
   },
   {
     title: "Handover & Support",
     text: "The platform is handed over with guidance and support according to the agreed project scope.",
-    iconSrc:
-      "/icons/cloud-signage-software/workflow/handover-support.svg",
+    iconSrc: "/icons/cloud-signage-software/workflow/handover-support.svg",
   },
 ];
 
 const workflowLayout = [
   { ...workflowSteps[0], left: "21.75%", top: "0px" },
   { ...workflowSteps[1], left: "78.25%", top: "0px" },
-  { ...workflowSteps[2], left: "21.75%", top: "300px" },
-  { ...workflowSteps[3], left: "78.25%", top: "300px" },
-  { ...workflowSteps[4], left: "21.75%", top: "570px" },
-  { ...workflowSteps[5], left: "78.25%", top: "570px" },
+  { ...workflowSteps[2], left: "21.75%", top: "360px" },
+  { ...workflowSteps[3], left: "78.25%", top: "360px" },
+  { ...workflowSteps[4], left: "21.75%", top: "720px" },
+  { ...workflowSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const integrations = [
@@ -176,10 +166,7 @@ export default function CloudSignageSoftwarePage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -189,9 +176,7 @@ export default function CloudSignageSoftwarePage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">
-              Cloud Signage Software
-            </span>
+            <span className="text-white/90">Cloud Signage Software</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
@@ -213,7 +198,11 @@ export default function CloudSignageSoftwarePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -319,10 +308,7 @@ export default function CloudSignageSoftwarePage() {
                 text: "Use a structured workflow to coordinate campaign media and publishing across configured screens.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -412,8 +398,8 @@ export default function CloudSignageSoftwarePage() {
               </h3>
 
               <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
-                Organize your screens, locations, content and publishing
-                process around one management setup.
+                Organize your screens, locations, content and publishing process
+                around one management setup.
               </p>
 
               <button
@@ -454,15 +440,6 @@ export default function CloudSignageSoftwarePage() {
 
       {/* WORKFLOW SECTION */}
       <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -515,10 +492,10 @@ export default function CloudSignageSoftwarePage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -533,10 +510,7 @@ export default function CloudSignageSoftwarePage() {
                   refX="16"
                   refY="7"
                 >
-                  <path
-                    d="M 0 0 L 18 7 L 0 14 z"
-                    fill="#193175"
-                  />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
@@ -550,7 +524,7 @@ export default function CloudSignageSoftwarePage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 171 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -558,16 +532,7 @@ export default function CloudSignageSoftwarePage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#cloud-signage-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -576,7 +541,16 @@ export default function CloudSignageSoftwarePage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#cloud-signage-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -714,10 +688,7 @@ export default function CloudSignageSoftwarePage() {
                 text: "Deployment guidance and support are provided according to the agreed project scope.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -760,9 +731,7 @@ export default function CloudSignageSoftwarePage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -812,8 +781,8 @@ export default function CloudSignageSoftwarePage() {
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  See how media, playlists, schedules and configured screens
-                  can be managed through one cloud signage workflow.
+                  See how media, playlists, schedules and configured screens can
+                  be managed through one cloud signage workflow.
                 </p>
               </div>
 
@@ -824,7 +793,11 @@ export default function CloudSignageSoftwarePage() {
               >
                 <span>Request a Demo</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>

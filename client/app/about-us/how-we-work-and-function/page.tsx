@@ -2,15 +2,9 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
-import Link from "next/link"
+import Link from "next/link";
 import PopupForm from "@/components/PopupForm";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Headphones,
-  LineChart,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Headphones, LineChart } from "lucide-react";
 import { useState } from "react";
 
 const processSteps = [
@@ -84,61 +78,66 @@ export default function HowWeWorkPage() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   return (
     <main className="bg-white text-[#161616]">
-  {/* HERO SECTION */}
-  <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
-    <img
-      src="/hero/work-function.webp"
-      alt="Page Hero"
-      className="absolute inset-0 h-full w-full object-cover"
-    />
+      {/* HERO SECTION */}
+      <section className="relative min-h-105 overflow-hidden bg-black text-white md:min-h-120 lg:min-h-135">
+        <img
+          src="/hero/work-function.webp"
+          alt="Page Hero"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.75)_28%,rgba(0,0,0,0.38)_55%,rgba(0,0,0,0)_100%)]" />
 
-    <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
-      <div
-        className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
-        data-aos="fade-up"
-      >
-        <Link href="/" className="text-[#6da0ff] hover:underline">
-          Home
-        </Link>
-        <span className="text-white/80">/</span>
-        <span className="text-white/90">How We Work And Function</span>
-      </div>
+        <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
+          <div
+            className="flex items-center gap-3 text-[16px] font-light md:text-[18px]"
+            data-aos="fade-up"
+          >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
+              Home
+            </Link>
+            <span className="text-white/80">/</span>
+            <span className="text-white/90">How We Work And Function</span>
+          </div>
 
-      <div
-        className="mt-12 max-w-205 md:mt-14"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-          How We Plan, Build and Deliver Projects
-        </h1>
-      </div>
+          <div
+            className="mt-12 max-w-205 md:mt-14"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
+              How We Plan, Build and Deliver Projects
+            </h1>
+          </div>
 
-      <div
-        className="mt-auto pb-8 md:pb-9 lg:pb-10"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-          Our teams move from discovery and scope planning to design,
-            development, validation, deployment and agreed post-launch support.
-        </p>
+          <div
+            className="mt-auto pb-8 md:pb-9 lg:pb-10"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
+              Our teams move from discovery and scope planning to design,
+              development, validation, deployment and agreed post-launch
+              support.
+            </p>
 
-        <div className="mt-8">
-          <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+            <div className="mt-8">
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
       {/* OVERVIEW */}
       <section className="section-spacing px-5 md:px-4 lg:px-12">
@@ -155,8 +154,8 @@ export default function HowWeWorkPage() {
 
           <div>
             <p className="text-[18px] font-light leading-[1.8] text-[#525252] md:text-[20px]">
-              At BrainADZ Live, we first understand what needs to change,
-              who will use the solution and how the current process works. From
+              At BrainADZ Live, we first understand what needs to change, who
+              will use the solution and how the current process works. From
               there, we define the scope and move through design, development,
               validation, deployment and agreed post-launch work with clear
               responsibilities at each stage.
@@ -165,9 +164,7 @@ export default function HowWeWorkPage() {
             <div className="mt-10 grid grid-cols-2 gap-5">
               <div className="border border-[#e5e5e5] p-6">
                 <LineChart className="mb-5 text-[#193175]" size={30} />
-                <h3 className="text-[32px] font-normal text-[#161616]">
-                  6
-                </h3>
+                <h3 className="text-[32px] font-normal text-[#161616]">6</h3>
                 <p className="mt-2 text-[15px] font-light leading-[1.6] text-[#525252]">
                   Defined project delivery stages
                 </p>
@@ -175,9 +172,7 @@ export default function HowWeWorkPage() {
 
               <div className="border border-[#e5e5e5] p-6">
                 <Headphones className="mb-5 text-[#193175]" size={30} />
-                <h3 className="text-[32px] font-normal text-[#161616]">
-                  4
-                </h3>
+                <h3 className="text-[32px] font-normal text-[#161616]">4</h3>
                 <p className="mt-2 text-[15px] font-light leading-[1.6] text-[#525252]">
                   Cross-functional team functions
                 </p>
@@ -212,13 +207,13 @@ export default function HowWeWorkPage() {
                   </span>
 
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={step.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                    <img
+                      src={step.iconSrc}
+                      alt=""
+                      aria-hidden="true"
+                      className="manual-icon object-contain"
+                    />
+                  </div>
                 </div>
 
                 <h3 className="mb-4 text-[24px] font-normal tracking-[-0.5px] text-[#161616]">
@@ -377,8 +372,8 @@ export default function HowWeWorkPage() {
                 Improve
               </h3>
               <p className="text-[16px] font-light leading-[1.75] text-[#525252]">
-                After release, we handle agreed fixes, enhancements, updates
-                and support requirements based on how the product is being used.
+                After release, we handle agreed fixes, enhancements, updates and
+                support requirements based on how the product is being used.
               </p>
             </div>
           </div>
@@ -387,56 +382,57 @@ export default function HowWeWorkPage() {
 
       {/* CTA */}
       <section className="section-spacing lazy-section bg-white">
-      <div className="mx-auto max-w-450 px-4 lg:px-10">
-        <div
-          className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
-          data-aos="zoom-in"
-        >
-          {/* LEFT IMAGE */}
-          <div className="hidden w-[32%] shrink-0 md:block">
-            <img
-              src="/CTA/cta.webp"
-              alt="How BrainADZ Live works with clients"
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover"
-            />
-          </div>
-
-          {/* RIGHT CONTENT */}
-          <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-            {/* TEXT */}
-            <div className="max-w-140">
-              <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                Have a Project That Needs a Clearer Delivery Plan?
-              </h3>
-
-              <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                Tell us what you are trying to build, improve or connect.
-                We can start by understanding the requirement and defining the
-                right next steps for the project.
-              </p>
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div
+            className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75"
+            data-aos="zoom-in"
+          >
+            {/* LEFT IMAGE */}
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="How BrainADZ Live works with clients"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
             </div>
 
-            {/* BUTTON */}
-            <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
->
-              <span>Enquire Now</span>
+            {/* RIGHT CONTENT */}
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              {/* TEXT */}
+              <div className="max-w-140">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Have a Project That Needs a Clearer Delivery Plan?
+                </h3>
 
-              <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Tell us what you are trying to build, improve or connect. We
+                  can start by understanding the requirement and defining the
+                  right next steps for the project.
+                </p>
+              </div>
+
+              {/* BUTTON */}
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <PopupForm
-  isOpen={isPopupOpen}
-  onClose={() => setIsPopupOpen(false)}
-/>
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

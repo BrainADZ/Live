@@ -24,10 +24,7 @@ export default function PolicyEnquiryButton() {
           />
         </button>
       </div>
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </>
   );
 }

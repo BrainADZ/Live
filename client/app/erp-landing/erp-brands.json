@@ -16,6 +16,10 @@
         "logo":  "/erp-landing/brand/Doner.webp"
     },
     {
+        "name":  "Essilor",
+        "logo":  "/erp-landing/brand/Essilor.webp"
+    },
+    {
         "name":  "Foodlink",
         "logo":  "/erp-landing/brand/Foodlink.webp"
     },
@@ -46,6 +50,10 @@
     {
         "name":  "Natures",
         "logo":  "/erp-landing/brand/Natures.webp"
+    },
+    {
+        "name":  "Rabreez",
+        "logo":  "/erp-landing/brand/Rabreez.webp"
     },
     {
         "name":  "raddison",

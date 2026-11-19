@@ -128,8 +128,8 @@ export default function PolicyPage({
                 info@brainadzlive.com
               </a>
               <p className="mt-3 text-[14px] leading-relaxed text-[#616161]">
-                Apex Square III, UGF, Plot 6, Pocket B-3, Sector-17, Dwarka,
-                New Delhi 110075
+                Apex Square III, UGF, Plot 6, Pocket B-3, Sector-17, Dwarka, New
+                Delhi 110075
               </p>
               <Link
                 href="/contact-us"

@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -110,7 +109,8 @@ const discussionPreviews = [
   },
   {
     category: "Software Planning",
-    title: "Website, web app or custom software — what should a business choose?",
+    title:
+      "Website, web app or custom software — what should a business choose?",
     text: "A simple comparison based on business goals, workflow complexity and future growth needs.",
   },
   {
@@ -187,10 +187,7 @@ export default function CommunityPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -213,9 +210,9 @@ export default function CommunityPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-205 text-[15px] font-light leading-[1.55] tracking-[-0.3px] text-white/90 md:text-[18px] lg:text-[20px]">
-              Connect with business owners, creators, developers, marketers
-              and digital thinkers exploring software, CRM, ERP, signage,
-              automation and modern business solutions.
+              Connect with business owners, creators, developers, marketers and
+              digital thinkers exploring software, CRM, ERP, signage, automation
+              and modern business solutions.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -225,7 +222,11 @@ export default function CommunityPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Join Community
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -265,9 +266,7 @@ export default function CommunityPage() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-[18px] bg-[#f6f8fc] p-5">
-                <p className="text-[34px] font-light text-[#193175]">
-                  6+
-                </p>
+                <p className="text-[34px] font-light text-[#193175]">6+</p>
 
                 <p className="mt-2 text-[15px] font-light text-black/65">
                   Main discussion categories
@@ -275,9 +274,7 @@ export default function CommunityPage() {
               </div>
 
               <div className="rounded-[18px] bg-[#f6f8fc] p-5">
-                <p className="text-[34px] font-light text-[#193175]">
-                  Open
-                </p>
+                <p className="text-[34px] font-light text-[#193175]">Open</p>
 
                 <p className="mt-2 text-[15px] font-light text-black/65">
                   For business and technology learners
@@ -625,9 +622,7 @@ export default function CommunityPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -689,17 +684,18 @@ export default function CommunityPage() {
               >
                 <span>Join Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

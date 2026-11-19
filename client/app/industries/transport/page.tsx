@@ -3,7 +3,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -397,9 +396,8 @@ export default function TransportIndustryPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Custom software, mobile applications, CRM, ERP, booking,
-              dispatch and passenger information solutions for transport
-              businesses.
+              Custom software, mobile applications, CRM, ERP, booking, dispatch
+              and passenger information solutions for transport businesses.
             </p>
 
             <div className="mt-8">
@@ -409,7 +407,11 @@ export default function TransportIndustryPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -429,11 +431,11 @@ export default function TransportIndustryPage() {
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live helps transport businesses plan digital systems
-              for bookings, fleet operations, dispatch, logistics, customer
+              BrainADZ Live helps transport businesses plan digital systems for
+              bookings, fleet operations, dispatch, logistics, customer
               communication, CRM, ERP and reporting. The final solution is
-              shaped around the transport model, users and workflows included
-              in the project.
+              shaped around the transport model, users and workflows included in
+              the project.
             </p>
           </div>
 
@@ -477,10 +479,7 @@ export default function TransportIndustryPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -580,7 +579,6 @@ export default function TransportIndustryPage() {
         </div>
       </section>
 
-
       {/* PLATFORM TYPES */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
@@ -595,8 +593,8 @@ export default function TransportIndustryPage() {
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
               We combine relevant BrainADZ Live software services, mobile
-              applications, CRM, ERP, integrations and digital signage
-              according to the transport workflow that needs to be improved.
+              applications, CRM, ERP, integrations and digital signage according
+              to the transport workflow that needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
@@ -669,10 +667,7 @@ export default function TransportIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <CheckCircle2
-                  size={24}
-                  className="shrink-0 text-[#193175]"
-                />
+                <CheckCircle2 size={24} className="shrink-0 text-[#193175]" />
 
                 <span className="text-[17px] font-light text-black/75">
                   {item}
@@ -800,9 +795,8 @@ export default function TransportIndustryPage() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              Technology choices depend on the passenger experience,
-              operational workflows, data model, integrations and deployment
-              requirements.
+              Technology choices depend on the passenger experience, operational
+              workflows, data model, integrations and deployment requirements.
             </p>
           </div>
 
@@ -825,9 +819,7 @@ export default function TransportIndustryPage() {
 
                   <span
                     className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                      isActive
-                        ? "w-full opacity-100"
-                        : "w-0 opacity-0"
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
                 </button>
@@ -895,10 +887,7 @@ export default function TransportIndustryPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -990,9 +979,7 @@ export default function TransportIndustryPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -1042,9 +1029,9 @@ export default function TransportIndustryPage() {
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Tell us about your passengers, customers, bookings,
-                  dispatch activities and transport workflows so the right
-                  solution can be planned.
+                  Tell us about your passengers, customers, bookings, dispatch
+                  activities and transport workflows so the right solution can
+                  be planned.
                 </p>
               </div>
 
@@ -1055,17 +1042,18 @@ export default function TransportIndustryPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

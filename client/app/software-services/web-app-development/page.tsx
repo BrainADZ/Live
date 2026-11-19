@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -17,7 +16,7 @@ import {
   ServerCog,
   Users,
 } from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "frontend" | "backend" | "databases" | "cloud";
@@ -37,8 +36,7 @@ const workflow = [
   {
     title: "UX & Interface Planning",
     text: "We map user journeys, screen structure and responsive layouts before development begins.",
-    iconSrc:
-      "/icons/web-app-development/workflow/ux-interface-planning.svg",
+    iconSrc: "/icons/web-app-development/workflow/ux-interface-planning.svg",
   },
   {
     title: "Architecture & Integration Planning",
@@ -49,8 +47,7 @@ const workflow = [
   {
     title: "Web App Development",
     text: "We build the frontend, backend, business logic, dashboards and integrations required for the application.",
-    iconSrc:
-      "/icons/web-app-development/workflow/web-app-development.svg",
+    iconSrc: "/icons/web-app-development/workflow/web-app-development.svg",
   },
   {
     title: "Testing & Release Validation",
@@ -69,10 +66,10 @@ const workflow = [
 const workflowLayout = [
   { ...workflow[0], left: "21.75%", top: "0px" },
   { ...workflow[1], left: "78.25%", top: "0px" },
-  { ...workflow[2], left: "21.75%", top: "300px" },
-  { ...workflow[3], left: "78.25%", top: "300px" },
-  { ...workflow[4], left: "21.75%", top: "570px" },
-  { ...workflow[5], left: "78.25%", top: "570px" },
+  { ...workflow[2], left: "21.75%", top: "360px" },
+  { ...workflow[3], left: "78.25%", top: "360px" },
+  { ...workflow[4], left: "21.75%", top: "720px" },
+  { ...workflow[5], left: "78.25%", top: "720px" },
 ];
 
 const challenges = [
@@ -114,14 +111,12 @@ const services = [
   {
     title: "Custom Business Web Apps",
     text: "Browser-based applications built around your workflows, users, data and operational requirements.",
-    iconSrc:
-      "/icons/web-app-development/services/custom-business-web-apps.svg",
+    iconSrc: "/icons/web-app-development/services/custom-business-web-apps.svg",
   },
   {
     title: "Customer & Partner Portals",
     text: "Secure self-service portals for accounts, requests, documents, orders, status updates and communication.",
-    iconSrc:
-      "/icons/web-app-development/services/customer-partner-portals.svg",
+    iconSrc: "/icons/web-app-development/services/customer-partner-portals.svg",
   },
   {
     title: "Progressive Web Applications",
@@ -132,14 +127,12 @@ const services = [
   {
     title: "Backend & API Integration",
     text: "Connect the web app with databases, payment systems and approved third-party or internal APIs.",
-    iconSrc:
-      "/icons/web-app-development/services/backend-api-integration.svg",
+    iconSrc: "/icons/web-app-development/services/backend-api-integration.svg",
   },
   {
     title: "Web App Modernization",
     text: "Improve outdated interfaces, workflows, performance and application structure without rebuilding more than needed.",
-    iconSrc:
-      "/icons/web-app-development/services/web-app-modernization.svg",
+    iconSrc: "/icons/web-app-development/services/web-app-modernization.svg",
   },
   {
     title: "Web App Support & Enhancement",
@@ -284,14 +277,12 @@ const supportItems = [
   {
     title: "Performance Improvement",
     text: "Review page loading, API response times, database queries and other application bottlenecks.",
-    iconSrc:
-      "/icons/web-app-development/support/performance-improvement.svg",
+    iconSrc: "/icons/web-app-development/support/performance-improvement.svg",
   },
   {
     title: "Security & Access Updates",
     text: "Maintain authentication, permissions, dependencies and protected application endpoints.",
-    iconSrc:
-      "/icons/web-app-development/support/security-access-updates.svg",
+    iconSrc: "/icons/web-app-development/support/security-access-updates.svg",
   },
   {
     title: "Workflow & Feature Enhancements",
@@ -422,13 +413,17 @@ export default function WebAppDevelopmentPage() {
 
             <div className="mt-8">
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -443,13 +438,14 @@ export default function WebAppDevelopmentPage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Web Applications Built Around Real Users, Workflows and Business Data.
+              Web Applications Built Around Real Users, Workflows and Business
+              Data.
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live builds browser-based applications for internal teams,
-              customers and partners. We plan the interface, backend logic,
-              database, user roles and integrations around the tasks the
+              BrainADZ Live builds browser-based applications for internal
+              teams, customers and partners. We plan the interface, backend
+              logic, database, user roles and integrations around the tasks the
               application needs to support.
             </p>
           </div>
@@ -517,14 +513,16 @@ export default function WebAppDevelopmentPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Problems That Make Web Applications Difficult to Use and Maintain.
+                Problems That Make Web Applications Difficult to Use and
+                Maintain.
               </h2>
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
               Web applications become harder to rely on when workflows are slow,
               permissions are unclear or systems do not exchange data properly.
-              We address these issues through better structure, testing and integration planning.
+              We address these issues through better structure, testing and
+              integration planning.
             </p>
           </div>
 
@@ -598,16 +596,7 @@ export default function WebAppDevelopmentPage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -660,10 +649,10 @@ export default function WebAppDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -682,11 +671,45 @@ export default function WebAppDevelopmentPage() {
                 </marker>
               </defs>
 
-              <path d="M 392 43 L 1208 43" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#web-workflow-arrowhead)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#web-workflow-arrowhead)"
+              />
+              <path
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+              <path
+                d="M 1208 403 L 392 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#web-workflow-arrowhead)"
+              />
+              <path
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#web-workflow-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#web-workflow-arrowhead)"
+              />
             </svg>
 
             {workflowLayout.map((item) => (
@@ -743,17 +766,25 @@ export default function WebAppDevelopmentPage() {
               const Icon = layer.icon;
 
               return (
-                <div key={layer.title} className="rounded-3xl border border-black/10 bg-[#f8faff] p-5">
+                <div
+                  key={layer.title}
+                  className="rounded-3xl border border-black/10 bg-[#f8faff] p-5"
+                >
                   <div className="mb-5 flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#193175]/10">
                       <Icon size={20} className="text-[#193175]" />
                     </div>
-                    <h3 className="text-[18px] font-normal tracking-[-0.3px]">{titleCaseHeading(layer.title)}</h3>
+                    <h3 className="text-[18px] font-normal tracking-[-0.3px]">
+                      {titleCaseHeading(layer.title)}
+                    </h3>
                   </div>
 
                   <div className="space-y-3">
                     {layer.items.map((subItem) => (
-                      <div key={subItem} className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-[14px] font-light text-black/65">
+                      <div
+                        key={subItem}
+                        className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-[14px] font-light text-black/65"
+                      >
                         {subItem}
                       </div>
                     ))}
@@ -764,12 +795,17 @@ export default function WebAppDevelopmentPage() {
           </div>
 
           <div className="mt-8 grid gap-4 rounded-3xl border border-black/10 bg-[#f8faff] p-6 md:grid-cols-4">
-            {["Monitoring", "Logging", "Alerts", "Performance Tracking"].map((item) => (
-              <div key={item} className="flex items-center justify-center gap-3 text-[15px] font-light text-black/65">
-                <CheckCircle2 size={20} className="text-[#193175]" />
-                {item}
-              </div>
-            ))}
+            {["Monitoring", "Logging", "Alerts", "Performance Tracking"].map(
+              (item) => (
+                <div
+                  key={item}
+                  className="flex items-center justify-center gap-3 text-[15px] font-light text-black/65"
+                >
+                  <CheckCircle2 size={20} className="text-[#193175]" />
+                  {item}
+                </div>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -797,7 +833,10 @@ export default function WebAppDevelopmentPage() {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {useCases.map((item) => (
-              <div key={item.title} className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]">
+              <div
+                key={item.title}
+                className="group rounded-[26px] border border-black/10 bg-white p-6 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
+              >
                 <div className="manual-icon-box mb-5 flex h-13 w-13 items-center justify-center rounded-full bg-[#193175]/10 transition group-hover:bg-[#193175]">
                   <img
                     src={item.iconSrc}
@@ -807,7 +846,9 @@ export default function WebAppDevelopmentPage() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-normal tracking-[-0.3px]">{titleCaseHeading(item.title)}</h3>
+                <h3 className="text-[20px] font-normal tracking-[-0.3px]">
+                  {titleCaseHeading(item.title)}
+                </h3>
               </div>
             ))}
           </div>
@@ -956,16 +997,26 @@ export default function WebAppDevelopmentPage() {
               </h2>
             </div>
 
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
             {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
 
                 <div className="p-7 md:p-8">
@@ -1012,7 +1063,10 @@ export default function WebAppDevelopmentPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {supportItems.map((item) => (
-              <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
+              <div
+                key={item.title}
+                className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
+              >
                 <div className="manual-icon-box flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
                   <img
                     src={item.iconSrc}
@@ -1052,10 +1106,20 @@ export default function WebAppDevelopmentPage() {
 
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
-              <div key={faq.q} className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"}`}>
-                <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
+              <div
+                key={faq.q}
+                className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25 hover:shadow-[0_18px_56px_rgba(60,91,155,0.08)]"}`}
+              >
+                <button
+                  type="button"
+                  aria-expanded={openFaq === index}
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
+                >
                   <span className="flex items-center gap-4">
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"}`}>
+                    <span
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"}`}
+                    >
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
@@ -1064,8 +1128,14 @@ export default function WebAppDevelopmentPage() {
                     </span>
                   </span>
 
-                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}>
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+                  <span
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}
+                  >
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
 
@@ -1083,44 +1153,47 @@ export default function WebAppDevelopmentPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live Web App Development Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to Build a Web Application Around Your Business Workflow?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          Let BrainADZ Live design and develop the frontend, backend, data flows and integrations your web application needs.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                        
-                              <PopupForm
-                                isOpen={isPopupOpen}
-                                onClose={() => setIsPopupOpen(false)}
-                              />
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live Web App Development Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Ready to Build a Web Application Around Your Business
+                  Workflow?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Let BrainADZ Live design and develop the frontend, backend,
+                  data flows and integrations your web application needs.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

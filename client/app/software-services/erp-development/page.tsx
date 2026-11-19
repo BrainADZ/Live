@@ -2,17 +2,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Database,
-  Minus,
-  Plus,
-} from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import { ArrowRight, CheckCircle2, Database, Minus, Plus } from "lucide-react";
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "languages" | "databases" | "frameworks";
@@ -26,32 +19,27 @@ const processSteps = [
   {
     title: "Business & ERP Discovery",
     text: "We study your departments, handoffs, approvals, data, reports, existing tools and operational bottlenecks.",
-    iconSrc:
-      "/icons/erp-development/workflow/business-erp-discovery.svg",
+    iconSrc: "/icons/erp-development/workflow/business-erp-discovery.svg",
   },
   {
     title: "Module & Workflow Planning",
     text: "We define required modules, user roles, forms, approvals, reports, integrations and a practical phased roadmap.",
-    iconSrc:
-      "/icons/erp-development/workflow/module-workflow-planning.svg",
+    iconSrc: "/icons/erp-development/workflow/module-workflow-planning.svg",
   },
   {
     title: "Data & System Architecture",
     text: "We plan shared data structures, permissions, audit trails, integration points and a maintainable ERP foundation.",
-    iconSrc:
-      "/icons/erp-development/workflow/data-system-architecture.svg",
+    iconSrc: "/icons/erp-development/workflow/data-system-architecture.svg",
   },
   {
     title: "Custom ERP Development",
     text: "We build the required modules, dashboards, workflows, APIs, reports and admin controls around your operations.",
-    iconSrc:
-      "/icons/erp-development/workflow/custom-erp-development.svg",
+    iconSrc: "/icons/erp-development/workflow/custom-erp-development.svg",
   },
   {
     title: "Testing, Migration & Training",
     text: "We validate workflows, permissions and reports, migrate agreed data and prepare users for the new system.",
-    iconSrc:
-      "/icons/erp-development/workflow/testing-migration-training.svg",
+    iconSrc: "/icons/erp-development/workflow/testing-migration-training.svg",
   },
   {
     title: "Launch & Continuous Improvement",
@@ -64,10 +52,10 @@ const processSteps = [
 const processLayout = [
   { ...processSteps[0], left: "21.75%", top: "0px" },
   { ...processSteps[1], left: "78.25%", top: "0px" },
-  { ...processSteps[2], left: "21.75%", top: "300px" },
-  { ...processSteps[3], left: "78.25%", top: "300px" },
-  { ...processSteps[4], left: "21.75%", top: "570px" },
-  { ...processSteps[5], left: "78.25%", top: "570px" },
+  { ...processSteps[2], left: "21.75%", top: "360px" },
+  { ...processSteps[3], left: "78.25%", top: "360px" },
+  { ...processSteps[4], left: "21.75%", top: "720px" },
+  { ...processSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const erpModules = [
@@ -85,8 +73,7 @@ const erpModules = [
   },
   {
     title: "Purchase & Vendor Management",
-    iconSrc:
-      "/icons/erp-development/modules/purchase-vendor-management.svg",
+    iconSrc: "/icons/erp-development/modules/purchase-vendor-management.svg",
   },
   {
     title: "HR & Payroll",
@@ -94,8 +81,7 @@ const erpModules = [
   },
   {
     title: "Production & Manufacturing",
-    iconSrc:
-      "/icons/erp-development/modules/production-manufacturing.svg",
+    iconSrc: "/icons/erp-development/modules/production-manufacturing.svg",
   },
   {
     title: "Logistics & Dispatch",
@@ -123,14 +109,12 @@ const services = [
   {
     title: "ERP Integration & Data Sync",
     text: "Connect the ERP with existing software, CRM, ecommerce, payment, accounting and other business systems.",
-    iconSrc:
-      "/icons/erp-development/services/erp-integration-data-sync.svg",
+    iconSrc: "/icons/erp-development/services/erp-integration-data-sync.svg",
   },
   {
     title: "ERP Upgrade & Modernization",
     text: "Improve older ERP systems with better interfaces, workflows, integrations, performance and maintainability.",
-    iconSrc:
-      "/icons/erp-development/services/erp-upgrade-modernization.svg",
+    iconSrc: "/icons/erp-development/services/erp-upgrade-modernization.svg",
   },
 ];
 
@@ -283,13 +267,17 @@ export default function ERPDevelopmentPage() {
 
             <div className="mt-8">
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -308,8 +296,8 @@ export default function ERPDevelopmentPage() {
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live builds custom ERP platforms for businesses that
-              need multiple departments to work from shared data and structured
+              BrainADZ Live builds custom ERP platforms for businesses that need
+              multiple departments to work from shared data and structured
               workflows. We connect operations such as finance, inventory,
               sales, purchase, HR, production and reporting without forcing
               every business into the same fixed setup.
@@ -420,7 +408,8 @@ export default function ERPDevelopmentPage() {
               Custom ERP Development for Connected Business Operations
             </p>
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Build the ERP Modules, Workflows and Integrations Your Operations Actually Need.
+              Build the ERP Modules, Workflows and Integrations Your Operations
+              Actually Need.
             </h2>
           </div>
 
@@ -455,16 +444,7 @@ export default function ERPDevelopmentPage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -474,9 +454,9 @@ export default function ERPDevelopmentPage() {
               From Operational Discovery to a Usable ERP Rollout
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              We move from process discovery and module planning to
-              development, data migration and staged rollout so the ERP matches
-              real business operations and user responsibilities.
+              We move from process discovery and module planning to development,
+              data migration and staged rollout so the ERP matches real business
+              operations and user responsibilities.
             </p>
           </div>
 
@@ -518,18 +498,66 @@ export default function ERPDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
-            <svg className="pointer-events-none absolute inset-0 z-0 h-full w-full" viewBox="0 0 1600 790" fill="none" aria-hidden="true" preserveAspectRatio="none">
+          <div className="relative hidden h-[1080px] lg:block">
+            <svg
+              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+              viewBox="0 0 1600 1080"
+              fill="none"
+              aria-hidden="true"
+              preserveAspectRatio="none"
+            >
               <defs>
-                <marker id="erp-arrowhead" markerHeight="14" markerUnits="userSpaceOnUse" markerWidth="18" orient="auto" refX="16" refY="7">
+                <marker
+                  id="erp-arrowhead"
+                  markerHeight="14"
+                  markerUnits="userSpaceOnUse"
+                  markerWidth="18"
+                  orient="auto"
+                  refX="16"
+                  refY="7"
+                >
                   <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
-              <path d="M 392 43 L 1208 43" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#erp-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#erp-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#erp-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#erp-arrowhead)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#erp-arrowhead)"
+              />
+              <path
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+              <path
+                d="M 1208 403 L 392 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#erp-arrowhead)"
+              />
+              <path
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#erp-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#erp-arrowhead)"
+              />
             </svg>
 
             {processLayout.map((item) => {
@@ -627,8 +655,18 @@ export default function ERPDevelopmentPage() {
             </div>
 
             <div className="grid gap-4 md:grid-cols-3">
-              {["Sales", "Inventory", "Finance", "Purchase", "HR", "Reports"].map((item) => (
-                <div key={item} className="border border-black/10 bg-[#f8faff] px-5 py-4 text-center text-[15px] font-light text-black/75">
+              {[
+                "Sales",
+                "Inventory",
+                "Finance",
+                "Purchase",
+                "HR",
+                "Reports",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="border border-black/10 bg-[#f8faff] px-5 py-4 text-center text-[15px] font-light text-black/75"
+                >
                   {item}
                 </div>
               ))}
@@ -648,14 +686,14 @@ export default function ERPDevelopmentPage() {
               Connected Architecture
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Give Connected Departments One Structured Source of Operational Data.
+              Give Connected Departments One Structured Source of Operational
+              Data.
             </h2>
             <p className="mt-6 text-[16px] font-light leading-[1.75] text-black/65">
-              A custom ERP can give each department the right level of access
-              to shared information while keeping approvals, updates and
-              reporting in one connected flow. The goal is not to put every
-              process into one screen, but to make dependent processes work
-              together.
+              A custom ERP can give each department the right level of access to
+              shared information while keeping approvals, updates and reporting
+              in one connected flow. The goal is not to put every process into
+              one screen, but to make dependent processes work together.
             </p>
           </div>
         </div>
@@ -673,16 +711,26 @@ export default function ERPDevelopmentPage() {
                 ERP Platforms Shaped Around Real Operational Workflows.
               </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
             {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
                 <div className="p-7 md:p-8">
                   <h3 className="text-[24px] font-normal tracking-[-0.5px]">
@@ -721,9 +769,16 @@ export default function ERPDevelopmentPage() {
             {tabs.map((tab) => {
               const isActive = activeTab === tab.value;
               return (
-                <button key={tab.value} type="button" onClick={() => setActiveTab(tab.value)} className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"}`}>
+                <button
+                  key={tab.value}
+                  type="button"
+                  onClick={() => setActiveTab(tab.value)}
+                  className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"}`}
+                >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`}
+                  />
                 </button>
               );
             })}
@@ -731,12 +786,30 @@ export default function ERPDevelopmentPage() {
 
           <div className="mx-auto max-w-315">
             <div className="space-y-5 md:space-y-6">
-              {[techStack[activeTab].slice(0, 4), techStack[activeTab].slice(4, 6)].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
-                    <div key={item.name} className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""}`}>
+                    <div
+                      key={item.name}
+                      className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""}`}
+                    >
                       <div className="flex h-11.5 w-full items-center justify-center">
-                        <img src={item.icon} alt={item.name} loading="lazy" decoding="async" className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          loading="lazy"
+                          decoding="async"
+                          className="max-h-10 max-w-18.5 object-contain transition-all duration-300 group-hover:scale-105"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
                       </div>
                       <h3 className="mt-4 text-[15px] font-normal leading-[1.3] tracking-[-0.2px] text-[#193175] transition duration-300 group-hover:text-[#2f4a82] md:text-[16px]">
                         {titleCaseHeading(item.name)}
@@ -758,12 +831,13 @@ export default function ERPDevelopmentPage() {
               Why Choose BrainADZ Live
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              ERP Development Planned Around Real Processes, Roles and Shared Data.
+              ERP Development Planned Around Real Processes, Roles and Shared
+              Data.
             </h2>
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              We combine workflow discovery, modular development and
-              integration planning to build an ERP that teams can use and
-              continue improving over time.
+              We combine workflow discovery, modular development and integration
+              planning to build an ERP that teams can use and continue improving
+              over time.
             </p>
           </div>
 
@@ -789,7 +863,11 @@ export default function ERPDevelopmentPage() {
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] shadow-[0_24px_80px_rgba(0,0,0,0.07)]">
-            <img src="/overview/ERP-Poster.webp" alt="ERP support and maintenance" className="h-full w-full object-cover" />
+            <img
+              src="/overview/ERP-Poster.webp"
+              alt="ERP support and maintenance"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -800,8 +878,14 @@ export default function ERPDevelopmentPage() {
             </h2>
             <div className="mt-8 space-y-5">
               {supportItems.map((item) => (
-                <div key={item} className="flex gap-4 border-b border-black/10 pb-5">
-                  <CheckCircle2 size={24} className="mt-1 shrink-0 text-[#193175]" />
+                <div
+                  key={item}
+                  className="flex gap-4 border-b border-black/10 pb-5"
+                >
+                  <CheckCircle2
+                    size={24}
+                    className="mt-1 shrink-0 text-[#193175]"
+                  />
                   <p className="text-[16px] font-light leading-[1.65] text-black/65">
                     {item}
                   </p>
@@ -826,18 +910,34 @@ export default function ERPDevelopmentPage() {
 
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
-              <div key={faq.q} className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25"}`}>
-                <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
+              <div
+                key={faq.q}
+                className={`group overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:-translate-y-1 hover:border-[#193175]/25"}`}
+              >
+                <button
+                  type="button"
+                  aria-expanded={openFaq === index}
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
+                >
                   <span className="flex items-center gap-4">
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175]"}`}>
+                    <span
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175]"}`}
+                    >
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                       {titleCaseHeading(faq.q)}
                     </span>
                   </span>
-                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175]"}`}>
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+                  <span
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175]"}`}
+                  >
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
                 {openFaq === index && (
@@ -854,44 +954,47 @@ export default function ERPDevelopmentPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live ERP Development Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to Connect Your Business Operations with a Custom ERP?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          Let BrainADZ Live turn your departments, approvals, data and reports into one connected ERP platform built around your operational workflows.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                        
-                              <PopupForm
-                                isOpen={isPopupOpen}
-                                onClose={() => setIsPopupOpen(false)}
-                              />
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live ERP Development Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Ready to Connect Your Business Operations with a Custom ERP?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Let BrainADZ Live turn your departments, approvals, data and
+                  reports into one connected ERP platform built around your
+                  operational workflows.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

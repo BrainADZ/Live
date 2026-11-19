@@ -29,11 +29,7 @@ export default function DemoThankYou({
         </p>
         <div className="mt-8 rounded-2xl bg-[#f0f4fb] p-5 text-left">
           <div className="mb-2 flex items-center gap-2 font-semibold text-[#193175]">
-            <Mail
-              size={19}
-              aria-hidden="true"
-            />{" "}
-            Please note
+            <Mail size={19} aria-hidden="true" /> Please note
           </div>
           <p className="text-sm leading-7 text-slate-600">
             Check your inbox and spam or junk folder. If a new account was

@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import { type FormEvent, useEffect, useState } from "react";
 import { CheckCircle2, Send, X } from "lucide-react";
 
@@ -56,7 +55,7 @@ const isIndustryService = (title: string) => {
   const normalizedTitle = normalizeText(title);
 
   return industryServices.some((item) =>
-    normalizedTitle.includes(normalizeText(item))
+    normalizedTitle.includes(normalizeText(item)),
   );
 };
 
@@ -66,8 +65,7 @@ export default function PopupForm({
   hideImage = false,
   embedded = false,
 }: PopupFormProps) {
-  const [selectedCategory, setSelectedCategory] =
-    useState<Category | "">("");
+  const [selectedCategory, setSelectedCategory] = useState<Category | "">("");
 
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,12 +73,12 @@ export default function PopupForm({
   const [showThankYou, setShowThankYou] = useState(false);
 
   const visibleSolutionCategories = solutionCategories.filter(
-    (category) => normalizeText(String(category)) !== "industries"
+    (category) => normalizeText(String(category)) !== "industries",
   );
 
   const selectedServices = selectedCategory
     ? (menuContent[selectedCategory] || []).filter(
-        (service) => !isIndustryService(service.title)
+        (service) => !isIndustryService(service.title),
       )
     : [];
 
@@ -123,22 +121,19 @@ export default function PopupForm({
       setIsSubmitting(true);
       setErrorMessage("");
 
-      const response = await fetch(
-        getApiUrl("/api/enquire-now"),
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      const response = await fetch(getApiUrl("/api/enquire-now"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
       const data = await response.json();
 
       if (!response.ok) {
         throw new Error(
-          data.message || "Failed to send enquiry. Please try again."
+          data.message || "Failed to send enquiry. Please try again.",
         );
       }
 
@@ -151,7 +146,7 @@ export default function PopupForm({
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Failed to send enquiry. Please try again."
+          : "Failed to send enquiry. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -188,23 +183,33 @@ export default function PopupForm({
 
   if (showThankYou) {
     return (
-      <div className={embedded ? "w-full" : "fixed inset-0 z-9999 flex items-center justify-center px-4 py-5"}>
-        {!embedded && <button
-          type="button"
-          aria-label="Close thank you popup"
-          onClick={handleClose}
-          className="absolute inset-0 cursor-default bg-black/60 backdrop-blur-md"
-        />}
-
-        <div className="relative z-10 w-full max-w-135 overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.4)]">
-          {!embedded && <button
+      <div
+        className={
+          embedded
+            ? "w-full"
+            : "fixed inset-0 z-9999 flex items-center justify-center px-4 py-5"
+        }
+      >
+        {!embedded && (
+          <button
             type="button"
             aria-label="Close thank you popup"
             onClick={handleClose}
-            className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-white hover:text-[#193175]"
-          >
-            <X size={21} />
-          </button>}
+            className="absolute inset-0 cursor-default bg-black/60 backdrop-blur-md"
+          />
+        )}
+
+        <div className="relative z-10 w-full max-w-135 overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.4)]">
+          {!embedded && (
+            <button
+              type="button"
+              aria-label="Close thank you popup"
+              onClick={handleClose}
+              className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-white hover:text-[#193175]"
+            >
+              <X size={21} />
+            </button>
+          )}
 
           <div className="relative overflow-hidden bg-[#193175] px-6 pb-14 pt-16 text-center md:px-10">
             <div className="absolute -left-24 -top-24 h-60 w-60 rounded-full border border-white/10" />
@@ -257,75 +262,97 @@ export default function PopupForm({
   /* Main Enquiry Popup */
 
   return (
-    <div className={embedded ? "w-full" : "fixed inset-0 z-9999 flex items-center justify-center px-4 py-5"}>
-      {!embedded && <button
-        type="button"
-        aria-label="Close enquiry popup"
-        onClick={handleClose}
-        className="absolute inset-0 cursor-default bg-black/55 backdrop-blur-md"
-      />}
-
-      <div className={embedded ? "relative w-full bg-white" : `relative z-10 grid max-h-[92vh] w-full ${hideImage ? "max-w-170" : "max-w-280 lg:grid-cols-[0.9fr_1.1fr]"} overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)]`}>
-        {!embedded && <button
+    <div
+      className={
+        embedded
+          ? "w-full"
+          : "fixed inset-0 z-9999 flex items-center justify-center px-4 py-5"
+      }
+    >
+      {!embedded && (
+        <button
           type="button"
-          aria-label="Close popup"
+          aria-label="Close enquiry popup"
           onClick={handleClose}
-          className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/35 text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#193175] lg:border-black/10 lg:bg-white lg:text-[#193175] lg:hover:bg-[#193175] lg:hover:text-white"
-        >
-          <X size={22} />
-        </button>}
+          className="absolute inset-0 cursor-default bg-black/55 backdrop-blur-md"
+        />
+      )}
+
+      <div
+        className={
+          embedded
+            ? "relative w-full bg-white"
+            : `relative z-10 grid max-h-[92vh] w-full ${hideImage ? "max-w-170" : "max-w-280 lg:grid-cols-[0.9fr_1.1fr]"} overflow-hidden rounded-[30px] bg-white shadow-[0_35px_120px_rgba(0,0,0,0.35)]`
+        }
+      >
+        {!embedded && (
+          <button
+            type="button"
+            aria-label="Close popup"
+            onClick={handleClose}
+            className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/35 text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-[#193175] lg:border-black/10 lg:bg-white lg:text-[#193175] lg:hover:bg-[#193175] lg:hover:text-white"
+          >
+            <X size={22} />
+          </button>
+        )}
 
         {/* Left Image Section */}
 
-        {!hideImage && <div className="relative hidden min-h-170 overflow-hidden bg-black lg:block">
-          <img
-            src="/about/Enow.webp"
-            alt="BrainADZ Live enquiry"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+        {!hideImage && (
+          <div className="relative hidden min-h-170 overflow-hidden bg-black lg:block">
+            <img
+              src="/about/Enow.webp"
+              alt="BrainADZ Live enquiry"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
 
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.55)_45%,rgba(0,0,0,0.92)_100%)]" />
-          <div className="absolute inset-0 bg-[#193175]/20" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.55)_45%,rgba(0,0,0,0.92)_100%)]" />
+            <div className="absolute inset-0 bg-[#193175]/20" />
 
-          <div className="relative z-10 flex h-full flex-col justify-end p-10">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#9bbcff]">
-              Enquire Now
-            </p>
+            <div className="relative z-10 flex h-full flex-col justify-end p-10">
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.22em] text-[#9bbcff]">
+                Enquire Now
+              </p>
 
-            <h2 className="max-w-105 text-[42px] font-normal leading-[1.05] tracking-[-1.6px] text-white">
-              Turn Your Idea into a Reliable Digital Solution.
-            </h2>
+              <h2 className="max-w-105 text-[42px] font-normal leading-[1.05] tracking-[-1.6px] text-white">
+                Turn Your Idea into a Reliable Digital Solution.
+              </h2>
 
-            <p className="mt-5 max-w-105 text-[16px] font-light leading-[1.7] text-white/78">
-              Select the right category and share your requirement. Our team
-              will help you plan the right software, platform or product
-              solution.
-            </p>
+              <p className="mt-5 max-w-105 text-[16px] font-light leading-[1.7] text-white/78">
+                Select the right category and share your requirement. Our team
+                will help you plan the right software, platform or product
+                solution.
+              </p>
 
-            <div className="mt-8 grid gap-4">
-              {[
-                "Complete solution category coverage",
-                "Business-first consultation",
-                "Scalable technology planning",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 text-white/90"
-                >
-                  <CheckCircle2 size={19} className="text-[#9bbcff]" />
+              <div className="mt-8 grid gap-4">
+                {[
+                  "Complete solution category coverage",
+                  "Business-first consultation",
+                  "Scalable technology planning",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 text-white/90"
+                  >
+                    <CheckCircle2 size={19} className="text-[#9bbcff]" />
 
-                  <span className="text-[15px] font-light">
-                    {item}
-                  </span>
-                </div>
-              ))}
+                    <span className="text-[15px] font-light">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>}
+        )}
 
         {/* Right Form Section */}
 
-        <div className={embedded ? "bg-white" : "max-h-[92vh] overflow-y-auto bg-white px-5 py-8 md:px-4 lg:px-10 lg:py-10"}>
+        <div
+          className={
+            embedded
+              ? "bg-white"
+              : "max-h-[92vh] overflow-y-auto bg-white px-5 py-8 md:px-4 lg:px-10 lg:py-10"
+          }
+        >
           <div className={embedded ? "mb-6" : "mb-8 pr-12 lg:pr-8"}>
             <p className="mb-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#193175]">
               Enquire Now

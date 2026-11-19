@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -23,38 +22,32 @@ const whyChoose = [
   {
     title: "Professional Digital Display",
     text: "A freestanding D-type digital signage format designed for customer-facing business communication.",
-    iconSrc:
-      "/signage-products/professional-digital-display.svg",
+    iconSrc: "/signage-products/professional-digital-display.svg",
   },
   {
     title: "Dynamic Content Display",
     text: "Present promotional videos, images, campaign creatives and business information on screen.",
-    iconSrc:
-      "/signage-products/dynamic-content-display.svg",
+    iconSrc: "/signage-products/dynamic-content-display.svg",
   },
   {
     title: "Flexible Media Playback",
     text: "Use local media playback for planned content without depending on printed promotional material.",
-    iconSrc:
-      "/signage-products/flexible-media-playback.svg",
+    iconSrc: "/signage-products/flexible-media-playback.svg",
   },
   {
     title: "Optional Cloud Management",
     text: "Add cloud signage management when remote content control is required for the deployment.",
-    iconSrc:
-      "/signage-products/optional-cloud-management.svg",
+    iconSrc: "/signage-products/optional-cloud-management.svg",
   },
   {
     title: "Requirement-Based Setup",
     text: "Plan the display, content setup and deployment approach around the actual business requirement.",
-    iconSrc:
-      "/signage-products/requirement-based-setup.svg",
+    iconSrc: "/signage-products/requirement-based-setup.svg",
   },
   {
     title: "Enclosure Branding",
     text: "Coordinate the enclosure finish and branding treatment with the surrounding business environment.",
-    iconSrc:
-      "/signage-products/enclosure-branding.svg",
+    iconSrc: "/signage-products/enclosure-branding.svg",
   },
 ];
 
@@ -67,8 +60,7 @@ const useCases = [
   {
     title: "Events & Exhibitions",
     text: "Present event content, sponsor visuals and campaign communication.",
-    iconSrc:
-      "/signage-products/events-exhibitions.svg",
+    iconSrc: "/signage-products/events-exhibitions.svg",
   },
   {
     title: "Hospitality",
@@ -78,14 +70,12 @@ const useCases = [
   {
     title: "Corporate & Reception",
     text: "Present welcome content, company information and visitor communication.",
-    iconSrc:
-      "/signage-products/corporate-reception.svg",
+    iconSrc: "/signage-products/corporate-reception.svg",
   },
   {
     title: "Campaigns & Launches",
     text: "Support product launches, announcements and changing campaign content.",
-    iconSrc:
-      "/signage-products/campaigns-launches.svg",
+    iconSrc: "/signage-products/campaigns-launches.svg",
   },
 ];
 
@@ -183,31 +173,11 @@ const faqs = [
 ];
 
 const configurations = [
-  [
-    "Display Format",
-    "Freestanding digital standee",
-    "Requirement-based setup",
-  ],
-  [
-    "Content Playback",
-    "Images and videos",
-    "Local media playback",
-  ],
-  [
-    "Content Management",
-    "Signage application",
-    "Optional when required",
-  ],
-  [
-    "Remote Management",
-    "Cloud signage management",
-    "Optional when required",
-  ],
-  [
-    "Branding & Finish",
-    "Enclosure branding",
-    "Project-based customization",
-  ],
+  ["Display Format", "Freestanding digital standee", "Requirement-based setup"],
+  ["Content Playback", "Images and videos", "Local media playback"],
+  ["Content Management", "Signage application", "Optional when required"],
+  ["Remote Management", "Cloud signage management", "Optional when required"],
+  ["Branding & Finish", "Enclosure branding", "Project-based customization"],
 ];
 
 export default function DModelFloorMountDigitalKioskPage() {
@@ -238,12 +208,15 @@ export default function DModelFloorMountDigitalKioskPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">D-Model Floor Mount Digital Kiosk</span>
+            <span className="text-white/90">
+              D-Model Floor Mount Digital Kiosk
+            </span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              D-Model Floor Mount Digital Kiosk for Dynamic Business Communication
+              D-Model Floor Mount Digital Kiosk for Dynamic Business
+              Communication
             </h1>
           </div>
 
@@ -261,7 +234,11 @@ export default function DModelFloorMountDigitalKioskPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -275,8 +252,6 @@ export default function DModelFloorMountDigitalKioskPage() {
           </div>
         </div>
       </section>
-
-
 
       {/* PRODUCT OVERVIEW */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
@@ -292,11 +267,11 @@ export default function DModelFloorMountDigitalKioskPage() {
             </h2>
 
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              The BrainADZ Live D-Model Floor Mount Digital Kiosk is a screen-based
-              signage solution designed for promotional content, brand
-              communication and customer-facing information. It can present
-              changing videos and images based on the selected content and
-              management setup.
+              The BrainADZ Live D-Model Floor Mount Digital Kiosk is a
+              screen-based signage solution designed for promotional content,
+              brand communication and customer-facing information. It can
+              present changing videos and images based on the selected content
+              and management setup.
             </p>
 
             <div className="mt-8 space-y-4">
@@ -421,10 +396,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                   {configurations.map((row) => (
                     <tr key={row[0]}>
                       {row.map((cell) => (
-                        <td
-                          key={cell}
-                          className="border-b border-black/10 p-4"
-                        >
+                        <td key={cell} className="border-b border-black/10 p-4">
                           {cell}
                         </td>
                       ))}
@@ -435,8 +407,8 @@ export default function DModelFloorMountDigitalKioskPage() {
             </div>
 
             <p className="mt-4 text-[13px] font-light text-black/50">
-              Final configuration is planned according to placement, content
-              and project requirements.
+              Final configuration is planned according to placement, content and
+              project requirements.
             </p>
           </div>
 
@@ -526,8 +498,8 @@ export default function DModelFloorMountDigitalKioskPage() {
             </h2>
 
             <p className="mt-5 max-w-160 text-[16px] font-light leading-[1.7] text-black/65">
-              BrainADZ Live plans the D-Model Floor Mount Digital Kiosk based on its
-              intended use, content requirements, enclosure presentation and
+              BrainADZ Live plans the D-Model Floor Mount Digital Kiosk based on
+              its intended use, content requirements, enclosure presentation and
               preferred content-management approach.
             </p>
           </div>
@@ -624,7 +596,11 @@ export default function DModelFloorMountDigitalKioskPage() {
               >
                 <span>Request a Quote</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
@@ -657,10 +633,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                 key={item}
                 className="flex items-center gap-3 border-t border-black/10 pt-5"
               >
-                <BadgeCheck
-                  size={22}
-                  className="shrink-0 text-[#193175]"
-                />
+                <BadgeCheck size={22} className="shrink-0 text-[#193175]" />
 
                 <p className="text-[15px] font-light leading-[1.4] text-black/70">
                   {item}
@@ -697,9 +670,7 @@ export default function DModelFloorMountDigitalKioskPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -749,8 +720,9 @@ export default function DModelFloorMountDigitalKioskPage() {
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Plan a D-Model Floor Mount Digital Kiosk with the right content setup,
-                  branding treatment and management approach for your space.
+                  Plan a D-Model Floor Mount Digital Kiosk with the right
+                  content setup, branding treatment and management approach for
+                  your space.
                 </p>
               </div>
 
@@ -761,17 +733,18 @@ export default function DModelFloorMountDigitalKioskPage() {
               >
                 <span>Request a Quote</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import { ArrowRight } from "lucide-react";
@@ -52,6 +51,34 @@ const platforms: Platform[] = [
     icon: "/service-icons/pos.svg",
     href: "/software-platforms/pos",
   },
+  {
+    title: "Hospitality In Hotel Management",
+    description:
+      "Manage hotel operations and guest service through a connected hospitality platform.",
+    icon: "/service-icons/erp-soft.svg",
+    href: "/software-platforms/hospitality-in-hotel-management",
+  },
+  {
+    title: "HR Portal",
+    description:
+      "Connect hiring, employee records, attendance, leave, payroll and performance in one HR platform.",
+    icon: "/service-icons/erp-soft.svg",
+    href: "/software-platforms/hr-portal",
+  },
+  {
+    title: "Project Tracker",
+    description:
+      "Plan projects, assign tasks, follow milestones and coordinate teams through one workspace.",
+    icon: "/service-icons/crm-soft.svg",
+    href: "/software-platforms/project-tracker",
+  },
+  {
+    title: "Wayfinding Software",
+    description:
+      "Help visitors discover stores, explore mall floors and follow directions on their phone.",
+    icon: "/service-icons/signage.svg",
+    href: "/software-platforms/wayfinding-software",
+  },
 ];
 
 export default function SoftwarePlatformsPage() {
@@ -85,14 +112,16 @@ export default function SoftwarePlatformsPage() {
 
           <div className="mt-12 max-w-205 md:mt-14">
             <h1 className="text-[38px] font-semibold leading-[1.15] tracking-[-1.2px] text-white md:text-[48px] lg:text-[56px]">
-              Software Platforms for Business Management, Digital Signage and Interactive Retail
+              Software Platforms for Business Management, Digital Signage and
+              Interactive Retail
             </h1>
           </div>
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
               Explore BrainADZ Live platforms for customer management, business
-              operations, digital display control and virtual try-on experiences.
+              operations, digital display control and virtual try-on
+              experiences.
             </p>
 
             <div className="mt-8">
@@ -102,8 +131,11 @@ export default function SoftwarePlatformsPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -122,16 +154,16 @@ export default function SoftwarePlatformsPage() {
               </p>
 
               <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Purpose-Built Platforms for Customers, Operations and Digital Displays
+                Purpose-Built Platforms for Customers, Operations and Digital
+                Displays
               </h2>
 
               <p className="mt-7 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-                BrainADZ Live offers five software platforms built for different
-                operational needs. CRM Software supports lead and customer
-                workflows, ERP Software connects core business operations, and
-                our signage platforms help manage content across digital
-                displays. The Virtual Trial Room adds an interactive retail
-                experience for fashion-focused environments.
+                BrainADZ Live offers nine software platforms for business
+                operations and visitor experiences. Alongside CRM, ERP, POS,
+                hospitality and signage, our HRMS manages people operations,
+                Project Tracker coordinates delivery, and Wayfinding Software
+                helps visitors navigate venues.
               </p>
 
               <p className="mt-5 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
@@ -202,73 +234,74 @@ export default function SoftwarePlatformsPage() {
       </section> */}
 
       {/* PLATFORMS */}
-<section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
-  <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
+      <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
+        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
-  <div className="relative z-10 mx-auto max-w-450">
-    {/* SECTION HEADING */}
-    <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-      <div>
-        <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-          Explore Platforms
-        </p>
+        <div className="relative z-10 mx-auto max-w-450">
+          {/* SECTION HEADING */}
+          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+                Explore Platforms
+              </p>
 
-        <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-          Five Platforms Built for Distinct Business and Customer Experiences
-        </h2>
-      </div>
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+                Nine Platforms Built for Distinct Business and Customer
+                Experiences
+              </h2>
+            </div>
 
-      <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-        Compare CRM, ERP, signage management, cloud display control and virtual
-        try-on platforms, then explore the one that fits your business
-        requirement.
-      </p>
-    </div>
-
-    {/* PLATFORM CARDS */}
-    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-      {platforms.map((item) => (
-        <Link
-          key={item.title}
-          href={item.href}
-          aria-label={`Explore ${item.title}`}
-          className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
-        >
-          {/* MANUAL DOWNLOADED ICON */}
-          <div className="manual-icon-box flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
-            <img
-  src={item.icon}
-  alt=""
-  className="manual-icon object-contain"
-/>
-          </div>
-
-          {/* CARD CONTENT */}
-          <div>
-            <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
-              {titleCaseHeading(item.title)}
-            </h3>
-
-            <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-              {item.description}
+            <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+              Explore CRM, ERP, signage, POS, hospitality, HRMS, project
+              tracking and mobile wayfinding, then find the platform that fits
+              your requirement.
             </p>
-
-            {/* EXPLORE TEXT */}
-            <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] transition-colors duration-300 group-hover:text-[#101f4d]">
-              <span>Explore platform</span>
-
-              <ArrowRight
-                size={20}
-                strokeWidth={1.8}
-                className="text-[20px] leading-none transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </span>
           </div>
-        </Link>
-      ))}
-    </div>
-  </div>
-</section>
+
+          {/* PLATFORM CARDS */}
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {platforms.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                aria-label={`Explore ${item.title}`}
+                className="group grid min-h-57.5 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
+              >
+                {/* MANUAL DOWNLOADED ICON */}
+                <div className="manual-icon-box flex h-17 w-17 items-center justify-center rounded-[20px] bg-[#193175]/10">
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="manual-icon object-contain"
+                  />
+                </div>
+
+                {/* CARD CONTENT */}
+                <div>
+                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
+                    {titleCaseHeading(item.title)}
+                  </h3>
+
+                  <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+                    {item.description}
+                  </p>
+
+                  {/* EXPLORE TEXT */}
+                  <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] transition-colors duration-300 group-hover:text-[#101f4d]">
+                    <span>Explore platform</span>
+
+                    <ArrowRight
+                      size={20}
+                      strokeWidth={1.8}
+                      className="text-[20px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* FINAL CTA */}
       <section className="section-spacing lazy-section bg-white">
@@ -304,17 +337,18 @@ export default function SoftwarePlatformsPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

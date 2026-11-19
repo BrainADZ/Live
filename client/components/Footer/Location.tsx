@@ -53,9 +53,7 @@ export default function LocationsSection() {
 
             <h2 className="max-w-[680px] text-[34px] font-normal leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]">
               Connected Across{" "}
-              <span className="text-[#193175]">
-                Global Markets.
-              </span>
+              <span className="text-[#193175]">Global Markets.</span>
             </h2>
           </div>
 
@@ -64,8 +62,8 @@ export default function LocationsSection() {
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            Working across borders to deliver technology, digital products,
-            and long-term business support.
+            Working across borders to deliver technology, digital products, and
+            long-term business support.
           </p>
         </div>
 

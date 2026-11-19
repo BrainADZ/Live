@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import StatsSection from "../home/Stats";
@@ -84,13 +83,13 @@ export default function FastFacts() {
               >
                 {/* MANUAL SVG ICON */}
                 <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={service.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                  <img
+                    src={service.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
+                </div>
 
                 <h4 className="text-[18px] font-normal leading-[1.35] tracking-[-0.3px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[20px]">
                   {titleCaseHeading(service.title)}

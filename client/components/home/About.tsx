@@ -34,8 +34,12 @@ export default function AboutSection() {
             </h3>
 
             <p className="mt-10 max-w-195 text-[16px] font-normal leading-[1.6] text-[#262626]">
-              BrainADZ Live helps businesses build connected digital ecosystems through software engineering, intelligent platforms, cloud capabilities, and advanced digital signage solutions. From custom applications and enterprise systems to kiosks, displays, and automation platforms, we create secure, scalable solutions that modernize operations and deliver better digital experiences.
-
+              BrainADZ Live helps businesses build connected digital ecosystems
+              through software engineering, intelligent platforms, cloud
+              capabilities, and advanced digital signage solutions. From custom
+              applications and enterprise systems to kiosks, displays, and
+              automation platforms, we create secure, scalable solutions that
+              modernize operations and deliver better digital experiences.
             </p>
 
             {/* STATS */}
@@ -64,8 +68,11 @@ export default function AboutSection() {
               className="mt-16 inline-flex items-center gap-4 text-[14px] font-normal text-[#193175] transition hover:underline"
             >
               Explore How BrainADZ Live Builds Smarter Digital Ecosystems
-
-              <ArrowRight size={14} strokeWidth={1.8} className="text-[14px] leading-none" />
+              <ArrowRight
+                size={14}
+                strokeWidth={1.8}
+                className="text-[14px] leading-none"
+              />
             </a>
           </div>
 

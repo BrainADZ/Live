@@ -37,9 +37,9 @@ export default function ERPBrandCarousel() {
 
             <div className="lg:pb-2">
               <p className="max-w-2xl text-[15px] font-light leading-7 text-[#161616]/60 md:text-[17px]">
-                We collaborate with forward-thinking businesses to build
-                digital experiences, intelligent platforms, and technology
-                solutions designed for real-world impact.
+                We collaborate with forward-thinking businesses to build digital
+                experiences, intelligent platforms, and technology solutions
+                designed for real-world impact.
               </p>
             </div>
           </div>
@@ -134,8 +134,9 @@ export default function ERPBrandCarousel() {
         .brand-item,
         .brand-item img,
         .brand-item span {
-          transition-property: background-color, border-color, box-shadow,
-            color, filter, opacity, transform !important;
+          transition-property:
+            background-color, border-color, box-shadow, color, filter, opacity,
+            transform !important;
           transition-duration: 300ms !important;
           transition-timing-function: ease !important;
         }

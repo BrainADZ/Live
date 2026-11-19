@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import { useState } from "react";
@@ -53,50 +52,50 @@ const techStack: Record<TabType, StackItem[]> = {
   ],
 
   databases: [
-  // SQL Databases
-  {
-    name: "MySQL",
-    icon: "/icons/MySQL.svg",
-  },
-  {
-    name: "PostgreSQL",
-    icon: "/icons/PostgresSQL.svg",
-  },
-  {
-    name: "SQL Server",
-    icon: "/icons/SQLServer.svg",
-  },
-  {
-    name: "Oracle",
-    icon: "/icons/Oracle.svg",
-  },
-  {
-    name: "MariaDB",
-    icon: "/icons/Maria.svg",
-  },
+    // SQL Databases
+    {
+      name: "MySQL",
+      icon: "/icons/MySQL.svg",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "/icons/PostgresSQL.svg",
+    },
+    {
+      name: "SQL Server",
+      icon: "/icons/SQLServer.svg",
+    },
+    {
+      name: "Oracle",
+      icon: "/icons/Oracle.svg",
+    },
+    {
+      name: "MariaDB",
+      icon: "/icons/Maria.svg",
+    },
 
-  // NoSQL Databases
-  {
-    name: "MongoDB",
-    icon: "/icons/MongoDB.svg",
-  },
-  {
-    name: "Cassandra",
-    icon: "/icons/Cassandra.svg",
-  },
-  {
-    name: "Redis",
-    icon: "/icons/Redis.svg",
-  },
-  {
-    name: "DynamoDB",
-    icon: "/icons/AWS.svg",
-  },
-  {
-    name: "Couchbase",
-    icon: "/icons/CouchDB.svg",
-  },
-],
+    // NoSQL Databases
+    {
+      name: "MongoDB",
+      icon: "/icons/MongoDB.svg",
+    },
+    {
+      name: "Cassandra",
+      icon: "/icons/Cassandra.svg",
+    },
+    {
+      name: "Redis",
+      icon: "/icons/Redis.svg",
+    },
+    {
+      name: "DynamoDB",
+      icon: "/icons/AWS.svg",
+    },
+    {
+      name: "Couchbase",
+      icon: "/icons/CouchDB.svg",
+    },
+  ],
 
   cloudDevops: [
     { name: "AWS", icon: "/icons/AWS.svg" },
@@ -151,7 +150,7 @@ export default function TechStackSection() {
           </div>
 
           <p
-            className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]"
+            className="max-w-195 justify-self-end text-right text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]"
             data-aos="fade-left"
             data-aos-delay="100"
           >

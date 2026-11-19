@@ -4,5 +4,10 @@ import { caseStudyCard } from "@/lib/cms-content";
 
 export default async function CaseStudiesPage() {
   const { docs, unavailable } = await contentList(getCaseStudies);
-  return <CaseStudyListing caseStudies={docs.map(caseStudyCard)} unavailable={unavailable} />;
+  return (
+    <CaseStudyListing
+      caseStudies={docs.map(caseStudyCard)}
+      unavailable={unavailable}
+    />
+  );
 }

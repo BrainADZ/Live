@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import { ArrowRight } from "lucide-react";
 import CtaSection from "@/components/home/CTA";
 /* eslint-disable @next/next/no-img-element */
@@ -31,9 +30,6 @@ function ArrowRightIcon({ className, strokeWidth = 1.6, ...props }: IconProps) {
   );
 }
 
-
-
-
 function CodeIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   return (
     <svg
@@ -52,7 +48,6 @@ function CodeIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
     </svg>
   );
 }
-
 
 function ShieldIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
   return (
@@ -90,9 +85,6 @@ function TargetIcon({ className, strokeWidth = 1.4, ...props }: IconProps) {
     </svg>
   );
 }
-
-
-
 
 function CheckIcon({ className, strokeWidth = 1.6, ...props }: IconProps) {
   return (
@@ -330,7 +322,6 @@ export default function CareerPage() {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-
                 <h1 className="text-[38px] font-semibold leading-[1.05] tracking-[-2px] text-white md:text-[48px] lg:text-[56px]">
                   Build Your Career by Working on Real Digital Products
                 </h1>
@@ -342,8 +333,9 @@ export default function CareerPage() {
                 data-aos-delay="200"
               >
                 <p className="text-[14px] font-light leading-[1.45] tracking-[-0.5px] text-white/90 md:text-[16px] lg:text-[18px]">
-                  Join a team working across software, mobile and web applications,
-                  business platforms, digital signage products and technology deployments.
+                  Join a team working across software, mobile and web
+                  applications, business platforms, digital signage products and
+                  technology deployments.
                 </p>
 
                 <a
@@ -351,7 +343,11 @@ export default function CareerPage() {
                   className="mt-10 inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
                 >
                   View Open Roles
-                  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                  <ArrowRight
+                    size={20}
+                    strokeWidth={1.8}
+                    className="text-[20px] leading-none"
+                  />
                 </a>
               </div>
             </div>
@@ -450,43 +446,43 @@ export default function CareerPage() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              We value people who are curious, dependable and willing to
-              learn. The work involves real deadlines, feedback, collaboration
-              and responsibility for the quality of what you deliver.
+              We value people who are curious, dependable and willing to learn.
+              The work involves real deadlines, feedback, collaboration and
+              responsibility for the quality of what you deliver.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
             {benefits.map((item, index) => (
-                <div
-                  key={item.title}
-                  data-aos="card-reveal"
-                  data-aos-delay={(index % 3) * 100}
-                  data-aos-duration="520"
-                  className="group relative min-h-65 overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] md:p-8"
-                >
-                  <div className="absolute -right-13.75 -top-13.75 h-37.5 w-37.5 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
+              <div
+                key={item.title}
+                data-aos="card-reveal"
+                data-aos-delay={(index % 3) * 100}
+                data-aos-duration="520"
+                className="group relative min-h-65 overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] md:p-8"
+              >
+                <div className="absolute -right-13.75 -top-13.75 h-37.5 w-37.5 rounded-full bg-[#193175]/[0.07] transition duration-300 group-hover:scale-125" />
 
-                  <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={item.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
-
-                  <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
-                    {titleCaseHeading(item.title)}
-                  </h3>
-
-                  <p className="relative z-10 mt-4 max-w-115 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-                    {item.description}
-                  </p>
-
-                  <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
+                <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
+                  <img
+                    src={item.iconSrc}
+                    alt=""
+                    aria-hidden="true"
+                    className="manual-icon object-contain"
+                  />
                 </div>
-              ))}
+
+                <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition group-hover:text-[#193175] md:text-[26px]">
+                  {titleCaseHeading(item.title)}
+                </h3>
+
+                <p className="relative z-10 mt-4 max-w-115 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+                  {item.description}
+                </p>
+
+                <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -504,7 +500,8 @@ export default function CareerPage() {
               </p>
 
               <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore Roles Across Development, Design, Automation and Deployment
+                Explore Roles Across Development, Design, Automation and
+                Deployment
               </h2>
             </div>
 
@@ -513,8 +510,8 @@ export default function CareerPage() {
               data-aos="fade-left"
               data-aos-delay="100"
             >
-              Review the roles below and choose the one that best matches
-              your experience and interests. You can also submit a general
+              Review the roles below and choose the one that best matches your
+              experience and interests. You can also submit a general
               application for future requirements.
             </p>
           </div>
@@ -685,9 +682,9 @@ export default function CareerPage() {
               </h2>
 
               <p className="mt-6 max-w-180 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-                Share your profile and relevant work with us. If your
-                background matches an active or upcoming requirement, our team
-                can contact you for the next step.
+                Share your profile and relevant work with us. If your background
+                matches an active or upcoming requirement, our team can contact
+                you for the next step.
               </p>
 
               <div
@@ -707,9 +704,10 @@ export default function CareerPage() {
                     </h3>
 
                     <p className="mt-3 text-[15px] font-light leading-[1.7] text-[#616161] md:text-[16px]">
-                      Use links that our team can open without requesting access.
-                      Add a portfolio or Figma link for design roles and project
-                      or GitHub links for development roles whenever available.
+                      Use links that our team can open without requesting
+                      access. Add a portfolio or Figma link for design roles and
+                      project or GitHub links for development roles whenever
+                      available.
                     </p>
                   </div>
                 </div>
@@ -727,7 +725,8 @@ export default function CareerPage() {
                 </h2>
 
                 <p className="mx-auto mt-4 max-w-170 text-[16px] font-light leading-[1.7] text-[#525252] md:text-[18px]">
-                  Share accurate details and relevant work so we can review your profile properly.
+                  Share accurate details and relevant work so we can review your
+                  profile properly.
                 </p>
               </div>
 
@@ -874,7 +873,6 @@ export default function CareerPage() {
         </div>
       </section>
 
-
       {/* FINAL CTA */}
       <section className="section-spacing lazy-section bg-white">
         <div className="mx-auto max-w-450 px-4 lg:px-10">
@@ -903,7 +901,8 @@ export default function CareerPage() {
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
                   Share your background and interests with our team, and we can
-                  understand where your skills may fit across future opportunities.
+                  understand where your skills may fit across future
+                  opportunities.
                 </p>
               </div>
 
@@ -915,16 +914,17 @@ export default function CareerPage() {
               >
                 <span>Ask About Careers</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
-            <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

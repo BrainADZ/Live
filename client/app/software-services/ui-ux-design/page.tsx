@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, Minus, Plus } from "lucide-react";
@@ -80,24 +79,22 @@ const processSteps = [
 const processLayout = [
   { ...processSteps[0], left: "21.75%", top: "0px" },
   { ...processSteps[1], left: "78.25%", top: "0px" },
-  { ...processSteps[2], left: "21.75%", top: "300px" },
-  { ...processSteps[3], left: "78.25%", top: "300px" },
-  { ...processSteps[4], left: "21.75%", top: "570px" },
-  { ...processSteps[5], left: "78.25%", top: "570px" },
+  { ...processSteps[2], left: "21.75%", top: "360px" },
+  { ...processSteps[3], left: "78.25%", top: "360px" },
+  { ...processSteps[4], left: "21.75%", top: "720px" },
+  { ...processSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const stunningItems = [
   {
     title: "Research & Product Understanding",
     text: "We review the product, users, business goals, current experience and competing solutions so design decisions start with context instead of assumptions.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/research-product-understanding.svg",
+    iconSrc: "/icons/ui-ux-design/focus/research-product-understanding.svg",
   },
   {
     title: "User Flows & Journey Mapping",
     text: "We map the steps users take to complete important tasks, identify friction points and simplify the path between screens and actions.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/user-flows-journey-mapping.svg",
+    iconSrc: "/icons/ui-ux-design/focus/user-flows-journey-mapping.svg",
   },
   {
     title: "Information Architecture",
@@ -107,8 +104,7 @@ const stunningItems = [
   {
     title: "Cross-Platform Experience Design",
     text: "We design responsive experiences for web, mobile, tablet and dashboard interfaces while keeping behaviour and visual patterns consistent.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/cross-platform-experience-design.svg",
+    iconSrc: "/icons/ui-ux-design/focus/cross-platform-experience-design.svg",
   },
   {
     title: "Product UX Strategy",
@@ -118,26 +114,22 @@ const stunningItems = [
   {
     title: "Wireframing & Prototyping",
     text: "We create structured wireframes and interactive prototypes to review layouts, validate key journeys and align decisions before development.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/wireframing-prototyping.svg",
+    iconSrc: "/icons/ui-ux-design/focus/wireframing-prototyping.svg",
   },
   {
     title: "Usability Review & Validation",
     text: "We review important tasks, edge cases and interaction patterns, then refine confusing areas before the product moves further into development.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/usability-review-validation.svg",
+    iconSrc: "/icons/ui-ux-design/focus/usability-review-validation.svg",
   },
   {
     title: "Design Systems & Consistency",
     text: "We define reusable components, spacing, typography, states and interaction rules so the interface stays consistent as the product expands.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/design-systems-consistency.svg",
+    iconSrc: "/icons/ui-ux-design/focus/design-systems-consistency.svg",
   },
   {
     title: "Developer Handoff & Design Support",
     text: "We prepare organized design files, component behaviour, screen states and assets, and collaborate with developers when implementation questions arise.",
-    iconSrc:
-      "/icons/ui-ux-design/focus/developer-handoff-design-support.svg",
+    iconSrc: "/icons/ui-ux-design/focus/developer-handoff-design-support.svg",
   },
 ];
 
@@ -151,26 +143,22 @@ const whyChoose = [
   {
     title: "Clear, Usable Interfaces",
     text: "We reduce unnecessary friction and keep important actions easy to find and understand.",
-    iconSrc:
-      "/icons/ui-ux-design/why-choose/clear-usable-interfaces.svg",
+    iconSrc: "/icons/ui-ux-design/why-choose/clear-usable-interfaces.svg",
   },
   {
     title: "Collaborative Review Process",
     text: "Key flows and screens are reviewed in stages so feedback can be handled before final handoff.",
-    iconSrc:
-      "/icons/ui-ux-design/why-choose/collaborative-review-process.svg",
+    iconSrc: "/icons/ui-ux-design/why-choose/collaborative-review-process.svg",
   },
   {
     title: "Scalable Design Systems",
     text: "Reusable components and interface rules help products stay consistent as new screens are added.",
-    iconSrc:
-      "/icons/ui-ux-design/why-choose/scalable-design-systems.svg",
+    iconSrc: "/icons/ui-ux-design/why-choose/scalable-design-systems.svg",
   },
   {
     title: "Developer-Ready Handoff",
     text: "We provide organized files, states, assets and design support for smoother implementation.",
-    iconSrc:
-      "/icons/ui-ux-design/why-choose/developer-ready-handoff.svg",
+    iconSrc: "/icons/ui-ux-design/why-choose/developer-ready-handoff.svg",
   },
 ];
 
@@ -378,7 +366,9 @@ export default function UIUXDesignPage() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-normal">{titleCaseHeading(item.title)}</h3>
+                <h3 className="text-[20px] font-normal">
+                  {titleCaseHeading(item.title)}
+                </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   {item.text}
@@ -504,15 +494,6 @@ export default function UIUXDesignPage() {
 
       {/* DESIGN PROCESS */}
       <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -568,10 +549,10 @@ export default function UIUXDesignPage() {
           </div>
 
           {/* DESKTOP WORKFLOW */}
-          <div className="relative hidden h-[790px] lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -599,22 +580,14 @@ export default function UIUXDesignPage() {
                 markerEnd="url(#uiux-arrowhead)"
               />
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
               />
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#uiux-arrowhead)"
-              />
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -622,7 +595,15 @@ export default function UIUXDesignPage() {
                 markerEnd="url(#uiux-arrowhead)"
               />
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#uiux-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -767,10 +748,7 @@ export default function UIUXDesignPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <div className="flex items-center gap-4">
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
                     <img
@@ -963,10 +941,7 @@ export default function UIUXDesignPage() {
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

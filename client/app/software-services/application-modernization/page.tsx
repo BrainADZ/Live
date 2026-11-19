@@ -3,7 +3,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -132,10 +131,10 @@ const modernizationProcess = [
 const modernizationLayout = [
   { ...modernizationProcess[0], left: "21.75%", top: "0px" },
   { ...modernizationProcess[1], left: "78.25%", top: "0px" },
-  { ...modernizationProcess[2], left: "21.75%", top: "300px" },
-  { ...modernizationProcess[3], left: "78.25%", top: "300px" },
-  { ...modernizationProcess[4], left: "21.75%", top: "570px" },
-  { ...modernizationProcess[5], left: "78.25%", top: "570px" },
+  { ...modernizationProcess[2], left: "21.75%", top: "360px" },
+  { ...modernizationProcess[3], left: "78.25%", top: "360px" },
+  { ...modernizationProcess[4], left: "21.75%", top: "720px" },
+  { ...modernizationProcess[5], left: "78.25%", top: "720px" },
 ];
 
 const useCases = [
@@ -344,13 +343,17 @@ export default function AppModernizationPage() {
 
             <div className="mt-8">
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -435,14 +438,15 @@ export default function AppModernizationPage() {
                 Challenges With Legacy Systems
               </p>
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Legacy Applications Become Harder to Change as Business Needs Grow.
+                Legacy Applications Become Harder to Change as Business Needs
+                Grow.
               </h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
               The longer an outdated system stays unchanged, the harder it can
-              become to maintain, secure and connect with newer tools. Modernization
-              helps reduce these limitations while protecting important workflows
-              and existing business logic.
+              become to maintain, secure and connect with newer tools.
+              Modernization helps reduce these limitations while protecting
+              important workflows and existing business logic.
             </p>
           </div>
 
@@ -486,8 +490,9 @@ export default function AppModernizationPage() {
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
               Not every application needs a full rebuild. We assess the current
-              system and choose a practical approach based on technical condition,
-              business priorities, integration needs and future plans.
+              system and choose a practical approach based on technical
+              condition, business priorities, integration needs and future
+              plans.
             </p>
           </div>
 
@@ -520,16 +525,7 @@ export default function AppModernizationPage() {
       </section>
 
       {/* APP MODERNIZATION PROCESS */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -582,10 +578,10 @@ export default function AppModernizationPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -613,22 +609,14 @@ export default function AppModernizationPage() {
                 markerEnd="url(#modernization-arrowhead)"
               />
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
                 strokeWidth="2.5"
               />
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#modernization-arrowhead)"
-              />
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -636,7 +624,15 @@ export default function AppModernizationPage() {
                 markerEnd="url(#modernization-arrowhead)"
               />
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#modernization-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -750,14 +746,17 @@ export default function AppModernizationPage() {
               </h2>
               <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
                 From ERP and CRM platforms to internal tools and customer-facing
-                applications, we improve the systems that support everyday work and
-                long-term growth.
+                applications, we improve the systems that support everyday work
+                and long-term growth.
               </p>
             </div>
 
             <div className="grid gap-x-10 gap-y-7 md:grid-cols-2">
               {useCases.map((item, index) => (
-                <div key={item} className="group flex items-center gap-5 border-b border-black/10 pb-6">
+                <div
+                  key={item}
+                  className="group flex items-center gap-5 border-b border-black/10 pb-6"
+                >
                   <div className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175] transition group-hover:bg-[#193175] group-hover:text-white">
                     0{index + 1}
                   </div>
@@ -766,8 +765,9 @@ export default function AppModernizationPage() {
                       {titleCaseHeading(item)}
                     </h3>
                     <p className="mt-1 text-[14px] font-light leading-[1.55] text-black/55">
-                      Improve performance, usability, integration and maintainability
-                      without replacing useful business logic unnecessarily.
+                      Improve performance, usability, integration and
+                      maintainability without replacing useful business logic
+                      unnecessarily.
                     </p>
                   </div>
                 </div>
@@ -789,16 +789,26 @@ export default function AppModernizationPage() {
                 Modernization Projects Built Around Existing Business Systems.
               </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
             {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
                 <div className="p-7 md:p-8">
                   <div className="mb-5 flex items-center justify-between gap-5">
@@ -820,39 +830,46 @@ export default function AppModernizationPage() {
       <IndustriesSection />
 
       {/* CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live Application Modernization Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Is Your Existing Application Becoming Difficult to Maintain or Scale?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          We can assess your current system and define the right path to refactor, replatform, migrate or rebuild only what is necessary.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live Application Modernization Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Is Your Existing Application Becoming Difficult to Maintain or
+                  Scale?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  We can assess your current system and define the right path to
+                  refactor, replatform, migrate or rebuild only what is
+                  necessary.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* TECH STACK */}
       <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
@@ -866,8 +883,8 @@ export default function AppModernizationPage() {
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
               We use modern cloud platforms, deployment tools, databases and
-              frameworks according to the current application and the modernization
-              approach it requires.
+              frameworks according to the current application and the
+              modernization approach it requires.
             </p>
           </div>
 
@@ -880,11 +897,15 @@ export default function AppModernizationPage() {
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"
+                    isActive
+                      ? "text-[#161616]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`}
+                  />
                 </button>
               );
             })}
@@ -896,12 +917,17 @@ export default function AppModernizationPage() {
                 techStack[activeTab].slice(0, 4),
                 techStack[activeTab].slice(4, 6),
               ].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
                     <div
                       key={item.name}
                       className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
-                        index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""
+                        index !== row.length - 1
+                          ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
+                          : ""
                       }`}
                     >
                       <div className="flex h-11.5 w-full items-center justify-center">
@@ -936,12 +962,13 @@ export default function AppModernizationPage() {
               Why Choose BrainADZ Live
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Modernization Decisions Based on Your Current System—Not a One-Size-Fits-All Approach.
+              Modernization Decisions Based on Your Current System—Not a
+              One-Size-Fits-All Approach.
             </h2>
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              We assess the application first, protect important business workflows
-              and modernize the areas that create the most technical or operational
-              limitations.
+              We assess the application first, protect important business
+              workflows and modernize the areas that create the most technical
+              or operational limitations.
             </p>
           </div>
 
@@ -985,7 +1012,10 @@ export default function AppModernizationPage() {
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
             {supportItems.map((item) => {
               return (
-                <div key={item.title} className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7">
+                <div
+                  key={item.title}
+                  className="grid grid-cols-[68px_1fr] gap-5 border-t border-black/10 pt-7"
+                >
                   <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
                     <img
                       src={item.iconSrc}
@@ -1021,7 +1051,8 @@ export default function AppModernizationPage() {
             </h2>
             <p className="mx-auto mt-5 max-w-210 text-[16px] font-light leading-[1.7] text-black/65 md:text-[18px]">
               Understand how we assess existing systems, choose a modernization
-              approach, manage migration and support the application after release.
+              approach, manage migration and support the application after
+              release.
             </p>
           </div>
 
@@ -1042,15 +1073,23 @@ export default function AppModernizationPage() {
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="flex items-center gap-4">
-                    <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"}`}>
+                    <span
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[13px] font-semibold transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#193175]/10 text-[#193175] group-hover:bg-[#193175] group-hover:text-white"}`}
+                    >
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
                       {titleCaseHeading(faq.q)}
                     </span>
                   </span>
-                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}>
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+                  <span
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 ${openFaq === index ? "bg-[#193175] text-white" : "bg-[#f6f8fc] text-[#193175] group-hover:bg-[#193175]/10"}`}
+                  >
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
 
@@ -1068,44 +1107,48 @@ export default function AppModernizationPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live Application Modernization Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to Modernize the Application Your Business Already Relies on?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          Let BrainADZ Live help you improve your existing application with the right mix of refactoring, migration, integration and rebuilding.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                        
-                              <PopupForm
-                                isOpen={isPopupOpen}
-                                onClose={() => setIsPopupOpen(false)}
-                              />
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live Application Modernization Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Ready to Modernize the Application Your Business Already
+                  Relies on?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Let BrainADZ Live help you improve your existing application
+                  with the right mix of refactoring, migration, integration and
+                  rebuilding.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

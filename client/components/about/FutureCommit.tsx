@@ -6,11 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-type TabKey =
-  | "software"
-  | "platforms"
-  | "experiences"
-  | "delivery";
+type TabKey = "software" | "platforms" | "experiences" | "delivery";
 
 const tabs: {
   key: TabKey;

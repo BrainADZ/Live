@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "./erp-title-case-heading";
 
-
 const reasons = [
   {
     title: "Hardware + Software Expertise",

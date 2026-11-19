@@ -3,11 +3,10 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Minus, Plus } from "lucide-react";
-import IndustriesSection from "@/components/home/Industries"
+import IndustriesSection from "@/components/home/Industries";
 import PopupForm from "@/components/PopupForm";
 
 type TabType = "frontend" | "backend" | "databases" | "cloud";
@@ -48,18 +47,17 @@ const workflow = [
   {
     title: "Measure, Improve & Scale",
     text: "We improve features, performance, reporting, integrations and infrastructure as product usage and requirements grow.",
-    iconSrc:
-      "/icons/saas-development/workflow/measure-improve-scale.svg",
+    iconSrc: "/icons/saas-development/workflow/measure-improve-scale.svg",
   },
 ];
 
 const workflowLayout = [
   { ...workflow[0], left: "21.75%", top: "0px" },
   { ...workflow[1], left: "78.25%", top: "0px" },
-  { ...workflow[2], left: "21.75%", top: "300px" },
-  { ...workflow[3], left: "78.25%", top: "300px" },
-  { ...workflow[4], left: "21.75%", top: "570px" },
-  { ...workflow[5], left: "78.25%", top: "570px" },
+  { ...workflow[2], left: "21.75%", top: "360px" },
+  { ...workflow[3], left: "78.25%", top: "360px" },
+  { ...workflow[4], left: "21.75%", top: "720px" },
+  { ...workflow[5], left: "78.25%", top: "720px" },
 ];
 
 const saasBenefits = [
@@ -72,8 +70,7 @@ const saasBenefits = [
   {
     title: "Scalable Product Foundation",
     text: "Add users, modules, integrations and infrastructure capacity as product usage grows.",
-    iconSrc:
-      "/icons/saas-development/overview/scalable-product-foundation.svg",
+    iconSrc: "/icons/saas-development/overview/scalable-product-foundation.svg",
   },
   {
     title: "Centralized Product Operations",
@@ -84,8 +81,7 @@ const saasBenefits = [
   {
     title: "Accessible Digital Product",
     text: "Deliver a web-based product that authorized users can access across devices through secure accounts.",
-    iconSrc:
-      "/icons/saas-development/overview/accessible-digital-product.svg",
+    iconSrc: "/icons/saas-development/overview/accessible-digital-product.svg",
   },
 ];
 
@@ -108,20 +104,17 @@ const solutions = [
   {
     title: "Project & Workflow SaaS",
     text: "Tasks, approvals, timelines, collaboration, status tracking and team visibility.",
-    iconSrc:
-      "/icons/saas-development/solutions/project-workflow-saas.svg",
+    iconSrc: "/icons/saas-development/solutions/project-workflow-saas.svg",
   },
   {
     title: "Learning SaaS Platforms",
     text: "Courses, users, progress, assessments, content management and reporting.",
-    iconSrc:
-      "/icons/saas-development/solutions/learning-saas-platforms.svg",
+    iconSrc: "/icons/saas-development/solutions/learning-saas-platforms.svg",
   },
   {
     title: "Analytics & Reporting SaaS",
     text: "Dashboards, KPIs, custom reports, data views and controlled user access.",
-    iconSrc:
-      "/icons/saas-development/solutions/analytics-reporting-saas.svg",
+    iconSrc: "/icons/saas-development/solutions/analytics-reporting-saas.svg",
   },
 ];
 
@@ -138,20 +131,17 @@ const saasTypes = [
   {
     title: "Business Management SaaS",
     text: "Custom platforms that bring users, records, approvals, tasks, dashboards and reporting into one online product.",
-    iconSrc:
-      "/icons/saas-development/platforms/business-management-saas.svg",
+    iconSrc: "/icons/saas-development/platforms/business-management-saas.svg",
   },
   {
     title: "ERP & Operations SaaS",
     text: "Modular platforms for operations, inventory, finance, HR, purchasing, approvals and management reporting.",
-    iconSrc:
-      "/icons/saas-development/platforms/erp-operations-saas.svg",
+    iconSrc: "/icons/saas-development/platforms/erp-operations-saas.svg",
   },
   {
     title: "Project & Workflow SaaS",
     text: "Products for tasks, projects, approvals, timelines, collaboration and progress visibility across teams.",
-    iconSrc:
-      "/icons/saas-development/platforms/project-workflow-saas.svg",
+    iconSrc: "/icons/saas-development/platforms/project-workflow-saas.svg",
   },
   {
     title: "Communication & Service Platforms",
@@ -162,8 +152,7 @@ const saasTypes = [
   {
     title: "HR & Workforce SaaS",
     text: "Systems for employee records, onboarding, attendance, workflows, documents, permissions and reports.",
-    iconSrc:
-      "/icons/saas-development/platforms/hr-workforce-saas.svg",
+    iconSrc: "/icons/saas-development/platforms/hr-workforce-saas.svg",
   },
   {
     title: "CRM & Customer Operations SaaS",
@@ -339,20 +328,24 @@ export default function SaaSDevelopmentPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              We design and develop custom SaaS products with secure user accounts,
-              admin controls, subscriptions, integrations and cloud-ready architecture
-              built around your product goals.
+              We design and develop custom SaaS products with secure user
+              accounts, admin controls, subscriptions, integrations and
+              cloud-ready architecture built around your product goals.
             </p>
 
             <div className="mt-8">
               <button
-  type="button"
-  onClick={() => setIsPopupOpen(true)}
-  className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
->
-  Enquire Now
-  <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
-</button>
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
+              >
+                Enquire Now
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -366,13 +359,15 @@ export default function SaaSDevelopmentPage() {
               Overview
             </p>
             <h2 className="max-w-170 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Turn Your Software Idea into a SaaS Product People Can Use and Manage.
+              Turn Your Software Idea into a SaaS Product People Can Use and
+              Manage.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live designs and develops custom SaaS platforms around your
-              users, workflows and business model. From user accounts and admin
-              dashboards to subscriptions, integrations and reporting, we help you
-              move from product idea to MVP and continue improving the platform after launch.
+              BrainADZ Live designs and develops custom SaaS platforms around
+              your users, workflows and business model. From user accounts and
+              admin dashboards to subscriptions, integrations and reporting, we
+              help you move from product idea to MVP and continue improving the
+              platform after launch.
             </p>
           </div>
 
@@ -391,7 +386,9 @@ export default function SaaSDevelopmentPage() {
                   />
                 </div>
 
-                <h3 className="text-[20px] font-normal">{titleCaseHeading(item.title)}</h3>
+                <h3 className="text-[20px] font-normal">
+                  {titleCaseHeading(item.title)}
+                </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   {item.text}
@@ -410,7 +407,8 @@ export default function SaaSDevelopmentPage() {
               Why Build SaaS
             </p>
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Build One Online Product That Can Serve Users, Teams and Customers at Scale.
+              Build One Online Product That Can Serve Users, Teams and Customers
+              at Scale.
             </h2>
           </div>
 
@@ -491,11 +489,16 @@ export default function SaaSDevelopmentPage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             {architectureItems.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10 text-[13px] font-semibold text-[#193175]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">{item}</p>
+                <p className="text-[18px] font-light tracking-[-0.3px] text-black/80">
+                  {item}
+                </p>
               </div>
             ))}
           </div>
@@ -504,15 +507,6 @@ export default function SaaSDevelopmentPage() {
 
       {/* SAAS DEVELOPMENT PROCESS */}
       <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute -right-[9%] -top-[8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-[1180px] text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -522,8 +516,9 @@ export default function SaaSDevelopmentPage() {
               From Product Idea to Launch and Continuous Improvement
             </h2>
             <p className="mx-auto mt-5 max-w-[980px] text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              We move from product discovery and architecture to MVP development,
-              testing, deployment and ongoing improvement through one connected process.
+              We move from product discovery and architecture to MVP
+              development, testing, deployment and ongoing improvement through
+              one connected process.
             </p>
           </div>
 
@@ -563,18 +558,66 @@ export default function SaaSDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-[790px] lg:block">
-            <svg className="pointer-events-none absolute inset-0 z-0 h-full w-full" viewBox="0 0 1600 790" fill="none" aria-hidden="true" preserveAspectRatio="none">
+          <div className="relative hidden h-[1080px] lg:block">
+            <svg
+              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+              viewBox="0 0 1600 1080"
+              fill="none"
+              aria-hidden="true"
+              preserveAspectRatio="none"
+            >
               <defs>
-                <marker id="saas-arrowhead" markerHeight="14" markerUnits="userSpaceOnUse" markerWidth="18" orient="auto" refX="16" refY="7">
+                <marker
+                  id="saas-arrowhead"
+                  markerHeight="14"
+                  markerUnits="userSpaceOnUse"
+                  markerWidth="18"
+                  orient="auto"
+                  refX="16"
+                  refY="7"
+                >
                   <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
-              <path d="M 392 43 L 1208 43" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
-              <path d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" />
-              <path d="M 1208 343 L 392 343" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
-              <path d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
-              <path d="M 392 613 L 1208 613" stroke="#193175" strokeDasharray="10 12" strokeLinecap="round" strokeWidth="2.5" markerEnd="url(#saas-arrowhead)" />
+              <path
+                d="M 392 43 L 1208 43"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#saas-arrowhead)"
+              />
+              <path
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+              />
+              <path
+                d="M 1208 403 L 392 403"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#saas-arrowhead)"
+              />
+              <path
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#saas-arrowhead)"
+              />
+              <path
+                d="M 392 763 L 1208 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#saas-arrowhead)"
+              />
             </svg>
 
             {workflowLayout.map((item) => (
@@ -613,13 +656,15 @@ export default function SaaSDevelopmentPage() {
               SaaS Platforms We Build
             </p>
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Flexible SaaS Products for Different Business and Operational Needs
+              Flexible SaaS Products for Different Business and Operational
+              Needs
             </h2>
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
               BrainADZ Live builds custom SaaS products around the workflow,
-              users and operating model of each product. The structure can include
-              customer-facing accounts, internal teams, admin controls, subscriptions,
-              integrations and reporting based on what the platform actually needs.
+              users and operating model of each product. The structure can
+              include customer-facing accounts, internal teams, admin controls,
+              subscriptions, integrations and reporting based on what the
+              platform actually needs.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
@@ -670,20 +715,31 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-12 grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Core SaaS Features</p>
-              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Core Capabilities That Support Users, Operations and Product Management.</h2>
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Core SaaS Features
+              </p>
+              <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+                Core Capabilities That Support Users, Operations and Product
+                Management.
+              </h2>
             </div>
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              We build the features required to manage users, permissions, billing,
-              notifications, integrations, reporting and day-to-day product operations.
+              We build the features required to manage users, permissions,
+              billing, notifications, integrations, reporting and day-to-day
+              product operations.
             </p>
           </div>
 
           <div className="grid gap-x-10 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
             {coreFeatures.map((item, index) => (
-              <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-5">
+              <div
+                key={item}
+                className="flex items-center gap-4 border-b border-black/10 pb-5"
+              >
                 <CheckCircle2 size={24} className="shrink-0 text-[#193175]" />
-                <span className="text-[17px] font-light text-black/75">{item}</span>
+                <span className="text-[17px] font-light text-black/75">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
@@ -694,21 +750,29 @@ export default function SaaSDevelopmentPage() {
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-8 lg:grid-cols-2">
           <div className="border-t border-black/10 pt-8">
-            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">MVP Launch</span>
-            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Launch the Core Product Before Adding Everything.</h2>
+            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              MVP Launch
+            </span>
+            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
+              Launch the Core Product Before Adding Everything.
+            </h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
               We define the first usable version around the core user journey,
-              essential admin controls and priority features so the product can be
-              tested without building every future module at once.
+              essential admin controls and priority features so the product can
+              be tested without building every future module at once.
             </p>
           </div>
           <div className="border-t border-black/10 pt-8">
-            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Full Product Scaling</span>
-            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">Expand the Product as Real Needs Become Clearer.</h2>
+            <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Full Product Scaling
+            </span>
+            <h2 className="mt-4 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
+              Expand the Product as Real Needs Become Clearer.
+            </h2>
             <p className="mt-5 text-[16px] font-light leading-[1.75] text-black/65">
-              After launch, we can add modules, automation, billing improvements,
-              integrations, reporting and performance work based on usage, feedback
-              and product priorities.
+              After launch, we can add modules, automation, billing
+              improvements, integrations, reporting and performance work based
+              on usage, feedback and product priorities.
             </p>
           </div>
         </div>
@@ -719,28 +783,47 @@ export default function SaaSDevelopmentPage() {
         <div className="mx-auto max-w-450">
           <div className="mb-14 flex flex-col justify-between gap-7 md:flex-row md:items-end">
             <div>
-              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Case Studies</p>
-              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">SaaS Platforms Built Around Real Product and Operational Workflows.</h2>
+              <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+                Case Studies
+              </p>
+              <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+                SaaS Platforms Built Around Real Product and Operational
+                Workflows.
+              </h2>
             </div>
-            <Link href="/case-studies" className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-3 text-[14px] font-semibold text-[#193175]"
+            >
               View Case Studies <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="grid gap-2 md:grid-cols-4">
             {caseStudies.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]">
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[10px] border border-black/10 bg-white shadow-[0_22px_70px_rgba(0,0,0,0.06)]"
+              >
                 <div className="h-64 overflow-hidden bg-[#dde6f6] md:h-72">
-                  <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
                 <div className="p-7 md:p-8">
                   <div className="mb-4 flex items-center justify-between gap-5">
-                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">{titleCaseHeading(item.title)}</h3>
+                    <h3 className="text-[23px] font-normal tracking-[-0.5px]">
+                      {titleCaseHeading(item.title)}
+                    </h3>
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#193175]/10">
                       <ArrowRight size={18} className="text-[#193175]" />
                     </span>
                   </div>
-                  <p className="text-[14px] font-light leading-[1.65] text-black/60">{item.text}</p>
+                  <p className="text-[14px] font-light leading-[1.65] text-black/60">
+                    {item.text}
+                  </p>
                 </div>
               </article>
             ))}
@@ -754,14 +837,16 @@ export default function SaaSDevelopmentPage() {
       <section className="section-spacing lazy-section bg-white px-5 text-[#161616] md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-14 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">Tech Stack</p>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[2.5px] text-[#193175]">
+              Tech Stack
+            </p>
             <h2 className="mx-auto max-w-210 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
               Technologies We Use to Build Custom SaaS Products
             </h2>
             <p className="mx-auto mt-6 max-w-220 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-              We use modern frontend, backend, database and cloud technologies to
-              build maintainable SaaS products with secure access, integrations and
-              room for future features.
+              We use modern frontend, backend, database and cloud technologies
+              to build maintainable SaaS products with secure access,
+              integrations and room for future features.
             </p>
           </div>
 
@@ -774,11 +859,15 @@ export default function SaaSDevelopmentPage() {
                   type="button"
                   onClick={() => setActiveTab(tab.value)}
                   className={`relative pb-3 text-[17px] font-light leading-none tracking-[-0.2px] transition-all duration-300 md:text-[19px] ${
-                    isActive ? "text-[#161616]" : "text-[#8d8d8d] hover:text-[#193175]"
+                    isActive
+                      ? "text-[#161616]"
+                      : "text-[#8d8d8d] hover:text-[#193175]"
                   }`}
                 >
                   {tab.label}
-                  <span className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`} />
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${isActive ? "w-full opacity-100" : "w-0 opacity-0"}`}
+                  />
                 </button>
               );
             })}
@@ -786,13 +875,21 @@ export default function SaaSDevelopmentPage() {
 
           <div className="mx-auto max-w-315">
             <div className="space-y-5 md:space-y-6">
-              {[techStack[activeTab].slice(0, 4), techStack[activeTab].slice(4, 6)].map((row, rowIndex) => (
-                <div key={`${activeTab}-${rowIndex}`} className="flex flex-wrap items-center justify-center gap-y-5">
+              {[
+                techStack[activeTab].slice(0, 4),
+                techStack[activeTab].slice(4, 6),
+              ].map((row, rowIndex) => (
+                <div
+                  key={`${activeTab}-${rowIndex}`}
+                  className="flex flex-wrap items-center justify-center gap-y-5"
+                >
                   {row.map((item, index) => (
                     <div
                       key={item.name}
                       className={`group flex min-h-29.5 w-1/2 flex-col items-center justify-center px-5 py-4 text-center transition-all duration-300 hover:bg-[#f8faff] sm:w-1/3 md:w-37.5 lg:w-36.25 ${
-                        index !== row.length - 1 ? "md:border-r md:border-dotted md:border-[#bdbdbd]" : ""
+                        index !== row.length - 1
+                          ? "md:border-r md:border-dotted md:border-[#bdbdbd]"
+                          : ""
                       }`}
                     >
                       <div className="flex h-11.5 w-full items-center justify-center">
@@ -823,15 +920,26 @@ export default function SaaSDevelopmentPage() {
       <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.72fr_1.28fr]">
           <div className="lg:sticky lg:top-24 lg:h-fit">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">Why Choose BrainADZ Live</p>
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">We Build SaaS Products Around Users, Workflows and a Clear Product Roadmap.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              Why Choose BrainADZ Live
+            </p>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+              We Build SaaS Products Around Users, Workflows and a Clear Product
+              Roadmap.
+            </h2>
           </div>
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
               <div key={item.title} className="border-t border-black/10 pt-7">
-                <span className="text-[13px] font-semibold text-[#193175]">0{index + 1}</span>
-                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">{titleCaseHeading(item.title)}</h3>
-                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">{item.text}</p>
+                <span className="text-[13px] font-semibold text-[#193175]">
+                  0{index + 1}
+                </span>
+                <h3 className="mt-3 text-[24px] font-normal tracking-[-0.4px]">
+                  {titleCaseHeading(item.title)}
+                </h3>
+                <p className="mt-3 text-[15px] font-light leading-[1.7] text-black/65">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -842,21 +950,34 @@ export default function SaaSDevelopmentPage() {
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative overflow-hidden bg-[#f6f8fc] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)]">
-            <img src="/overview/SAAS-Poster.webp" alt="SaaS Support and Growth" className="h-full w-full object-cover" />
+            <img
+              src="/overview/SAAS-Poster.webp"
+              alt="SaaS Support and Growth"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">SaaS Support & Growth</p>
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Keep Improving the Product After Launch.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              SaaS Support & Growth
+            </p>
+            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+              Keep Improving the Product After Launch.
+            </h2>
             <p className="mt-5 text-[16px] font-light leading-[1.7] text-black/65">
-              After launch, we help resolve issues, improve performance and continue
-              developing features, integrations, billing flows and product operations
-              as requirements change.
+              After launch, we help resolve issues, improve performance and
+              continue developing features, integrations, billing flows and
+              product operations as requirements change.
             </p>
             <div className="mt-8 space-y-4">
               {supportItems.map((item) => (
-                <div key={item} className="flex items-center gap-4 border-b border-black/10 pb-4">
+                <div
+                  key={item}
+                  className="flex items-center gap-4 border-b border-black/10 pb-4"
+                >
                   <CheckCircle2 size={23} className="shrink-0 text-[#193175]" />
-                  <span className="text-[16px] font-light text-black/70">{item}</span>
+                  <span className="text-[16px] font-light text-black/70">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
@@ -868,21 +989,41 @@ export default function SaaSDevelopmentPage() {
       <section className="section-spacing bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="mb-12 text-center">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">FAQ</p>
-            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">Common Questions about Custom SaaS Development.</h2>
+            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
+              FAQ
+            </p>
+            <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
+              Common Questions about Custom SaaS Development.
+            </h2>
           </div>
           <div className="grid gap-4 lg:grid-cols-2 lg:gap-5">
             {faqs.map((faq, index) => (
-              <div key={faq.q} className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}>
-                <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)} className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6">
-                  <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">{titleCaseHeading(faq.q)}</span>
+              <div
+                key={faq.q}
+                className={`overflow-hidden rounded-[26px] border bg-white transition-all duration-300 ${openFaq === index ? "border-[#193175]/35 shadow-[0_22px_70px_rgba(60,91,155,0.12)]" : "border-black/10"}`}
+              >
+                <button
+                  type="button"
+                  aria-expanded={openFaq === index}
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
+                >
+                  <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
+                    {titleCaseHeading(faq.q)}
+                  </span>
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f6f8fc] text-[#193175]">
-                    {openFaq === index ? <Minus size={18} /> : <Plus size={18} />}
+                    {openFaq === index ? (
+                      <Minus size={18} />
+                    ) : (
+                      <Plus size={18} />
+                    )}
                   </span>
                 </button>
                 {openFaq === index && (
                   <div className="mx-5 border-t border-[#193175]/15 pb-6 pt-4 md:mx-6">
-                    <p className="text-[15px] font-light leading-[1.75] text-black/65">{faq.a}</p>
+                    <p className="text-[15px] font-light leading-[1.75] text-black/65">
+                      {faq.a}
+                    </p>
                   </div>
                 )}
               </div>
@@ -892,44 +1033,47 @@ export default function SaaSDevelopmentPage() {
       </section>
 
       {/* Final CTA */}
-                  <section className="section-spacing lazy-section bg-white">
-                                <div className="mx-auto max-w-450 px-4 lg:px-10">
-                                  <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
-                                    <div className="hidden w-[32%] shrink-0 md:block">
-                                      <img
-                                        src="/CTA/cta.webp"
-                                        alt="BrainADZ Live SaaS Development Services"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-full w-full object-cover"
-                                      />
-                                    </div>
-                                    <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
-                                      <div className="max-w-145">
-                                        <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
-                                          Ready to Turn Your Software Idea into a SaaS Product?
-                                        </h3>
-                                        <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                                          Let BrainADZ Live design and build your SaaS platform around the users, workflows, subscriptions, integrations and product roadmap you actually need.
-                                        </p>
-                                      </div>
-                                      <button
-                          type="button"
-                          onClick={() => setIsPopupOpen(true)}
-                          className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
-                        >
-                                        <span>Enquire Now</span>
-                                        <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </section>
-                        
-                              <PopupForm
-                                isOpen={isPopupOpen}
-                                onClose={() => setIsPopupOpen(false)}
-                              />
+      <section className="section-spacing lazy-section bg-white">
+        <div className="mx-auto max-w-450 px-4 lg:px-10">
+          <div className="flex min-h-65 overflow-hidden rounded-none bg-[#193175] md:min-h-75">
+            <div className="hidden w-[32%] shrink-0 md:block">
+              <img
+                src="/CTA/cta.webp"
+                alt="BrainADZ Live SaaS Development Services"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col justify-center gap-8 px-7 py-10 md:flex-row md:items-center md:justify-between md:px-10 lg:px-14">
+              <div className="max-w-145">
+                <h3 className="text-[20px] font-semibold leading-tight text-white md:text-[26px] lg:text-[30px]">
+                  Ready to Turn Your Software Idea into a SaaS Product?
+                </h3>
+                <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
+                  Let BrainADZ Live design and build your SaaS platform around
+                  the users, workflows, subscriptions, integrations and product
+                  roadmap you actually need.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPopupOpen(true)}
+                className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
+              >
+                <span>Enquire Now</span>
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

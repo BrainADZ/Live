@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 import { ArrowRight } from "lucide-react";
@@ -167,7 +166,11 @@ export default function IndustriesPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -198,8 +201,8 @@ export default function IndustriesPage() {
 
               <p className="mt-5 max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
                 Industry context helps us shape the right combination of
-                applications, dashboards, integrations, displays and
-                operational tools for the problem being solved.
+                applications, dashboards, integrations, displays and operational
+                tools for the problem being solved.
               </p>
             </div>
 
@@ -250,66 +253,67 @@ export default function IndustriesPage() {
         </div>
       </section> */}
 
-     {/* INDUSTRIES */}
-<section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
-  <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
+      {/* INDUSTRIES */}
+      <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
+        <div className="pointer-events-none absolute -right-45 -top-40 h-105 w-105 rounded-full bg-[#193175]/[0.07] blur-[90px]" />
 
-  <div className="relative z-10 mx-auto max-w-450">
-    <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-      <div>
-        <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-          Industries We Build For
-        </p>
+        <div className="relative z-10 mx-auto max-w-450">
+          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
+                Industries We Build For
+              </p>
 
-        <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-          Different Industries Need Different Workflows, Interfaces and Systems
-        </h2>
-      </div>
+              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
+                Different Industries Need Different Workflows, Interfaces and
+                Systems
+              </h2>
+            </div>
 
-      <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
-        Explore examples of how our software services, software platforms and
-        digital signage products can be applied across 12 industry sectors.
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-      {industries.map((item) => (
-        <Link
-          key={item.title}
-          href={item.href}
-          aria-label={`Explore ${item.title}`}
-          className="group grid min-h-55 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
-        >
-          <div className="manual-icon-box flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
-  <img
-    src={item.icon}
-    alt={`${item.title} icon`}
-    loading="lazy"
-    decoding="async"
-    className="manual-icon object-contain"
-  />
-</div>
-
-          <div>
-            <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
-              {titleCaseHeading(item.title)}
-            </h3>
-
-            <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-              {item.description}
+            <p className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]">
+              Explore examples of how our software services, software platforms
+              and digital signage products can be applied across 12 industry
+              sectors.
             </p>
-
-            <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] transition-colors duration-300 group-hover:text-[#101f4d]">
-              Explore industry
-
-              <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
           </div>
-        </Link>
-      ))}
-    </div>
-  </div>
-</section>
+
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {industries.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                aria-label={`Explore ${item.title}`}
+                className="group grid min-h-55 cursor-pointer grid-cols-1 gap-6 rounded-[18px] border border-[#dfe6f1] bg-white p-7 shadow-[0_18px_60px_rgba(22,22,22,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cbd7ea] hover:shadow-[0_24px_75px_rgba(22,22,22,0.075)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#193175] focus-visible:ring-offset-3 md:grid-cols-[88px_1fr] md:p-8"
+              >
+                <div className="manual-icon-box flex h-18 w-18 items-center justify-center rounded-[18px] border border-[#dbe3f0] bg-[#f8faff] transition-all duration-300 group-hover:border-[#193175]/35 group-hover:bg-white group-hover:shadow-[0_14px_34px_rgba(60,91,155,0.16)]">
+                  <img
+                    src={item.icon}
+                    alt={`${item.title} icon`}
+                    loading="lazy"
+                    decoding="async"
+                    className="manual-icon object-contain"
+                  />
+                </div>
+
+                <div>
+                  <h3 className="text-[25px] font-normal leading-[1.22] tracking-[-0.6px] text-[#262626] transition-colors duration-300 group-hover:text-[#193175] md:text-[28px]">
+                    {titleCaseHeading(item.title)}
+                  </h3>
+
+                  <p className="mt-4 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
+                    {item.description}
+                  </p>
+
+                  <span className="mt-7 inline-flex items-center gap-3 text-[15px] font-light text-[#193175] transition-colors duration-300 group-hover:text-[#101f4d]">
+                    Explore industry
+                    <ArrowRightIcon className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* FINAL CTA */}
       <section className="section-spacing lazy-section bg-white">
@@ -344,17 +348,18 @@ export default function IndustriesPage() {
                 className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5"
               >
                 <span>Enquire Now</span>
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

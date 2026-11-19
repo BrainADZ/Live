@@ -32,9 +32,9 @@ export default function CtaSection() {
               </h3>
 
               <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                Bring software, intelligent platforms, cloud capabilities, and digital
-    signage together to create secure, scalable systems built for modern
-    business.
+                Bring software, intelligent platforms, cloud capabilities, and
+                digital signage together to create secure, scalable systems
+                built for modern business.
               </p>
             </div>
 
@@ -42,20 +42,19 @@ export default function CtaSection() {
             <button
               type="button"
               onClick={() => setIsPopupOpen(true)}
-             className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5 cursor-pointer"
+              className="group inline-flex h-13 w-fit min-w-52.5 items-center justify-between rounded-sm border border-white px-6 text-[15px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#193175] md:min-w-57.5 cursor-pointer"
             >
               Enquire Now
-              <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+              <ArrowRight
+                size={20}
+                strokeWidth={1.8}
+                className="text-[20px] leading-none"
+              />
             </button>
           </div>
         </div>
-              <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+        <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
       </div>
-
     </section>
-    
   );
 }

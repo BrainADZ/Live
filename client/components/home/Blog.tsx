@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 
-
-
 import { ArrowRight } from "lucide-react";
 import type { ArticleCard } from "@/lib/cms-content";
 /* eslint-disable @next/next/no-img-element */
@@ -31,7 +29,11 @@ export default function BlogSection({ blogs }: { blogs: ArticleCard[] }) {
             className="inline-flex w-fit items-center gap-4 text-[17px] font-light text-[#193175] transition hover:underline"
           >
             View all blogs
-            <ArrowRight size={28} strokeWidth={1.8} className="text-[28px] leading-none" />
+            <ArrowRight
+              size={28}
+              strokeWidth={1.8}
+              className="text-[28px] leading-none"
+            />
           </Link>
         </div>
 
@@ -87,7 +89,11 @@ export default function BlogSection({ blogs }: { blogs: ArticleCard[] }) {
                     Read article
                   </span>
 
-                  <ArrowRight size={32} strokeWidth={1.8} className="text-[32px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight
+                    size={32}
+                    strokeWidth={1.8}
+                    className="text-[32px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1"
+                  />
                 </div>
               </div>
 

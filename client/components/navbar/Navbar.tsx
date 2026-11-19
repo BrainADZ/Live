@@ -7,6 +7,7 @@ import {
   ChevronDown,
   Globe,
   Search,
+  Phone,
   CircleUserRound,
   Menu,
   X,
@@ -38,9 +39,7 @@ const interactivePanelUrls = [
   "/digital-signage-products/digital-teaching-conference-board-ifpd",
 ];
 
-const normalizedDigitalSignageProducts = menuContent[
-  "Digital Signage Products"
-]
+const normalizedDigitalSignageProducts = menuContent["Digital Signage Products"]
   .filter((item) => item.title !== "Vertical Mobile Charging Digital Kiosk")
   .map((item) =>
     interactivePanelTitles.includes(item.title) ||
@@ -50,11 +49,11 @@ const normalizedDigitalSignageProducts = menuContent[
           title: "Digital Teaching & Conference Board (IFPD)",
           href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
         }
-      : item
+      : item,
   );
 
 const interactivePanelIndex = normalizedDigitalSignageProducts.findIndex(
-  (item) => item.title === "Digital Teaching & Conference Board (IFPD)"
+  (item) => item.title === "Digital Teaching & Conference Board (IFPD)",
 );
 
 const updatedDigitalSignageProducts =
@@ -74,20 +73,20 @@ const posPlatform: MenuItem = {
 const virtualTrialRoomTitles = ["Virtual Trial Room", "Virtual Trail Room"];
 
 const hasVirtualTrialRoom = menuContent["Software Platforms"].some((item) =>
-  virtualTrialRoomTitles.includes(item.title)
+  virtualTrialRoomTitles.includes(item.title),
 );
 
 const softwarePlatformsWithPos = hasVirtualTrialRoom
   ? menuContent["Software Platforms"].map((item) =>
-      virtualTrialRoomTitles.includes(item.title) ? posPlatform : item
+      virtualTrialRoomTitles.includes(item.title) ? posPlatform : item,
     )
   : menuContent["Software Platforms"].some(
-        (item) => item.title === "POS" || item.title === "POS Software"
+        (item) => item.title === "POS" || item.title === "POS Software",
       )
     ? menuContent["Software Platforms"].map((item) =>
         item.title === "POS" || item.title === "POS Software"
           ? posPlatform
-          : item
+          : item,
       )
     : [...menuContent["Software Platforms"], posPlatform];
 
@@ -97,11 +96,11 @@ const hospitalityPlatform: MenuItem = {
 };
 
 const softwarePlatformsWithoutHospitality = softwarePlatformsWithPos.filter(
-  (item) => item.title !== hospitalityPlatform.title
+  (item) => item.title !== hospitalityPlatform.title,
 );
 
 const posPlatformIndex = softwarePlatformsWithoutHospitality.findIndex(
-  (item) => item.title === posPlatform.title
+  (item) => item.title === posPlatform.title,
 );
 
 const updatedSoftwarePlatforms =
@@ -209,8 +208,10 @@ const searchLinks = [
   {
     label: "Digital Teaching & Conference Board (IFPD)",
     href: "/digital-signage-products/digital-teaching-conference-board-ifpd",
-    description: "Digital teaching and conference board for classrooms and collaborative spaces",
-    keywords: "interactive panel interactive teaching display smart classroom display",
+    description:
+      "Digital teaching and conference board for classrooms and collaborative spaces",
+    keywords:
+      "interactive panel interactive teaching display smart classroom display",
   },
   {
     label: "Software Platforms",
@@ -221,14 +222,16 @@ const searchLinks = [
   {
     label: "POS",
     href: "/software-platforms/pos",
-    description: "Point of sale platform for billing, inventory and business operations",
+    description:
+      "Point of sale platform for billing, inventory and business operations",
     keywords: "pos point of sale billing inventory retail software platform",
   },
   {
     label: "Industries",
     href: "/industries",
     description: "Technology solutions for different business industries",
-    keywords: "industries healthcare education retail finance property telecom travel",
+    keywords:
+      "industries healthcare education retail finance property telecom travel",
   },
   {
     label: "Consulting",
@@ -299,7 +302,7 @@ export default function Navbar() {
     ? searchLinks.filter((item) =>
         `${item.label} ${item.description} ${item.keywords}`
           .toLowerCase()
-          .includes(searchQuery.toLowerCase())
+          .includes(searchQuery.toLowerCase()),
       )
     : searchLinks.slice(0, 8);
 
@@ -402,7 +405,6 @@ export default function Navbar() {
                 className="flex items-center gap-1 text-[15px] font-normal text-[#161616] transition hover:text-[#193175]"
               >
                 Solutions
-
                 <ChevronDown
                   size={18}
                   strokeWidth={1.6}
@@ -417,9 +419,7 @@ export default function Navbar() {
                 onMouseEnter={openMegaMenu}
                 onMouseLeave={scheduleMegaMenuClose}
                 className={`fixed left-0 top-21 w-full border-t border-[#e5e5e5] bg-white shadow-xl transition-all duration-200 ${
-                  showMegaMenu
-                    ? "visible opacity-100"
-                    : "invisible opacity-0"
+                  showMegaMenu ? "visible opacity-100" : "invisible opacity-0"
                 }`}
               >
                 <div className="mx-auto flex min-h-130 max-w-450 px-0">
@@ -440,7 +440,11 @@ export default function Navbar() {
                         >
                           <span>{item}</span>
 
-                          <ArrowRight size={18} strokeWidth={1.8} className="text-lg text-[#193175]" />
+                          <ArrowRight
+                            size={18}
+                            strokeWidth={1.8}
+                            className="text-lg text-[#193175]"
+                          />
                         </Link>
                       ))}
                     </div>
@@ -467,7 +471,11 @@ export default function Navbar() {
                     >
                       {activeCategory}
 
-                      <ArrowRight size={20} strokeWidth={1.8} className="transition-transform duration-300 group-hover:translate-x-1" />
+                      <ArrowRight
+                        size={20}
+                        strokeWidth={1.8}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
                     </Link>
 
                     {/*
@@ -488,7 +496,11 @@ export default function Navbar() {
                           </h3>
 
                           {/* RIGHT SIDE ARROW */}
-                          <ArrowRight size={24} strokeWidth={1.8} className="shrink-0 text-[24px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
+                          <ArrowRight
+                            size={24}
+                            strokeWidth={1.8}
+                            className="shrink-0 text-[24px] font-light leading-none text-[#193175] transition-transform duration-300 group-hover:translate-x-1"
+                          />
                         </Link>
                       ))}
                     </div>
@@ -508,7 +520,6 @@ export default function Navbar() {
                 className="flex items-center gap-1 text-[15px] font-normal text-[#161616] transition hover:text-[#193175]"
               >
                 About
-
                 <ChevronDown
                   size={18}
                   strokeWidth={1.6}
@@ -571,6 +582,16 @@ export default function Navbar() {
             <Search size={20} strokeWidth={1.5} />
           </button>
 
+          {/* CONTACT NUMBER - BETWEEN SEARCH AND ACCOUNT */}
+          <a
+            href="tel:+919911078143"
+            aria-label="Call BrainADZ Live at +91 99110 78143"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-[13px] font-medium text-[#193175] transition-colors duration-300 hover:text-[#161616] 2xl:text-[14px]"
+          >
+            <Phone size={16} strokeWidth={1.8} aria-hidden="true" />
+            <span>+91 99110 78143</span>
+          </a>
+
           <div className="relative">
             <button
               type="button"
@@ -614,7 +635,11 @@ export default function Navbar() {
                     >
                       <span className="flex items-center justify-between gap-4 text-[15px] font-normal text-[#161616] group-hover:text-[#193175]">
                         {item.label}
-                        <ArrowRight size={20} strokeWidth={1.8} className="text-[#193175] transition-transform group-hover:translate-x-1" />
+                        <ArrowRight
+                          size={20}
+                          strokeWidth={1.8}
+                          className="text-[#193175] transition-transform group-hover:translate-x-1"
+                        />
                       </span>
 
                       <span className="mt-1 block text-[13px] font-light leading-[1.45] text-black/55">
@@ -713,7 +738,11 @@ export default function Navbar() {
                   <span className="flex items-center justify-between gap-4 text-[17px] font-normal text-[#161616] group-hover:text-[#193175]">
                     {item.label}
 
-                    <ArrowRight size={20} strokeWidth={1.8} className="text-[#193175] transition-transform group-hover:translate-x-1" />
+                    <ArrowRight
+                      size={20}
+                      strokeWidth={1.8}
+                      className="text-[#193175] transition-transform group-hover:translate-x-1"
+                    />
                   </span>
 
                   <span className="mt-3 block text-[14px] font-light leading-[1.6] text-black/60">
@@ -753,11 +782,20 @@ export default function Navbar() {
               Search
             </button>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4">
+              {/* MOBILE CONTACT NUMBER */}
+              <a
+                href="tel:+919911078143"
+                aria-label="Call BrainADZ Live at +91 99110 78143"
+                className="inline-flex items-center gap-1.5 whitespace-nowrap text-[12px] font-medium text-[#193175] hover:text-[#161616] sm:text-[14px]"
+              >
+                <Phone size={15} strokeWidth={1.8} aria-hidden="true" />
+                <span>+91 99110 78143</span>
+              </a>
               <Globe
                 size={20}
                 strokeWidth={1.5}
-                className="text-[#525252]"
+                className="hidden text-[#525252] sm:block"
               />
 
               <button
@@ -790,7 +828,11 @@ export default function Navbar() {
                   >
                     <span className="flex items-center justify-between text-[16px] font-normal text-[#161616]">
                       {item.label}
-                      <ArrowRight size={20} strokeWidth={1.8} className="text-[#193175]" />
+                      <ArrowRight
+                        size={20}
+                        strokeWidth={1.8}
+                        className="text-[#193175]"
+                      />
                     </span>
 
                     <span className="mt-1 block text-[13px] font-light leading-[1.45] text-black/55">
@@ -817,7 +859,6 @@ export default function Navbar() {
             className="flex items-center justify-between border-b border-[#e5e5e5] px-5 py-5 text-left text-[18px] font-normal text-[#161616]"
           >
             Solutions
-
             <ChevronDown
               size={20}
               strokeWidth={1.6}
@@ -852,7 +893,11 @@ export default function Navbar() {
                         >
                           <span>{titleCaseHeading(item.title)}</span>
 
-                          <ArrowRight size={20} strokeWidth={1.8} className="shrink-0 text-[#193175] transition-transform duration-300 group-hover:translate-x-1" />
+                          <ArrowRight
+                            size={20}
+                            strokeWidth={1.8}
+                            className="shrink-0 text-[#193175] transition-transform duration-300 group-hover:translate-x-1"
+                          />
                         </Link>
                       ))}
                     </div>
@@ -869,13 +914,10 @@ export default function Navbar() {
             className="flex items-center justify-between border-b border-[#e5e5e5] px-5 py-5 text-left text-[18px] font-normal text-[#161616]"
           >
             About
-
             <ChevronDown
               size={20}
               strokeWidth={1.6}
-              className={`transition ${
-                mobileAboutOpen ? "rotate-180" : ""
-              }`}
+              className={`transition ${mobileAboutOpen ? "rotate-180" : ""}`}
             />
           </button>
 

@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -34,8 +33,7 @@ const modules = [
   {
     title: "Playback Scheduling",
     text: "Plan when selected playlists or content should run according to the required display schedule.",
-    iconSrc:
-      "/icons/signage-application/core-features/playback-scheduling.svg",
+    iconSrc: "/icons/signage-application/core-features/playback-scheduling.svg",
   },
   {
     title: "Screen Assignment",
@@ -138,10 +136,10 @@ const workflowSteps = [
 const workflowLayout = [
   { ...workflowSteps[0], left: "21.75%", top: "0px" },
   { ...workflowSteps[1], left: "78.25%", top: "0px" },
-  { ...workflowSteps[2], left: "21.75%", top: "300px" },
-  { ...workflowSteps[3], left: "78.25%", top: "300px" },
-  { ...workflowSteps[4], left: "21.75%", top: "570px" },
-  { ...workflowSteps[5], left: "78.25%", top: "570px" },
+  { ...workflowSteps[2], left: "21.75%", top: "360px" },
+  { ...workflowSteps[3], left: "78.25%", top: "360px" },
+  { ...workflowSteps[4], left: "21.75%", top: "720px" },
+  { ...workflowSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const integrations = [
@@ -196,10 +194,7 @@ export default function SignageApplicationPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -209,9 +204,7 @@ export default function SignageApplicationPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">
-              Signage Application
-            </span>
+            <span className="text-white/90">Signage Application</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
@@ -234,7 +227,11 @@ export default function SignageApplicationPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -272,9 +269,7 @@ export default function SignageApplicationPage() {
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-normal">
-                  Content Workflow
-                </h3>
+                <h3 className="text-[20px] font-normal">Content Workflow</h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   Organize media and prepare playlists through one structured
@@ -283,9 +278,7 @@ export default function SignageApplicationPage() {
               </div>
 
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-normal">
-                  Playback Planning
-                </h3>
+                <h3 className="text-[20px] font-normal">Playback Planning</h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
                   Assign content and schedules according to the configured
@@ -342,10 +335,7 @@ export default function SignageApplicationPage() {
                 text: "Configure the application around the displays, playback approach and management requirements of the project.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -440,10 +430,7 @@ export default function SignageApplicationPage() {
                   key={item.title}
                   className="flex min-h-35 flex-col justify-center border-b border-black/10 bg-white p-6"
                 >
-                  <Icon
-                    size={30}
-                    className="mb-5 text-[#193175]"
-                  />
+                  <Icon size={30} className="mb-5 text-[#193175]" />
 
                   <h3 className="text-[22px] font-normal tracking-[-0.4px]">
                     {titleCaseHeading(item.title)}
@@ -511,16 +498,7 @@ export default function SignageApplicationPage() {
       </section>
 
       {/* WORKFLOW SECTION */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -573,10 +551,10 @@ export default function SignageApplicationPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -591,10 +569,7 @@ export default function SignageApplicationPage() {
                   refX="16"
                   refY="7"
                 >
-                  <path
-                    d="M 0 0 L 18 7 L 0 14 z"
-                    fill="#193175"
-                  />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
@@ -608,7 +583,7 @@ export default function SignageApplicationPage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 171 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -616,16 +591,7 @@ export default function SignageApplicationPage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#signage-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -634,7 +600,16 @@ export default function SignageApplicationPage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#signage-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -725,8 +700,7 @@ export default function SignageApplicationPage() {
             </p>
 
             <h2 className="mx-auto max-w-230 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              One Application View for Media, Playlists and Configured
-              Displays.
+              One Application View for Media, Playlists and Configured Displays.
             </h2>
           </div>
 
@@ -773,10 +747,7 @@ export default function SignageApplicationPage() {
                 text: "Configuration, deployment guidance and handover support are provided according to the agreed project scope.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -819,9 +790,7 @@ export default function SignageApplicationPage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -883,7 +852,11 @@ export default function SignageApplicationPage() {
               >
                 <span>Request a Demo</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>

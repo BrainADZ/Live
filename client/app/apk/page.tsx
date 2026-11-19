@@ -219,9 +219,7 @@ export default function ApkDownloadPage() {
                   >
                     <AppIcon type={app.icon} />
                   </div>
-                  <span
-                    className="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700"
-                  >
+                  <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700">
                     Available now
                   </span>
                 </div>

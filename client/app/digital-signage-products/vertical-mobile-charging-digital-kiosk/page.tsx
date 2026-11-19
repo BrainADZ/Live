@@ -1,8 +1,6 @@
- 
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
-
 
 import Link from "next/link";
 import { useState } from "react";
@@ -20,38 +18,32 @@ const whyChoose = [
   {
     title: "Multi-Device Charging",
     text: "Provide convenient charging support through configurable USB-A, USB-C, charging cables and optional wireless charging.",
-    iconSrc:
-      "/signage-products/multi-device-charging.svg",
+    iconSrc: "/signage-products/multi-device-charging.svg",
   },
   {
     title: "Digital Content Display",
     text: "Use the integrated portrait display for advertisements, announcements, offers, wayfinding and branded communication.",
-    iconSrc:
-      "/signage-products/dynamic-content-display.svg",
+    iconSrc: "/signage-products/dynamic-content-display.svg",
   },
   {
     title: "Protected Power Management",
     text: "Internal power distribution and protected wiring help create a reliable charging setup for public and commercial spaces.",
-    iconSrc:
-      "/signage-products/wireless-charging.svg",
+    iconSrc: "/signage-products/wireless-charging.svg",
   },
   {
     title: "Organized Cable Management",
     text: "Keep charging cables and internal wiring properly routed inside the kiosk for a cleaner and more professional installation.",
-    iconSrc:
-      "/signage-products/wireless-charging.svg",
+    iconSrc: "/signage-products/wireless-charging.svg",
   },
   {
     title: "Custom Branding",
     text: "Customize the kiosk body colour, vinyl graphics, logo placement, campaign artwork and digital screen content.",
-    iconSrc:
-      "/signage-products/campaigns-launches.svg",
+    iconSrc: "/signage-products/campaigns-launches.svg",
   },
   {
     title: "Requirement-Based Setup",
     text: "Plan the charging configuration, display, connectivity, software and deployment approach around the actual project requirement.",
-    iconSrc:
-      "/signage-products/requirement-based-setup.svg",
+    iconSrc: "/signage-products/requirement-based-setup.svg",
   },
 ];
 
@@ -59,32 +51,27 @@ const useCases = [
   {
     title: "Shopping Malls & Retail",
     text: "Offer mobile charging while displaying promotions, launches, offers and store information.",
-    iconSrc:
-      "/signage-products/shopping-malls.svg",
+    iconSrc: "/signage-products/shopping-malls.svg",
   },
   {
     title: "Airports & Transit Hubs",
     text: "Support travellers in waiting areas while showing advertisements, announcements and travel information.",
-    iconSrc:
-      "/signage-products/airport.svg",
+    iconSrc: "/signage-products/airport.svg",
   },
   {
     title: "Hospitals & Healthcare",
     text: "Provide a practical charging point for patients and visitors with optional awareness or directional content.",
-    iconSrc:
-      "/signage-products/healthcare-facilities.svg",
+    iconSrc: "/signage-products/healthcare-facilities.svg",
   },
   {
     title: "Educational Campuses",
     text: "Install the kiosk in libraries, reception areas, student zones and common spaces for charging and campus communication.",
-    iconSrc:
-      "/signage-products/colleges.svg",
+    iconSrc: "/signage-products/colleges.svg",
   },
   {
     title: "Hotels & Corporate Spaces",
     text: "Improve visitor convenience while promoting services, events, company information and branded communication.",
-    iconSrc:
-      "/signage-products/corporate-reception.svg",
+    iconSrc: "/signage-products/corporate-reception.svg",
   },
 ];
 
@@ -154,21 +141,13 @@ const configurations = [
     "USB-A, USB-C and charging cables",
     "Optional wireless charging",
   ],
-  [
-    "Digital Display",
-    "Portrait commercial screen",
-    "Configurable screen size",
-  ],
+  ["Digital Display", "Portrait commercial screen", "Configurable screen size"],
   [
     "Content Management",
     "Local playback or signage application",
     "Optional cloud management",
   ],
-  [
-    "Connectivity",
-    "Wi-Fi or Ethernet",
-    "Requirement-based configuration",
-  ],
+  ["Connectivity", "Wi-Fi or Ethernet", "Requirement-based configuration"],
   [
     "Branding & Finish",
     "Body colour, logo and vinyl graphics",
@@ -237,7 +216,6 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Request a Quote
-
                 <ArrowRight
                   size={20}
                   strokeWidth={1.8}
@@ -323,18 +301,9 @@ export default function VerticalMobileChargingDigitalKioskPage() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              [
-                "/overview/Charging-Right.webp",
-                "Kiosk Right View",
-              ],
-              [
-                "/overview/Charging.webp",
-                "Kiosk Front View",
-              ],
-              [
-                "/overview/Charging-Left.webp",
-                "Kiosk Left View",
-              ],
+              ["/overview/Charging-Right.webp", "Kiosk Right View"],
+              ["/overview/Charging.webp", "Kiosk Front View"],
+              ["/overview/Charging-Left.webp", "Kiosk Left View"],
             ].map(([src, label]) => (
               <div key={label} className="text-center">
                 <div className="overflow-hidden rounded-[20px] bg-[#f6f8fc] shadow-[0_22px_65px_rgba(0,0,0,0.06)]">
@@ -431,10 +400,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                   {configurations.map((row) => (
                     <tr key={row[0]}>
                       {row.map((cell) => (
-                        <td
-                          key={cell}
-                          className="border-b border-black/10 p-4"
-                        >
+                        <td key={cell} className="border-b border-black/10 p-4">
                           {cell}
                         </td>
                       ))}
@@ -457,8 +423,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             </p>
 
             <h2 className="max-w-175 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[42px]">
-              Planned Around Charging Capacity, Content, Branding and
-              Deployment Requirements.
+              Planned Around Charging Capacity, Content, Branding and Deployment
+              Requirements.
             </h2>
 
             <div className="mt-8 space-y-4">
@@ -539,8 +505,8 @@ export default function VerticalMobileChargingDigitalKioskPage() {
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
               BrainADZ Live plans the Vertical Mobile Charging Digital Kiosk
               according to the installation location, expected usage, charging
-              formats, display requirement, connectivity, branding and
-              preferred content-management setup.
+              formats, display requirement, connectivity, branding and preferred
+              content-management setup.
             </p>
           </div>
 
@@ -674,10 +640,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
                 key={item}
                 className="flex items-center gap-3 border-t border-black/10 pt-5"
               >
-                <BadgeCheck
-                  size={22}
-                  className="shrink-0 text-[#193175]"
-                />
+                <BadgeCheck size={22} className="shrink-0 text-[#193175]" />
 
                 <p className="text-[15px] font-light leading-[1.4] text-black/70">
                   {item}
@@ -788,10 +751,7 @@ export default function VerticalMobileChargingDigitalKioskPage() {
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

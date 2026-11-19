@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -25,46 +24,134 @@ import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
 
 const modules = [
-  { title: "Reservation Management", text: "Manage direct, walk-in, group, corporate and connected OTA bookings through one reservation workflow.", icon: CalendarDays },
-  { title: "Front Desk & Rooms", text: "Handle arrivals, room assignments, stay changes, check-outs and room availability in one place.", icon: KeyRound },
-  { title: "Housekeeping & Service", text: "Assign cleaning, track inspections and keep room status visible to the front desk.", icon: Sparkles },
-  { title: "Billing & Reporting", text: "Connect guest folios, payments, restaurant charges and hotel performance reports.", icon: ReceiptText },
+  {
+    title: "Reservation Management",
+    text: "Manage direct, walk-in, group, corporate and connected OTA bookings through one reservation workflow.",
+    icon: CalendarDays,
+  },
+  {
+    title: "Front Desk & Rooms",
+    text: "Handle arrivals, room assignments, stay changes, check-outs and room availability in one place.",
+    icon: KeyRound,
+  },
+  {
+    title: "Housekeeping & Service",
+    text: "Assign cleaning, track inspections and keep room status visible to the front desk.",
+    icon: Sparkles,
+  },
+  {
+    title: "Billing & Reporting",
+    text: "Connect guest folios, payments, restaurant charges and hotel performance reports.",
+    icon: ReceiptText,
+  },
 ];
 
 const pipeline = [
-  { title: "New Reservation", text: "Record guest details, booking source, stay dates and room requirements.", status: "Booked", icon: CalendarDays },
-  { title: "Pre-Arrival", text: "Confirm the reservation, payment details and any special requests before arrival.", status: "Prepared", icon: UsersRound },
-  { title: "Check-In", text: "Verify guest details, assign a ready room and begin the stay.", status: "Arrived", icon: KeyRound },
-  { title: "In-House Service", text: "Coordinate room requests, housekeeping and restaurant charges during the stay.", status: "Active", icon: BedDouble },
-  { title: "Check-Out & Billing", text: "Review the folio, settle payments and complete the departure.", status: "Settled", icon: CreditCard },
-  { title: "Room Ready", text: "Clean and inspect the room so it can return to available inventory.", status: "Available", icon: Sparkles },
+  {
+    title: "New Reservation",
+    text: "Record guest details, booking source, stay dates and room requirements.",
+    status: "Booked",
+    icon: CalendarDays,
+  },
+  {
+    title: "Pre-Arrival",
+    text: "Confirm the reservation, payment details and any special requests before arrival.",
+    status: "Prepared",
+    icon: UsersRound,
+  },
+  {
+    title: "Check-In",
+    text: "Verify guest details, assign a ready room and begin the stay.",
+    status: "Arrived",
+    icon: KeyRound,
+  },
+  {
+    title: "In-House Service",
+    text: "Coordinate room requests, housekeeping and restaurant charges during the stay.",
+    status: "Active",
+    icon: BedDouble,
+  },
+  {
+    title: "Check-Out & Billing",
+    text: "Review the folio, settle payments and complete the departure.",
+    status: "Settled",
+    icon: CreditCard,
+  },
+  {
+    title: "Room Ready",
+    text: "Clean and inspect the room so it can return to available inventory.",
+    status: "Available",
+    icon: Sparkles,
+  },
 ];
 
 const features = [
-  { title: "Reservations & Availability", text: "Manage booking changes, room categories, rates and availability across supported booking sources." },
-  { title: "Front Desk Operations", text: "Handle check-ins, room moves, guest notes, stay extensions and check-outs." },
-  { title: "Housekeeping Coordination", text: "Assign cleaning and inspections, and share ready-room status with front desk staff." },
-  { title: "Guest Folios & Payments", text: "Track room and service charges, taxes, advances, split payments and balances." },
-  { title: "Restaurant & Room Service", text: "Connect dine-in and room-service orders with the guest folio where configured." },
-  { title: "Hotel Reports & Access", text: "Review occupancy, revenue and booking-source data with access based on team roles." },
+  {
+    title: "Reservations & Availability",
+    text: "Manage booking changes, room categories, rates and availability across supported booking sources.",
+  },
+  {
+    title: "Front Desk Operations",
+    text: "Handle check-ins, room moves, guest notes, stay extensions and check-outs.",
+  },
+  {
+    title: "Housekeeping Coordination",
+    text: "Assign cleaning and inspections, and share ready-room status with front desk staff.",
+  },
+  {
+    title: "Guest Folios & Payments",
+    text: "Track room and service charges, taxes, advances, split payments and balances.",
+  },
+  {
+    title: "Restaurant & Room Service",
+    text: "Connect dine-in and room-service orders with the guest folio where configured.",
+  },
+  {
+    title: "Hotel Reports & Access",
+    text: "Review occupancy, revenue and booking-source data with access based on team roles.",
+  },
 ];
 
 const workflowSteps = [
-  { title: "Hotel Discovery", text: "We review the property, rooms, departments, booking sources and current operations.", icon: Building2 },
-  { title: "Workflow Mapping", text: "We define reservation, front desk, housekeeping, billing and reporting processes.", icon: CalendarDays },
-  { title: "Room & Rate Setup", text: "Room types, rates, taxes, users and access rules are planned for the platform.", icon: BedDouble },
-  { title: "Platform Configuration", text: "The agreed modules, dashboards and compatible integrations are configured.", icon: BarChart3 },
-  { title: "Testing & Training", text: "Connected hotel workflows are tested and each department is prepared for use.", icon: UsersRound },
-  { title: "Go-Live Support", text: "The platform is deployed with handover support according to the agreed scope.", icon: KeyRound },
+  {
+    title: "Hotel Discovery",
+    text: "We review the property, rooms, departments, booking sources and current operations.",
+    icon: Building2,
+  },
+  {
+    title: "Workflow Mapping",
+    text: "We define reservation, front desk, housekeeping, billing and reporting processes.",
+    icon: CalendarDays,
+  },
+  {
+    title: "Room & Rate Setup",
+    text: "Room types, rates, taxes, users and access rules are planned for the platform.",
+    icon: BedDouble,
+  },
+  {
+    title: "Platform Configuration",
+    text: "The agreed modules, dashboards and compatible integrations are configured.",
+    icon: BarChart3,
+  },
+  {
+    title: "Testing & Training",
+    text: "Connected hotel workflows are tested and each department is prepared for use.",
+    icon: UsersRound,
+  },
+  {
+    title: "Go-Live Support",
+    text: "The platform is deployed with handover support according to the agreed scope.",
+    icon: KeyRound,
+  },
 ];
 
 const workflowLayout = [
   { ...workflowSteps[0], left: "21.75%", top: "0px" },
   { ...workflowSteps[1], left: "78.25%", top: "0px" },
-  { ...workflowSteps[2], left: "21.75%", top: "300px" },
-  { ...workflowSteps[3], left: "78.25%", top: "300px" },
-  { ...workflowSteps[4], left: "21.75%", top: "570px" },
-  { ...workflowSteps[5], left: "78.25%", top: "570px" },
+  { ...workflowSteps[2], left: "21.75%", top: "360px" },
+  { ...workflowSteps[3], left: "78.25%", top: "360px" },
+  { ...workflowSteps[4], left: "21.75%", top: "720px" },
+  { ...workflowSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const integrations = [
@@ -79,7 +166,6 @@ const integrations = [
 ];
 
 const faqs = [
-
   {
     q: "Can the software work for a single hotel and a hotel chain?",
     a: "Yes. It can be configured for one property or multiple properties with property-wise users, dashboards and consolidated reports.",
@@ -124,10 +210,7 @@ export default function HospitalityManagementSoftwarePage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -148,7 +231,9 @@ export default function HospitalityManagementSoftwarePage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              Manage reservations, front desk, rooms, housekeeping, billing, restaurant operations and hotel reporting through one connected platform.
+              Manage reservations, front desk, rooms, housekeeping, billing,
+              restaurant operations and hotel reporting through one connected
+              platform.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -158,7 +243,11 @@ export default function HospitalityManagementSoftwarePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -186,17 +275,19 @@ export default function HospitalityManagementSoftwarePage() {
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live Hospitality Management Software connects reservations, guest stays, room status, service and payments. Workflows can be configured around your property, departments and reporting needs.
+              BrainADZ Live Hospitality Management Software connects
+              reservations, guest stays, room status, service and payments.
+              Workflows can be configured around your property, departments and
+              reporting needs.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
               <div className="border-l-2 border-[#193175] pl-5">
-                <h3 className="text-[20px] font-normal">
-                  Room Visibility
-                </h3>
+                <h3 className="text-[20px] font-normal">Room Visibility</h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Keep availability, occupancy, cleaning and maintenance status visible across teams.
+                  Keep availability, occupancy, cleaning and maintenance status
+                  visible across teams.
                 </p>
               </div>
 
@@ -206,7 +297,8 @@ export default function HospitalityManagementSoftwarePage() {
                 </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Connect bookings, guest requests, services and charges throughout the stay.
+                  Connect bookings, guest requests, services and charges
+                  throughout the stay.
                 </p>
               </div>
             </div>
@@ -258,10 +350,7 @@ export default function HospitalityManagementSoftwarePage() {
                 text: "Review occupancy, revenue, booking sources and operational data defined for the property.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -294,7 +383,8 @@ export default function HospitalityManagementSoftwarePage() {
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              The module structure can be planned around your rooms, departments, guest services and reporting requirements.
+              The module structure can be planned around your rooms,
+              departments, guest services and reporting requirements.
             </p>
           </div>
 
@@ -305,7 +395,12 @@ export default function HospitalityManagementSoftwarePage() {
                 className="group rounded-[28px] border border-black/10 bg-[#f8faff] p-7 transition hover:-translate-y-1 hover:border-[#193175]/30 hover:bg-white hover:shadow-[0_22px_65px_rgba(60,91,155,0.1)]"
               >
                 <div className="manual-icon-box mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-                  <item.icon size={30} strokeWidth={1.7} className="text-[#193175]" aria-hidden="true" />
+                  <item.icon
+                    size={30}
+                    strokeWidth={1.7}
+                    className="text-[#193175]"
+                    aria-hidden="true"
+                  />
                 </div>
 
                 <h3 className="text-[23px] font-normal tracking-[-0.4px]">
@@ -334,7 +429,9 @@ export default function HospitalityManagementSoftwarePage() {
             </h2>
 
             <p className="mt-5 max-w-160 text-[16px] font-light leading-[1.7] text-black/65">
-              A connected stay workflow helps teams see each reservation, arrival, service activity, departure and room turnover. Steps can be configured around your property.
+              A connected stay workflow helps teams see each reservation,
+              arrival, service activity, departure and room turnover. Steps can
+              be configured around your property.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:max-w-135">
@@ -344,7 +441,8 @@ export default function HospitalityManagementSoftwarePage() {
                 </span>
 
                 <p className="mt-3 text-[14px] font-light leading-normal text-black/60">
-                  Example steps from a new reservation to the next available room.
+                  Example steps from a new reservation to the next available
+                  room.
                 </p>
               </div>
 
@@ -373,7 +471,12 @@ export default function HospitalityManagementSoftwarePage() {
                     className="relative grid gap-5 border border-black/10 bg-white p-5 shadow-[0_18px_55px_rgba(0,0,0,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#193175]/35 hover:shadow-[0_24px_70px_rgba(60,91,155,0.12)] md:grid-cols-[64px_1fr_auto] md:items-center md:p-6"
                   >
                     <div className="manual-icon-box relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-[#193175]/25 bg-[#eef4ff]">
-                      <item.icon size={30} strokeWidth={1.7} className="text-[#193175]" aria-hidden="true" />
+                      <item.icon
+                        size={30}
+                        strokeWidth={1.7}
+                        className="text-[#193175]"
+                        aria-hidden="true"
+                      />
                     </div>
 
                     <div>
@@ -428,7 +531,8 @@ export default function HospitalityManagementSoftwarePage() {
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              Bring reservations, rooms, guest service, payments and reporting into one coordinated operating workflow.
+              Bring reservations, rooms, guest service, payments and reporting
+              into one coordinated operating workflow.
             </p>
 
             <div className="mt-8">
@@ -468,158 +572,6 @@ export default function HospitalityManagementSoftwarePage() {
         </div>
       </section>
 
-      {/* WORKFLOW SECTION */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
-        <div className="mx-auto max-w-450">
-          <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
-            <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
-              How It Works
-            </p>
-
-            <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] text-black md:text-[46px] lg:text-[54px]">
-              Our Hospitality Software Implementation Roadmap
-            </h2>
-
-            <p className="mx-auto mt-5 max-w-245 text-[16px] font-light leading-[1.7] text-black/65 md:text-[20px]">
-              A practical process for mapping, configuring and deploying software around your hotel operations.
-            </p>
-          </div>
-
-          <div className="lg:hidden">
-            <div className="space-y-5">
-              {workflowSteps.map((item, index) => (
-                <div
-                  key={item.title}
-                  className="group relative rounded-[26px] border border-black/10 bg-white p-6"
-                >
-                  {index !== workflowSteps.length - 1 && (
-                    <div className="absolute left-11 top-18 h-[calc(100%+20px)] border-l-2 border-dashed border-[#193175]/45" />
-                  )}
-
-                  <div className="relative z-10 flex gap-5">
-                    <div className="manual-icon-box flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#193175] bg-[#edf3ff]">
-                      <item.icon size={30} strokeWidth={1.7} className="text-[#193175]" aria-hidden="true" />
-                    </div>
-
-                    <div>
-                      <h3 className="text-[22px] font-normal leading-tight tracking-[-0.5px]">
-                        {titleCaseHeading(item.title)}
-                      </h3>
-
-                      <p className="mt-3 text-[15px] font-light leading-[1.65] text-black/65">
-                        {item.text}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative hidden h-197.5 lg:block">
-            <svg
-              className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
-              fill="none"
-              aria-hidden="true"
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <marker
-                  id="hospitality-arrowhead"
-                  markerHeight="14"
-                  markerUnits="userSpaceOnUse"
-                  markerWidth="18"
-                  orient="auto"
-                  refX="16"
-                  refY="7"
-                >
-                  <path
-                    d="M 0 0 L 18 7 L 0 14 z"
-                    fill="#193175"
-                  />
-                </marker>
-              </defs>
-
-              <path
-                d="M 392 43 L 1208 43"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#hospitality-arrowhead)"
-              />
-
-              <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-              />
-
-              <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#hospitality-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#hospitality-arrowhead)"
-              />
-
-              <path
-                d="M 392 613 L 1208 613"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#hospitality-arrowhead)"
-              />
-            </svg>
-
-            {workflowLayout.map((item) => (
-              <div
-                key={item.title}
-                className="group absolute z-10 w-97.5 -translate-x-1/2 text-center"
-                style={{
-                  left: item.left,
-                  top: item.top,
-                }}
-              >
-                <div className="manual-icon-box mx-auto flex h-21.5 w-21.5 items-center justify-center rounded-full border-2 border-[#193175] bg-[#edf3ff]">
-                  <item.icon size={30} strokeWidth={1.7} className="text-[#193175]" aria-hidden="true" />
-                </div>
-
-                <h3 className="mt-6 text-[30px] font-normal leading-[1.15] tracking-[-0.8px] text-black xl:text-[32px]">
-                  {titleCaseHeading(item.title)}
-                </h3>
-
-                <p className="mx-auto mt-4 max-w-82.5 text-[17px] font-light leading-[1.55] text-black/65 xl:text-[18px]">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* INTEGRATIONS */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
@@ -636,7 +588,8 @@ export default function HospitalityManagementSoftwarePage() {
             </div>
 
             <p className="max-w-185 text-[16px] font-light leading-[1.7] text-black/65">
-              Integration scope depends on your existing systems, available technical interfaces and the agreed implementation plan.
+              Integration scope depends on your existing systems, available
+              technical interfaces and the agreed implementation plan.
             </p>
           </div>
 
@@ -716,10 +669,7 @@ export default function HospitalityManagementSoftwarePage() {
                 text: "Configuration, deployment guidance and support are provided according to the agreed project scope.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -762,9 +712,7 @@ export default function HospitalityManagementSoftwarePage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -814,7 +762,8 @@ export default function HospitalityManagementSoftwarePage() {
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  See how reservations, guest stays, room status and payments can be managed through one hospitality platform.
+                  See how reservations, guest stays, room status and payments
+                  can be managed through one hospitality platform.
                 </p>
               </div>
 
@@ -825,7 +774,11 @@ export default function HospitalityManagementSoftwarePage() {
               >
                 <span>Request a Demo</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>

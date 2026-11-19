@@ -43,8 +43,7 @@ export default function NewsSection() {
             data-aos="fade-left"
             data-aos-delay="100"
           >
-
-            <p className="mt-3 max-w-232.5 text-[14px] font-light leading-[1.35] tracking-[-0.6px] text-[#262626] md:text-[20px]">
+            <p className="mt-3 ml-auto max-w-232.5 text-right text-[14px] font-light leading-[1.35] tracking-[-0.6px] text-[#262626] md:text-[20px]">
               What&apos;s New at BrainADZ Live newsletter subscription <br />
               Subscribe to stay on top of new product features, releases, use
               cases, video chats with experts and learning opportunities.
@@ -71,8 +70,8 @@ export default function NewsSection() {
               />
 
               <p className="mt-6 max-w-237.5 text-[14px] font-light leading-[1.75] tracking-[-0.2px] text-[#262626]">
-                Your subscription will be delivered in English. You will find
-                an unsubscribe link in every newsletter. You can manage your
+                Your subscription will be delivered in English. You will find an
+                unsubscribe link in every newsletter. You can manage your
                 subscriptions or unsubscribe{" "}
                 <a
                   href="/contact-us"

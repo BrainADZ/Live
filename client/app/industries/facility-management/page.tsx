@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import PopupForm from "@/components/PopupForm";
@@ -371,10 +370,7 @@ export default function FacilityManagementIndustryPage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -384,9 +380,7 @@ export default function FacilityManagementIndustryPage() {
 
             <span className="text-white/80">/</span>
 
-            <span className="text-white/90">
-              Facility Management
-            </span>
+            <span className="text-white/90">Facility Management</span>
           </div>
 
           <div className="mt-12 max-w-205 md:mt-14">
@@ -409,7 +403,11 @@ export default function FacilityManagementIndustryPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -433,8 +431,8 @@ export default function FacilityManagementIndustryPage() {
               BrainADZ Live helps facility management businesses and internal
               operations teams plan digital systems for assets, service
               requests, work orders, vendors, staff, costs and reporting. The
-              final solution is shaped around the locations, users and
-              processes included in the project.
+              final solution is shaped around the locations, users and processes
+              included in the project.
             </p>
           </div>
 
@@ -447,10 +445,7 @@ export default function FacilityManagementIndustryPage() {
                   key={item.title}
                   className="border-l-2 border-[#193175] pl-5"
                 >
-                  <Icon
-                    size={28}
-                    className="mb-4 text-[#193175]"
-                  />
+                  <Icon size={28} className="mb-4 text-[#193175]" />
 
                   <h3 className="text-[20px] font-normal">
                     {titleCaseHeading(item.title)}
@@ -481,10 +476,7 @@ export default function FacilityManagementIndustryPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {challenges.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -560,9 +552,9 @@ export default function FacilityManagementIndustryPage() {
             </h2>
 
             <p className="mt-5 max-w-165 text-[16px] font-light leading-[1.7] text-black/65">
-              The platform structure can connect locations, equipment,
-              requests, work orders, users, vendors, costs and reporting
-              according to the required facility workflow.
+              The platform structure can connect locations, equipment, requests,
+              work orders, users, vendors, costs and reporting according to the
+              required facility workflow.
             </p>
           </div>
 
@@ -585,7 +577,6 @@ export default function FacilityManagementIndustryPage() {
         </div>
       </section>
 
-
       {/* PLATFORM TYPES */}
       <section className="section-spacing bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto grid max-w-450 gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
@@ -600,8 +591,8 @@ export default function FacilityManagementIndustryPage() {
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70 md:text-[18px]">
               We combine relevant BrainADZ Live software services, ERP
-              workflows, applications and digital signage solutions according
-              to the facility process that needs to be improved.
+              workflows, applications and digital signage solutions according to
+              the facility process that needs to be improved.
             </p>
 
             <div className="mt-12 overflow-hidden rounded-[28px] bg-[#f6f8fc] p-8 shadow-[0_22px_70px_rgba(0,0,0,0.05)]">
@@ -628,10 +619,7 @@ export default function FacilityManagementIndustryPage() {
                   className="grid gap-5 border-b border-black/10 py-8 first:pt-0 md:grid-cols-[72px_1fr]"
                 >
                   <div className="flex h-15 w-15 items-center justify-center rounded-2xl bg-[#193175]/10">
-                    <Icon
-                      size={29}
-                      className="text-[#193175]"
-                    />
+                    <Icon size={29} className="text-[#193175]" />
                   </div>
 
                   <div>
@@ -677,10 +665,7 @@ export default function FacilityManagementIndustryPage() {
                 key={item}
                 className="flex items-center gap-4 border-b border-black/10 pb-5"
               >
-                <CheckCircle2
-                  size={24}
-                  className="shrink-0 text-[#193175]"
-                />
+                <CheckCircle2 size={24} className="shrink-0 text-[#193175]" />
 
                 <span className="text-[17px] font-light text-black/75">
                   {item}
@@ -833,9 +818,7 @@ export default function FacilityManagementIndustryPage() {
 
                   <span
                     className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                      isActive
-                        ? "w-full opacity-100"
-                        : "w-0 opacity-0"
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
                 </button>
@@ -902,10 +885,7 @@ export default function FacilityManagementIndustryPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -997,9 +977,7 @@ export default function FacilityManagementIndustryPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -1061,17 +1039,18 @@ export default function FacilityManagementIndustryPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Minus, Plus } from "lucide-react";
@@ -45,17 +44,18 @@ const crmProcess = [
   {
     title: "Launch & Continuous Improvement",
     text: "We deploy the CRM, review how teams use it and improve workflows, reports, integrations and features as business needs change.",
-    iconSrc: "/icons/crm-development/workflow/launch-continuous-improvement.svg",
+    iconSrc:
+      "/icons/crm-development/workflow/launch-continuous-improvement.svg",
   },
 ];
 
 const crmProcessLayout = [
   { ...crmProcess[0], left: "21.75%", top: "0px" },
   { ...crmProcess[1], left: "78.25%", top: "0px" },
-  { ...crmProcess[2], left: "21.75%", top: "300px" },
-  { ...crmProcess[3], left: "78.25%", top: "300px" },
-  { ...crmProcess[4], left: "21.75%", top: "570px" },
-  { ...crmProcess[5], left: "78.25%", top: "570px" },
+  { ...crmProcess[2], left: "21.75%", top: "360px" },
+  { ...crmProcess[3], left: "78.25%", top: "360px" },
+  { ...crmProcess[4], left: "21.75%", top: "720px" },
+  { ...crmProcess[5], left: "78.25%", top: "720px" },
 ];
 
 const overviewHighlights = [
@@ -100,7 +100,8 @@ const crmModules = [
   {
     title: "Tasks, Alerts & Workflow Automation",
     text: "Automate reminders, lead routing, recurring tasks, status changes and role-based notifications.",
-    iconSrc: "/icons/crm-development/modules/tasks-alerts-workflow-automation.svg",
+    iconSrc:
+      "/icons/crm-development/modules/tasks-alerts-workflow-automation.svg",
   },
 ];
 
@@ -291,7 +292,9 @@ export default function CRMDevelopmentPage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              We build custom CRM systems that bring leads, follow-ups, customer records, sales pipelines, tasks, reporting and integrations into one connected workflow.
+              We build custom CRM systems that bring leads, follow-ups, customer
+              records, sales pipelines, tasks, reporting and integrations into
+              one connected workflow.
             </p>
 
             <div className="mt-8">
@@ -301,7 +304,11 @@ export default function CRMDevelopmentPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
             </div>
           </div>
@@ -319,7 +326,10 @@ export default function CRMDevelopmentPage() {
               Bring Leads, Customers and Team Activity into One Connected CRM.
             </h2>
             <p className="mt-6 max-w-165 text-[16px] font-light leading-[1.75] text-black/70">
-              BrainADZ Live builds custom CRM platforms around the way your teams work. From lead capture and follow-ups to customer history, sales pipelines, tasks and reporting, we bring the information and actions your teams need into one connected system.
+              BrainADZ Live builds custom CRM platforms around the way your
+              teams work. From lead capture and follow-ups to customer history,
+              sales pipelines, tasks and reporting, we bring the information and
+              actions your teams need into one connected system.
             </p>
           </div>
 
@@ -357,7 +367,8 @@ export default function CRMDevelopmentPage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                The CRM Modules Your Teams Need to Manage Leads and Customers Every Day.
+                The CRM Modules Your Teams Need to Manage Leads and Customers
+                Every Day.
               </h2>
             </div>
 
@@ -397,16 +408,7 @@ export default function CRMDevelopmentPage() {
       </section>
 
       {/* CRM PROCESS */}
-      <section className="section-spacing relative overflow-hidden bg-[#f6f8fc] px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
+      <section className="section-spacing relative bg-white px-5 md:px-4 lg:px-12">
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -460,10 +462,10 @@ export default function CRMDevelopmentPage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -492,7 +494,7 @@ export default function CRMDevelopmentPage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 172 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -500,16 +502,7 @@ export default function CRMDevelopmentPage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#crm-process-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -518,7 +511,16 @@ export default function CRMDevelopmentPage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#crm-process-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -564,7 +566,8 @@ export default function CRMDevelopmentPage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Manage Every Step from First Enquiry to Long-Term Customer Relationship.
+              Manage Every Step from First Enquiry to Long-Term Customer
+              Relationship.
             </h2>
 
             <p className="mt-5 max-w-160 text-[16px] font-light leading-[1.7] text-black/65">
@@ -602,7 +605,8 @@ export default function CRMDevelopmentPage() {
             </p>
 
             <h2 className="mx-auto max-w-220 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Connect Your CRM with the Channels and Systems Your Teams Already Use.
+              Connect Your CRM with the Channels and Systems Your Teams Already
+              Use.
             </h2>
           </div>
 
@@ -640,7 +644,8 @@ export default function CRMDevelopmentPage() {
               </p>
 
               <h2 className="max-w-195 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                CRM Platforms Shaped Around Different Sales and Customer Workflows.
+                CRM Platforms Shaped Around Different Sales and Customer
+                Workflows.
               </h2>
             </div>
 
@@ -728,9 +733,7 @@ export default function CRMDevelopmentPage() {
 
                   <span
                     className={`absolute bottom-0 left-1/2 h-0.5 -translate-x-1/2 bg-[#193175] transition-all duration-300 ${
-                      isActive
-                        ? "w-full opacity-100"
-                        : "w-0 opacity-0"
+                      isActive ? "w-full opacity-100" : "w-0 opacity-0"
                     }`}
                   />
                 </button>
@@ -797,10 +800,7 @@ export default function CRMDevelopmentPage() {
 
           <div className="grid gap-x-12 gap-y-8 md:grid-cols-2">
             {whyChoose.map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -891,9 +891,7 @@ export default function CRMDevelopmentPage() {
                 <button
                   type="button"
                   aria-expanded={openFaq === index}
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -962,17 +960,18 @@ export default function CRMDevelopmentPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

@@ -2,7 +2,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import {
   ArrowRight,
@@ -53,8 +52,6 @@ const coreTeam: TeamMember[] = [
     image: "/team/sale.png",
     linkedin: "https://www.linkedin.com/",
   },
-
-
 ];
 
 const projectTeam: TeamMember[] = [
@@ -94,8 +91,6 @@ const projectTeam: TeamMember[] = [
 
 const SHOW_PROJECT_TEAM = true;
 
-
-
 function MemberCard({
   member,
   compact = false,
@@ -127,15 +122,17 @@ function MemberCard({
 
       <div className="pt-5">
         <h3
-          className={`font-medium tracking-[-0.3px] text-[#161616] ${compact ? "text-[16px]" : "text-[20px]"
-            }`}
+          className={`font-medium tracking-[-0.3px] text-[#161616] ${
+            compact ? "text-[16px]" : "text-[20px]"
+          }`}
         >
           {titleCaseHeading(member.name)}
         </h3>
 
         <p
-          className={`mt-1 font-light text-[#646464] ${compact ? "text-[13px]" : "text-[16px]"
-            }`}
+          className={`mt-1 font-light text-[#646464] ${
+            compact ? "text-[13px]" : "text-[16px]"
+          }`}
         >
           {member.role}
         </p>
@@ -207,7 +204,9 @@ export default function OurCoreTeamPage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 Enquire Now
-                <span className="text-[20px] leading-none"><ArrowRight /></span>
+                <span className="text-[20px] leading-none">
+                  <ArrowRight />
+                </span>
               </button>
             </div>
           </div>
@@ -349,9 +348,9 @@ export default function OurCoreTeamPage() {
                 </h3>
 
                 <p className="mt-4 text-[16px] font-light leading-[1.55] text-white">
-                  Tell us what you need to build, improve or deploy, and our team
-                  can understand the project, the right expertise and the next
-                  steps.
+                  Tell us what you need to build, improve or deploy, and our
+                  team can understand the project, the right expertise and the
+                  next steps.
                 </p>
               </div>
 
@@ -363,17 +362,18 @@ export default function OurCoreTeamPage() {
               >
                 <span>Enquire Now</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      <PopupForm
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
-      />
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </main>
   );
 }

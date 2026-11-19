@@ -2,15 +2,9 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 import Link from "next/link";
 import { useState } from "react";
-import {
-  ArrowRight,
-  Download,
-  Minus,
-  Plus,
-} from "lucide-react";
+import { ArrowRight, Download, Minus, Plus } from "lucide-react";
 import IndustriesSection from "@/components/home/Industries";
 import DemoForm from "@/components/DemoForm";
 
@@ -28,14 +22,12 @@ const modules = [
   {
     title: "Product & Pricing Control",
     text: "Manage products, categories, variants, pricing, tax rules and promotional offers through a centralized catalogue.",
-    iconSrc:
-      "/icons/pos-software/key-features/product-pricing-control.svg",
+    iconSrc: "/icons/pos-software/key-features/product-pricing-control.svg",
   },
   {
     title: "Sales & Business Reports",
     text: "Review sales, payments, products, employees and store performance through practical dashboards and reports.",
-    iconSrc:
-      "/icons/pos-software/key-features/sales-business-reports.svg",
+    iconSrc: "/icons/pos-software/key-features/sales-business-reports.svg",
   },
 ];
 
@@ -88,8 +80,7 @@ const workflowSteps = [
   {
     title: "Interface Configuration",
     text: "We configure or design the billing screen, product catalogue, administrative dashboard and selected user journeys.",
-    iconSrc:
-      "/icons/pos-software/workflow/interface-configuration.svg",
+    iconSrc: "/icons/pos-software/workflow/interface-configuration.svg",
   },
   {
     title: "Data & Integrations",
@@ -99,8 +90,7 @@ const workflowSteps = [
   {
     title: "Testing & Staff Training",
     text: "We validate billing, inventory, permissions, reports and connected workflows before guiding the operational team.",
-    iconSrc:
-      "/icons/pos-software/workflow/testing-staff-training.svg",
+    iconSrc: "/icons/pos-software/workflow/testing-staff-training.svg",
   },
   {
     title: "Deployment & Support",
@@ -112,10 +102,10 @@ const workflowSteps = [
 const workflowLayout = [
   { ...workflowSteps[0], left: "21.75%", top: "0px" },
   { ...workflowSteps[1], left: "78.25%", top: "0px" },
-  { ...workflowSteps[2], left: "21.75%", top: "300px" },
-  { ...workflowSteps[3], left: "78.25%", top: "300px" },
-  { ...workflowSteps[4], left: "21.75%", top: "570px" },
-  { ...workflowSteps[5], left: "78.25%", top: "570px" },
+  { ...workflowSteps[2], left: "21.75%", top: "360px" },
+  { ...workflowSteps[3], left: "78.25%", top: "360px" },
+  { ...workflowSteps[4], left: "21.75%", top: "720px" },
+  { ...workflowSteps[5], left: "78.25%", top: "720px" },
 ];
 
 const integrations = [
@@ -170,10 +160,7 @@ export default function POSSoftwarePage() {
 
         <div className="relative z-10 mx-auto flex min-h-135 max-w-450 flex-col px-5 py-10 md:min-h-150 md:px-4 lg:min-h-135 lg:px-12">
           <div className="flex items-center gap-3 text-[16px] font-light md:text-[18px]">
-            <Link
-              href="/"
-              className="text-[#6da0ff] hover:underline"
-            >
+            <Link href="/" className="text-[#6da0ff] hover:underline">
               Home
             </Link>
 
@@ -194,9 +181,9 @@ export default function POSSoftwarePage() {
 
           <div className="mt-auto pb-8 md:pb-9 lg:pb-10">
             <p className="max-w-195 text-[14px] font-light leading-[1.45] tracking-[-0.3px] text-white/90 md:text-[16px] lg:text-[18px]">
-              A configurable POS platform for managing billing, payments, products,
-              inventory, customers and store operations through one connected
-              business system.
+              A configurable POS platform for managing billing, payments,
+              products, inventory, customers and store operations through one
+              connected business system.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -206,7 +193,11 @@ export default function POSSoftwarePage() {
                 className="inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
               >
                 View Demo
-                <ArrowRight size={20} strokeWidth={1.8} className="text-[20px] leading-none" />
+                <ArrowRight
+                  size={20}
+                  strokeWidth={1.8}
+                  className="text-[20px] leading-none"
+                />
               </button>
 
               <a
@@ -230,14 +221,15 @@ export default function POSSoftwarePage() {
             </p>
 
             <h2 className="max-w-180 text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Bring Billing, Inventory and Store Operations into One POS Platform.
+              Bring Billing, Inventory and Store Operations into One POS
+              Platform.
             </h2>
 
             <p className="mt-6 max-w-170 text-[16px] font-light leading-[1.75] text-black/70">
               BrainADZ Live POS Software is designed for retail stores,
               restaurants, service businesses and multi-location operations that
-              need a connected system for billing, products, inventory, customers,
-              users and business reporting.
+              need a connected system for billing, products, inventory,
+              customers, users and business reporting.
             </p>
 
             <div className="mt-9 grid gap-5 md:grid-cols-2">
@@ -247,7 +239,8 @@ export default function POSSoftwarePage() {
                 </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Help teams process sales through a clear and efficient billing workflow.
+                  Help teams process sales through a clear and efficient billing
+                  workflow.
                 </p>
               </div>
 
@@ -257,8 +250,8 @@ export default function POSSoftwarePage() {
                 </h3>
 
                 <p className="mt-2 text-[14px] font-light leading-[1.6] text-black/60">
-                  Manage products, stock, users and reports through one connected
-                  platform.
+                  Manage products, stock, users and reports through one
+                  connected platform.
                 </p>
               </div>
             </div>
@@ -287,7 +280,8 @@ export default function POSSoftwarePage() {
             </p>
 
             <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-              Improve Billing Accuracy and Gain Better Control over Daily Operations.
+              Improve Billing Accuracy and Gain Better Control over Daily
+              Operations.
             </h2>
           </div>
 
@@ -310,10 +304,7 @@ export default function POSSoftwarePage() {
                 text: "Plan the POS for a single outlet, multiple stores or selected business locations according to the requirement.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -394,9 +385,9 @@ export default function POSSoftwarePage() {
             </h2>
 
             <p className="mt-5 max-w-150 text-[16px] font-light leading-[1.7] text-black/65">
-              BrainADZ Live plans POS Software around the business type,
-              billing process, product catalogue, inventory structure, user roles
-              and required store environment.
+              BrainADZ Live plans POS Software around the business type, billing
+              process, product catalogue, inventory structure, user roles and
+              required store environment.
             </p>
 
             <div className="mt-8 rounded-[26px] bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
@@ -447,15 +438,6 @@ export default function POSSoftwarePage() {
 
       {/* WORKFLOW SECTION */}
       <section className="section-spacing relative overflow-hidden bg-white px-5 md:px-4 lg:px-12">
-        <div
-          className="pointer-events-none absolute right-[-9%] top-[-8%] hidden h-[116%] w-[32%] opacity-35 lg:block"
-          style={{
-            backgroundImage:
-              "repeating-radial-gradient(ellipse at center, rgba(60, 91, 155, 0.18) 0 1px, transparent 1px 14px)",
-            transform: "rotate(5deg) scaleX(0.72)",
-          }}
-        />
-
         <div className="mx-auto max-w-450">
           <div className="relative z-10 mx-auto mb-12 max-w-295 text-center lg:mb-14">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#193175]">
@@ -508,10 +490,10 @@ export default function POSSoftwarePage() {
             </div>
           </div>
 
-          <div className="relative hidden h-197.5 lg:block">
+          <div className="relative hidden h-[1080px] lg:block">
             <svg
               className="pointer-events-none absolute inset-0 z-0 h-full w-full"
-              viewBox="0 0 1600 790"
+              viewBox="0 0 1600 1080"
               fill="none"
               aria-hidden="true"
               preserveAspectRatio="none"
@@ -526,10 +508,7 @@ export default function POSSoftwarePage() {
                   refX="16"
                   refY="7"
                 >
-                  <path
-                    d="M 0 0 L 18 7 L 0 14 z"
-                    fill="#193175"
-                  />
+                  <path d="M 0 0 L 18 7 L 0 14 z" fill="#193175" />
                 </marker>
               </defs>
 
@@ -543,7 +522,7 @@ export default function POSSoftwarePage() {
               />
 
               <path
-                d="M 1294 43 C 1480 43 1515 150 1515 230 C 1515 318 1440 343 1294 343"
+                d="M 1294 43 C 1480 43 1515 171 1515 267 C 1515 373 1440 403 1294 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -551,16 +530,7 @@ export default function POSSoftwarePage() {
               />
 
               <path
-                d="M 1208 343 L 392 343"
-                stroke="#193175"
-                strokeDasharray="10 12"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                markerEnd="url(#pos-arrowhead)"
-              />
-
-              <path
-                d="M 306 343 C 118 343 78 468 102 535 C 126 598 205 613 306 613"
+                d="M 1208 403 L 392 403"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -569,7 +539,16 @@ export default function POSSoftwarePage() {
               />
 
               <path
-                d="M 392 613 L 1208 613"
+                d="M 306 403 C 118 403 78 570 102 659 C 126 743 205 763 306 763"
+                stroke="#193175"
+                strokeDasharray="10 12"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                markerEnd="url(#pos-arrowhead)"
+              />
+
+              <path
+                d="M 392 763 L 1208 763"
                 stroke="#193175"
                 strokeDasharray="10 12"
                 strokeLinecap="round"
@@ -619,7 +598,8 @@ export default function POSSoftwarePage() {
               </p>
 
               <h2 className="text-[34px] font-normal leading-[1.15] tracking-[-1px] md:text-[46px]">
-                Connect POS Operations with Selected Business Systems and Devices.
+                Connect POS Operations with Selected Business Systems and
+                Devices.
               </h2>
             </div>
 
@@ -708,10 +688,7 @@ export default function POSSoftwarePage() {
                 text: "Configuration, deployment guidance, staff handover and implementation support are provided according to the agreed project scope.",
               },
             ].map((item, index) => (
-              <div
-                key={item.title}
-                className="border-t border-black/10 pt-7"
-              >
+              <div key={item.title} className="border-t border-black/10 pt-7">
                 <span className="text-[13px] font-semibold text-[#193175]">
                   0{index + 1}
                 </span>
@@ -754,9 +731,7 @@ export default function POSSoftwarePage() {
               >
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenFaq(openFaq === index ? -1 : index)
-                  }
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left md:px-6"
                 >
                   <span className="text-[16px] font-light leading-[1.45] text-black md:text-[17px]">
@@ -818,7 +793,11 @@ export default function POSSoftwarePage() {
               >
                 <span>Request a Demo</span>
 
-                <ArrowRight size={26} strokeWidth={1.8} className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight
+                  size={26}
+                  strokeWidth={1.8}
+                  className="text-[26px] leading-none transition-transform duration-300 group-hover:translate-x-1"
+                />
               </button>
             </div>
           </div>

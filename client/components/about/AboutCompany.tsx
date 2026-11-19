@@ -41,7 +41,6 @@ export default function AboutCompany() {
               className="group mt-12 inline-flex h-13 min-w-55 items-center justify-between rounded-full bg-[#193175] px-6 text-[15px] font-normal text-white shadow-[0_14px_35px_rgba(60,91,155,0.20)] transition-all duration-300 hover:bg-[#2f4a82]"
             >
               Explore our work
-
               <span className="text-[22px] leading-none transition-transform duration-300 group-hover:translate-x-1">
                 <ArrowRight size={22} strokeWidth={1.6} />
               </span>

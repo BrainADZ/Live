@@ -1,8 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
-
 import { ArrowRight } from "lucide-react";
 /* eslint-disable @next/next/no-img-element */
 
@@ -66,7 +64,7 @@ export default function ProductSection() {
           </div>
 
           <p
-            className="max-w-190 text-[18px] font-light leading-[1.6] tracking-[-0.2px] text-[#393939] md:text-[21px]"
+            className="max-w-190 justify-self-end text-right text-[18px] font-light leading-[1.6] tracking-[-0.2px] text-[#393939] md:text-[21px]"
             data-aos="fade-left"
             data-aos-delay="100"
           >
@@ -120,7 +118,11 @@ export default function ProductSection() {
                       Explore product
                     </span>
 
-                    <ArrowRight size={30} strokeWidth={1.8} className="flex h-10.5 w-10.5 items-center justify-center rounded-full border border-[#193175]/30 text-[30px] font-light leading-none text-[#193175] transition-all duration-500 group-hover:translate-x-1 group-hover:border-[#193175] group-hover:bg-[#193175] group-hover:text-white" />
+                    <ArrowRight
+                      size={30}
+                      strokeWidth={1.8}
+                      className="flex h-10.5 w-10.5 items-center justify-center rounded-full border border-[#193175]/30 text-[30px] font-light leading-none text-[#193175] transition-all duration-500 group-hover:translate-x-1 group-hover:border-[#193175] group-hover:bg-[#193175] group-hover:text-white"
+                    />
                   </div>
                 </div>
               </div>

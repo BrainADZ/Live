@@ -1,7 +1,6 @@
 "use client";
 import { titleCaseHeading } from "@/lib/title-case-heading";
 
-
 /* eslint-disable @next/next/no-img-element */
 
 const values = [
@@ -68,9 +67,9 @@ export default function CoreValues() {
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            Our values are reflected in the way we understand requirements,
-            make technology decisions, work with project teams and prepare
-            solutions for real business use.
+            Our values are reflected in the way we understand requirements, make
+            technology decisions, work with project teams and prepare solutions
+            for real business use.
           </p>
         </div>
 
@@ -88,13 +87,13 @@ export default function CoreValues() {
 
               {/* MANUAL SVG ICON */}
               <div className="manual-icon-box flex h-16 w-16 items-center justify-center rounded-full bg-[#193175]/10 p-4">
-  <img
-    src={value.iconSrc}
-    alt=""
-    aria-hidden="true"
-    className="manual-icon object-contain"
-  />
-</div>
+                <img
+                  src={value.iconSrc}
+                  alt=""
+                  aria-hidden="true"
+                  className="manual-icon object-contain"
+                />
+              </div>
               <h3 className="relative z-10 mt-8 text-[24px] font-normal leading-[1.3] tracking-[-0.5px] text-[#262626] transition duration-300 group-hover:text-[#193175] md:text-[26px]">
                 {titleCaseHeading(value.title)}
               </h3>
