@@ -15,7 +15,13 @@ export default function SiteChrome({ children }: { children: ReactNode }) {
     pathname === "/smart-erp" ||
     pathname === "/erp-demo" ||
     pathname === "/erp-landing" ||
-    pathname === "/crm-landing";
+    pathname === "/crm-landing" ||
+    pathname === "/smart-board-for-teaching" ||
+    pathname === "/smart-board-for-teaching/thank-you" ||
+    pathname === "/d-model-floor-mount-digital-kiosk-landing" ||
+    pathname === "/d-model-floor-mount-digital-kiosk-landing/thank-you" ||
+    pathname === "/self-ordering-kiosk-landing" ||
+    pathname === "/self-ordering-kiosk-landing/thank-you";
   if (isLanding) return <>{children}</>;
   return (
     <>

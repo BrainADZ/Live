@@ -12,10 +12,10 @@ const locations = [
   },
   {
     country: "Mumbai",
-    office: "Regional Office",
+    office: "Mumbai Office",
     flag: "/erp-landing/location/india.png",
     address: [
-      "911/9th Floor, 11JMIMA Complex, Off Link Road, Mindspace, Malad West, Mumbai 400064, Maharashtra, India",
+      "911/9th Floor, IJMIMA Complex, Off Link Road, Mindspace, Malad West, Mumbai 400064",
     ],
   },
   {
@@ -36,10 +36,10 @@ const locations = [
   },
 ];
 
-export default function ERPLocations() {
+export default function ERPLocations({ contentClassName }: { contentClassName?: string }) {
   return (
     <section className="py-6 md:py-8 lg:py-10 bg-[#f2f2f2] text-[#161616]">
-      <div className="mx-auto w-full max-w-[1900px] px-2">
+      <div className={contentClassName || "mx-auto w-full max-w-[1900px] px-2"}>
         {/* HEADING */}
         <div className="mb-8 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">
           <div>

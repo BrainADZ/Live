@@ -12,10 +12,10 @@ const locations = [
   },
   {
     country: "Mumbai",
-    office: "Regional Office",
+    office: "Mumbai Office",
     flag: "/location/india.png",
     address: [
-      "911/9th Floor, 11JMIMA Complex, Off Link Road, Mindspace, Malad West, Mumbai 400064, Maharashtra, India",
+      "911/9th Floor, IJMIMA Complex, Off Link Road, Mindspace, Malad West, Mumbai 400064",
     ],
   },
   {
