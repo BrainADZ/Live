@@ -6,7 +6,7 @@ import brands from "@/data/product-client-brands.json";
 type Brand = { name: string; logo: string };
 
 // Product landing pages use their own fixed client logo list.
-export default function ProductClientCarousel({ heading, contentClassName }: { heading?: string; contentClassName?: string }) {
+export default function ProductClientCarousel({ heading, contentClassName, landingPage = false }: { heading?: string; contentClassName?: string; landingPage?: boolean }) {
   const isLoading = false;
   return (
     <>
@@ -19,9 +19,9 @@ export default function ProductClientCarousel({ heading, contentClassName }: { h
 
         <div className={contentClassName ? `relative ${contentClassName}` : "relative mx-auto max-w-[1900px] px-5 md:px-4 lg:px-12"}>
           {/* Section header */}
-          <div className="mb-14 grid gap-8 border-b border-[#161616]/10 pb-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <div className={landingPage ? "mb-10 border-b border-[#161616]/10 pb-8" : "mb-14 grid gap-8 border-b border-[#161616]/10 pb-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end"}>
             <div>
-              <div className="mb-5 flex items-center gap-3">
+              <div className={`${landingPage ? "mb-4" : "mb-5"} flex items-center gap-3`}>
                 <span className="h-px w-10 bg-[#193175]" />
 
                 <span className="text-[12px] font-medium uppercase tracking-[0.22em] text-[#193175]">
@@ -29,13 +29,13 @@ export default function ProductClientCarousel({ heading, contentClassName }: { h
                 </span>
               </div>
 
-              <h2 className="max-w-xl text-[36px] font-normal leading-[1.08] tracking-[-0.035em] text-[#161616] md:text-[48px] lg:text-[56px]">
+              <h2 className={landingPage ? "max-w-4xl text-3xl font-semibold leading-tight text-[#17243b] md:text-5xl" : "max-w-xl text-[36px] font-normal leading-[1.08] tracking-[-0.035em] text-[#161616] md:text-[48px] lg:text-[56px]"}>
                 {heading ? heading : <>Brands That Trust<span className="text-[#193175]"> BrainADZ Live.</span></>}
               </h2>
             </div>
 
-            <div className="lg:pb-2">
-              <p className="max-w-2xl text-[15px] font-light leading-7 text-[#161616]/60 md:text-[17px]">
+            <div className={landingPage ? "mt-4" : "lg:pb-2"}>
+              <p className={landingPage ? "max-w-3xl text-base leading-7 text-slate-600 md:text-lg" : "max-w-2xl text-[15px] font-light leading-7 text-[#161616]/60 md:text-[17px]"}>
                 We collaborate with forward-thinking businesses to build digital
                 experiences, intelligent platforms, and technology solutions
                 designed for real-world impact.

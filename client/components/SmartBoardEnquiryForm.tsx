@@ -3,9 +3,9 @@
 import { useRef, useState, type FormEvent } from "react";
 import { getApiUrl } from "@/lib/api";
 
-type Props = { heading: string; subtext?: string; buttonText: string; id?: string };
+type Props = { heading: string; subtext?: string; buttonText: string; id?: string; productVariant?: string; compact?: boolean };
 
-export default function SmartBoardEnquiryForm({ heading, subtext, buttonText, id }: Props) {
+export default function SmartBoardEnquiryForm({ heading, subtext, buttonText, id, productVariant, compact = false }: Props) {
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
 
@@ -26,7 +26,7 @@ export default function SmartBoardEnquiryForm({ heading, subtext, buttonText, id
           email: String(data.get("email") || "").trim(),
           solution: "Digital Signage Products",
           service: "Smart Board for Teaching",
-          message: `Requirement: ${String(data.get("requirement") || "").trim()}\nMessage: ${String(data.get("message") || "").trim()}`,
+          message: `${productVariant ? `Product variant: ${productVariant}\n` : ""}Requirement: ${String(data.get("requirement") || "").trim()}\nMessage: ${String(data.get("message") || "").trim()}`,
           pageUrl: window.location.href,
         }),
       });
@@ -41,10 +41,10 @@ export default function SmartBoardEnquiryForm({ heading, subtext, buttonText, id
 
   const field = "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-[#17243b] outline-none focus:border-[#193175] focus:ring-2 focus:ring-[#193175]/15";
   return (
-    <div id={id} className="scroll-mt-24 rounded-3xl bg-white p-6 text-[#17243b] shadow-xl shadow-black/10 md:p-8">
-      <h2 className="text-2xl font-semibold leading-tight md:text-[28px]">{heading}</h2>
+    <div id={id} className={`scroll-mt-24 rounded-3xl bg-white text-[#17243b] ${compact ? "p-3 md:p-4" : "p-6 shadow-xl shadow-black/10 md:p-8"}`}>
+      <h2 className={`${compact ? "text-xl md:text-2xl" : "text-2xl md:text-[28px]"} font-semibold leading-tight`}>{heading}</h2>
       {subtext && <p className="mt-2 text-sm text-slate-600">{subtext}</p>}
-      <form onSubmit={submit} className="mt-6 grid gap-3 sm:grid-cols-2">
+      <form onSubmit={submit} className={`${compact ? "mt-5 gap-4" : "mt-6 gap-3"} grid sm:grid-cols-2`}>
         <label className="sr-only" htmlFor={`${id || "popup"}-name`}>Full Name</label>
         <input id={`${id || "popup"}-name`} className={field} name="name" placeholder="Full Name" autoComplete="name" maxLength={160} required />
         <label className="sr-only" htmlFor={`${id || "popup"}-company`}>Company / Institution Name</label>
@@ -66,5 +66,5 @@ export default function SmartBoardEnquiryForm({ heading, subtext, buttonText, id
 
 export function SmartBoardAboutPopup() {
   const dialog = useRef<HTMLDialogElement>(null);
-  return <><button type="button" onClick={() => dialog.current?.showModal()} className="inline-flex rounded-full bg-[#193175] px-7 py-3.5 font-semibold text-white hover:bg-[#284b9a]">Know More About This Smart Board</button><dialog ref={dialog} onClick={(event) => { if (event.target === dialog.current) dialog.current?.close(); }} className="m-auto w-[min(94vw,620px)] max-h-[90vh] overflow-y-auto rounded-3xl bg-transparent p-0 backdrop:bg-[#091633]/75"><div className="relative"><button type="button" aria-label="Close form" onClick={() => dialog.current?.close()} className="absolute right-5 top-5 z-10 rounded-full bg-slate-100 px-3 py-1 text-xl text-[#17243b]">×</button><SmartBoardEnquiryForm heading="Let's Find the Right Smart Board for Your Space" subtext="Tell us about your classroom or meeting space." buttonText="Submit Enquiry" /></div></dialog></>;
+  return <><button type="button" onClick={() => dialog.current?.showModal()} className="inline-flex rounded-full bg-[#193175] px-7 py-3.5 font-semibold text-white hover:bg-[#284b9a]">Know More About Us</button><dialog ref={dialog} onClick={(event) => { if (event.target === dialog.current) dialog.current?.close(); }} className="m-auto w-[min(94vw,620px)] max-h-[90vh] overflow-y-auto rounded-3xl bg-transparent p-0 backdrop:bg-[#091633]/75"><div className="relative"><button type="button" aria-label="Close form" onClick={() => dialog.current?.close()} className="absolute right-5 top-5 z-10 rounded-full bg-slate-100 px-3 py-1 text-xl text-[#17243b]">×</button><SmartBoardEnquiryForm heading="Let's Find the Right Smart Board for Your Space" subtext="Tell us about your classroom or meeting space." buttonText="Submit Enquiry" /></div></dialog></>;
 }

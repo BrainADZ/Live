@@ -36,28 +36,28 @@ const locations = [
   },
 ];
 
-export default function ERPLocations({ contentClassName }: { contentClassName?: string }) {
+export default function ERPLocations({ contentClassName, landingPage = false }: { contentClassName?: string; landingPage?: boolean }) {
   return (
     <section className="py-6 md:py-8 lg:py-10 bg-[#f2f2f2] text-[#161616]">
       <div className={contentClassName || "mx-auto w-full max-w-[1900px] px-2"}>
         {/* HEADING */}
-        <div className="mb-8 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">
+        <div className={landingPage ? "mb-8" : "mb-8 grid grid-cols-1 gap-5 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16"}>
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <span className="h-px w-9 bg-[#193175]" />
+              <span className={`${landingPage ? "w-10" : "w-9"} h-px bg-[#193175]`} />
 
-              <p className="text-[11px] font-normal uppercase tracking-[2.2px] text-[#193175]">
+              <p className={landingPage ? "text-xs font-medium uppercase tracking-[0.22em] text-[#193175]" : "text-[11px] font-normal uppercase tracking-[2.2px] text-[#193175]"}>
                 Our Global Presence
               </p>
             </div>
 
-            <h2 className="max-w-[680px] text-[34px] font-normal leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]">
+            <h2 className={landingPage ? "max-w-4xl text-3xl font-semibold leading-tight text-[#17243b] md:text-5xl" : "max-w-[680px] text-[34px] font-normal leading-[1.08] tracking-[-1.4px] text-[#161616] md:text-[40px] lg:text-[44px]"}>
               Connected Across{" "}
               <span className="text-[#193175]">Global Markets.</span>
             </h2>
           </div>
 
-          <p className="max-w-[540px] text-[14px] font-light leading-[1.65] text-[#616161] md:text-[16px]">
+          <p className={landingPage ? "mt-4 max-w-3xl text-base leading-7 text-slate-600 md:text-lg" : "max-w-[540px] text-[14px] font-light leading-[1.65] text-[#616161] md:text-[16px]"}>
             Working across borders to deliver technology, digital products, and
             long-term business support.
           </p>
