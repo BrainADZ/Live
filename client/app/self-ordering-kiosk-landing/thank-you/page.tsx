@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DemoThankYou from "@/components/DemoThankYou";
+import ProductThankYou from "@/components/ProductThankYou";
 
 export const metadata: Metadata = {
   title: "Thank You | Self Ordering Kiosk",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DemoThankYou enquiryLanding productName="Self Ordering Kiosk" returnHref="/self-ordering-kiosk-landing" />;
+  return <ProductThankYou productName="Self Ordering Kiosk" returnHref="/self-ordering-kiosk-landing" />;
 }

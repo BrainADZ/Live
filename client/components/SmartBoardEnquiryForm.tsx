@@ -47,12 +47,12 @@ export default function SmartBoardEnquiryForm({ heading, subtext, buttonText, id
       <form onSubmit={submit} className={`${compact ? "mt-5 gap-4" : "mt-6 gap-3"} grid sm:grid-cols-2`}>
         <label className="sr-only" htmlFor={`${id || "popup"}-name`}>Full Name</label>
         <input id={`${id || "popup"}-name`} className={field} name="name" placeholder="Full Name" autoComplete="name" maxLength={160} required />
-        <label className="sr-only" htmlFor={`${id || "popup"}-company`}>Company / Institution Name</label>
-        <input id={`${id || "popup"}-company`} className={field} name="company" placeholder="Company / Institution Name" autoComplete="organization" maxLength={200} required />
         <label className="sr-only" htmlFor={`${id || "popup"}-phone`}>Phone Number</label>
         <input id={`${id || "popup"}-phone`} className={field} name="phone" placeholder="Phone Number" type="tel" inputMode="numeric" pattern="[0-9]{10}" title="Enter a 10-digit phone number" autoComplete="tel" required />
+        <label className="sr-only" htmlFor={`${id || "popup"}-company`}>Company / Institution Name</label>
+        <input id={`${id || "popup"}-company`} className={`${field} sm:col-span-2`} name="company" placeholder="Company / Institution Name" autoComplete="organization" maxLength={200} required />
         <label className="sr-only" htmlFor={`${id || "popup"}-email`}>Email Address</label>
-        <input id={`${id || "popup"}-email`} className={field} name="email" placeholder="Email Address" type="email" autoComplete="email" maxLength={254} required />
+        <input id={`${id || "popup"}-email`} className={`${field} sm:col-span-2`} name="email" placeholder="Email Address" type="email" autoComplete="email" maxLength={254} required />
         <label className="sr-only" htmlFor={`${id || "popup"}-requirement`}>Requirement</label>
         <select id={`${id || "popup"}-requirement`} className={`${field} sm:col-span-2`} name="requirement" defaultValue="" required><option value="" disabled>Requirement</option><option>School</option><option>College</option><option>Coaching</option><option>Business</option><option>Other</option></select>
         <label className="sr-only" htmlFor={`${id || "popup"}-message`}>Message</label>

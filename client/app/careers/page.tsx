@@ -127,16 +127,6 @@ type Benefit = {
   iconSrc: string;
 };
 
-type Role = {
-  title: string;
-  type: string;
-  location: string;
-  experience: string;
-  description: string;
-  skills: string[];
-  iconSrc: string;
-};
-
 const benefits: Benefit[] = [
   {
     title: "Practical project exposure",
@@ -173,69 +163,6 @@ const benefits: Benefit[] = [
     description:
       "Work in an environment that values clear communication, documentation, ownership, review and continuous improvement.",
     iconSrc: "/career/clear-working-culture.svg",
-  },
-];
-
-const roles: Role[] = [
-  {
-    title: "Frontend Developer Intern",
-    type: "Internship",
-    location: "New Delhi / Hybrid",
-    experience: "0–1 year",
-    description:
-      "Implement responsive interfaces, reusable components and API-connected screens using React, Next.js and modern frontend workflows.",
-    skills: ["React", "Next.js", "Tailwind CSS", "UI implementation"],
-    iconSrc: "/career/job-opening.svg",
-  },
-  {
-    title: "Full Stack Developer",
-    type: "Full-time",
-    location: "New Delhi / Hybrid",
-    experience: "1–3 years",
-    description:
-      "Build web applications, backend APIs, admin panels, database workflows and integrations for business software projects.",
-    skills: ["Next.js", "Node.js", "APIs", "Databases"],
-    iconSrc: "/career/job-opening.svg",
-  },
-  {
-    title: "AI & Automation Engineer",
-    type: "Full-time",
-    location: "Hybrid",
-    experience: "1–3 years",
-    description:
-      "Build business automation workflows, API integrations, AI-assisted features and internal tools that solve practical operational problems.",
-    skills: ["Python", "APIs", "Automation", "AI tools"],
-    iconSrc: "/career/job-opening.svg",
-  },
-  {
-    title: "UI/UX Designer",
-    type: "Full-time / Internship",
-    location: "New Delhi / Remote",
-    experience: "0–2 years",
-    description:
-      "Create user flows, wireframes, interface designs, prototypes and development-ready handoffs for websites and digital products.",
-    skills: ["Figma", "Wireframes", "Visual Design", "User flows"],
-    iconSrc: "/career/job-opening.svg",
-  },
-  {
-    title: "Hardware Deployment Executive",
-    type: "Full-time",
-    location: "On-site",
-    experience: "0–2 years",
-    description:
-      "Coordinate installation, testing and on-site support for digital standees, kiosks, LFD video walls, commercial LED displays and screens, and interactive systems.",
-    skills: ["Installation", "Coordination", "Support", "Hardware basics"],
-    iconSrc: "/career/job-opening.svg",
-  },
-  {
-    title: "Digital Marketing Executive",
-    type: "Full-time / Internship",
-    location: "New Delhi / Hybrid",
-    experience: "0–2 years",
-    description:
-      "Support content planning, social media, SEO, campaigns and lead-generation activities with clear reporting and execution.",
-    skills: ["Social Media", "SEO basics", "Content", "Campaigns"],
-    iconSrc: "/career/job-opening.svg",
   },
 ];
 
@@ -339,10 +266,10 @@ export default function CareerPage() {
                 </p>
 
                 <a
-                  href="#open-roles"
+                  href="#apply"
                   className="mt-10 inline-flex h-14.5 min-w-56.25 items-center justify-center gap-4 rounded-full bg-[#193175] px-4 text-[13px] font-bold text-white shadow-[0_14px_45px_rgba(60,91,155,0.35)] transition duration-300 hover:bg-[#2f4a82]"
                 >
-                  View Open Roles
+                  Apply Now
                   <ArrowRight
                     size={20}
                     strokeWidth={1.8}
@@ -479,109 +406,6 @@ export default function CareerPage() {
                 <p className="relative z-10 mt-4 max-w-115 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
                   {item.description}
                 </p>
-
-                <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OPEN ROLES */}
-      <section
-        id="open-roles"
-        className="section-spacing scroll-mt-24 bg-white px-5 md:px-4 lg:px-12"
-      >
-        <div className="mx-auto max-w-450">
-          <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-end">
-            <div data-aos="fade-right">
-              <p className="mb-4 text-[13px] font-normal uppercase tracking-[2.5px] text-[#193175]">
-                Open Roles
-              </p>
-
-              <h2 className="max-w-190 text-[38px] font-normal leading-[1.1] tracking-[-1.7px] text-[#262626] md:text-[48px] lg:text-[54px]">
-                Explore Roles Across Development, Design, Automation and
-                Deployment
-              </h2>
-            </div>
-
-            <p
-              className="max-w-195 text-[17px] font-light leading-[1.75] tracking-[-0.2px] text-[#525252] md:text-[19px]"
-              data-aos="fade-left"
-              data-aos-delay="100"
-            >
-              Review the roles below and choose the one that best matches your
-              experience and interests. You can also submit a general
-              application for future requirements.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3">
-            {roles.map((role, index) => (
-              <div
-                key={role.title}
-                data-aos="card-reveal"
-                data-aos-delay={(index % 3) * 100}
-                data-aos-duration="520"
-                className="group relative flex min-h-90 flex-col overflow-hidden rounded-[18px] border border-[#dfe6f1] bg-[#f8faff] p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_24px_75px_rgba(22,22,22,0.07)] md:p-8"
-              >
-                <div className="absolute -right-11.25 -top-11.25 h-31.25 w-31.25 rounded-full bg-[#193175]/6 transition duration-300 group-hover:scale-125" />
-
-                <div className="relative z-10 flex items-start justify-between gap-5">
-                  <div>
-                    <p className="text-[13px] font-normal uppercase tracking-[2px] text-[#193175]">
-                      {role.type}
-                    </p>
-
-                    <h3 className="mt-4 text-[26px] font-normal leading-[1.18] tracking-[-0.8px] text-[#262626] transition group-hover:text-[#193175] md:text-[30px]">
-                      {titleCaseHeading(role.title)}
-                    </h3>
-                  </div>
-
-                  <div className="flex h-13.5 w-13.5 shrink-0 items-center justify-center rounded-full border border-[#dbe3f0] bg-white p-3.5 transition-all duration-300 group-hover:border-[#193175] group-hover:bg-[#193175]">
-                    <img
-                      src={role.iconSrc}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-full w-full object-contain transition duration-300 group-hover:brightness-0 group-hover:invert"
-                    />
-                  </div>
-                </div>
-
-                <p className="relative z-10 mt-6 text-[15px] font-light leading-[1.75] text-[#616161] md:text-[16px]">
-                  {role.description}
-                </p>
-
-                <div className="relative z-10 mt-6 grid grid-cols-2 gap-3 text-[14px] font-light text-[#525252]">
-                  <div className="rounded-[10px] bg-white px-4 py-3">
-                    <span className="block text-[#193175]">Location</span>
-                    {role.location}
-                  </div>
-
-                  <div className="rounded-[10px] bg-white px-4 py-3">
-                    <span className="block text-[#193175]">Experience</span>
-                    {role.experience}
-                  </div>
-                </div>
-
-                <div className="relative z-10 mt-6 flex flex-wrap gap-2">
-                  {role.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-[#dfe6f1] bg-white px-3 py-1.5 text-[13px] font-light text-[#193175]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href="#apply"
-                  className="relative z-10 mt-auto inline-flex items-center gap-3 pt-8 text-[16px] font-light text-[#193175] transition hover:underline"
-                >
-                  Apply for this role
-                  <ArrowRightIcon className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
 
                 <span className="absolute bottom-0 left-0 h-0.75 w-0 bg-[#193175] transition-all duration-500 group-hover:w-full" />
               </div>

@@ -1,10 +1,11 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import ERPLocations from "@/app/erp-landing/ERPLocations";
 import ProductClientCarousel from "@/components/ProductClientCarousel";
 import SmartBoardEnquiryForm, { SmartBoardAboutPopup } from "@/components/SmartBoardEnquiryForm";
 import SmartBoardHeroCarousel from "@/components/SmartBoardHeroCarousel";
 import SmartBoardStats from "./SmartBoardStats";
+import ContactEnquiryPopup from "@/components/ContactEnquiryPopup";
 import SmartBoardProducts from "./SmartBoardProducts";
 import layout from "./SmartBoardLayout.module.css";
 
@@ -151,9 +152,7 @@ export default function Page() {
                 <div className="flex flex-col items-center px-2 py-1.5">
                   <h3 className="text-base font-semibold leading-5">{member.name}</h3>
                   <p className="mt-0.5 text-xs leading-4 text-slate-600">{member.designation}</p>
-                  <a href="#hero-enquiry" className="mt-1.5 inline-flex rounded-full bg-[#193175] px-4 py-1.5 text-xs font-semibold leading-4 text-white hover:bg-[#284b9a]">
-                    View Contact
-                  </a>
+                  <ContactEnquiryPopup />
                 </div>
               </article>
             ))}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DemoThankYou from "@/components/DemoThankYou";
+import ProductThankYou from "@/components/ProductThankYou";
 
 export const metadata: Metadata = {
   title: "Thank You | Smart Board for Teaching",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <DemoThankYou enquiryLanding productName="Smart Board for Teaching" returnHref="/smart-board-for-teaching" />;
+  return <ProductThankYou productName="Smart Board for Teaching" returnHref="/smart-board-for-teaching" />;
 }
