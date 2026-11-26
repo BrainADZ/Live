@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ProductThankYou productName="D-Model Floor Mount Digital Kiosk" returnHref="/d-model-floor-mount-digital-kiosk-landing" />;
+  return <ProductThankYou productName="D-Model Floor Mount Digital Kiosk" returnHref="/d-model-floor-mount-digital-kiosk-landing" illustrationSrc="/thankyou-page/D-Model%20Thank%20You.webp" showOverlayText={false} />;
 }
